@@ -1,2 +1,32 @@
 {% extends "VCGBundle::base.html.twig" %}
+
 {% block title %}{{ title }}{% endblock %}
+
+{% block body %}
+    <div class="pattern--get-started get-started--header">
+                <p>Get started with your career at UPS</p>
+                <div class="button">Go <i class="fa fa-chevron-right"></i></div>
+            </div>
+
+
+            <!-- <nav><a href="">Military Transition Guide</a><a href="">UPS Careers</a></nav> -->
+            <div class="veteranGateway__liner">
+                <div class="title-block">
+                    <h1>Career Gateway</h1>
+                    <h2>For Veterans & Service Members</h2>
+                </div>
+
+                
+                
+                <div class="page page--home">
+                    <div class="grid-items-lines">
+                        {% include 'VCGBundle:GridItems:transition-guide.html.twig' %}
+                        {% include 'VCGBundle:GridItems:career-explorer.html.twig' %}
+                        {% include 'VCGBundle:GridItems:ups-culture.html.twig' %}
+                        {% include 'VCGBundle:GridItems:announcements.html.twig' %}
+                        {% include 'VCGBundle:GridItems:events.html.twig' %}
+                        {% include 'VCGBundle:GridItems:social.html.twig' %}
+                    </div>
+                </div>           
+            </div>    
+{% endblock %}

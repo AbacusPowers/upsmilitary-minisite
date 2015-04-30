@@ -10,22 +10,23 @@ use Symfony\Component\Yaml\Parser;
 class ArticleController extends Controller
 {   
     /**
-     * @Route("/article/{name}")
+     * @Route("/article/{slug}")
+     * @Route("/article/{slug}.html")
      */
-    public function indexAction($name)
+    public function indexAction($slug)
     {
         $yaml = new Parser();
         $article = array();
 
         try {
-            $article = $yaml->parse(file_get_contents( dirname(dirname(__FILE__)). '/Resources/data/article.yml'));
+            $article = $yaml->parse(file_get_contents( dirname(dirname(__FILE__)). "/Resources/data/articles/$slug.yml"));
         } catch (ParseException $e) {
             printf("Unable to parse the YAML file: %s", $e->getMessage());
         }
 
         return $this->render(
             'VCGBundle:Layouts:article.html.twig',
-            array('name' => $name, 'article' => $article)
+            array('slug' => $slug, 'article' => $article)
         );
     }
 }

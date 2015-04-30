@@ -4,13 +4,11 @@ namespace UPS\VCGBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 
 class DefaultController extends Controller
 {
     /**
-     * @Route("/")
-     * @Template()
+     * @Route("/", name="homepage")
      */
     public function indexAction()
     {   
