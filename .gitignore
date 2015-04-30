@@ -8,9 +8,17 @@
 /bin/
 /composer.phar
 /vendor/
+
+#IGNORE WEB ASSETS TO ALLOW ASSETIC TO MANAGE
 /web/bundles/
+
+#IGNORE NETBEANS PROJECT
 nbproject/
+
+#IGNORE GULP STUFF
 node_modules/
 gulpfile.js
 .sass-cache/
+
+#IGNORE COMPILED BUNDLE CSS TO ALLOW
 src/UPS/VCGBundle/Resources/public/css/*
