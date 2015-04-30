@@ -13,4 +13,4 @@ nbproject/
 node_modules/
 gulpfile.js
 .sass-cache/
-src/UPS/VCGBundle/Resources/public/css/
+src/UPS/VCGBundle/Resources/public/css/*
