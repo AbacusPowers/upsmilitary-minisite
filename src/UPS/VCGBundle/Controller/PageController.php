@@ -16,17 +16,18 @@ class PageController extends Controller
     {
         try {
             $this->render(
-                'VCGBundle:Page:'.$slug.'.html.twig',
+                'VCGBundle:Page:'.$slug.'.twig',
                 array('slug' => $slug)
             );
             $response = $this->render(
-                'VCGBundle:Page:'.$slug.'.html.twig',
+                'VCGBundle:Page:'.$slug.'.twig',
                 array('slug' => $slug)
             );
         } catch (\Exception $ex) {
             // your conditional code here.
             $response = new Response(Response::HTTP_NOT_FOUND);
-            throw new \Symfony\Component\HttpKernel\Exception\HttpException(404, "Oops! Page not found");
+//            throw new \Symfony\Component\HttpKernel\Exception\HttpException(404, "Oops! Page not found");
+            var_dump($slug);
         }
         return $response;
 //        return $this->render(
