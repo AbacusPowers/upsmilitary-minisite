@@ -1,0 +1,35 @@
+// Susy settings
+// $susy: (
+//   columns: 4,
+//   global-box-sizing: border-box,
+//   debug: (image: show)
+// );
+
+
+// breakpoint based system below
+.page  {
+
+    @include breakpoint($bp-small-up) {
+        // max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    @include breakpoint($bp-medium-up) {
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    @include breakpoint($bp-large-up) {
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    @include breakpoint($bp-wide-up) {
+        max-width: 1400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

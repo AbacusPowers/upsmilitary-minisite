@@ -1,0 +1,25 @@
+$nav-height: 4em;
+
+.veteranGateway > nav {
+    @include size( auto $nav-height );
+    width: 100%;
+    background: red;
+    
+    a {
+        background: $grey30;
+        display: inline-block;
+        height: $nav-height;
+        overflow: hidden;
+        padding-top: 1.2em;
+        text-align: center;
+        width: 50%;
+
+        &:first-of-type{
+            border-right: 1px solid $grey60;
+        }
+    }  
+
+    a:hover {
+        // background: $grey30;
+    } 
+}

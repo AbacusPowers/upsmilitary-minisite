@@ -1,0 +1,42 @@
+.page--map {
+
+    .jobs-map {
+        @include size(100% 300px);
+        background: $black30;
+        display: block;
+        margin-top: 2em;
+        text-align: center;
+
+        @include breakpoint($bp-large-up) {
+            @include size(50% 500px);
+            position: absolute;
+            margin-top: 110px;
+        }
+    }
+
+    .expander__child ul li{
+
+        display: block;
+        background: $grey10;
+        border-bottom: 1px solid $black10;
+        
+        @include size(100% 3em);
+        position: relative;
+
+        a {
+            display: block;
+            // background: red;
+            padding: 1em;
+        }
+
+        i {
+            position: absolute;
+            top: 1em;
+            right: 1.7em;
+        }
+        &:first-of-type {
+            border-top: 1px solid $black10;
+        }
+
+    }
+}

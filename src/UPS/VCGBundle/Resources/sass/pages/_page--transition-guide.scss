@@ -1,0 +1,14 @@
+
+
+.grid--articles {
+    position: relative;
+}
+
+
+.grid--articles:hover { 
+    background: none;
+}
+
+.page--home .grid-item-lines .grid-item.grid--transition-guide-intro:hover { /***doesn't work***/
+    background: red;
+}

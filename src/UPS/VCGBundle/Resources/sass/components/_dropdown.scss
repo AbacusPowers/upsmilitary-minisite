@@ -1,0 +1,134 @@
+
+// // Thoughtbot Bitters Dropdown
+.dropdown {
+  $base-border-color: gainsboro !default;
+  $base-border-radius: 0px !default;
+  $base-line-height: 1.5em !default;
+  $base-background-color: white !default;
+  $dark-gray: #333 !default;
+  $large-screen: em(860) !default;
+  $base-font-color: $dark-gray !default;
+  $dropdown-color: $base-font-color;
+  $dropdown-description-color: lighten($dropdown-color, 40%);
+  $dropdown-border:   1px   solid silver;
+  $dropdown-background: $base-background-color;
+  $dropdown-background-hover: darken($dropdown-background, 3%);
+  $dropdown-inner-border: 1px solid silver;
+  $dropdown-height: 2.5em;
+  $dropdown-padding: 1em;
+  $dropdown-distance-from-menu: 40px;
+  $dropdown-arrow-top-distance: 0;
+
+  line-height: $base-line-height;
+
+  .dropdown-container {
+    display: inline-block;
+    @include position(absolute, auto 0 0 auto );
+    // text-align: center;
+    background: $white90;
+    width: 100%;
+    @include breakpoint($bp-medium-up) {
+        width: 300px;
+    }
+  }
+
+  .dropdown-description {
+    background: $dropdown-background;
+    // border-bottom-left-radius: $base-border-radius;
+    // border-bottom: $dropdown-border;
+    // border-left: $dropdown-border;
+    // border-top-left-radius: $base-border-radius;
+    // border-top: $dropdown-border;
+    color: $dropdown-description-color;
+    float: left;
+    font-size: 0.7em;
+    line-height: $dropdown-height;
+    margin: 0;
+    padding: 0 ($dropdown-padding / 2) 0 $dropdown-padding;
+    @include size(auto $dropdown-height);
+
+
+    @include breakpoint($bp-large-up) {
+      font-size: 1em;
+    }
+  }
+
+  .dropdown-button {
+    // background: $dropdown-background;
+    // border-bottom-right-radius: 0;
+    // border-top-right-radius: 0;
+    // border-top: $dropdown-border;
+    // border-right: $dropdown-border;
+    // border-bottom: $dropdown-border;
+    cursor: pointer;
+    // float: right;
+    font-size: 0.7em;
+    font-weight: 800;
+    line-height: $dropdown-height;
+    margin: 0;
+    padding: 0 ($dropdown-padding * 2.5) 0 ($dropdown-padding / 2);
+    position: relative;
+    text-align: center;
+    @include size( auto $dropdown-height);
+    background: green;
+    @include breakpoint($bp-large-up) {
+      font-size: 1em;
+      padding: 0 ($dropdown-padding * 2.5) 0 ($dropdown-padding / 2);
+    }
+            margin-bottom: -$dropdown-height;
+
+  }
+
+  .dropdown-button:hover {
+    background-color: $dropdown-background-hover;
+  }
+     i {
+        background: black;
+        // @include position( relative, -2em auto);
+        float: right;
+        height: $dropdown-height;
+    }
+
+  .dropdown-menu {
+    @include transition (all 0.2s ease-in-out);
+    // background: $dropdown-background;
+    color: $dropdown-color;
+    cursor: pointer;
+    display: none;
+    margin: 0;
+    overflow: show;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    top: $dropdown-distance-from-menu;
+    width: 100%;
+    z-index: 99999;
+  }
+
+  .dropdown-menu li {
+    background: $grey40;
+    color: $dropdown-color; 
+    list-style: none;
+    padding: $dropdown-padding / 2;
+  }
+
+  .dropdown-menu li:hover {
+    background: $dropdown-background-hover;
+  }
+
+  .dropdown-menu li:first-child {
+    // border-top-left-radius: $base-border-radius;
+    // border-top-right-radius: $base-border-radius;
+  }
+
+  .dropdown-menu li:last-child {
+    border: none;
+    // border-bottom-left-radius: $base-border-radius;
+    // border-bottom-right-radius: $base-border-radius;
+  }
+
+  .show-menu {
+    display: block;
+  }
+}
+// Inspired by code by www.HUSAMUI.com

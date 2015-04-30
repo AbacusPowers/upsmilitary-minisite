@@ -1,0 +1,62 @@
+html {
+    // @include background(linear-gradient(#333, white) left no-repeat);
+    overflow-x: hidden;
+}
+
+body {
+    font-family: $secondary-font-family;
+    // background: white;
+}
+
+h1, h2, h3, h4, li {
+    color: $grey70;
+    font-family: $primary-font-family;
+    line-height: 1.5;
+    padding: 0;
+    margin: 0;
+}
+
+p {
+    color: $grey90;
+    font-family: $primary-font-family;
+    line-height: 1.5;
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    font-size: 1.4em;
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: 1.3em;
+}
+
+h3 {
+    font-size: 0.9em;
+}
+
+
+a {
+    color: $black;
+}
+
+a:link {
+}
+
+a:visited {
+}
+
+a:hover {
+    background-color: #eee;
+    color: $grey60;
+}
+
+a:active {
+}
+
+
+
+
+

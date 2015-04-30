@@ -1,0 +1,113 @@
+.veteranGateway {
+    background: url(../img/graphy-2-30.png) top center;
+    position: relative;
+    padding-bottom: 10em;
+}
+
+
+.veteranGateway__liner {
+    position: relative;
+
+    @include breakpoint($bp-medium-up) {
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 0;
+    }
+
+    @include breakpoint($bp-large-up) {
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 0;
+    }
+
+    @include breakpoint($bp-wide-up) {
+        max-width: 1400px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 0;
+
+    }
+
+    .title-block {
+        height: 7em;
+        // background: $black10;
+        padding-left: 1em;
+        padding-top: 1.5em;
+
+
+        ul {
+            display: none;
+            @include breakpoint($bp-medium-up) {
+            display: inline-block;
+            margin-left: 18em;
+            // margin-top: -2em;
+            // height: 4em;
+            }
+        }
+
+        ul li {
+            margin-left: 3em;
+            display: inline-block;
+            
+        }
+    }    
+}
+
+.page {
+
+    .intro>i {
+        float: left;
+        @include size(84px);
+        color: $grey60;
+        font-size: 80px;
+        padding: 0 13px 0 0;
+    }
+
+    @include breakpoint($bp-large-up) {
+        position: relative;
+
+        .intro {
+            width: 50%;
+            position: absolute;
+            padding: 0;
+            padding: 0 2em 0 2em;
+
+            img {
+                margin-top: 3em;
+                display: block;
+            }
+        }
+
+        .component--expander {
+            width: 50%;
+            margin-left: 50%;
+            right:0;
+            top: 0;
+        }
+    }
+
+    section.title {
+        width: 100%;
+        background: $black10;
+        margin-bottom: 2em;
+        // position: absolute;
+    }
+}
+
+h1.page--title {
+    // @include position(relative, 4rem null null 2rem );
+    // padding-top: 30px;
+    color: $grey70;
+    margin: 0 1rem 1rem;
+    // background: red;
+
+    @include breakpoint($bp-wide-up) {
+        // left: 0;
+    }
+}
+
+ section.intro {
+    // padding: 1em;
+}

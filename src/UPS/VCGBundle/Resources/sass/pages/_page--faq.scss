@@ -1,0 +1,27 @@
+.page--faq {
+
+    .intro {
+        
+    }
+
+    @include breakpoint($bp-large-up) {
+        .intro {
+            width: 40%;
+            // position: absolute;
+            // background: blue;
+            padding: 0;
+            float: left;
+        }
+
+        .component--faq {
+            // @include position(absolute, null 0 null null);
+            // background: red;
+            width: 60%;
+            // float: right;
+            margin-left: 40%;
+            position: relative;
+            right:0;
+        }
+
+    }
+}

@@ -1,0 +1,23 @@
+@mixin circle($diameter) {
+    width: $diameter;
+    height: $diameter;
+    display: block;
+    background-color: grey;
+    border-radius: 50%;
+    padding: 15px 0 0 15px;
+}
+
+@mixin grid-item-columns($columns) {
+  width: (100% / 12) * $columns;
+}
+
+
+@mixin pseudo-block($size) {
+  background: red;
+  content: '';
+  display: block;
+  height: $size;
+  position: absolute;
+  width: $size;
+  z-index: 1000;
+}

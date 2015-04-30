@@ -1,0 +1,64 @@
+
+/*Root SCSS file to import all others*/
+body {
+    background: red;
+}
+/*************************** preliminary overrides to third party **************************/
+@import "utils/colors";
+@import "vendor-extentions/bourbon-pregame";
+
+
+
+/*************************** third party starting points ***********************/
+@import "vendors/breakpoint";
+@import "vendors/bourbon/bourbon";
+// @import "grid-settings";/*custom settings for neat if needed*/
+@import "vendors/neat/neat";
+@import "vendors/bitters/base";
+// @import "vendors/susy/susy";
+
+
+
+
+/*************************** overrides to third party **************************/
+@import "vendor-extentions/bourbon-hangover";
+
+
+
+/*************************** project styles ************************************/
+@import "utils/variables";
+@import "utils/mixins";
+
+@import "base/reset";
+@import "base/typography";
+@import "base/base";
+@import "base/styles";
+
+@import "layout/grid";
+@import "layout/header";
+@import "layout/navigation";
+@import "layout/footer";
+
+@import "components/components";
+@import "components/expander";
+@import "components/faq";
+@import "components/sliding-menu";
+@import "components/search-bar";
+@import "components/footer";
+@import "components/breadcrumbs";
+@import "components/modal";
+@import "components/pattern--grid-lines";
+@import "components/pattern--get-started";
+
+
+@import "pages/page--home";
+@import "pages/page--common";
+@import "pages/page--military-index";
+@import "pages/page--transition-guide";
+@import "pages/page--style-guide";
+@import "pages/page--faq";
+@import "pages/page--jobs";
+@import "pages/page--ddform214";
+@import "pages/page--map";
+@import "pages/page--article";
+

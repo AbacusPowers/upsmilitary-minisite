@@ -1,0 +1,27 @@
+.page.page--ddform214 {
+
+    section.dd-form214 {
+        display: none;
+        
+        @include breakpoint($bp-large-up) {
+            
+            display: block;
+            @include size( 50% auto);
+            @include position(absolute, 14em auto);
+            // background: green;
+        }
+
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    h1 {
+        margin-left: 90px;
+    }
+
+    
+
+}

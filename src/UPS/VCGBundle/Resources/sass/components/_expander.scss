@@ -1,0 +1,145 @@
+
+.component--expander {
+
+  .expander__wrapper{
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    line-height: 1.6;
+    padding: 10px 0 0 0px; 
+    position: relative;
+    min-height: 75px;
+  }
+
+  .expander__wrapper:nth-child(odd) {
+    background: $black01
+  }
+
+  i {
+    display: block;
+  }
+
+  a.button{
+    @include size(75px);
+    color: $grey70;
+    cursor: pointer;
+    display: block;
+    margin-right: 0;
+    position: absolute;
+    padding: 25px 0 0 27px;
+    right: 0;
+    top: 0px;
+    font-size: 13px;
+  }
+
+  a:nth-child(odd) {
+    // background: $black05;
+  }
+
+  a.hide-button{
+    z-index: -1;
+  }
+
+  h2.expander__parent {
+    margin-left: 1rem;
+    margin-right: 80px;
+    font-weight: 700;
+    padding-bottom: 0px;
+    p{
+      line-height: 1.9;
+    }
+  }
+  
+  h3 {
+    margin-left: 1rem;
+  }
+
+  .expander__child {
+    position: relative;
+  }
+
+  .expander__child p{
+    margin: 1em;
+    // margin-left: 1em;
+    // margin-right: 1em;
+  }
+
+  .expander__child p img { /*DD Form 214 guide*/
+    // display: none;
+    float: left;
+    margin: 0.4em 1em 1em 0;
+  }
+  
+  .faq.expander__child p { /*for FAQs*/
+    margin-left: 4em;
+  }
+
+  .hidden-part {
+    height: 0;
+  }
+
+  .hidden-part *{
+    opacity: 0;
+    // display: none;
+  }
+
+  .faq.expander__parent:before, .expander__child:before{
+    color: $grey80;
+    font-weight: 900;
+    margin-left: -30px;
+    position: absolute;
+  }
+
+  .faq.expander__parent:before{ /*for use with FAQ's*/
+    content: 'Q:';
+  }
+
+  // .expander__child:before{
+  //   content: 'A:';
+  // }
+
+
+  .video {
+    background: $grey30;
+    width: 100%;
+    max-width: 21em;
+    margin: 0 auto 0 auto;
+
+    height: 16em;
+    position: relative;
+
+    @include breakpoint($bp-medium-up) {
+      width: 20em;
+      height: 16em;
+      padding-top: 2.5em;
+      padding-left: 4.1em;
+      margin-left: 0;
+      margin-bottom: 1em;
+    }   
+    @include breakpoint($bp-large-up) {
+      width: 100%;
+      margin: 0 auto 0 auto;
+    }
+
+    i.fa-play {
+      color: $black40;
+      position: absolute;
+      font-size: 60px;
+      top: 40%;
+      left: 45%;
+    }  
+  }
+
+  .video + p {
+    margin-top: 2em;
+    // margin-right: 2em;
+    @include breakpoint($bp-medium-up) {
+    margin-left: 21em;
+    margin-top: -17em;
+    }
+
+    @include breakpoint($bp-large-up) {
+      margin-left: 4em;
+      margin-top: 1em;
+    }
+  }
+
+}

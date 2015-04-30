@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}UPS - Veteran Careers Gateway{% endblock %}</title>
+        {% stylesheets '@VCGBundle/Resources/public/css/*' %}
+            <link rel="stylesheet" href="{{ asset_url }}">
+        {% endstylesheets %}
+        {% javascripts '@VCGBundle/Resources/public/js/required/*' %}
+            <script src="{{ asset_url }}"></script>
+        {% endjavascripts %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    <body>
+        
+        {% block siteheader %}
+            <header class="page--home">
+                <img src="{{ asset('bundles/vcg/images/logo-sketch-1.png') }}" alt="" class="logo">
+
+                <button type="button" class="js-menu-trigger sliding-panel-button">
+                  <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/menu-white.png" alt="Menu Icon">
+                </button>
+
+                <nav class="js-menu sliding-panel-content">
+                  <ul>
+                    <li><a href="javascript:void(0)"> <i class="fa fa-home"></i>&nbspHome</a></li>
+                    <li><a href="javascript:void(0)">About UPS</a></li>
+                    <li><a href="javascript:void(0)">Career Areas</a></li>
+                    <li><a href="javascript:void(0)">Working at UPS</a></li>
+                  </ul>
+
+                    <form class="search-bar" role="search">
+                        <input type="search" placeholder="Search" />
+                        <button type="submit">
+                            <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/search-icon.png" alt="Search Icon">
+                        </button>
+                    </form>
+                </nav>
+
+                <div class="js-menu-screen sliding-panel-fade-screen"></div>
+                <div class="header--liner">
+
+                    <div class="slider-content">
+                        <h1>Slider Headline</h1>
+                        <i class="fa fa-circle-thin"></i>
+                        <i class="fa fa-circle"></i>
+                        <i class="fa fa-circle-thin"></i>
+                        <i class="fa fa-circle-thin"></i>
+                    </div>     
+                </div>    
+                <!-- <nav class="drop-down">
+                    <p>Veteran & Military Outreach</p>
+                    <i class="fa fa-chevron-down"></i>
+                </nav>     -->      
+            </header>
+        {% endblock %}
+        
+        {% block body %}
+            <h1>STUFF GOES HERE</h1>
+        {% endblock %}
+        
+        {% block footer %}
+            <p>&copy; copyright ups</p>
+        {% endblock %}
+        {% javascripts '@VCGBundle/Resources/public/js/*' %}
+            <script src="{{ asset_url }}"></script>
+        {% endjavascripts %}
+    </body>
+</html>

@@ -1,0 +1,82 @@
+/*staging area for quickly testing new components*/
+
+
+
+.component--get-started {
+    height: 7em;
+    // background: $black05;
+    background: red;
+
+    @include breakpoint($bp-medium-up) {
+        @include position(absolute, -3em null null 33.3334%);
+        // @include size( calc( 33.333% + 1px) 7em);
+        @include size(66.6667% 7em);
+    }
+
+    .button {
+        padding: 8px 12px;
+        text-align: center;
+        text-transform: uppercase;
+        background: $grey40;
+        width: 18em;
+        // @include position(static, null auto);
+        margin-top: 2.0em;
+        margin-left: 5.3em;
+        margin-right: auto;
+    }
+
+    p {
+        margin-left: 50%;
+        margin-top: -2em;
+    }
+
+    &.get-started--header {
+
+    }
+}
+
+
+
+.navCard.eventsCalendar {
+
+    a {
+        // padding: 5px;
+        padding-left: 90px;
+        background: #eee;
+        height: 80px;
+        line-height: 1;
+
+    }
+
+    a:nth-child(even) {
+        background: none;
+    }
+
+    img {
+        width: 80px;
+        height: 80px;
+        margin-left: -90px;
+        position: absolute;
+    }
+
+    h3 {
+        font-size: 0.9em;
+        padding-top: 0.5em;
+    }
+
+    p {
+        padding-top: 0;
+    }
+
+    p.event-date {
+        font-size: 0.7em;
+        text-transform: uppercase;
+    }
+
+    p.event-location {
+        font-size: 0.7em;
+    }
+}
+
+
+

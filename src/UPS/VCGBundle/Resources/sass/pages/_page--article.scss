@@ -1,0 +1,50 @@
+.veteranGateway .page .page--article {
+    
+    .article__intro {
+        padding: 4rem 1rem 2rem 1rem;
+          h1 {
+            font-size: 3em !important;
+            margin-left: 0 !important;
+        }  
+
+        p {
+            font-size: 1.5em;
+        }
+    }
+
+    .component--expander {
+        width: 100% !important;
+        margin-left: 0;
+    }
+
+    
+
+    .expander__wrapper {
+        background: none;
+        min-height: 7em;
+        padding: 2.5em 6em 0 6em;
+        h2 {
+            margin-left: 1rem;
+            // margin-bottom: 1rem;
+        }
+
+
+        img {
+            @include position(absolute, 1.5em null null 1em );
+            @include size(4em);
+            border-radius: 50%;
+            border: 1px $grey solid;
+            display: block;
+            // height: 2.5em;
+            // margin-bottom: 1.2em;
+            opacity: 0.2;
+            padding: 0.7em;
+        }
+    }
+
+    .expander__wrapper:first-of-type {
+        border-top: 1px solid $black05;
+    }
+
+
+}

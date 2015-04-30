@@ -1,0 +1,172 @@
+$header-height--small: 18rem;
+$header-height--large:30em;
+
+header {
+    background: url(/bundles/vcg/images/bg-3b.jpg) top center no-repeat $grey90;
+    background-size: cover;
+    height: $header-height--small;
+
+
+    position: relative;
+
+    @include breakpoint($bp-medium-up){
+        height: $header-height--large;
+    }
+
+    img.logo {
+        @include position(absolute, 1em);
+        @include size(3em auto);
+
+        @include breakpoint($bp-medium-up) {
+            @include position(absolute, 2em);
+            @include size(5em auto);
+        }
+    }
+
+    .header--liner { /*slider prototype--must be made full width*/
+        position: relative;
+        display: block;
+        // background: rgba(red, 0.1);
+        height: $header-height--small;
+
+        @include breakpoint($bp-medium-up) {
+            height: $header-height--large;
+        }
+
+        @include breakpoint($bp-large-up) {
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @include breakpoint($bp-wide-up) {
+            max-width: 1400px;
+            // background: red;
+            // margin-left: auto;
+            // margin-right: auto;
+        }
+    
+
+        .slider-content {
+
+            display: block;
+            margin-left: 2rem;
+            margin-right: 2rem;
+            position: absolute;
+            bottom: 15%;
+
+            @include breakpoint($bp-large-up) {
+                // background: red;
+                margin-left: 0;
+                width: 50% ;
+            }
+
+            @include breakpoint($bp-wide-up) {
+                // background: green;
+                margin-left: 0;
+                width: calc( 50% - 2rem );
+            }
+
+            h1 {
+                color: $black80;
+                // background: red;
+                font-size: 2.5em;
+                margin-bottom: 2rem;
+            }
+
+            i {
+                color: $black40;
+                font-size: 1.4em;
+                margin-right: .5rem;
+            }       
+        }
+    }
+
+    &:after {
+        @include breakpoint($bp-medium-up) {
+            @include pseudo-block(3em);
+            @include position(absolute, null null 0 0);
+            width: 100%;
+            background: $black30;
+            z-index: 0;
+        }
+    }
+
+    // &.home {
+    //     @include breakpoint($bp-medium-up) {
+    //         height: 400px;
+    //     }
+    // }
+
+    // &.page--jobs {
+    //     background: url(../img/bg-2c.jpg) top center no-repeat black;
+    // }
+
+    $drop-down-height: 3em;
+    $drop-down-vertical-padding: 0.8em;
+    nav.drop-down {
+        @include position( absolute, null 0 0 null );
+        @include size( auto $drop-down-height );
+        background: $grey70;
+        color: $white;
+        width: 100%;
+
+        @include breakpoint($bp-medium-up) {
+            width: 400px;
+        }
+
+        p {
+            @include size( auto $drop-down-height );
+            padding: $drop-down-vertical-padding 0 0 1em;
+        }
+
+        i {
+            @include size( $drop-down-height );
+            float: right;
+            background: $grey80;
+            margin-top: -$drop-down-height;
+            padding: 0.95em;
+        }
+    }
+    
+
+    @include breakpoint($bp-small-up) {
+        // background: rgba( red, 0.3 );
+        &:before {
+            content:'small breakpoint';
+            color: black;
+            text-transform: uppercase;
+            @include position(absolute, 0.25em null null 0.75em );
+        }
+      }
+
+    @include breakpoint($bp-medium-up) {
+        // background: green;
+        &:before {
+            content:'medium-breakpoint';
+            color: black;
+            text-transform: uppercase;
+            @include position(absolute, 0.25em null null 0.75em );
+        }
+      }
+
+    @include breakpoint($bp-large-up) {
+        // background: blue;
+        &:before {
+            content:'large breakpoint';
+            color: black;
+            text-transform: uppercase;
+            @include position(absolute, 0.25em null null 0.75em );
+        }
+    }
+
+    @include breakpoint($bp-wide-up) {
+        // background: pink;
+        &:before {
+            content: 'wide breakpoint';
+            color: black;
+            text-transform: uppercase;
+            @include position(absolute, 0.25em null null 0.75em );
+          }
+    }
+}

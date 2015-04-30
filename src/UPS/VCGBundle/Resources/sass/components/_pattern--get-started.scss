@@ -1,0 +1,46 @@
+.pattern--get-started {
+    background: $black70;
+    width: 100%;
+    text-align: center;
+    padding: 0 5.5rem 1rem;
+
+    @include breakpoint($bp-medium-up) {
+        padding-top: 0.5rem;
+    }
+
+    .button {
+        @include size(5em 2.3em);
+        background: $grey40;
+        color: $black;
+        cursor: pointer;
+        display:inline-block;
+        margin-top: 0.5em;
+        padding: 8px 12px;
+        text-align: center;
+        text-transform: uppercase;
+
+        @include breakpoint($bp-medium-up) {
+            margin-left: 2em;
+        }
+
+        i {
+            padding:0px 0 0 6px;
+            color: $grey70;
+        }
+    }
+
+    p {
+        color: $white;
+        display: inline-block;
+        font-size: 1.4em;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 0.4em;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    &.get-started--header {
+
+    }
+}

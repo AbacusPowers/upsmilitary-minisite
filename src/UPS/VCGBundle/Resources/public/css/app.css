@@ -1,0 +1,2103 @@
+/*Root SCSS file to import all others*/
+/* line 3, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/io.scss */
+body {
+  background: red;
+}
+
+/*************************** preliminary overrides to third party **************************/
+/*************************** third party starting points ***********************/
+/* line 4, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/vendors/neat/grid/_box-sizing.scss */
+html {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* line 9, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/vendors/neat/grid/_box-sizing.scss */
+*, *::after, *::before {
+  -webkit-box-sizing: inherit;
+     -moz-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+/* line 1, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/vendors/bitters/_buttons.scss */
+button, input[type="button"], input[type="reset"], input[type="submit"],
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  -webkit-font-smoothing: antialiased;
+  background-color: #477dca;
+  -webkit-border-radius: 3px;
+          border-radius: 3px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "English-Russian Architect", "Lato", serif;
+  font-size: 1em;
+  font-weight: 600;
+  line-height: 1;
+  padding: 0.75em 1em;
+  text-decoration: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+/* line 21, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/vendors/bitters/_buttons.scss */
+button:hover, button:focus, input[type="button"]:hover, input[type="button"]:focus, input[type="reset"]:hover, input[type="reset"]:focus, input[type="submit"]:hover, input[type="submit"]:focus,
+button:hover,
+button:focus {
+  background-color: #2c5999;
+  color: #fff;
+}
+/* line 27, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/vendors/bitters/_buttons.scss */
+button:disabled, input[type="button"]:disabled, input[type="reset"]:disabled, input[type="submit"]:disabled,
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+/* line 1, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/vendors/bitters/_forms.scss */
+fieldset {
+  background-color: #f7f7f7;
+  border: 1px solid #ddd;
+  margin: 0 0 0.75em;
+  padding: 1.5em;
+}
+
+/* line 8, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/vendors/bitters/_forms.scss */
+input,
+label,
+select {
+  display: block;
+  font-family: "English-Russian Architect", "Lato", serif;
+  font-size: 1em;
+}
+
+/* line 16, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/vendors/bitters/_forms.scss */
+label {
+  font-weight: 600;
+  margin-bottom: 0.375em;
+}
+/* line 20, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/vendors/bitters/_forms.scss */
+label.required::after {
+  content: "*";
+}
+/* line 24, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/vendors/bitters/_forms.scss */
+label abbr {
+  display: none;
+}
+
+/* line 29, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/vendors/bitters/_forms.scss */
+input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="email"], input[type="month"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"], input[type="week"], textarea,
+select[multiple=multiple],
+textarea {
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 1px solid #ddd;
+  -webkit-border-radius: 3px;
+          border-radius: 3px;
+  -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
+          box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "English-Russian Architect", "Lato", serif;
+  font-size: 1em;
+  margin-bottom: 0.75em;
+  padding: 0.5em;
+  -webkit-transition: border-color;
+          transition: border-color;
+  width: 100%;
+}
+/* line 44, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/vendors/bitters/_forms.scss */
+input[type="color"]:hover, input[type="date"]:hover, input[type="datetime"]:hover, input[type="datetime-local"]:hover, input[type="email"]:hover, input[type="month"]:hover, input[type="number"]:hover, input[type="password"]:hover, input[type="search"]:hover, input[type="tel"]:hover, input[type="text"]:hover, input[type="time"]:hover, input[type="url"]:hover, input[type="week"]:hover, textarea:hover,
+select[multiple=multiple]:hover,
+textarea:hover {
+  border-color: #c4c4c4;
+}
+/* line 48, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/vendors/bitters/_forms.scss */
+input[type="color"]:focus, input[type="date"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="email"]:focus, input[type="month"]:focus, input[type="number"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="time"]:focus, input[type="url"]:focus, input[type="week"]:focus, textarea:focus,
+select[multiple=multiple]:focus,
+textarea:focus {
+  border-color: #477dca;
+  -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06), 0 0 5px rgba(55, 112, 192, 0.7);
+          box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06), 0 0 5px rgba(55, 112, 192, 0.7);
+  outline: none;
+}
+
+/* line 55, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/vendors/bitters/_forms.scss */
+textarea {
+  resize: vertical;
+}
+
+/* line 59, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/vendors/bitters/_forms.scss */
+input[type="search"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+}
+
+/* line 63, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/vendors/bitters/_forms.scss */
+input[type="checkbox"],
+input[type="radio"] {
+  display: inline;
+  margin-right: 0.375em;
+}
+
+/* line 69, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/vendors/bitters/_forms.scss */
+input[type="file"] {
+  padding-bottom: 0.75em;
+  width: 100%;
+}
+
+/* line 74, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/vendors/bitters/_forms.scss */
+select {
+  margin-bottom: 1.5em;
+  max-width: 100%;
+  width: auto;
+}
+
+/* line 1, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/vendors/bitters/_lists.scss */
+ul,
+ol {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+/* line 20, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/vendors/bitters/_lists.scss */
+dl {
+  margin-bottom: 0.75em;
+}
+/* line 23, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/vendors/bitters/_lists.scss */
+dl dt {
+  font-weight: bold;
+  margin-top: 0.75em;
+}
+/* line 28, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/vendors/bitters/_lists.scss */
+dl dd {
+  margin: 0;
+}
+
+/* line 1, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/vendors/bitters/_tables.scss */
+table {
+  -webkit-font-feature-settings: "kern", "liga", "tnum";
+  -moz-font-feature-settings: "kern", "liga", "tnum";
+  -ms-font-feature-settings: "kern", "liga", "tnum";
+  font-feature-settings: "kern", "liga", "tnum";
+  border-collapse: collapse;
+  margin: 0.75em 0;
+  table-layout: fixed;
+  width: 100%;
+}
+
+/* line 9, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/vendors/bitters/_tables.scss */
+th {
+  border-bottom: 1px solid #b7b7b7;
+  font-weight: 600;
+  padding: 0.75em 0;
+  text-align: left;
+}
+
+/* line 16, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/vendors/bitters/_tables.scss */
+td {
+  border-bottom: 1px solid #ddd;
+  padding: 0.75em 0;
+}
+
+/* line 21, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/vendors/bitters/_tables.scss */
+tr,
+td,
+th {
+  vertical-align: middle;
+}
+
+/* line 1, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/vendors/bitters/_typography.scss */
+body {
+  -webkit-font-feature-settings: "kern", "liga", "pnum";
+  -moz-font-feature-settings: "kern", "liga", "pnum";
+  -ms-font-feature-settings: "kern", "liga", "pnum";
+  font-feature-settings: "kern", "liga", "pnum";
+  -webkit-font-smoothing: antialiased;
+  color: #555555;
+  font-family: "English-Russian Architect", "Lato", serif;
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+/* line 10, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/vendors/bitters/_typography.scss */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "English-Russian Architect", "Lato", serif;
+  font-size: 1em;
+  line-height: 1.2;
+  margin: 0 0 0.75em;
+}
+
+/* line 22, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/vendors/bitters/_typography.scss */
+p {
+  margin: 0 0 0.75em;
+}
+
+/* line 26, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/vendors/bitters/_typography.scss */
+a {
+  color: #477dca;
+  text-decoration: none;
+  -webkit-transition: color 0.1s linear;
+          transition: color 0.1s linear;
+}
+/* line 31, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/vendors/bitters/_typography.scss */
+a:active, a:focus, a:hover {
+  color: #2c5999;
+}
+/* line 37, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/vendors/bitters/_typography.scss */
+a:active, a:focus {
+  outline: none;
+}
+
+/* line 43, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/vendors/bitters/_typography.scss */
+hr {
+  border-bottom: 1px solid #ddd;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  margin: 1.5em 0;
+}
+
+/* line 51, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/vendors/bitters/_typography.scss */
+img,
+picture {
+  margin: 0;
+  max-width: 100%;
+}
+
+/*************************** overrides to third party **************************/
+/*************************** project styles ************************************/
+/* line 1, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/base/_reset.scss */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'English-Russian Architect';
+  src: url("http://www.fontsaddict.com/fontface/english-russian-architect.ttf");
+}
+/* line 1, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/base/_base.scss */
+html {
+  overflow-x: hidden;
+}
+
+/* line 6, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/base/_base.scss */
+body {
+  font-family: "English-Russian Architect", "Lato", serif;
+}
+
+/* line 11, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/base/_base.scss */
+h1, h2, h3, h4, li {
+  color: #6f6f6f;
+  font-family: "English-Russian Architect", "Lato", sanserif;
+  line-height: 1.5;
+  padding: 0;
+  margin: 0;
+}
+
+/* line 19, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/base/_base.scss */
+p {
+  color: #3c3c3c;
+  font-family: "English-Russian Architect", "Lato", sanserif;
+  line-height: 1.5;
+  padding: 0;
+  margin: 0;
+}
+
+/* line 27, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/base/_base.scss */
+h1 {
+  font-size: 1.4em;
+  line-height: 1.2;
+}
+
+/* line 32, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/base/_base.scss */
+h2 {
+  font-size: 1.3em;
+}
+
+/* line 36, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/base/_base.scss */
+h3 {
+  font-size: 0.9em;
+}
+
+/* line 41, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/base/_base.scss */
+a {
+  color: #222;
+}
+
+/* line 51, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/base/_base.scss */
+a:hover {
+  background-color: #eee;
+  color: #959595;
+}
+
+@media screen and (min-width: 1px) {
+  /* line 10, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/layout/_grid.scss */
+  .page {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media screen and (min-width: 769px) {
+  /* line 10, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/layout/_grid.scss */
+  .page {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media screen and (min-width: 1024px) {
+  /* line 10, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/layout/_grid.scss */
+  .page {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media screen and (min-width: 1400px) {
+  /* line 10, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/layout/_grid.scss */
+  .page {
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* line 4, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/layout/_header.scss */
+header {
+  background: url(/bundles/vcg/images/bg-3b.jpg) top center no-repeat #3c3c3c;
+  -webkit-background-size: cover;
+          background-size: cover;
+  height: 18rem;
+  position: relative;
+}
+@media screen and (min-width: 769px) {
+  /* line 4, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/layout/_header.scss */
+  header {
+    height: 30em;
+  }
+}
+/* line 16, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/layout/_header.scss */
+header img.logo {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  bottom: 1em;
+  left: 1em;
+  height: auto;
+  width: 3em;
+}
+@media screen and (min-width: 769px) {
+  /* line 16, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/layout/_header.scss */
+  header img.logo {
+    position: absolute;
+    top: 2em;
+    right: 2em;
+    bottom: 2em;
+    left: 2em;
+    height: auto;
+    width: 5em;
+  }
+}
+/* line 26, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/layout/_header.scss */
+header .header--liner {
+  /*slider prototype--must be made full width*/
+  position: relative;
+  display: block;
+  height: 18rem;
+}
+@media screen and (min-width: 769px) {
+  /* line 26, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/layout/_header.scss */
+  header .header--liner {
+    height: 30em;
+  }
+}
+@media screen and (min-width: 1024px) {
+  /* line 26, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/layout/_header.scss */
+  header .header--liner {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media screen and (min-width: 1400px) {
+  /* line 26, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/layout/_header.scss */
+  header .header--liner {
+    max-width: 1400px;
+  }
+}
+/* line 50, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/layout/_header.scss */
+header .header--liner .slider-content {
+  display: block;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  position: absolute;
+  bottom: 15%;
+}
+@media screen and (min-width: 1024px) {
+  /* line 50, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/layout/_header.scss */
+  header .header--liner .slider-content {
+    margin-left: 0;
+    width: 50%;
+  }
+}
+@media screen and (min-width: 1400px) {
+  /* line 50, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/layout/_header.scss */
+  header .header--liner .slider-content {
+    margin-left: 0;
+    width: -webkit-calc( 50% - 2rem );
+    width: calc( 50% - 2rem );
+  }
+}
+/* line 70, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/layout/_header.scss */
+header .header--liner .slider-content h1 {
+  color: rgba(34, 34, 34, 0.8);
+  font-size: 2.5em;
+  margin-bottom: 2rem;
+}
+/* line 77, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/layout/_header.scss */
+header .header--liner .slider-content i {
+  color: rgba(34, 34, 34, 0.4);
+  font-size: 1.4em;
+  margin-right: .5rem;
+}
+@media screen and (min-width: 769px) {
+  /* line 85, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/layout/_header.scss */
+  header:after {
+    background: red;
+    content: '';
+    display: block;
+    height: 3em;
+    position: absolute;
+    width: 3em;
+    z-index: 1000;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(34, 34, 34, 0.3);
+    z-index: 0;
+  }
+}
+/* line 107, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/layout/_header.scss */
+header nav.drop-down {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 3em;
+  width: auto;
+  background: #6f6f6f;
+  color: #fff;
+  width: 100%;
+}
+@media screen and (min-width: 769px) {
+  /* line 107, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/layout/_header.scss */
+  header nav.drop-down {
+    width: 400px;
+  }
+}
+/* line 118, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/layout/_header.scss */
+header nav.drop-down p {
+  height: 3em;
+  width: auto;
+  padding: 0.8em 0 0 1em;
+}
+/* line 123, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/layout/_header.scss */
+header nav.drop-down i {
+  height: 3em;
+  width: 3em;
+  float: right;
+  background: #555555;
+  margin-top: -3em;
+  padding: 0.95em;
+}
+@media screen and (min-width: 1px) {
+  /* line 135, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/layout/_header.scss */
+  header:before {
+    content: 'small breakpoint';
+    color: black;
+    text-transform: uppercase;
+    position: absolute;
+    top: 0.25em;
+    left: 0.75em;
+  }
+}
+@media screen and (min-width: 769px) {
+  /* line 145, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/layout/_header.scss */
+  header:before {
+    content: 'medium-breakpoint';
+    color: black;
+    text-transform: uppercase;
+    position: absolute;
+    top: 0.25em;
+    left: 0.75em;
+  }
+}
+@media screen and (min-width: 1024px) {
+  /* line 155, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/layout/_header.scss */
+  header:before {
+    content: 'large breakpoint';
+    color: black;
+    text-transform: uppercase;
+    position: absolute;
+    top: 0.25em;
+    left: 0.75em;
+  }
+}
+@media screen and (min-width: 1400px) {
+  /* line 165, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/layout/_header.scss */
+  header:before {
+    content: 'wide breakpoint';
+    color: black;
+    text-transform: uppercase;
+    position: absolute;
+    top: 0.25em;
+    left: 0.75em;
+  }
+}
+
+/* line 3, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/layout/_navigation.scss */
+.veteranGateway > nav {
+  height: 4em;
+  width: auto;
+  width: 100%;
+  background: red;
+}
+/* line 8, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/layout/_navigation.scss */
+.veteranGateway > nav a {
+  background: #e1e1e1;
+  display: inline-block;
+  height: 4em;
+  overflow: hidden;
+  padding-top: 1.2em;
+  text-align: center;
+  width: 50%;
+}
+/* line 17, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/layout/_navigation.scss */
+.veteranGateway > nav a:first-of-type {
+  border-right: 1px solid #959595;
+}
+
+/* line 3, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/layout/_footer.scss */
+footer {
+  background: #222;
+  min-height: 20em;
+  color: rgba(255, 255, 255, 0.6);
+  text-align: center;
+  padding-top: 30px;
+  font-size: 1em;
+  text-transform: uppercase;
+}
+@media screen and (min-width: 1px) {
+  /* line 15, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/layout/_footer.scss */
+  footer:before {
+    content: 'small breakpoint';
+  }
+}
+@media screen and (min-width: 769px) {
+  /* line 22, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/layout/_footer.scss */
+  footer:before {
+    content: 'medium-breakpoint';
+  }
+}
+@media screen and (min-width: 1024px) {
+  /* line 29, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/layout/_footer.scss */
+  footer:before {
+    content: 'large breakpoint';
+  }
+}
+@media screen and (min-width: 1400px) {
+  /* line 36, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/layout/_footer.scss */
+  footer:before {
+    content: 'wide breakpoint';
+  }
+}
+
+/*staging area for quickly testing new components*/
+/* line 6, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_components.scss */
+.navCard.eventsCalendar a {
+  padding-left: 90px;
+  background: #eee;
+  height: 80px;
+  line-height: 1;
+}
+/* line 15, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_components.scss */
+.navCard.eventsCalendar a:nth-child(even) {
+  background: none;
+}
+/* line 19, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_components.scss */
+.navCard.eventsCalendar img {
+  width: 80px;
+  height: 80px;
+  margin-left: -90px;
+  position: absolute;
+}
+/* line 26, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_components.scss */
+.navCard.eventsCalendar h3 {
+  font-size: 0.9em;
+  padding-top: 0.5em;
+}
+/* line 31, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_components.scss */
+.navCard.eventsCalendar p {
+  padding-top: 0;
+}
+/* line 35, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_components.scss */
+.navCard.eventsCalendar p.event-date {
+  font-size: 0.7em;
+  text-transform: uppercase;
+}
+/* line 40, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_components.scss */
+.navCard.eventsCalendar p.event-location {
+  font-size: 0.7em;
+}
+
+/* line 4, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_expander.scss */
+.component--expander .expander__wrapper {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  line-height: 1.6;
+  padding: 10px 0 0 0px;
+  position: relative;
+  min-height: 75px;
+}
+/* line 12, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_expander.scss */
+.component--expander .expander__wrapper:nth-child(odd) {
+  background: rgba(34, 34, 34, 0.02);
+}
+/* line 16, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_expander.scss */
+.component--expander i {
+  display: block;
+}
+/* line 20, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_expander.scss */
+.component--expander a.button {
+  height: 75px;
+  width: 75px;
+  color: #6f6f6f;
+  cursor: pointer;
+  display: block;
+  margin-right: 0;
+  position: absolute;
+  padding: 25px 0 0 27px;
+  right: 0;
+  top: 0px;
+  font-size: 13px;
+}
+/* line 37, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_expander.scss */
+.component--expander a.hide-button {
+  z-index: -1;
+}
+/* line 41, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_expander.scss */
+.component--expander h2.expander__parent {
+  margin-left: 1rem;
+  margin-right: 80px;
+  font-weight: 700;
+  padding-bottom: 0px;
+}
+/* line 46, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_expander.scss */
+.component--expander h2.expander__parent p {
+  line-height: 1.9;
+}
+/* line 51, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_expander.scss */
+.component--expander h3 {
+  margin-left: 1rem;
+}
+/* line 55, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_expander.scss */
+.component--expander .expander__child {
+  position: relative;
+}
+/* line 59, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_expander.scss */
+.component--expander .expander__child p {
+  margin: 1em;
+}
+/* line 65, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_expander.scss */
+.component--expander .expander__child p img {
+  /*DD Form 214 guide*/
+  float: left;
+  margin: 0.4em 1em 1em 0;
+}
+/* line 71, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_expander.scss */
+.component--expander .faq.expander__child p {
+  /*for FAQs*/
+  margin-left: 4em;
+}
+/* line 75, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_expander.scss */
+.component--expander .hidden-part {
+  height: 0;
+}
+/* line 79, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_expander.scss */
+.component--expander .hidden-part * {
+  opacity: 0;
+}
+/* line 84, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_expander.scss */
+.component--expander .faq.expander__parent:before, .component--expander .expander__child:before {
+  color: #555555;
+  font-weight: 900;
+  margin-left: -30px;
+  position: absolute;
+}
+/* line 91, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_expander.scss */
+.component--expander .faq.expander__parent:before {
+  /*for use with FAQ's*/
+  content: 'Q:';
+}
+/* line 100, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_expander.scss */
+.component--expander .video {
+  background: #e1e1e1;
+  width: 100%;
+  max-width: 21em;
+  margin: 0 auto 0 auto;
+  height: 16em;
+  position: relative;
+}
+@media screen and (min-width: 769px) {
+  /* line 100, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_expander.scss */
+  .component--expander .video {
+    width: 20em;
+    height: 16em;
+    padding-top: 2.5em;
+    padding-left: 4.1em;
+    margin-left: 0;
+    margin-bottom: 1em;
+  }
+}
+@media screen and (min-width: 1024px) {
+  /* line 100, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_expander.scss */
+  .component--expander .video {
+    width: 100%;
+    margin: 0 auto 0 auto;
+  }
+}
+/* line 122, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_expander.scss */
+.component--expander .video i.fa-play {
+  color: rgba(34, 34, 34, 0.4);
+  position: absolute;
+  font-size: 60px;
+  top: 40%;
+  left: 45%;
+}
+/* line 131, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_expander.scss */
+.component--expander .video + p {
+  margin-top: 2em;
+}
+@media screen and (min-width: 769px) {
+  /* line 131, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_expander.scss */
+  .component--expander .video + p {
+    margin-left: 21em;
+    margin-top: -17em;
+  }
+}
+@media screen and (min-width: 1024px) {
+  /* line 131, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_expander.scss */
+  .component--expander .video + p {
+    margin-left: 4em;
+    margin-top: 1em;
+  }
+}
+
+/* line 4, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_faq.scss */
+.component--faq .faq-wrapper {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  line-height: 1.6;
+  padding: 30px 0 0 0px;
+  position: relative;
+  min-height: 80px;
+}
+/* line 15, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_faq.scss */
+.component--faq .faq-wrapper:nth-child(odd) {
+  background: rgba(34, 34, 34, 0.02);
+}
+/* line 19, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_faq.scss */
+.component--faq i {
+  display: block;
+}
+/* line 25, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_faq.scss */
+.component--faq a {
+  cursor: pointer;
+  display: block;
+  height: 80px;
+  margin-right: 0;
+  position: absolute;
+  padding: 25px 0 0 27px;
+  right: 0;
+  top: 0px;
+  width: 80px;
+  font-size: 13px;
+}
+/* line 43, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_faq.scss */
+.component--faq a.hide-button {
+  z-index: -1;
+}
+/* line 47, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_faq.scss */
+.component--faq .faq__question {
+  margin-left: 4em;
+  margin-right: 80px;
+}
+/* line 51, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_faq.scss */
+.component--faq .faq__question p {
+  line-height: 1.9;
+}
+/* line 56, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_faq.scss */
+.component--faq .faq__question {
+  font-weight: 700;
+  padding-bottom: 20px;
+}
+/* line 61, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_faq.scss */
+.component--faq .faq__answer p {
+  margin-left: 4em;
+}
+/* line 65, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_faq.scss */
+.component--faq .hidden-part {
+  height: 0;
+}
+/* line 69, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_faq.scss */
+.component--faq .hidden-part * {
+  opacity: 0;
+}
+/* line 74, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_faq.scss */
+.component--faq .faq__question:before, .component--faq .faq__answer:before {
+  color: #555555;
+  font-weight: 900;
+  margin-left: -30px;
+  position: absolute;
+}
+/* line 81, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_faq.scss */
+.component--faq .faq__question:before {
+  content: 'Q:';
+}
+/* line 90, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_faq.scss */
+.component--faq .video {
+  background: #e1e1e1;
+  width: 100%;
+  max-width: 21em;
+  margin: 0 auto 0 auto;
+  height: 16em;
+  position: relative;
+}
+@media screen and (min-width: 769px) {
+  /* line 90, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_faq.scss */
+  .component--faq .video {
+    width: 20em;
+    height: 16em;
+    padding-top: 2.5em;
+    padding-left: 4.1em;
+    margin-left: 0;
+    margin-bottom: 1em;
+  }
+}
+@media screen and (min-width: 1024px) {
+  /* line 90, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_faq.scss */
+  .component--faq .video {
+    width: 100%;
+    margin: 0 auto 0 auto;
+  }
+}
+/* line 112, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_faq.scss */
+.component--faq .video i.fa-play {
+  color: rgba(34, 34, 34, 0.4);
+  position: absolute;
+  font-size: 60px;
+  top: 40%;
+  left: 45%;
+}
+/* line 121, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_faq.scss */
+.component--faq .video + p {
+  margin-top: 2em;
+  margin-right: 2em;
+}
+@media screen and (min-width: 769px) {
+  /* line 121, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_faq.scss */
+  .component--faq .video + p {
+    margin-left: 21em;
+    margin-top: -17em;
+  }
+}
+@media screen and (min-width: 1024px) {
+  /* line 121, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_faq.scss */
+  .component--faq .video + p {
+    margin-left: 4em;
+    margin-top: 1em;
+  }
+}
+
+/* line 3, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_sliding-menu.scss */
+.sliding-panel-content {
+  position: fixed;
+  top: 5em;
+  right: 0px;
+  bottom: 0px;
+  left: auto;
+  height: 100%;
+  width: 16em;
+  -webkit-transform: translateX(16em);
+  -ms-transform: translateX(16em);
+  transform: translateX(16em);
+  -webkit-transition: all 0.25s linear;
+  transition: all 0.25s linear;
+  background: #404040;
+  z-index: 999999;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+/* line 8, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_sliding-menu.scss */
+.sliding-panel-content ul {
+  padding: 0;
+  margin: 0;
+}
+/* line 13, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_sliding-menu.scss */
+.sliding-panel-content li {
+  list-style: none;
+  text-transform: uppercase;
+}
+/* line 18, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_sliding-menu.scss */
+.sliding-panel-content a {
+  text-decoration: none;
+}
+/* line 40, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_sliding-menu.scss */
+.sliding-panel-content li a {
+  border-bottom: 1px solid #333;
+  color: #fff;
+  display: block;
+  font-weight: bold;
+  padding: 1em;
+}
+/* line 47, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_sliding-menu.scss */
+.sliding-panel-content li a:focus {
+  background-color: #4d4d4d;
+}
+/* line 51, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_sliding-menu.scss */
+.sliding-panel-content li a:hover {
+  background-color: #222;
+  color: #fff;
+}
+/* line 57, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_sliding-menu.scss */
+.sliding-panel-content.is-visible {
+  -webkit-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0);
+}
+
+/* line 62, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_sliding-menu.scss */
+.sliding-panel-fade-screen {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  -webkit-transition: all 0.15s ease-out 0s;
+  transition: all 0.15s ease-out 0s;
+  background: black;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 999998;
+}
+/* line 70, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_sliding-menu.scss */
+.sliding-panel-fade-screen.is-visible {
+  opacity: 0.4;
+  visibility: visible;
+}
+
+/* line 76, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_sliding-menu.scss */
+.sliding-panel-button {
+  background-color: #555555;
+  -webkit-border-radius: 3px;
+          border-radius: 3px;
+  border: 0;
+  color: white;
+  display: inline-block;
+  font-size: inherit;
+  font-weight: bold;
+  padding: 7px 18px;
+  text-decoration: none;
+  -webkit-background-clip: padding-box;
+          background-clip: padding-box;
+  background-color: #555555;
+  -webkit-border-radius: 3px;
+          border-radius: 3px;
+  border: 0;
+  color: white;
+  display: inline-block;
+  font-size: inherit;
+  font-weight: bold;
+  padding: 7px 18px;
+  text-decoration: none;
+  -webkit-background-clip: padding-box;
+          background-clip: padding-box;
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  height: 3em;
+  width: 3em;
+  padding: 10px 16px;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  -webkit-border-radius: 0;
+          border-radius: 0;
+  z-index: 1000;
+}
+/* line 354, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/vendors/bourbon/_bourbon-deprecated-upcoming.scss */
+.sliding-panel-button:hover:not(:disabled) {
+  background-color: #626262;
+  cursor: pointer;
+}
+/* line 365, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/vendors/bourbon/_bourbon-deprecated-upcoming.scss */
+.sliding-panel-button:active:not(:disabled), .sliding-panel-button:focus:not(:disabled) {
+  background-color: #484848;
+  cursor: pointer;
+}
+/* line 354, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/vendors/bourbon/_bourbon-deprecated-upcoming.scss */
+.sliding-panel-button:hover:not(:disabled) {
+  background-color: #665e5e;
+  cursor: pointer;
+}
+/* line 365, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/vendors/bourbon/_bourbon-deprecated-upcoming.scss */
+.sliding-panel-button:active:not(:disabled), .sliding-panel-button:focus:not(:disabled) {
+  background-color: #484848;
+  cursor: pointer;
+}
+/* line 59, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/vendors/bourbon/_bourbon-deprecated-upcoming.scss */
+.sliding-panel-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+/* line 88, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_sliding-menu.scss */
+.sliding-panel-button img {
+  height: 1.3em;
+}
+
+/* line 4, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_search-bar.scss */
+form.search-bar {
+  position: relative;
+}
+/* line 19, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_search-bar.scss */
+form.search-bar input[type=search] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: border-color;
+  transition: border-color;
+  background-color: rgba(255, 255, 255, 0.6);
+  -webkit-border-radius: 0;
+          border-radius: 0;
+  border: none;
+  color: #000;
+  display: block;
+  font-size: 1em;
+  font-style: italic;
+  margin: 0;
+  padding: 0.5em 0.5em;
+  position: relative;
+  width: 100%;
+}
+/* line 4, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/vendors/bourbon/css3/_placeholder.scss */
+form.search-bar input[type=search]::-webkit-input-placeholder {
+  color: #555555;
+}
+/* line 4, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/vendors/bourbon/css3/_placeholder.scss */
+form.search-bar input[type=search]::-moz-placeholder {
+  color: #555555;
+}
+/* line 4, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/vendors/bourbon/css3/_placeholder.scss */
+form.search-bar input[type=search]:-moz-placeholder {
+  color: #555555;
+}
+/* line 4, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/vendors/bourbon/css3/_placeholder.scss */
+form.search-bar input[type=search]:-ms-input-placeholder {
+  color: #555555;
+}
+/* line 39, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_search-bar.scss */
+form.search-bar button[type=submit] {
+  background-color: #222;
+  -webkit-border-radius: 3px;
+          border-radius: 3px;
+  border: 0;
+  color: white;
+  display: inline-block;
+  font-size: inherit;
+  font-weight: bold;
+  padding: 7px 18px;
+  text-decoration: none;
+  -webkit-background-clip: padding-box;
+          background-clip: padding-box;
+  background-color: #222;
+  -webkit-border-radius: 3px;
+          border-radius: 3px;
+  border: 0;
+  color: white;
+  display: inline-block;
+  font-size: inherit;
+  font-weight: bold;
+  padding: 7px 18px;
+  text-decoration: none;
+  -webkit-background-clip: padding-box;
+          background-clip: padding-box;
+  position: absolute;
+  top: 0em;
+  right: 0em;
+  bottom: 0em;
+  -webkit-border-bottom-left-radius: 0;
+          border-bottom-left-radius: 0;
+  -webkit-border-top-left-radius: 0;
+          border-top-left-radius: 0;
+  -webkit-border-radius: 0;
+          border-radius: 0;
+  outline: none;
+  padding: 5px 10px;
+  height: 100%;
+  width: 2.5em;
+}
+/* line 354, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/vendors/bourbon/_bourbon-deprecated-upcoming.scss */
+form.search-bar button[type=submit]:hover:not(:disabled) {
+  background-color: #2f2f2f;
+  cursor: pointer;
+}
+/* line 365, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/vendors/bourbon/_bourbon-deprecated-upcoming.scss */
+form.search-bar button[type=submit]:active:not(:disabled), form.search-bar button[type=submit]:focus:not(:disabled) {
+  background-color: #151515;
+  cursor: pointer;
+}
+/* line 354, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/vendors/bourbon/_bourbon-deprecated-upcoming.scss */
+form.search-bar button[type=submit]:hover:not(:disabled) {
+  background-color: #312d2d;
+  cursor: pointer;
+}
+/* line 365, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/vendors/bourbon/_bourbon-deprecated-upcoming.scss */
+form.search-bar button[type=submit]:active:not(:disabled), form.search-bar button[type=submit]:focus:not(:disabled) {
+  background-color: #151515;
+  cursor: pointer;
+}
+/* line 59, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/vendors/bourbon/_bourbon-deprecated-upcoming.scss */
+form.search-bar button[type=submit]:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+/* line 49, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_search-bar.scss */
+form.search-bar button[type=submit] img {
+  height: 12px;
+  opacity: 0.7;
+}
+
+/* line 1, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_footer.scss */
+.footer {
+  padding: 3em 1.618em;
+  width: 100%;
+}
+/* line 15, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_footer.scss */
+.footer .footer-logo {
+  margin-bottom: 2em;
+  text-align: center;
+}
+/* line 19, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_footer.scss */
+.footer .footer-logo img {
+  height: 3em;
+}
+/* line 24, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_footer.scss */
+.footer .footer-links {
+  margin-bottom: 1.5em;
+}
+/* line 20, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/vendors/bourbon/addons/_clearfix.scss */
+.footer .footer-links::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+@media screen and (min-width: 40em) {
+  /* line 24, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_footer.scss */
+  .footer .footer-links {
+    margin-left: 25.58941%;
+  }
+}
+/* line 33, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_footer.scss */
+.footer ul {
+  margin-bottom: 3em;
+  padding: 0;
+}
+@media screen and (min-width: 40em) {
+  /* line 33, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_footer.scss */
+  .footer ul {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 23.23176%;
+  }
+  /* line 89, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/vendors/neat/grid/_span-columns.scss */
+  .footer ul:last-child {
+    margin-right: 0;
+  }
+  /* line 78, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/vendors/neat/grid/_omega.scss */
+  .footer ul:nth-child(3n) {
+    margin-right: 0;
+  }
+  /* line 83, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/vendors/neat/grid/_omega.scss */
+  .footer ul:nth-child(3n+1) {
+    clear: left;
+  }
+  /* line 20, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/vendors/bourbon/addons/_clearfix.scss */
+  .footer ul::after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+}
+/* line 44, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_footer.scss */
+.footer li {
+  line-height: 1.5em;
+  list-style: none;
+  text-align: center;
+}
+@media screen and (min-width: 40em) {
+  /* line 44, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_footer.scss */
+  .footer li {
+    text-align: left;
+  }
+}
+/* line 54, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_footer.scss */
+.footer li a {
+  color: rgba(255, 255, 255, 0.4);
+  text-decoration: none;
+}
+/* line 58, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_footer.scss */
+.footer li a:focus, .footer li a:hover {
+  color: white;
+}
+/* line 64, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_footer.scss */
+.footer li h3 {
+  color: white;
+  font-size: 1em;
+  font-weight: 800;
+  margin-bottom: 0.4em;
+}
+/* line 71, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_footer.scss */
+.footer hr {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  margin: 0 auto 1.5em;
+  width: 12em;
+}
+/* line 77, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_footer.scss */
+.footer p {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 0.9em;
+  line-height: 1.5em;
+  margin: auto;
+  max-width: 35em;
+  text-align: center;
+}
+
+/* line 3, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_breadcrumbs.scss */
+.breadcrumb {
+  position: absolute;
+  top: -3em;
+  left: 3em;
+  z-index: 100;
+}
+/* line 7, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_breadcrumbs.scss */
+.breadcrumb::before {
+  background: red;
+  content: '';
+  display: block;
+  height: 3em;
+  position: absolute;
+  width: 3em;
+  z-index: 1000;
+  position: absolute;
+  bottom: 0;
+  left: -3em;
+  background: #222;
+}
+/* line 13, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_breadcrumbs.scss */
+.breadcrumb::after {
+  font-family: FontAwesome;
+  content: "\f078";
+  color: rgba(255, 255, 255, 0.9);
+  position: absolute;
+  bottom: 0.75em;
+  left: -2.02em;
+  z-index: 1000;
+}
+
+/* line 23, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_breadcrumbs.scss */
+.breadcrumb {
+  display: none;
+  text-align: left;
+}
+/* line 51, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_breadcrumbs.scss */
+.breadcrumb a {
+  background-color: rgba(34, 34, 34, 0.6);
+  border-left: 0;
+  border: 1px solid #ddd;
+  color: white;
+  display: inline-block;
+  font-size: 1em;
+  line-height: 3em;
+  margin-right: -5px;
+  padding: 0 0.75em 0 1.5em;
+  position: relative;
+  text-decoration: none;
+  border-bottom: none;
+  border-top: none;
+}
+/* line 67, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_breadcrumbs.scss */
+.breadcrumb a:first-child {
+  border-left: none;
+  padding-left: 1.5em;
+}
+/* line 74, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_breadcrumbs.scss */
+.breadcrumb a:last-child {
+  background-color: rgba(34, 34, 34, 0.6);
+  color: white;
+  padding-right: 1.5em;
+  border-right: none;
+}
+/* line 83, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_breadcrumbs.scss */
+.breadcrumb a:focus, .breadcrumb a:hover {
+  background-color: rgba(34, 34, 34, 0.8);
+  color: white;
+}
+/* line 89, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_breadcrumbs.scss */
+.breadcrumb a:after, .breadcrumb a:before {
+  position: absolute;
+  top: 0px;
+  right: auto;
+  bottom: 0px;
+  left: 100%;
+  border-bottom: 1.5em solid transparent;
+  border-left: 0.75em solid transparent;
+  border-top: 1.5em solid transparent;
+  content: '';
+  display: block;
+  margin: auto;
+  z-index: 2;
+}
+/* line 101, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_breadcrumbs.scss */
+.breadcrumb a:last-child:after, .breadcrumb a:last-child:before {
+  border: none;
+}
+/* line 106, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_breadcrumbs.scss */
+.breadcrumb a:before {
+  border-left-color: #ddd;
+  margin-left: 1px;
+  z-index: 1;
+}
+/* line 111, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_breadcrumbs.scss */
+.breadcrumb a:after {
+  border-left-color: rgba(34, 34, 34, 0.7);
+}
+@media screen and (min-width: 769px) {
+  /* line 23, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_breadcrumbs.scss */
+  .breadcrumb {
+    display: inline-block;
+  }
+}
+
+/* line 22, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_modal.scss */
+.modal label {
+  cursor: pointer;
+  margin-bottom: 0;
+}
+/* line 27, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_modal.scss */
+.modal label img {
+  -webkit-border-radius: 0;
+          border-radius: 0;
+  display: block;
+  max-width: 300px;
+}
+/* line 33, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_modal.scss */
+.modal .modal-state {
+  display: none;
+}
+/* line 37, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_modal.scss */
+.modal .modal-trigger {
+  padding: 0.8em 0;
+}
+/* line 42, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_modal.scss */
+.modal .modal-fade-screen {
+  -webkit-transition: opacity 0.25s ease;
+  transition: opacity 0.25s ease;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background: rgba(0, 0, 0, 0.85);
+  opacity: 0;
+  padding-top: 0.6em;
+  text-align: left;
+  visibility: hidden;
+  z-index: 99999999999;
+}
+@media screen and (min-width: 53.75em) {
+  /* line 42, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_modal.scss */
+  .modal .modal-fade-screen {
+    padding-top: 5em;
+  }
+}
+/* line 56, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_modal.scss */
+.modal .modal-fade-screen .modal-bg {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  cursor: pointer;
+}
+/* line 62, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_modal.scss */
+.modal .modal-close {
+  position: absolute;
+  top: 1.5em;
+  right: 1.5em;
+  height: 1.5em;
+  width: 1.5em;
+  background: #fff;
+  cursor: pointer;
+}
+/* line 68, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_modal.scss */
+.modal .modal-close:after, .modal .modal-close:before {
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  height: 1.5em;
+  width: 0.15em;
+  background: #959595;
+  content: '';
+  display: block;
+  margin: -3px 0 0 -1px;
+}
+/* line 79, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_modal.scss */
+.modal .modal-close:hover:after, .modal .modal-close:hover:before {
+  background: #7b7b7b;
+}
+/* line 84, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_modal.scss */
+.modal .modal-close:before {
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+/* line 89, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_modal.scss */
+.modal .modal-inner {
+  -webkit-transition: opacity 0.25s ease;
+  transition: opacity 0.25s ease;
+  background: #fff;
+  -webkit-border-radius: 0;
+          border-radius: 0;
+  margin-top: 0;
+  margin: auto;
+  max-height: 95%;
+  overflow: auto;
+  padding: 1.5em;
+  position: relative;
+  width: 95%;
+}
+@media screen and (min-width: 40em) {
+  /* line 89, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_modal.scss */
+  .modal .modal-inner {
+    max-height: 100%;
+    padding: 3em;
+    width: 60%;
+    max-width: 1000px;
+  }
+}
+/* line 148, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_modal.scss */
+.modal .modal-state:checked + .modal-fade-screen {
+  opacity: 1;
+  visibility: visible;
+}
+/* line 153, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_modal.scss */
+.modal .modal-state:checked + .modal-fade-screen .modal-inner {
+  top: 0.5em;
+}
+
+/* line 158, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_modal.scss */
+.modal-open {
+  overflow: hidden;
+}
+
+/* line 1, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_pattern--grid-lines.scss */
+.grid-items-lines {
+  position: relative;
+}
+/* line 20, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/vendors/bourbon/addons/_clearfix.scss */
+.grid-items-lines::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+/* line 17, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_pattern--grid-lines.scss */
+.grid-items-lines .grid-item {
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  background: rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid rgba(85, 85, 85, 0.2);
+  border-right: none;
+  cursor: pointer;
+  float: left;
+  overflow: hidden;
+  outline: none;
+  padding: 2em;
+  text-decoration: none;
+  width: 100%;
+}
+@media screen and (min-width: 769px) {
+  /* line 17, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_pattern--grid-lines.scss */
+  .grid-items-lines .grid-item {
+    height: 22em;
+    border-right: 1px solid rgba(85, 85, 85, 0.2);
+    width: 33.33333%;
+  }
+}
+/* line 39, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_pattern--grid-lines.scss */
+.grid-items-lines .grid-item:focus, .grid-items-lines .grid-item:hover {
+  background: rgba(34, 34, 34, 0.02);
+}
+/* line 44, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_pattern--grid-lines.scss */
+.grid-items-lines .grid-item.grid--articles:hover {
+  /*move to transition guide section*/
+  background: none;
+}
+@media screen and (min-width: 769px) {
+  /* line 49, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_pattern--grid-lines.scss */
+  .grid-items-lines .grid-item-big {
+    width: 66.66667%;
+  }
+}
+@media screen and (min-width: 40em) {
+  /* line 53, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_pattern--grid-lines.scss */
+  .grid-items-lines .grid-item-big p {
+    max-width: 60%;
+  }
+}
+/* line 63, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_pattern--grid-lines.scss */
+.grid-items-lines .grid-item p {
+  padding-top: 1em;
+}
+/* line 67, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_pattern--grid-lines.scss */
+.grid-items-lines .grid-item img {
+  position: absolute;
+  top: 1em;
+  left: 1em;
+  height: 3em;
+  width: 3em;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  border: 1px #555555 solid;
+  display: block;
+  margin-bottom: 1.2em;
+  opacity: 0.2;
+  padding: 0.7em;
+}
+@media screen and (min-width: 769px) {
+  /* line 67, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_pattern--grid-lines.scss */
+  .grid-items-lines .grid-item img {
+    position: absolute;
+    top: 2em;
+    left: 2em;
+  }
+}
+@media screen and (min-width: 769px) {
+  /* line 83, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_pattern--grid-lines.scss */
+  .grid-items-lines .grid-item img.icon--large {
+    height: 6em;
+    width: 6em;
+    padding: 1.25em;
+  }
+}
+/* line 91, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_pattern--grid-lines.scss */
+.grid-items-lines .grid-item h1 {
+  font-size: 1.3em;
+  margin-bottom: 0.4em;
+  margin-left: 2.5em;
+  margin-top: -0.15em;
+}
+@media screen and (min-width: 769px) {
+  /* line 91, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_pattern--grid-lines.scss */
+  .grid-items-lines .grid-item h1 {
+    margin-left: 4em;
+    margin-top: 0.5em;
+  }
+}
+/* line 103, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_pattern--grid-lines.scss */
+.grid-items-lines .grid-item p {
+  color: #222;
+  line-height: 1.5em;
+}
+@media screen and (min-width: 769px) {
+  /* line 103, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_pattern--grid-lines.scss */
+  .grid-items-lines .grid-item p {
+    max-width: 80%;
+  }
+}
+/* line 112, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_pattern--grid-lines.scss */
+.grid-items-lines .grid--career-explorer ul {
+  padding-top: 1em;
+  margin-left: 1em;
+}
+/* line 117, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_pattern--grid-lines.scss */
+.grid-items-lines .grid--career-explorer ul li {
+  list-style: disc;
+  line-height: 1.5em;
+}
+@media screen and (min-width: 769px) {
+  /* line 123, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_pattern--grid-lines.scss */
+  .grid-items-lines .grid-item.grid--employment-resources, .grid-items-lines .grid-item.grid--social {
+    margin-left: 33.333%;
+    margin-top: -22em;
+    border-bottom: none;
+    border-right: none;
+  }
+  /* line 129, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_pattern--grid-lines.scss */
+  .grid-items-lines .grid-item.grid--employment-resources h1, .grid-items-lines .grid-item.grid--social h1 {
+    margin-left: auto;
+  }
+  /* line 134, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_pattern--grid-lines.scss */
+  .grid-items-lines .grid-item:nth-child(3), .grid-items-lines .grid-item:nth-child(5), .grid-items-lines .grid-item:last-child {
+    border-right-width: 0px;
+  }
+  /* line 139, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_pattern--grid-lines.scss */
+  .grid-items-lines .grid-item.grid--announcements, .grid-items-lines .grid--articles {
+    /*articles applies to transition guide section*/
+    height: 44em;
+    border-bottom: none;
+  }
+  /* line 145, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_pattern--grid-lines.scss */
+  .grid-items-lines .grid--transition-guide img, .grid-items-lines .grid--career-explorer img, .grid-items-lines .grid--ups-culture img, .grid-items-lines .grid--family img {
+    position: static;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* line 152, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_pattern--grid-lines.scss */
+  .grid-items-lines .grid--transition-guide h1, .grid-items-lines .grid--career-explorer h1, .grid-items-lines .grid--ups-culture h1, .grid-items-lines .grid--family h1 {
+    margin-left: auto;
+    margin-top: 1.5em;
+  }
+  /* line 158, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_pattern--grid-lines.scss */
+  .grid-items-lines .grid-item:last-child {
+    border-bottom: none;
+  }
+}
+
+/* line 166, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_pattern--grid-lines.scss */
+.grid--employment-resources i, .grid--social i {
+  font-size: 3em;
+  color: #aeaeae;
+  margin-top: 1rem;
+  margin-right: 1rem;
+}
+
+@media screen and (min-width: 769px) {
+  /* line 186, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_pattern--grid-lines.scss */
+  .page--culture .grid-item:nth-child(5) {
+    border-right-width: 1px !important;
+  }
+  /* line 190, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_pattern--grid-lines.scss */
+  .page--culture .grid-item:nth-child(6) {
+    border-right-width: 0px;
+  }
+  /* line 194, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_pattern--grid-lines.scss */
+  .page--culture .grid-item:nth-child(7) {
+    border-bottom-width: 0px;
+  }
+}
+
+/* line 1, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_pattern--get-started.scss */
+.pattern--get-started {
+  background: rgba(34, 34, 34, 0.7);
+  width: 100%;
+  text-align: center;
+  padding: 0 5.5rem 1rem;
+}
+@media screen and (min-width: 769px) {
+  /* line 1, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_pattern--get-started.scss */
+  .pattern--get-started {
+    padding-top: 0.5rem;
+  }
+}
+/* line 11, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_pattern--get-started.scss */
+.pattern--get-started .button {
+  height: 2.3em;
+  width: 5em;
+  background: #c8c8c8;
+  color: #222;
+  cursor: pointer;
+  display: inline-block;
+  margin-top: 0.5em;
+  padding: 8px 12px;
+  text-align: center;
+  text-transform: uppercase;
+}
+@media screen and (min-width: 769px) {
+  /* line 11, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_pattern--get-started.scss */
+  .pattern--get-started .button {
+    margin-left: 2em;
+  }
+}
+/* line 26, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_pattern--get-started.scss */
+.pattern--get-started .button i {
+  padding: 0px 0 0 6px;
+  color: #6f6f6f;
+}
+/* line 32, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/components/_pattern--get-started.scss */
+.pattern--get-started p {
+  color: #fff;
+  display: inline-block;
+  font-size: 1.4em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0.4em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* line 4, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/pages/_page--home.scss */
+.page--home a {
+  display: block;
+  position: relative;
+}
+
+/* line 1, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/pages/_page--common.scss */
+.veteranGateway {
+  background: url(../img/graphy-2-30.png) top center;
+  position: relative;
+  padding-bottom: 10em;
+}
+
+/* line 8, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/pages/_page--common.scss */
+.veteranGateway__liner {
+  position: relative;
+}
+@media screen and (min-width: 769px) {
+  /* line 8, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/pages/_page--common.scss */
+  .veteranGateway__liner {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+  }
+}
+@media screen and (min-width: 1024px) {
+  /* line 8, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/pages/_page--common.scss */
+  .veteranGateway__liner {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+  }
+}
+@media screen and (min-width: 1400px) {
+  /* line 8, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/pages/_page--common.scss */
+  .veteranGateway__liner {
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+  }
+}
+/* line 33, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/pages/_page--common.scss */
+.veteranGateway__liner .title-block {
+  height: 7em;
+  padding-left: 1em;
+  padding-top: 1.5em;
+}
+/* line 40, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/pages/_page--common.scss */
+.veteranGateway__liner .title-block ul {
+  display: none;
+}
+@media screen and (min-width: 769px) {
+  /* line 40, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/pages/_page--common.scss */
+  .veteranGateway__liner .title-block ul {
+    display: inline-block;
+    margin-left: 18em;
+  }
+}
+/* line 50, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/pages/_page--common.scss */
+.veteranGateway__liner .title-block ul li {
+  margin-left: 3em;
+  display: inline-block;
+}
+
+/* line 60, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/pages/_page--common.scss */
+.page .intro > i {
+  float: left;
+  height: 84px;
+  width: 84px;
+  color: #959595;
+  font-size: 80px;
+  padding: 0 13px 0 0;
+}
+@media screen and (min-width: 1024px) {
+  /* line 58, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/pages/_page--common.scss */
+  .page {
+    position: relative;
+  }
+  /* line 71, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/pages/_page--common.scss */
+  .page .intro {
+    width: 50%;
+    position: absolute;
+    padding: 0;
+    padding: 0 2em 0 2em;
+  }
+  /* line 77, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/pages/_page--common.scss */
+  .page .intro img {
+    margin-top: 3em;
+    display: block;
+  }
+  /* line 83, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/pages/_page--common.scss */
+  .page .component--expander {
+    width: 50%;
+    margin-left: 50%;
+    right: 0;
+    top: 0;
+  }
+}
+/* line 91, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/pages/_page--common.scss */
+.page section.title {
+  width: 100%;
+  background: rgba(34, 34, 34, 0.1);
+  margin-bottom: 2em;
+}
+
+/* line 99, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/pages/_page--common.scss */
+h1.page--title {
+  color: #6f6f6f;
+  margin: 0 1rem 1rem;
+}
+
+/* line 3, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/pages/_page--transition-guide.scss */
+.grid--articles {
+  position: relative;
+}
+
+/* line 8, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/pages/_page--transition-guide.scss */
+.grid--articles:hover {
+  background: none;
+}
+
+/* line 12, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/pages/_page--transition-guide.scss */
+.page--home .grid-item-lines .grid-item.grid--transition-guide-intro:hover {
+  /***doesn't work***/
+  background: red;
+}
+
+/* line 1, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/pages/_page--style-guide.scss */
+.colorTest {
+  display: block;
+  width: 100px;
+  height: 100px;
+}
+
+/* line 7, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/pages/_page--style-guide.scss */
+.colorTest.grey:nth-child(1) {
+  background: #fff;
+}
+
+/* line 11, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/pages/_page--style-guide.scss */
+.colorTest.grey:nth-child(2) {
+  background: #fbfbfb;
+}
+
+/* line 15, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/pages/_page--style-guide.scss */
+.colorTest.grey:nth-child(3) {
+  background: #eeeeee;
+}
+
+/* line 19, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/pages/_page--style-guide.scss */
+.colorTest.grey:nth-child(4) {
+  background: #e1e1e1;
+}
+
+/* line 23, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/pages/_page--style-guide.scss */
+.colorTest.grey:nth-child(5) {
+  background: #c8c8c8;
+}
+
+/* line 27, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/pages/_page--style-guide.scss */
+.colorTest.grey:nth-child(6) {
+  background: #aeaeae;
+}
+
+/* line 31, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/pages/_page--style-guide.scss */
+.colorTest.grey:nth-child(7) {
+  background: #959595;
+}
+
+/* line 35, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/pages/_page--style-guide.scss */
+.colorTest.grey:nth-child(8) {
+  background: #6f6f6f;
+}
+
+/* line 39, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/pages/_page--style-guide.scss */
+.colorTest.grey:nth-child(9) {
+  background: #555555;
+}
+
+/* line 43, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/pages/_page--style-guide.scss */
+.colorTest.grey:nth-child(10) {
+  background: #3c3c3c;
+}
+
+/* line 47, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/pages/_page--style-guide.scss */
+.colorTest.grey:nth-child(11) {
+  background: #222;
+}
+
+@media screen and (min-width: 1024px) {
+  /* line 8, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/pages/_page--faq.scss */
+  .page--faq .intro {
+    width: 40%;
+    padding: 0;
+    float: left;
+  }
+  /* line 16, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/pages/_page--faq.scss */
+  .page--faq .component--faq {
+    width: 60%;
+    margin-left: 40%;
+    position: relative;
+    right: 0;
+  }
+}
+
+/* line 3, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/pages/_page--ddform214.scss */
+.page.page--ddform214 section.dd-form214 {
+  display: none;
+}
+@media screen and (min-width: 1024px) {
+  /* line 3, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/pages/_page--ddform214.scss */
+  .page.page--ddform214 section.dd-form214 {
+    display: block;
+    height: auto;
+    width: 50%;
+    position: absolute;
+    top: 14em;
+    right: auto;
+    bottom: 14em;
+    left: auto;
+  }
+}
+/* line 14, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/pages/_page--ddform214.scss */
+.page.page--ddform214 section.dd-form214 img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 21, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/pages/_page--ddform214.scss */
+.page.page--ddform214 h1 {
+  margin-left: 90px;
+}
+
+/* line 3, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/pages/_page--map.scss */
+.page--map .jobs-map {
+  height: 300px;
+  width: 100%;
+  background: rgba(34, 34, 34, 0.3);
+  display: block;
+  margin-top: 2em;
+  text-align: center;
+}
+@media screen and (min-width: 1024px) {
+  /* line 3, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/pages/_page--map.scss */
+  .page--map .jobs-map {
+    height: 500px;
+    width: 50%;
+    position: absolute;
+    margin-top: 110px;
+  }
+}
+/* line 17, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/pages/_page--map.scss */
+.page--map .expander__child ul li {
+  display: block;
+  background: #fbfbfb;
+  border-bottom: 1px solid rgba(34, 34, 34, 0.1);
+  height: 3em;
+  width: 100%;
+  position: relative;
+}
+/* line 26, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/pages/_page--map.scss */
+.page--map .expander__child ul li a {
+  display: block;
+  padding: 1em;
+}
+/* line 32, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/pages/_page--map.scss */
+.page--map .expander__child ul li i {
+  position: absolute;
+  top: 1em;
+  right: 1.7em;
+}
+/* line 37, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/pages/_page--map.scss */
+.page--map .expander__child ul li:first-of-type {
+  border-top: 1px solid rgba(34, 34, 34, 0.1);
+}
+
+/* line 3, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/pages/_page--article.scss */
+.veteranGateway .page .page--article .article__intro {
+  padding: 4rem 1rem 2rem 1rem;
+}
+/* line 5, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/pages/_page--article.scss */
+.veteranGateway .page .page--article .article__intro h1 {
+  font-size: 3em !important;
+  margin-left: 0 !important;
+}
+/* line 10, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/pages/_page--article.scss */
+.veteranGateway .page .page--article .article__intro p {
+  font-size: 1.5em;
+}
+/* line 15, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/pages/_page--article.scss */
+.veteranGateway .page .page--article .component--expander {
+  width: 100% !important;
+  margin-left: 0;
+}
+/* line 22, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/pages/_page--article.scss */
+.veteranGateway .page .page--article .expander__wrapper {
+  background: none;
+  min-height: 7em;
+  padding: 2.5em 6em 0 6em;
+}
+/* line 26, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/pages/_page--article.scss */
+.veteranGateway .page .page--article .expander__wrapper h2 {
+  margin-left: 1rem;
+}
+/* line 32, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/pages/_page--article.scss */
+.veteranGateway .page .page--article .expander__wrapper img {
+  position: absolute;
+  top: 1.5em;
+  left: 1em;
+  height: 4em;
+  width: 4em;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  border: 1px #555555 solid;
+  display: block;
+  opacity: 0.2;
+  padding: 0.7em;
+}
+/* line 45, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/pages/_page--article.scss */
+.veteranGateway .page .page--article .expander__wrapper:first-of-type {
+  border-top: 1px solid rgba(34, 34, 34, 0.05);
+}
