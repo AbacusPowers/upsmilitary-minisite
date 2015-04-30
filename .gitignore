@@ -9,6 +9,6 @@
 /composer.phar
 /vendor/
 /web/bundles/
-/nbproject/
-/node_modules/
+nbproject/
+node_modules/
 gulpfile.js
