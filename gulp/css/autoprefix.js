@@ -10,7 +10,7 @@ module.exports = function( path ){
     ];
 
     gulp.task('autoprefix', 'Add CSS vendor prefix using caniuse.com', ['compile:sass'], function() {
-        return gulp.src(path.css + '/**/*.css')
+        return gulp.src(path.css + '/app.css')
             .pipe( prefix({
                 browsers: AUTOPREFIXER_BROWSERS,
                 cascade: true

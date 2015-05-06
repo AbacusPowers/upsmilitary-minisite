@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <title>{% block title %}UPS - Veteran Careers Gateway{% endblock %}</title>
-        {% stylesheets '@VCGBundle/Resources/public/css/*' %}
+        {% stylesheets '@VCGBundle/Resources/public/css/*.css' %}
             <link rel="stylesheet" href="{{ asset_url }}">
         {% endstylesheets %}
         {% javascripts '@VCGBundle/Resources/public/js/required/*' %}
@@ -11,8 +11,9 @@
         {% endjavascripts %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
-    <body>
-        
+    <body class="{% block bodyclass %}base{% endblock %}">
+        <div id="overlay"></div>
+
         {% block siteheader %}
             <header class="page--home">
                 <img src="{{ asset('bundles/vcg/images/logo-sketch-1.png') }}" alt="" class="logo">
@@ -54,7 +55,6 @@
                 </nav>     -->      
             </header>
         {% endblock %}
-        
         
     <main class="veteranGateway">
                 

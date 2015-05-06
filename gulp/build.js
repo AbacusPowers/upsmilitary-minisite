@@ -18,7 +18,7 @@ module.exports = function( path ){
             }));
     });
 
-    gulp.task('build:css', false, ['compile:sass', 'autoprefix', 'bless']);
+    gulp.task('build:css', false, ['compile:sass', 'autoprefix']);
 
     gulp.task('build:sprite', false, ['optimize:sprite']);
 };

@@ -11,7 +11,7 @@ module.exports = function( path ){
     require('./watch')( path );
     require('./css/analyze')( path );
     require('./css/autoprefix')( path );
-    require('./css/bless')( path );
+    // require('./css/bless')( path );
     require('./js/format')( path );
     require('./js/lint')( path );
     require('./js/style')( path );
