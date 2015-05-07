@@ -2,13 +2,20 @@
 <html>
     <head>
         <meta charset="UTF-8" />
-        <title>{% block title %}UPS - Veteran Careers Gateway{% endblock %}</title>
-        {% stylesheets '@VCGBundle/Resources/public/css/*.css' %}
+        <title>
+            {% block title %}
+                UPS - Veteran Careers Gateway
+            {% endblock %}
+        </title>
+        
+        {% stylesheets '@VCGBundle/Resources/public/css/app.css' %}
             <link rel="stylesheet" href="{{ asset_url }}">
         {% endstylesheets %}
+        
         {% javascripts '@VCGBundle/Resources/public/js/required/*' %}
             <script src="{{ asset_url }}"></script>
         {% endjavascripts %}
+        
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body class="{% block bodyclass %}base{% endblock %}">
@@ -60,9 +67,9 @@
                 
                 
         {% block breadcrumbs %}
-        <div class="breadcrumb">
-            <a href="{{ url('homepage') }}">UPS Veteran Gateway</a>
-        </div>
+            <div class="breadcrumb">
+                <a href="{{ url('homepage') }}">UPS Veteran Gateway</a>
+            </div>
         {% endblock %}
         
         {% block body %}
