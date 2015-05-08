@@ -20,7 +20,14 @@
     </head>
     <body class="{% block bodyclass %}base{% endblock %}">
         <div id="overlay"></div>
-
+        <div id="modal">
+            <div id="modal-content">
+                
+            </div>
+            <a href="#" id="close-modal">close</a>
+            <a href="#" id="prev-article">prev</a>
+            <a href="#" id="next-article">next</a>
+        </div>
         {% block siteheader %}
             <header class="page--home">
                 <img src="{{ asset('bundles/vcg/images/logo-sketch-1.png') }}" alt="" class="logo">

@@ -22,3 +22,6 @@ gulpfile.js
 
 #IGNORE COMPILED BUNDLE CSS TO ALLOW
 src/UPS/VCGBundle/Resources/public/css/*
+
+#IGNORE BOWER COMPONENTS
+bower_components/

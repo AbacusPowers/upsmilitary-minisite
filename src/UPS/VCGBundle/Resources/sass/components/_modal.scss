@@ -187,10 +187,14 @@
     top: 0;
     left: 20%;
     width: 60%;
+    height: 100%;
     padding:8px;
     z-index: 2;
     padding: 2em;
-    
+    #modal-content {
+        height:100%;
+        overflow-y: auto;
+    }
     a#close-modal {
         position: absolute;
         top: 0;

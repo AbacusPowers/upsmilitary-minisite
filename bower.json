@@ -1,0 +1,16 @@
+{
+  "name": "wwwroot",
+  "version": "0.0.0",
+  "description": "bower components for UPS VCG project",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "history.js": "~1.8.0"
+  }
+}

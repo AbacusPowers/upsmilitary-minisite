@@ -15,11 +15,50 @@
 //    e.stopPropagation();
 //  });
 //});
-$('.article-link').click(function(){
-    $('#overlay').show();
-    $('#modal').fadeIn();
+
+
+$('document').ready(function(){
+
+    $('.article-link').on('click', function(e){
+        e.preventDefault();
+        var href = $(this).attr('href');
+
+        // Getting Content
+        getContent(href, true);
+
+        $('.historyAPI').removeClass('active');
+        $(this).addClass('active');
+        
+        $('#overlay').show();
+        $('#modal').fadeIn();
+        $('body').addClass('article-view');
+    });
+
+    $('#close-modal').click(function(){
+        $('#overlay').hide();
+        $('#modal').hide();
+        $('body').removeClass('article-view');
+    });
 });
-$('#close-modal').click(function(){
-    $('#overlay').hide();
-    $('#modal').hide();
+
+// Adding popstate event listener to handle browser back button
+window.addEventListener("popstate", function(e) {
+
+    // Get State value using e.state
+    getContent(location.pathname, false);
 });
+
+function getContent(url, addEntry) {
+    $.get(url)
+    .done(function( data ) {
+
+        // Updating Content on Page
+        $('#modal-content').html(data);
+
+        if(addEntry === true) {
+            // Add History Entry using pushState
+            history.pushState(null, null, url);
+        }
+
+    });
+}
