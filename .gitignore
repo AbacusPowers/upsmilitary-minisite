@@ -25,3 +25,4 @@ src/UPS/VCGBundle/Resources/public/css/*
 
 #IGNORE BOWER COMPONENTS
 bower_components/
+src/UPS/VCGBundle/Resources/public/js/vendor/

@@ -15,6 +15,9 @@ class ArticleController extends Controller
      */
     public function indexAction($slug)
     {
+        if(substr($slug, -5, 5) === '.html') {
+            $slug = substr($slug, 0, -5);
+        }
         $yaml = new Parser();
         $article = array();
 

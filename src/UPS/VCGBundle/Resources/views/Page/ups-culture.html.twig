@@ -1,5 +1,5 @@
 {% extends "VCGBundle:Layouts:page.html.twig" %}
-
+{% block title %}UPS Culture &amp; Benefits{% endblock %}
 {% block breadcrumbs %}
     <div class="breadcrumb">
         <a href="index.html">UPS Veteran Gateway</a>
@@ -12,7 +12,7 @@
                     <div class="grid-items-lines">
                         {% include 'VCGBundle:GridItems:transition-guide-culture.html.twig' %}
   
-                      <a href="{{ path('ups_vcg_article_index', {'slug': 'test'}) }}" class="grid-item grid--family article-link">
+                      <a href="{{ path('ups_vcg_article_index_1', {'slug': 'test'}) }}" class="grid-item grid--family article-link">
                         <img src="{{ asset('bundles/vcg/images/placeholder_logo_2_dark.png') }}" class="icon--large" alt="">
                         <h1>Family</h1>
                         <p>See all the advantages and benefits to working at UPS for veterans, families, students and more.</p>

@@ -33,7 +33,7 @@
   @include transform(translateX(16em));
   @include transition(all 0.25s linear);
   background: $sliding-panel-background;
-  z-index: 999999;
+  /*z-index: 999999;*/
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 
@@ -65,7 +65,7 @@
   background: black;
   opacity: 0;
   visibility: hidden;
-  z-index: 999998;
+/*  z-index: 999998;*/
 
   &.is-visible {
     opacity: 0.4;
@@ -83,7 +83,7 @@
   // position: relative;
   outline: none;
   border-radius: 0;
-  z-index: 1000;
+/*  z-index: 1000;*/
 
   img {
     height: 1.3em;

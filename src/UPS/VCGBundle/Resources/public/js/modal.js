@@ -1,64 +1,79 @@
-//$(function() {
-//  $("#modal-1").on("change", function() {
-//    if ($(this).is(":checked")) {
-//      $("body").addClass("modal-open");
-//    } else {
-//      $("body").removeClass("modal-open");
-//    }
-//  });
-//
-//  $(".modal-fade-screen, .modal-close").on("click", function() {
-//    $(".modal-state:checked").prop("checked", false).change();
-//  });
-//
-//  $(".modal-inner").on("click", function(e) {
-//    e.stopPropagation();
-//  });
-//});
-
-
 $('document').ready(function(){
 
     $('.article-link').on('click', function(e){
         e.preventDefault();
         var href = $(this).attr('href');
-
         // Getting Content
-        getContent(href, true);
+        getModalContent(href, true);
+        showModal();
 
-        $('.historyAPI').removeClass('active');
-        $(this).addClass('active');
-        
-        $('#overlay').show();
-        $('#modal').fadeIn();
-        $('body').addClass('article-view');
     });
 
-    $('#close-modal').click(function(){
-        $('#overlay').hide();
-        $('#modal').hide();
-        $('body').removeClass('article-view');
+    $('#close-modal').on('click',function(e){
+        e.preventDefault();
+        console.log('close it!');
+//        var State = History.getState();
+//        var href = $(this).attr('href');
+//        console.log(State.data.modal);
+//        if(State.data.modal === 1) {
+////            closeModal();
+//            console.log('close it!');
+//        }
     });
 });
+function showModal(){
+    $('#overlay').show();
+    $('#modal').fadeIn();
+    $('body').addClass('article-view');
+}
+function closeModal(){
+    destroyModal();
+    History.back();
+}
+function destroyModal(){
+    $('#overlay').hide();
+    $('#modal').hide();
+    $('body').removeClass('article-view');
+}
 
-// Adding popstate event listener to handle browser back button
-window.addEventListener("popstate", function(e) {
+$('#modal').on('click','#close-modal', function(e){
+        e.preventDefault();
+        console.log('close it!');
+        var State = History.getState();
+        var href = $(this).attr('href');
+//        console.log(State.data.modal);
+        if(State.data.modal === 1) {
+            closeModal();
+            console.log('close it!');
+        }
+    });
 
-    // Get State value using e.state
-    getContent(location.pathname, false);
-});
 
-function getContent(url, addEntry) {
+(function(window, undefined) {
+    
+    History.Adapter.bind(window,'statechange',function(){ // Note: We are using statechange instead of popstate
+        // Log the State
+        var State = History.getState(); // Note: We are using History.getState() instead of event.state
+        History.log('statechange:', State.data, State.title, State.url);
+        if(State.data.modal !== 1) {
+            destroyModal();
+        } else {
+            showModal();
+        }
+        console.log(State.data.modal);
+    });
+})(window);
+
+function getModalContent(url, addEntry) {
     $.get(url)
-    .done(function( data ) {
-
+    .done(function() {
+        
         // Updating Content on Page
-        $('#modal-content').html(data);
-
+        $('#modal').load(url +' #modal-content');
         if(addEntry === true) {
             // Add History Entry using pushState
-            history.pushState(null, null, url);
+            History.pushState({modal: 1}, null, url);
         }
-
+//        console.log(history.state);
     });
 }

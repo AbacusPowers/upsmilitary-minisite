@@ -12,7 +12,10 @@
             <link rel="stylesheet" href="{{ asset_url }}">
         {% endstylesheets %}
         
-        {% javascripts '@VCGBundle/Resources/public/js/required/*' %}
+        {% javascripts 
+            '@VCGBundle/Resources/public/js/required/*'
+            '@VCGBundle/Resources/public/js/vendor/history.js/scripts/bundled/html4+html5/native.history.js'
+        %}
             <script src="{{ asset_url }}"></script>
         {% endjavascripts %}
         
@@ -21,12 +24,7 @@
     <body class="{% block bodyclass %}base{% endblock %}">
         <div id="overlay"></div>
         <div id="modal">
-            <div id="modal-content">
-                
-            </div>
-            <a href="#" id="close-modal">close</a>
-            <a href="#" id="prev-article">prev</a>
-            <a href="#" id="next-article">next</a>
+            {% block modal %}{% endblock %}
         </div>
         {% block siteheader %}
             <header class="page--home">
@@ -80,7 +78,7 @@
         {% endblock %}
         
         {% block body %}
-            <!-- PAGE-SPECIFIC STUFF GOES HERE -->
+            <!-- PAGE CONTENT GOES HERE -->
         {% endblock %}
     </main>
 

@@ -1,6 +1,6 @@
 {
-  "name": "wwwroot",
-  "version": "0.0.0",
+  "name": "UPS - VCG",
+  "version": "0.1.0",
   "description": "bower components for UPS VCG project",
   "license": "MIT",
   "ignore": [
