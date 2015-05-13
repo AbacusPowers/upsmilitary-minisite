@@ -12,6 +12,7 @@ class ArticleController extends Controller
     /**
      * @Route("/article/{slug}")
      * @Route("/article/{slug}.html")
+     * @Route("/ups-culture/{slug}.html")
      */
     public function indexAction($slug)
     {
@@ -20,7 +21,9 @@ class ArticleController extends Controller
         }
         $yaml = new Parser();
         $article = array();
-
+        
+        $request = $this->container->get('request');
+        $routeName = $request->get('_route');
         try {
             $article = $yaml->parse(file_get_contents( dirname(dirname(__FILE__)). "/Resources/data/articles/$slug.yml"));
         } catch (ParseException $e) {
@@ -29,7 +32,7 @@ class ArticleController extends Controller
 
         return $this->render(
             'VCGBundle:Layouts:article.html.twig',
-            array('slug' => $slug, 'article' => $article)
+            array('slug' => $slug, 'article' => $article,'route' => $routeName)
         );
     }
 }

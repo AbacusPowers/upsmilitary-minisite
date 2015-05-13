@@ -8,18 +8,14 @@ $('document').ready(function(){
         showModal();
 
     });
-
-    $('#close-modal').on('click',function(e){
+    $('.article-link').on('click', function(e){
         e.preventDefault();
-        console.log('close it!');
-//        var State = History.getState();
-//        var href = $(this).attr('href');
-//        console.log(State.data.modal);
-//        if(State.data.modal === 1) {
-////            closeModal();
-//            console.log('close it!');
-//        }
+        var href = $(this).attr('href');
+        // Getting Content
+        getModalContent(href, true);
+        showModal();
     });
+
 });
 function showModal(){
     $('#overlay').show();
@@ -37,16 +33,15 @@ function destroyModal(){
 }
 
 $('#modal').on('click','#close-modal', function(e){
+    var State = History.getState();
+    var href = $(this).attr('href');
+        console.log(State.data.modal);
+    if(State.data.modal === 1) { //only true if triggered from article link (not direct visits to article)
         e.preventDefault();
+        closeModal();
         console.log('close it!');
-        var State = History.getState();
-        var href = $(this).attr('href');
-//        console.log(State.data.modal);
-        if(State.data.modal === 1) {
-            closeModal();
-            console.log('close it!');
-        }
-    });
+    }
+});
 
 
 (function(window, undefined) {
