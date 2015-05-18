@@ -15,19 +15,23 @@ class PageController extends Controller
     public function indexAction($slug)
     {
         try {
-            $this->render(
-                'VCGBundle:Page:'.$slug.'.twig',
-                array('slug' => $slug)
-            );
+//            $this->render(
+//                'VCGBundle:Page:'.$slug.'.twig',
+//                array('slug' => $slug)
+//            );
             $response = $this->render(
                 'VCGBundle:Page:'.$slug.'.twig',
                 array('slug' => $slug)
             );
         } catch (\Exception $ex) {
             // your conditional code here.
-            $response = new Response(Response::HTTP_NOT_FOUND);
+            $error = new Response(Response::HTTP_NOT_FOUND);
 //            throw new \Symfony\Component\HttpKernel\Exception\HttpException(404, "Oops! Page not found");
-            var_dump($slug);
+//            var_dump($slug);
+            $response = $this->render(
+                'VCGBundle:Page:404.html.twig',
+                array('slug' => $slug, 'error' => $error)
+            );
         }
         return $response;
 //        return $this->render(
