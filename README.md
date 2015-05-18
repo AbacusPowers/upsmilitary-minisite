@@ -12,6 +12,7 @@ A Symfony project created on April 22, 2015, 10:40 am.
 
 4. run `npm install` to install gulp develop resources
 
+5. run `bower install` to install js dependencies
 
 GIT
 ========
