@@ -34,6 +34,8 @@ $('document').ready(function(){
                 window.location.href = href;
             }
             
+        } else if ($('#modal-wrapper').hasClass('article')) {
+            window.location.href = href;
         }
     });
 });
@@ -54,14 +56,14 @@ function showModal(){
     $('#overlay').show();
     $('#modal').fadeIn();
     $('body').addClass('article-view');
-    $('.page').addClass('article');
+    $('#modal-wrapper').addClass('article');
 }
 
 function destroyModal(){
     $('#overlay').hide();
     $('#modal').hide();
     $('body').removeClass('article-view');
-    $('.page').removeClass('article');
+    $('#modal-wrapper').removeClass('article');
 }
 
 (function(window, undefined) {

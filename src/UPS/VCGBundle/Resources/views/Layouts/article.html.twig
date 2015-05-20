@@ -33,7 +33,6 @@
                     {% endif %}
                     </div>
             {% endblock %}
-            <h2>{{route }}</h2>
             <a href="{% block parentPageLink %}{{ path('page', {'slug': article.Parent | raw })}}{% endblock %}" id="close-modal">close</a>
             <a href="{% block prevArticleLink %}{{ path(route, {'slug': article.Prev | raw })}}{% endblock %}" id="prev-article">prev</a>
             <a href="{% block nextArticleLink %}{{ path(route, {'slug': article.Next | raw })}}{% endblock %}" id="next-article">next</a>
