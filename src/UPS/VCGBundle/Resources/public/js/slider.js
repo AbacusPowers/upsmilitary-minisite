@@ -13,7 +13,7 @@ $( document ).ready(function() {
     ItemWidth = $('.carousel-item img').width();
 
     NegMargin = -(ItemWidth - WindowWidth)/2;
-    $('.carousel-item img').css('margin-left', NegMargin);
+   $('.carousel-item img').css('margin-left', NegMargin);
 });
 
 /*
@@ -24,5 +24,5 @@ $( window ).resize(function() {
     ItemWidth = $('.carousel-item img').width();
 
     NegMargin = -(ItemWidth - WindowWidth)/2;
-    $('.carousel-item img').css('margin-left', NegMargin);
+   $('.carousel-item img').css('margin-left', NegMargin);
 });

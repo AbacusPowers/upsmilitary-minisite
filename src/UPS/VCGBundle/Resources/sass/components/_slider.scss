@@ -22,24 +22,24 @@
         height: $header-height--large;
     }
 
-    .breakpoint-medium & {
-        max-width: $max-width--medium;
-        margin-left: auto;
-        margin-right: auto;
-    }
+    // .breakpoint-medium & {
+    //     max-width: $max-width--medium;
+    //     margin-left: auto;
+    //     margin-right: auto;
+    // }
 
-    .breakpoint-large & {
-        max-width: $max-width--large;
-        margin-left: auto;
-        margin-right: auto;
-    }
+    // .breakpoint-large & {
+    //     max-width: $max-width--large;
+    //     margin-left: auto;
+    //     margin-right: auto;
+    // }
 
-    .breakpoint-wide & {
-        max-width: $max-width--wide;
-        // background: red;
-        margin-left: auto;
-        margin-right: auto;
-    }
+    // .breakpoint-wide & {
+    //     max-width: $max-width--wide;
+    //     // background: red;
+    //     margin-left: auto;
+    //     margin-right: auto;
+    // }
 
 }
 
@@ -55,22 +55,22 @@
 }
 
 .carousel-item {
-    position: absolute;
     opacity: 0;
-    -webkit-transition: opacity 0.6s ease-out;
+    position: absolute;
     transition: opacity 0.6s ease-out;
+    -webkit-transition: opacity 0.6s ease-out;
+
+    .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & {
+        height: $header-height--large;
+    }
 }
 
 .carousel-item img {
     display: block;
     height: auto;
-    margin-left: 0 !important; /*where does the 20px margin that this overides actually come from?*/
-
-    .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & {
-        height: $header-height--large;
-    }
-    min-width: 100%;
+    // margin-left: 0 !important; /*where does the 20px margin that this overides actually come from?*/    
     max-width: none;
+    min-width: 100%;
 }
 
 .carousel-control {
