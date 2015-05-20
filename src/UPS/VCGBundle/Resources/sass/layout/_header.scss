@@ -174,11 +174,7 @@ header {
             color: $white20;
             text-transform: uppercase;
             @include position(absolute, 0.25em null null 0.75em );
-<<<<<<< HEAD
-        }
-=======
             z-index: 200;
           }
->>>>>>> b5c3a0583650fd0b43c62c231c05471a21ea5408
     }
 }
