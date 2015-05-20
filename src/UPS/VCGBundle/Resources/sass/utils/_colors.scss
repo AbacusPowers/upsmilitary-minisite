@@ -1,7 +1,7 @@
-$brown: brown;
 
 
-$black: #222;
+
+$black: rgba( 16,16,16,1);
 $black90: rgba( $black, 0.9 );
 $black80: rgba( $black, 0.8 );
 $black70: rgba( $black, 0.7 );
@@ -40,3 +40,12 @@ $grey30: lighten( $black, 75%);
 $grey20: lighten( $black, 80%); 
 $grey10: lighten( $black, 85%); 
 $grey: $grey80;
+
+
+
+$ups-yellow: rgba(255,181,0,1);
+$ups-brown-1: rgba(53,28,21,1);
+$ups-grey-1: rgba(218,217,214,1);
+
+// Cruft below
+$brown: $ups-brown-1;

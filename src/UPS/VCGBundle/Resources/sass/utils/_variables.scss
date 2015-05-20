@@ -1,45 +1,17 @@
-
-
 $halfBaseUnit: 1em;
 
 $base-unit: 2rem;
 
-// Simple Breakpoints
-// http://jdsteinbach.com/css/sass-maps-breakpoint-mixin/
-// $breakpoints: (
-//   small: 480px,
-//   medium: 720px,
-//   large: 960px,
-//   wide: 1200px
-// );
 
-// @mixin breakpoint($name) {
-//   @if not map-has-key($breakpoints, $name) {
-//     @warn "Warning: `#{$name}` is not a valid breakpoint name.";
-//   } @else {
-//     @media (min-width: map-get($breakpoints, $name)) {
-//       @content;
-//     }
-//   }
-// }
+// Use these variables to constrain the content narrower than the width of the associated breakpoint 
+$max-width--small: 750px;
+
+$max-width--medium: 960px;
+
+$max-width--large: 1200px;
+
+$max-width--wide: 1400px;
 
 
-
-// Breakpoint breakpoints http://breakpoint-sass.com/
-
-$bp-small-up: min-width  1px;
-$bp-medium-up: min-width 769px;
-$bp-large-up: min-width 1024px;
-$bp-wide-up: min-width 1400px;
-
-$bp-small-only: max-width  768px;
-
-
-// // assume min-width (by default) if only a number
-// $high-tide: 500px;
-// // set min-width/max-width if both values are numbers
-// $ex-presidents: 600px 800px;
-// // if one value is a string, assume a feature/value pair
-// $surfboard-width: max-width 1000px;
-// // string tests together within parentheses, assume each item is a feature value pair
-// $surfboard-height: (min-height 1000px) (orientation portrait);
+// Bitters
+$base-spacing: 1.5em;

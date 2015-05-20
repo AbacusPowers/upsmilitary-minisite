@@ -1,50 +1,63 @@
 $header-height--small: 18rem;
-$header-height--large:30em;
+$header-height--medium: 24em;
+$header-height--large: 28em;
+$header-height--wide: 40em;
 
 header {
-    background: url(/bundles/vcg/images/bg-3b.jpg) top center no-repeat $grey90;
+    background: url(../img/bg-5b.png) bottom center no-repeat $grey90;
     background-size: cover;
     height: $header-height--small;
-
-
     position: relative;
 
-    @include breakpoint($bp-medium-up){
+    .breakpoint-medium & {
+        height: $header-height--medium;
+    }
+
+    .breakpoint-large &, .breakpoint-wide & {
         height: $header-height--large;
     }
 
     img.logo {
-        z-index: 300;
         @include position(absolute, 1em);
         @include size(3em auto);
 
-        @include breakpoint($bp-medium-up) {
+       .breakpoint-medium &, .breakpoint-large & {
             @include position(absolute, 2em);
-            @include size(5em auto);
+            width: 5em;
+        }
+
+        .breakpoint-wide & {
+            // @include position(absolute, 2em);
+            width: 5em;
         }
     }
 
     .header--liner { /*slider prototype--must be made full width*/
         position: relative;
         display: block;
-        // background: rgba(red, 0.1);
         height: $header-height--small;
 
-        @include breakpoint($bp-medium-up) {
+        .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & {
             height: $header-height--large;
         }
 
-        @include breakpoint($bp-large-up) {
-            max-width: 1000px;
+        .breakpoint-medium & {
+            max-width: $max-width--medium;
             margin-left: auto;
             margin-right: auto;
         }
 
-        @include breakpoint($bp-wide-up) {
-            max-width: 1400px;
+        .breakpoint-large & {
+            max-width: $max-width--large;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .breakpoint-wide & {
+            max-width: $max-width--wide;
             // background: red;
-            // margin-left: auto;
-            // margin-right: auto;
+            margin-left: auto;
+            margin-right: auto;
         }
     
 
@@ -56,13 +69,13 @@ header {
             position: absolute;
             bottom: 15%;
 
-            @include breakpoint($bp-large-up) {
+            .breakpoint-large & {
                 // background: red;
                 margin-left: 0;
                 width: 50% ;
             }
 
-            @include breakpoint($bp-wide-up) {
+            .breakpoint-wide & {
                 // background: green;
                 margin-left: 0;
                 width: calc( 50% - 2rem );
@@ -83,18 +96,10 @@ header {
         }
     }
 
-    &:after {
-        @include breakpoint($bp-medium-up) {
-            @include pseudo-block(3em);
-            @include position(absolute, null null 0 0);
-            width: 100%;
-            background: $black30;
-            z-index: 0;
-        }
-    }
+    
 
     // &.home {
-    //     @include breakpoint($bp-medium-up) {
+    //     .breakpoint-medium & {
     //         height: 400px;
     //     }
     // }
@@ -112,7 +117,7 @@ header {
         color: $white;
         width: 100%;
 
-        @include breakpoint($bp-medium-up) {
+        .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & {
             width: 400px;
         }
 
@@ -131,43 +136,43 @@ header {
     }
     
 
-    @include breakpoint($bp-small-up) {
+    .breakpoint-small & {
         // background: rgba( red, 0.3 );
         &:before {
             content:'small breakpoint';
-            color: black;
-            text-transform: uppercase;
-            @include position(absolute, 0.25em null null 0.75em );
-        }
-      }
-
-    @include breakpoint($bp-medium-up) {
-        // background: green;
-        &:before {
-            content:'medium-breakpoint';
-            color: black;
-            text-transform: uppercase;
-            @include position(absolute, 0.25em null null 0.75em );
-        }
-      }
-
-    @include breakpoint($bp-large-up) {
-        // background: blue;
-        &:before {
-            content:'large breakpoint';
-            color: black;
+            color: $white20;
             text-transform: uppercase;
             @include position(absolute, 0.25em null null 0.75em );
         }
     }
 
-    @include breakpoint($bp-wide-up) {
+    .breakpoint-medium & {
+        // background: green;
+        &:before {
+            content:'medium-breakpoint';
+            color: $white20;
+            text-transform: uppercase;
+            @include position(absolute, 0.25em null null 0.75em );
+        }
+    }
+
+    .breakpoint-large & {
+        // background: blue;
+        &:before {
+            content:'large breakpoint';
+            color: $white20;
+            text-transform: uppercase;
+            @include position(absolute, 0.25em null null 0.75em );
+        }
+    }
+
+    .breakpoint-wide & {
         // background: pink;
         &:before {
             content: 'wide breakpoint';
-            color: black;
+            color: $white20;
             text-transform: uppercase;
             @include position(absolute, 0.25em null null 0.75em );
-          }
+        }
     }
 }

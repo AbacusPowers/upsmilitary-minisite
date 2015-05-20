@@ -2,15 +2,32 @@
 .component--expander {
 
   .expander__wrapper{
-    border-bottom: 1px solid rgba(0,0,0,0.05);
+    border-bottom: 1px solid rgba( $ups-grey-1, 0.3);
     line-height: 1.6;
-    padding: 10px 0 0 0px; 
+    padding: 10px 0 0 2em; 
     position: relative;
     min-height: 75px;
+    &:before {
+      @include pseudo-block(10px);
+      left: 0;
+      height: calc( 100% + 1px );
+      height: 100%;
+      top: 0;
+      background: $ups-yellow;
+
+    }
   }
 
   .expander__wrapper:nth-child(odd) {
-    background: $black01
+    // background: $white15;
+    // border-left: 10px solid $ups-yellow;
+
+  }
+
+  .expander__wrapper:nth-child(even) {
+    // background: $white15;
+    // border-left: 10px solid $ups-yellow;
+
   }
 
   i {
@@ -106,7 +123,7 @@
     height: 16em;
     position: relative;
 
-    @include breakpoint($bp-medium-up) {
+    .breakpoint-medium & {
       width: 20em;
       height: 16em;
       padding-top: 2.5em;
@@ -114,7 +131,7 @@
       margin-left: 0;
       margin-bottom: 1em;
     }   
-    @include breakpoint($bp-large-up) {
+    .breakpoint-large & {
       width: 100%;
       margin: 0 auto 0 auto;
     }
@@ -131,12 +148,12 @@
   .video + p {
     margin-top: 2em;
     // margin-right: 2em;
-    @include breakpoint($bp-medium-up) {
+    .breakpoint-medium & {
     margin-left: 21em;
     margin-top: -17em;
     }
 
-    @include breakpoint($bp-large-up) {
+    .breakpoint-large & {
       margin-left: 4em;
       margin-top: 1em;
     }

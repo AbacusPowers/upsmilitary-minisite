@@ -1,61 +1,159 @@
 .veteranGateway {
-    background: url(/bundles/vcg/images/graphy-2-30.png) top center;
+    // background: url(../img/graphy-2-30.png) top center;
+    background: $black;
+    // @include linear-gradient(#212121, $black);
+
     position: relative;
-    padding-bottom: 10em;
+    // padding-bottom: 10em;
+    margin-top: 0em;
+
+    &:before {
+        .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & {
+            // @include pseudo-block(2.2em);
+            @include position(absolute, -2.2em null 0 0);
+            width: 100%;
+            background: $black30;
+            z-index: 0;
+
+        }
+    }
 }
 
 
 .veteranGateway__liner {
     position: relative;
+    // background: pink;
 
-    @include breakpoint($bp-medium-up) {
-        max-width: 800px;
+    .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & {
+        // padding-top: 9.5em;
+    }
+
+     .breakpoint-small & {
+        // max-width: 768px;
         margin-left: auto;
         margin-right: auto;
         padding-left: 0;
     }
 
-    @include breakpoint($bp-large-up) {
-        max-width: 1000px;
+    .breakpoint-medium & {
+        max-width: $max-width--medium;
+        // background: yellow;
         margin-left: auto;
         margin-right: auto;
         padding-left: 0;
     }
 
-    @include breakpoint($bp-wide-up) {
-        max-width: 1400px;
+    .breakpoint-large & {
+        max-width: $max-width--large;
+        // background: green;
         margin-left: auto;
         margin-right: auto;
         padding-left: 0;
-
     }
+
+    .breakpoint-wide & {
+        max-width: $max-width--wide;
+        // background: blue;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 0;
+    }
+
+   
+
+    // .breakpoint-large & {
+    //     // max-width: 1000px;
+    //     margin-left: auto;
+    //     margin-right: auto;
+    //     padding-left: 0;
+    // }
+
+    // .breakpoint-wide & {
+    //     // max-width: 1400px;
+    //     margin-left: auto;
+    //     margin-right: auto;
+    //     padding-left: 0;
+
+    // }
 
     .title-block {
-        height: 7em;
-        // background: $black10;
+        height: 5em;
+        // background: red;
+        background: #222;
         padding-left: 1em;
         padding-top: 1.5em;
 
+        .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & {
+            width: 50%;
+            height: 7em;
+            // margin-top: -7.5em;
+            @include position( -5em null null 0 );
+            text-align: right;
+            padding-top: 1.65em;
+            padding-right: 5.5em;
+            border-bottom: 1px solid $ups-yellow;
+            // border-right: 1px solid $ups-yellow;
 
+    
+            h1 {
+                font-size: 2em;
+                font-weight: 400;
+            }
+            
+            p {
+
+                color: $ups-yellow;
+                font-size: 1.15em;
+                font-weight: 900;
+                line-height: 1;
+            }
+
+            &:before {
+                @include pseudo-block(7.5em);
+                width: 100%;
+                @include position(absolute, 0 null null -100%);
+                background: $black;
+            }
+
+            &:after {
+                @include pseudo-block(5em);
+                width: 200%;
+                @include position(absolute, 0 null null 100% );
+                background: rgba( $ups-yellow, 0.6 );
+                z-index: 0;
+            }
+        }
+        
         ul {
+            // background: $black10;
             display: none;
-            @include breakpoint($bp-medium-up) {
+            .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & {
             display: inline-block;
-            margin-left: 18em;
+            // margin-left: 18em;
+            @include position(absolute -90% 5.85em null null);
+            height: 5em;
+            // background: red;
+            padding-top: 1.7em;
+            z-index: 2;
             // margin-top: -2em;
             // height: 4em;
             }
         }
 
         ul li {
-            margin-left: 3em;
+            margin-left: 1.5em;
+            margin-right: 1.5em;
             display: inline-block;
             
         }
+
+       
     }    
 }
 
 .page {
+
+    // margin-top: -2em;
 
     .intro>i {
         float: left;
@@ -65,7 +163,7 @@
         padding: 0 13px 0 0;
     }
 
-    @include breakpoint($bp-large-up) {
+    .breakpoint-large &, .breakpoint-wide & {
         position: relative;
 
         .intro {
@@ -103,7 +201,7 @@ h1.page--title {
     margin: 0 1rem 1rem;
     // background: red;
 
-    @include breakpoint($bp-wide-up) {
+    .breakpoint-wide & {
         // left: 0;
     }
 }

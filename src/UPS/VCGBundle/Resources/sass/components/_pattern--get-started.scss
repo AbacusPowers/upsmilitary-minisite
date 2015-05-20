@@ -1,16 +1,44 @@
-.pattern--get-started {
-    background: $black70;
-    width: 100%;
-    text-align: center;
-    padding: 0 5.5rem 1rem;
 
-    @include breakpoint($bp-medium-up) {
-        padding-top: 0.5rem;
+.get-started-container {
+    position: relative;
+    width: 100%;
+
+    .breakpoint-medium & {
+        max-width: $max-width--medium;
+        // background: yellow;
+        margin-left: auto;
+        margin-right: auto;
     }
 
+    .breakpoint-large & {
+        max-width: $max-width--large;
+        // background: green;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .breakpoint-wide & {
+        max-width: $max-width--wide;
+        // background: blue;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.pattern--get-started {
+    background: red;
+    // background: rgba( blue, 0.2 );
+    width: 100%;
+    text-align: center;
+    padding: 0 1rem 1rem;
+
+
+
+    
+
     .button {
-        @include size(5em 2.3em);
-        background: $grey40;
+        @include size(100% auto);
+        background: $ups-yellow;
         color: $black;
         cursor: pointer;
         display:inline-block;
@@ -19,28 +47,125 @@
         text-align: center;
         text-transform: uppercase;
 
-        @include breakpoint($bp-medium-up) {
-            margin-left: 2em;
-        }
 
         i {
             padding:0px 0 0 6px;
-            color: $grey70;
+            color: $black;
+            display: none;
         }
     }
 
     p {
-        color: $white;
+        color: $black;
         display: inline-block;
         font-size: 1.4em;
         margin-left: auto;
         margin-right: auto;
         margin-top: 0.4em;
         text-align: center;
-        text-transform: uppercase;
+        // text-transform: none;
     }
 
     &.get-started--header {
+        background: rgba($ups-brown-1, 0.9);
+        background: $white10;
+        background: rgba( $grey80, 1 );
+        z-index: 100;
+        text-transform: uppercase;
 
+        i {
+            display: none;
+            // margin-left: 1em;
+        }
+
+        p {
+            text-transform: capitalize;
+            color: $white;
+        }
+
+        .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & {
+            background: rgba( $ups-yellow, 0.6 );
+            background: none;
+            padding-top: 0;
+            // margin-top: -7.5em;
+            height: 5em;
+            width: 50%;
+            @include position(absolute, -5em 0 null null );
+            // position: relative;
+            text-align: right;
+            padding-right: 5rem;
+
+            &:after {
+                // @include pseudo-block(5em);
+                @include position(absolute, 0 null null 100% );
+                width: 100%;
+                background: rgba( $ups-yellow, 0.6 );
+            }
+            
+            i {
+                display: inline;
+                color: $black;
+                padding-left: 1em;
+            }
+
+            p {
+                color: $black;
+                padding-top: 1.5em;
+                font-size: 1em;
+                padding-right: 2em;
+                font-weight: 800;
+                text-align: right;
+            }
+        }
+
+        .breakpoint-medium & {
+            p {
+                padding-left: 2em;
+                padding-top: 0.7em;
+            }
+        }
+
+        .button {
+    
+            .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & {
+                @include size(5rem 5rem);
+                @include position(absolute, 0 0 null null );
+                margin-top: 0;
+                margin-left: 2em;
+                border-left: 1px solid rgba( white, 0.1 );
+                padding-top: 0.9em;
+                font-size: 1.5em;
+            }
+        }
     }
+
+    &.get-started--footer {
+        background: url(../img/bg-6.png) center center scroll rgba($ups-brown-1, 0.1);
+        background-size: cover; 
+
+        p {
+            color: $white;
+        }
+
+
+        .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & {
+
+            padding-top: 2.5rem;
+            // margin-top: -4.5em;
+            height: 18.8em;
+            // position: relative;
+
+            p {
+                font-size: 3.5em;
+                text-transform: none;
+            }
+
+            .button {
+                @include margin( null auto null auto);
+                @include size( 14em auto);
+                display: block;
+            }
+        }
+    }
+
 }

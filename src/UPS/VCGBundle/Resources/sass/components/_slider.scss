@@ -33,7 +33,7 @@
     display: block;
     height: $header-height--small;
 
-    @include breakpoint($bp-medium-up){
+    .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & {
         height: $header-height--large;
     }
     min-width: 100%;

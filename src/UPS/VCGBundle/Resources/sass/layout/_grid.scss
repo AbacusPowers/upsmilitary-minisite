@@ -6,29 +6,34 @@
 // );
 
 
-// breakpoint based system below
+
 .page  {
 
-    @include breakpoint($bp-small-up) {
+    // Define the container constraints of the "page" class
+
+    .breakpoint-small & {
         // max-width: 800px;
         margin-left: auto;
         margin-right: auto;
     }
 
-    @include breakpoint($bp-medium-up) {
-        max-width: 800px;
+    .breakpoint-medium & {
+        max-width: $max-width--medium;
+        // background: yellow;
         margin-left: auto;
         margin-right: auto;
     }
 
-    @include breakpoint($bp-large-up) {
-        max-width: 1000px;
+    .breakpoint-large & {
+        max-width: $max-width--large;
+        // background: green;
         margin-left: auto;
         margin-right: auto;
     }
 
-    @include breakpoint($bp-wide-up) {
-        max-width: 1400px;
+    .breakpoint-wide & {
+        max-width: $max-width--wide;
+        // background: blue;
         margin-left: auto;
         margin-right: auto;
     }

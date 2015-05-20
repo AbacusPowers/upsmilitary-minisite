@@ -96,7 +96,7 @@
     height: 16em;
     position: relative;
 
-    @include breakpoint($bp-medium-up) {
+    .breakpoint-medium & {
       width: 20em;
       height: 16em;
       padding-top: 2.5em;
@@ -104,7 +104,7 @@
       margin-left: 0;
       margin-bottom: 1em;
     }   
-    @include breakpoint($bp-large-up) {
+    .breakpoint-large & {
       width: 100%;
       margin: 0 auto 0 auto;
     }
@@ -121,12 +121,12 @@
   .video + p {
     margin-top: 2em;
     margin-right: 2em;
-    @include breakpoint($bp-medium-up) {
+    .breakpoint-medium & {
     margin-left: 21em;
     margin-top: -17em;
     }
 
-    @include breakpoint($bp-large-up) {
+    .breakpoint-large & {
       margin-left: 4em;
       margin-top: 1em;
     }

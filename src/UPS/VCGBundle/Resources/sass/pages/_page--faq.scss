@@ -4,7 +4,7 @@
         
     }
 
-    @include breakpoint($bp-large-up) {
+    .breakpoint-large & {
         .intro {
             width: 40%;
             // position: absolute;

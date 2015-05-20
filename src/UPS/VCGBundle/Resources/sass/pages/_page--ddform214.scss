@@ -3,12 +3,10 @@
     section.dd-form214 {
         display: none;
         
-        @include breakpoint($bp-large-up) {
-            
+        .breakpoint-large & {
             display: block;
             @include size( 50% auto);
             @include position(absolute, 14em auto);
-            // background: green;
         }
 
         img {

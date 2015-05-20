@@ -2,7 +2,7 @@
 
 footer {
     // background: #333;
-    background: $black;
+    background: $ups-brown-1;
     min-height: 20em;
     color: $white60;
     text-align: center;
@@ -10,31 +10,35 @@ footer {
     font-size: 1em;
     text-transform: uppercase;
 
-    @include breakpoint($bp-small-up) {
+    .breakpoint-small & {
         // background: red;
         &:before {
             content:'small breakpoint';
+            color: $white10;
         }
       }
 
-    @include breakpoint($bp-medium-up) {
+    .breakpoint-medium & {
         // background: green;
         &:before {
             content:'medium-breakpoint';
+            color: $white10;
         }
       }
 
-    @include breakpoint($bp-large-up) {
+    .breakpoint-large & {
         // background: blue;
         &:before {
             content:'large breakpoint';
+            color: $white10;
         }
     }
 
-    @include breakpoint($bp-wide-up) {
+    .breakpoint-wide & {
         // background: pink;
         &:before {
             content: 'wide breakpoint';
+            color: $white10;
           }
     }
 }   
