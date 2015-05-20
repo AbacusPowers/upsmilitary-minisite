@@ -12,7 +12,8 @@ class ArticleController extends Controller
     /**
      * @Route("/article/{slug}")
      * @Route("/article/{slug}.html")
-     * @Route("/ups-culture/{slug}.html")
+     * @Route("/culture-benefits/article/{slug}.html", name="culture_benefits_article")
+     * @Route("/transition-guide/article/{slug}.html", name="transition_guide_article")
      */
     public function indexAction($slug)
     {

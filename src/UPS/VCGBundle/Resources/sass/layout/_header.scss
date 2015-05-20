@@ -89,7 +89,7 @@ header {
             @include position(absolute, null null 0 0);
             width: 100%;
             background: $black30;
-            z-index: 0;
+            z-index: 100;
         }
     }
 
@@ -138,6 +138,7 @@ header {
             color: black;
             text-transform: uppercase;
             @include position(absolute, 0.25em null null 0.75em );
+            z-index: 200;
         }
       }
 
@@ -148,6 +149,7 @@ header {
             color: black;
             text-transform: uppercase;
             @include position(absolute, 0.25em null null 0.75em );
+            z-index: 200;
         }
       }
 
@@ -158,6 +160,7 @@ header {
             color: black;
             text-transform: uppercase;
             @include position(absolute, 0.25em null null 0.75em );
+            z-index: 200;
         }
     }
 
@@ -168,6 +171,7 @@ header {
             color: black;
             text-transform: uppercase;
             @include position(absolute, 0.25em null null 0.75em );
+            z-index: 200;
           }
     }
 }

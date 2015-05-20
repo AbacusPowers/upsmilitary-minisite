@@ -2,12 +2,13 @@
 
 .breadcrumb {
     @include position(absolute, -3em null null 3em);
-    z-index: 100;
+    z-index: 400;
 
     &::before{
         @include pseudo-block(3em);
         @include position( absolute, nul null 0 -3em);
         background: $black;
+        z-index: 200
     }
 
     &::after{
@@ -15,7 +16,7 @@
         content: "\f078";    
         color: $white90;
         @include position( absolute, nul null 0.75em -2.02em);
-        z-index: 1000;
+        z-index: 300;
 
     }
 }

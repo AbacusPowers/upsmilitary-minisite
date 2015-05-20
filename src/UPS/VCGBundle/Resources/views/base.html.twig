@@ -34,15 +34,27 @@
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body>
-        <div id="overlay"></div>
-        <div id="modal">
-            {% block modal %}{% endblock %}
+        <div id="modal-wrapper" class="{% block modal_class %}{% endblock %}">
+            <div id="overlay"></div>
+            <div id="modal">
+                {% block modal %}{% endblock %}
+            </div>
         </div>
+        
         {% block siteheader %}
             <header class="page--home">
+                {% block headerimage %}
+                        <div class="slider-content">
+                            <h1>Slider Headline</h1>
+                            <i class="fa fa-circle-thin"></i>
+                            <i class="fa fa-circle"></i>
+                            <i class="fa fa-circle-thin"></i>
+                            <i class="fa fa-circle-thin"></i>
+                        </div>     
+                    {% endblock %}
                 <div class="header--liner">
                     <img src="{{ asset('bundles/vcg/images/logo-sketch-1.png') }}" alt="" class="logo">
-
+                    
                     <button type="button" class="js-menu-trigger sliding-panel-button">
                       <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/menu-white.png" alt="Menu Icon">
                     </button>
@@ -64,18 +76,18 @@
                     </nav>
                 </div>
                 <div class="js-menu-screen sliding-panel-fade-screen"></div>
-                {% block headerimage %}
-                <div class="header--liner">
-
-                    <div class="slider-content">
-                        <h1>Slider Headline</h1>
-                        <i class="fa fa-circle-thin"></i>
-                        <i class="fa fa-circle"></i>
-                        <i class="fa fa-circle-thin"></i>
-                        <i class="fa fa-circle-thin"></i>
-                    </div>     
-                </div>    
-                {% endblock %}
+                
+                {#<div class="header--liner">
+                    {% block headerimage %}
+                        <div class="slider-content">
+                            <h1>Slider Headline</h1>
+                            <i class="fa fa-circle-thin"></i>
+                            <i class="fa fa-circle"></i>
+                            <i class="fa fa-circle-thin"></i>
+                            <i class="fa fa-circle-thin"></i>
+                        </div>     
+                    {% endblock %}
+                </div>  #}  
                 <!-- <nav class="drop-down">
                     <p>Veteran & Military Outreach</p>
                     <i class="fa fa-chevron-down"></i>

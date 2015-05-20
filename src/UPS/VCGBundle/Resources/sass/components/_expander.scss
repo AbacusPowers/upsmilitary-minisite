@@ -18,7 +18,8 @@
   }
 
   a.button{
-    @include size(75px);
+    height: 75px;
+    width: 100%;
     color: $grey70;
     cursor: pointer;
     display: block;
@@ -28,6 +29,15 @@
     right: 0;
     top: 0px;
     font-size: 13px;
+    &:hover {
+        background: transparent;
+    }
+    .fa {
+        position: absolute;
+        right: 0;
+        top: 0;
+        padding: 1em;
+    }
   }
 
   a:nth-child(odd) {
@@ -35,7 +45,8 @@
   }
 
   a.hide-button{
-    z-index: -1;
+    /*z-index: -1;*/
+    display: none;
   }
 
   h2.expander__parent {
@@ -74,11 +85,11 @@
 
   .hidden-part {
     height: 0;
+    opacity: 0;
   }
 
   .hidden-part *{
-    opacity: 0;
-    // display: none;
+    /*opacity: 0;*/
   }
 
   .faq.expander__parent:before, .expander__child:before{
