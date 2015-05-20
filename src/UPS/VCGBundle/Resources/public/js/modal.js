@@ -1,74 +1,77 @@
+
 $('document').ready(function(){
-
-    $('.article-link').on('click', function(e){
-        e.preventDefault();
-        var href = $(this).attr('href');
-        // Getting Content
-        getModalContent(href, true);
-        showModal();
-
-    });
-    $('.article-link').on('click', function(e){
-        e.preventDefault();
-        var href = $(this).attr('href');
-        // Getting Content
-        getModalContent(href, true);
-        showModal();
-    });
-
-});
-function showModal(){
-    $('#overlay').show();
-    $('#modal').fadeIn();
-    $('body').addClass('article-view');
-}
-function closeModal(){
-    destroyModal();
-    History.back();
-}
-function destroyModal(){
-    $('#overlay').hide();
-    $('#modal').hide();
-    $('body').removeClass('article-view');
-}
-
-$('#modal').on('click','#close-modal', function(e){
-    var State = History.getState();
-    var href = $(this).attr('href');
-        console.log(State.data.modal);
-    if(State.data.modal === 1) { //only true if triggered from article link (not direct visits to article)
-        e.preventDefault();
-        closeModal();
-        console.log('close it!');
-    }
-});
-
-
-(function(window, undefined) {
     
-    History.Adapter.bind(window,'statechange',function(){ // Note: We are using statechange instead of popstate
-        // Log the State
-        var State = History.getState(); // Note: We are using History.getState() instead of event.state
-        History.log('statechange:', State.data, State.title, State.url);
-        if(State.data.modal !== 1) {
-            destroyModal();
-        } else {
-            showModal();
-        }
-        console.log(State.data.modal);
-    });
-})(window);
+    $('.article-link').on('click', function(e){
+        e.preventDefault();
+        var href = $(this).attr('href');
+        // Getting Content
+        getModalContent(href, true, 'page');
+        showModal();
 
-function getModalContent(url, addEntry) {
+    });
+    $('#modal').on('click','#prev-article',function(e){
+        e.preventDefault();
+            var href = $(this).attr('href');
+            // Getting Content
+            getModalContent(href, true, 'article');
+    });
+    $('#modal').on('click','#next-article',function(e){
+        e.preventDefault();
+            var href = $(this).attr('href');
+            // Getting Content
+            getModalContent(href, true, 'article');
+    });
+    $('#modal').on('click','#close-modal', function(e){
+        e.preventDefault();
+        console.log('ping');
+        var href = $(this).attr('href');
+        if(History.getState().data.modal === 1) { //only true if triggered from article link (not direct visits to article)
+            if(History.getState().data.origin === 'page') {
+                destroyModal();
+                var rewrite = History.getState().data.close;
+                History.pushState(null, null, rewrite);
+            } else {
+                window.location.href = href;
+            }
+            
+        }
+    });
+});
+function getModalContent(url, addEntry, originType) {
     $.get(url)
     .done(function() {
-        
+        var originUrl = document.URL;
         // Updating Content on Page
         $('#modal').load(url +' #modal-content');
         if(addEntry === true) {
             // Add History Entry using pushState
-            History.pushState({modal: 1}, null, url);
-        }
-//        console.log(history.state);
+            History.pushState({ modal : 1, origin : originType, close : originUrl }, null, url);
+        }  
     });
 }
+
+function showModal(){
+    $('#overlay').show();
+    $('#modal').fadeIn();
+    $('body').addClass('article-view');
+    $('.page').addClass('article');
+}
+
+function destroyModal(){
+    $('#overlay').hide();
+    $('#modal').hide();
+    $('body').removeClass('article-view');
+    $('.page').removeClass('article');
+}
+
+(function(window, undefined) {
+    History.Adapter.bind(window,'statechange',function(){ // Note: We are using statechange instead of popstate
+//        if(State.data.modal !== 1) {
+//            destroyModal();
+//            console.log('ping');
+//        } else {
+//            showModal();
+//            console.log('ding');
+//        }
+    });
+})(window);
