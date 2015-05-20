@@ -1,6 +1,19 @@
 /*staging area for quickly testing new components*/
 
 
+
+.article p, .article h2 {
+    color: $black;
+}
+
+.article {
+
+    & .expander__wrapper::before {
+        // display: none;
+    }
+}
+
+
 .navCard.eventsCalendar {
 
     a {
