@@ -31,15 +31,13 @@
     opacity: 0;
     -webkit-transition: opacity 0.6s ease-out;
     transition: opacity 0.6s ease-out;
-}
-
-.carousel-item img {
-    display: block;
-    height: $header-height--small;
-
     @include breakpoint($bp-medium-up){
         height: $header-height--large;
     }
+}
+
+.carousel-item img {
+    display: block;    
     min-width: 100%;
     max-width: none;
 }
@@ -80,7 +78,8 @@
 
 #carousel-1:checked ~ .control-1,
 #carousel-2:checked ~ .control-2,
-#carousel-3:checked ~ .control-3 {
+#carousel-3:checked ~ .control-3,
+#carousel-4:checked ~ .control-4{
     display: block;
 }
 
@@ -115,7 +114,8 @@
 
 #carousel-1:checked ~ .control-1 ~ .carousel-indicators li:nth-child(1) .carousel-bullet,
 #carousel-2:checked ~ .control-2 ~ .carousel-indicators li:nth-child(2) .carousel-bullet,
-#carousel-3:checked ~ .control-3 ~ .carousel-indicators li:nth-child(3) .carousel-bullet {
+#carousel-3:checked ~ .control-3 ~ .carousel-indicators li:nth-child(3) .carousel-bullet,
+#carousel-4:checked ~ .control-4 ~ .carousel-indicators li:nth-child(4) .carousel-bullet{
     color: #428bca;
 }
 
