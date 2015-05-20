@@ -1,5 +1,10 @@
 {% extends "VCGBundle:Layouts:page.html.twig" %}
 {% block title %}DD Form 214 Guide{% endblock %}
+{% block headerimage %}
+    <div class="header-static-bg">
+        <img src="{{ asset('bundles/vcg/images/bg-1c.jpg') }}"    
+    </div>
+{% endblock %}
 {% block breadcrumbs %}
         <a href="{{ url('homepage') }}">UPS Veteran Gateway</a>
         <a href="{{ path('page',{'slug':'transition-guide'}) }}">Transition Guide</a>
@@ -9,12 +14,12 @@
 {% block page_content %}
     <div class="veteranGateway__liner">
         <div class="title-block">
-            <h1>Civilian Career Transition Guide</h1>
-            <h2>DD Form 214 Guide</h2>
+            <h1>DD Form 214 Guide</h1>
+            <p>Make the Most of Your Discharge Papers</p>
         </div>
         <div class="page page--ddform214">
             <section class="intro">
-                <i class="fa fa-circle-thin"></i>
+                <img src="{{ asset('bundles/vcg/images/document.png') }}" alt="">
                 <h1 class="page--title">How to use your DD Form 214 to elevate your resume</h1>        
                 <p>The form you are receive when leaving active duty contains a trove of career information that separates you from other job candidates.</p>
             </section>

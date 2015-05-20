@@ -3,7 +3,7 @@ $nav-height: 4em;
 .veteranGateway > nav {
     @include size( auto $nav-height );
     width: 100%;
-    background: red;
+    // background: red;
     
     a {
         background: $grey30;
