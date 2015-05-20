@@ -11,32 +11,35 @@ class PageController extends Controller
     /**
      * @Route("/{slug}")
      * @Route("/{slug}.html", name="page")
+     * @Route("/transition-guide/{slug}.html", name="transition_guide_page")
+     * @Route("/culture-benefits/{slug}.html", name="culture_benefits_page")
+     * @Route("/career-explorer/{slug}.html", name="career_explorer_page")
      */
     public function indexAction($slug)
     {
-        try {
-//            $this->render(
-//                'VCGBundle:Page:'.$slug.'.twig',
-//                array('slug' => $slug)
-//            );
-            $response = $this->render(
-                'VCGBundle:Page:'.$slug.'.twig',
+        if(substr($slug, -5, 5) === '.html') {
+            $slug = substr($slug, 0, -5);
+        }
+        $response = $this->render(
+                'VCGBundle:Page:'.$slug.'.html.twig',
                 array('slug' => $slug)
             );
-        } catch (\Exception $ex) {
-            // your conditional code here.
-            $error = new Response(Response::HTTP_NOT_FOUND);
-//            throw new \Symfony\Component\HttpKernel\Exception\HttpException(404, "Oops! Page not found");
-//            var_dump($slug);
-            $response = $this->render(
-                'VCGBundle:Page:404.html.twig',
-                array('slug' => $slug, 'error' => $error)
-            );
-        }
+//        try {
+//
+//            $response = $this->render(
+//                'VCGBundle:Page:'.$slug.'.html.twig',
+//                array('slug' => $slug)
+//            );
+//        } catch (\Exception $ex) {
+//            // your conditional code here.
+//            $error = new Response(Response::HTTP_NOT_FOUND);
+////            throw new \Symfony\Component\HttpKernel\Exception\HttpException(404, "Oops! Page not found");
+//            $response = $this->render(
+//                'VCGBundle:Page:404.html.twig',
+//                array('slug' => $slug, 'error' => $error)
+//            );
+//        }
         return $response;
-//        return $this->render(
-//            'VCGBundle:Layouts:'.$slug.'.html.twig',
-//            array('slug' => $slug)
-//        );
+
     }
 }

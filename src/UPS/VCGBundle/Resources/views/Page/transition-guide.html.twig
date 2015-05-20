@@ -1,0 +1,54 @@
+{% extends "VCGBundle:Layouts:page.html.twig" %}
+{% block title %}Transition Guiide{% endblock %}
+{% block breadcrumbs %}
+        <a href="index.html">UPS Veteran Gateway</a>
+        <a href="#">Transition Guide</a>
+{% endblock %}
+{% block page_content %}
+    <div class="page page--home">
+                    <div class="grid-items-lines">
+                      <div class="grid-item grid--transition-guide-intro">
+                        <p>Companies work hard to establish their brands, and you should do the same. What's your brand?</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum incidunt, sunt ex ab nam eligendi aliquid id at tempore quod fugit rerum.</p>
+                      </div>
+                      <a href="{{ path('transition_guide_page', {'slug':'dd-form-214-guide'}) }}" class="grid-item grid--career-explorer grid--bottom-left">
+                        <img src="{{ asset('bundles/vcg/images/document.png') }}" class="icon--large" alt="">
+                        <h1>Your DD Form 214</h1>
+                        <p>Learn how to translate your military qualifications to civilian resume terms.</p>
+                      </a>
+                      <a href="javascript:void(0)" class="grid-item grid--ups-culture">
+                        <img src="{{ asset('bundles/vcg/images/document.png') }}" class="icon--large" alt="">
+                        <h1>Translate Military Skills to a Civilian Resume</h1>
+                        <p>Resume Engine.org</p>
+                      </a>
+                      <div class="grid-item grid--articles">
+                        <img src="{{ asset('bundles/vcg/images/document.png') }}" alt="">
+                        <h1>Learn How to Build Your Brand</h1>
+                        <ul>
+                            <li> <a href="{{path('transition_guide_article',{'slug':'cover-letter-resume'}) }}" class="article-link"><p><i class="fa fa-square-o"></i>&nbspResume & Cover Letter</p></a></li>
+                            <li> <a href="{{path('transition_guide_article',{'slug':'marketing-yourself'}) }}" class="article-link"><p><i class="fa fa-square-o"></i>&nbspMarketing Yourself Online</p></a></li>
+                            <li> <a href="{{path('transition_guide_article',{'slug':'networking-essentials'}) }}" class="article-link"><p><i class="fa fa-square-o"></i>&nbspNetworking</p></a></li>
+                            <!-- <li> 
+                                <a href="" class="modal-trigger"><p><i class="fa fa-check-square-o"></i>&nbspDealing with Recruiters</p></a>
+                            </li> -->
+                            <li> <a href="javascript:void(0)"><p><i class="fa fa-square-o"></i>&nbspCareer Fairs</p></a></li>
+                            <li> <a href="javascript:void(0)"><p><i class="fa fa-square-o"></i>&nbspInterviews</p></a></li>
+                        </ul>
+                      </div>
+                      <a href="javascript:void(0)" class="grid-item grid-item-big grid--events">
+                        <img src="{{ asset('bundles/vcg/images/bubbles.png') }}" alt="">
+                        <h1>Videos</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, illum.</p>
+                      </a>
+                      <a href="javascript:void(0)" class="grid-item grid-item-big grid--employment-resources">
+                        <h1>Employment Resources</h1>
+                        <p>Lorem ipsum dolor sit amet, elit. Rem, illum.</p>
+                        <p>Lorem ipsum dolor sit amet, elit. Rem, illum.</p>
+                        <p>Lorem ipsum dolor sit amet, elit. Rem, illum.</p>
+                        <p>Lorem ipsum dolor sit amet, elit. Rem, illum.</p>
+                      </a>
+                      <!-- <div class="right-cover"></div> -->
+                      <!-- <div class="bottom-cover"></div> -->
+                    </div>
+                </div>
+{% endblock %}

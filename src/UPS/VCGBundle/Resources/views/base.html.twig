@@ -3,6 +3,12 @@
     <head>
         <meta charset="UTF-8" />
         
+        <title>
+            {% block title %}
+                UPS - Veteran Careers Gateway
+            {% endblock %}
+        </title>
+        
         <!--METAQUERY-->
         <meta name='viewport' content='width=device-width, initial-scale=1'>
         <meta name="breakpoint" content="small" media="(max-width: 768px)">
@@ -12,12 +18,6 @@
         <!--[if gt IE 9]><!--><script type="text/javascript" charset="utf-8">
           !function(a,b){var c={breakpoints:{},_namedEvents:{},_eventMatchCache:{},_globalEvents:[],onBreakpointChange:function(){var a=Array.prototype.slice.call(arguments),b=a.pop(),d=a.pop();"undefined"==typeof d?c._globalEvents.push(b):(c._namedEvents[d]=[]).push(b),k()}},d=function(c){/in/.test(b.readyState)?a.setTimeout(function(){d(c)},9):c()},e=function(a,c,d){b.addEventListener?a.addEventListener(c,d):a.attachEvent("on"+c,d)},f=function(a,b){return-1!==a.className.split(" ").indexOf(b)},g=function(a,b){var c=a.className.split(" "),d=c.indexOf(b);f(a,b)&&(c.splice(d,1),a.className=c.join(" "))},h=function(a,b){f(a,b)||(a.className=""!==a.className?a.className+" "+b:b)},i=function(a,c){var d="breakpoint-"+c,e=b.documentElement;a?h(e,d):g(e,d)},j=function(a,c){if(a)for(var d=b.getElementsByTagName("img"),e=0;e<d.length;e++){var f=d[e],g=f.getAttribute("data-mq-src");g&&(f.src=g.replace("[breakpoint]",c))}},k=function(){for(var b in c.breakpoints){var d=c.breakpoints[b],e=a.matchMedia(d).matches;if(c._namedEvents[b]&&c._eventMatchCache[b]!==e)for(var f=0;f<c._namedEvents[b].length;f++){var g=c._namedEvents[b][f];c._eventMatchCache[b]=e,"function"==typeof g&&g(e)}if(e)for(var h=0;h<c._globalEvents.length;h++){var k=c._globalEvents[h];"function"==typeof k&&k()}i(e,b),j(e,b)}},l=function(){for(var a=b.getElementsByTagName("meta"),d=0;d<a.length;d++)if("breakpoint"===a[d].name){var e=a[d].getAttribute("content"),f=a[d].getAttribute("media");c.breakpoints[e]=f}},m=function(){l(),k()},n=function(){l(),e(a,"resize",k),k()};a.metaQuery=c,m(),d(n)}(this,this.document);
         </script><!--<![endif]-->
-        
-        <title>
-            {% block title %}
-                UPS - Veteran Careers Gateway
-            {% endblock %}
-        </title>
         
         {% stylesheets '@VCGBundle/Resources/public/css/app.css' %}
             <link rel="stylesheet" href="{{ asset_url }}">
@@ -33,48 +33,61 @@
         
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
-    <body class="{% block bodyclass %}base{% endblock %}">
-        <div id="overlay"></div>
-        <div id="modal">
-            {% block modal %}{% endblock %}
+    <body>
+        <div id="modal-wrapper" class="{% block modal_class %}{% endblock %}">
+            <div id="overlay"></div>
+            <div id="modal">
+                {% block modal %}{% endblock %}
+            </div>
         </div>
+        
         {% block siteheader %}
             <header class="page--home">
-                <img src="{{ asset('bundles/vcg/images/logo-sketch-1.png') }}" alt="" class="logo">
-
-                <button type="button" class="js-menu-trigger sliding-panel-button">
-                  <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/menu-white.png" alt="Menu Icon">
-                </button>
-
-                <nav class="js-menu sliding-panel-content">
-                  <ul>
-                    <li><a href="javascript:void(0)"> <i class="fa fa-home"></i>&nbspHome</a></li>
-                    <li><a href="javascript:void(0)">About UPS</a></li>
-                    <li><a href="javascript:void(0)">Career Areas</a></li>
-                    <li><a href="javascript:void(0)">Working at UPS</a></li>
-                  </ul>
-
-                    <form class="search-bar" role="search">
-                        <input type="search" placeholder="Search" />
-                        <button type="submit">
-                            <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/search-icon.png" alt="Search Icon">
-                        </button>
-                    </form>
-                </nav>
-
-                <div class="js-menu-screen sliding-panel-fade-screen"></div>
                 {% block headerimage %}
+                        <div class="slider-content">
+                            <h1>Slider Headline</h1>
+                            <i class="fa fa-circle-thin"></i>
+                            <i class="fa fa-circle"></i>
+                            <i class="fa fa-circle-thin"></i>
+                            <i class="fa fa-circle-thin"></i>
+                        </div>     
+                    {% endblock %}
                 <div class="header--liner">
+                    <img src="{{ asset('bundles/vcg/images/logo-sketch-1.png') }}" alt="" class="logo">
+                    
+                    <button type="button" class="js-menu-trigger sliding-panel-button">
+                      <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/menu-white.png" alt="Menu Icon">
+                    </button>
 
-                    <div class="slider-content">
-                        <h1>Slider Headline</h1>
-                        <i class="fa fa-circle-thin"></i>
-                        <i class="fa fa-circle"></i>
-                        <i class="fa fa-circle-thin"></i>
-                        <i class="fa fa-circle-thin"></i>
-                    </div>     
-                </div>    
-                {% endblock %}
+                    <nav class="js-menu sliding-panel-content">
+                      <ul>
+                        <li><a href="javascript:void(0)"> <i class="fa fa-home"></i>&nbspHome</a></li>
+                        <li><a href="javascript:void(0)">About UPS</a></li>
+                        <li><a href="javascript:void(0)">Career Areas</a></li>
+                        <li><a href="javascript:void(0)">Working at UPS</a></li>
+                      </ul>
+
+                        <form class="search-bar" role="search">
+                            <input type="search" placeholder="Search" />
+                            <button type="submit">
+                                <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/search-icon.png" alt="Search Icon">
+                            </button>
+                        </form>
+                    </nav>
+                </div>
+                <div class="js-menu-screen sliding-panel-fade-screen"></div>
+                
+                {#<div class="header--liner">
+                    {% block headerimage %}
+                        <div class="slider-content">
+                            <h1>Slider Headline</h1>
+                            <i class="fa fa-circle-thin"></i>
+                            <i class="fa fa-circle"></i>
+                            <i class="fa fa-circle-thin"></i>
+                            <i class="fa fa-circle-thin"></i>
+                        </div>     
+                    {% endblock %}
+                </div>  #}  
                 <!-- <nav class="drop-down">
                     <p>Veteran & Military Outreach</p>
                     <i class="fa fa-chevron-down"></i>
@@ -83,17 +96,20 @@
         {% endblock %}
         
     <main class="veteranGateway">
-                
-                
-        {% block breadcrumbs %}
-            <div class="breadcrumb">
-                <a href="{{ url('homepage') }}">UPS Veteran Gateway</a>
+            <div class="veteranGateway__liner">
+                <div class="page {% block page_class %}base{% endblock %}">
+
+                    <div class="breadcrumb">
+                        {% block breadcrumbs %}
+                            <a href="{{ url('homepage') }}">UPS Veteran Gateway</a>
+                        {% endblock %}
+                    </div>
+                    {% block page_content %}
+                        <!-- PAGE CONTENT GOES HERE -->
+                    {% endblock %}
+
+                </div>
             </div>
-        {% endblock %}
-        
-        {% block body %}
-            <!-- PAGE CONTENT GOES HERE -->
-        {% endblock %}
     </main>
 
         
@@ -140,6 +156,11 @@
             <hr>
 
             <p>Disclaimer area lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, nostrum repudiandae saepe.</p>
+        {% endblock %}
+        {% block their_footer %}
+            <div id="their-footer">
+                <p>placeholder</p>
+            </div>
         {% endblock %}
     </footer>
 

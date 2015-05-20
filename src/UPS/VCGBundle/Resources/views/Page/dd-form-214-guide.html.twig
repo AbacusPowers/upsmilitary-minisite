@@ -1,14 +1,12 @@
 {% extends "VCGBundle:Layouts:page.html.twig" %}
 {% block title %}DD Form 214 Guide{% endblock %}
 {% block breadcrumbs %}
-    <div class="breadcrumb">
-        <a href="index.html">UPS Veteran Gateway</a>
-        <a href="javascript:void(0)">Transition Guide</a>
-        <a href="dd-form-214-guide.html">DD Form 214 Guide</a>
-    </div>
+        <a href="{{ url('homepage') }}">UPS Veteran Gateway</a>
+        <a href="{{ path('page',{'slug':'transition-guide'}) }}">Transition Guide</a>
+        <a href="#">DD Form 214 Guide</a>
 {% endblock %}
 
-{% block body %}
+{% block page_content %}
     <div class="veteranGateway__liner">
         <div class="title-block">
             <h1>Civilian Career Transition Guide</h1>
