@@ -30,10 +30,21 @@ class ArticleController extends Controller
         } catch (ParseException $e) {
             printf("Unable to parse the YAML file: %s", $e->getMessage());
         }
-
-        return $this->render(
+        try {
+            $response = $this->render(
             'VCGBundle:Layouts:article.html.twig',
             array('slug' => $slug, 'article' => $article,'route' => $routeName)
         );
+        } catch (\Exception $ex) {
+            // your conditional code here.
+            $error = new Response(Response::HTTP_NOT_FOUND);
+//            throw new \Symfony\Component\HttpKernel\Exception\HttpException(404, "Oops! Page not found");
+            $response = $this->render(
+                'VCGBundle:Page:404.html.twig',
+                array('slug' => $slug, 'error' => $error)
+            );
+        }
+        
+        return $response;
     }
 }
