@@ -5,14 +5,42 @@
 */
 .carousel {
     position: absolute;
-    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
+    // box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
     font-family: sans-serif;
-    z-index: 10;
+    z-index: 0;
     top: 0;
     left: 0;
     right: 0;
-    height: 28em;
+    height: $header-height--small;
     /*margin-top: 26px;*/
+
+    .breakpoint-medium & {
+        height: $header-height--medium;
+    }
+
+    .breakpoint-large &, .breakpoint-wide & {
+        height: $header-height--large;
+    }
+
+    .breakpoint-medium & {
+        max-width: $max-width--medium;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .breakpoint-large & {
+        max-width: $max-width--large;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .breakpoint-wide & {
+        max-width: $max-width--wide;
+        // background: red;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
 }
 
 .carousel-inner {
@@ -35,7 +63,8 @@
 
 .carousel-item img {
     display: block;
-    height: $header-height--small;
+    height: auto;
+    margin-left: 0 !important; /*where does the 20px margin that this overides actually come from?*/
 
     .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & {
         height: $header-height--large;
@@ -45,42 +74,48 @@
 }
 
 .carousel-control {
-    font-family: sans-serif;
-    background: rgba(0, 0, 0, 0.28);
-    border-radius: 50%;
-    color: #fff;
+    
+    background: rgba( $grey80, 0.7 );
+    // border-radius: 50%;
+    color: $white80;
+    cursor: pointer;
     cursor: pointer;
     display: none;
-    font-size: 40px;
-    height: 40px;
-    line-height: 35px;
+    // font-family: sans-serif;
+    font-size: 1em;
+    height: 80px;
+    // line-height: 35px;
     position: absolute;
-    top: 50%;
-    -webkit-transform: translate(0, -50%);
-    cursor: pointer;
-    -ms-transform: translate(0, -50%);
-    transform: translate(0, -50%);
     text-align: center;
-    width: 40px;
+    top: calc( 50% - 35px );
+    transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    -webkit-transform: translate(0, -50%);
+    width: 2.2rem;
     z-index: 10;
+
+    i {
+        margin-top: 1.85em;
+    }
 }
 
 .carousel-control.prev {
-    left: 2%;
+    left: 0;
 }
 
 .carousel-control.next {
-    right: 2%;
+    right: 0;
 }
 
 .carousel-control:hover {
-    background: rgba(0, 0, 0, 0.8);
-    color: #aaaaaa;
+    background: rgba( $grey80, 0.8 );
+    color: $white90;
 }
 
 #carousel-1:checked ~ .control-1,
 #carousel-2:checked ~ .control-2,
-#carousel-3:checked ~ .control-3 {
+#carousel-3:checked ~ .control-3,
+#carousel-4:checked ~ .control-4 {
     display: block;
 }
 
@@ -89,23 +124,23 @@
     margin: 0;
     padding: 0;
     position: absolute;
-    bottom: 2%;
-    left: 0;
+    bottom: 0.3em;
     right: 0;
+    left: 0;
     text-align: center;
     z-index: 10;
 }
 
 .carousel-indicators li {
     display: inline-block;
-    margin: 0 5px;
+    margin: 0 2px;
 }
 
 .carousel-bullet {
-    color: #fff;
+    color: $white80;
     cursor: pointer;
     display: block;
-    font-size: 35px;
+    font-size: 85px;
     font-family: sans-serif;
 }
 
@@ -115,8 +150,9 @@
 
 #carousel-1:checked ~ .control-1 ~ .carousel-indicators li:nth-child(1) .carousel-bullet,
 #carousel-2:checked ~ .control-2 ~ .carousel-indicators li:nth-child(2) .carousel-bullet,
-#carousel-3:checked ~ .control-3 ~ .carousel-indicators li:nth-child(3) .carousel-bullet {
-    color: #428bca;
+#carousel-3:checked ~ .control-3 ~ .carousel-indicators li:nth-child(3) .carousel-bullet,
+#carousel-4:checked ~ .control-4 ~ .carousel-indicators li:nth-child(4) .carousel-bullet {
+    color: $ups-yellow;
 }
 
 #title {
@@ -129,7 +165,7 @@
     color: rgba(255, 255, 255, 1);
     font-family: 'Open Sans', sans-serif;
     z-index: 9999;
-    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.33), -1px 0px 2px rgba(255, 255, 255, 0);
+    // text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.33), -1px 0px 2px rgba(255, 255, 255, 0);
 }
 
 input[type="radio"].carousel-open {

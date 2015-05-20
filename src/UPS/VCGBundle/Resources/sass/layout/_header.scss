@@ -34,12 +34,13 @@ header {
 
     .header--liner { /*slider prototype--must be made full width*/
         position: relative;
-        display: block;
-        height: $header-height--small;
+        // display: block;
+        // height: $header-height--small;
+        z-index: 10;
 
-        .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & {
-            height: $header-height--large;
-        }
+        // .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & {
+        //     height: $header-height--large;
+        // }
 
         .breakpoint-medium & {
             max-width: $max-width--medium;
