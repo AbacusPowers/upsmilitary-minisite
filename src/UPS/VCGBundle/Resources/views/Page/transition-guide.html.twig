@@ -2,7 +2,7 @@
 {% block title %}Transition Guiide{% endblock %}
 {% block headerimage %}
     <div class="header-static-bg">
-        <img src="{{ asset('bundles/vcg/images/bg-5b.png') }}"    
+        <img class="header-static-bg-img" src="{{ asset('bundles/vcg/images/bg-5b.png') }}"    
     </div>
 {% endblock %}
 {% block breadcrumbs %}
@@ -29,19 +29,23 @@
                       <a href="https://www.resumeengine.org/" target="new" class="grid-item grid--ups-culture">
                         <img src="{{ asset('bundles/vcg/images/document.png') }}" class="icon--large" alt="">
                         <h1>Translate Military Skills to a Civilian Resume</h1>
-                        <p>Resume Engine.org</p>
+                        <p>Resume Engine.org &nbsp<i class="fa fa-external-link-square"></i></p>
+
                       </a>
                       <div class="grid-item grid--articles">
                         <img src="{{ asset('bundles/vcg/images/document.png') }}" alt="">
                         <h1>Learn How to Build Your Brand</h1>
                         <ul>
-                            <li> <a href="{{path('transition_guide_article',{'slug':'cover-letter-resume'}) }}" class="article-link"><p><i class="fa fa-square-o"></i>&nbspResume & Cover Letter</p></a></li>
-                            <li> <a href="{{path('transition_guide_article',{'slug':'marketing-yourself'}) }}" class="article-link"><p><i class="fa fa-square-o"></i>&nbspMarketing Yourself Online</p></a></li>
-                            <li> <a href="{{path('transition_guide_article',{'slug':'networking-essentials'}) }}" class="article-link"><p><i class="fa fa-square-o"></i>&nbspNetworking</p></a></li>
+                            <li> <a href="{{path('transition_guide_article',{'slug':'cover-letter-resume'}) }}" class="article-link"><p><i class="fa fa-check-square-o"></i>&nbspResume & Cover Letter</p></a></li>
+
+                            <li> <a href="{{path('transition_guide_article',{'slug':'marketing-yourself'}) }}" class="article-link"><p><i class="fa fa-check-square-o"></i>&nbspMarketing Yourself Online</p></a></li>
+
+                            <li> <a href="{{path('transition_guide_article',{'slug':'networking-essentials'}) }}" class="article-link"><p><i class="fa fa-check-square-o"></i>&nbspNetworking</p></a></li>
                             <!-- <li> 
                                 <a href="" class="modal-trigger"><p><i class="fa fa-check-square-o"></i>&nbspDealing with Recruiters</p></a>
                             </li> -->
                             <li> <a href="javascript:void(0)"><p><i class="fa fa-square-o"></i>&nbspCareer Fairs</p></a></li>
+
                             <li> <a href="javascript:void(0)"><p><i class="fa fa-square-o"></i>&nbspInterviews</p></a></li>
                         </ul>
                       </div>
@@ -49,6 +53,10 @@
                         <img src="{{ asset('bundles/vcg/images/bubbles.png') }}" alt="">
                         <h1>Videos</h1>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, illum.</p>
+                        <img class="video-thumb" src="{{ asset('bundles/vcg/images/video-1.png') }}" alt="">
+                        <img class="video-thumb" src="{{ asset('bundles/vcg/images/video-1.png') }}" alt="">
+                       
+
                       </a>
                       <a href="javascript:void(0)" class="grid-item grid-item-big grid--employment-resources">
                         <h1>Employment Resources</h1>

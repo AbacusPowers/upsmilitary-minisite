@@ -1,4 +1,4 @@
-$header-height--small: 18rem;
+$header-height--small: 10rem;
 $header-height--medium: 24em;
 $header-height--large: 28em;
 $header-height--wide: 40em;
@@ -37,12 +37,15 @@ header {
         z-index: 0;
         display: block;
         width: 100%;
+        // background: url("{{ asset('bundles/vcg/images/bg-5b.png') }}");
 
-        & img {
-            position: absolute;
-            width: 100%;
-        }
     }
+
+    .header-static-bg-img {
+        position: absolute;
+        // width: 100%;
+    }
+
 
     .header--liner { /*slider prototype--must be made full width*/
         position: relative;

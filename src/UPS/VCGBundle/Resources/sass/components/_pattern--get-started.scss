@@ -76,6 +76,10 @@
             color: $white;
         }
 
+        .breakpoint-small &{
+            display: none;
+        }
+
         .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & {
             background: rgba( $ups-yellow, 0.6 );
             background: none;

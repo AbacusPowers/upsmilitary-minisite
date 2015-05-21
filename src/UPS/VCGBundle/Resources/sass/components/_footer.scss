@@ -12,6 +12,8 @@
   padding: ($base-spacing * 2) $gutter;
   width: 100%;
 
+  border-bottom: 15em solid $black;
+
   .footer-logo {
     margin-bottom: 2em;
     text-align: center;
@@ -82,4 +84,11 @@
     max-width: 35em;
     text-align: center;
   }
+
+  p.standard-footer {
+    text-align: center;
+    padding-top: 10em;
+    margin-bottom: -10em;
+  }
+
 }
