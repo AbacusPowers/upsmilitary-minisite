@@ -1,0 +1,6 @@
+:aws_access_key_id: "AKIAJBQMK5XCQPLVMIVA"
+:aws_secret_access_key: "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"
+:aws_params:
+  :region: 'us-east-1'
+:load_balanced: false
+:project_tag: "SharedWeb"
