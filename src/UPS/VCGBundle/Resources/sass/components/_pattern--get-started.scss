@@ -76,6 +76,10 @@
             color: $white;
         }
 
+        .breakpoint-small &{
+            display: none;
+        }
+
         .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & {
             background: rgba( $ups-yellow, 0.6 );
             background: none;
@@ -134,10 +138,14 @@
         background: url(../../bundles/vcg/images/bg-6.png) center center scroll rgba($ups-brown-1, 0.1);
         background-size: cover; 
 
+
         p {
             color: $white;
         }
-
+        
+        .breakpoint-small & {
+            padding: 2em 1em 3em;
+        }
 
         .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & {
 

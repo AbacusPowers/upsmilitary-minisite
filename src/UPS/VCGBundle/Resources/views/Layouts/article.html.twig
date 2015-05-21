@@ -5,15 +5,17 @@
 {% block modal %}
 {# you can use "route" to echo the route name #}
         <div id="modal-content">
+            <img src="{{ asset('bundles/vcg/images/UPS-shield-logo.png') }}" alt="" class="logo">
             {% block modalbody %}
                     <div id="single-modal-content"> 
+                        <a href="javascript:void" class="article-download"><i class="fa fa-download"></i>&nbspDownload</a>
                     {{ article.Body | raw }} 
                     {% if article.Expanders %}
                         <div class="component--expander">
 
                             {% for key in article.Expanders %}
                                 <section class='expander__wrapper'>
-                                    <img src="{{ asset('bundles/vcg/images/placeholder_logo_2_dark.png') }}" class="icon--large" alt="">
+                                    <i class="fa fa-circle"></i>
                                     <h2 class='expander__parent'>{{ key.title }}</h2>
                                     <a data-id='1' class='button expand-button'>
                                         <i class="fa fa-plus fa-2x"></i>
@@ -33,8 +35,8 @@
                     {% endif %}
                     </div>
             {% endblock %}
-            <a href="{% block parentPageLink %}{{ path('page', {'slug': article.Parent | raw })}}{% endblock %}" id="close-modal">close</a>
-            <a href="{% block prevArticleLink %}{{ path(route, {'slug': article.Prev | raw })}}{% endblock %}" id="prev-article">prev</a>
-            <a href="{% block nextArticleLink %}{{ path(route, {'slug': article.Next | raw })}}{% endblock %}" id="next-article">next</a>
+            <a href="{% block parentPageLink %}{{ path('page', {'slug': article.Parent | raw })}}{% endblock %}" id="close-modal"><i class="fa fa-times"></i></a>
+            <a href="{% block prevArticleLink %}{{ path(route, {'slug': article.Prev | raw })}}{% endblock %}" id="prev-article"><i class="fa fa-angle-left"></i></a>
+            <a href="{% block nextArticleLink %}{{ path(route, {'slug': article.Next | raw })}}{% endblock %}" id="next-article"><i class="fa fa-angle-right"></i></a>
         </div>
 {% endblock %}
