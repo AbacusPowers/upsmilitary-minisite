@@ -88,6 +88,10 @@
     margin: 1em;
     // margin-left: 1em;
     // margin-right: 1em;
+
+    &:last-of-type {
+      padding-bottom: 3em;
+    }
   }
 
   .expander__child p img { /*DD Form 214 guide*/

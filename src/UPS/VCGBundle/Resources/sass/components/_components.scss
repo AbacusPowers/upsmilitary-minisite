@@ -2,14 +2,69 @@
 
 
 
-.article p, .article h2 {
-    color: $black;
+.article {
+
+    p, h1, h2, ul li {
+        color: $black;
+    }
+
+    h1 {
+        font-size: 1.9em;
+        padding-top: 0.1em;
+        width: 100%;
+        text-transform: capitalize;
+        margin-bottom: 1.2em;
+
+        .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & {
+            width: calc( 100% - 8rem );
+        }
+
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+
+    ul li {
+        font-weight: 800;
+        text-transform: capitalize;
+
+    }
+
+    ul {
+        list-style-type: disc;
+    }
+
+    
+    
 }
 
 .article {
 
-    & .expander__wrapper::before {
-        // display: none;
+    & .component--expander .expander__wrapper:before {
+        display: none;
+    }
+
+    .component--expander .expander__wrapper {
+
+        padding-left: 0;
+
+        i.fa-circle {
+            padding-top: 1em;
+            margin-right: 1.4em;
+            color: $ups-yellow;
+            float: left;
+            font-size: 1.1em;
+        }
+
+        h2 {
+            padding-top: 0.75em;
+            text-transform: capitalize;
+        }
+    }
+
+    .component--expander .expander__child p {
+        margin-left: 0;
     }
 }
 
