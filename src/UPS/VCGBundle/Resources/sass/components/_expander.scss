@@ -15,6 +15,10 @@
       top: 0;
       background: $ups-yellow;
 
+      .breakpoint-small & {
+        content: none;
+      }
+
     }
   }
 
@@ -35,7 +39,7 @@
   }
 
   a.button{
-    height: 75px;
+    height: 78px;
     width: 100%;
     color: $grey70;
     cursor: pointer;
@@ -46,8 +50,9 @@
     right: 0;
     top: 0px;
     font-size: 13px;
+
     &:hover {
-        background: transparent;
+        background: $white05;
     }
     .fa {
         position: absolute;

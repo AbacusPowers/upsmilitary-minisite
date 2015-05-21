@@ -134,10 +134,14 @@
         background: url(../../bundles/vcg/images/bg-6.png) center center scroll rgba($ups-brown-1, 0.1);
         background-size: cover; 
 
+
         p {
             color: $white;
         }
-
+        
+        .breakpoint-small & {
+            padding: 2em 1em 3em;
+        }
 
         .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & {
 
