@@ -46,8 +46,8 @@ end
 
 
 namespace :deploy do
-  desc "Graceful php-fpm restart"
+  desc "Graceful apache restart"
   task :restart, :roles => :app do
-	 run "sudo /etc/init.d/php5-fpm reload"
+    run "sudo /usr/sbin/apache2ctl graceful"
   end
 end
