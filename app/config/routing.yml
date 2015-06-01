@@ -2,7 +2,7 @@ vcg:
     resource: "@VCGBundle/Controller/"
     type:     annotation
     prefix:   /
-
-app:
-    resource: "@AppBundle/Controller/"
-    type:     annotation
+#
+#app:
+#    resource: "@AppBundle/Controller/"
+#    type:     annotation

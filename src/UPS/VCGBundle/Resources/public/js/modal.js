@@ -1,6 +1,5 @@
-
 $('document').ready(function(){
-    
+    //ARTICLE FUNCTIONALITY
     $('.article-link').on('click', function(e){
         e.preventDefault();
         var href = $(this).attr('href');
@@ -8,6 +7,14 @@ $('document').ready(function(){
         getModalContent(href, true, 'page');
         showModal();
 
+    });
+    //VIDEO FUNCTIONALITY
+    $('.video-link').on('click', function(e){
+        e.preventDefault();
+        var href = $(this).attr('href');
+        // Getting Content
+        getModalContent(href, true, 'page');
+        showVideoModal();
     });
     $('#modal').on('click','#prev-article',function(e){
         e.preventDefault();
@@ -21,7 +28,24 @@ $('document').ready(function(){
             // Getting Content
             getModalContent(href, true, 'article');
     });
-    $('#modal').on('click','#close-modal', function(e){
+    $('#modal','.article-view').on('click','#close-modal', function(e){
+        e.preventDefault();
+        console.log('ping');
+        var href = $(this).attr('href');
+        if(History.getState().data.modal === 1) { //only true if triggered from article link (not direct visits to article)
+            if(History.getState().data.origin === 'page') {
+                destroyModal();
+                var rewrite = History.getState().data.close;
+                History.pushState(null, null, rewrite);
+            } else {
+                window.location.href = href;
+            }
+            
+        } else if ($('#modal-wrapper').hasClass('article')) {
+            window.location.href = href;
+        }
+    });
+    $('#modal','.video-view').on('click','#close-modal', function(e){
         e.preventDefault();
         console.log('ping');
         var href = $(this).attr('href');
@@ -58,12 +82,23 @@ function showModal(){
     $('body').addClass('article-view');
     $('#modal-wrapper').addClass('article');
 }
-
+function showVideoModal(){
+    $('#overlay').show();
+    $('#modal').fadeIn();
+    $('body').addClass('video-view');
+    $('#modal-wrapper').addClass('video');
+}
 function destroyModal(){
     $('#overlay').hide();
     $('#modal').hide();
     $('body').removeClass('article-view');
     $('#modal-wrapper').removeClass('article');
+}
+function destroyVideoModal(){
+    $('#overlay').hide();
+    $('#modal').hide();
+    $('body').removeClass('video-view');
+    $('#modal-wrapper').removeClass('video');
 }
 
 (function(window, undefined) {

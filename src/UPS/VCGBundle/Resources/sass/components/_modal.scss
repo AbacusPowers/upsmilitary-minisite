@@ -2,7 +2,7 @@
 
 #overlay {
     display: none;
-    .article & {
+    .article &, .video & {
         display: block;
     }
     position: fixed; 
@@ -21,6 +21,10 @@
 
     background:white;
     border-left: 10px solid $ups-yellow;
+    .video & {
+        background: transparent;
+        border-left: none;
+    }
     box-sizing: border-box;
     height: 100%;
     padding: 2em;
@@ -52,7 +56,7 @@
       padding: 2em 5em 0 6em;
     }
 
-    .article & {
+    .article &, .video & {
         display: block;
     }
 
@@ -72,7 +76,7 @@
         height:100%;
         overflow-y: auto;
         padding-top: 2em;
-        padding-bottom: 100%;
+        /*padding-bottom: 100%;*/
 
         &::-webkit-scrollbar { 
           display: none; /*temporary fix*/
@@ -101,6 +105,23 @@
           font-size: 0.9rem;
           margin-right: 0.25em;
           
+        }
+        .video & {
+            .video-container {
+                position: relative;
+                padding-bottom: 56.25%;
+                padding-top: 30px; height: 0; overflow: hidden;
+            }
+
+            .video-container iframe,
+            .video-container object,
+            .video-container embed {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
         }
     }
 

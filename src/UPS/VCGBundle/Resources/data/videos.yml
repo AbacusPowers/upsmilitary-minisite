@@ -1,0 +1,12 @@
+## YAML Template.
+---
+video1: 
+    Url: YU6sZoKSQHY
+    Title: Resumé
+    Prev: video2
+    Next: video2
+video2: 
+    Url: lIkA516L0a0
+    Title: Job Test
+    Prev: video1
+    Next: video1

@@ -8,34 +8,31 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Yaml\Parser;
 
 
-class ArticleController extends Controller
+class VideoController extends Controller
 {   
     /**
-     * @Route("/article/{slug}")
-     * @Route("/article/{slug}.html")
-     * @Route("/culture-benefits/article/{slug}.html", name="culture_benefits_article")
-     * @Route("/transition-guide/article/{slug}.html", name="transition_guide_article")
+     * @Route("/video/{slug}.html")
+     * @Route("/culture-benefits/video/{slug}.html", name="culture_benefits_video")
+     * @Route("/transition-guide/video/{slug}.html", name="transition_guide_video")
      */
     public function indexAction($slug)
     {
-        if(substr($slug, -5, 5) === '.html') {
-            $slug = substr($slug, 0, -5);
-        }
+
         $yaml = new Parser();
-        $article = array();
         
         $request = $this->container->get('request');
         $routeName = $request->get('_route');
         try {
-            $article = $yaml->parse(file_get_contents( dirname(dirname(__FILE__)). "/Resources/data/articles/$slug.yml"));
+            $videos = $yaml->parse(file_get_contents( dirname(dirname(__FILE__)). "/Resources/data/videos.yml"));
+            $video = $videos[$slug];
         } catch (ParseException $e) {
             printf("Unable to parse the YAML file: %s", $e->getMessage());
         }
         try {
             $response = $this->render(
-            'VCGBundle:Layouts:article.html.twig',
-            array('slug' => $slug, 'article' => $article,'route' => $routeName)
-        );
+                'VCGBundle:Layouts:video.html.twig',
+                array('slug' => $slug, 'video' => $video,'route' => $routeName)
+            );
         } catch (\Exception $ex) {
             // your conditional code here.
             $error = new Response(Response::HTTP_NOT_FOUND);
@@ -45,7 +42,6 @@ class ArticleController extends Controller
                 array('slug' => $slug, 'error' => $error)
             );
         }
-        
         return $response;
     }
 }

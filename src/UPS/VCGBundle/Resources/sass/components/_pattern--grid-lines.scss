@@ -114,7 +114,9 @@
             @include position(absolute, 2em null null 2em );
         }
     }
-
+    .video-link {
+        display: inline-block;
+    }
     .grid-item img.video-thumb {
         position: relative;
         border-radius: 0;
