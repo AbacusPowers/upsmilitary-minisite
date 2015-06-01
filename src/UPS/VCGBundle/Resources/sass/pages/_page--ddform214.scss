@@ -87,9 +87,10 @@
 
     #form-guide-image {
         
-        g {
-            display:none;
+        & > g {
+            opacity: 0;
             &#Frame {
+                opacity: 1;
                 display: block;
             }
         }

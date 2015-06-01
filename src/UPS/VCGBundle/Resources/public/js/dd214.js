@@ -6,10 +6,19 @@
 
 $( function(){
 
-  $('.button').hover(function(){
+  $('.button').mouseover(function(){
     var id = $(this).attr('data-id');
-    $('#'+id).fadeToggle();
-    console.log('fade in' + id);
+    var svg = Snap.select('#block'+id);
+    svg.animate({'opacity': 1}, 300);
+      console.log('fade in' + id);
+    console.log(svg);
+  });
+  $('.button').mouseout(function(){
+    var id = $(this).attr('data-id');
+    var svg = Snap.select('#block'+id);
+    svg.animate({'opacity': 0}, 300);
+      console.log('fade in' + id);
+    console.log(svg);
   });
   
 } );
