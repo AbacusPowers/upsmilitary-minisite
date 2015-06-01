@@ -1,24 +1,90 @@
 .page.page--ddform214 {
+    margin-bottom: 5em;
+
+    .expander__wrapper:before{
+
+        .breakpoint-small &, .breakpoint-medium & {
+            content: none;
+        }
+    }
+    
+    .intro {
+        img {
+            @include position(absolute, 0 null null 1em );
+            @include size(6em);
+            border-radius: 50%;
+            border: 1px $ups-yellow solid;
+            padding: 1.3em;
+            margin-top: -1.2em;
+            
+            .breakpoint-small & {
+                position: relative;
+                margin-left: calc( 50% - 4em );
+                margin-top: 1.5em;
+                margin-bottom: 1em;
+                @include size(6em);
+                padding: 1.3em;
+            }
+
+            .breakpoint-medium & {
+                @include position(absolute, 5em null null 1em );
+            }
+        }
+
+
+        h1 {
+            margin-left: 4.5em;
+            color: $white;
+            margin-bottom: 2.5em;
+
+            .breakpoint-small & {
+                margin-left: 3rem;
+                font-size: 1.2em;
+            }
+
+            .breakpoint-medium & {
+                margin-left: 6.5em;
+                margin-top: -1em;
+                margin-bottom: 3em;
+            }
+        } 
+
+        .breakpoint-small &, .breakpoint-medium & {
+            p{
+                margin: 3em;
+            }
+
+        }
+    }
+    
 
     section.dd-form214 {
         display: none;
         
-        .breakpoint-large & {
+        .breakpoint-large &, .breakpoint-wide & {
             display: block;
             @include size( 50% auto);
             @include position(absolute, 14em auto);
         }
 
         img {
+            width: 20em;
             display: block;
             margin-left: auto;
             margin-right: auto;
+            margin-top: 2em;
         }
     }
 
-    h1 {
-        margin-left: 90px;
+    .component--expander .expander__child p img {
+        margin-bottom: 0;
     }
+
+    h3 {
+        color: $ups-yellow;
+    }
+
+
 
     
 

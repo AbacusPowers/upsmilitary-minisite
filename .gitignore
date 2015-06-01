@@ -17,7 +17,7 @@ nbproject/
 
 #IGNORE GULP STUFF
 node_modules/
-gulpfile.js
+#gulpfile.js
 .sass-cache/
 
 #IGNORE COMPILED BUNDLE CSS TO ALLOW
