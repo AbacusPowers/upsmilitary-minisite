@@ -1,5 +1,5 @@
 {% extends 'VCGBundle::base.html.twig' %}
-{#{% block title %} {{ article.Title }} {% endblock %}#}
+{% block title %} {{ video.Title }} {% endblock %}
 {% block modal_class %}video{% endblock %}
 {% block page_class %}video{% endblock %}
 {% block modal %}
@@ -8,6 +8,7 @@
             <img src="{{ asset('bundles/vcg/images/UPS-shield-logo.png') }}" alt="" class="logo">
             {% block modalbody %}
                     <div id="single-modal-content">
+                        <h1 id="video-title">{{ video.Title }}</h1>
                         <div class="video-container">
                             <iframe width="420" height="315" src="https://www.youtube.com/embed/{{ video.Url }}" frameborder="0" allowfullscreen></iframe>
                         </div>
