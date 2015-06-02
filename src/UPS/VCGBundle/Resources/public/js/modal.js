@@ -16,6 +16,14 @@ $('document').ready(function(){
         getModalContent(href, true, 'page');
         showVideoModal();
     });
+    //EVENTS FUNCTIONALITY
+    $('.all-events-link').on('click', function(e){
+        e.preventDefault();
+        var href = $(this).attr('href');
+        // Getting Content
+        getModalContent(href, true, 'page');
+        showEventsModal();
+    });
     $('#modal').on('click','#prev-article',function(e){
         e.preventDefault();
             var href = $(this).attr('href');
@@ -88,6 +96,12 @@ function showVideoModal(){
     $('body').addClass('video-view');
     $('#modal-wrapper').addClass('video');
 }
+function showEventsModal(){
+    $('#overlay').show();
+    $('#modal').fadeIn();
+    $('body').addClass('events-view');
+    $('#modal-wrapper').addClass('events');
+}
 function destroyModal(){
     $('#overlay').hide();
     $('#modal').hide();
@@ -99,6 +113,12 @@ function destroyVideoModal(){
     $('#modal').hide();
     $('body').removeClass('video-view');
     $('#modal-wrapper').removeClass('video');
+}
+function destroyEventsModal(){
+    $('#overlay').hide();
+    $('#modal').hide();
+    $('body').removeClass('events-view');
+    $('#modal-wrapper').removeClass('events');
 }
 
 (function(window, undefined) {
