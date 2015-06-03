@@ -22,6 +22,7 @@
 
 .veteranGateway__liner {
     position: relative;
+    // background: $black;
     // background: pink;
 
     .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & {
@@ -98,12 +99,13 @@
         .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & {
             background: $black;
             width: 50%;
-            min-height: 7em;
+            height: 7em;
             // margin-top: -7.5em;
             @include position( -5em null null 0 );
-            text-align: right;
+            // text-align: right;
             padding-top: 1.65em;
             padding-right: 5.5em;
+            padding-left: 6.5em;
             border-bottom: 1px solid $ups-yellow;
             // border-right: 1px solid $ups-yellow;
 
@@ -123,14 +125,15 @@
             }
 
             &:before {
-                @include pseudo-block(7.5em);
+                @include pseudo-block(7em);
                 width: 100%;
                 @include position(absolute, 0 null null -100%);
                 background: $black;
+                border-bottom: 1px solid $ups-yellow;
             }
 
             &:after {
-                @include pseudo-block(5em);
+                @include pseudo-block(7em);
                 width: 200%;
                 @include position(absolute, 0 null null 100% );
                 background: rgba( $ups-yellow, 0.8 );

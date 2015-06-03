@@ -1,5 +1,25 @@
-<a href="{{ path('page', {'slug': 'transition-guide'}) }}" class="grid-item grid--transition-guide">
-    <img src="{{ asset('bundles/vcg/images/document.png') }}" class="icon--large" alt="">
-    <h1>Military Transition Guide</h1>
-    <p>A usefull guide for transitioning into a new civilian career</p>
-</a>
+<div class="grid-item grid--transition-guide">
+    <a href="{{ path('page', {'slug': 'transition-guide'}) }}" >
+        <img src="{{ asset('bundles/vcg/images/document.png') }}" class="icon--large" alt="">
+        <h1>Military Transition Guide</h1>
+        <p>Here's your useful guide for transitioning into a new civilian career. We've created these resources to help you plan how to move into any career, not just UPS.</p>
+    </a>
+    
+    <h2>Service Member & Veteran Quick Start</h2>
+
+    <div class="button-group">
+        <a class="button black" href="{{ path('transition_guide_page', {'slug':'dd-form-214-guide'}) }}">DD Form 214 Guide</a>
+        <a class="button black" href="{{path('transition_guide_article',{'slug':'cover-letter-resume'}) }}">Build Your Personal Brand</a>
+    </div>
+    
+    <div class="app-download-wrapper">
+        <h2>Download the Transition Guide App</h2>
+    <img class="app-hand" src="{{ asset('bundles/vcg/images/hand-2.png') }}" alt="">
+    <img class="badge--apple" src="{{ asset('bundles/vcg/images/Download_on_the_App_Store_Badge_US-UK_135x40.svg') }}" alt="">
+    
+      <img class="badge--google" alt="Android app on Google Play"
+       src="https://developer.android.com/images/brand/en_app_rgb_wo_45.png" />
+    </div>
+    
+    
+</div>
