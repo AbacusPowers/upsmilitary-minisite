@@ -651,7 +651,7 @@ $grid-item-height: 14.8em;
     .grid-item:nth-child(6) { 
         // border-left: 1px solid $ups-yellow;
         padding-bottom: 4em;
-        input {
+        input[type="text"] {
             background: $grey60;
             border-radius: 0px;
             border: 0;

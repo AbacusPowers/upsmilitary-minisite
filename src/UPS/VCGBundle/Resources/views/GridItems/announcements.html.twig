@@ -1,6 +1,8 @@
 <div class="grid-item grid--announcements">
     <img src="{{ asset('bundles/vcg/images/lightbulb.png') }}" alt="">
     <h1>Search Jobs</h1>
-    <input id="search-field" type="text">
-    <a href="#" id="search-submit" class="button">GO</a>
+    <form id="job-search" action="">
+        <input id="search-field" type="text" placeholder="Keyword or Location Name">
+        <input type="submit" id="search-submit" class="button" value="Go">
+    </form>
 </div>

@@ -107,6 +107,34 @@ function loadAjaxFunctions(){
             window.location.href = href;
         }
     });
+    $('#modal','.leave-site-view').on('click','#close-modal', function(e){
+        e.preventDefault();
+        var href = $(this).attr('href');
+        destroyModal();
+        var rewrite = History.getState().data.close;
+        History.pushState(null, null, rewrite);
+            
+    });
+    $('#modal','.leave-site-view').on('click','#forward-to', function(e){
+//        e.preventDefault();
+
+        var href = $(this).attr('href');
+                destroyModal();
+                var rewrite = History.getState().data.close;
+                History.pushState(null, null, rewrite);
+//                window.location.href = href;
+            
+    });
+    $('#modal','.leave-site-view').on('click','#forward-cancel', function(e){
+//        e.preventDefault();
+
+        var href = $(this).attr('href');
+                destroyModal();
+                var rewrite = History.getState().data.close;
+                History.pushState(null, null, rewrite);
+//                window.location.href = href;
+            
+    });
 }
 
 function getModalContent(url, addEntry, originType) {
@@ -215,7 +243,7 @@ function destroyLeaveSiteModal(){
 
             // MODAL
             e.preventDefault();
-            getModalContent(leaveSiteUrl, true, 'page');
+            getModalContent(leaveSiteUrl, false, 'page');
             showLeaveSiteModal(href);
             
 
