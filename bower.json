@@ -12,6 +12,7 @@
   ],
   "dependencies": {
     "history.js": "~1.8.0",
-    "metaquery": "~1.2.5"
+    "metaquery": "~1.2.5",
+    "Snap.svg": "~0.4.1"
   }
 }
