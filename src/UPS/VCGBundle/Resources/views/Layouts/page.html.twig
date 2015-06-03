@@ -1,4 +1,10 @@
 {% extends "VCGBundle::base.html.twig" %}
+{% block routescript %}
+    <script>
+        var leaveSiteUrl = '{{ path('page',{'slug':'leave-site'}) }}';
+        console.log(leaveSiteUrl);
+    </script>    
+{% endblock %}
 
 {% block title %}VCGBundle:Page:index{% endblock %}
 {% block page_class %}page{% endblock %}

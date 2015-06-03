@@ -21,12 +21,12 @@ $( function(){
   
 } );
 $( function(){
-    $('.expand-button','.veteranGateway').click(function(){
+    $('.expand-button','.page--ddform214').click(function(){
         var id = $(this).attr('data-id');
         var svg = Snap.select('#block'+id);
         svg.animate({'opacity': 1}, 300);
     });
-    $('.hide-button','.veteranGateway').click(function(){
+    $('.hide-button','.page--ddform214').click(function(){
         var id = $(this).attr('data-id');
         var svg = Snap.select('#block'+id);
         svg.animate({'opacity': 0}, 300);

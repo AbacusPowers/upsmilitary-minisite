@@ -20,9 +20,13 @@ class PageController extends Controller
         if(substr($slug, -5, 5) === '.html') {
             $slug = substr($slug, 0, -5);
         }
+        
+        $request = $this->container->get('request');
+        $routeName = $request->get('_route');
+        
         $response = $this->render(
                 'VCGBundle:Page:'.$slug.'.html.twig',
-                array('slug' => $slug)
+                array('slug' => $slug,'route' => $routeName)
             );
 //        try {
 //
