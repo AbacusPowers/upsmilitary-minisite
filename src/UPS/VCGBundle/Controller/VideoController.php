@@ -14,6 +14,7 @@ class VideoController extends Controller
      * @Route("/video/{slug}.html")
      * @Route("/culture-benefits/video/{slug}.html", name="culture_benefits_video")
      * @Route("/transition-guide/video/{slug}.html", name="transition_guide_video")
+     * @Route("/culture-benefits/faq/video/{slug}.html", name="faq_video")
      */
     public function indexAction($slug)
     {
