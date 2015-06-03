@@ -140,8 +140,10 @@
     color: $white80;
     cursor: pointer;
     display: block;
-    font-size: 85px;
+    font-size: 65px;
     font-family: sans-serif;
+    bottom: 2rem;
+    position: relative;
 }
 
 .carousel-bullet:hover {

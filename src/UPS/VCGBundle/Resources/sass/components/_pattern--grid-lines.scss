@@ -134,7 +134,7 @@ $grid-item-height: 14.8em;
     }
 
     a.grid-item:hover {
-        background: $grey80;
+        background: #222;
     }
 
 // Custom Grid Styles
@@ -613,7 +613,7 @@ $grid-item-height: 14.8em;
             left: -1px;
             // overflow: visible;
             z-index: 1;
-            background: $grey80;
+            background: #222;
     }
 
 
@@ -624,13 +624,13 @@ $grid-item-height: 14.8em;
             left: -1px;
             // overflow: visible;
             z-index: 1;
-            background: $grey80;
+            background: #222;
     }
      
 }
 
 .page--transition-guide {
-    background: blue;
+    // background: blue;
     // .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & {
 
 }

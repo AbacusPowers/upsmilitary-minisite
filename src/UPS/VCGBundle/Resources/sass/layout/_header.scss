@@ -1,7 +1,7 @@
 $header-height--small: 10rem;
-$header-height--medium: 24em;
-$header-height--large: 28em;
-$header-height--wide: 40em;
+$header-height--medium: 20em;
+$header-height--large: 24em;
+$header-height--wide: 35em;
 
 header {
     background: url(../img/bg-5b.png) bottom center no-repeat $grey90;
@@ -23,12 +23,12 @@ header {
 
        .breakpoint-medium &, .breakpoint-large & {
             @include position(absolute, 2em);
-            width: 5em;
+            width: 4em;
         }
 
         .breakpoint-wide & {
             // @include position(absolute, 2em);
-            width: 5em;
+            width: 4em;
         }
     }
 
