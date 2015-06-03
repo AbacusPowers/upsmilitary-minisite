@@ -1,6 +1,24 @@
 .page--map {
+    
+    .map-wrapper { text-align: center; }
+        
+    #svg-map {
+        width: 100%;
+        max-width: 1000px;
+        height: 400px;
+        
+        margin: 0px auto;
+        padding: 1em 0px;
+        
+        display: block;
+        
+        .breakpoint-large &,
+        .breakpoint-wide & { height: 700px; }
+        
+        path { cursor: pointer; }
+    }
 
-    .jobs-map {
+/*    .jobs-map {
         @include size(100% 300px);
         background: $black30;
         display: block;
@@ -38,5 +56,5 @@
             border-top: 1px solid $black10;
         }
 
-    }
+    }*/
 }
