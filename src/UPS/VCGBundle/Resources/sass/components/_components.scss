@@ -1,9 +1,8 @@
 /*staging area for quickly testing new components*/
 
+/*modal content styling*/
 
-
-.article {
-
+.article, .events, .video {
     p, h1, h2, ul li {
         color: $black;
     }
@@ -14,7 +13,12 @@
         width: 100%;
         text-transform: capitalize;
         margin-bottom: 1.2em;
+    }
+}
 
+.article, .events {
+
+    h1 {
         .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & {
             width: calc( 100% - 8rem );
         }
@@ -34,9 +38,33 @@
     ul {
         list-style-type: disc;
     }
+}
 
-    
-    
+.events {
+    .event__wrapper {
+        border-top: 1px solid $ups-grey-1;
+        padding-top: 1em;
+        padding-bottom: 1em;
+        
+        h1 {
+            font-size: 1.2em;
+            margin-bottom: 0;
+            margin-left: 6rem;
+        }
+
+        img {
+            float: left;
+        }
+
+        p {
+                margin-left: 6rem;
+        }
+        
+        &:last-child {
+            border-bottom: 1px solid $ups-grey-1;
+        }
+    }
+
 }
 
 .article {

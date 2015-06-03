@@ -18,13 +18,14 @@
 
 #modal {
     display: none;
-
     background:white;
     border-left: 10px solid $ups-yellow;
+
     .video & {
         background: transparent;
         border-left: none;
     }
+
     box-sizing: border-box;
     height: 100%;
     padding: 2em;
@@ -191,4 +192,16 @@
           padding: 0.95em 0 0 0.3em;
         }
     }
+
+
+
+
+/*********************VIDEO MODAL********************************/
+
+/*********************EVENTS MODAL*******************************/
+
+
+/*********************OFFSITE LINK MODAL*************************/
+
 }
+
