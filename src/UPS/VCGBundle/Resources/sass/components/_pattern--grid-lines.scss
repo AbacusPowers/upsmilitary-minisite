@@ -367,7 +367,7 @@ $grid-item-height: 14.8em;
         .grid-item:last-child {
             border-bottom: none;
         }
-
+       
         // .grid--transition-guide {
         //     border-bottom: none;
 
@@ -396,6 +396,12 @@ $grid-item-height: 14.8em;
         .grid--transition-guide-intro {
             font-weight: 800;
             font-size: 1em;
+            .button-group {
+                position: relative;
+                a {
+                    display: block;
+                }
+            }
         }
 
         // .grid-item.grid--announcements {
