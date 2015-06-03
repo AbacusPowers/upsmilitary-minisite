@@ -41,6 +41,7 @@
 }
 
 .events {
+
     .event__wrapper {
         border-top: 1px solid $ups-grey-1;
         padding-top: 1em;
@@ -62,9 +63,33 @@
         
         &:last-child {
             border-bottom: 1px solid $ups-grey-1;
+            margin-bottom: 20em;
         }
     }
+    
+    .event__date {
+        font-size: 1.3em;
+        margin-top: 0.4em;
+        margin-bottom: 0.3em;
+    }
 
+    .event__location {
+        font-size: 1em;
+    }
+    .event__city, .event__state, .event__map-link {
+        font-size: 0.8em;
+        font-weight: 800;
+    }
+
+    .event__type {
+        font-size: 0.8em;
+        margin-top: 1em;
+        // font-weight: 800;
+    }
+
+    i.fa-external-link-square {
+        margin-left: 0.2em;
+    }
 }
 
 .article {
