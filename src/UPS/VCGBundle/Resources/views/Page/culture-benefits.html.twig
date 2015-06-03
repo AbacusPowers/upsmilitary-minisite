@@ -1,12 +1,22 @@
 {% extends "VCGBundle:Layouts:page.html.twig" %}
 {% block title %}UPS Culture &amp; Benefits{% endblock %}
+{% block headerimage %}
+    <div class="header-static-bg">
+        <img class="header-static-bg-img" src="{{ asset('bundles/vcg/images/bg-5b.png') }}"    
+    </div>
+{% endblock %}
 {% block breadcrumbs %}
         <a href="index.html">UPS Veteran Gateway</a>
         <a href="javascript:void(0)">UPS Benefits & Culture</a>
 {% endblock %}
 
 {% block page_content %}
-    <div class="page page--home page--culture">
+<div class="veteranGateway__liner">
+                <div class="title-block">
+                    <h1>UPS Culture & Benefits</h1>
+                    <p>Lorem Ipsum Valentis</p>
+                </div>
+                  <div class="page page--culture">
                     <div class="grid-items-lines">
                         {% include 'VCGBundle:GridItems:transition-guide-culture.html.twig' %}
   
@@ -23,34 +33,35 @@
                       <div class="grid-item">
                         <img src="{{ asset('bundles/vcg/images/placeholder_logo_2_dark.png') }}" alt="">
                         <h1>Registered Apprentice Program</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, illum.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, illum. <a href="{{ path('page', {'slug': 'partners'}) }}">Partners</a>.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, illum. 
                       </div>
                       <a href="javascript:void(0)" class="grid-item">
                         <img src="{{ asset('bundles/vcg/images/placeholder_logo_2_dark.png') }}" alt="">
                         <h1>Students</h1>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, illum.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, illum.</p>
                       </a>
                       <a href="javascript:void(0)" class="grid-item">
                         <img src="{{ asset('bundles/vcg/images/placeholder_logo_2_dark.png') }}" alt="">
                         <h1>ESGR</h1>
-                        <p>Lorem ipsum dolor sit amet, elit. Rem, illum.</p>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa ipsa et quis modi dolorem.</p>
                       </a>
                       <a href="ups-faqs.html" class="grid-item">
                         <img src="{{ asset('bundles/vcg/images/placeholder_logo_2_dark.png') }}" alt="">
                         <h1>FAQs</h1>
-                        <p>Lorem ipsum dolor sit amet, elit. Rem, illum.</p>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa ipsa et quis modi dolorem.</p>
                       </a>
-                      <a href="javascript:void(0)" class="grid-item grid-item-big">
+                      <a href="javascript:void(0)" class="grid-item">
                         <img src="{{ asset('bundles/vcg/images/placeholder_logo_2_dark.png') }}" alt="">
                         <h1>Videos</h1>
-                        <p>Lorem ipsum dolor sit amet, elit. Rem, illum.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa ipsa et quis modi dolorem.</p>
+                      </a>
+                      <a href="{{ path('page', {'slug': 'partners'}) }}" class="grid-item">
+                        <img src="{{ asset('bundles/vcg/images/placeholder_logo_2_dark.png') }}" alt="">
+                        <h1>Our Partners</h1>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa ipsa et quis modi dolorem.</p>
                       </a>
                     </div>
                 </div>           
             </div>
+          </div>
 {% endblock %}
