@@ -2,7 +2,7 @@
 
 /*modal content styling*/
 
-.article, .events, .video {
+.article, .events, .video, .leave-site {
     p, h1, h2, ul li {
         color: $black;
     }
@@ -16,7 +16,7 @@
     }
 }
 
-.article, .events {
+.article, .events, .leave-site {
 
     h1 {
         .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & {
