@@ -22,8 +22,11 @@
     border-left: 10px solid $ups-yellow;
 
     .video & {
-        background: transparent;
-        border-left: none;
+        // background: transparent;
+        // border-left: none;
+        // .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & {
+        //   padding-right: 6em;
+        // }
     }
 
     box-sizing: border-box;
@@ -41,20 +44,20 @@
     .breakpoint-medium & {
       left: 5%;
       width: 90%;
-      padding: 2em 5em 0 6em;
+      padding: 2em 6em 0 6em;
       // max-width: 50em;
     }
 
     .breakpoint-large & {
       left: 15%;
       width: 70%;
-      padding: 2em 5em 0 6em;
+      padding: 2em 6em 0 6em;
     }
 
     .breakpoint-wide & {
       left: 20%;
       width: 60%;
-      padding: 2em 5em 0 6em;
+      padding: 2em 6em 0 6em;
     }
 
     .article &, .video &, .events & {
@@ -107,11 +110,13 @@
           margin-right: 0.25em;
           
         }
+
         .video & {
             .video-container {
                 position: relative;
                 padding-bottom: 56.25%;
                 padding-top: 30px; height: 0; overflow: hidden;
+                overflow: display;
             }
 
             .video-container iframe,
