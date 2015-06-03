@@ -68,6 +68,7 @@
 .carousel-item img {
     display: block;
     height: auto;
+    width: 100%;
     // margin-left: 0 !important; /*where does the 20px margin that this overides actually come from?*/    
     max-width: none;
     min-width: 100%;
