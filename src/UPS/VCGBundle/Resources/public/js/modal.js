@@ -102,6 +102,12 @@ function showEventsModal(){
     $('body').addClass('events-view');
     $('#modal-wrapper').addClass('events');
 }
+function showLeaveSiteModal(){
+    $('#overlay').show();
+    $('#modal').fadeIn();
+    $('body').addClass('leave-site-view');
+    $('#modal-wrapper').addClass('leave-site');
+}
 function destroyModal(){
     $('#overlay').hide();
     $('#modal').hide();
@@ -120,6 +126,12 @@ function destroyEventsModal(){
     $('body').removeClass('events-view');
     $('#modal-wrapper').removeClass('events');
 }
+function destroyLeaveSiteModal(){
+    $('#overlay').hide();
+    $('#modal').hide();
+    $('body').removeClass('leave-site-view');
+    $('#modal-wrapper').removeClass('leave-site');
+}
 
 (function(window, undefined) {
     History.Adapter.bind(window,'statechange',function(){ // Note: We are using statechange instead of popstate
@@ -132,3 +144,37 @@ function destroyEventsModal(){
 //        }
     });
 })(window);
+
+//$( function(){
+//    var isExternalRegexClosure = (function(){
+//        var domainRe = /https?:\/\/((?:[\w\d]+\.)+[\w\d]{2,})/i; 
+//        
+//        return function(url) {
+//            function domain(url) {
+//                var result = domainRe.exec(url);
+//                return result[1];
+//            }
+//
+//            return domain(location.href) !== domain(url);
+//        };
+//    })();
+//    
+//    $('a').click(function(e){
+//        var href = $(this).attr('href');
+//        if (isExternalRegexClosure(href)){
+//            e.preventDefault();
+//            console.log('external');
+//            var leave = confirm("You are about to leave the jobs.ups.com site");
+//            if (leave) {
+//                
+//            }
+//            // Getting Content
+////            getModalContent(href, true, 'page');
+////            showLeaveSiteModal();
+//        } else {
+//            console.log('internal');
+//        }
+//        
+//    });
+//    
+//} );
