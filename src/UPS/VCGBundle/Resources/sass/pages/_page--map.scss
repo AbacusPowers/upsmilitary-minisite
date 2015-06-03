@@ -1,19 +1,30 @@
 .page--map {
-    
-    .map-wrapper { text-align: center; }
-        
-    #svg-map {
+    #map-section {
         width: 100%;
         max-width: 1000px;
-        height: 400px;
-        
+
         margin: 0px auto;
         padding: 1em 0px;
+        
+        .map-wrapper { margin-bottom: 1em; }
+        
+        .map-selects {
+            .breakpoint-small & {
+                padding: 0px 1em;
+            }
+        }
+    }
+    
+    #svg-map {
+        width: 100%;
+        height: 400px;
         
         display: block;
         
         .breakpoint-large &,
         .breakpoint-wide & { height: 700px; }
+        
+        .breakpoint-small & { display: none; }
         
         path { cursor: pointer; }
     }
