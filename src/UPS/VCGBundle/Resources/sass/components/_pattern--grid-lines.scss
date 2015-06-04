@@ -58,7 +58,7 @@ $grid-item-height: 14.8em;
         // height: $grid-item-height;
         // overflow: hidden;
         outline: none;
-        padding: 1.5em 0 1.5em ;
+        padding: 1.5em 0 1.5em 0 ;
         text-decoration: none;
         width: 100%;
         // overflow-y: visible;
@@ -162,7 +162,7 @@ $grid-item-height: 14.8em;
         }
     }
 
-    .video-link--test, .dummy-video-link {
+    .video-link--style, .dummy-video-link {
         display: inline-block;
         position: relative;
     }
@@ -177,7 +177,7 @@ $grid-item-height: 14.8em;
         left: auto;
     }
 
-    .video-link--test i {
+    .video-link--style i {
         position: absolute;
         top: 2.4rem;
         right: 1rem;
@@ -190,6 +190,7 @@ $grid-item-height: 14.8em;
         margin-top: 0.7em;
         margin-bottom: 0.4em;
         margin-left: 5em;
+        margin-right: 0.7em;
         // margin-top: -0.15em;
 
         .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & {    
@@ -203,6 +204,7 @@ $grid-item-height: 14.8em;
         margin-left: 2rem;
         color: $ups-yellow;
         margin-top: 1em;
+        margin-right: 0.7em
     }
  
     .grid-item p {
@@ -257,7 +259,6 @@ $grid-item-height: 14.8em;
         z-index: 10;
         margin-bottom: 0.6em;
 
-        
         .breakpoint-small & {
             position: relative;
             margin-top: 3em;
@@ -275,6 +276,7 @@ $grid-item-height: 14.8em;
         text-transform: capitalize;
         padding-top: 0.5em;
         padding-bottom: 0.5em;
+        padding-right: 0.8em;
         margin-top: 1px;
         padding-left: 2em;
         color: $grey;
