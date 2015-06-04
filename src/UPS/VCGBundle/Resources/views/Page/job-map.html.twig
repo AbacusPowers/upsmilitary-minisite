@@ -100,8 +100,19 @@
                 <p>Select your state of interest to continue.</p>
             </div>
             <div class="map-info--state">
-                <h1 class="page--title"></h1>
-                <p>There are <span class="map-info--state--count"></span> locations available in this state. Select any one to continue.</p>
+                <h1 data-info="state-name"></h1>
+                <p>There are <span data-info="state-count"></span> locations available in this state. Select any one to continue.</p>
+                <div class="component--expander" data-info="state-locations">
+                    <section class='expander__wrapper'>
+                        <h2 class='expander__parent' data-info="location-name"></h2>
+                        <h3 data-info="location-city"></h3>
+                        <a data-id=' ' class='button expand-button'><i class="fa fa-plus fa-2x"></i></a>
+                        <a data-id=' ' class='button hide-button'><i class="fa fa-minus fa-2x"></i></a>
+                        <div data-id=' ' class='hidden-part'>
+                            <div class="expander__child" data-info="location-types"></div>
+                        </div>
+                    </section>
+                </div>
             </div>
         </section>
 {% endblock %}

@@ -17,8 +17,8 @@
     
     
     var activeState, data, group, infoSection, infoStash, map, mapHeight, mapWidth, states, stateSelectCtrl;
-    
-    
+
+
     $(function() {
         var mapElt = $('.svg-map');
         if (mapElt.data('inited') === true) {
@@ -69,8 +69,10 @@
             initial: $('.map-info--initial', infoSection).detach(),
             state: {
                 div: stateInfo,
-                title: $('.page--title', stateInfo),
-                count: $('.map-info--state--count', stateInfo)
+                title: $('[data-info="state-name"]', stateInfo),
+                count: $('[data-info="state-count"]', stateInfo),
+                locationsContainer: $('[data-info="state-locations"]', stateInfo),
+                template: $('[data-info="state-locations"] > section', stateInfo).detach()
             },
             locations: []
         };
@@ -164,10 +166,43 @@
     
     function show_state_info(stateData) {
         var info = infoStash.state;
+        var len = stateData.listings.length;
         info.title.text("Jobs in " + stateData.state.attr('title'));
-        info.count.text(stateData.listings.length);
+        info.count.text(len);
+        var container = info.locationsContainer;
+        container.empty();
+        for (i = 0 ; i < len ; ++i) {
+            var template = info.template.clone();
+            var loc = stateData.listings[i];
+            $('[data-id]', template).attr('data-id', i);
+            $('[data-info="location-name"]', template).text(loc.name);
+            $('[data-info="location-city"]', template).text(loc.city);
+            var typesContainer = $('[data-info="location-types"]', template);
+            var types = loc.jobs.split(', ');
+            for (j = 0 ; j < types.length ; ++j) {
+                typesContainer.append($('<p>' + types[j] + '</p>'));
+            }
+            container.append(template);
+        }
         show_info(info.div);
     }
+/*
+    <div class="map-info--state">
+        <h1   data-info="state-name"   ></h1>
+        <p>There are <span    data-info="state-count"   ></span> locations available in this state. Select any one to continue.</p>
+        <div class="component--expander"   data-info="state-locations"   >
+            <section class='expander__wrapper'>
+                <h2 class='expander__parent'    data-info="location-name"   ></h2>
+                <h3 data-info="location-city"></h3>
+                <a data-id=' ' class='button expand-button'><i class="fa fa-plus fa-2x"></i></a>
+                <a data-id=' ' class='button hide-button'><i class="fa fa-minus fa-2x"></i></a>
+                <div data-id=' ' class='hidden-part'>
+                    <div class="expander__child" data-info="location-types"></div>
+                </div>
+            </section>
+        </div>
+    </div>
+*/
     
     
     function sort_states(a, b) {

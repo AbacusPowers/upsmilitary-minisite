@@ -16,7 +16,7 @@
         .breakpoint-wide & {
             width: 50%;
             
-            padding: 0px 2.5em 0px 2.7em;
+            padding: 0px 1.25em 0px 2em;
             
             float: left;
         }
@@ -38,10 +38,18 @@
         .breakpoint-wide & {
             width: 50%;
             
+            padding: 0px 2em 0px 1.25em;
+            
             float: right;
         }
         
         .breakpoint-small & { padding: 0px 1em 2em 1em; }
+        
+        .component--expander {
+            width: 100%;
+            
+            margin: 0px;
+        }
         
         .map-info--initial {
             .breakpoint-small & { display: none; }
