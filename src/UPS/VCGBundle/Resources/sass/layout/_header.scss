@@ -3,10 +3,12 @@ $header-height--medium: 20em;
 $header-height--large: 24em;
 $header-height--wide: 35em;
 
+$carousel-height--mobile: 16em;
+
 header {
     background: url(../img/bg-5b.png) bottom center no-repeat $grey90;
     background-size: cover;
-    height: $header-height--small;
+    height: $carousel-height--mobile;
     position: relative;
 
     .breakpoint-medium & {

@@ -11,7 +11,7 @@
     top: 0;
     left: 0;
     right: 0;
-    height: $header-height--small;
+    height: $carousel-height--mobile;
     /*margin-top: 26px;*/
 
     .breakpoint-medium & {
@@ -44,7 +44,7 @@
 }
 
 .carousel-inner {
-    position: relative;
+    position: static; /*relative position here may change the position of the slider-indicators*/
     overflow: hidden;
     width: 100%;
 }
@@ -72,6 +72,11 @@
     // margin-left: 0 !important; /*where does the 20px margin that this overides actually come from?*/    
     max-width: none;
     min-width: 100%;
+
+    .breakpoint-small & {
+        max-width: 1000px;
+        width: auto;
+    }
 }
 
 .carousel-control {
@@ -97,6 +102,13 @@
 
     i {
         margin-top: 1.8rem;
+    }
+
+    .breakpoint-small & {
+        display: none;
+        opacity: 0;
+        height: 0;
+        top: calc( 100% - 50px );    
     }
 }
 
@@ -125,16 +137,23 @@
     margin: 0;
     padding: 0;
     position: absolute;
-    bottom: 0.3em;
+    bottom: 0em;
     right: 0;
     left: 0;
     text-align: center;
     z-index: 10;
+    // background:red;
+    padding-bottom: 3.2em;
+
+    .breakpoint-small & {
+        padding-bottom: 0;
+        margin-bottom: -1.5em;
+    }
 }
 
 .carousel-indicators li {
     display: inline-block;
-    margin: 0 2px;
+    margin: 0;
 }
 
 .carousel-bullet {
@@ -143,8 +162,11 @@
     display: block;
     font-size: 65px;
     font-family: sans-serif;
-    bottom: 2rem;
+    bottom: 0;
     position: relative;
+    // background: blue;
+    padding: 0 0.5rem 0 0.5rem;
+    margin: 0;
 }
 
 .carousel-bullet:hover {
