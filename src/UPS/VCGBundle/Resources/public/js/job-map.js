@@ -16,7 +16,7 @@
     };
     
     
-    var activeState, group, infoSection, infoStash, map, mapHeight, mapWidth, stateAbbrMap, states, stateSelectCtrl;
+    var activeState, data, group, infoSection, infoStash, map, mapHeight, mapWidth, states, stateSelectCtrl;
     
     
     $(function() {
@@ -26,9 +26,9 @@
         }
         mapElt.data('inited', true);
         
+        data = {};
         init_svg_map('.svg-map');
         build_state_select();
-        
         init_info_section('.map-info-section');
     });
     
@@ -37,7 +37,7 @@
         stateSelectCtrl = $('.select-state');
         stateSelectCtrl.append($('<option value=""></option>'));
         stateSelectCtrl.change(function(event) {
-            select_state(stateAbbrMap[stateSelectCtrl.val()]);
+            select_state(data.abbrMap[stateSelectCtrl.val()]);
         });
 
         var list = $(states).toArray().sort(sort_states);
@@ -45,7 +45,6 @@
             var state = states[i];
             var option = $('<option></option>')
                 .attr('value', state.attr('id'))
-                .data('state', state)
                 .text(state.attr('title'))
             ;
             state.data('select-option', option);
@@ -91,13 +90,24 @@
         group.transform('0,0,0,0,0,0');
         
         states = map.selectAll('g > path[title]');
-        stateAbbrMap = {'': null};
+        data.abbrMap = {'': null};
         states.forEach(init_svg_state);
     }
     
     
     function init_svg_state(state) {
-        stateAbbrMap[state.attr('id')] = state;
+        var abbr = state.attr('id');
+        var stateData = {
+            abbr: abbr,
+            listings: [],
+            state: state
+        };
+        data.abbrMap[abbr] = stateData;
+        $JOB_MAP_DATA.forEach(function(elt) {
+            if (elt.state_abbr === abbr) {
+                stateData.listings.push(elt);
+            }
+        });
         
         state.mouseover(function(event) {
             this.attr(ATTR_ACTIVE);
@@ -112,8 +122,9 @@
         state.click(function(event) {
             if (this != activeState) {
                 var option = this.data('select-option');
-                stateSelectCtrl.val(option.attr('value'));
-                select_state(this);
+                var abbr = option.attr('value');
+                stateSelectCtrl.val(abbr);
+                select_state(data.abbrMap[abbr]);
             }
             else {
                 stateSelectCtrl.val('');
@@ -123,13 +134,17 @@
     }
 
     
-    function select_state(state) {
-        if (state != activeState) {
+    function select_state(stateData) {
+        if (stateData == null) {
             deselect_state();
-            if (state != null) {
-                state.attr(ATTR_ACTIVE);
-                activeState = state;
-                show_state_info(state);
+            zoom_map();
+        }
+        else if (stateData.state !== activeState) {
+            deselect_state();
+            if (stateData != null) {
+                stateData.state.attr(ATTR_ACTIVE);
+                activeState = stateData.state;
+                show_state_info(stateData);
             }
             zoom_map();
         }
@@ -147,10 +162,10 @@
     }
     
     
-    function show_state_info(state) {
+    function show_state_info(stateData) {
         var info = infoStash.state;
-        info.title.text("Jobs in " + state.attr('title'));
-        info.count.text("0");
+        info.title.text("Jobs in " + stateData.state.attr('title'));
+        info.count.text(stateData.listings.length);
         show_info(info.div);
     }
     

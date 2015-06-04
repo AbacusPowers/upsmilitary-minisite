@@ -24,9 +24,27 @@
         .map-wrapper { margin-bottom: 1em; }
         
         .map-selects {
-            .breakpoint-small & {
-                padding: 0px 1em;
-            }
+            .breakpoint-small & { padding: 0px 1em; }
+        }
+    }
+    
+    .map-info-section {
+        width: 100%;
+        max-width: 1000px;
+        
+        margin: 0px auto;
+        padding: 1em 0px;
+        
+        .breakpoint-wide & {
+            width: 50%;
+            
+            float: right;
+        }
+        
+        .breakpoint-small & { padding: 0px 1em 2em 1em; }
+        
+        .map-info--initial {
+            .breakpoint-small & { display: none; }
         }
     }
     
