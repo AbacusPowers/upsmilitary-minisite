@@ -16,23 +16,25 @@
     };
     
     
-    var activeState, group, map, mapHeight, mapWidth, stateAbbrMap, states, stateSelectCtrl;
+    var activeState, group, infoSection, infoStash, map, mapHeight, mapWidth, stateAbbrMap, states, stateSelectCtrl;
     
     
     $(function() {
-        var mapElt = $('#svg-map');
+        var mapElt = $('.svg-map');
         if (mapElt.data('inited') === true) {
             return;
         }
         mapElt.data('inited', true);
         
-        init_svg_map('#svg-map');
+        init_svg_map('.svg-map');
         build_state_select();
+        
+        init_info_section('.map-info-section');
     });
     
     
     function build_state_select() {
-        stateSelectCtrl = $('#select-state');
+        stateSelectCtrl = $('.select-state');
         stateSelectCtrl.append($('<option value=""></option>'));
         stateSelectCtrl.change(function(event) {
             select_state(stateAbbrMap[stateSelectCtrl.val()]);
@@ -56,7 +58,24 @@
         if (activeState != null) {
             activeState.attr(ATTR_INACTIVE);
             activeState = null;
+            show_initial_info();
         }
+    }
+    
+    
+    function init_info_section(selector) {
+        infoSection = $(selector);
+        var stateInfo = $('.map-info--state', infoSection).detach();
+        infoStash = {
+            initial: $('.map-info--initial', infoSection).detach(),
+            state: {
+                div: stateInfo,
+                title: $('.page--title', stateInfo),
+                count: $('.map-info--state--count', stateInfo)
+            },
+            locations: []
+        };
+        show_initial_info();
     }
 
 
@@ -110,9 +129,29 @@
             if (state != null) {
                 state.attr(ATTR_ACTIVE);
                 activeState = state;
+                show_state_info(state);
             }
             zoom_map();
         }
+    }
+    
+    
+    function show_info(info) {
+        $('> div', infoSection).detach();
+        infoSection.append(info);
+    }
+    
+    
+    function show_initial_info() {
+        show_info(infoStash.initial);
+    }
+    
+    
+    function show_state_info(state) {
+        var info = infoStash.state;
+        info.title.text("Jobs in " + state.attr('title'));
+        info.count.text("0");
+        show_info(info.div);
     }
     
     
