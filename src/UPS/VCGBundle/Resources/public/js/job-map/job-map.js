@@ -30,6 +30,23 @@
             this.set_hilite(false);
         },
 
+
+        /*
+         * 
+         */
+        fetch_city: function(name) {
+            var result = this.cities[name];
+            if (result == null) {
+                result = {
+                    locations: [],
+                    name: name
+                };
+                this.cities[name] = result;
+                this.cityList.push(result);
+            }
+            return result;
+        },
+
  
         /*
          * Called when changing the focus to this state.
@@ -50,14 +67,21 @@
             this.box = this.path.getBBox();
             
             var abbr = this.abbr;
-            for (var i = 0, len = $JOB_MAP_DATA.length; i < len; ++i) {
-                var loc = $JOB_MAP_DATA[i];
-                if (loc.state_abbr === abbr) {
-                    this.locations.push(loc);
+            this.cities = {};
+            this.cityList = [];
+            for (var i = 0, ilen = $JOB_MAP_DATA.length; i < ilen; ++i) {
+                var location = $JOB_MAP_DATA[i];
+                if (location.state_abbr === abbr) {
+                    this.fetch_city(location.city).locations.push(location);
                 }
             }
+            this.cityList.sort(function(a, b) {
+                a = a.name.toUpperCase();
+                b = b.name.toUpperCase();
+                return (a < b) ? -1 : (a > b) ? 1 : 0;
+            });
             
-            this.info = info.load(this);
+            this.info = info.compile(this);
             
             this.loaded = true;
         },
@@ -95,30 +119,48 @@
         /*
          * Compile info html for the given state.
          */
-        load: function(state) {
+        compile: function(state) {
             var result = this.template.clone();
+            var cities = state.cityList;
+
             $('[data-info="name"]', result).text(state.name);
-            $('[data-info="count"]', result).text(state.locations.length);
+            $('[data-info="count"]', result).text(cities.length);
             
-            var locations = $('[data-info="locations"]', result);
-            var locationTemplate = $(locations.children()[0]).detach();
-            
-            var list = state.locations;
-            for (var i = 0, len = list.length; i < len; ++i) {
-                var id = this.expander_id++;
-                var elt = list[i];
-                var item = locationTemplate.clone();
-                locations.append(item);
-                $('[data-id]', item).attr('data-id', id);
-                $('[data-info="loc-name"]', item).text(elt.name);
-                $('[data-info="loc-city"]', item).text(elt.city);
-                var types = $('[data-info="loc-types"]', item);
-                var typeList = elt.jobs.split(', ');
-                for (var j = 0, jlen = typeList.length; j < jlen; ++j) {
-                    types.append($('<p>' + typeList[j] + '</p>'));
+            var citiesContainer = $('[data-info="cities"]', result);
+            var cityTemplate    = $(citiesContainer.children()[0]).detach();
+            for (var i = 0, ilen = cities.length; i < ilen; ++i) {
+                var city        = cities[i];
+                var cityResult  = cityTemplate.clone();
+                var locations   = city.locations;
+                
+                $('[data-id]'               , cityResult).attr('data-id', this.expander_id++);
+                $('[data-info="city-name"]' , cityResult).text(city.name);
+                $('[data-info="city-count"]', cityResult).text(locations.length);
+                
+                var locationsContainer  = $('[data-info="locations"]', cityResult);
+                var locationTemplate    = $(locationsContainer.children()[0]).detach();
+                var outerHidden         = locationsContainer.closest('.hidden-part');
+                for (var j = 0, jlen = locations.length; j < jlen; ++j) {
+                    var location        = locations[j];
+                    var locationResult  = locationTemplate.clone();
+                    var jobs            = location.jobs.split(', ');
+                    
+                    $('[data-id]'               , locationResult).attr('data-id', this.expander_id++);
+                    $('[data-info="loc-name"]'  , locationResult).text(location.name);
+                    $('[data-info="loc-count"]' , locationResult).text(jobs.length);
+                    
+                    var jobsContainer = $('[data-info="jobs"]', locationResult);
+                    for (var k = 0, klen = jobs.length; k < klen; ++k) {
+                        jobsContainer.append($('<p>' + jobs[k] + '</p>'));
+                    }
+                    
+                    $('.hidden-part', locationResult).data('outer', outerHidden);
+                    
+                    locationsContainer.append(locationResult);
                 }
+                
+                citiesContainer.append(cityResult);
             }
-            
             return result;
         },
 
@@ -181,10 +223,10 @@
             var abbr = path.attr('id');
             var state = $.extend(
                 {
-                    abbr:       abbr,
-                    locations:  [],
-                    name:       path.attr('title'),
-                    path:       path
+                    abbr:   abbr,
+                    cities: [],
+                    name:   path.attr('title'),
+                    path:   path
                 },
                 BASE_STATE
             );
@@ -300,11 +342,19 @@
      * Event handler: show expandable.
      */
     function on_expander_click_expand() {
-        $height = $(this).siblings('.hidden-part').children('.expander__child').height();
-        $(this).parent('.expander__wrapper').addClass('open-expander');
-        $(this).siblings('.hidden-part').velocity({height: $height}, 400).velocity({opacity: 1});
-        $(this).hide();
-        $(this).siblings('.hide-button').show();
+        var elt = $(this);
+        elt.parent('.expander__wrapper').addClass('open-expander');
+        
+        var hidden = elt.siblings('.hidden-part');
+        var height = hidden.children('.expander__child').height();
+        var outer  = hidden.data('outer');
+        if (outer != null) {
+            outer.velocity({ height: outer.height() + height }, 500);
+        }
+        hidden.velocity({ height: height, opacity: 1 }, 400);
+        
+        elt.hide();
+        elt.siblings('.hide-button').show();
     }
     
     
@@ -312,10 +362,19 @@
      * Event handler: hide expandable.
      */
     function on_expander_click_hide() {
-        $(this).parent('.expander__wrapper').removeClass('open-expander');
-        $(this).siblings('.hidden-part').velocity({opacity: 0}).velocity({height: 0}, 400);
-        $(this).hide();
-        $(this).siblings('.expand-button').show();
+        var elt = $(this);
+        elt.parent('.expander__wrapper').removeClass('open-expander');
+        
+        var hidden = elt.siblings('.hidden-part');
+        var outer  = hidden.data('outer');
+        if (outer != null) {
+            var height = hidden.children('.expander__child').height();
+            outer.velocity({ height: outer.height() - height }, 500);
+        }
+        hidden.velocity({ height: 0, opacity: 0}, 400);
+        
+        elt.hide();
+        elt.siblings('.expand-button').show();
     }
     
 
