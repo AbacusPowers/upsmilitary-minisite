@@ -86,6 +86,9 @@
             var template = this.template = $('.map-info--state', container).detach();
             this.expander_id = 0;
             this.show_initial();
+
+            container.on('click', '.expand-button', on_expander_click_expand);
+            container.on('click', '.hide-button', on_expander_click_hide);
         },
 
 
@@ -290,6 +293,29 @@
             state.option = option;
             stateSelect.append(option);
         }
+    }
+    
+    
+    /*
+     * Event handler: show expandable.
+     */
+    function on_expander_click_expand() {
+        $height = $(this).siblings('.hidden-part').children('.expander__child').height();
+        $(this).parent('.expander__wrapper').addClass('open-expander');
+        $(this).siblings('.hidden-part').velocity({height: $height}, 400).velocity({opacity: 1});
+        $(this).hide();
+        $(this).siblings('.hide-button').show();
+    }
+    
+    
+    /*
+     * Event handler: hide expandable.
+     */
+    function on_expander_click_hide() {
+        $(this).parent('.expander__wrapper').removeClass('open-expander');
+        $(this).siblings('.hidden-part').velocity({opacity: 0}).velocity({height: 0}, 400);
+        $(this).hide();
+        $(this).siblings('.expand-button').show();
     }
     
 
