@@ -187,17 +187,6 @@ $JOB_MAP_DATA = [
     "jobs":"Package Handler, Driver Helper (Oct-Dec), Package Delivery Driver, Feeder Driver, Automotive Mechanic, Facilities Mechanic, Sales Representative, Warehouse Associate,  UPS Freight Over the Road Driver, Part-time Operations Supervisor, Business Analyst"
   },
   {
-    "_LOC_NR":"BCFRV",
-    "name":"FRASER VALLEY CENTER",
-    "street":"790 BELLGRAVE",
-    "city":"ANNACIS ISLAND",
-    "state_abbr":"BC",
-    "zip":"V3M 5R9",
-    "_EE_COUNT":347,
-    "size":"Medium",
-    "jobs":"Package Handler, Driver Helper (Oct-Dec), Package Delivery Driver, Feeder Driver, Automotive Mechanic, Facilities Mechanic, Sales Representative, Warehouse Associate,  UPS Freight Over the Road Driver, Part-time Operations Supervisor, Business Analyst"
-  },
-  {
     "_LOC_NR":"CAOLY",
     "name":"OLYMPIC",
     "street":"1201 W. OLYMPIC BOULEVARD",
@@ -3649,17 +3638,6 @@ $JOB_MAP_DATA = [
     "zip":"59808",
     "_EE_COUNT":120,
     "size":"Medium",
-    "jobs":"Package Handler, Driver Helper (Oct-Dec), Package Delivery Driver, Feeder Driver, Automotive Mechanic, Facilities Mechanic, Sales Representative, Warehouse Associate,  UPS Freight Over the Road Driver, Part-time Operations Supervisor, Business Analyst"
-  },
-  {
-    "_LOC_NR":"NBFRE",
-    "name":"FREDERICTON BROKERAGE/INTL OFF",
-    "street":"900 HANWELL ROAD",
-    "city":"FREDERICTION",
-    "state_abbr":"NB",
-    "zip":"E3B 6A2",
-    "_EE_COUNT":522,
-    "size":"Large",
     "jobs":"Package Handler, Driver Helper (Oct-Dec), Package Delivery Driver, Feeder Driver, Automotive Mechanic, Facilities Mechanic, Sales Representative, Warehouse Associate,  UPS Freight Over the Road Driver, Part-time Operations Supervisor, Business Analyst"
   },
   {
