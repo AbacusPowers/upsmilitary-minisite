@@ -1,5 +1,13 @@
 {% extends "VCGBundle:Layouts:page.html.twig" %}
-{% block title %}Career Explorer{% endblock %}
+{% block title %}Military Job Converter{% endblock %}
+{% block routescript %}
+    {% javascripts 
+        '@VCGBundle/Resources/public/js/vendor/jquery-csv/src/jquery.csv.js'
+        '@VCGBundle/Resources/public/js/vendor/jquery.selectBoxIt/src/javascripts/jquery.selectBoxIt.js'
+    %}
+        <script src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+{% endblock %}
 {% block headerimage %}
     <div class="header-static-bg">
         <img class="header-static-bg-img" src="{{ asset('bundles/vcg/images/bg-5b.png') }}"    
@@ -8,203 +16,440 @@
 {% block breadcrumbs %}
         <a href="{{ url('homepage') }}">UPS Veteran Gateway</a>
         <a href="#">Career Explorer</a>
-        <a href="#">Jobs</a>
+        <a href="#">Military Job Converter</a>
 {% endblock %}
 
+
 {% block page_content %}
-    <div class="veteranGateway__liner">
-        <div class="title-block">
-            <h1>UPS Career Explorer</h1>
-            <p>For Veterans & Service Members</p>
-        </div>
-        <div class="page page--career-explorer">
-            <section class="intro">
-                <img src="{{ asset('bundles/vcg/images/document.png') }}" alt="">
-                <h1 class="page--title">UPS HOT JOBS</h1>        
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias eos molestiae, a. Harum officia error amet excepturi veniam esse. Officia excepturi magni, error, minima ipsa laudantium accusantium autem eos non.
-Consectetur adipisicing elit. Incidunt officiis inventore amet temporibus veniam molestiae, distinctio vero ratione consequuntur sit porro error facere, harum sequi, sint ducimus quasi maxime corporis.</p>
-            </section>
-            <div class="component--expander">
-                <!-- <section class='expander__wrapper'>
-                    <h2 class='expander__parent'>Introduction</h2>
-                    <a data-id='1' class='button expand-button'>
-                        <i class="fa fa-plus fa-2x"></i>
-                    </a>
-                    <a data-id='1' class='button hide-button'>
-                        <i class="fa fa-minus fa-2x"></i>
-                    </a>
-                    <div data-id='1' class='hidden-part'>
-                        <div class="expander__child">
-                            <p class=''>
-                                <img src="http://placehold.it/100x135&text=DD+Form+214+Graphic" alt="">
-                                Non itaque saepe provident architecto vitae! Quia consequatur labore eos commodi, consequuntur! Repudiandae, laboriosam, optio. Itaque deleniti, ipsam nemo sequi veritatis qui. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo id perferendis sapiente quisquam eveniet praesentium quidem, error atque ea.
-                                Non itaque saepe provident architecto vitae! Quia consequatur labore eos commodi, consequuntur! Repudiandae, laboriosam, optio. Itaque deleniti, ipsam nemo sequi veritatis qui. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo id perferendis sapiente quisquam eveniet praesentium quidem, error atque ea.
-                            </p>
-                        </div>   
-                    </div>
-                </section> -->
-                <section class='expander__wrapper'>
-                    <h2 class='expander__parent'>Job One</h2>
-                    <h3>Lorem Ipsum</h3>
-                    <a data-id='2' class='button expand-button'>
-                        <i class="fa fa-plus fa-2x"></i>
-                    </a>
-                    <a data-id='2' class='button hide-button'>
-                        <i class="fa fa-minus fa-2x"></i>
-                    </a>
-                    <div data-id='2' class='hidden-part'>
-                        <div class="expander__child">
-                            <p class=''>
-                                Non itaque saepe provident architecto vitae! Quia consequatur labore eos commodi, consequuntur! Repudiandae, laboriosam, optio. Itaque deleniti, ipsam nemo sequi veritatis qui. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo id perferendis sapiente quisquam eveniet praesentium quidem, error atque ea.
-                                Non itaque saepe provident architecto vitae! Quia consequatur labore eos commodi, consequuntur! Repudiandae, laboriosam, optio. Itaque deleniti, ipsam nemo sequi veritatis qui. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo id perferendis sapiente quisquam eveniet praesentium quidem, error atque ea.
-                            </p>
-                        </div>   
-                    </div>
-                </section>
-                <section class='expander__wrapper'>
-                    <h2 class='expander__parent'>Job Two</h2>
-                    <h3>Lorem Ipsum</h3>
-                    <a data-id='3' class='button expand-button'>
-                        <i class="fa fa-plus fa-2x"></i>
-                    </a>
-                    <a data-id='3' class='button hide-button'>
-                        <i class="fa fa-minus fa-2x"></i>
-                    </a>
-                    <div data-id='3' class='hidden-part'>
-                        <div class="expander__child">                                  
-                            <p class=''>
-                                Non itaque saepe provident architecto vitae! Quia consequatur labore eos commodi, consequuntur! Repudiandae, laboriosam, optio. Itaque deleniti, ipsam nemo sequi veritatis qui. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo id perferendis sapiente quisquam eveniet praesentium quidem, error atque ea.
-                                Non itaque saepe provident architecto vitae! Quia consequatur labore eos commodi, consequuntur! Repudiandae, laboriosam, optio. Itaque deleniti, ipsam nemo sequi veritatis qui. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo id perferendis sapiente quisquam eveniet praesentium quidem, error atque ea.
-                            </p>
-                        </div>   
-                    </div>
-                </section>
-                <section class='expander__wrapper'>
-                    <h2 class='expander__parent'>Job Three</h2>
-                    <h3>Lorem Ipsum</h3>
-                    <a data-id='4' class='button expand-button'>
-                        <i class="fa fa-plus fa-2x"></i>
-                    </a>
-                    <a data-id='4' class='button hide-button'>
-                        <i class="fa fa-minus fa-2x"></i>
-                    </a>
-                    <div data-id='4' class='hidden-part'>
-                        <div class="expander__child">                                
-                            <p class=''>
-                                Non itaque saepe provident architecto vitae! Quia consequatur labore eos commodi, consequuntur! Repudiandae, laboriosam, optio. Itaque deleniti, ipsam nemo sequi veritatis qui. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo id perferendis sapiente quisquam eveniet praesentium quidem, error atque ea.
-                                Non itaque saepe provident architecto vitae! Quia consequatur labore eos commodi, consequuntur! Repudiandae, laboriosam, optio. Itaque deleniti, ipsam nemo sequi veritatis qui. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo id perferendis sapiente quisquam eveniet praesentium quidem, error atque ea.
-                            </p>
-                        </div>   
-                    </div>
-                </section>
-                <section class='expander__wrapper'>
-                    <h2 class='expander__parent'>Job Four</h2>
-                    <h3>Lorem Ipsum</h3>
-                    <a data-id='5' class='button expand-button'>
-                        <i class="fa fa-plus fa-2x"></i>
-                    </a>
-                    <a data-id='5' class='button hide-button'>
-                        <i class="fa fa-minus fa-2x"></i>
-                    </a>
-                    <div data-id='5' class='hidden-part'>
-                        <div class="expander__child">                                  
-                            <p class=''>
-                                Non itaque saepe provident architecto vitae! Quia consequatur labore eos commodi, consequuntur! Repudiandae, laboriosam, optio. Itaque deleniti, ipsam nemo sequi veritatis qui. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo id perferendis sapiente quisquam eveniet praesentium quidem, error atque ea.
-                                Non itaque saepe provident architecto vitae! Quia consequatur labore eos commodi, consequuntur! Repudiandae, laboriosam, optio. Itaque deleniti, ipsam nemo sequi veritatis qui. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo id perferendis sapiente quisquam eveniet praesentium quidem, error atque ea.
-                            </p>
-                        </div>   
+        <div class="veteranGateway__liner">
+            <div class="title-block">
+                <h1>UPS Job Converter</h1>
+                <p>
+                    Lorem ipsum dolor sit amet
+                </p>
+            </div>
+            <div class="page page--job-converter">
+                <section class="intro">
+                    <form action="" name="job-converter" id="job-converter">
+                        <select id="branch-of-service">
+                            <option value="Air Force">Air Force</option>
+                            <option value="Army">Army</option>
+                            <option value="Coast Guard">Coast Guard</option>
+                            <option value="Marines">Marines</option>
+                            <option value="Navy">Navy</option>
+                        </select>
+                        <input type="text" id="job-code" />
+                        <select id="rank">
+                            <option value="AB">Airman Basic</option>
+                            <option value="Amn">Airman</option>
+                            <option value="A1C">Airman First Class</option>
+                            <option value="SrA">Senior Airman</option>
+                            <option value="SR">Seaman Recruit</option>
+                            <option value="SA">Seaman Apprentice</option>
+                            <option value="SN">Seaman</option>
+                            <option value="PO3">Petty Officer 3rd Class</option>
+                            <option value="PO2">Petty Officer 2nd Class</option>
+                            <option value="PO1">Petty Officer 1st Class</option>
+                            <option value="CPO">Chief Petty Officer</option>
+                            <option value="SCPO">Senior Chief Petty Officer</option>
+                            <option value="MCPO">Master Chief Petty Officer</option>
+                            <option value="MCPO">Fleet/ Commander Master Chief Petty Officer</option>
+                            <option value="MCPON">Master Chief Petty Officer of the Navy</option>
+                            <option value="PVT">Private</option>
+                            <option value="PV2">Private 2</option>
+                            <option value="PFC">Private First Class</option>
+                            <option value="SPC">Specialist</option>
+                            <option value="LCpL">Lance Corporal</option>
+                            <option value="CPL">Corporal</option>
+                            <option value="SGT">Sergeant</option>
+                            <option value="SSG">Staff Sergeant</option>
+                            <option value="TSgT">Technical Sergeant</option>
+                            <option value="GySgt">Gunnery Sergeant</option>
+                            <option value="SFC">Sergeant First Class</option>
+                            <option value="MSG">Master Sergeant</option>
+                            <option value="SMSgt">Senior Master Sergeant</option>
+                            <option value="CMSgt">Chief Master Sergeant</option>
+                            <option value="CCM">Command Chief Master Sergeant</option>
+                            <option value="CMSAF">Chief Master Sergeant of the Air Force</option>
+                            <option value="1SG">First Sergeant</option>
+                            <option value="SGM">Sergeant Major</option>
+                            <option value="CSM">Command Sergeant Major</option>
+                            <option value="SgtMaj">Sergeant Major</option>
+                            <option value="SMA">Sergeant Major of the Army</option>
+                            <option value="SgtMajMarCor">Sergeant Major of the Marine Corps</option>
+                            <option value="WO1">Warrant Officer</option>
+                            <option value="CW2">Chief Warrant Officer 2</option>
+                            <option value="CW3">Chief Warrant Officer 3</option>
+                            <option value="CW4">Chief Warrant Officer 4</option>
+                            <option value="CW5">Chief Warrant Officer 5</option>
+                            <option value="ENS">Ensign</option>
+                            <option value="LTJG">Lieutenant Junior Grade</option>
+                            <option value="2LT">Second Lieutenant</option>
+                            <option value="1LT">First Lieutenant</option>
+                            <option value="LT">Lieutenant</option>
+                            <option value="LCDR">Lieutenant Commander</option>
+                            <option value="CDR">Commander</option>
+                            <option value="CPT">Captain</option>
+                            <option value="MAJ">Major</option>
+                            <option value="LTC">Lieutenant Colonel</option>
+                            <option value="COL">Colonel</option>
+                            <option value="BG">Brigadier General</option>
+                            <option value="RDML">Rear Admiral (Lwr Hlf)</option>
+                            <option value="MG">Major General</option>
+                            <option value="RADM">Rear Admiral (Uppr Hlf)</option>
+                            <option value="LTG">Lietenant General</option>
+                            <option value="VADM">Vice Admiral</option>
+                            <option value="GEN">General</option>
+                            <option value="GEN">General Air Foce Chief of Staff</option>
+                            <option value="ADM">Admiral Chief of Naval Ops/Commandant of the CG</option>
+                            <option value="GA">General of the Army</option>
+                            <option value="GA">General of the Air Force</option>
+                            <option value="FADM">Fleet Admiral</option>
+                        </select>
+                        <img id="ajax-spinner" src="{{ asset('bundles/vcg/images/ajax-loader.gif') }}" alt="working...">
+                        <p id="form-error"></p>
+                        <input type="submit" value="Submit" />
+                    </form>
+                    <div id="military-job">
+                        <h1 id="military-job-title"></h1>
+                        <p id="military-job-description"></p>
                     </div>
                 </section>
-                <section class='expander__wrapper'>
-                    <h2 class='expander__parent'>Job Five</h2>
-                    <h3>Lorem Ipsum</h3>
-                    <a data-id='6' class='button expand-button'>
-                        <i class="fa fa-plus fa-2x"></i>
-                    </a>
-                    <a data-id='6' class='button hide-button'>
-                        <i class="fa fa-minus fa-2x"></i>
-                    </a>
-                    <div data-id='6' class='hidden-part'>
-                        <div class="expander__child">                                  
-                            <p class=''>
-                                Non itaque saepe provident architecto vitae! Quia consequatur labore eos commodi, consequuntur! Repudiandae, laboriosam, optio. Itaque deleniti, ipsam nemo sequi veritatis qui. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo id perferendis sapiente quisquam eveniet praesentium quidem, error atque ea.
-                                Non itaque saepe provident architecto vitae! Quia consequatur labore eos commodi, consequuntur! Repudiandae, laboriosam, optio. Itaque deleniti, ipsam nemo sequi veritatis qui. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo id perferendis sapiente quisquam eveniet praesentium quidem, error atque ea.
-                            </p>
-                        </div>   
-                    </div>
-                </section>
-                <section class='expander__wrapper'>
-                    <h2 class='expander__parent'>Job Six</h2>
-                    <h3>Lorem Ipsum</h3>
-                    <a data-id='7' class='button expand-button'>
-                        <i class="fa fa-plus fa-2x"></i>
-                    </a>
-                    <a data-id='7' class='button hide-button'>
-                        <i class="fa fa-minus fa-2x"></i>
-                    </a>
-                    <div data-id='7' class='hidden-part'>
-                        <div class="expander__child">
-                            <p class=''>
-                                Non itaque saepe provident architecto vitae! Quia consequatur labore eos commodi, consequuntur! Repudiandae, laboriosam, optio. Itaque deleniti, ipsam nemo sequi veritatis qui. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo id perferendis sapiente quisquam eveniet praesentium quidem, error atque ea.
-                                Non itaque saepe provident architecto vitae! Quia consequatur labore eos commodi, consequuntur! Repudiandae, laboriosam, optio. Itaque deleniti, ipsam nemo sequi veritatis qui. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo id perferendis sapiente quisquam eveniet praesentium quidem, error atque ea.
-                            </p>
-                        </div>   
-                    </div>
-                </section>
-                <section class='expander__wrapper'>
-                    <h2 class='expander__parent'>Job Seven</h2>
-                    <h3>Lorem Ipsum</h3>
-                    <a data-id='8' class='button expand-button'>
-                        <i class="fa fa-plus fa-2x"></i>
-                    </a>
-                    <a data-id='8' class='button hide-button'>
-                        <i class="fa fa-minus fa-2x"></i>
-                    </a>
-                    <div data-id='8' class='hidden-part'>
-                        <div class="expander__child">
-                            <p class=''>
-                                Non itaque saepe provident architecto vitae! Quia consequatur labore eos commodi, consequuntur! Repudiandae, laboriosam, optio. Itaque deleniti, ipsam nemo sequi veritatis qui. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo id perferendis sapiente quisquam eveniet praesentium quidem, error atque ea.
-                                Non itaque saepe provident architecto vitae! Quia consequatur labore eos commodi, consequuntur! Repudiandae, laboriosam, optio. Itaque deleniti, ipsam nemo sequi veritatis qui. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo id perferendis sapiente quisquam eveniet praesentium quidem, error atque ea.
-                            </p>
-                        </div>   
-                    </div>
-                </section>
-                <section class='expander__wrapper'>
-                    <h2 class='expander__parent'>Job Eight</h2>
-                    <h3>Lorem Ipsum</h3>
-                    <a data-id='9' class='button expand-button'>
-                        <i class="fa fa-plus fa-2x"></i>
-                    </a>
-                    <a data-id='9' class='button hide-button'>
-                        <i class="fa fa-minus fa-2x"></i>
-                    </a>
-                    <div data-id='9' class='hidden-part'>
-                        <div class="expander__child">
-                            <p class=''>
-                                Non itaque saepe provident architecto vitae! Quia consequatur labore eos commodi, consequuntur! Repudiandae, laboriosam, optio. Itaque deleniti, ipsam nemo sequi veritatis qui. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo id perferendis sapiente quisquam eveniet praesentium quidem, error atque ea.
-                                Non itaque saepe provident architecto vitae! Quia consequatur labore eos commodi, consequuntur! Repudiandae, laboriosam, optio. Itaque deleniti, ipsam nemo sequi veritatis qui. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo id perferendis sapiente quisquam eveniet praesentium quidem, error atque ea.
-                            </p>
-                        </div>   
-                    </div>
-                </section>
-                <section class='expander__wrapper'>
-                    <h2 class='expander__parent'>Job Nine</h2>
-                    <h3>Lorem Ipsum</h3>
-                    <a data-id='9' class='button expand-button'>
-                        <i class="fa fa-plus fa-2x"></i>
-                    </a>
-                    <a data-id='9' class='button hide-button'>
-                        <i class="fa fa-minus fa-2x"></i>
-                    </a>
-                    <div data-id='9' class='hidden-part'>
-                        <div class="expander__child">
-                            <p class=''>
-                                Non itaque saepe provident architecto vitae! Quia consequatur labore eos commodi, consequuntur! Repudiandae, laboriosam, optio. Itaque deleniti, ipsam nemo sequi veritatis qui. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo id perferendis sapiente quisquam eveniet praesentium quidem, error atque ea.
-                                Non itaque saepe provident architecto vitae! Quia consequatur labore eos commodi, consequuntur! Repudiandae, laboriosam, optio. Itaque deleniti, ipsam nemo sequi veritatis qui. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo id perferendis sapiente quisquam eveniet praesentium quidem, error atque ea.
-                            </p>
-                        </div>   
-                    </div>
-                </section>
+                
+                
+                <div class="component--expander">
+                    <section class='expander__wrapper'>
+                        <h2 class='expander__parent'>Package Handler</h2>
+                        <h3>Lorem Ipsum</h3>
+                        <a data-id='1' class='button expand-button'>
+                            <i class="fa fa-plus fa-2x"></i>
+                        </a>
+                        <a data-id='1' class='button hide-button'>
+                            <i class="fa fa-minus fa-2x"></i>
+                        </a>
+                        <div data-id='1' class='hidden-part'>
+                            <div class="expander__child">
+                                <p class=''>
+                                    Non itaque saepe provident architecto vitae! Quia consequatur labore eos commodi, consequuntur! Repudiandae, laboriosam, optio. Itaque deleniti, ipsam nemo sequi veritatis qui. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo id perferendis sapiente quisquam eveniet praesentium quidem, error atque ea.
+                                    Non itaque saepe provident architecto vitae! Quia consequatur labore eos commodi, consequuntur! Repudiandae, laboriosam, optio. Itaque deleniti, ipsam nemo sequi veritatis qui. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo id perferendis sapiente quisquam eveniet praesentium quidem, error atque ea.
+                                </p>
+                                <form class="job-converter-job-search">
+                                    <p>Click "Search" to see openings for this job worldwide</p>
+                                    <input type="text" class="zip-code" />
+                                    <select class="radius">
+                                        <option value="5">5 miles</option>
+                                        <option value="10">10 miles</option>
+                                        <option value="25">25 miles</option>
+                                        <option value="50">50 miles</option>
+                                        <option value="100">100 miles</option>
+                                    </select>
+                                    <input type="submit" value="Search" />
+                                </form>
+                            </div>   
+                        </div>
+                    </section>
+                    <section class='expander__wrapper'>
+                        <h2 class='expander__parent'>Driver Helper</h2>
+                        <h3>Lorem Ipsum</h3>
+                        <a data-id='2' class='button expand-button'>
+                            <i class="fa fa-plus fa-2x"></i>
+                        </a>
+                        <a data-id='2' class='button hide-button'>
+                            <i class="fa fa-minus fa-2x"></i>
+                        </a>
+                        <div data-id='2' class='hidden-part'>
+                            <div class="expander__child">
+                                <p class=''>
+                                    Non itaque saepe provident architecto vitae! Quia consequatur labore eos commodi, consequuntur! Repudiandae, laboriosam, optio. Itaque deleniti, ipsam nemo sequi veritatis qui. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo id perferendis sapiente quisquam eveniet praesentium quidem, error atque ea.
+                                    Non itaque saepe provident architecto vitae! Quia consequatur labore eos commodi, consequuntur! Repudiandae, laboriosam, optio. Itaque deleniti, ipsam nemo sequi veritatis qui. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo id perferendis sapiente quisquam eveniet praesentium quidem, error atque ea.
+                                </p>
+                                <form class="job-converter-job-search">
+                                    <p>Click "Search" to see openings for this job worldwide</p>
+                                    <input type="text" class="zip-code" />
+                                    <select class="radius">
+                                        <option value="5">5 miles</option>
+                                        <option value="10">10 miles</option>
+                                        <option value="25">25 miles</option>
+                                        <option value="50">50 miles</option>
+                                        <option value="100">100 miles</option>
+                                    </select>
+                                    <input type="submit" value="Search" />
+                                </form>
+                            </div>   
+                        </div>
+                    </section>
+                    <section class='expander__wrapper'>
+                        <h2 class='expander__parent'>Package Delivery Driver</h2>
+                        <h3>Lorem Ipsum</h3>
+                        <a data-id='3' class='button expand-button'>
+                            <i class="fa fa-plus fa-2x"></i>
+                        </a>
+                        <a data-id='3' class='button hide-button'>
+                            <i class="fa fa-minus fa-2x"></i>
+                        </a>
+                        <div data-id='3' class='hidden-part'>
+                            <div class="expander__child">                                  
+                                <p class=''>
+                                    Non itaque saepe provident architecto vitae! Quia consequatur labore eos commodi, consequuntur! Repudiandae, laboriosam, optio. Itaque deleniti, ipsam nemo sequi veritatis qui. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo id perferendis sapiente quisquam eveniet praesentium quidem, error atque ea.
+                                    Non itaque saepe provident architecto vitae! Quia consequatur labore eos commodi, consequuntur! Repudiandae, laboriosam, optio. Itaque deleniti, ipsam nemo sequi veritatis qui. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo id perferendis sapiente quisquam eveniet praesentium quidem, error atque ea.
+                                </p>
+                                <form class="job-converter-job-search">
+                                    <p>Click "Search" to see openings for this job worldwide</p>
+                                    <input type="text" class="zip-code" />
+                                    <select class="radius">
+                                        <option value="5">5 miles</option>
+                                        <option value="10">10 miles</option>
+                                        <option value="25">25 miles</option>
+                                        <option value="50">50 miles</option>
+                                        <option value="100">100 miles</option>
+                                    </select>
+                                    <input type="submit" value="Search" />
+                                </form>
+                            </div>   
+                        </div>
+                    </section>
+                    <section class='expander__wrapper'>
+                        <h2 class='expander__parent'>Warehouse Associate</h2>
+                        <h3>Lorem Ipsum</h3>
+                        <a data-id='4' class='button expand-button'>
+                            <i class="fa fa-plus fa-2x"></i>
+                        </a>
+                        <a data-id='4' class='button hide-button'>
+                            <i class="fa fa-minus fa-2x"></i>
+                        </a>
+                        <div data-id='4' class='hidden-part'>
+                            <div class="expander__child">                                
+                                <p class=''>
+                                    Non itaque saepe provident architecto vitae! Quia consequatur labore eos commodi, consequuntur! Repudiandae, laboriosam, optio. Itaque deleniti, ipsam nemo sequi veritatis qui. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo id perferendis sapiente quisquam eveniet praesentium quidem, error atque ea.
+                                    Non itaque saepe provident architecto vitae! Quia consequatur labore eos commodi, consequuntur! Repudiandae, laboriosam, optio. Itaque deleniti, ipsam nemo sequi veritatis qui. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo id perferendis sapiente quisquam eveniet praesentium quidem, error atque ea.
+                                </p>
+                                <form class="job-converter-job-search">
+                                    <p>Click "Search" to see openings for this job worldwide</p>
+                                    <input type="text" class="zip-code" />
+                                    <select class="radius">
+                                        <option value="5">5 miles</option>
+                                        <option value="10">10 miles</option>
+                                        <option value="25">25 miles</option>
+                                        <option value="50">50 miles</option>
+                                        <option value="100">100 miles</option>
+                                    </select>
+                                    <input type="submit" value="Search" />
+                                </form>
+                            </div>   
+                        </div>
+                    </section>
+                    <section class='expander__wrapper'>
+                        <h2 class='expander__parent'>Automotive Mechanic</h2>
+                        <h3>Lorem Ipsum</h3>
+                        <a data-id='5' class='button expand-button'>
+                            <i class="fa fa-plus fa-2x"></i>
+                        </a>
+                        <a data-id='5' class='button hide-button'>
+                            <i class="fa fa-minus fa-2x"></i>
+                        </a>
+                        <div data-id='5' class='hidden-part'>
+                            <div class="expander__child">                                  
+                                <p class=''>
+                                    Non itaque saepe provident architecto vitae! Quia consequatur labore eos commodi, consequuntur! Repudiandae, laboriosam, optio. Itaque deleniti, ipsam nemo sequi veritatis qui. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo id perferendis sapiente quisquam eveniet praesentium quidem, error atque ea.
+                                    Non itaque saepe provident architecto vitae! Quia consequatur labore eos commodi, consequuntur! Repudiandae, laboriosam, optio. Itaque deleniti, ipsam nemo sequi veritatis qui. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo id perferendis sapiente quisquam eveniet praesentium quidem, error atque ea.
+                                </p>
+                                <form class="job-converter-job-search">
+                                    <p>Click "Search" to see openings for this job worldwide</p>
+                                    <input type="text" class="zip-code" />
+                                    <select class="radius">
+                                        <option value="5">5 miles</option>
+                                        <option value="10">10 miles</option>
+                                        <option value="25">25 miles</option>
+                                        <option value="50">50 miles</option>
+                                        <option value="100">100 miles</option>
+                                    </select>
+                                    <input type="submit" value="Search" />
+                                </form>
+                            </div>   
+                        </div>
+                    </section>
+                    <section class='expander__wrapper'>
+                        <h2 class='expander__parent'>Maintenance/Facilities Mechanic</h2>
+                        <h3>Lorem Ipsum</h3>
+                        <a data-id='6' class='button expand-button'>
+                            <i class="fa fa-plus fa-2x"></i>
+                        </a>
+                        <a data-id='6' class='button hide-button'>
+                            <i class="fa fa-minus fa-2x"></i>
+                        </a>
+                        <div data-id='6' class='hidden-part'>
+                            <div class="expander__child">                                  
+                                <p class=''>
+                                    Non itaque saepe provident architecto vitae! Quia consequatur labore eos commodi, consequuntur! Repudiandae, laboriosam, optio. Itaque deleniti, ipsam nemo sequi veritatis qui. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo id perferendis sapiente quisquam eveniet praesentium quidem, error atque ea.
+                                    Non itaque saepe provident architecto vitae! Quia consequatur labore eos commodi, consequuntur! Repudiandae, laboriosam, optio. Itaque deleniti, ipsam nemo sequi veritatis qui. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo id perferendis sapiente quisquam eveniet praesentium quidem, error atque ea.
+                                </p>
+                                <form class="job-converter-job-search">
+                                    <p>Click "Search" to see openings for this job worldwide</p>
+                                    <input type="text" class="zip-code" />
+                                    <select class="radius">
+                                        <option value="5">5 miles</option>
+                                        <option value="10">10 miles</option>
+                                        <option value="25">25 miles</option>
+                                        <option value="50">50 miles</option>
+                                        <option value="100">100 miles</option>
+                                    </select>
+                                    <input type="submit" value="Search" />
+                                </form>
+                            </div>   
+                        </div>
+                    </section>
+                    <section class='expander__wrapper'>
+                        <h2 class='expander__parent'>Feeder Driver</h2>
+                        <h3>Lorem Ipsum</h3>
+                        <a data-id='7' class='button expand-button'>
+                            <i class="fa fa-plus fa-2x"></i>
+                        </a>
+                        <a data-id='7' class='button hide-button'>
+                            <i class="fa fa-minus fa-2x"></i>
+                        </a>
+                        <div data-id='7' class='hidden-part'>
+                            <div class="expander__child">
+                                <p class=''>
+                                    
+                                    Non itaque saepe provident architecto vitae! Quia consequatur labore eos commodi, consequuntur! Repudiandae, laboriosam, optio. Itaque deleniti, ipsam nemo sequi veritatis qui. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo id perferendis sapiente quisquam eveniet praesentium quidem, error atque ea.
+                                    Non itaque saepe provident architecto vitae! Quia consequatur labore eos commodi, consequuntur! Repudiandae, laboriosam, optio. Itaque deleniti, ipsam nemo sequi veritatis qui. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo id perferendis sapiente quisquam eveniet praesentium quidem, error atque ea.
+                                </p>
+                                <form class="job-converter-job-search">
+                                    <p>Click "Search" to see openings for this job worldwide</p>
+                                    <input type="text" class="zip-code" />
+                                    <select class="radius">
+                                        <option value="5">5 miles</option>
+                                        <option value="10">10 miles</option>
+                                        <option value="25">25 miles</option>
+                                        <option value="50">50 miles</option>
+                                        <option value="100">100 miles</option>
+                                    </select>
+                                    <input type="submit" value="Search" />
+                                </form>
+                            </div>   
+                        </div>
+                    </section>
+                    <section class='expander__wrapper'>
+                        <h2 class='expander__parent'>Over the Road Driver</h2>
+                        <h3>Lorem Ipsum</h3>
+                        <a data-id='8' class='button expand-button'>
+                            <i class="fa fa-plus fa-2x"></i>
+                        </a>
+                        <a data-id='8' class='button hide-button'>
+                            <i class="fa fa-minus fa-2x"></i>
+                        </a>
+                        <div data-id='8' class='hidden-part'>
+                            <div class="expander__child">
+                                <p class=''>
+                                    Non itaque saepe provident architecto vitae! Quia consequatur labore eos commodi, consequuntur! Repudiandae, laboriosam, optio. Itaque deleniti, ipsam nemo sequi veritatis qui. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo id perferendis sapiente quisquam eveniet praesentium quidem, error atque ea.
+                                    Non itaque saepe provident architecto vitae! Quia consequatur labore eos commodi, consequuntur! Repudiandae, laboriosam, optio. Itaque deleniti, ipsam nemo sequi veritatis qui. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo id perferendis sapiente quisquam eveniet praesentium quidem, error atque ea.
+                                </p>
+                                <form class="job-converter-job-search">
+                                    <p>Click "Search" to see openings for this job worldwide</p>
+                                    <input type="text" class="zip-code" />
+                                    <select class="radius">
+                                        <option value="5">5 miles</option>
+                                        <option value="10">10 miles</option>
+                                        <option value="25">25 miles</option>
+                                        <option value="50">50 miles</option>
+                                        <option value="100">100 miles</option>
+                                    </select>
+                                    <input type="submit" value="Search" />
+                                </form>
+                            </div>   
+                        </div>
+                    </section>
+                    <section class='expander__wrapper'>
+                        <h2 class='expander__parent'>Part Time Supervisor</h2>
+                        <h3>Lorem Ipsum</h3>
+                        <a data-id='9' class='button expand-button'>
+                            <i class="fa fa-plus fa-2x"></i>
+                        </a>
+                        <a data-id='9' class='button hide-button'>
+                            <i class="fa fa-minus fa-2x"></i>
+                        </a>
+                        <div data-id='9' class='hidden-part'>
+                            <div class="expander__child">
+                                <p class=''>
+                                    Non itaque saepe provident architecto vitae! Quia consequatur labore eos commodi, consequuntur! Repudiandae, laboriosam, optio. Itaque deleniti, ipsam nemo sequi veritatis qui. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo id perferendis sapiente quisquam eveniet praesentium quidem, error atque ea.
+                                    Non itaque saepe provident architecto vitae! Quia consequatur labore eos commodi, consequuntur! Repudiandae, laboriosam, optio. Itaque deleniti, ipsam nemo sequi veritatis qui. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo id perferendis sapiente quisquam eveniet praesentium quidem, error atque ea.
+                                </p>
+                                <form class="job-converter-job-search">
+                                    <p>Click "Search" to see openings for this job worldwide</p>
+                                    <input type="text" class="zip-code" />
+                                    <select class="radius">
+                                        <option value="5">5 miles</option>
+                                        <option value="10">10 miles</option>
+                                        <option value="25">25 miles</option>
+                                        <option value="50">50 miles</option>
+                                        <option value="100">100 miles</option>
+                                    </select>
+                                    <input type="submit" value="Search" />
+                                </form>
+                            </div>   
+                        </div>
+                    </section>
+                    <section class='expander__wrapper'>
+                        <h2 class='expander__parent'>Business Analyst</h2>
+                        <h3>Lorem Ipsum</h3>
+                        <a data-id='10' class='button expand-button'>
+                            <i class="fa fa-plus fa-2x"></i>
+                        </a>
+                        <a data-id='10' class='button hide-button'>
+                            <i class="fa fa-minus fa-2x"></i>
+                        </a>
+                        <div data-id='10' class='hidden-part'>
+                            <div class="expander__child">
+                                <p class=''>
+                                    Non itaque saepe provident architecto vitae! Quia consequatur labore eos commodi, consequuntur! Repudiandae, laboriosam, optio. Itaque deleniti, ipsam nemo sequi veritatis qui. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo id perferendis sapiente quisquam eveniet praesentium quidem, error atque ea.
+                                    Non itaque saepe provident architecto vitae! Quia consequatur labore eos commodi, consequuntur! Repudiandae, laboriosam, optio. Itaque deleniti, ipsam nemo sequi veritatis qui. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo id perferendis sapiente quisquam eveniet praesentium quidem, error atque ea.
+                                </p>
+                                <form class="job-converter-job-search">
+                                    <p>Click "Search" to see openings for this job worldwide</p>
+                                    <input type="text" class="zip-code" />
+                                    <select class="radius">
+                                        <option value="5">5 miles</option>
+                                        <option value="10">10 miles</option>
+                                        <option value="25">25 miles</option>
+                                        <option value="50">50 miles</option>
+                                        <option value="100">100 miles</option>
+                                    </select>
+                                    <input type="submit" value="Search" />
+                                </form>
+                            </div>   
+                        </div>
+                    </section>
+                    <section class='expander__wrapper'>
+                        <h2 class='expander__parent'>ISR</h2>
+                        <h3>Lorem Ipsum</h3>
+                        <a data-id='11' class='button expand-button'>
+                            <i class="fa fa-plus fa-2x"></i>
+                        </a>
+                        <a data-id='11' class='button hide-button'>
+                            <i class="fa fa-minus fa-2x"></i>
+                        </a>
+                        <div data-id='11' class='hidden-part'>
+                            <div class="expander__child">
+                                <p class=''>
+                                    Non itaque saepe provident architecto vitae! Quia consequatur labore eos commodi, consequuntur! Repudiandae, laboriosam, optio. Itaque deleniti, ipsam nemo sequi veritatis qui. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo id perferendis sapiente quisquam eveniet praesentium quidem, error atque ea.
+                                    Non itaque saepe provident architecto vitae! Quia consequatur labore eos commodi, consequuntur! Repudiandae, laboriosam, optio. Itaque deleniti, ipsam nemo sequi veritatis qui. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo id perferendis sapiente quisquam eveniet praesentium quidem, error atque ea.
+                                </p>
+                                <form class="job-converter-job-search">
+                                    <p>Click "Search" to see openings for this job worldwide</p>
+                                    <input type="text" class="zip-code" />
+                                    <select class="radius">
+                                        <option value="5">5 miles</option>
+                                        <option value="10">10 miles</option>
+                                        <option value="25">25 miles</option>
+                                        <option value="50">50 miles</option>
+                                        <option value="100">100 miles</option>
+                                    </select>
+                                    <input type="submit" value="Search" />
+                                </form>
+                            </div>   
+                        </div>
+                    </section>
+                </div>
             </div>
         </div>
     </div>
