@@ -1,9 +1,10 @@
 {% extends "VCGBundle:Layouts:page.html.twig" %}
 {% block title %}Military Job Converter{% endblock %}
-{% block routescript %}
+{% block javascripts %}
     {% javascripts 
         '@VCGBundle/Resources/public/js/vendor/jquery-csv/src/jquery.csv.js'
         '@VCGBundle/Resources/public/js/vendor/jquery.selectBoxIt/src/javascripts/jquery.selectBoxIt.js'
+        '@VCGBundle/Resources/public/js/job-converter/form.js'
     %}
         <script src="{{ asset_url }}"></script>
     {% endjavascripts %}
@@ -30,9 +31,9 @@
             </div>
             <div class="page page--job-converter">
                 <div id="side--a">
-                    <section class="intro">
+                    <section class="form-section">
                         <form action="" name="job-converter" id="job-converter">
-                            <label for="branch-of-service">Branch of Service</label>
+                            <label class="job-converter-label" for="branch-of-service">Branch of Service</label>
                             <select name="branch-of-service" id="branch-of-service">
                                 <option value="Air Force">Air Force</option>
                                 <option value="Army">Army</option>
@@ -40,11 +41,11 @@
                                 <option value="Marines">Marines</option>
                                 <option value="Navy">Navy</option>
                             </select>
-                            <label for="job-code">Job or MOS Code</label>
-                            <input type="text" name="job-code" id="job-code" />
+                            <label class="job-converter-label disabled-input" for="job-code">Job or MOS Code</label>
+                            <input type="text" name="job-code" id="job-code" disabled />
                             <p id="form-error"></p>
-                            <label for="rank">Rank<span>)optional)</span></label>
-                            <select id="rank">
+                            <label class="job-converter-label disabled-input" for="rank">Rank<span>)optional)</span></label>
+                            <select id="rank" disabled >
                                 <option value="AB">Airman Basic</option>
                                 <option value="Amn">Airman</option>
                                 <option value="A1C">Airman First Class</option>
@@ -113,7 +114,7 @@
                             </select>
                             <img id="ajax-spinner" src="{{ asset('bundles/vcg/images/ajax-loader.gif') }}" alt="working...">
                             
-                            <input type="submit" value="Submit" />
+                            <input type="submit" value="Submit" disabled />
                         </form>
                         <div id="military-job">
                             <h1 id="military-job-title"></h1>
