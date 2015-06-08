@@ -1,5 +1,12 @@
 {% extends "VCGBundle:Layouts:page.html.twig" %}
 {% block title %}DD Form 214 Guide{% endblock %}
+{% block javascripts %}
+    {% javascripts 
+        '@VCGBundle/Resources/public/js/vendor/Snap.svg/dist/snap.svg.js'
+    %}
+        <script src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+{% endblock %}
 {% block headerimage %}
     <div class="header-static-bg">
         <img class="header-static-bg-img" src="{{ asset('bundles/vcg/images/bg-5b.png') }}"    
