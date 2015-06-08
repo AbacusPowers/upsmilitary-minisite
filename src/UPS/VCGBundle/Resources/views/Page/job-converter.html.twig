@@ -30,7 +30,7 @@
                 </p>
             </div>
             <div class="page page--job-converter">
-                <div id="side--a">
+                <div id="side--a" class="full-width">
                     <section class="form-section">
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -48,7 +48,7 @@
                             </select>
                             <label class="job-converter-label disabled-input" for="job-code">Job or MOS Code</label>
                             <input type="text" name="job-code" id="job-code" class="disabled-input" disabled />
-                            <p id="form-error"></p>
+                            <p id="form-error" class="hidden"></p>
                             <label class="job-converter-label disabled-input" for="rank">Rank <span class="optional">(optional)</span></label>
                             <select id="rank" class="disabled-input" disabled >
                                 <option value="AB">Airman Basic</option>
@@ -117,11 +117,11 @@
                                 <option value="GA">General of the Air Force</option>
                                 <option value="FADM">Fleet Admiral</option>
                             </select>
-                            <img id="ajax-spinner" src="{{ asset('bundles/vcg/images/ajax-loader.gif') }}" alt="working...">
+                            <img id="ajax-spinner" class="hidden" src="{{ asset('bundles/vcg/images/ajax-loader.gif') }}" alt="working...">
                             
                             <input type="submit" value="Submit" disabled />
                         </form>
-                        <div id="military-job">
+                        <div id="military-job" class="hidden">
                             <h1 id="military-job-title"></h1>
                             <p id="military-job-description"></p>
                         </div>
@@ -129,7 +129,7 @@
                 </div>
                 <div id="side--b">
                     <div class="component--expander">
-                    <section class='expander__wrapper'>
+                    <section class='expander__wrapper hidden'>
                         <h2 class='expander__parent'>Package Handler</h2>
                         <h3>Lorem Ipsum</h3>
                         <a data-id='1' class='button expand-button'>
@@ -161,7 +161,7 @@
                             </div>   
                         </div>
                     </section>
-                    <section class='expander__wrapper'>
+                    <section class='expander__wrapper hidden'>
                         <h2 class='expander__parent'>Driver Helper</h2>
                         <h3>Lorem Ipsum</h3>
                         <a data-id='2' class='button expand-button'>
@@ -193,7 +193,7 @@
                             </div>   
                         </div>
                     </section>
-                    <section class='expander__wrapper'>
+                    <section class='expander__wrapper hidden'>
                         <h2 class='expander__parent'>Package Delivery Driver</h2>
                         <h3>Lorem Ipsum</h3>
                         <a data-id='3' class='button expand-button'>
@@ -225,7 +225,7 @@
                             </div>   
                         </div>
                     </section>
-                    <section class='expander__wrapper'>
+                    <section class='expander__wrapper hidden'>
                         <h2 class='expander__parent'>Warehouse Associate</h2>
                         <h3>Lorem Ipsum</h3>
                         <a data-id='4' class='button expand-button'>
@@ -257,7 +257,7 @@
                             </div>   
                         </div>
                     </section>
-                    <section class='expander__wrapper'>
+                    <section class='expander__wrapper hidden'>
                         <h2 class='expander__parent'>Automotive Mechanic</h2>
                         <h3>Lorem Ipsum</h3>
                         <a data-id='5' class='button expand-button'>
@@ -289,7 +289,7 @@
                             </div>   
                         </div>
                     </section>
-                    <section class='expander__wrapper'>
+                    <section class='expander__wrapper hidden'>
                         <h2 class='expander__parent'>Maintenance/Facilities Mechanic</h2>
                         <h3>Lorem Ipsum</h3>
                         <a data-id='6' class='button expand-button'>
@@ -321,7 +321,7 @@
                             </div>   
                         </div>
                     </section>
-                    <section class='expander__wrapper'>
+                    <section class='expander__wrapper hidden'>
                         <h2 class='expander__parent'>Feeder Driver</h2>
                         <h3>Lorem Ipsum</h3>
                         <a data-id='7' class='button expand-button'>
@@ -354,7 +354,7 @@
                             </div>   
                         </div>
                     </section>
-                    <section class='expander__wrapper'>
+                    <section class='expander__wrapper hidden'>
                         <h2 class='expander__parent'>Over the Road Driver</h2>
                         <h3>Lorem Ipsum</h3>
                         <a data-id='8' class='button expand-button'>
@@ -384,7 +384,7 @@
                             </div>   
                         </div>
                     </section>
-                    <section class='expander__wrapper'>
+                    <section class='expander__wrapper hidden'>
                         <h2 class='expander__parent'>Part Time Supervisor</h2>
                         <h3>Lorem Ipsum</h3>
                         <a data-id='9' class='button expand-button'>
@@ -416,7 +416,7 @@
                             </div>   
                         </div>
                     </section>
-                    <section class='expander__wrapper'>
+                    <section class='expander__wrapper hidden'>
                         <h2 class='expander__parent'>Business Analyst</h2>
                         <h3>Lorem Ipsum</h3>
                         <a data-id='10' class='button expand-button'>
@@ -448,7 +448,7 @@
                             </div>   
                         </div>
                     </section>
-                    <section class='expander__wrapper'>
+                    <section class='expander__wrapper hidden'>
                         <h2 class='expander__parent'>ISR</h2>
                         <h3>Lorem Ipsum</h3>
                         <a data-id='11' class='button expand-button'>
