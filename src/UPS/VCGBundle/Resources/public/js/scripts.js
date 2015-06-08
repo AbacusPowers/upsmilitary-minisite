@@ -33,7 +33,7 @@ $( document ).ready(function() {
     $('#job-code').autocomplete({
         source: hints
     });
-    $('.expander__wrapper').hide();
+    $('.expander__wrapper','.page--job-converter').hide();
     $('#form-error').hide();
     $('#military-job').hide();
     $('#job-converter').submit(function(e){

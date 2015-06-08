@@ -29,95 +29,100 @@
                 </p>
             </div>
             <div class="page page--job-converter">
-                <section class="intro">
-                    <form action="" name="job-converter" id="job-converter">
-                        <select id="branch-of-service">
-                            <option value="Air Force">Air Force</option>
-                            <option value="Army">Army</option>
-                            <option value="Coast Guard">Coast Guard</option>
-                            <option value="Marines">Marines</option>
-                            <option value="Navy">Navy</option>
-                        </select>
-                        <input type="text" id="job-code" />
-                        <select id="rank">
-                            <option value="AB">Airman Basic</option>
-                            <option value="Amn">Airman</option>
-                            <option value="A1C">Airman First Class</option>
-                            <option value="SrA">Senior Airman</option>
-                            <option value="SR">Seaman Recruit</option>
-                            <option value="SA">Seaman Apprentice</option>
-                            <option value="SN">Seaman</option>
-                            <option value="PO3">Petty Officer 3rd Class</option>
-                            <option value="PO2">Petty Officer 2nd Class</option>
-                            <option value="PO1">Petty Officer 1st Class</option>
-                            <option value="CPO">Chief Petty Officer</option>
-                            <option value="SCPO">Senior Chief Petty Officer</option>
-                            <option value="MCPO">Master Chief Petty Officer</option>
-                            <option value="MCPO">Fleet/ Commander Master Chief Petty Officer</option>
-                            <option value="MCPON">Master Chief Petty Officer of the Navy</option>
-                            <option value="PVT">Private</option>
-                            <option value="PV2">Private 2</option>
-                            <option value="PFC">Private First Class</option>
-                            <option value="SPC">Specialist</option>
-                            <option value="LCpL">Lance Corporal</option>
-                            <option value="CPL">Corporal</option>
-                            <option value="SGT">Sergeant</option>
-                            <option value="SSG">Staff Sergeant</option>
-                            <option value="TSgT">Technical Sergeant</option>
-                            <option value="GySgt">Gunnery Sergeant</option>
-                            <option value="SFC">Sergeant First Class</option>
-                            <option value="MSG">Master Sergeant</option>
-                            <option value="SMSgt">Senior Master Sergeant</option>
-                            <option value="CMSgt">Chief Master Sergeant</option>
-                            <option value="CCM">Command Chief Master Sergeant</option>
-                            <option value="CMSAF">Chief Master Sergeant of the Air Force</option>
-                            <option value="1SG">First Sergeant</option>
-                            <option value="SGM">Sergeant Major</option>
-                            <option value="CSM">Command Sergeant Major</option>
-                            <option value="SgtMaj">Sergeant Major</option>
-                            <option value="SMA">Sergeant Major of the Army</option>
-                            <option value="SgtMajMarCor">Sergeant Major of the Marine Corps</option>
-                            <option value="WO1">Warrant Officer</option>
-                            <option value="CW2">Chief Warrant Officer 2</option>
-                            <option value="CW3">Chief Warrant Officer 3</option>
-                            <option value="CW4">Chief Warrant Officer 4</option>
-                            <option value="CW5">Chief Warrant Officer 5</option>
-                            <option value="ENS">Ensign</option>
-                            <option value="LTJG">Lieutenant Junior Grade</option>
-                            <option value="2LT">Second Lieutenant</option>
-                            <option value="1LT">First Lieutenant</option>
-                            <option value="LT">Lieutenant</option>
-                            <option value="LCDR">Lieutenant Commander</option>
-                            <option value="CDR">Commander</option>
-                            <option value="CPT">Captain</option>
-                            <option value="MAJ">Major</option>
-                            <option value="LTC">Lieutenant Colonel</option>
-                            <option value="COL">Colonel</option>
-                            <option value="BG">Brigadier General</option>
-                            <option value="RDML">Rear Admiral (Lwr Hlf)</option>
-                            <option value="MG">Major General</option>
-                            <option value="RADM">Rear Admiral (Uppr Hlf)</option>
-                            <option value="LTG">Lietenant General</option>
-                            <option value="VADM">Vice Admiral</option>
-                            <option value="GEN">General</option>
-                            <option value="GEN">General Air Foce Chief of Staff</option>
-                            <option value="ADM">Admiral Chief of Naval Ops/Commandant of the CG</option>
-                            <option value="GA">General of the Army</option>
-                            <option value="GA">General of the Air Force</option>
-                            <option value="FADM">Fleet Admiral</option>
-                        </select>
-                        <img id="ajax-spinner" src="{{ asset('bundles/vcg/images/ajax-loader.gif') }}" alt="working...">
-                        <p id="form-error"></p>
-                        <input type="submit" value="Submit" />
-                    </form>
-                    <div id="military-job">
-                        <h1 id="military-job-title"></h1>
-                        <p id="military-job-description"></p>
-                    </div>
-                </section>
-                
-                
-                <div class="component--expander">
+                <div id="side--a">
+                    <section class="intro">
+                        <form action="" name="job-converter" id="job-converter">
+                            <label for="branch-of-service">Branch of Service</label>
+                            <select name="branch-of-service" id="branch-of-service">
+                                <option value="Air Force">Air Force</option>
+                                <option value="Army">Army</option>
+                                <option value="Coast Guard">Coast Guard</option>
+                                <option value="Marines">Marines</option>
+                                <option value="Navy">Navy</option>
+                            </select>
+                            <label for="job-code">Job or MOS Code</label>
+                            <input type="text" name="job-code" id="job-code" />
+                            <p id="form-error"></p>
+                            <label for="rank">Rank<span>)optional)</span></label>
+                            <select id="rank">
+                                <option value="AB">Airman Basic</option>
+                                <option value="Amn">Airman</option>
+                                <option value="A1C">Airman First Class</option>
+                                <option value="SrA">Senior Airman</option>
+                                <option value="SR">Seaman Recruit</option>
+                                <option value="SA">Seaman Apprentice</option>
+                                <option value="SN">Seaman</option>
+                                <option value="PO3">Petty Officer 3rd Class</option>
+                                <option value="PO2">Petty Officer 2nd Class</option>
+                                <option value="PO1">Petty Officer 1st Class</option>
+                                <option value="CPO">Chief Petty Officer</option>
+                                <option value="SCPO">Senior Chief Petty Officer</option>
+                                <option value="MCPO">Master Chief Petty Officer</option>
+                                <option value="MCPO">Fleet/ Commander Master Chief Petty Officer</option>
+                                <option value="MCPON">Master Chief Petty Officer of the Navy</option>
+                                <option value="PVT">PVT Private</option>
+                                <option value="PV2">Private 2</option>
+                                <option value="PFC">Private First Class</option>
+                                <option value="SPC">Specialist</option>
+                                <option value="LCpL">Lance Corporal</option>
+                                <option value="CPL">Corporal</option>
+                                <option value="SGT">Sergeant</option>
+                                <option value="SSG">Staff Sergeant</option>
+                                <option value="TSgT">Technical Sergeant</option>
+                                <option value="GySgt">Gunnery Sergeant</option>
+                                <option value="SFC">Sergeant First Class</option>
+                                <option value="MSG">Master Sergeant</option>
+                                <option value="SMSgt">Senior Master Sergeant</option>
+                                <option value="CMSgt">Chief Master Sergeant</option>
+                                <option value="CCM">Command Chief Master Sergeant</option>
+                                <option value="CMSAF">Chief Master Sergeant of the Air Force</option>
+                                <option value="1SG">First Sergeant</option>
+                                <option value="SGM">Sergeant Major</option>
+                                <option value="CSM">Command Sergeant Major</option>
+                                <option value="SgtMaj">Sergeant Major</option>
+                                <option value="SMA">Sergeant Major of the Army</option>
+                                <option value="SgtMajMarCor">Sergeant Major of the Marine Corps</option>
+                                <option value="WO1">Warrant Officer</option>
+                                <option value="CW2">Chief Warrant Officer 2</option>
+                                <option value="CW3">Chief Warrant Officer 3</option>
+                                <option value="CW4">Chief Warrant Officer 4</option>
+                                <option value="CW5">Chief Warrant Officer 5</option>
+                                <option value="ENS">Ensign</option>
+                                <option value="LTJG">Lieutenant Junior Grade</option>
+                                <option value="2LT">Second Lieutenant</option>
+                                <option value="1LT">First Lieutenant</option>
+                                <option value="LT">Lieutenant</option>
+                                <option value="LCDR">Lieutenant Commander</option>
+                                <option value="CDR">Commander</option>
+                                <option value="CPT">Captain</option>
+                                <option value="MAJ">Major</option>
+                                <option value="LTC">Lieutenant Colonel</option>
+                                <option value="COL">Colonel</option>
+                                <option value="BG">Brigadier General</option>
+                                <option value="RDML">Rear Admiral (Lwr Hlf)</option>
+                                <option value="MG">Major General</option>
+                                <option value="RADM">Rear Admiral (Uppr Hlf)</option>
+                                <option value="LTG">Lietenant General</option>
+                                <option value="VADM">Vice Admiral</option>
+                                <option value="GEN">General</option>
+                                <option value="GEN">General Air Foce Chief of Staff</option>
+                                <option value="ADM">Admiral Chief of Naval Ops/Commandant of the CG</option>
+                                <option value="GA">General of the Army</option>
+                                <option value="GA">General of the Air Force</option>
+                                <option value="FADM">Fleet Admiral</option>
+                            </select>
+                            <img id="ajax-spinner" src="{{ asset('bundles/vcg/images/ajax-loader.gif') }}" alt="working...">
+                            
+                            <input type="submit" value="Submit" />
+                        </form>
+                        <div id="military-job">
+                            <h1 id="military-job-title"></h1>
+                            <p id="military-job-description"></p>
+                        </div>
+                    </section>
+                </div>
+                <div id="side--b">
+                    <div class="component--expander">
                     <section class='expander__wrapper'>
                         <h2 class='expander__parent'>Package Handler</h2>
                         <h3>Lorem Ipsum</h3>
@@ -450,6 +455,9 @@
                         </div>
                     </section>
                 </div>
+                </div>
+                
+                
             </div>
         </div>
     </div>

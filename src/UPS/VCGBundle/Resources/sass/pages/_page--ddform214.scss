@@ -63,8 +63,8 @@
         
         .breakpoint-large &, .breakpoint-wide & {
             display: block;
-            @include size( 50% auto);
-            @include position(absolute, 14em auto);
+            /*@include size( 50% auto);*/
+            @include position(static, 14em auto);
         }
 
         svg {

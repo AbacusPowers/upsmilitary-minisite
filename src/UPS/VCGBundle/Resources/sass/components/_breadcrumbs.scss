@@ -6,20 +6,20 @@
 
     z-index: 100;
 
-    &::before{
+/*    &::before{
         @include pseudo-block(2.2em);
         @include position( absolute, nul null 0 -2.2em);
         background: $ups-yellow;
         border-right: 1px solid $ups-brown-1;
-    }
-
+    }*/
+/*
     &::after{
         font-family: FontAwesome;
         content: "\f078";    
         color: $ups-brown-1;
         @include position( absolute, nul null 0.4em -1.62em);
         z-index: 1000;
-    }
+    }*/
 }
 
 .breadcrumb {   

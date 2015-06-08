@@ -170,9 +170,11 @@
 }
 
 .page {
-
-    // margin-top: -2em;
-
+    @include clearfix;
+    #side--a, #side--b {
+        float: left;
+        width: 50%;
+    }
     .intro>i {
         float: left;
         @include size(84px);
@@ -185,8 +187,8 @@
         position: relative;
 
         .intro {
-            width: 50%;
-            position: absolute;
+            /*width: 50%;*/
+            /*position: absolute;*/
             padding: 0;
             padding: 0 2.5em 0 2.7em;
 
@@ -197,10 +199,10 @@
         }
 
         .component--expander {
-            width: 50%;
-            margin-left: 50%;
-            right:0;
-            top: 0;
+            /*width: 50%;*/
+            /*margin-left: 50%;*/
+/*            right:0;
+            top: 0;*/
         }
     }
 

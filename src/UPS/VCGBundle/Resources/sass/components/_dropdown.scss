@@ -1,6 +1,6 @@
 
 // // Thoughtbot Bitters Dropdown
-.dropdown {
+/*.dropdown {
   $base-border-color: gainsboro !default;
   $base-border-radius: 0px !default;
   $base-line-height: 1.5em !default;
@@ -131,4 +131,25 @@
     display: block;
   }
 }
-// Inspired by code by www.HUSAMUI.com
+// Inspired by code by www.HUSAMUI.com*/
+
+ul#secondary-nav {
+    @include position( absolute, nul null 0 -2.2em);
+    display: inline-block;
+    background: $ups-yellow;
+    border-right: 1px solid $ups-brown-1;
+    font-family: FontAwesome;
+    /*content: "\f078";*/    
+    color: $ups-brown-1;
+    /*@include position( absolute, nul null 0.4em -1.62em);*/
+    /*z-index: 1000;*/
+    
+    li {
+        display: none;
+    }
+    &:hover {
+        li {
+            display: block;
+        }
+    }
+}
