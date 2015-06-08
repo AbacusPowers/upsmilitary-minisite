@@ -29,11 +29,12 @@
             '@VCGBundle/Resources/public/js/required/*'
             '@VCGBundle/Resources/public/js/vendor/history.js/scripts/bundled/html4+html5/native.history.js'
             '@VCGBundle/Resources/public/js/vendor/metaquery/metaquery.min.js'
-            '@VCGBundle/Resources/public/js/vendor/Snap.svg/dist/snap.svg.js'
         %}
             <script src="{{ asset_url }}"></script>
         {% endjavascripts %}
         {% block routescript %}{% endblock %}
+        {% block javascripts %}{% endblock %}
+        
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body>
