@@ -1,42 +1,74 @@
 .page--map {
+    
+    &:after {
+        clear: both;
+        content: "";
+        display: table;
+    }
+    
+    .map-section {
+        width: 100%;
+        max-width: 1000px;
 
-    .jobs-map {
-        @include size(100% 300px);
-        background: $black30;
-        display: block;
-        margin-top: 2em;
-        text-align: center;
-
-        .breakpoint-large & {
-            @include size(50% 500px);
-            position: absolute;
-            margin-top: 110px;
+        margin: 0px auto;
+        padding: 1em 0px;
+        
+        .breakpoint-wide & {
+            width: 50%;
+            
+            padding: 0px 1.25em 0px 2em;
+            
+            float: left;
+        }
+        
+        .map-wrapper { margin-bottom: 1em; }
+        
+        .map-selects {
+            .breakpoint-small & { padding: 0px 1em; }
         }
     }
-
-    .expander__child ul li{
-
-        display: block;
-        background: $grey10;
-        border-bottom: 1px solid $black10;
+    
+    .map-info-section {
+        width: 100%;
+        max-width: 1000px;
         
-        @include size(100% 3em);
-        position: relative;
-
-        a {
-            display: block;
-            // background: red;
-            padding: 1em;
+        margin: 0px auto;
+        padding: 1em 0px;
+        
+        .breakpoint-wide & {
+            width: 50%;
+            
+            padding: 0px 2em 0px 1.25em;
+            
+            float: right;
         }
-
-        i {
-            position: absolute;
-            top: 1em;
-            right: 1.7em;
+        
+        .breakpoint-small & { padding: 0px 1em 2em 1em; }
+        
+        .component--expander {
+            width: 100%;
+            
+            margin: 1em 0px;
         }
-        &:first-of-type {
-            border-top: 1px solid $black10;
+        
+        .map-info--initial {
+            .breakpoint-small & { display: none; }
         }
+    }
+    
+    .svg-map {
+        width: 100%;
+        height: 400px;
+        
+        display: block;
 
+        .breakpoint-small & { display: none; }
+        
+        .breakpoint-large & { height: 700px; }
+        
+        .breakpoint-wide & { height: 450px; }
+
+     
+        path { cursor: pointer; }
     }
 }
