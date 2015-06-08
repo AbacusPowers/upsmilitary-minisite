@@ -6,11 +6,15 @@
 function aContainsB (a, b) {
     return a.indexOf(b) >= 0;
 }
-$( document ).ready(function() {
-    var $loading = $('#ajax-spinner').hide();
 
+$( document ).ready(function() {
+    $('#ajax-spinner').hide();
+    $('.expander__wrapper','.page--job-converter').hide();
+    $('#form-error').hide();
+    $('#military-job').hide();
+    
     $('#branch-of-service').change(function(){
-       $('#job-code').prop('disabled',false);
+       $('#job-code').prop('disabled',false).removeClass('disabled-input');
        $('label[for="job-code"]').removeClass('disabled-input');
        
         if($(this).val() === "Air Force") {
@@ -31,6 +35,17 @@ $( document ).ready(function() {
         $('#job-code').autocomplete({
             source: hints
         });
+    });
+    $('#job-code').on('input',function(){
+        if(hints.indexOf( $(this).val() ) <= 0) {
+            $('#form-error').text('Please use a job from the list of suggestions.');
+            $('#form-error').show();
+            $('#rank').prop('disabled',false).removeClass('disabled-input');
+            $('label[for="rank"]').removeClass('disabled-input');
+            $('input[type="submit"]').prop('disabled',false);
+        } else {
+            $('#form-error').hide();
+        }
     });
     $('#search-submit').click(function(e, input) {
         e.preventDefault();
@@ -55,9 +70,7 @@ $( document ).ready(function() {
     });
 
     
-    $('.expander__wrapper','.page--job-converter').hide();
-    $('#form-error').hide();
-    $('#military-job').hide();
+    
     $('#job-converter').submit(function(e){
         e.preventDefault();
         $('.expander__wrapper').hide();
@@ -192,10 +205,11 @@ $( document ).ready(function() {
     });
 });
 
+
 $(document)
   .ajaxStart(function () {
-    $loading.show();
+    $('#ajax-spinner').show();
   })
   .ajaxStop(function () {
-    $loading.hide();
+    $('#ajax-spinner').hide();
   });
