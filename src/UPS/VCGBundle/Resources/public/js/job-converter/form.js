@@ -14,6 +14,7 @@ $( document ).ready(function() {
 //    $('#military-job').hide();
     
     $('#branch-of-service').change(function(){
+        $('#job-code').val('');
        $('#job-code').prop('disabled',false).removeClass('disabled-input');
        $('label[for="job-code"]').removeClass('disabled-input');
        
@@ -40,8 +41,6 @@ $( document ).ready(function() {
         if(hints.indexOf( $(this).val() ) <= 0) {
             $('#form-error').text('Please use a job from the list of suggestions.');
             $('#form-error').removeClass('hidden');
-            $('#rank').prop('disabled',false).removeClass('disabled-input');
-            $('label[for="rank"]').removeClass('disabled-input');
             $('input[type="submit"]').prop('disabled',false);
         } else {
             $('#form-error').addClass('hidden');
@@ -52,10 +51,7 @@ $( document ).ready(function() {
         input = $('#search-field').val();
         location.href= 'http://jobs-ups.com/search/' + input + '/ASCategory/-1/ASPostedDate/-1/ASCountry/-1/ASState/-1/ASCity/-1/ASLocation/-1/ASCompanyName/-1/ASCustom1/-1/ASCustom2/-1/ASCustom3/-1/ASCustom4/-1/ASCustom5/-1/ASIsRadius/false/ASCityStateZipcode/-1/ASDistance/-1/ASLatitude/-1/ASLongitude/-1/ASDistanceType/-1';
     });
-    $('#job-search').submit(function(){
-        input = $('#search-field').val();
-        location.href= 'http://jobs-ups.com/search/' + input + '/ASCategory/-1/ASPostedDate/-1/ASCountry/-1/ASState/-1/ASCity/-1/ASLocation/-1/ASCompanyName/-1/ASCustom1/-1/ASCustom2/-1/ASCustom3/-1/ASCustom4/-1/ASCustom5/-1/ASIsRadius/false/ASCityStateZipcode/-1/ASDistance/-1/ASLatitude/-1/ASLongitude/-1/ASDistanceType/-1';
-    });
+
     $('.job-converter-job-search').submit(function(e){
         e.preventDefault();
         jobTitle = $(this).closest('.expander__wrapper').children('.expander__parent').text();
@@ -66,7 +62,7 @@ $( document ).ready(function() {
         } else {
             radiusOn = 'false';
         }
-        location.href= 'http://jobs-ups.com/search/' + jobTitle + '/ASCategory/-1/ASPostedDate/-1/ASCountry/-1/ASState/-1/ASCity/-1/ASLocation/-1/ASCompanyName/-1/ASCustom1/-1/ASCustom2/-1/ASCustom3/-1/ASCustom4/-1/ASCustom5/-1/ASIsRadius/' + radiusOn + '/ASCityStateZipcode/' + zipCode +'/ASDistance/'+ radius +'/ASLatitude/-1/ASLongitude/-1/ASDistanceType/-1';
+        location.href= 'http://jobs-ups.com/search/' + encodeURIComponent(jobTitle) + '/ASCategory/-1/ASPostedDate/-1/ASCountry/-1/ASState/-1/ASCity/-1/ASLocation/-1/ASCompanyName/-1/ASCustom1/-1/ASCustom2/-1/ASCustom3/-1/ASCustom4/-1/ASCustom5/-1/ASIsRadius/' + radiusOn + '/ASCityStateZipcode/' + encodeURIComponent(zipCode) +'/ASDistance/'+ encodeURIComponent(radius) +'/ASLatitude/-1/ASLongitude/-1/ASDistanceType/-1';
     });
 
     
@@ -81,8 +77,6 @@ $( document ).ready(function() {
         
         branch = $('#branch-of-service').val();
         jobCode = $('#job-code').val();
-        rank = $('#rank').val();
-//        console.log(branch + ' ' + jobCode + ' ' + rank);
         if(hints.indexOf(jobCode) >= 0) {
             $.get("/bundles/vcg/data/mosdata.csv", function(data){
     //        console.log(data);

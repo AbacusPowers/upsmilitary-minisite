@@ -62,3 +62,24 @@ a:active {
     display: none;
 }
 
+.grid--articles {
+  position: relative;
+}
+
+
+.grid--articles:hover {
+  background: none;
+}
+.scroll-container {
+  height: 120px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  #video-list {
+    width: 10000px;
+    a.video-link {
+
+    }
+  }
+}
