@@ -105,14 +105,16 @@
          * Gather up the bits and bobs and get into the proper initial state.
          */
         init: function() {
-            var container = this.container = $('.map-info-section');
-            var initial = this.initial = $('.map-info--initial', container).detach();
-            var template = this.template = $('.map-info--state', container).detach();
-            this.expander_id = 0;
-            this.show_initial();
-
+            var container = this.container = $('.map-info-container');
             container.on('click', '.expand-button', on_expander_click_expand);
             container.on('click', '.hide-button', on_expander_click_hide);
+            
+            var template = this.template = $('.map-info--state', container).detach();
+            template.removeClass('hidden');
+            
+            this.initial = $('.map-info--initial', container).detach();
+            this.expander_id = 0;
+            this.show_initial();
         },
 
 
@@ -254,6 +256,7 @@
                 this.zoom();
                 stateSelect.val('');
                 info.show_initial();
+                refresher.removeClass('shown');
             }
             
             if (state != null) {
@@ -262,6 +265,7 @@
                 this.zoom();
                 stateSelect.val(state.abbr);
                 info.show(state.info);
+                refresher.addClass('shown');
             }
         },
         
@@ -300,19 +304,25 @@
     
     
     /*
+     * Common reference to the refresher. Hidden on mobile.
+     */
+    var refresher;
+    
+    
+    /*
      * Document ready initializer.
      */
     $(function() {
         map.init();
         info.init();
-        init_state_select();
+        init_map_controls();
     });
     
     
     /*
      * Initialize the state select box, including generating option elements from the state list.
      */
-    function init_state_select() {
+    function init_map_controls() {
         stateSelect = $('#job-map--select-state');
         stateSelect.append($('<option val=""></option>'));
         
@@ -335,6 +345,11 @@
             state.option = option;
             stateSelect.append(option);
         }
+        
+        refresher = $('#job-map--refresh');
+        refresher.click(function() {
+            map.set_focus(null);
+        });
     }
     
     
