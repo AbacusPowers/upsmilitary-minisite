@@ -1,24 +1,3 @@
-$JOB_MAP_SUBMAPS = [
-    { /* continental */
-        top: 49.384471,
-        left: -124.727821,
-        w: -57.772293,
-        h: 31.75
-    },
-    { /* alaska */
-        top: 71.344918,
-        left: -174.170710,
-        w: -41.5,
-        h: 17.0
-    },
-    { /* hawaii */
-        top: 0,
-        left: 0,
-        w: 0,
-        h: 0
-    }
-];
-
 $JOB_MAP_DATA = [
   {
     "_LOC_NR":"AKERI",

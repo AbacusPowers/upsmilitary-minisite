@@ -1,4 +1,25 @@
 (function($) {
+    $JOB_MAP_SUBMAPS = [
+        { /* continental */
+            top: 49.384471,
+            left: -124.727821,
+            w: -57.772293,
+            h: 31.75
+        },
+        { /* alaska */
+            top: 71.344918,
+            left: -174.170710,
+            w: -41.5,
+            h: 17.0
+        },
+        { /* hawaii */
+            top: 0,
+            left: 0,
+            w: 0,
+            h: 0
+        }
+    ];
+    
 
     /*
      * Some constants isolated for easy reconfiguration.
@@ -136,11 +157,12 @@
             var cityTemplate    = $(citiesContainer.children()[0]).detach();
             for (var i = 0, ilen = cities.length; i < ilen; ++i) {
                 var city        = cities[i];
+                var cityName    = capitalize(city.name);
                 var cityResult  = cityTemplate.clone();
                 var locations   = city.locations;
                 
                 $('[data-id]'               , cityResult).attr('data-id', this.expander_id++);
-                $('[data-info="city-name"]' , cityResult).text(capitalize(city.name) + " Area");
+                $('[data-info="city-name"]' , cityResult).text(cityName + " Area");
                 $('[data-info="city-count"]', cityResult).text(locations.length);
                 
                 var locationsContainer  = $('[data-info="locations"]', cityResult);
@@ -157,7 +179,12 @@
                     
                     var jobsContainer = $('[data-info="jobs"]', locationResult);
                     for (var k = 0, klen = jobs.length; k < klen; ++k) {
-                        jobsContainer.append($('<p>' + jobs[k] + '</p>'));
+                        var job = jobs[k];
+                        var href='http://jobs-ups.com/search/'
+                        href += encodeURI(job) + '/ASCategory/-1/ASPostedDate/-1/ASCountry/-1/ASState/-1/ASCity/-1/ASLocation/-1/ASCompanyName/-1/ASCustom1/-1/ASCustom2/-1/ASCustom3/-1/ASCustom4/-1/ASCustom5/-1/ASIsRadius/true/ASCityStateZipcode/';
+                        href += location.zip + '/ASDistance/50/ASLatitude/-1/ASLongitude/-1/ASDistanceType/-1';
+                        jobsContainer.append($('<p><a href="' + href + '">' + job + '</a></p>'));
+                        //jobsContainer.append($('<p>' + jobs[k] + '</p>'));
                     }
                     
                     $('.hidden-part', locationResult).data('outer', outerHidden);
@@ -278,6 +305,7 @@
                     var peg = this.pegTemplate.clone();
                     peg.attr('id', 'svg-peg--' + location._LOC_NR);
                     peg.data('state', state);
+                    peg.data('location', location);
                     group.append(peg);
                     if (location.size == "Medium") {
                         peg.attr({ fill: '#0000d8' });
