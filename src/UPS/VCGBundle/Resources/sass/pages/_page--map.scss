@@ -1,74 +1,45 @@
 .page--map {
     
-    &:after {
-        clear: both;
-        content: "";
-        display: table;
+    .map-controls form > div {
+        margin-right: 1em;
+        
+        display: inline-block;
     }
     
-    .map-section {
-        width: 100%;
-        max-width: 1000px;
+    .map-info-container {
+        padding-left: 1em;
 
-        margin: 0px auto;
-        padding: 1em 0px;
-        
-        .breakpoint-wide & {
-            width: 50%;
-            
-            padding: 0px 1.25em 0px 2em;
-            
-            float: left;
-        }
-        
-        .map-wrapper { margin-bottom: 1em; }
-        
-        .map-selects {
-            .breakpoint-small & { padding: 0px 1em; }
-        }
-    }
-    
-    .map-info-section {
-        width: 100%;
-        max-width: 1000px;
-        
-        margin: 0px auto;
-        padding: 1em 0px;
-        
-        .breakpoint-wide & {
-            width: 50%;
-            
-            padding: 0px 2em 0px 1.25em;
-            
-            float: right;
-        }
-        
-        .breakpoint-small & { padding: 0px 1em 2em 1em; }
-        
-        .component--expander {
-            width: 100%;
-            
-            margin: 1em 0px;
-        }
-        
-        .map-info--initial {
-            .breakpoint-small & { display: none; }
-        }
+        .breakpoint-small & { padding-left: 0em; }
     }
     
     .svg-map {
         width: 100%;
-        height: 400px;
+        height: 450px;
         
         display: block;
 
         .breakpoint-small & { display: none; }
-        
-        .breakpoint-large & { height: 700px; }
-        
-        .breakpoint-wide & { height: 450px; }
-
      
         path { cursor: pointer; }
     }
+
+    #job-map--refresh {
+        color: #474747;
+        font-weight: bold;
+        opacity: 0;
+        
+        height: 2em;
+        
+        display: inline-block;
+        
+        transition: opacity 0.5s;
+        
+        &.shown {
+            cursor: pointer;
+            opacity: 1;
+        }
+        
+        .breakpoint-small & { display: none; }
+    }
+
 }
