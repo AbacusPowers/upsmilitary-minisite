@@ -1,3 +1,24 @@
+$JOB_MAP_SUBMAPS = [
+    { /* continental */
+        top: 49.384471,
+        left: -124.727821,
+        w: -57.772293,
+        h: 31.75
+    },
+    { /* alaska */
+        top: 71.344918,
+        left: -174.170710,
+        w: -41.5,
+        h: 17.0
+    },
+    { /* hawaii */
+        top: 0,
+        left: 0,
+        w: 0,
+        h: 0
+    }
+];
+
 $JOB_MAP_DATA = [
   {
     "_LOC_NR":"AKERI",
@@ -8,7 +29,9 @@ $JOB_MAP_DATA = [
     "zip":"99502",
     "_EE_COUNT":1062,
     "size":"Large",
-    "jobs":"Package Handler, Driver Helper (Oct-Dec), Package Delivery Driver, Feeder Driver, Automotive Mechanic, Facilities Mechanic, Sales Representative, Warehouse Associate,  UPS Freight Over the Road Driver, Part-time Operations Supervisor, Business Analyst"
+    "jobs":"Package Handler, Driver Helper (Oct-Dec), Package Delivery Driver, Feeder Driver, Automotive Mechanic, Facilities Mechanic, Sales Representative, Warehouse Associate,  UPS Freight Over the Road Driver, Part-time Operations Supervisor, Business Analyst",
+    "lat": 61.194537,
+    "lon": -150.000407
   },
   {
     "_LOC_NR":"ALBIR",
@@ -19,7 +42,9 @@ $JOB_MAP_DATA = [
     "zip":"35209",
     "_EE_COUNT":560,
     "size":"Large",
-    "jobs":"Package Handler, Driver Helper (Oct-Dec), Package Delivery Driver, Feeder Driver, Automotive Mechanic, Facilities Mechanic, Sales Representative, Warehouse Associate,  UPS Freight Over the Road Driver, Part-time Operations Supervisor, Business Analyst"
+    "jobs":"Package Handler, Driver Helper (Oct-Dec), Package Delivery Driver, Feeder Driver, Automotive Mechanic, Facilities Mechanic, Sales Representative, Warehouse Associate,  UPS Freight Over the Road Driver, Part-time Operations Supervisor, Business Analyst",
+    "lat": 33.451323,
+    "lon": -86.846902
   },
   {
     "_LOC_NR":"ALROE",
@@ -52,7 +77,9 @@ $JOB_MAP_DATA = [
     "zip":"36109",
     "_EE_COUNT":821,
     "size":"Large",
-    "jobs":"Package Handler, Driver Helper (Oct-Dec), Package Delivery Driver, Feeder Driver, Automotive Mechanic, Facilities Mechanic, Sales Representative, Warehouse Associate,  UPS Freight Over the Road Driver, Part-time Operations Supervisor, Business Analyst"
+    "jobs":"Package Handler, Driver Helper (Oct-Dec), Package Delivery Driver, Feeder Driver, Automotive Mechanic, Facilities Mechanic, Sales Representative, Warehouse Associate,  UPS Freight Over the Road Driver, Part-time Operations Supervisor, Business Analyst",
+    "lat": 32.413937,
+    "lon": -86.304826
   },
   {
     "_LOC_NR":"ALMOB",
