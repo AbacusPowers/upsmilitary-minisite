@@ -20,7 +20,7 @@ module.exports = function( path ){
         gulp.watch(path.js + '/**/*.js', ['build:js']);
     });
 
-    // gulp.task('watch:html', false, function() {
-    //     gulp.watch(path.css  + '/**/*.html.twig', ['build:css']);
-    // });
+    gulp.task('watch:html', false, function() {
+        gulp.watch(path.css  + '/**/*.html.twig', ['build:css']);
+    });
 };

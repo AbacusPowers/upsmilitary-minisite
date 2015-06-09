@@ -7,6 +7,7 @@ module.exports = function( path ){
 
     var taskDescription = colors.green( colors.white.bgYellow.bold('Deployment task') ,'\n\t   Build all file types' , colors.black.bgYellow('JavaScript'),  colors.blue.bgCyan.inverse('CSS') );
 
+    // gulp.task('build', taskDescription, ['build:css']);
     gulp.task('build', taskDescription, ['build:css', 'build:js']);
 
     gulp.task('build:js', false, ['validate:js', 'lint:js'], function() {
