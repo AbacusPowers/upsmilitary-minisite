@@ -59,21 +59,51 @@
     position: absolute;
     transition: opacity 0.6s ease-out;
     -webkit-transition: opacity 0.6s ease-out;
+    .slider-text-wrapper {
+      position: absolute;
+      text-align: left;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
 
-    .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & {
+    }
+    h1.slider-text {
+      width: 100%;
+      position: relative;
+    }
+    .breakpoint-medium & {
+      height: $header-height--large;
+        h1.slider-text {
+          max-width: 960px;
+
+          padding-left: 6.5rem;
+          margin: 7rem auto 25%;
+        }
+    }
+    .breakpoint-large & {
+      height: $header-height--large;
+        h1.slider-text {
+          max-width: 1200px;
+
+          padding-left: 6.5rem;
+          margin: 7rem auto 33%;
+        }
+    }
+    .breakpoint-wide & {
         height: $header-height--large;
         h1.slider-text {
-          position: absolute;
-          margin-top: 6em;
-          padding: 0 3em;
+          max-width: 1400px;
+
+          padding-left: 6.5rem;
+          margin: 7rem auto 33%;
         }
 
     }
     .breakpoint-small & {
       h1.slider-text {
-        position: absolute;
-        margin-top: 3em;
-        padding: 0 3em;
+        margin-top: 6rem;
+        padding: 0 1em;
       }
     }
 
