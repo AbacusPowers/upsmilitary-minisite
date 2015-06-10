@@ -20,7 +20,7 @@
                     <div class="grid-items-lines">
                         {% include 'VCGBundle:GridItems:transition-guide-culture.html.twig' %}
   
-                      <a href="javascript:void" class="grid-item grid--family">
+                      <a href="javascript:void(0)" class="grid-item grid--family">
                         <img src="{{ asset('bundles/vcg/images/placeholder_logo_2_dark.png') }}" class="icon--large" alt="">
                         <h1>Family</h1>
                         <p>See all the advantages and benefits to working at UPS for veterans, families, students and more.</p>
@@ -30,10 +30,20 @@
                         <h1>Benefits</h1>
                         <p>See all the advantages and benefits to working at UPS for veterans, families, students and more.</p>
                       </a>
-                      <div class="grid-item">
+                      <div class="grid-item grid--ra-guidebook">
                         <img src="{{ asset('bundles/vcg/images/placeholder_logo_2_dark.png') }}" alt="">
                         <h1>Registered Apprentice Program</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, illum. 
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, illum.</p>
+                        <div class="button-group">
+							<a href="{{path('culture_benefits_article',{'slug':'ra-intro'}) }}" class="button black article-link"><i class="fa fa-square-o"></i>&nbsp Intro</a>
+							<a href="{{path('culture_benefits_article',{'slug':'ra-application'}) }}" class="button black article-link"><i class="fa fa-square-o"></i>&nbsp Application Process</a>
+							<a href="{{path('culture_benefits_article',{'slug':'ra-responsibilities'}) }}" class="button black article-link"><i class="fa fa-square-o"></i>&nbsp UPS Responsibilities</a>
+							<a href="{{path('culture_benefits_article',{'slug':'ra-gi-benefits'}) }}" class="button black article-link"><i class="fa fa-square-o"></i>&nbsp Recruiters</a>
+							<a href="{{path('culture_benefits_article',{'slug':'ra-post-911-payments'}) }}" class="button black article-link"><i class="fa fa-square-o"></i>&nbsp Career Fair</a>
+							<a href="{{path('culture_benefits_article',{'slug':'ra-mgib-payments'}) }}" class="button black article-link"><i class="fa fa-square-o"></i>&nbsp Interview</a>
+							<a href="{{path('culture_benefits_article',{'slug':'ra-glossary'}) }}" class="button black article-link"><i class="fa fa-square-o"></i>&nbsp Glossary</a>
+							<a href="{{path('culture_benefits_article',{'slug':'ra-links'}) }}" class="button black article-link"><i class="fa fa-square-o"></i>&nbsp Links</a>
+						</div>
                       </div>
                       <a href="javascript:void(0)" class="grid-item">
                         <img src="{{ asset('bundles/vcg/images/placeholder_logo_2_dark.png') }}" alt="">
