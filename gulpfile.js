@@ -1,7 +1,7 @@
 
 require('./gulp')({
     css: 'src/UPS/VCGBundle/Resources/public/css',
-    js: 'src/UPS/VCGBundle/Resources/public/js',
+    js: 'src/UPS/VCGBundle/Resources/public/js/site-wide',
     sass: 'src/UPS/VCGBundle/Resources/sass',
     svg: 'src/UPS/VCGBundle/Resources',
     url: 'upssymfony.dev/app_dev.php'

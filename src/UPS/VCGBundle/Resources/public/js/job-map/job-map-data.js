@@ -8,7 +8,9 @@ $JOB_MAP_DATA = [
     "zip":"99502",
     "_EE_COUNT":1062,
     "size":"Large",
-    "jobs":"Package Handler, Driver Helper (Oct-Dec), Package Delivery Driver, Feeder Driver, Automotive Mechanic, Facilities Mechanic, Sales Representative, Warehouse Associate,  UPS Freight Over the Road Driver, Part-time Operations Supervisor, Business Analyst"
+    "jobs":"Package Handler, Driver Helper (Oct-Dec), Package Delivery Driver, Feeder Driver, Automotive Mechanic, Facilities Mechanic, Sales Representative, Warehouse Associate,  UPS Freight Over the Road Driver, Part-time Operations Supervisor, Business Analyst",
+    "lat": 61.194537,
+    "lon": -150.000407
   },
   {
     "_LOC_NR":"ALBIR",
@@ -19,7 +21,9 @@ $JOB_MAP_DATA = [
     "zip":"35209",
     "_EE_COUNT":560,
     "size":"Large",
-    "jobs":"Package Handler, Driver Helper (Oct-Dec), Package Delivery Driver, Feeder Driver, Automotive Mechanic, Facilities Mechanic, Sales Representative, Warehouse Associate,  UPS Freight Over the Road Driver, Part-time Operations Supervisor, Business Analyst"
+    "jobs":"Package Handler, Driver Helper (Oct-Dec), Package Delivery Driver, Feeder Driver, Automotive Mechanic, Facilities Mechanic, Sales Representative, Warehouse Associate,  UPS Freight Over the Road Driver, Part-time Operations Supervisor, Business Analyst",
+    "lat": 33.451323,
+    "lon": -86.846902
   },
   {
     "_LOC_NR":"ALROE",
@@ -52,7 +56,9 @@ $JOB_MAP_DATA = [
     "zip":"36109",
     "_EE_COUNT":821,
     "size":"Large",
-    "jobs":"Package Handler, Driver Helper (Oct-Dec), Package Delivery Driver, Feeder Driver, Automotive Mechanic, Facilities Mechanic, Sales Representative, Warehouse Associate,  UPS Freight Over the Road Driver, Part-time Operations Supervisor, Business Analyst"
+    "jobs":"Package Handler, Driver Helper (Oct-Dec), Package Delivery Driver, Feeder Driver, Automotive Mechanic, Facilities Mechanic, Sales Representative, Warehouse Associate,  UPS Freight Over the Road Driver, Part-time Operations Supervisor, Business Analyst",
+    "lat": 32.413937,
+    "lon": -86.304826
   },
   {
     "_LOC_NR":"ALMOB",
