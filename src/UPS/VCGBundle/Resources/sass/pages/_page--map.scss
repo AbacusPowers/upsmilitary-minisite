@@ -6,10 +6,10 @@
         display: inline-block;
     }
     
-    .map-info-container {
-        padding-left: 1em;
-
-        .breakpoint-small & { padding-left: 0em; }
+    .map-info-container p > a {
+        color: #fff;
+        
+        font-size: 0.8rem;
     }
     
     .svg-map {
@@ -41,5 +41,5 @@
         
         .breakpoint-small & { display: none; }
     }
-
+    
 }
