@@ -290,6 +290,35 @@ $grid-item-height: 14.8em;
             border-top: 1px solid rgba( $ups-yellow, 0.1 );
             color: $white;
             margin-top: 0;
+          &:before {
+            font-family: FontAwesome;
+            content: "\f096";
+            position: absolute;
+            left: 0;
+            padding: 0 .5em;
+            color: $white;
+            z-index: 5000;
+          }
+          &:visited {
+            span {
+              &:before {
+                color: $white
+              }
+
+            }
+          }
+          span {
+            display: block;
+            &:before {
+              font-family: FontAwesome;
+              content: "\f046";
+              position: absolute;
+              left: 0;
+              padding: 0 .5em;
+              color: $black;
+            }
+
+          }
         }
         
         &.black:last-child {

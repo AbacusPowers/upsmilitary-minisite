@@ -78,7 +78,8 @@
           max-width: 960px;
 
           padding-left: 6.5rem;
-          margin: 7rem auto 25%;
+          padding-right: 25%;
+          margin: 7rem auto;
         }
     }
     .breakpoint-large & {
@@ -87,7 +88,8 @@
           max-width: 1200px;
 
           padding-left: 6.5rem;
-          margin: 7rem auto 33%;
+          padding-right: 33%;
+          margin: 7rem auto;
         }
     }
     .breakpoint-wide & {
@@ -96,7 +98,8 @@
           max-width: 1400px;
 
           padding-left: 6.5rem;
-          margin: 7rem auto 33%;
+          padding-right: 33%;
+          margin: 7rem auto;
         }
 
     }
