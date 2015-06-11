@@ -27,3 +27,7 @@ src/UPS/VCGBundle/Resources/public/css/*
 #IGNORE BOWER COMPONENTS
 bower_components/
 src/UPS/VCGBundle/Resources/public/js/vendor/
+
+# Preserve Job Map data import
+/web/js/*.js
+!web/js/job-map/*
