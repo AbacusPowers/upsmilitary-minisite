@@ -12,23 +12,34 @@ $( document ).ready(function() {
     /**
      * AUTO ROTATE
      */
-    var elements = $('input[type="radio"]','.carousel-inner');
+    var elements = $('.carousel-inner input[type="radio"]');
     var index = 0;
 
     var doNext = null;
     doNext = function() {
+        //if(item)index = item;
+
         var element = elements.eq(index);
+        var x = setTimeout(doNext, 6000);
         // do work
+
+        $('.carousel-inner input[type="radio"]').change(function(){
+            newIndex = $(this).index('.carousel-inner input[type="radio"]');
+            index = newIndex;
+        });
+
         element.prop('checked',true);
         if (index < elements.length) {
             index++;
-            setTimeout(doNext, 6000);
+            x;
         } else {
             index = 0;
-            setTimeout(doNext, 6000);
+            x;
         }
     }
     doNext();
+
+
 });
 
 /**

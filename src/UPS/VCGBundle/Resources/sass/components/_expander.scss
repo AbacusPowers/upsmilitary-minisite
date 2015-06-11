@@ -77,6 +77,7 @@
     margin-right: 80px;
     font-weight: 700;
     padding-bottom: 0px;
+
     p{
       line-height: 1.9;
     }
@@ -101,11 +102,15 @@
   }
 
   .expander__child p img { /*DD Form 214 guide*/
-    // display: none;
+    display: none;
     float: left;
+    clear: both;
     margin: 0.4em 1em 1em 0;
+
   }
-  
+  .open-expander .expander__child p img {
+    display: block;
+  }
   .faq.expander__child p { /*for FAQs*/
     margin-left: 4em;
   }

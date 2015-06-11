@@ -48,3 +48,66 @@
 
 
 }
+.article {
+  .group-links {
+    list-style-type: none;
+    margin-bottom: 3rem;
+    @include clearfix;
+    li.group-link {
+      display: block;
+      float: left;
+      width: 49%;
+      margin-top: .5em;
+      &:nth-child(2n+1) {
+        clear: both;
+      }
+      &:nth-child(odd) {
+        margin-right: 1%;
+      }
+
+
+      a.button {
+        display: block;
+        line-height: 3em;
+        padding-left: 2em;
+        position: relative;
+        &:before {
+          font-family: FontAwesome;
+          content: "\f096";
+          position: absolute;
+          left: 0;
+          padding: 0 .5em;
+          color: $white;
+          z-index: 5000;
+        }
+        &:visited {
+          span {
+            &:before {
+              color: $white
+            }
+
+          }
+        }
+        span {
+          display: block;
+          &:before {
+            font-family: FontAwesome;
+            content: "\f046";
+            position: absolute;
+            left: 0;
+            padding: 0 .5em;
+            color: $black;
+          }
+
+        }
+        &.black {
+          background: $black;
+          color: $white;
+          &:hover {
+            background: $grey;
+          }
+        }
+      }
+    }
+  }
+}

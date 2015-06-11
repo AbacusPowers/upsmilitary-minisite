@@ -2,7 +2,7 @@
 
 #overlay {
     display: none;
-    .article &, .video &, .events & {
+    .article &, .video &, .events &, .faqs & {
         display: block;
     }
     position: fixed; 
@@ -17,7 +17,7 @@
 }
 #modal {
   height: 100%;
-  .article &, .video &, .events & {
+  .article &, .video &, .events &, .faqs & {
     display: block;
     .hold-modal & {
       display: none;

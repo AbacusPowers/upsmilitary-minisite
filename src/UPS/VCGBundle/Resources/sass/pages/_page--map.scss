@@ -14,11 +14,10 @@ $state-list-scroll-height-wide:  $map-height-wide - $map-control-height;
 
     #side--a {
 
-        .map-wrapper {
-            // background: $grey--dark;
-        }
-       
-    }
+       .map-wrapper {
+         overflow: hidden;
+       }
+
     .map-controls {
         padding: 2.6em 3em 0em 3em;
         height: $map-control-height;

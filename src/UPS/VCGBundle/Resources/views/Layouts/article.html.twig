@@ -7,8 +7,10 @@
         <div id="modal-content">
             <img src="{{ asset('bundles/vcg/images/UPS-shield-logo.png') }}" alt="" class="logo">
             {% block modalbody %}
-                    <div id="single-modal-content"> 
+                    <div id="single-modal-content">
+                    {% if article.File %}
                         <a href="/bundles/vcg/downloads/{{ article.File }}" class="article-download"><i class="fa fa-download"></i>&nbspDownload</a>
+                    {% endif %}
                     {{ article.Body | raw }} 
                     {% if article.Expanders %}
                         <div class="component--expander">
@@ -33,10 +35,91 @@
                             {% endfor %}
                         </div>
                     {% endif %}
+                    {%  if article.Group %}
+                        {% if article.Group == 'building-your-brand' %}
+                            <div>
+                                <h3>Related Articles</h3>
+                                <ul class="group-links">
+                                    <li class="group-link">
+                                        <a href="{{path('transition_guide_article',{'slug':'cover-letter-resume'}) }}" class="article-link button black history-checkbox"><span></span>Resume & Cover Letter</a>
+                                    </li>
+                                    <li class="group-link">
+                                        <a href="{{path('transition_guide_article',{'slug':'marketing-yourself'}) }}" class="article-link button black history-checkbox"><span></span>Marketing Yourself Online</a>
+                                    </li>
+                                    <li class="group-link">
+                                        <a href="{{path('transition_guide_article',{'slug':'networking-essentials'}) }}" class="article-link button black history-checkbox"><span></span>Networking</a>
+                                    </li>
+                                    <li class="group-link">
+                                        <a href="{{path('transition_guide_article',{'slug':'cover-letter-resume'}) }}" class="article-link button black history-checkbox"><span></span>Dealing With Recruiters</a>
+                                    </li>
+                                    <li class="group-link">
+                                        <a href="{{path('transition_guide_article',{'slug':'cover-letter-resume'}) }}" class="article-link button black history-checkbox"><span></span>Preparing For Career Fairs</a>
+                                    </li>
+                                    <li class="group-link">
+                                        <a href="{{path('transition_guide_article',{'slug':'cover-letter-resume'}) }}" class="article-link button black history-checkbox"><span></span>Interviews</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        {% endif %}
+                        {% if article.Group == 'culture-benefits' %}
+                            <div>
+                                <h3>Related Articles</h3>
+                                <ul class="group-links">
+                                    <li class="group-link">
+                                        <a href="{{path('culture_benefits_article',{'slug':'family-programs'}) }}" class="article-link button black history-checkbox"><span></span>Resume & Cover Letter</a>
+                                    </li>
+                                    <li class="group-link">
+                                        <a href="{{path('culture_benefits_article',{'slug':'benefits'}) }}" class="article-link button black history-checkbox"><span></span>Marketing Yourself Online</a>
+                                    </li>
+                                    <li class="group-link">
+                                        <a href="{{path('culture_benefits_article',{'slug':'student-programs'}) }}" class="article-link button black history-checkbox"><span></span>Networking</a>
+                                    </li>
+                                    <li class="group-link">
+                                        <a href="{{path('culture_benefits_article',{'slug':'esgr'}) }}" class="article-link button black history-checkbox"><span></span>Dealing With Recruiters</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        {% endif %}
+                        {% if article.Group == 'registered-apprentice' %}
+                            <div>
+                                <h3>Related Articles</h3>
+                                <ul class="group-links">
+                                    <li class="group-link">
+                                        <a href="{{path('culture_benefits_article',{'slug':'ra-intro'}) }}" class="article-link button black history-checkbox"><span></span>Resume & Cover Letter</a>
+                                    </li>
+                                    <li class="group-link">
+                                        <a href="{{path('culture_benefits_article',{'slug':'ra-application'}) }}" class="article-link button black history-checkbox"><span></span>Marketing Yourself Online</a>
+                                    </li>
+                                    <li class="group-link">
+                                        <a href="{{path('culture_benefits_article',{'slug':'ra-responsibilities'}) }}" class="article-link button black history-checkbox"><span></span>Networking</a>
+                                    </li>
+                                    <li class="group-link">
+                                        <a href="{{path('culture_benefits_article',{'slug':'ra-gi-benefits'}) }}" class="article-link button black history-checkbox"><span></span>Dealing With Recruiters</a>
+                                    </li>
+                                    <li class="group-link">
+                                        <a href="{{path('culture_benefits_article',{'slug':'ra-post-911-payments'}) }}" class="article-link button black history-checkbox"><span></span>Marketing Yourself Online</a>
+                                    </li>
+                                    <li class="group-link">
+                                        <a href="{{path('culture_benefits_article',{'slug':'ra-mgib-payments'}) }}" class="article-link button black history-checkbox"><span></span>Networking</a>
+                                    </li>
+                                    <li class="group-link">
+                                        <a href="{{path('culture_benefits_article',{'slug':'ra-glossary'}) }}" class="article-link button black history-checkbox"><span></span>Dealing With Recruiters</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        {% endif %}
+                    {% endif %}
+
                     </div>
+
             {% endblock %}
+
             <a href="{% block parentPageLink %}{{ path('page', {'slug': article.Parent | raw })}}{% endblock %}" id="close-modal"><i class="fa fa-times"></i></a>
-            <a href="{% block prevArticleLink %}{{ path(route, {'slug': article.Prev | raw })}}{% endblock %}" id="prev-article"><i class="fa fa-angle-left"></i></a>
-            <a href="{% block nextArticleLink %}{{ path(route, {'slug': article.Next | raw })}}{% endblock %}" id="next-article"><i class="fa fa-angle-right"></i></a>
+            {% if article.Prev %}
+                <a href="{% block prevArticleLink %}{{ path(route, {'slug': article.Prev | raw })}}{% endblock %}" id="prev-article"><i class="fa fa-angle-left"></i></a>
+            {% endif %}
+            {% if article.Prev %}
+                <a href="{% block nextArticleLink %}{{ path(route, {'slug': article.Next | raw })}}{% endblock %}" id="next-article"><i class="fa fa-angle-right"></i></a>
+            {% endif %}
         </div>
 {% endblock %}
