@@ -5,9 +5,9 @@
      */
     var CONST = {
         ATTR_PEG: [
-            { fill: '#d80000' }, // Large
-            { fill: '#0000d8' }, // Medium
-            { fill: '#00d800' }  // Small
+            { fill: '#d83030' }, // Large
+            { fill: '#3030d8' }, // Medium
+            { fill: '#30d848' }  // Small
         ],
 
         BASE_URL:           '/js/job-map/',
