@@ -286,7 +286,6 @@
                 sm.llh = smc.top - smc.bottom;
                 sm.llw = smc.left - smc.right;
             }
-            console.log("submaps = ", this.submaps);
             
             var statesGroup = this.statesGroup = snap.select('g.svg-states-group');
             statesGroup.transform('0,0,0,0,0,0');
