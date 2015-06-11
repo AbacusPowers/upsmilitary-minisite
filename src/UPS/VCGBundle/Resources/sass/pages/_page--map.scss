@@ -1,4 +1,8 @@
 .page--map {
+
+    #side--a {
+       
+    }
     
     .map-controls form > div {
         margin-right: 1em;
@@ -24,7 +28,7 @@
     }
 
     #job-map--refresh {
-        color: #474747;
+        color: $ups-grey-1;
         font-weight: bold;
         opacity: 0;
         
@@ -41,5 +45,62 @@
         
         .breakpoint-small & { display: none; }
     }
+
+    .map-info-container {
+        padding-top: 2.6em;
+    }
     
+    .map-info--state {
+        display: block;
+
+         &:after {
+            @include pseudo-block($vertical-thread-width);
+            background: $white05;
+            height: 100%;
+            top: 0;
+            left: 50%;
+
+            .breakpoint-small & {
+                content: none;
+            }
+        }    
+
+        h1 {
+            // color: $ups-yellow;
+            font-size: 1.7em;
+            font-weight: 400;
+            margin-left: 3rem;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    .component--expander {
+        margin-bottom: 3em;
+        border-top: 1px solid rgba( $ups-grey-1, 0.3);
+        .expander__wrapper {
+            min-height: 3.5em;
+            
+            ul li {
+                display: inline-block;
+            }
+
+            & > span{
+                background: red;
+            }
+        }
+
+        h2 {
+            margin-right: 0;
+        }
+
+        .component--expander>.expander__wrapper.open-expander{
+            background: $white05;
+        }
+        .component--expander {
+            border-top: none;
+        }
+    }
+
+
 }

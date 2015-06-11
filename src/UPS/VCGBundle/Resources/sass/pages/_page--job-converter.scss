@@ -9,11 +9,183 @@ and open the template in the editor.
 */
 
 .page .page--job-converter {
+
     .intro {
         /*position: relative;*/
     }
+    
+    
+
+    // .full-width .form-section {
+    //         max-width: 40em;
+    //         background-color: $white10;
+    //     }
+
     .form-section {
-        max-width: 900px;
-        margin: 0 auto;
+        padding: 2.6em 3em 3em 3em;
+        // max-width: 30em;
+        margin: 0 auto auto auto;
+        background: $grey--dark;
+        height: 100%;
+        
+        //  -webkit-transition: height 1.5s ease-out;
+        // transition: height 1.5s ease-out;
+
+        .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & {
+            padding: 3em 3em 10em 6.5em;
+        }
+
+        img {
+            @include site-icon;
+            margin-left: 0;
+            margin-right: 1em;
+        }
+        
+        p.instructions {
+            font-size: 0.9em;
+            margin-left: 6em;
+            margin-bottom: 0.8em;
+            margin-top: -0.3em;
+        }
+
+        select {
+            position: relative;
+            width: 100%;
+            // z-index: 100;
+        }
+
+
     }
+
+    #side--a {
+        position: relative;
+        // z-index: 10;
+    }
+
+    #side--b{
+        position: relative;
+        // padding-bottom: 3em;
+
+        &:before {
+            @include pseudo-block($vertical-thread-width);
+            background: $white05;
+            height: 100%;
+            left: 0;
+
+            .breakpoint-small & {
+                content: none;
+            }
+        }
+        
+
+        .component--expander {
+            margin-bottom: 3em;
+
+            .expander__wrapper:after {
+                @include pseudo-block(100px);
+                width: 100%;
+                right: 100%;
+                height: calc( 200% - 1px );
+                z-index: 1;
+                top: 0;
+                background: $grey--dark;
+            }
+
+            .expander__child p:last-of-type {
+                padding-bottom: 2em;
+            }
+        }
+
+        #military-job {
+            // border-left: 10px solid $white05;
+            border-bottom: 1px solid rgba( $ups-grey-1, 0.3);
+            padding: 2.6em 3em 1.5em 3em;
+            -webkit-transition: opacity 1.5s ease-out;
+            transition: opacity 1.5s ease-out;
+            
+            h1 {
+                color: $white;
+            }
+
+            h4, i, .tip__icon {
+                color: $ups-yellow;
+            }
+
+            h3 {
+                // margin-top: 0;
+                color: $grey--medium;
+            }
+
+            h4 {
+                text-transform: uppercase;
+            }
+
+            p {
+                margin: 1em 0;
+            }
+
+            #military-job-description {
+                color: $grey--medium;
+                font-size: 0.9em;
+            }
+
+            p.tip {
+                font-size: 0.9em;
+            }
+        }
+
+        h1#job-types {
+            display: none;
+            width: 100%;
+            background: $ups-yellow;
+            padding: 0.5em;
+        }
+        .component--expander {
+            
+        }
+    }
+    
+    .job-converter-label {
+        color: $ups-yellow;
+        margin-top: 2em;
+    }
+    
+    .error-spinner-wrapper {
+        position: relative;
+        height: 3em;
+        text-align: center;
+        padding-top: 0.5em;
+    }
+    
+    img#ajax-spinner {
+        // display: inline-block;
+        // width: 100%;
+        margin-top: 2em;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .job-converter-job-search {
+        padding: 0 3em 3em 1em;
+
+        h4 {
+            color: $white;
+            margin-top: 0;
+        }
+
+        label:first-of-type{
+            margin-top: 0;
+        }
+
+        select {
+            width: 100%;
+            margin-bottom: 2.5em;
+        }
+
+        input[type=submit] {
+
+        }
+    }
+
+
 }

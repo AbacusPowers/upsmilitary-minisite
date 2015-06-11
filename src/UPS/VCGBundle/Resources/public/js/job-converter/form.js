@@ -39,7 +39,7 @@ $( document ).ready(function() {
     });
     $('#job-code').on('input',function(){
         if(hints.indexOf( $(this).val() ) <= 0) {
-            $('#form-error').text('Please use a job from the list of suggestions.');
+            $('#form-error').text('Please choose from the list of suggestions.');
             $('#form-error').removeClass('hidden');
             $('input[type="submit"]').prop('disabled',false);
         } else {
@@ -74,6 +74,9 @@ $( document ).ready(function() {
         $('#form-error').addClass('hidden');
         $('#form-error').text('');
         $('#military-job').addClass('hidden');
+        $('#job-types').addClass('hidden');
+        $('.component--expander').addClass('hidden');
+
         
         branch = $('#branch-of-service').val();
         jobCode = $('#job-code').val();
@@ -93,6 +96,8 @@ $( document ).ready(function() {
                         match = obj;
                         if(match['Branch'] === branch){
                             $('#military-job').removeClass('hidden');
+                            $('#job-types').removeClass('hidden');
+                            $('.component--expander').removeClass('hidden');
                             $('#military-job-title').text(match["MOS title"]);
                             $('#military-job-description').text(match["MOS description"]);
                             $('#side--a').removeClass('full-width');
@@ -130,7 +135,7 @@ $( document ).ready(function() {
                                 $('.hidden-part[data-id="11"]').parent('.expander__wrapper').removeClass('hidden');
                             }          
                         } else {
-                            $('#form-error').text('Job does not match branch of service.');
+                            $('#form-error').text('Sorry, this job does not match branch of service.');
                             $('#form-error').removeClass('hidden');
                         }
                         matched = true;
