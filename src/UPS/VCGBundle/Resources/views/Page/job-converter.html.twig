@@ -17,27 +17,43 @@
 {% block breadcrumbs %}
         <a href="{{ url('homepage') }}">UPS Veteran Gateway</a>
         <a href="#">Career Explorer</a>
-        <a href="#">Military Job Converter</a>
+        <a href="#">Military Skills Translator</a>
 {% endblock %}
 
 
 {% block page_content %}
         <div class="veteranGateway__liner">
             <div class="title-block">
-                <h1>UPS Job Converter</h1>
+                <h1>Military Skills Translator</h1>
                 <p>
-                    Lorem ipsum dolor sit amet
+                    Find a great starting point at UPS
                 </p>
             </div>
+            
             <div class="page page--job-converter">
-                <div id="side--a" class="full-width">
+            <nav class="nav--career-explorer">
+                <a href="{{ path('page',{'slug':'jobs'}) }}">
+                    <img src="{{ asset('bundles/vcg/images/handshake.png') }}" class="" alt="">
+                    <span class="caption">Jobs</span>
+                </a>
+                <a href="javascript:void(0)" class="current-page">
+                    <img src="{{ asset('bundles/vcg/images/lightbulb.png') }}" class="" alt="">
+                    <span class="caption">Skills</span>
+                </a>
+                <a href="{{ path('page',{'slug':'job-map'}) }}">
+                    <img src="{{ asset('bundles/vcg/images/bubbles.png') }}" class="" alt="">
+                    <span class="caption">Map</span>
+                </a>
+            </nav>
+                <div id="side--a" class="ull-width">
                     <section class="form-section">
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                        </p>
+                        <img src="{{ asset('bundles/vcg/images/lightbulb.png') }}" class="" alt="">
+
+                        <p class="instructions">Select your branch of service and fill in the code or name of your military specialty or rating.</p>
+                        <p class="instructions"> We'll give you a list of jobs that could be great starting points for your career at UPS.</p>
 
                         <form action="" name="job-converter" id="job-converter">
-                            <label class="job-converter-label" for="branch-of-service">Branch of Service</label>
+                            <label class="job-converter-label" for="branch-of-service">1. Your Branch of Service</label>
                             <select name="branch-of-service" id="branch-of-service">
                                 <option value="">Select Branch</option>
                                 <option value="Air Force">Air Force</option>
@@ -46,22 +62,29 @@
                                 <option value="Marines">Marines</option>
                                 <option value="Navy">Navy</option>
                             </select>
-                            <label class="job-converter-label disabled-input" for="job-code">Job or MOS Code</label>
-                            <input type="text" name="job-code" id="job-code" class="disabled-input" disabled />
-                            <p id="form-error" class="hidden"></p>
+                            <label class="job-converter-label disabled-input" for="job-code">2. Your Military Specialty/Rating Name or Code</label>
+                            <input type="text" name="job-code" id="job-code" class="disabled-input" placeholder="Specialty/Rating" disabled alt="" />
+                           
+                            <div class="error-spinner-wrapper">
+                                <p id="form-error" class="hidden"></p>
+                                <!-- <img id="ajax-spinner" class="working-spinner hidden" src="{{ asset('bundles/vcg/images/ajax-loader-2.gif') }}" alt="working..."> -->
+                            </div>
 
-                            <img id="ajax-spinner" class="hidden" src="{{ asset('bundles/vcg/images/ajax-loader.gif') }}" alt="working...">
-                            
-                            <input type="submit" value="Submit" disabled />
+                            <input type="submit" value="Translate" class="disabled-input" disabled />
                         </form>
-                        <div id="military-job" class="hidden">
-                            <h1 id="military-job-title"></h1>
-                            <p id="military-job-description"></p>
-                        </div>
+                        
                     </section>
                 </div>
                 <div id="side--b">
-                    <div class="component--expander">
+                    <div id="military-job" class="hidden">
+                        <h3>Your Military Summary:</h3>
+                        <h1 id="military-job-title"></h1>
+                        <p id="military-job-description"></p>
+                        <h4><i class="fa fa-chevron-circle-down"></i>&nbsp;See below for suggested starting points for your UPS career.</h4> 
+                        <p class="tip"><i class="fa fa-star"></i>&nbsp; <span class="tip__icon">TIP:&nbsp;</span>You may qualify for additional jobs based on your other skills, experience, and education.</p>
+                    </div>
+                    <h1 id="job-types" class="hidden">Suggested UPS Jobs</h1>
+                    <div class="component--expander hidden">
                     <section class='expander__wrapper hidden'>
                         <h2 class='expander__parent'>Package Handler</h2>
                         <h3>Lorem Ipsum</h3>
@@ -78,10 +101,10 @@
                                     Non itaque saepe provident architecto vitae! Quia consequatur labore eos commodi, consequuntur! Repudiandae, laboriosam, optio. Itaque deleniti, ipsam nemo sequi veritatis qui. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo id perferendis sapiente quisquam eveniet praesentium quidem, error atque ea.
                                 </p>
                                 <form class="job-converter-job-search">
-                                    <p>Click "Search" to see openings for this job worldwide</p>
-                                    <label for="zip-code">Zip Code <span class="optional">(optional)</span></label>                                    
-                                    <input name="zip-code" type="text" class="zip-code" />
-                                    <label for="radius">Radius <span class="optional">(optional)</span></label>                                    
+                                    <h4>Search to see openings for this job near you:</h4>                                    
+                                    <label for="zip-code" class="job-converter-label">ZIP Code <span class="optional job-converter-label">(optional)</span></label>                                    
+                                    <input name="zip-code" type="text" class="zip-code" placeholder="ZIP Code" />
+                                    <label for="radius" class="job-converter-label">Radius <span class="optional job-converter-label">(optional)</span></label>                                    
                                     <select name="radius" class="radius">
                                         <option value="5">5 miles</option>
                                         <option value="10">10 miles</option>
@@ -110,10 +133,9 @@
                                     Non itaque saepe provident architecto vitae! Quia consequatur labore eos commodi, consequuntur! Repudiandae, laboriosam, optio. Itaque deleniti, ipsam nemo sequi veritatis qui. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo id perferendis sapiente quisquam eveniet praesentium quidem, error atque ea.
                                 </p>
                                 <form class="job-converter-job-search">
-                                    <p>Click "Search" to see openings for this job worldwide</p>
-                                    <label for="zip-code">Zip Code <span class="optional">(optional)</span></label>                                    
-                                    <input name="zip-code" type="text" class="zip-code" />
-                                    <label for="radius">Radius <span class="optional">(optional)</span></label>                                    
+                                    <h4>Search to see openings for this job near you:</h4>                                    <label for="zip-code" class="job-converter-label">ZIP Code <span class="optional job-converter-label">(optional)</span></label>                                    
+                                    <input name="zip-code" type="text" class="zip-code" placeholder="ZIP Code" />
+                                    <label for="radius" class="job-converter-label">Radius <span class="optional job-converter-label">(optional)</span></label>                                    
                                     <select name="radius" class="radius">
                                         <option value="5">5 miles</option>
                                         <option value="10">10 miles</option>
@@ -142,10 +164,9 @@
                                     Non itaque saepe provident architecto vitae! Quia consequatur labore eos commodi, consequuntur! Repudiandae, laboriosam, optio. Itaque deleniti, ipsam nemo sequi veritatis qui. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo id perferendis sapiente quisquam eveniet praesentium quidem, error atque ea.
                                 </p>
                                 <form class="job-converter-job-search">
-                                    <p>Click "Search" to see openings for this job worldwide</p>
-                                    <label for="zip-code">Zip Code <span class="optional">(optional)</span></label>                                    
-                                    <input name="zip-code" type="text" class="zip-code" />
-                                    <label for="radius">Radius <span class="optional">(optional)</span></label>                                    
+                                    <h4>Search to see openings for this job near you:</h4>                                    <label for="zip-code" class="job-converter-label">ZIP Code <span class="optional job-converter-label">(optional)</span></label>                                    
+                                    <input name="zip-code" type="text" class="zip-code" placeholder="ZIP Code"/>
+                                    <label for="radius" class="job-converter-label">Radius <span class="optional job-converter-label">(optional)</span></label>                                    
                                     <select name="radius" class="radius">
                                         <option value="5">5 miles</option>
                                         <option value="10">10 miles</option>
@@ -174,10 +195,10 @@
                                     Non itaque saepe provident architecto vitae! Quia consequatur labore eos commodi, consequuntur! Repudiandae, laboriosam, optio. Itaque deleniti, ipsam nemo sequi veritatis qui. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo id perferendis sapiente quisquam eveniet praesentium quidem, error atque ea.
                                 </p>
                                 <form class="job-converter-job-search">
-                                    <p>Click "Search" to see openings for this job worldwide</p>
-                                    <label for="zip-code">Zip Code <span class="optional">(optional)</span></label>
-                                    <input name="zip-code" type="text" class="zip-code" />
-                                    <label for="radius">Radius <span class="optional">(optional)</span></label>
+                                    <h4>Search to see openings for this job near you:</h4>                                    
+                                    <label for="zip-code" class="job-converter-label">ZIP Code <span class="optional job-converter-label">(optional)</span></label>
+                                    <input name="zip-code" type="text" class="zip-code" placeholder="ZIP Code" />
+                                    <label for="radius" class="job-converter-label">Radius <span class="optional job-converter-label">(optional)</span></label>
                                     <select name="radius" class="radius">
                                         <option value="5">5 miles</option>
                                         <option value="10">10 miles</option>
@@ -206,10 +227,10 @@
                                     Non itaque saepe provident architecto vitae! Quia consequatur labore eos commodi, consequuntur! Repudiandae, laboriosam, optio. Itaque deleniti, ipsam nemo sequi veritatis qui. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo id perferendis sapiente quisquam eveniet praesentium quidem, error atque ea.
                                 </p>
                                 <form class="job-converter-job-search">
-                                    <p>Click "Search" to see openings for this job worldwide</p>
-                                    <label for="zip-code">Zip Code <span class="optional">(optional)</span></label>                                    
-                                    <input name="zip-code" type="text" class="zip-code" />
-                                    <label for="radius">Radius <span class="optional">(optional)</span></label>                                    
+                                    <h4>Search to see openings for this job near you:</h4>                                    
+                                    <label for="zip-code" class="job-converter-label">ZIP Code <span class="optional job-converter-label">(optional)</span></label>                                    
+                                    <input name="zip-code" type="text" class="zip-code" placeholder="ZIP Code" />
+                                    <label for="radius" class="job-converter-label">Radius <span class="optional job-converter-label">(optional)</span></label>                                    
                                     <select name="radius" class="radius">
                                         <option value="5">5 miles</option>
                                         <option value="10">10 miles</option>
@@ -238,10 +259,9 @@
                                     Non itaque saepe provident architecto vitae! Quia consequatur labore eos commodi, consequuntur! Repudiandae, laboriosam, optio. Itaque deleniti, ipsam nemo sequi veritatis qui. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo id perferendis sapiente quisquam eveniet praesentium quidem, error atque ea.
                                 </p>
                                 <form class="job-converter-job-search">
-                                    <p>Click "Search" to see openings for this job worldwide</p>
-                                    <label for="zip-code">Zip Code <span class="optional">(optional)</span></label>                                    
-                                    <input name="zip-code" type="text" class="zip-code" />
-                                    <label for="radius">Radius <span class="optional">(optional)</span></label>                                    
+                                    <h4>Search to see openings for this job near you:</h4>                                    <label for="zip-code" class="job-converter-label">ZIP Code <span class="optional job-converter-label">(optional)</span></label>                                    
+                                    <input name="zip-code" type="text" class="zip-code" placeholder="ZIP Code" />
+                                    <label for="radius" class="job-converter-label">Radius <span class="optional job-converter-label">(optional)</span></label>                                    
                                     <select name="radius" class="radius">
                                         <option value="5">5 miles</option>
                                         <option value="10">10 miles</option>
@@ -271,10 +291,9 @@
                                     Non itaque saepe provident architecto vitae! Quia consequatur labore eos commodi, consequuntur! Repudiandae, laboriosam, optio. Itaque deleniti, ipsam nemo sequi veritatis qui. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo id perferendis sapiente quisquam eveniet praesentium quidem, error atque ea.
                                 </p>
                                 <form class="job-converter-job-search">
-                                    <p>Click "Search" to see openings for this job worldwide</p>
-                                    <label for="zip-code">Zip Code <span class="optional">(optional)</span></label>                                    
-                                    <input name="zip-code" type="text" class="zip-code" />
-                                    <label for="radius">Radius <span class="optional">(optional)</span></label>                                    
+                                    <h4>Search to see openings for this job near you:</h4>                                    <label for="zip-code" class="job-converter-label">ZIP Code <span class="optional job-converter-label">(optional)</span></label>                                    
+                                    <input name="zip-code" type="text" class="zip-code" placeholder="ZIP Code" />
+                                    <label for="radius" class="job-converter-label">Radius <span class="optional job-converter-label">(optional)</span></label>                                    
                                     <select name="radius" class="radius">
                                         <option value="5">5 miles</option>
                                         <option value="10">10 miles</option>
@@ -303,9 +322,8 @@
                                     Non itaque saepe provident architecto vitae! Quia consequatur labore eos commodi, consequuntur! Repudiandae, laboriosam, optio. Itaque deleniti, ipsam nemo sequi veritatis qui. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo id perferendis sapiente quisquam eveniet praesentium quidem, error atque ea.
                                 </p>
                                 <form class="job-converter-job-search">
-                                    <p>Click "Search" to see openings for this job worldwide</p>
-                                    <label for="zip-code">Zip Code <span class="optional">(optional)</span></label>                                    <input name="zip-code" type="text" class="zip-code" />
-                                    <label for="radius">Radius <span class="optional">(optional)</span></label>                                    <select name="radius" class="radius">
+                                    <h4>Search to see openings for this job near you:</h4>                                    <label for="zip-code" class="job-converter-label">ZIP Code <span class="optional job-converter-label">(optional)</span></label>                                    <input name="zip-code" type="text" class="zip-code" placeholder="ZIP Code" />
+                                    <label for="radius" class="job-converter-label">Radius <span class="optional job-converter-label">(optional)</span></label>                                    <select name="radius" class="radius">
                                         <option value="5">5 miles</option>
                                         <option value="10">10 miles</option>
                                         <option value="25">25 miles</option>
@@ -333,10 +351,9 @@
                                     Non itaque saepe provident architecto vitae! Quia consequatur labore eos commodi, consequuntur! Repudiandae, laboriosam, optio. Itaque deleniti, ipsam nemo sequi veritatis qui. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo id perferendis sapiente quisquam eveniet praesentium quidem, error atque ea.
                                 </p>
                                 <form class="job-converter-job-search">
-                                    <p>Click "Search" to see openings for this job worldwide</p>
-                                    <label for="zip-code">Zip Code <span class="optional">(optional)</span></label>                                    
-                                    <input name="zip-code" type="text" class="zip-code" />
-                                    <label for="radius">Radius <span class="optional">(optional)</span></label>                                    
+                                    <h4>Search to see openings for this job near you:</h4>                                    <label for="zip-code" class="job-converter-label">ZIP Code <span class="optional job-converter-label">(optional)</span></label>                                    
+                                    <input name="zip-code" type="text" class="zip-code" placeholder="ZIP Code" />
+                                    <label for="radius" class="job-converter-label">Radius <span class="optional job-converter-label">(optional)</span></label>                                    
                                     <select name="radius" class="radius">
                                         <option value="5">5 miles</option>
                                         <option value="10">10 miles</option>
@@ -365,10 +382,9 @@
                                     Non itaque saepe provident architecto vitae! Quia consequatur labore eos commodi, consequuntur! Repudiandae, laboriosam, optio. Itaque deleniti, ipsam nemo sequi veritatis qui. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo id perferendis sapiente quisquam eveniet praesentium quidem, error atque ea.
                                 </p>
                                 <form class="job-converter-job-search">
-                                    <p>Click "Search" to see openings for this job worldwide</p>
-                                    <label for="zip-code">Zip Code <span class="optional">(optional)</span></label>                                    
-                                    <input name="zip-code" type="text" class="zip-code" />
-                                    <label for="radius">Radius <span class="optional">(optional)</span></label>                                    
+                                    <h4>Search to see openings for this job near you:</h4>                                    <label for="zip-code" class="job-converter-label">ZIP Code <span class="optional job-converter-label">(optional)</span></label>                                    
+                                    <input name="zip-code" type="text" class="zip-code" placeholder="ZIP Code" />
+                                    <label for="radius" class="job-converter-label">Radius <span class="optional job-converter-label">(optional)</span></label>                                    
                                     <select name="radius" class="radius">
                                         <option value="5">5 miles</option>
                                         <option value="10">10 miles</option>
@@ -397,10 +413,9 @@
                                     Non itaque saepe provident architecto vitae! Quia consequatur labore eos commodi, consequuntur! Repudiandae, laboriosam, optio. Itaque deleniti, ipsam nemo sequi veritatis qui. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo id perferendis sapiente quisquam eveniet praesentium quidem, error atque ea.
                                 </p>
                                 <form class="job-converter-job-search">
-                                    <p>Click "Search" to see openings for this job worldwide</p>
-                                    <label for="zip-code">Zip Code <span class="optional">(optional)</span></label>                                    
-                                    <input name="zip-code" type="text" class="zip-code" />
-                                    <label for="radius">Radius <span class="optional">(optional)</span></label>                                    
+                                    <h4>Search to see openings for this job near you:</h4>                                    <label for="zip-code" class="job-converter-label">ZIP Code <span class="optional job-converter-label">(optional)</span></label>                                    
+                                    <input name="zip-code" type="text" class="zip-code" placeholder="ZIP Code" />
+                                    <label for="radius" class="job-converter-label">Radius <span class="optional job-converter-label">(optional)</span></label>                                    
                                     <select name="radius" class="radius">
                                         <option value="5">5 miles</option>
                                         <option value="10">10 miles</option>

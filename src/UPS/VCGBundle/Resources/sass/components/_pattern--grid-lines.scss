@@ -145,17 +145,7 @@ $grid-item-height: 14.8em;
     }
 
     .grid-item img {
-        // @include position(absolute, 1em null null 1em );
-        float: left;
-        @include size(3.5em);
-        margin-left: 1.5em;
-        border-radius: 50%;
-        border: 1px $ups-yellow solid;
-        display: block;
-        // height: 2.5em;
-        // margin-bottom: 1.2em;
-        // opacity: 0.2;
-        padding: 0.4em;
+        @include site-icon;
 
         .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & {    
             // @include position(absolute, 2em null null 2em );
@@ -598,7 +588,7 @@ $grid-item-height: 14.8em;
 
      }
 
-    .grid-item:nth-child(5) {
+    .grid-item:nth-child(5) { /*social*/
         height: auto;
         a {
             display: inline-block;
@@ -641,7 +631,7 @@ $grid-item-height: 14.8em;
     .grid-item:nth-child(5) {
         border-left: 0px solid $ups-yellow;
         border-bottom: 0px;
-        padding-bottom: 4em;
+        padding-bottom: 2em;
 
         .breakpoint-small & {
             border-bottom: 1px solid $ups-yellow;
@@ -654,10 +644,10 @@ $grid-item-height: 14.8em;
         // border-left: 1px solid $ups-yellow;
         padding-bottom: 4em;
         input[type="text"] {
-            background: $grey60;
+            background: $ups-grey-1;
             border-radius: 0px;
             border: 0;
-            margin: 1.5em 1.5em 1.5em;
+            margin: 1.3em 1.5em 1.5em;
             margin-right: 0;
             width: calc( 100% - 6em );
             height: 2.5em;
@@ -669,7 +659,7 @@ $grid-item-height: 14.8em;
             padding: 0.3em 0 0 0.5em;
             position: absolute;
             right: 1.5em;
-            margin-top: 1.5em;
+            margin-top: 1.3em;
             top: 7.5em;
             border-radius: 0;
             text-transform: uppercase;
