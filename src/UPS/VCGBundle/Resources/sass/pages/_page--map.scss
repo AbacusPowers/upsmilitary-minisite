@@ -1,7 +1,9 @@
 .page--map {
 
     #side--a {
-       
+       .map-wrapper {
+         overflow: hidden;
+       }
     }
     
     .map-controls form > div {
