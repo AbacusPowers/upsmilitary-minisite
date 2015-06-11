@@ -6,19 +6,39 @@
         <div class="carousel-inner">
             <input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden="" checked="checked">
             <div class="carousel-item">
-                <img src="{{ asset('bundles/vcg/images/slider/photo-2.png') }}">
+                <a href="{{path('page',{'slug':'job-map'}) }}">
+                    <div class="slider-text-wrapper">
+                        <h1 class="slider-text">This Is A Test of Slider Content</h1>
+                    </div>
+                    <img src="{{ asset('bundles/vcg/images/slider/photo-2.png') }}">
+                </a>
             </div>
             <input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true" hidden="">
             <div class="carousel-item">
-                <img src="{{ asset('bundles/vcg/images/slider/photo-3.png') }}">
+                <a href="{{path('page',{'slug':'job-converter'}) }}">
+                    <div class="slider-text-wrapper">
+                        <h1 class="slider-text">This Is A Test of Slightly Longer Slider Content</h1>
+                    </div>
+                    <img src="{{ asset('bundles/vcg/images/slider/photo-3.png') }}">
+                </a>
             </div>
             <input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true" hidden="">
             <div class="carousel-item">
-                <img src="{{ asset('bundles/vcg/images/slider/photo-4.png') }}">
+                <a href="{{ path('page',{'slug':'jobs'}) }}">
+                    <div class="slider-text-wrapper">
+                        <h1 class="slider-text">This Is A Test of a Really Long Version of the Slider Content</h1>
+                    </div>
+                    <img src="{{ asset('bundles/vcg/images/slider/photo-4.png') }}">
+                </a>
             </div>
             <input class="carousel-open" type="radio" id="carousel-4" name="carousel" aria-hidden="true" hidden="">
             <div class="carousel-item">
-                <img src="{{ asset('bundles/vcg/images/slider/photo-1.png') }}">
+                <a href="{{ path('page',{'slug':'job-map'}) }}">
+                    <div class="slider-text-wrapper">
+                        <h1 class="slider-text">This Is A Test of a Really Long Version of the Slider Content That Could go further than anything has gone before</h1>
+                    </div>
+                    <img src="{{ asset('bundles/vcg/images/slider/photo-1.png') }}">
+                </a>
             </div>
             
         
