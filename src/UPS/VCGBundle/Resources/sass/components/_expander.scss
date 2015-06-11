@@ -14,6 +14,7 @@
       height: 100%;
       top: 0;
       background: $ups-yellow;
+      z-index: 10;
 
       .breakpoint-small & {
         content: none;
@@ -62,7 +63,7 @@
     }
   }
 
-  a:nth-child(odd) {
+  a:nth-child(odd) {    
     // background: $black05;
   }
 

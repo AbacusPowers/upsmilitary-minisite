@@ -1,7 +1,8 @@
 // Thoughtbot Bitters Breadcrumbs
 
 .breadcrumb {
-    @include position(absolute, -7.2em null null 2.2em);
+    // @include position(absolute, -7.2em null null 2.2em);
+    @include position(absolute, -7.2em null null null);
     // @include position(absolute, 0 null null 0);
 
     z-index: 100;

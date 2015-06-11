@@ -41,13 +41,21 @@ $grey20: lighten( $black, 80%);
 $grey10: lighten( $black, 85%); 
 $grey: $grey80;
 
-$grey--dark: #222;
+$grey--dark: #333;
 $grey--medium: #adadad;
 
 
 $ups-yellow: rgba(255,181,0,1);
 $ups-brown-1: rgba(53,28,21,1);
 $ups-grey-1: rgba(218,217,214,1);
+
+/*secondary pallet*/
+$ups-orange: #F89521;
+$ups-green: #6FBE44;
+$ups-teal: #65C5B4;
+$ups-blue: #00A4C7;
+$ups-tan: #E1C8B0;
+
 
 // Cruft below
 $brown: $ups-brown-1;

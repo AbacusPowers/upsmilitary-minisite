@@ -1,30 +1,74 @@
+$map-height-small: 30em;
+$map-height-medium: 24em;
+$map-height-large: 30em;
+$map-height-wide: 40em;
+
+$map-control-height: 4.5em;
+
+// $state-list-scroll-height-small: $map-height-wide - $map-control-height;
+$state-list-scroll-height-medium: $map-height-medium - $map-control-height;
+$state-list-scroll-height-large: $map-height-large - $map-control-height;
+$state-list-scroll-height-wide:  $map-height-wide - $map-control-height;
+
 .page--map {
 
     #side--a {
+
+        .map-wrapper {
+            // background: $grey--dark;
+        }
        
     }
-    
+    .map-controls {
+        padding: 2.6em 3em 0em 3em;
+        height: $map-control-height;
+
+        select {
+            margin-bottom: 0;
+            width: 12.1em;
+        }
+    }
+
     .map-controls form > div {
         margin-right: 1em;
         
         display: inline-block;
+
+        h1 {
+            // font-weight: 400;
+            text-transform: uppercase;
+            color: $ups-yellow;
+            font-size: 1.15em;
+        }
     }
     
     .map-info-container p > a {
         color: #fff;
         
-        font-size: 0.8rem;
+        font-size: 0.9rem;
     }
     
     .svg-map {
         width: 100%;
-        height: 450px;
-        
+        height: $map-height-small;
         display: block;
 
-        .breakpoint-small & { display: none; }
+        .breakpoint-medium & {
+            height: $map-height-medium;
+            display: none;
+        }
+
+        .breakpoint-large & {
+            height: $map-height-large;
+        }
+        
+        .breakpoint-wide & {
+            height: $map-height-wide;
+        }
      
-        path { cursor: pointer; }
+        path { 
+            cursor: pointer; 
+        }
     }
 
     #job-map--refresh {
@@ -46,6 +90,21 @@
         .breakpoint-small & { display: none; }
     }
 
+    #side--b {
+        display: block;
+        .breakpoint-medium & {
+            height: $map-height-medium;
+        }
+
+        .breakpoint-large & {
+            height: $map-height-large;
+        }
+        
+        .breakpoint-wide & {
+            height: $map-height-wide;
+        }
+    }
+
     .map-info-container {
         padding-top: 2.6em;
     }
@@ -55,7 +114,7 @@
 
          &:after {
             @include pseudo-block($vertical-thread-width);
-            background: $white05;
+            background: $white10;
             height: 100%;
             top: 0;
             left: 50%;
@@ -99,6 +158,26 @@
         }
         .component--expander {
             border-top: none;
+        }
+    }
+
+    .map-info--state > .component--expander {
+        // max-height: 24em;
+        overflow-y: scroll;
+
+        height: calc( $map-height-small - $map-control-height );
+        display: block;
+
+        .breakpoint-medium & {
+            max-height: $state-list-scroll-height-medium;
+        }
+
+        .breakpoint-large & {
+            max-height: $state-list-scroll-height-large;
+        }
+        
+        .breakpoint-wide & {
+            max-height: $state-list-scroll-height-wide;
         }
     }
 

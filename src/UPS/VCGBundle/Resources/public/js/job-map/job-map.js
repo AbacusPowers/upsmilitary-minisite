@@ -5,16 +5,16 @@
      */
     var CONST = {
         ATTR_PEG: [
-            { fill: '#d83030' }, // Large
-            { fill: '#3030d8' }, // Medium
-            { fill: '#30d848' }  // Small
+            { fill: '#ffffff' }, // Large
+            { fill: '#F89521' }, // Medium
+            { fill: '#000000' }  // Small
         ],
 
         BASE_URL:           '/js/job-map/',
         
-        COLOR_PATH:         '#996D00',
+        COLOR_PATH:         '#888',
         COLOR_PATH_HILITE:  '#FFB500',
-        COLOR_STROKE:       '#351C15',
+        COLOR_STROKE:       '#444',
  
         STROKE_WIDTH:       '0.5',
         

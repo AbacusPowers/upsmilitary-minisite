@@ -70,30 +70,30 @@
 {% endblock %}
 {% block page_content %}
     <div class="pattern--get-started get-started--header">
-                <p>Start your career at UPS<i class="fa fa-chevron-right"></i></p>
-                <a href="https://ups.managehr.com/candidate/"><div class="button">Go</div></a>
+        <p>Start your career at UPS<i class="fa fa-chevron-right"></i></p>
+        <a href="https://ups.managehr.com/candidate/"><div class="button">Go</div></a>
+    </div>
+
+
+    <!-- <nav><a href="">Military Transition Guide</a><a href="">UPS Careers</a></nav> -->
+    <div class="veteranGateway__liner">
+        <div class="title-block">
+            <h1>Career Gateway</h1>
+            <p>For Veterans & Service Members</p>
+        </div>
+
+        
+        
+        <div class="page page--home">
+            <div class="grid-items-lines">
+                {% include 'VCGBundle:GridItems:transition-guide.html.twig' %}
+                {% include 'VCGBundle:GridItems:career-explorer.html.twig' %}
+                {% include 'VCGBundle:GridItems:ups-culture.html.twig' %}
+            
+                {% include 'VCGBundle:GridItems:events.html.twig' %}
+                {% include 'VCGBundle:GridItems:social.html.twig' %}
+                {% include 'VCGBundle:GridItems:announcements.html.twig' %}
             </div>
-
-
-            <!-- <nav><a href="">Military Transition Guide</a><a href="">UPS Careers</a></nav> -->
-            <div class="veteranGateway__liner">
-                <div class="title-block">
-                    <h1>Career Gateway</h1>
-                    <p>For Veterans & Service Members</p>
-                </div>
-
-                
-                
-                <div class="page page--home">
-                    <div class="grid-items-lines">
-                        {% include 'VCGBundle:GridItems:transition-guide.html.twig' %}
-                        {% include 'VCGBundle:GridItems:career-explorer.html.twig' %}
-                        {% include 'VCGBundle:GridItems:ups-culture.html.twig' %}
-                    
-                        {% include 'VCGBundle:GridItems:events.html.twig' %}
-                        {% include 'VCGBundle:GridItems:social.html.twig' %}
-                        {% include 'VCGBundle:GridItems:announcements.html.twig' %}
-                    </div>
-                </div>           
-            </div>    
+        </div>           
+    </div>    
 {% endblock %}
