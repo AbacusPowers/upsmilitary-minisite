@@ -179,4 +179,21 @@
     }
   }
 
+///////////********NESTED EXPANDERS***********/////////////
+
+  .component--expander .expander__wrapper:before {
+    content: none;
+  }
+
+  .component--expander .expander__wrapper{
+    margin-left: -2em;
+    background: $white10;
+    border-bottom: none;
+    padding-left: 3rem;
+
+    h2 {
+      font-weight: 400;
+    }
+  }
+
 }

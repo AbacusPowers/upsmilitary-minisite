@@ -24,11 +24,27 @@
 {% block page_content %}
     <div class="veteranGateway__liner">
         <div class="title-block">
-            <h1>UPS Career Explorer</h1>
-            <p>For Veterans &amp; Service Members</p>
+            <h1>UPS Jobs Map</h1>
+            <p>Showing UPS locations &amp; types of jobs</p>
         </div>
+
         <div class="page page--map">
+            <nav class="nav--career-explorer">
+                <a href="{{ path('page',{'slug':'jobs'}) }}">
+                    <img src="{{ asset('bundles/vcg/images/handshake.png') }}" class="" alt="">
+                    <span class="caption">Jobs</span>
+                </a>
+                <a href="{{ path('page',{'slug':'job-converter'}) }}">
+                    <img src="{{ asset('bundles/vcg/images/lightbulb.png') }}" class="" alt="">
+                    <span class="caption">Skills</span>
+                </a>
+                <a href="javascript:void(0)" class="current-page">
+                    <img src="{{ asset('bundles/vcg/images/bubbles.png') }}" class="" alt="">
+                    <span class="caption">Map</span>
+                </a>
+            </nav>
             <div id="side--a">
+
                 <section class="map-wrapper">
                     <svg class='svg-map' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 785">
                         <g class="svg-states-group">
@@ -106,23 +122,22 @@
                             <select id="job-map--select-state" name="job-map--select-state"></select>
                         </div>
                         <div>
-                            <a id="job-map--refresh" class="hidden"><i class="fa fa-refresh"></i> Refresh</a>
+                            <a id="job-map--refresh" class="hidden"><i class="fa fa-refresh"></i> Reset Map</a>
                         <div>
                     </form>
                 </section>
             </div>
             <div id="side--b" class="map-info-container">
-                <div class="map-info--initial">
-                    <h1>UPS Jobs Map</h1>
-                    <p>Select your state of interest to continue.</p>
-                </div>
                 <div class="map-info--state hidden">
                     <h1 data-info="name"></h1>
-                    <p><span data-info="count"></span> Cities</p>
+                    <!-- <p><span data-info="count"></span> Cities</p> -->
                     <div class="component--expander" data-info="cities">
                         <section class='expander__wrapper'>
-                            <h2 class='expander__parent' data-info="city-name"></h2>
-                            <h3><span data-info="city-count"></span> Locations</h3>
+                            <ul>
+                                <li><h2 class='expander__parent' data-info="city-name"></h2></li>
+                                <li><span>(<span data-info="city-count"></span>)</span></li>
+                            </ul>
+                    
                             <a data-id=' ' class='button expand-button'><i class="fa fa-plus fa-2x"></i></a>
                             <a data-id=' ' class='button hide-button'><i class="fa fa-minus fa-2x"></i></a>
                             <div data-id=' ' class='hidden-part'>
@@ -130,7 +145,7 @@
                                     <div class="component--expander" data-info="locations">
                                         <section class="expander__wrapper">
                                             <h2 class="expander__parent" data-info="loc-name"></h2>
-                                            <h3><span data-info="loc-count"></span> Types of Jobs</h3>
+                                            <h3><span data-info="loc-count"></span>&nbspJob Types</h3>
                                             <a data-id=' ' class='button expand-button'><i class="fa fa-plus fa-2x"></i></a>
                                             <a data-id=' ' class='button hide-button'><i class="fa fa-minus fa-2x"></i></a>
                                             <div data-id=' ' class='hidden-part'>

@@ -14,76 +14,7 @@ and open the template in the editor.
         /*position: relative;*/
     }
     
-    .nav--career-explorer {
-        position: absolute;
-        left: 50%;
-        top: -5em;
-        // position: relative;
-
-        .breakpoint-small & {
-            display: none;
-        }
-
-
-        a {
-            @include size(5em);
-            // vertical-align: top;
-            display: inline-block;
-            text-align: center;
-            // margin-left: 3em;
-            margin: 0;
-            margin-right: 0;
-            float: left;
-            margin-left: 0;
-            padding: 1em 0 0 0;
-
-            &:nth-child(1) {
-               background: $black50; 
-            }
-
-            &:nth-child(2) {
-               background: $black30; 
-            }
-
-            &:nth-child(3) {
-               background: $black10; 
-            }
-
-            &.current-page:after {
-                @include pseudo-block(4px);
-                bottom: -4px;
-                width: 5em;
-                background: $ups-yellow;
-            }
-        }
-
-        a:hover {
-            background: $ups-yellow;
-
-            .caption {
-                color: $black;
-            }
-            svg {
-                fill: $black;
-            }
-        }
-
-        img {
-            // @include site-icon;
-            @include size(2em);
-            border-radius: 50%;
-            border-color: $black;
-            display: inline-block;
-            float: none;
-        }
-
-        .caption {
-            color: $white;
-            text-transform: uppercase;
-            display: block;
-            font-size: 0.7em;
-        }
-    }
+    
 
     // .full-width .form-section {
     //         max-width: 40em;
