@@ -1,0 +1,13 @@
+.page--culture {
+  .grid--ra-guidebook {
+    .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & {
+      height: auto;
+    }
+    .button-group {
+      position: relative;
+    }
+    a.button {
+      display: block;
+    }
+  }
+}
