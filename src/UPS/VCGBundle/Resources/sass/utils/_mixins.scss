@@ -44,12 +44,12 @@
 
 @mixin site-icon {
   @include size(3.5em);
-  border-radius: 50%;
-  border: 1px $ups-yellow solid;
+//  border-radius: 50%;
+//  border: 1px $ups-yellow solid;
   display: block;
   float: left;
   margin-left: 1.5em;
-  padding: 0.4em;
+//  padding: 0.4em;
 }
 
 

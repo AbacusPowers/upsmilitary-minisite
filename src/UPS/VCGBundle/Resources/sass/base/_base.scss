@@ -84,16 +84,13 @@ a:active {
     }
   }
 }
-
-svg.section-svg {
-  width: 35px;
-  height: 35px;
-  float: left;
-  margin-right: 1em;
-}
+//
+//svg.section-svg {
+//  width: 35px;
+//  height: 35px;
+//  float: left;
+//  margin-right: 1em;
+//}
 .grid-icon {
-  width: 3.5em;
-  height: 3.5em;
-  margin-left: 1.5em;
-  float: left;
+  @include site-icon;
 }
