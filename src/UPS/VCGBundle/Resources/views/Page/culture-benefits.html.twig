@@ -19,23 +19,23 @@
                   <div class="page page--culture">
                     <div class="grid-items-lines">
                         <a href="{{path('culture_benefits_page',{'slug':'values'}) }}" class="grid-item values-link">
-                            <img src="{{ asset('bundles/vcg/images/placeholder_logo_2_dark.png') }}" class="icon--large" alt="">
+                            {% include 'VCGBundle:Svgs:circles.svg.twig' %}
                             <h1>UPS Values</h1>
                             <p>See all the advantages and benefits to working at UPS for veterans, families, students and more. Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
                         </a>
   
                       <a href="{{path('culture_benefits_article',{'slug':'family'}) }}" class="grid-item grid--family article-link">
-                        <img src="{{ asset('bundles/vcg/images/placeholder_logo_2_dark.png') }}" class="icon--large" alt="">
+                        {% include 'VCGBundle:Svgs:person.svg.twig' %}
                         <h1>Family</h1>
                         <p>See all the advantages and benefits to working at UPS for veterans, families, students and more.</p>
                       </a>
                       <a href="{{path('culture_benefits_article',{'slug':'benefits'}) }}" class="grid-item grid--ups-culture article-link">
-                        <img src="{{ asset('bundles/vcg/images/placeholder_logo_2_dark.png') }}" class="icon--large" alt="">
+                        {% include 'VCGBundle:Svgs:dollar.svg.twig' %}
                         <h1>Benefits</h1>
                         <p>See all the advantages and benefits to working at UPS for veterans, families, students and more.</p>
                       </a>
                       <div class="grid-item grid--ra-guidebook">
-                        <img src="{{ asset('bundles/vcg/images/placeholder_logo_2_dark.png') }}" alt="">
+                        {% include 'VCGBundle:Svgs:venn.svg.twig' %}
                         <h1>Registered Apprentice Program</h1>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, illum.</p>
                         <div class="button-group">
@@ -51,27 +51,27 @@
 						</div>
                       </div>
                       <a href="{{path('culture_benefits_article',{'slug':'student-programs'}) }}" class="grid-item article-link">
-                        <img src="{{ asset('bundles/vcg/images/placeholder_logo_2_dark.png') }}" alt="">
+                        {% include 'VCGBundle:Svgs:resume.svg.twig' %}
                         <h1>Students</h1>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, illum.</p>
                       </a>
                       <a href="javascript:void(0)" class="grid-item">
-                        <img src="{{ asset('bundles/vcg/images/placeholder_logo_2_dark.png') }}" alt="">
+                        {% include 'VCGBundle:Svgs:increase.svg.twig' %}
                         <h1>ESGR</h1>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa ipsa et quis modi dolorem.</p>
                       </a>
                       <a href="{{ path('culture_benefits_page', {'slug': 'faqs'}) }}" class="grid-item article-link">
-                        <img src="{{ asset('bundles/vcg/images/placeholder_logo_2_dark.png') }}" alt="">
+                        {% include 'VCGBundle:Svgs:chat.svg.twig' %}
                         <h1>FAQs</h1>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa ipsa et quis modi dolorem.</p>
                       </a>
                       <a href="javascript:void(0)" class="grid-item">
-                        <img src="{{ asset('bundles/vcg/images/placeholder_logo_2_dark.png') }}" alt="">
+                        {% include 'VCGBundle:Svgs:play.svg.twig' %}
                         <h1>Videos</h1>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa ipsa et quis modi dolorem.</p>
                       </a>
                       <a href="{{ path('page', {'slug': 'partners'}) }}" class="grid-item">
-                        <img src="{{ asset('bundles/vcg/images/placeholder_logo_2_dark.png') }}" alt="">
+                        {% include 'VCGBundle:Svgs:handshake.svg.twig' %}
                         <h1>Our Partners</h1>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa ipsa et quis modi dolorem.</p>
                       </a>
