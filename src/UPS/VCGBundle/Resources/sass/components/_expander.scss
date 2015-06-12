@@ -211,10 +211,15 @@
   border-top: 1px solid rgba( $ups-grey-1, 0.3);
 
   .expander__wrapper {
-    min-height: 3.5em;
+    min-height: 0;
+    margin-top: 0;
+    padding-top: 0;
 
     ul li {
       display: inline-block;
+      h2 {
+        line-height: 3em;
+      }
     }
 
     // & > span {
@@ -224,6 +229,16 @@
 
   h2 {
     margin-right: 0;
+  }
+
+  .button {
+    height: 5em;
+//    min-height: 3.5em;
+    padding-top: 0;
+    i.fa {
+      padding: 0 1em 0 0;
+      line-height: 2.5em;
+    }
   }
 
   .component--expander>.expander__wrapper.open-expander {

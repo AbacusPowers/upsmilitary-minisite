@@ -153,34 +153,34 @@ $state-list-scroll-height-wide:  $map-height-wide - $map-control-height;
         }
     }
 
-    .component--expander {
-        margin-bottom: 3em;
-        border-top: 1px solid rgba( $ups-grey-1, 0.3);
-
-        .expander__wrapper {
-            min-height: 3.5em;
-
-            ul li {
-                display: inline-block;
-            }
-
-            // & > span {
-            //     background: red;
-            // }
-        }
-
-        h2 {
-            margin-right: 0;
-        }
-
-        .component--expander>.expander__wrapper.open-expander {
-            background: $white05;
-        }
-
-        .component--expander {
-            border-top: none;
-        }
-    }
+//    .component--expander {
+//        margin-bottom: 3em;
+//        border-top: 1px solid rgba( $ups-grey-1, 0.3);
+//
+//        .expander__wrapper {
+//            min-height: 3.5em;
+//
+//            ul li {
+//                display: inline-block;
+//            }
+//
+//            // & > span {
+//            //     background: red;
+//            // }
+//        }
+//
+//        h2 {
+//            margin-right: 0;
+//        }
+//
+//        .component--expander>.expander__wrapper.open-expander {
+//            background: $white05;
+//        }
+//
+//        .component--expander {
+//            border-top: none;
+//        }
+//    }
 
     .map-info--state > .component--expander {
         overflow-y: scroll;
