@@ -5,8 +5,8 @@
      */
     var CONST = {
         ATTR_PEG: [
-            { fill: '#ffffff' }, // Large
-            { fill: '#F89521' }, // Medium
+            { fill: 'rgba(255,255,255,0.8)' }, // Large
+            { fill: 'rgba(111,190,68, 0.5)' }, // Medium
             { fill: '#000000' }  // Small
         ],
 
