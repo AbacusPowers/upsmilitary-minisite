@@ -3,6 +3,12 @@
 //   src: url('http://www.fontsaddict.com/fontface/english-russian-architect.ttf');
 // }
 
+
+/*Webfonts from solvers.ups.com May not work, need to be replaced for production*/
+@font-face{font-family:'Guardian Egyp Thin';src:url('https://9d2da2746028ea2c275f-42ee9020ba4af40fa90f34013c25131b.ssl.cf1.rackcdn.com/assets/fonts/GuardianEgyp-Thin-Web.eot');src:url('https://9d2da2746028ea2c275f-42ee9020ba4af40fa90f34013c25131b.ssl.cf1.rackcdn.com/assets/fonts/GuardianEgyp-Thin-Web.eot?#iefix') format('embedded-opentype'),url('https://9d2da2746028ea2c275f-42ee9020ba4af40fa90f34013c25131b.ssl.cf1.rackcdn.com/assets/fonts/GuardianEgyp-Thin-Web.woff') format('woff'),url('https://9d2da2746028ea2c275f-42ee9020ba4af40fa90f34013c25131b.ssl.cf1.rackcdn.com/assets/fonts/GuardianEgyp-Thin-Web.ttf') format('truetype'),url('https://9d2da2746028ea2c275f-42ee9020ba4af40fa90f34013c25131b.ssl.cf1.rackcdn.com/assets/fonts/GuardianEgyp-Thin-Web.svg#svgFontName') format('svg')}
+
+@font-face{font-family:'Guardian Egyp Medium';src:url('https://9d2da2746028ea2c275f-42ee9020ba4af40fa90f34013c25131b.ssl.cf1.rackcdn.com/assets/fonts/GuardianEgyp-Medium-Web.eot');src:url('https://9d2da2746028ea2c275f-42ee9020ba4af40fa90f34013c25131b.ssl.cf1.rackcdn.com/assets/fonts/GuardianEgyp-Medium-Web.eot?#iefix') format('embedded-opentype'),url('https://9d2da2746028ea2c275f-42ee9020ba4af40fa90f34013c25131b.ssl.cf1.rackcdn.com/assets/fonts/GuardianEgyp-Medium-Web.woff') format('woff'),url('https://9d2da2746028ea2c275f-42ee9020ba4af40fa90f34013c25131b.ssl.cf1.rackcdn.com/assets/fonts/GuardianEgyp-Medium-Web.ttf') format('truetype'),url('https://9d2da2746028ea2c275f-42ee9020ba4af40fa90f34013c25131b.ssl.cf1.rackcdn.com/assets/fonts/GuardianEgyp-Medium-Web.svg#svgFontName') format('svg')}
+
 // $primary-font-family: 'English-Russian Architect', 'Lato', sanserif;
 
 $primary-font-family: 'Arial', sanserif;
@@ -12,4 +18,5 @@ $primary-font-family: 'Arial', sanserif;
 $secondary-font-family: 'Arial', sanserif;
 /*$secondary-font-family: 'English-Russian Architect', 'Lato', serif;*/
 
-$headline-font: 'GuardianEgyp-Hairline', 'Arial', sanserif;
+$headline-font: 'Guardian Egyp Medium', 'Arial', sanserif;
+

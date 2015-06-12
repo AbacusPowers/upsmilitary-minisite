@@ -1,4 +1,4 @@
-$map-height-small: 30em;
+$map-height-small: 18em;
 $map-height-medium: 24em;
 $map-height-large: 30em;
 $map-height-wide: 40em;
@@ -13,7 +13,6 @@ $state-list-scroll-height-wide:  $map-height-wide - $map-control-height;
 .page--map {
 
     #side--a {
-
        .map-wrapper {
          overflow: hidden;
          position: relative;
@@ -123,6 +122,26 @@ $state-list-scroll-height-wide:  $map-height-wide - $map-control-height;
     .map-info--state {
         display: block;
 
+        .size-key {
+              top: -0.5rem;
+              padding-bottom: 0.8em;
+
+            ul li {
+                display: inline-block;
+                margin-left: 3rem;
+                font-size: 0.8em;
+
+
+                i {
+                    color: $white;
+                }
+            }
+
+            ul li:nth-child(1) i{
+                color: $ups-green;
+            }
+        }
+
          &:after {
             @include pseudo-block($vertical-thread-width);
             background: $white10;
@@ -150,6 +169,12 @@ $state-list-scroll-height-wide:  $map-height-wide - $map-control-height;
             top: 0;
             transition: opacity 0.5s;
             width: auto;
+
+            .breakpoint-small & {
+                right: auto;
+                left: 1rem;
+                top: 2em;
+            }
         }
     }
 
@@ -183,20 +208,23 @@ $state-list-scroll-height-wide:  $map-height-wide - $map-control-height;
 //    }
 
     .map-info--state > .component--expander {
-        overflow-y: scroll;
-        height: calc( $map-height-small - $map-control-height );
+        
+        height: auto;
         display: block;
 
         .breakpoint-medium & {
             max-height: $state-list-scroll-height-medium;
+            overflow-y: scroll;
         }
 
         .breakpoint-large & {
             max-height: $state-list-scroll-height-large;
+            overflow-y: scroll;
         }
         
         .breakpoint-wide & {
             max-height: $state-list-scroll-height-wide;
+            overflow-y: scroll;
         }
     }
 }
