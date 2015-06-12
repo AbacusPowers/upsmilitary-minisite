@@ -122,6 +122,26 @@ $state-list-scroll-height-wide:  $map-height-wide - $map-control-height;
     .map-info--state {
         display: block;
 
+        .size-key {
+              top: -0.5rem;
+              padding-bottom: 0.8em;
+
+            ul li {
+                display: inline-block;
+                margin-left: 3rem;
+                font-size: 0.8em;
+
+
+                i {
+                    color: $white;
+                }
+            }
+
+            ul li:nth-child(1) i{
+                color: $ups-green;
+            }
+        }
+
          &:after {
             @include pseudo-block($vertical-thread-width);
             background: $white10;
