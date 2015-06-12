@@ -16,6 +16,8 @@
         COLOR_PATH_HILITE:  '#FFB500',
         COLOR_STROKE:       '#444',
  
+        SIZE_CLASSES:       [ 'large', 'medium', 'small' ],
+ 
         STROKE_WIDTH:       '0.5',
         
         SUBMAPS: [
@@ -129,11 +131,8 @@
             container.on('click', '.hide-button', on_expander_click_hide);
             
             var template = this.template = $('.map-info--state', container).detach();
-            template.removeClass('hidden');
             
-            this.initial = $('.map-info--initial', container).detach();
             this.expander_id = 0;
-            this.show_initial();
         },
 
 
@@ -185,8 +184,14 @@
             var result  = template.clone();
             var jobs    = location.jobs;
             
+            var sizeIndicator = $(
+                '<i class="fa fa-circle location-'
+                + CONST.SIZE_CLASSES[location.size]
+                + '"></i>'
+            );
+            
             $('[dataid]'                , result).attr('data-id', this.expander_id++);
-            $('[data-info="loc-name"]'  , result).text(location.name);
+            $('[data-info="loc-name"]'  , result).text(location.name).prepend(sizeIndicator);
             $('[data-info="loc-count"]' , result).text(jobs.length);
             
             var jobsContainer = $('[data-info="jobs"]', result);
@@ -205,20 +210,13 @@
 
 
         /*
-         * Revert to the initial html.
-         */
-        show_initial: function() {
-            this.container.empty();
-            this.container.append(this.initial);
-        },
- 
- 
-        /*
          * Switch to the info html for the given state.
          */
         show: function(elt) {
             this.container.empty();
-            this.container.append(elt);
+            if (elt != null) {
+                this.container.append(elt);
+            }
         }
     };
     
@@ -385,7 +383,7 @@
                 old.pegs.remove();
                 this.zoom();
                 stateSelect.val('');
-                info.show_initial();
+                info.show(null);
                 refresher.removeClass('shown');
             }
             
@@ -447,6 +445,7 @@
         map.init();
         info.init();
         init_map_controls();
+        info.container.removeClass('hidden');
     });
     
     
@@ -481,6 +480,8 @@
         refresher.click(function() {
             map.set_focus(null);
         });
+        
+        $('.map-controls').removeClass('hidden');
     }
     
     
@@ -547,7 +548,9 @@
      */
     function on_state_path_click(event) {
         var state = this.data('state');
-        map.set_focus(state.is_focus ? null : state);
+        if (! state.is_focus) {
+            map.set_focus(state);
+        }
     }
     
     
