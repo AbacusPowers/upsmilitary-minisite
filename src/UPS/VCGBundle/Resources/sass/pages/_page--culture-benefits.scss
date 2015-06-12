@@ -11,4 +11,16 @@
       display: block;
     }
   }
+  .video-block {
+    margin-bottom: 2em;
+    margin-top: 2em;
+    .grid-icon {
+      margin-right: 1em;
+    }
+
+    .scroll-container {
+      clear: both;
+      margin-top: 2em;
+    }
+  }
 }

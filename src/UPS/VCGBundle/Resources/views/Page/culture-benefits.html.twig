@@ -65,16 +65,33 @@
                         <h1>FAQs</h1>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa ipsa et quis modi dolorem.</p>
                       </a>
-                      <a href="javascript:void(0)" class="grid-item">
-                        {% include 'VCGBundle:Svgs:play.svg.twig' %}
-                        <h1>Videos</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa ipsa et quis modi dolorem.</p>
-                      </a>
+                      {#<a href="javascript:void(0)" class="grid-item">#}
+                        {#{% include 'VCGBundle:Svgs:play.svg.twig' %}#}
+                        {#<h1>Videos</h1>#}
+                        {#<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa ipsa et quis modi dolorem.</p>#}
+                      {#</a>#}
                       <a href="{{ path('page', {'slug': 'partners'}) }}" class="grid-item">
                         {% include 'VCGBundle:Svgs:handshake.svg.twig' %}
                         <h1>Our Partners</h1>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa ipsa et quis modi dolorem.</p>
                       </a>
+                    </div>
+                    <div class="video-block">
+                      {% include 'VCGBundle:Svgs:bubbles.svg.twig' %}
+                      <h1>Videos</h1>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, illum.</p>
+                      <div class="scroll-container">
+                          <div id="video-list">
+                              <a href="{{ path('transition_guide_video',{'slug':'video1'}) }}" class="video-link video-link--style"><img class="video-thumb" src="{{ asset('bundles/vcg/images/video-1.png') }}" alt=""><i class="fa fa-play-circle-o"></i></a>
+                              <a href="{{ path('transition_guide_video',{'slug':'video2'}) }}" class="video-link video-link--style"><img class="video-thumb" src="{{ asset('bundles/vcg/images/video-2.png') }}" alt=""><i class="fa fa-play-circle-o"></i></a>
+                              <a href="javascript:void(0)" class="video-link video-link--style"><img class="video-thumb" src="{{ asset('bundles/vcg/images/video.png') }}" alt=""><i class="fa fa-play-circle-o"></i></a>
+                              <a href="javascript:void(0)" class="video-link video-link--style"><img class="video-thumb" src="{{ asset('bundles/vcg/images/video.png') }}" alt=""><i class="fa fa-play-circle-o"></i></a>
+                              <a href="javascript:void(0)" class="video-link video-link--style"><img class="video-thumb" src="{{ asset('bundles/vcg/images/video.png') }}" alt=""><i class="fa fa-play-circle-o"></i></a>
+                              <a href="javascript:void(0)" class="video-link video-link--style"><img class="video-thumb" src="{{ asset('bundles/vcg/images/video.png') }}" alt=""><i class="fa fa-play-circle-o"></i></a>
+                              <a href="javascript:void(0)" class="video-link video-link--style"><img class="video-thumb" src="{{ asset('bundles/vcg/images/video.png') }}" alt=""><i class="fa fa-play-circle-o"></i></a>
+                              <a href="javascript:void(0)" class="video-link video-link--style"><img class="video-thumb" src="{{ asset('bundles/vcg/images/video.png') }}" alt=""><i class="fa fa-play-circle-o"></i></a>
+                          </div>
+                      </div>
                     </div>
                 </div>           
             </div>

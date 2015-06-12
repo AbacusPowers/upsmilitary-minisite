@@ -498,7 +498,9 @@ $grid-item-height: 14.8em;
         padding-top: 0;
         background: $grey--dark;
         border-bottom: none;
-
+        .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & {
+          min-height: 1000px;
+        }
         // border-top: 0.6em solid $black;
 
         &:before, &:after {
@@ -625,8 +627,29 @@ $grid-item-height: 14.8em;
         }
 
      }
+    .grid-item:nth-child(5) {
+      border-right: none;
+      overflow: hidden;
+      height: auto;
+      padding-bottom: 4em;
+      cursor: pointer;
 
-    .grid-item:nth-child(5) { /*social*/
+      .breakpoint-small & {
+        height: auto;
+        padding-bottom: 4em;
+      }
+
+      h2 {
+        margin-top: 1.5em;
+      }
+      .scroll-container {
+        margin-top: 2em;
+      }
+
+
+    }
+
+    .grid-item:nth-child(6) { /*social*/
         height: auto;
         a {
             display: inline-block;
@@ -666,7 +689,7 @@ $grid-item-height: 14.8em;
             background: #222;
     }
 
-    .grid-item:nth-child(5) {
+    .grid-item:nth-child(6) {
         border-left: 0px solid $ups-yellow;
         border-bottom: 0px;
         padding-bottom: 2em;
@@ -678,7 +701,7 @@ $grid-item-height: 14.8em;
 
     }
 
-    .grid-item:nth-child(6) { 
+    .grid-item:nth-child(7) {
         // border-left: 1px solid $ups-yellow;
         padding-bottom: 4em;
         input[type="text"] {
