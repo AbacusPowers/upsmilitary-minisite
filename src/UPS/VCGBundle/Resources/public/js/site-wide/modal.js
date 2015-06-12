@@ -24,6 +24,15 @@ $('document').ready(function(){
         getModalContent(href, true, 'page');
         showEventsModal();
     });
+    //UPS VALUES FUNCTIONALITY
+    $('.values-link').on('click', function(e){
+        e.preventDefault();
+        var href = $(this).attr('href');
+        // Getting Content
+        getModalContent(href, true, 'page');
+        showValuesModal();
+    });
+
     $('a.external').click(function(e){
         e.preventDefault();
         var href = $(this).attr('href');
@@ -264,6 +273,12 @@ function showEventsModal(){
     $('#modal').fadeIn();
     $('body').addClass('events-view');
     $('#modal-wrapper').addClass('events');
+}
+function showValuesModal(){
+    $('#overlay').show();
+    $('#modal').fadeIn();
+    $('body').addClass('values-view');
+    $('#modal-wrapper').addClass('values');
 }
 function showLeaveSiteModal(){
     $('#overlay').show();

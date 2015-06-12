@@ -18,7 +18,11 @@
                 </div>
                   <div class="page page--culture">
                     <div class="grid-items-lines">
-                        {% include 'VCGBundle:GridItems:transition-guide-culture.html.twig' %}
+                        <a href="{{path('culture_benefits_page',{'slug':'values'}) }}" class="grid-item values-link">
+                            <img src="{{ asset('bundles/vcg/images/placeholder_logo_2_dark.png') }}" class="icon--large" alt="">
+                            <h1>UPS Values</h1>
+                            <p>See all the advantages and benefits to working at UPS for veterans, families, students and more. Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+                        </a>
   
                       <a href="{{path('culture_benefits_article',{'slug':'family'}) }}" class="grid-item grid--family article-link">
                         <img src="{{ asset('bundles/vcg/images/placeholder_logo_2_dark.png') }}" class="icon--large" alt="">

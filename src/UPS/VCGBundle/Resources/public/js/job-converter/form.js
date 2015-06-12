@@ -55,14 +55,25 @@ $( document ).ready(function() {
     $('.job-converter-job-search').submit(function(e){
         e.preventDefault();
         jobTitle = $(this).closest('.expander__wrapper').children('.expander__parent').text();
-        zipCode = $(this).children('.zip-code').val();
-        radius = $(this).children('.radius').val();
-        if( radius ) {
+
+        if( $(this).children('.zip-code').val() ) {
+            zipCode = $(this).children('.zip-code').val();
+        } else {
+            zipCode = '-1';
+        }
+
+        if( $(this).children('.radius').val() ) {
             radiusOn = 'true';
+            radius = $(this).children('.radius').val();
         } else {
             radiusOn = 'false';
+            radius = '-1';
         }
-        location.href= 'http://jobs-ups.com/search/' + encodeURIComponent(jobTitle) + '/ASCategory/-1/ASPostedDate/-1/ASCountry/-1/ASState/-1/ASCity/-1/ASLocation/-1/ASCompanyName/-1/ASCustom1/-1/ASCustom2/-1/ASCustom3/-1/ASCustom4/-1/ASCustom5/-1/ASIsRadius/' + radiusOn + '/ASCityStateZipcode/' + encodeURIComponent(zipCode) +'/ASDistance/'+ encodeURIComponent(radius) +'/ASLatitude/-1/ASLongitude/-1/ASDistanceType/-1';
+        window.open(
+            'http://jobs-ups.com/search/' + encodeURIComponent(jobTitle) + '/ASCategory/-1/ASPostedDate/-1/ASCountry/-1/ASState/-1/ASCity/-1/ASLocation/-1/ASCompanyName/-1/ASCustom1/-1/ASCustom2/-1/ASCustom3/-1/ASCustom4/-1/ASCustom5/-1/ASIsRadius/' + radiusOn + '/ASCityStateZipcode/' + encodeURIComponent(zipCode) +'/ASDistance/'+ encodeURIComponent(radius) +'/ASLatitude/-1/ASLongitude/-1/ASDistanceType/-1',
+            '_blank' // <- This is what makes it open in a new window.
+        );
+        //location.href= 'http://jobs-ups.com/search/' + encodeURIComponent(jobTitle) + '/ASCategory/-1/ASPostedDate/-1/ASCountry/-1/ASState/-1/ASCity/-1/ASLocation/-1/ASCompanyName/-1/ASCustom1/-1/ASCustom2/-1/ASCustom3/-1/ASCustom4/-1/ASCustom5/-1/ASIsRadius/' + radiusOn + '/ASCityStateZipcode/' + encodeURIComponent(zipCode) +'/ASDistance/'+ encodeURIComponent(radius) +'/ASLatitude/-1/ASLongitude/-1/ASDistanceType/-1';
     });
 
     
