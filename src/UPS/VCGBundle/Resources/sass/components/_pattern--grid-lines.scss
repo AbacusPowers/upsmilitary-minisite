@@ -144,7 +144,7 @@ $grid-item-height: 14.8em;
         // padding-top: $halfBaseUnit; 
     }
 
-    .grid-item img {
+    .grid-item>img {
         @include site-icon;
 
         .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & {    
@@ -152,40 +152,17 @@ $grid-item-height: 14.8em;
         }
     }
 
-    .video-link--style, .dummy-video-link {
-        display: inline-block;
-        position: relative;
-    }
-
-    .grid-item img.video-thumb {
-        position: relative;
-        border-radius: 0;
-        width: auto;
-        height: auto;
-        border: none;
-        display: inline-block;
-        left: auto;
-    }
-
-    .video-link--style i {
-        position: absolute;
-        top: 2.4rem;
-        right: 1rem;
-        color: $black20;
-        font-size: 2em;
-    }
-
     .grid-item h1 {
         font-size: 1.3em;
-        margin-top: 0.7em;
-        margin-bottom: 0.4em;
-        margin-left: 5em;
+        margin-top: 0.8em;
+        margin-bottom: 1.5em;
+        margin-left: 4.8em;
         margin-right: 0.7em;
         // margin-top: -0.15em;
 
         .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & {    
-            margin-left: 5em;
-            margin-top: 0.7em;
+            // margin-left: 5em;
+            // margin-top: 0.7em;
         }
     }
 
@@ -201,7 +178,7 @@ $grid-item-height: 14.8em;
         color: $ups-grey-1;
         line-height: 1.5em;
         margin-left: 2em;
-        margin-top: 2em;
+        margin-top: 0;
         margin-right: 2em;
         
         .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & {
@@ -534,7 +511,7 @@ $grid-item-height: 14.8em;
         .app-download-wrapper {
             margin-top: 3em;
             position: relative;
-            margin-left: -1.5em;
+            // margin-left: -1.5em;
             padding-bottom:1em;
 
             h2 {
@@ -594,7 +571,7 @@ $grid-item-height: 14.8em;
         }
         
         h2 {
-            margin-top: 1.5em;
+            margin-top: 0em;
         }
 
         p {
@@ -639,24 +616,6 @@ $grid-item-height: 14.8em;
      }
     .grid-item:nth-child(5) {
       border-right: none;
-      overflow: hidden;
-      height: auto;
-      padding-bottom: 4em;
-      cursor: pointer;
-
-      .breakpoint-small & {
-        height: auto;
-        padding-bottom: 4em;
-      }
-
-      h2 {
-        margin-top: 1.5em;
-      }
-      .scroll-container {
-        margin-top: 2em;
-      }
-
-
     }
 
     .grid-item:nth-child(6) { /*social*/
@@ -718,22 +677,24 @@ $grid-item-height: 14.8em;
             background: $ups-grey-1;
             border-radius: 0px;
             border: 0;
-            margin: 1.3em 1.5em 1.5em;
+            margin: 0em 1.5em 1.5em;
             margin-right: 0;
             width: calc( 100% - 6em );
             height: 2.5em;
-            top: 7.5em;
-            position: absolute;
+            display: inline-block;
+            // top: 7.5em;
+            // position: absolute;
         }
         .button {
             @include size(2.5em);
             padding: 0.3em 0 0 0.5em;
-            position: absolute;
+            // position: absolute;
             right: 1.5em;
-            margin-top: 1.3em;
-            top: 7.5em;
+            margin-top: em;
+            // top: em;
             border-radius: 0;
             text-transform: uppercase;
+            display: inline-block;
 
         }
 
@@ -843,6 +804,100 @@ $grid-item-height: 14.8em;
         border-bottom: 0;
     }
 }
+
+///////////////////Beginning to rationalize the grid with the IDs below. IDs should control content appearance.///////////////
+
+.grid-item#videos--gateway {
+    padding-bottom: 0;
+    overflow: hidden;
+    height: auto;
+    cursor: pointer;
+
+    a {
+        float: left;
+        margin-right: 1px;
+    }
+
+    .breakpoint-small & {
+        height: auto;
+        padding-bottom: 4em;
+    }
+
+    h2 {
+        margin-top: 1.5em;
+    }
+
+    .scroll-container {
+        padding-top: 0.5em;
+        // background: red;
+        height: 12rem;
+
+    }
+
+    i.fa-long-arrow-left {  
+        color: $ups-yellow;
+        right: calc( 50% + 1.6rem );
+        position: absolute;
+        margin-top: -1.0em;
+    }
+
+    i.fa-long-arrow-right {
+        color: $ups-yellow;
+        left: calc( 50% + 1.6rem );
+        position: absolute;
+        margin-top: -1.0em;
+
+    }
+
+    .video-link--style, .dummy-video-link {
+        position: relative;
+    }
+
+    img.video-thumb {
+        position: relative;
+        border-radius: 0;
+        width: 12rem;
+        height: 12rem;
+        border: none;
+        left: auto;
+        margin-right: -5px;
+    }
+
+    .scroll-indicator {
+        position: absolute;
+        // left: 7.5em;
+        right: 1.5em;
+        margin-top: -0.9em;
+    }
+
+    .video-link--style i {
+        position: absolute;
+        top: 0.5rem;
+        right: 0.6rem;
+        color: rgba( $ups-yellow, 0.8 );
+        font-size: 1.5em;
+        display: inline-block;
+    }
+    .scroll-indicator__text {
+        width: 100%;
+        display: block;
+        color: $ups-yellow;
+        text-align: center;
+        font-size: 0.7em;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

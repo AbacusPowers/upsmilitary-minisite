@@ -1,16 +1,23 @@
-<div class="grid-item grid-item-big">
+<div id="videos--gateway" class="grid-item grid-item-big">
     {% include 'VCGBundle:Svgs:bubbles.svg.twig' %}
-    <h1>Videos</h1>
+    <h1>Career Videos</h1>
+    <div class="scroll-indicator">
+        <span class="scroll-indicator__text">SCROLL</span>
+        <i class="fa fa-long-arrow-left"></i>
+        <i class="fa fa-long-arrow-right"></i>
+    </div>
+
     <div class="scroll-container">
-        <div id="video-list">
-            <a href="{{ path('transition_guide_video',{'slug':'video1'}) }}" class="video-link video-link--style"><img class="video-thumb" src="{{ asset('bundles/vcg/images/video-1.png') }}" alt=""><i class="fa fa-play-circle-o"></i></a>
-            <a href="{{ path('transition_guide_video',{'slug':'video2'}) }}" class="video-link video-link--style"><img class="video-thumb" src="{{ asset('bundles/vcg/images/video-2.png') }}" alt=""><i class="fa fa-play-circle-o"></i></a>
-            <a href="javascript:void(0)" class="video-link video-link--style"><img class="video-thumb" src="{{ asset('bundles/vcg/images/video.png') }}" alt=""><i class="fa fa-play-circle-o"></i></a>
-            <a href="javascript:void(0)" class="video-link video-link--style"><img class="video-thumb" src="{{ asset('bundles/vcg/images/video.png') }}" alt=""><i class="fa fa-play-circle-o"></i></a>
-            <a href="javascript:void(0)" class="video-link video-link--style"><img class="video-thumb" src="{{ asset('bundles/vcg/images/video.png') }}" alt=""><i class="fa fa-play-circle-o"></i></a>
-            <a href="javascript:void(0)" class="video-link video-link--style"><img class="video-thumb" src="{{ asset('bundles/vcg/images/video.png') }}" alt=""><i class="fa fa-play-circle-o"></i></a>
-            <a href="javascript:void(0)" class="video-link video-link--style"><img class="video-thumb" src="{{ asset('bundles/vcg/images/video.png') }}" alt=""><i class="fa fa-play-circle-o"></i></a>
-            <a href="javascript:void(0)" class="video-link video-link--style"><img class="video-thumb" src="{{ asset('bundles/vcg/images/video.png') }}" alt=""><i class="fa fa-play-circle-o"></i></a>
+        <div id="video-list">   
+            <a href="{{ path('transition_guide_video',{'slug':'video1'}) }}" class="video-link video-link--style"><img class="video-thumb" src="{{ asset('bundles/vcg/images/video-3.png') }}" alt=""><i class="fa fa-play-circle"></i></a>
+            <a href="{{ path('transition_guide_video',{'slug':'video2'}) }}" class="video-link video-link--style"><img class="video-thumb" src="{{ asset('bundles/vcg/images/video.png') }}" alt=""><i class="fa fa-play-circle"></i></a>
+            <a href="javascript:void(0)" class="video-link video-link--style"><img class="video-thumb" src="{{ asset('bundles/vcg/images/video-4.png') }}" alt=""><i class="fa fa-play-circle"></i></a>
+            <a href="javascript:void(0)" class="video-link video-link--style"><img class="video-thumb" src="{{ asset('bundles/vcg/images/video-3.png') }}" alt=""><i class="fa fa-play-circle"></i></a>
+            <a href="javascript:void(0)" class="video-link video-link--style"><img class="video-thumb" src="{{ asset('bundles/vcg/images/video.png') }}" alt=""><i class="fa fa-play-circle"></i></a>
+            <a href="javascript:void(0)" class="video-link video-link--style"><img class="video-thumb" src="{{ asset('bundles/vcg/images/video.png') }}" alt=""><i class="fa fa-play-circle"></i></a>
+            <a href="javascript:void(0)" class="video-link video-link--style"><img class="video-thumb" src="{{ asset('bundles/vcg/images/video.png') }}" alt=""><i class="fa fa-play-circle"></i></a>
+            <a href="javascript:void(0)" class="video-link video-link--style"><img class="video-thumb" src="{{ asset('bundles/vcg/images/video.png') }}" alt=""><i class="fa fa-play-circle"></i></a>
+
         </div>
     </div>
 </div>
