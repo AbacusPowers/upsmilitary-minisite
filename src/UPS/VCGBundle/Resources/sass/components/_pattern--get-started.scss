@@ -141,6 +141,8 @@
         background-size: cover; 
         position: relative;
         z-index: 10;
+        border-top: 1px solid $ups-yellow;
+        border-bottom: 1px solid $ups-yellow;
 
 
         p {

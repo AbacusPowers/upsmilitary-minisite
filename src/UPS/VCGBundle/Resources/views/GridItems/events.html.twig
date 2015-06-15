@@ -1,11 +1,16 @@
-<a class="grid-item grid-item-big grid--events">
+<a id="grid-item--events" class="grid-item grid-item-big">
     {% include 'VCGBundle:Svgs:calendar.svg.twig' %}
     <h1>Events</h1>
+    <div class="scroll-indicator--h">
+        <span class="scroll-indicator__text">SCROLL</span>
+        <i class="fa fa-long-arrow-left"></i>
+        <i class="fa fa-long-arrow-right"></i>
+    </div>
     <div class="scroll-container">
         <div class="all-events-wrapper">
 
             <section class="event__wrapper">
-                <h2 class="event__title">Event 1 Lorem Ipsum Title</h2>
+                <h2 class="event__title">Event 1 Lorem Ipsum Lorem Ipsum Lorem Ipsum Title</h2>
                 <p class="event__date">
                     Sept 1, 2015
                     <span class="event__optional-end-date"><!--&mdash 4--></span>
@@ -14,7 +19,6 @@
                     <span class="event__city">Nashville,</span>
                     <span class="event__state">TN</span>
                 </p>
-
             </section>
 
             <section class="event__wrapper">
@@ -27,7 +31,6 @@
                     <span class="event__city">Cincinatti,</span>
                     <span class="event__state">OH</span>
                 </p>
-
             </section>
 
             <section class="event__wrapper">
@@ -40,8 +43,8 @@
                     <span class="event__city">Mobile,</span>
                     <span class="event__state">Alabama</span>
                 </p>
-
             </section>
+
             <section class="event__wrapper">
                 <h2 class="event__title">Event 4 Lorem Ipsum Title</h2>
                 <p class="event__date">
@@ -52,8 +55,8 @@
                     <span class="event__city">Mobile,</span>
                     <span class="event__state">Alabama</span>
                 </p>
-
             </section>
+
             <section class="event__wrapper">
                 <h2 class="event__title">Event 5 Lorem Ipsum Title</h2>
                 <p class="event__date">
@@ -64,8 +67,8 @@
                     <span class="event__city">Mobile,</span>
                     <span class="event__state">Alabama</span>
                 </p>
-
             </section>
+
             <section class="event__wrapper">
                 <h2 class="event__title">Event 6 Lorem Ipsum Title</h2>
                 <p class="event__date">
@@ -76,8 +79,8 @@
                     <span class="event__city">Mobile,</span>
                     <span class="event__state">Alabama</span>
                 </p>
-
             </section>
+
             <section class="event__wrapper">
                 <h2 class="event__title">Event 7 Lorem Ipsum Title</h2>
                 <p class="event__date">
@@ -88,8 +91,8 @@
                     <span class="event__city">Mobile,</span>
                     <span class="event__state">Alabama</span>
                 </p>
-
             </section>
+
             <section class="event__wrapper">
                 <h2 class="event__title">Event 8 Lorem Ipsum Title</h2>
                 <p class="event__date">
@@ -100,12 +103,8 @@
                     <span class="event__city">Mobile,</span>
                     <span class="event__state">Alabama</span>
                 </p>
-
             </section>
         </div>
     </div>
-
-    
-    
-    <div href="{{ path('page',{'slug':'events'}) }}" class="button all-events-link">See all Events</div>
+    <div class="button black button--fake all-events-link ">See all Events</div>
 </a>

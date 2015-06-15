@@ -18,10 +18,14 @@
 				  <div class="page page--transition-guide">
 					<div class="grid-items-lines">
 					  <div class="grid-item grid--transition-guide-intro">
+<<<<<<< HEAD
 
 
 
                           {% include 'VCGBundle:Svgs:person.svg.twig' %}
+=======
+                          {% include 'VCGBundle:Svgs:document.svg.twig' %}
+>>>>>>> 82b6400fe1929e4d9156d0e565d3f51c303d73b4
 						<h1>Learn How to Build Your Brand</h1>
 
 						<p>Companies work hard to establish their brands, and you should do the same. What's your brand?</p>
@@ -49,6 +53,7 @@
 						<p>Resume Engine.org &nbsp<i class="fa fa-external-link-square"></i></p>
 					  </a>
 
+<<<<<<< HEAD
 					  <div class="grid-item grid-item-big grid--events">
                         {% include 'VCGBundle:Svgs:play.svg.twig' %}
 						<h1>Videos</h1>
@@ -62,6 +67,27 @@
                               </div>
 						  </div>
 					  </div>
+=======
+                        <div id="grid-item--videos" class="grid-item grid-item-big">
+                            {% include 'VCGBundle:Svgs:bubbles.svg.twig' %}
+                            <h1>Career Videos</h1>
+                          <!--   <div class="scroll-indicator--h">
+                                <span class="scroll-indicator__text">SCROLL</span>
+                                <i class="fa fa-long-arrow-left"></i>
+                                <i class="fa fa-long-arrow-right"></i>
+                            </div> -->
+
+                            <div class="scroll-container">
+                                <div id="video-list">   
+                                    <a href="{{ path('transition_guide_video',{'slug':'resume'}) }}" class="video-link video-link--style"><img class="video-thumb" src="{{ asset('bundles/vcg/images/video.png') }}" alt=""><i class="fa fa-play-circle"></i></a>
+                                    <a href="{{ path('transition_guide_video',{'slug':'networking'}) }}" class="video-link video-link--style"><img class="video-thumb" src="{{ asset('bundles/vcg/images/video.png') }}" alt=""><i class="fa fa-play-circle"></i></a>
+                                    <a href="{{ path('transition_guide_video',{'slug':'social-media'}) }}" class="video-link video-link--style"><img class="video-thumb" src="{{ asset('bundles/vcg/images/video.png') }}" alt=""><i class="fa fa-play-circle"></i></a>
+                                    <a href="{{ path('transition_guide_video',{'slug':'interview'}) }}" class="video-link video-link--style"><img class="video-thumb" src="{{ asset('bundles/vcg/images/video.png') }}" alt=""><i class="fa fa-play-circle"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+>>>>>>> 82b6400fe1929e4d9156d0e565d3f51c303d73b4
 					  <a href="javascript:void(0)" class="grid-item grid-item-big grid--employment-resources">
                         {% include 'VCGBundle:Svgs:business.svg.twig' %}
 						<h1>Employment Resources</h1>

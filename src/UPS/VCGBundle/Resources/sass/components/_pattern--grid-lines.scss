@@ -1,4 +1,5 @@
 $grid-item-height: 14.8em;
+$grid-item-hover-color: #222;
 
 .grid-items-lines {
     $dark-gray: #333 !default;
@@ -16,12 +17,7 @@ $grid-item-height: 14.8em;
 
     @include clearfix;
     position: relative;
-    // padding-top: 2em;
-    // margin-bottom: -1px;
     margin-top: -5em;
-    // padding-top: 3em;
-    // position: relative;
-    // border-top: 1px solid $ups-yellow;
 
 
     .breakpoint-small & {
@@ -29,46 +25,23 @@ $grid-item-height: 14.8em;
         border-top: 1px solid $ups-yellow;
         padding-top: 0;
     }
-
-
-    // .breakpoint-wide & {
-    //     margin-top: -4em;
-    //     position: relative;
-
-        .grid-item:nth-child(2) {
-        }
-        
-    //     .grid-item:nth-child(2):after {
-    //         // @include pseudo-block(10px);
-    //         height: 3em;
-    //         top: -3em;
-    //         left: 0;
-    //         width: 1px;
-    //     }
-    // }
       
     .grid-item {
-        @include transition (all 0.2s ease-in-out);
-        background: $grid-item-background;
+        @include transition (all 0.15s ease-out);
+        // background: $grid-item-background;
         border-bottom: $grid-item-border;
         border-right: none;
-        // cursor: pointer;
         float: left;
         position: relative;
-        // height: $grid-item-height;
-        // overflow: hidden;
         outline: none;
         padding: 1.5em 0 1.5em 0 ;
         text-decoration: none;
         width: 100%;
-        // overflow-y: visible;
 
         .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & {
-        // background: green;
-            height: $grid-item-height;
-
-            border-right: $grid-item-border;
             @include grid-item-columns($grid-item-columns);
+            border-right: $grid-item-border;
+            height: $grid-item-height;
         }
 
         .breakpoint-medium & {
@@ -79,16 +52,6 @@ $grid-item-height: 14.8em;
             padding-top: 1.5em;
             padding-bottom: 1.5em;
         }
-
-        
-
-        &:focus,
-        // &:hover {
-        //     background: #222;
-        //     p, h1 {
-        //         // color: $ups-yellow;
-        //     }
-        // }
 
         &.grid--articles:hover { /*move to transition guide section*/
             background: none;
@@ -112,7 +75,6 @@ $grid-item-height: 14.8em;
             width: 1px;
             top: 0;
             right: -1px;
-            // overflow: visible;
             z-index: 1;
             clip: auto;
             background: $black;
@@ -130,27 +92,20 @@ $grid-item-height: 14.8em;
         }
     }
     
-    a.grid-item {
+    a.grid-item:hover {
+        background: $grid-item-hover-color;
     }
 
-    a.grid-item:hover {
-        background: #222;
-    }
 
 // Custom Grid Styles
 
-
-    .grid-item p {
-        // padding-top: $halfBaseUnit; 
+    .grid-icon {
+      @include site-icon;
     }
 
-    .grid-item>img {
-        @include site-icon;
-
-        .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & {    
-            // @include position(absolute, 2em null null 2em );
-        }
-    }
+    // .grid-item > img {
+    //     // @include site-icon;
+    // }
 
     .grid-item h1 {
         font-size: 1.3em;
@@ -158,12 +113,6 @@ $grid-item-height: 14.8em;
         margin-bottom: 1.5em;
         margin-left: 4.8em;
         margin-right: 0.7em;
-        // margin-top: -0.15em;
-
-        .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & {    
-            // margin-left: 5em;
-            // margin-top: 0.7em;
-        }
     }
 
     .grid-item h2 {
@@ -185,39 +134,6 @@ $grid-item-height: 14.8em;
             max-width: 80%;
         }
     }
- 
-    .grid--career-explorer ul {
-        padding-top: 1em;
-        margin-left: 1em;
-    }
-
-    .grid--career-explorer ul li {
-        list-style: disc;
-        line-height: 1.5em;
-    }
-
-    // .grid-item.grid--announcements {
-
-    //     &:hover {
-    //         background:none;
-    //     }
-    //     h1 {
-    //         margin-top: 0.1em;
-
-    //         .breakpoint-small & {
-    //             margin-left: 0;
-    //         }
-            
-    //     }
-
-    //     a {
-    //         color: $ups-yellow;
-    //     }
-
-    //     a:hover {
-    //         color: $white;
-    //     }
-    // }
     
     .button-group {
         position: absolute;
@@ -233,8 +149,8 @@ $grid-item-height: 14.8em;
 
     }
     
-
     .button {
+        @include transition (all 0.15s ease-out);
         background: $ups-yellow;
         width: 100%;
         min-height: 2.5em;
@@ -247,6 +163,7 @@ $grid-item-height: 14.8em;
         margin-top: 1px;
         padding-left: 2em;
         color: $grey;
+        display: inherit;
 
         &:hover {
             color: $black;
@@ -264,45 +181,40 @@ $grid-item-height: 14.8em;
             color: $white;
             margin-top: 0;
 
+            &.history-checkbox {
+                padding-left: 4em;
 
-
-          &.history-checkbox {
-            padding-left: 4em;
-
-
-            &:before {
-              font-family: FontAwesome;
-              content: "\f096";
-              position: absolute;
-              left: 0;
-              padding: 0 2em;
-              color: $white;
-              z-index: -1;
-            }
-
-            &:visited {
-              span {
                 &:before {
-                  color: $white
+                    font-family: FontAwesome;
+                    content: "\f096";
+                    position: absolute;
+                    left: 0;
+                    padding: 0 2em;
+                    color: $white;
+                    z-index: -1;
                 }
 
-              }
+                &:visited {
+                    span {
+                        &:before {
+                            color: $white
+                        }
+                    }
+                }
+
+                span {
+                    display: block;
+                    
+                    &:before {
+                        font-family: FontAwesome;
+                        content: "\f046";
+                        position: absolute;
+                        left: 0;
+                        padding: 0 2em;
+                        color: $black;
+                    }
+                }
             }
-
-            span {
-              display: block;
-              &:before {
-                font-family: FontAwesome;
-                content: "\f046";
-                position: absolute;
-                left: 0;
-                padding: 0 2em;
-                color: $black;
-              }
-
-            }
-          }
-
         }
         
         &.black:last-child {
@@ -321,569 +233,270 @@ $grid-item-height: 14.8em;
     }
 
     .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & {    
-        // .grid-item.grid--employment-resources, .grid-item.grid--social {
-        //     margin-left: 33.333%;
-        //     margin-top: -22em;
-        //     border-bottom: none;
-        //     border-right: none;
-
-        //     h1 {
-        //         margin-left: auto;
-        //     }
-        // }
-
+     
         .grid-item:nth-child(3), .grid-item:last-child {
             border-right: 0px;
-            // background: red;
         }
-
-        // .grid-item.grid--announcements, .grid--articles,  { articles applies to transition guide section
-        //     height: 44em;
-        //     border-bottom: none;
-        // }
-
-        
-
-        // .grid--transition-guide, .grid--career-explorer, .grid--ups-culture, .grid--family {
-        //     img {
-        //         // @include position(absolute, auto);
-        //         position: static;
-        //         margin-left: auto;
-        //         margin-right: auto;
-        //     }
-
-        //     h1 { 
-        //         margin-left: auto;
-        //         margin-top: 1.5em;
-        //     }
-        // }
-
-        // .grid--ups-culture {
-            
-        //     .breakpoint-small & {
-        //              h1 {
-        //             margin-top: 0.5em;
-        //         }
-        //     }
-           
-        
-        // }
 
         .grid-item:last-child {
             border-bottom: none;
         }
        
-        // .grid--transition-guide {
-        //     border-bottom: none;
-
-        //     .button {
-        //         background: $ups-yellow;
-        //         @include size( 100% 3.5em );
-        //         @include position( absolute, null null 0 null);
-        //         text-align: center;
-        //         text-transform: capitalize;
-        //         padding-top: 0.75em;
-        //         margin-top: 2.95em;
-        //         color: $grey;
-
-        //         &:hover {
-        //             color: $black;
-        //         }
-        //     }
-        // }
-
-        // .grid--bottom-left {
-        //     h1 {
-        //         margin-top: 1.5em;
-        //     }
-        // }
-
         .grid--transition-guide-intro {
             font-weight: 800;
             font-size: 1em;
+
             .button-group {
                 position: relative;
                 a {
                     display: block;
                 }
             }
-        }
-
-        // .grid-item.grid--announcements {
-
-        //     position: relative;
-
-        //     &:hover {
-        //         background:none;
-        //     }
-        //     h1 {
-        //         margin-top: 0.1em;
-        //     }
-
-        //     a {
-        //         color: $ups-yellow;
-        //     }
-
-        //     a:hover {
-        //         color: $white;
-        //     }
-        // }
-
-        // .grid--articles {
-        //     h1 {
-        //         margin-top: 0.6em;
-        //         margin-bottom: 1.1em;
-        //     }
-
-        //     ul {
-        //         margin-left: 0.9em;
-        //     }
-
-        //     i.fa {
-        //         font-size: 1.3em;
-        //         padding-right: 0.5em;
-        //     } 
-        // }
-
-        // .grid--events {
-        //     h1 {
-        //         margin-top: 0.6em;
-        //         margin-bottom: 1.1em;
-        //     }
-
-        //     p {
-        //         margin-top: 0.6em;
-        //     }
-        // }
-        
+        }        
     }
-
-    // .breakpoint-small & {
-    //     .grid--employment-resources {
-    //         h1 {
-    //             margin-left: 0 !important;
-    //         }
-    //     }
-    // }
 }
 
-// .grid--employment-resources i, .grid--social i {
-//     font-size: 3em;
-//     color: $grey50;
-//     margin-top: 1rem;
-//     margin-right: 1rem;
-// }
 
 
-// Page by page customizations
 
-.page--home {
-    .grid-item:nth-child(1) {
-        height: auto;
-        padding-top: 0;
-        background: $grey--dark;
-        border-bottom: none;
-        .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & {
-          min-height: 1000px;
-        }
-        // border-top: 0.6em solid $black;
 
-        &:before, &:after {
-            content: none;
-        }
+///////////////////Home Page Grid Styles. IDs should control content appearance.///////////////
+.grid-item#grid-item--transition-guide {
+    height: auto;
+    padding-top: 0;
+    background: $grey--dark;
+    border-bottom: none;
+    .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & {
+      min-height: 1000px;
+    }
 
-        & > a {
-            min-height: $grid-item-height;
-        }
-        
-        & > a:hover {
-            background: #222;
-        }
+    &:before, &:after {
+        content: none;
+    }
 
-        .button-group {
-            position: relative;
-            margin-top: 1em;
-            // top: $grid-item-height;
+    & > a {
+        min-height: $grid-item-height;
+    }
+    
+    & > a:hover {
+        background: #222;
+    }
 
-           
-        }
-        
-        .app-download-wrapper {
-            margin-top: 3em;
-            position: relative;
-            // margin-left: -1.5em;
-            padding-bottom:1em;
+    .button-group {
+        position: relative;
+        margin-top: 1em;     
+        margin-bottom: 0;      
+    }
+    
+    .app-download-wrapper {
+        margin-top: 1em;
+        position: relative;
+        padding-bottom:1em;
 
-            h2 {
-                margin-left: 3.5rem;
-                padding-right: 2em;
-            }
-        }
-
-        img.app-hand {
-            border: none;
-            border-radius: 0;
-            padding: 0;
-            height: auto;
-            width: auto;
-            // position: absolute;
-            bottom: 0;
-            display: block;
-            clear: left;
-            float: none;
-            margin-top: 1.5em;
-        }
-
-        img.badge--apple, img.badge--google {
-            border: none;
-            border-radius: 0;
-            padding: 0;
-            height: auto;
-            width: auto;
-            position: absolute;
-            display: block;
-            clear: left;
-            float: none;
-            right: 4em;
-        }
-
-        img.badge--apple {
-            top: 6em;
-            width: 8.5em;
-        }
-
-        img.badge--google {
-            top: 10em;
-            width: 8.5em;
+        h2 {
+            margin-left: 2rem;
+            padding-right: 2em;
         }
     }
 
-     .grid-item:nth-child(4) {
-        border-right: none;
-        overflow: hidden;
+    img.app-hand {
+        border: none;
+        border-radius: 0;
+        padding: 0;
         height: auto;
-        padding-bottom: 4em;
-        cursor: pointer;
+        width: auto;
+        bottom: 0;
+        display: block;
+        clear: left;
+        float: none;
+        margin-top: 1.5em;
+    }
 
-        .breakpoint-small & {
-            height: auto;
-            padding-bottom: 4em;
-        }
-        
-        h2 {
-            margin-top: 0em;
-        }
+    img.badge--apple, img.badge--google {
+        border: none;
+        border-radius: 0;
+        padding: 0;
+        height: auto;
+        width: auto;
+        position: absolute;
+        display: block;
+        clear: left;
+        float: none;
+        right: 4em;
+    }
 
-        p {
+    img.badge--apple {
+        top: 6em;
+        width: 8.5em;
+    }
+
+    img.badge--google {
+        top: 10em;
+        width: 8.5em;
+    }
+
+}
+
+.grid-item#grid-item--career-explorer {
+
+    ul {
+        padding-top: 1em;
+        margin-left: 1em;
+    }
+
+    ul li {
+        list-style: disc;
+        line-height: 1.5em;
+    }
+    
+}
+
+.grid-item#grid-item--culture {
+    // background: red;
+}
+
+.grid-item#grid-item--events {
+    padding-bottom: 2.5em;
+    height: auto;
+
+    .all-events-wrapper {
+        height: 2em;
+        padding-left: 0.5em;
+    }
+
+    .event__wrapper {
+        padding: 0;
+        max-width: 14em;
+        float: left;
+        margin-bottom: 1em;
+
+        h2, p {
+            white-space: normal;
+            margin-left: 1.5rem;
             margin-top: 0;
         }
 
-        // .all-events-link {
-        //     height: 2.2rem;
-        // }
-
-        .button.all-events-link {
-            padding-top: 0.5em;
-            text-transform: uppercase;
-            text-align: center;
-            height: 2em;
-            position: absolute;
-            bottom: 0;
-
-            
-        }
-
-        .all-events-wrapper {
-//            margin-left: 5em;
-        }
-
-        .event__wrapper {
-            display: inline-block;
-            padding: 0;
-            max-width: 14em;
-
-
-            h2, p {
-                margin-left: 1.5rem;
-            }
-
-            .breakpoint-small & {
-                width: 100%;
-                // padding-left: 5em;
-            }
-        }
-
-     }
-    .grid-item:nth-child(5) {
-      border-right: none;
-    }
-
-    .grid-item:nth-child(6) { /*social*/
-        height: auto;
-        a {
-            display: inline-block;
-        }
-        i.fa {
-            font-size: 3em;
-            color: $ups-yellow;
-            margin-top: 1rem;
-            margin-right: 1rem;
-        }  
-
-        .social-wrapper {
-            padding-left:2em;
-        }
-        
-    } 
-    
-    
-    .grid-item:nth-child(3):hover:after {
-            @include pseudo-block(0.6em);
-            width: 1px;
-            bottom: 0;
-            left: -1px;
-            // overflow: visible;
-            z-index: 1;
-            background: #222;
-    }
-
-
-    .grid-item:nth-child(3):hover:before {
-            @include pseudo-block(0.6em);
-            width: 1px;
-            top: 0;
-            left: -1px;
-            // overflow: visible;
-            z-index: 1;
-            background: #222;
-    }
-
-    .grid-item:nth-child(6) {
-        border-left: 0px solid $ups-yellow;
-        border-bottom: 0px;
-        padding-bottom: 2em;
-
         .breakpoint-small & {
-            border-bottom: 1px solid $ups-yellow;
-        }
-
-
-    }
-
-    .grid-item:nth-child(7) {
-        // border-left: 1px solid $ups-yellow;
-        padding-bottom: 4em;
-        input[type="text"] {
-            background: $ups-grey-1;
-            border-radius: 0px;
-            border: 0;
-            margin: 0em 1.5em 1.5em;
-            margin-right: 0;
-            width: calc( 100% - 6em );
-            height: 2.5em;
-            display: inline-block;
-            // top: 7.5em;
-            // position: absolute;
-        }
-        .button {
-            @include size(2.5em);
-            padding: 0.3em 0 0 0.5em;
-            // position: absolute;
-            right: 1.5em;
-            margin-top: em;
-            // top: em;
-            border-radius: 0;
-            text-transform: uppercase;
-            display: inline-block;
-
-        }
-
-
-        .breakpoint-small & {
-            min-height: 16em;
+            width: 100%;
         }
     }
-     
-}
 
-.page--transition-guide {
-    // background: blue;
-    // .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & {
-    
-    .grid-item a.article-link p{
-        // background: red;
-        // width: 100%;
-
+    .scroll-indicator--h {
+        right: 1.5em;
+        padding-top: 0em;
+        margin-top: -0.9em;
     }
 
-    .grid-item:nth-child(1) {
-        // background: red;
-        // position: relative;
+    .scroll-container {
         height: auto;
-        border-bottom: none;
-
-        .breakpoint-small & {
-            border-bottom: 1px solid $ups-yellow;
-        }
-
-        .button-group {
-            margin-top: 2em;
-
-             &:last-child:before {
-                
-                .breakpoint-wide &{
-                    @include pseudo-block(1px);
-                    bottom: 0;
-                    left: -1px;
-                    height: 200%;
-                    background: $ups-yellow;
-                    z-index: 100;
-                    height: 200%;
-                }
-            }
-        }
+        padding-top: 1.4em;
+        padding-bottom: 0em;
+        margin-top: -0.9em;
     }
 
-    .grid-item:nth-child(2), .grid-item:nth-child(3) {
-        .breakpoint-wide &{
-            height: 11em;
-        }
-
-        .breakpoint-large & {
-            height: 12em;
-        }
-
-        .breakpoint-medium & {
-            height: 13em;
-        }
-
+    .button.all-events-link {
+        padding-top: 0.5em;
+        text-transform: uppercase;
+        text-align: center;
+        height: 2em;
+        position: absolute;
+        bottom: 0;        
+        // background: none;
+        color: $ups-yellow;    
     }
 
-    .grid-item:nth-child(4) {
-        height: auto;
-        border-right: none;
-    }
-
-    .grid-item:nth-child(5) {
-        height: auto;
-        // border-left: 1px solid $ups-yellow;
-        
-        &:before{
-            @include pseudo-block(1px);
-            height: 100%;
-            left: -1px;
-            background: $ups-yellow;
-        }
-        
-
-    }
-
-}
-
-.page--culture {
-    .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & {
-        .grid-item:nth-child(5) {
-            border-right-width: 1px !important;
-        }
-
-        .grid-item:nth-child(6) {
-            border-right-width: 0px;
-        }
-
-        .grid-item:nth-child(7), .grid-item:nth-child(8) {
-            border-bottom-width: 0px;
-        }
+    &:hover .button.all-events-link {
+        background: $ups-yellow;
+        color: black;
     }
 }
 
-.page--partners {
-    .grid-item:nth-child(6) {
-    border-right: 0;
-    }
-    .grid-item:nth-child(7), .grid-item:nth-child(8) {
-        border-bottom: 0;
-    }
-}
 
-///////////////////Beginning to rationalize the grid with the IDs below. IDs should control content appearance.///////////////
-
-.grid-item#videos--gateway {
+.grid-item#grid-item--videos, .video-block {
     padding-bottom: 0;
     overflow: hidden;
     height: auto;
-    cursor: pointer;
-
-    a {
-        float: left;
-        margin-right: 1px;
-    }
 
     .breakpoint-small & {
         height: auto;
-        padding-bottom: 4em;
+        // padding-bottom: 4em;
     }
 
     h2 {
         margin-top: 1.5em;
     }
 
-    .scroll-container {
-        padding-top: 0.5em;
-        // background: red;
-        height: 12rem;
-
-    }
-
-    i.fa-long-arrow-left {  
-        color: $ups-yellow;
-        right: calc( 50% + 1.6rem );
-        position: absolute;
-        margin-top: -1.0em;
-    }
-
-    i.fa-long-arrow-right {
-        color: $ups-yellow;
-        left: calc( 50% + 1.6rem );
-        position: absolute;
-        margin-top: -1.0em;
-
-    }
-
-    .video-link--style, .dummy-video-link {
+    a {
         position: relative;
+        float: left;
+        margin-right: 1px;
     }
 
-    img.video-thumb {
-        position: relative;
-        border-radius: 0;
-        width: 12rem;
-        height: 12rem;
-        border: none;
-        left: auto;
-        margin-right: -5px;
-    }
-
-    .scroll-indicator {
-        position: absolute;
-        // left: 7.5em;
+    .scroll-indicator--h {
         right: 1.5em;
-        margin-top: -0.9em;
+        padding-top: 0em;
+        margin-top: -0.6em;
     }
 
-    .video-link--style i {
-        position: absolute;
-        top: 0.5rem;
-        right: 0.6rem;
-        color: rgba( $ups-yellow, 0.8 );
-        font-size: 1.5em;
+    .scroll-container {
+        padding-top: 1.4em;
+        margin-top: -0.9em;
+        height: calc( 200px + 1.4em ); /*specify/modify as need in parent element*/
+    }    
+}
+
+.grid-item#grid-item--social {
+     height: auto;
+
+    a {
         display: inline-block;
     }
-    .scroll-indicator__text {
-        width: 100%;
-        display: block;
+    i.fa {
+        font-size: 3em;
         color: $ups-yellow;
-        text-align: center;
-        font-size: 0.7em;
+        margin-top: 1rem;
+        margin-right: 1rem;
+    }  
+
+    .social-wrapper {
+        padding-left:2em;
+    }
+}
+
+.grid-item#grid-item--search {
+
+    height: auto;
+    padding-bottom: none;
+
+    form {
+        margin-top: 1.2em;
+    }
+
+     input[type="text"] {
+        background: $ups-grey-1;
+        border-radius: 0px;
+        border: 0;
+        margin: 0em 1.5em 1.5em;
+        margin-right: 0;
+        width: calc( 100% - 6em );
+        height: 2.5em;
+        display: inline-block;
+        float: left;
+        margin-left: 1.75rem;
+        // top: 7.5em;
+        // position: absolute;
+    }
+
+    .button {
+        @include size(2.5em);
+        padding: 0.3em 0 0 0.5em;
+        right: 1.5em;
+        margin-top: 0;
+        border-radius: 0;
+        text-transform: uppercase;
+        display: inline-block;
+        float: left;
+
     }
 }
 

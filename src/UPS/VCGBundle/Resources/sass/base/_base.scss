@@ -63,30 +63,15 @@ a:active {
     display: none;
 }
 
-.grid--articles {
-  position: relative;
-}
+// .grid--articles {
+//   position: relative;
+// }
 
 
-.grid--articles:hover {
-  background: none;
-}
-.scroll-container {
-  height: auto;
-  overflow-x: scroll;
-  overflow-y: hidden;
-  white-space: nowrap;
-  -webkit-overflow-scrolling: touch;
+// .grid--articles:hover {
+//   background: none;
+// }
 
-  
-  #video-list {
-    width: 10000px;
-
-    a.video-link {
-
-    }
-  }
-}
 //
 //svg.section-svg {
 //  width: 35px;
@@ -94,6 +79,7 @@ a:active {
 //  float: left;
 //  margin-right: 1em;
 //}
+
 .grid-icon {
   @include site-icon;
 }

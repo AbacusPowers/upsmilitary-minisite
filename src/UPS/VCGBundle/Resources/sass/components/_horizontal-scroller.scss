@@ -1,0 +1,58 @@
+// Use this with the scroll-indicator component for extra affordance
+
+// Don't forget to use overflow hidden on the parent container
+
+.scroll-container {
+    height: auto; /*change in parent if needed*/
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch; /*gotta have this for idevice scrolling*/
+    padding-top: 1.4em; /*gives room for custom scroll indicator*/
+}
+
+#video-list {
+    width: 10000px;
+
+    a.video-link:before {
+        @include pseudo-block(100%);
+        background: $black40;
+        @include transition (all 0.15s ease-out);
+    }
+
+    a.video-link:hover:before {
+        background: none;
+        @include transition (all 0.15s ease-out);
+
+    }
+}
+
+
+
+    .scroll-container {
+        padding-top: 1.4em;
+        margin-top: -0.9em;
+        height: calc( 200px + 1.4em ); /*specify/modify as need in parent element*/
+
+    }
+
+img.video-thumb {
+    width: 200px;
+    height: 200px;
+}
+
+.video-link--style i {
+    color: rgba( $ups-yellow, 0.8 );
+    display: inline-block;
+    font-size: 1.5em;
+    position: absolute;
+    right: 0.6rem;
+    top: 0.5rem;
+}  
+
+// SCROLL INDICATOR STUFF
+.scroll-indicator--h {
+    right: 1.5em;
+    padding-top: 0em;
+    margin-top: -0.6em;
+}
