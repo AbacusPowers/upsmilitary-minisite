@@ -1,0 +1,20 @@
+resume:
+  Url: cfaSMhvsRsk
+  Title: Resumé
+  Prev: promote-from-within
+  Next: student-veterans
+networking:
+  Url: f19OngH6qy4
+  Title: Networking
+  Prev: resume
+  Next: social-media
+social-media:
+  Url: HQZ1yEH0idw
+  Title: Social Media
+  Prev: networking
+  Next: interview
+interview:
+  Url: V9SOJQ6p068
+  Title: Interview
+  Prev: social-media
+  Next: resume

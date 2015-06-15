@@ -1,0 +1,58 @@
+timeline:
+  Url: YF6_kuQSeVg
+  Title: Timeline for Contacting UPS as a Transitioning Service Member
+  Prev: student-veterans
+  Next: training-opportunities
+training-opportunities:
+  Url: 8uljmLWweCU
+  Title: Training Opportunities RA
+  Prev: timeline
+  Next: benefits
+  Group: faq-videos
+promote-from-within:
+  Url: CExJVTkvbK4
+  Title: Promote From Within
+  Prev: military-relate-to-ups
+  Next: resume
+benefits:
+  Url: fxABsgybUZg
+  Title: Benefits
+  Prev:
+  Next: interview
+military-reserve-force-members:
+  Url: fsA750v3mIA
+  Title: Military Reserve Force Members
+  Prev: interview
+  Next: military-spouses
+student-veterans:
+  Url: d0W6tN5IeKE
+  Title: Student Veterans
+  Prev: resume
+  Next: timeline
+military-relate-to-ups:
+  Url: AvMksSN7DT0
+  Title: Military Relate to UPS
+  Prev: military-spouses
+  Next: promote-from-within
+resume:
+  Url: cfaSMhvsRsk
+  Title: Resumé
+  Prev: promote-from-within
+  Next: student-veterans
+interview:
+  Url: V9SOJQ6p068
+  Title: Interview
+  Prev: benefits
+  Next: military-reserve-force-members
+
+military-spouses:
+  Url: 5t98V0YsK7s
+  Title: Military Spouses
+  Prev: military-reserve-force-members
+  Next: military-relate-to-ups
+
+
+
+
+
+
