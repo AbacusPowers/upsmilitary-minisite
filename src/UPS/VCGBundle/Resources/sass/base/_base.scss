@@ -63,14 +63,14 @@ a:active {
     display: none;
 }
 
-.grid--articles {
-  position: relative;
-}
+// .grid--articles {
+//   position: relative;
+// }
 
 
-.grid--articles:hover {
-  background: none;
-}
+// .grid--articles:hover {
+//   background: none;
+// }
 
 //
 //svg.section-svg {
@@ -79,6 +79,7 @@ a:active {
 //  float: left;
 //  margin-right: 1em;
 //}
+
 .grid-icon {
   @include site-icon;
 }

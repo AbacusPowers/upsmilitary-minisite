@@ -1,7 +1,60 @@
+.page--transition-guide {
 
+    .grid-item:nth-child(1) {
+        height: auto;
+        border-bottom: none;
 
+        .breakpoint-small & {
+            border-bottom: 1px solid $ups-yellow;
+        }
 
-//.page--home .grid-item-lines .grid-item.grid--transition-guide-intro:hover { /***doesn't work***/
-//    background: red;
-//}
+        .button-group {
+            margin-top: 2em;
+            margin-bottom: 0;
 
+             &:last-child:before {
+                
+                .breakpoint-wide &{
+                    @include pseudo-block(1px);
+                    bottom: 0;
+                    left: -1px;
+                    height: 200%;
+                    background: $ups-yellow;
+                    z-index: 100;
+                    height: 200%;
+                }
+            }
+        }
+    }
+
+    .grid-item:nth-child(2), .grid-item:nth-child(3) {
+        .breakpoint-wide &{
+            height: 11em;
+        }
+
+        .breakpoint-large & {
+            height: 12em;
+        }
+
+        .breakpoint-medium & {
+            height: 13em;
+        }
+
+    }
+
+    .grid-item:nth-child(4) {
+        height: auto;
+        border-right: none;
+    }
+
+    .grid-item:nth-child(5) {
+        height: auto;
+        
+        &:before{
+            @include pseudo-block(1px);
+            height: 100%;
+            left: -1px;
+            background: $ups-yellow;
+        }
+    }
+}
