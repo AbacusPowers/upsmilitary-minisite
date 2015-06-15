@@ -48,7 +48,7 @@ $grid-item-height: 14.8em;
     // }
       
     .grid-item {
-        @include transition (all 0.2s ease-in-out);
+        @include transition (all 0.15s ease-out);
         background: $grid-item-background;
         border-bottom: $grid-item-border;
         border-right: none;
@@ -235,6 +235,7 @@ $grid-item-height: 14.8em;
     
 
     .button {
+        @include transition (all 0.15s ease-out);
         background: $ups-yellow;
         width: 100%;
         min-height: 2.5em;
@@ -581,39 +582,8 @@ $grid-item-height: 14.8em;
         // .all-events-link {
         //     height: 2.2rem;
         // }
-
-        .button.all-events-link {
-            padding-top: 0.5em;
-            text-transform: uppercase;
-            text-align: center;
-            height: 2em;
-            position: absolute;
-            bottom: 0;
-
-            
-        }
-
-        .all-events-wrapper {
-//            margin-left: 5em;
-        }
-
-        .event__wrapper {
-            display: inline-block;
-            padding: 0;
-            max-width: 14em;
-
-
-            h2, p {
-                margin-left: 1.5rem;
-            }
-
-            .breakpoint-small & {
-                width: 100%;
-                // padding-left: 5em;
-            }
-        }
-
      }
+
     .grid-item:nth-child(5) {
       border-right: none;
     }
@@ -807,84 +777,113 @@ $grid-item-height: 14.8em;
 
 ///////////////////Beginning to rationalize the grid with the IDs below. IDs should control content appearance.///////////////
 
+.grid-item#grid-item--events {
+    padding-bottom: 2.5em;
+
+    .all-events-wrapper {
+        height: 2em;
+        padding-left: 0.5em;
+    }
+
+    .event__wrapper {
+        // background:purple;
+        // display: inline-block;
+        padding: 0;
+        max-width: 14em;
+        float: left;
+        margin-bottom: 1em;
+
+        h2, p {
+            white-space: normal;
+            margin-left: 1.5rem;
+        }
+
+        .breakpoint-small & {
+            width: 100%;
+            // padding-left: 5em;
+        }
+    }
+
+    .scroll-indicator--h {
+        right: 1.5em;
+        padding-top: 0em;
+        margin-top: -0.9em;
+    }
+
+    .scroll-container {
+        // background: red;
+        // margin-left: 1em;
+        // height: auto;
+        padding-top: 1.4em;
+        padding-bottom: 0em;
+        margin-top: -0.9em;
+    }
+
+    .button.all-events-link {
+        padding-top: 0.5em;
+        text-transform: uppercase;
+        text-align: center;
+        height: 2em;
+        position: absolute;
+        bottom: 0;        
+        // background: none;
+        color: $ups-yellow;    
+    }
+
+    &:hover .button.all-events-link {
+        background: $ups-yellow;
+        color: black;
+    }
+}
+
+
 .grid-item#videos--gateway {
     padding-bottom: 0;
     overflow: hidden;
     height: auto;
-    cursor: pointer;
 
-    a {
-        float: left;
-        margin-right: 1px;
+    #video-list {
+
+        a.video-link:before {
+            @include pseudo-block(100%);
+            background: $black40;
+            @include transition (all 0.15s ease-out);
+        }
+
+        a.video-link:hover:before {
+            background: none;
+            @include transition (all 0.15s ease-out);
+
+        }
     }
 
     .breakpoint-small & {
         height: auto;
-        padding-bottom: 4em;
+        // padding-bottom: 4em;
     }
 
     h2 {
         margin-top: 1.5em;
     }
 
-    .scroll-container {
-        padding-top: 0.5em;
-        // background: red;
-        height: 12rem;
-
+    a {
+        float: left;
+        margin-right: 1px;
     }
 
-    i.fa-long-arrow-left {  
-        color: $ups-yellow;
-        right: calc( 50% + 1.6rem );
-        position: absolute;
-        margin-top: -1.0em;
-    }
-
-    i.fa-long-arrow-right {
-        color: $ups-yellow;
-        left: calc( 50% + 1.6rem );
-        position: absolute;
-        margin-top: -1.0em;
-
-    }
-
-    .video-link--style, .dummy-video-link {
-        position: relative;
-    }
-
-    img.video-thumb {
-        position: relative;
-        border-radius: 0;
-        width: 12rem;
-        height: 12rem;
-        border: none;
-        left: auto;
-        margin-right: -5px;
-    }
-
-    .scroll-indicator {
-        position: absolute;
-        // left: 7.5em;
+    .scroll-indicator--h {
         right: 1.5em;
-        margin-top: -0.9em;
+        padding-top: 0em;
+        margin-top: -0.6em;
     }
 
-    .video-link--style i {
-        position: absolute;
-        top: 0.5rem;
-        right: 0.6rem;
-        color: rgba( $ups-yellow, 0.8 );
-        font-size: 1.5em;
-        display: inline-block;
+    .scroll-container {
+        padding-top: 1.4em;
+        margin-top: -0.9em;
+        height: calc( 200px + 1.4em ); /*specify/modify as need in parent element*/
+
     }
-    .scroll-indicator__text {
-        width: 100%;
-        display: block;
-        color: $ups-yellow;
-        text-align: center;
-        font-size: 0.7em;
-    }
+    
 }
 
 

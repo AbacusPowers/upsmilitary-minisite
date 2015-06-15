@@ -1,0 +1,26 @@
+.scroll-indicator--h {
+    position: absolute;
+
+    .scroll-indicator__text {
+        width: 100%;
+        display: block;
+        color: $ups-yellow;
+        text-align: center;
+        font-size: 0.7em;
+    }
+
+    i.fa-long-arrow-left {  
+        color: $ups-yellow;
+        right: calc( 50% + 1.6rem );
+        position: absolute;
+        margin-top: -1.0em;
+    }
+
+    i.fa-long-arrow-right {
+        color: $ups-yellow;
+        left: calc( 50% + 1.6rem );
+        position: absolute;
+        margin-top: -1.0em;
+
+    }
+}
