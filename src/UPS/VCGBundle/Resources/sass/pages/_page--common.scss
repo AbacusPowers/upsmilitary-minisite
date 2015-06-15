@@ -21,8 +21,6 @@
 
 .veteranGateway__liner {
     position: relative;
-    // background: $black;
-    // background: pink;
 
     .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & {
         // padding-top: 9.5em;
@@ -150,7 +148,7 @@
     @include clearfix;
 
     .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & {
-        margin-top: -5em;
+        margin-top: 0;
     }
 
     #side--a {
