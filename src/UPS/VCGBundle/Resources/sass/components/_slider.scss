@@ -68,10 +68,19 @@
       bottom: 0;
 
     }
-    h1.slider-text {
-      width: 100%;
-      position: relative;
+    a {
+      h1.slider-text {
+        width: 100%;
+        position: relative;
+      }
+      &:hover {
+
+        h1.slider-text {
+          color: $grey10;
+        }
+      }
     }
+
     .breakpoint-medium & {
       height: $header-height--large;
         h1.slider-text {
