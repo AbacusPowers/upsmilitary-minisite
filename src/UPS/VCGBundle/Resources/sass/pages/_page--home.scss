@@ -13,15 +13,16 @@
         
     }
 
-     .grid-item:nth-child(4) {
+    .grid-item:nth-child(4) {
         border-right: none;        
-     }
+    }
 
     .grid-item:nth-child(5) {
       border-right: none;
     }
 
     .grid-item:nth-child(6) { /*social*/
+
     } 
     
     .grid-item:nth-child(3):hover:after {
@@ -33,7 +34,6 @@
             z-index: 1;
             background: #222;
     }
-
 
     .grid-item:nth-child(3):hover:before {
             @include pseudo-block(0.6em);
@@ -53,8 +53,6 @@
         .breakpoint-small & {
             border-bottom: 1px solid $ups-yellow;
         }
-
-
     }
 
     .grid-item:nth-child(7) {
@@ -65,7 +63,6 @@
             min-height: 16em;
         }
     }
-     
 }
 
 
