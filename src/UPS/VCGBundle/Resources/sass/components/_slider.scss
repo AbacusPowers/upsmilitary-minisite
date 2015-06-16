@@ -113,17 +113,17 @@
             }
 
             .breakpoint-medium & {
-                bottom: 9rem;
+                bottom: 14rem;
                 max-width: calc( 100% - 6rem );
             }
             
             .breakpoint-large & {
-                bottom: 9rem;
+                bottom: 14rem;
                 max-width: calc( 67% - 6rem );
             }
 
             .breakpoint-wide & {
-                bottom: 9rem;
+                bottom: 14rem;
                 max-width: calc( 50% - 6rem );
             }
         }
@@ -133,43 +133,18 @@
 
     .breakpoint-medium & {
       height: $header-height--medium;
-        h1.slider-text {
-          // max-width: 960px;
-
-          // padding-left: 6.5rem;
-          // padding-right: 25%;
-          // margin: 7rem auto;
-        }
     }
 
     .breakpoint-large & {
       height: $header-height--large;
-        h1.slider-text {
-          // max-width: 1200px;
-
-          // padding-left: 6.5rem;
-          // padding-right: 33%;
-          // margin: 7rem auto;
-        }
     }
 
     .breakpoint-wide & {
         height: $header-height--wide;
-        h1.slider-text {
-          
-
-          // padding-left: 6.5rem;
-          // padding-right: 33%;
-          // margin: 7rem auto;
-        }
-
     }
 
     .breakpoint-small & {
-      h1.slider-text {
-        // margin-top: 6rem;
-        // padding: 0 1em;
-      }
+
     }
 
 }
@@ -249,7 +224,7 @@
     padding: 0;
     position: absolute;
     // bottom: 5rem;
-    bottom: 5em;
+    bottom: 10em;
     right: 0;
     left: 0;
     text-align: center;
