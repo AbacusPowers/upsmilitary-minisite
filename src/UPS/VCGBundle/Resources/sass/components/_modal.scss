@@ -204,8 +204,10 @@
     width: 50%;
     bottom: 0;
     float: left;
+    display: none;
 
     .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & {
+      display: block;
       color: $white;
       position: absolute;
       @include size(2em 6em);
@@ -276,6 +278,12 @@
 
     .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & {
       margin-left: 3.5em;  
+    }
+  }
+
+  .breakpoint-small & {
+    a#prev-article, a#next-article{
+      display: block;
     }
   }
 }
