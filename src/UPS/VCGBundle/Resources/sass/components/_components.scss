@@ -2,7 +2,7 @@
 
 /*modal content styling*/
 
-.article, .events, .video, .leave-site {
+.article, .events, .faqs, .video, .leave-site {
     p, h1, h2, ul li {
         color: $black;
     }
@@ -14,9 +14,12 @@
         text-transform: capitalize;
         margin-bottom: 1.2em;
     }
+    h3, h4 {
+      color: $grey--medium;
+    }
 }
 
-.article, .events, .leave-site {
+.article, .events, .faqs, .leave-site {
 
     h1 {
         .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & {

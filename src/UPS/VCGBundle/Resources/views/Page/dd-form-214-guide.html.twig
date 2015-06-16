@@ -27,13 +27,11 @@
         <div class="page page--ddform214">
            <div id="side--a">
                <section class="intro">
-                    <img src="{{ asset('bundles/vcg/images/document.png') }}" alt="">
+                   {% include 'VCGBundle:Svgs:document.svg.twig' %}
                     <h1 class="page--title">How to use your DD Form 214 to elevate your resume</h1>
                     <p>The form you receive when leaving active duty contains a trove of career information that separates you from other job candidates. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo id perferendis sapiente quisquam eveniet praesentium quidem, error atque ea.</p>
                 </section>
                 <section class="dd-form214">
-    {#                <img src="{{ asset('bundles/vcg/images/dd214-1.png') }}" alt="">#}
-
                     <svg id="form-guide-image" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                  viewBox="0 0 640 820" enable-background="new 0 0 640 820" xml:space="preserve">
                         <g id="Frame">
@@ -254,6 +252,7 @@
                         </div>
                     </section>
                 </div>
+
             </div>
         </div>
     </div>

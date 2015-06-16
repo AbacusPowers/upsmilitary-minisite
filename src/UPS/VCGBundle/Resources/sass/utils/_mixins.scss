@@ -21,3 +21,35 @@
   width: $size;
   z-index: 1000;
 }
+
+@mixin hide-on-mobile {
+  .breakpoint-small & {
+    display: none;
+  }
+}
+
+@mixin show-on-mobile {
+  .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & {
+    display: none;
+  }
+}
+
+.hide-on-mobile {
+  @include hide-on-mobile;
+}
+
+.show-on-mobile {
+  @include show-on-mobile;
+}
+
+@mixin site-icon {
+  @include size(3.5em);
+//  border-radius: 50%;
+//  border: 1px $ups-yellow solid;
+  display: block;
+  float: left;
+  margin-left: 1.5em;
+//  padding: 0.4em;
+}
+
+

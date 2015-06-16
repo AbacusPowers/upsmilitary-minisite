@@ -8,12 +8,13 @@
     position: relative;
     min-height: 75px;
     &:before {
-      @include pseudo-block(10px);
+      @include pseudo-block($vertical-thread-width);
       left: 0;
       height: calc( 100% + 1px );
       height: 100%;
       top: 0;
       background: $ups-yellow;
+      z-index: 10;
 
       .breakpoint-small & {
         content: none;
@@ -62,7 +63,7 @@
     }
   }
 
-  a:nth-child(odd) {
+  a:nth-child(odd) {    
     // background: $black05;
   }
 
@@ -76,6 +77,7 @@
     margin-right: 80px;
     font-weight: 700;
     padding-bottom: 0px;
+
     p{
       line-height: 1.9;
     }
@@ -100,11 +102,15 @@
   }
 
   .expander__child p img { /*DD Form 214 guide*/
-    // display: none;
+    display: none;
     float: left;
+    clear: both;
     margin: 0.4em 1em 1em 0;
+
   }
-  
+  .open-expander .expander__child p img {
+    display: block;
+  }
   .faq.expander__child p { /*for FAQs*/
     margin-left: 4em;
   }
@@ -179,4 +185,67 @@
     }
   }
 
+///////////********NESTED EXPANDERS***********/////////////
+
+  .component--expander .expander__wrapper:before {
+    content: none;
+  }
+
+  .component--expander .expander__wrapper{
+    margin-left: -2em;
+    background: $white10;
+    border-bottom: none;
+    padding-left: 3rem;
+
+    h2 {
+      font-weight: 400;
+    }
+  }
+
+}
+
+
+//THIN EXPANDER
+.component--expander.expander__thin {
+  margin-bottom: 3em;
+  border-top: 1px solid rgba( $ups-grey-1, 0.3);
+
+  .expander__wrapper {
+    min-height: 0;
+    margin-top: 0;
+    padding-top: 0;
+
+    ul li {
+      display: inline-block;
+      h2 {
+        line-height: 3em;
+      }
+    }
+
+    // & > span {
+    //     background: red;
+    // }
+  }
+
+  h2 {
+    margin-right: 0;
+  }
+
+  .button {
+    height: 5em;
+//    min-height: 3.5em;
+    padding-top: 0;
+    i.fa {
+      padding: 0 1em 0 0;
+      line-height: 2.5em;
+    }
+  }
+
+  .component--expander>.expander__wrapper.open-expander {
+    background: $white05;
+  }
+
+  .component--expander {
+    border-top: none;
+  }
 }

@@ -1,5 +1,7 @@
 <div class="grid-item grid--announcements">
-    <img src="{{ asset('bundles/vcg/images/lightbulb.png') }}" alt="">
+    {#<img src="{{ asset('bundles/vcg/images/lightbulb.png') }}" alt="">#}
+    {% include 'VCGBundle:Svgs:lightbulb.svg.twig' %}
+
     <h1>Search Jobs</h1>
     <form id="job-search" action="">
         <input id="search-field" type="text" placeholder="Keyword or Location Name">

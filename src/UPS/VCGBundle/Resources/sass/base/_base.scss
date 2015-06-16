@@ -24,6 +24,7 @@ p {
     line-height: 1.5;
     padding: 0;
     margin: 0;
+    font-size: 0.9em;
 }
 
 h1 {
@@ -71,15 +72,28 @@ a:active {
   background: none;
 }
 .scroll-container {
-  height: 120px;
+  height: auto;
   overflow-x: scroll;
   overflow-y: hidden;
   white-space: nowrap;
   -webkit-overflow-scrolling: touch;
+
+  
   #video-list {
     width: 10000px;
+
     a.video-link {
 
     }
   }
+}
+//
+//svg.section-svg {
+//  width: 35px;
+//  height: 35px;
+//  float: left;
+//  margin-right: 1em;
+//}
+.grid-icon {
+  @include site-icon;
 }

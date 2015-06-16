@@ -139,6 +139,8 @@
     &.get-started--footer {
         background: url(../../bundles/vcg/images/bg-6.png) center center scroll rgba($ups-brown-1, 0.1);
         background-size: cover; 
+        position: relative;
+        z-index: 10;
 
 
         p {

@@ -1,17 +1,19 @@
 // Thoughtbot Bitters Breadcrumbs
 
 .breadcrumb {
-    @include position(absolute, -7.2em null null 2.2em);
+    // @include position(absolute, -7.2em null null 2.2em);
+    @include position(absolute, -7em null null null);
     // @include position(absolute, 0 null null 0);
 
     z-index: 100;
 
-/*    &::before{
-        @include pseudo-block(2.2em);
-        @include position( absolute, nul null 0 -2.2em);
-        background: $ups-yellow;
-        border-right: 1px solid $ups-brown-1;
-    }*/
+    &::before{
+        @include pseudo-block(2em);
+        width: 3000px;
+        left: -3000px;
+        background: rgba( $ups-yellow, 0.8 );
+        // border-right: 1px solid $ups-brown-1;
+    }
 /*
     &::after{
         font-family: FontAwesome;
@@ -20,6 +22,7 @@
         @include position( absolute, nul null 0.4em -1.62em);
         z-index: 1000;
     }*/
+
 }
 
 .breadcrumb {   
@@ -37,7 +40,7 @@
 
   $breadcrumb-border-color: $base-border-color;
   $breadcrumb-border: 1px solid $breadcrumb-border-color;
-  $breadcrumb-height: 2.2em;
+  $breadcrumb-height: 2em;
   $breadcrumb-arrow-color: $breadcrumb-border-color;
   $breadcrumb-background: $ups-yellow;
   $breadcrumb-inactive-hover-color: $black80;

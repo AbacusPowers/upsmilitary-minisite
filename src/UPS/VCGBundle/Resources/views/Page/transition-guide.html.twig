@@ -21,7 +21,7 @@
 
 
 
-						<img src="{{ asset('bundles/vcg/images/document.png') }}" alt="">
+                          {% include 'VCGBundle:Svgs:document.svg.twig' %}
 						<h1>Learn How to Build Your Brand</h1>
 
 						<p>Companies work hard to establish their brands, and you should do the same. What's your brand?</p>
@@ -29,62 +29,46 @@
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum incidunt, sunt ex ab nam eligendi aliquid id at tempore quod fugit rerum.</p>
 
 						<div class="button-group">
-							<a href="{{path('transition_guide_article',{'slug':'cover-letter-resume'}) }}" class="button black article-link"><i class="fa fa-square-o"></i>&nbspResume & Cover Letter</a>
-
-							<a href="{{path('transition_guide_article',{'slug':'marketing-yourself'}) }}" class="button black article-link"><i class="fa fa-square-o"></i>&nbspMarketing Yourself Online</a>
-
-							<a href="{{path('transition_guide_article',{'slug':'networking-essentials'}) }}" class="button black article-link"><i class="fa fa-square-o"></i>&nbspNetworking</a>
-							<!-- <li>
-								<a href="" class="modal-trigger"><p><i class="fa fa-check-square-o"></i>&nbspDealing with Recruiters</p></a>
-							</li> -->
-							<a href="javascript:void(0)" class="button black article-link"><i class="fa fa-square-o"></i>&nbspCareer Fairs</a>
-							<a href="javascript:void(0)" class="button black article-link"><i class="fa fa-square-o"></i>&nbspInterviews</a>
-							<a href="javascript:void(0)" class="button black article-link"><i class="fa fa-square-o"></i>&nbspLorem Ipsum</a>
+							<a href="{{path('transition_guide_article',{'slug':'cover-letter-resume'}) }}" class="button black history-checkbox article-link"><span></span>Resume & Cover Letter</a>
+							<a href="{{path('transition_guide_article',{'slug':'marketing-yourself'}) }}" class="button black history-checkbox article-link"><span></span>Marketing Yourself Online</a>
+							<a href="{{path('transition_guide_article',{'slug':'networking-essentials'}) }}" class="button black history-checkbox article-link"><span></span>Networking</a>
+                            <a href="{{path('transition_guide_article',{'slug':'cover-letter-resume'}) }}" class="button black history-checkbox article-link"><span></span>Dealing With Recruiters</a>
+							<a href="{{path('transition_guide_article',{'slug':'cover-letter-resume'}) }}" class="button black history-checkbox article-link"><span></span>Preparing For Career Fairs</a>
+							<a href="{{path('transition_guide_article',{'slug':'cover-letter-resume'}) }}" class="button black history-checkbox article-link"><span></span>Interviews</a>
 						</div>
 
 					  </div>
 					  <a href="{{ path('transition_guide_page', {'slug':'dd-form-214-guide'}) }}" class="grid-item grid--career-explorer grid--bottom-left">
-						<img src="{{ asset('bundles/vcg/images/document.png') }}" class="icon--large" alt="">
+                          {% include 'VCGBundle:Svgs:document.svg.twig' %}
 						<h1>Your DD Form 214</h1>
 						<p>Learn how to translate your military qualifications to civilian resume terms.</p>
 					  </a>
 					  <a href="https://www.resumeengine.org/" target="new" class="grid-item grid--ups-culture external">
-						<img src="{{ asset('bundles/vcg/images/document.png') }}" class="icon--large" alt="">
+                      {% include 'VCGBundle:Svgs:document.svg.twig' %}
 						<h1>Create Your Civilian Resume</h1>
 						<p>Resume Engine.org &nbsp<i class="fa fa-external-link-square"></i></p>
-
 					  </a>
 
 					  <div class="grid-item grid-item-big grid--events">
-						<img src="{{ asset('bundles/vcg/images/bubbles.png') }}" alt="">
+                        {% include 'VCGBundle:Svgs:bubbles.svg.twig' %}
 						<h1>Videos</h1>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, illum.</p>
 						  <div class="scroll-container">
                               <div id="video-list">
-                                  <a href="{{ path('transition_guide_video',{'slug':'video1'}) }}" class="video-link video-link--style"><img class="video-thumb" src="{{ asset('bundles/vcg/images/video-1.png') }}" alt=""><i class="fa fa-play-circle-o"></i></a>
-                                  <a href="{{ path('transition_guide_video',{'slug':'video2'}) }}" class="video-link video-link--style"><img class="video-thumb" src="{{ asset('bundles/vcg/images/video-2.png') }}" alt=""><i class="fa fa-play-circle-o"></i></a>
-                                  <a href="javascript:void(0)" class="video-link video-link--style"><img class="video-thumb" src="{{ asset('bundles/vcg/images/video.png') }}" alt=""><i class="fa fa-play-circle-o"></i></a>
-                                  <a href="javascript:void(0)" class="video-link video-link--style"><img class="video-thumb" src="{{ asset('bundles/vcg/images/video.png') }}" alt=""><i class="fa fa-play-circle-o"></i></a>
-                                  <a href="javascript:void(0)" class="video-link video-link--style"><img class="video-thumb" src="{{ asset('bundles/vcg/images/video.png') }}" alt=""><i class="fa fa-play-circle-o"></i></a>
-                                  <a href="javascript:void(0)" class="video-link video-link--style"><img class="video-thumb" src="{{ asset('bundles/vcg/images/video.png') }}" alt=""><i class="fa fa-play-circle-o"></i></a>
-                                  <a href="javascript:void(0)" class="video-link video-link--style"><img class="video-thumb" src="{{ asset('bundles/vcg/images/video.png') }}" alt=""><i class="fa fa-play-circle-o"></i></a>
-                                  <a href="javascript:void(0)" class="video-link video-link--style"><img class="video-thumb" src="{{ asset('bundles/vcg/images/video.png') }}" alt=""><i class="fa fa-play-circle-o"></i></a>
+                                  <a href="{{ path('transition_guide_video',{'slug':'resume'}) }}" class="video-link video-link--style"><img class="video-thumb" src="{{ asset('bundles/vcg/images/video-3.png') }}" alt=""><i class="fa fa-play-circle-o"></i></a>
+                                  <a href="{{ path('transition_guide_video',{'slug':'networking'}) }}" class="video-link video-link--style"><img class="video-thumb" src="{{ asset('bundles/vcg/images/video-4.png') }}" alt=""><i class="fa fa-play-circle-o"></i></a>
+                                  <a href="{{ path('transition_guide_video',{'slug':'social-media'}) }}" class="video-link video-link--style"><img class="video-thumb" src="{{ asset('bundles/vcg/images/video-3.png') }}" alt=""><i class="fa fa-play-circle-o"></i></a>
+                                  <a href="{{ path('transition_guide_video',{'slug':'interview'}) }}" class="video-link video-link--style"><img class="video-thumb" src="{{ asset('bundles/vcg/images/video-4.png') }}" alt=""><i class="fa fa-play-circle-o"></i></a>
                               </div>
 						  </div>
-
-
-
-
 					  </div>
 					  <a href="javascript:void(0)" class="grid-item grid-item-big grid--employment-resources">
-						<img src="{{ asset('bundles/vcg/images/bubbles.png') }}" alt="">
+                        {% include 'VCGBundle:Svgs:bubbles.svg.twig' %}
 						<h1>Employment Resources</h1>
 						<p>Lorem ipsum dolor sit amet, elit. Rem, illum.</p>
 						<p>Lorem ipsum dolor sit amet, elit. Rem, illum.</p>
 						<p>Lorem ipsum dolor sit amet, elit. Rem, illum.</p>
 					  </a>
-					  <!-- <div class="right-cover"></div> -->
-					  <!-- <div class="bottom-cover"></div> -->
 					</div>
 				  </div>
 				</div>

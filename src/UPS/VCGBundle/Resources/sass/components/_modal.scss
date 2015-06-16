@@ -2,7 +2,7 @@
 
 #overlay {
     display: none;
-    .article &, .video &, .events & {
+    .article &, .video &, .events &, .faqs &, .values & {
         display: block;
     }
     position: fixed; 
@@ -17,7 +17,7 @@
 }
 #modal {
   height: 100%;
-  .article &, .video &, .events & {
+  .article &, .video &, .events &, .faqs &, .values & {
     display: block;
     .hold-modal & {
       display: none;
@@ -211,6 +211,14 @@
 
 /*********************EVENTS MODAL*******************************/
 
+/*********************UPS VALUES MODAL*************************/
+.values {
+  #modal {
+    background: transparent;
+    border-left: none;
+    padding: 0;
+  }
+}
 
 /*********************OFFSITE LINK MODAL*************************/
  #offsite-modal {

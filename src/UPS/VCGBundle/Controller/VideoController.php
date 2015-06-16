@@ -11,7 +11,7 @@ use Symfony\Component\Yaml\Parser;
 class VideoController extends Controller
 {   
     /**
-     * @Route("/video/{slug}.html")
+     * @Route("/video/{slug}.html", name="homepage_video")
      * @Route("/culture-benefits/video/{slug}.html", name="culture_benefits_video")
      * @Route("/transition-guide/video/{slug}.html", name="transition_guide_video")
      * @Route("/culture-benefits/faq/video/{slug}.html", name="faq_video")
@@ -23,8 +23,21 @@ class VideoController extends Controller
         
         $request = $this->container->get('request');
         $routeName = $request->get('_route');
+
         try {
-            $videos = $yaml->parse(file_get_contents( dirname(dirname(__FILE__)). "/Resources/data/videos.yml"));
+            if($routeName === 'homepage_video') {
+                $videos = $yaml->parse(file_get_contents( dirname(dirname(__FILE__)). "/Resources/data/videos/career-videos.yml"));
+                $parent = '/';
+            } elseif ($routeName === 'culture_benefits_video') {
+                $videos = $yaml->parse(file_get_contents( dirname(dirname(__FILE__)). "/Resources/data/videos/career-videos.yml"));
+                $parent = 'culture-benefits';
+            } elseif ($routeName === 'transition_guide_video') {
+                $videos = $yaml->parse(file_get_contents( dirname(dirname(__FILE__)). "/Resources/data/videos/transition-videos.yml"));
+                $parent = 'transition-guide';
+            } elseif ($routeName === 'faq_video') {
+                $videos = $yaml->parse(file_get_contents( dirname(dirname(__FILE__)). "/Resources/data/videos/faq-videos.yml"));
+                $parent = 'culture-benefits';
+            }
             $video = $videos[$slug];
         } catch (ParseException $e) {
             printf("Unable to parse the YAML file: %s", $e->getMessage());
@@ -32,7 +45,7 @@ class VideoController extends Controller
         try {
             $response = $this->render(
                 'VCGBundle:Layouts:video.html.twig',
-                array('slug' => $slug, 'video' => $video,'route' => $routeName)
+                array('slug' => $slug, 'video' => $video,'route' => $routeName, 'parent' => $parent)
             );
         } catch (\Exception $ex) {
             // your conditional code here.

@@ -1,45 +1,241 @@
+$map-height-small: 18em;
+$map-height-medium: 24em;
+$map-height-large: 30em;
+$map-height-wide: 40em;
+
+$map-control-height: 4.5em;
+
+// $state-list-scroll-height-small: $map-height-wide - $map-control-height;
+$state-list-scroll-height-medium: $map-height-medium - $map-control-height;
+$state-list-scroll-height-large: $map-height-large - $map-control-height;
+$state-list-scroll-height-wide:  $map-height-wide - $map-control-height;
+
 .page--map {
+
+    #side--a {
+       .map-wrapper {
+         overflow: hidden;
+         position: relative;
+       }
+    }
     
+    .map-controls {
+        padding: 2.6em 3em 0em 3em;
+        height: $map-control-height;
+
+        select {
+            margin-bottom: 0;
+            width: 12.1em;
+        }
+    }
+
     .map-controls form > div {
         margin-right: 1em;
-        
         display: inline-block;
+
+        h1 {
+            // font-weight: 400;
+            text-transform: uppercase;
+            color: $ups-yellow;
+            font-size: 1.15em;
+        }
     }
     
     .map-info-container p > a {
         color: #fff;
-        
-        font-size: 0.8rem;
+        font-size: 0.9rem;
     }
     
     .svg-map {
         width: 100%;
-        height: 450px;
-        
+        height: $map-height-small;
         display: block;
 
-        .breakpoint-small & { display: none; }
+        .breakpoint-medium & {
+            height: $map-height-medium;
+            display: none;
+        }
+
+        .breakpoint-large & {
+            height: $map-height-large;
+        }
+        
+        .breakpoint-wide & {
+            height: $map-height-wide;
+        }
      
-        path { cursor: pointer; }
+        path { 
+            cursor: pointer; 
+        }
     }
 
     #job-map--refresh {
-        color: #474747;
+        color: $black;
         font-weight: bold;
         opacity: 0;
         
-        height: 2em;
+        // height: 2em;
         
         display: inline-block;
         
         transition: opacity 0.5s;
+        position: absolute;
+        right: 1.4rem;
+        top: 2.9rem;
+        font-size: 1.7em;
+        z-index: 100;
+        border-radius: 50%;
+        background: $ups-yellow;
+        display: block;
+        padding: 0.05rem 0em 0 0.5rem;
+        @include size(2.5rem);
         
         &.shown {
             cursor: pointer;
             opacity: 1;
         }
         
-        .breakpoint-small & { display: none; }
+        .breakpoint-small & { 
+            display: none; 
+        }
+    }
+
+    #side--b {
+        display: block;
+        .breakpoint-medium & {
+            height: $map-height-medium;
+        }
+
+        .breakpoint-large & {
+            height: $map-height-large;
+        }
+        
+        .breakpoint-wide & {
+            height: $map-height-wide;
+        }
+    }
+
+    .map-info-container {
+        padding-top: 2.6em;
     }
     
+    .map-info--state {
+        display: block;
+
+        h2 i.fa-circle {
+            vertical-align: middle;
+            
+            font-size: 0.65em;
+            margin-right: 0.5em;
+            
+            display: inline-block;
+            
+            &.location-large { color: $ups-green; }
+        }
+
+        .size-key {
+              top: -0.5rem;
+              padding-bottom: 0.8em;
+
+            ul li {
+                display: inline-block;
+                margin-left: 3rem;
+                font-size: 0.8em;
+
+
+                i {
+                    color: $white;
+                }
+            }
+
+            ul li:nth-child(1) i{
+                color: $ups-green;
+            }
+        }
+
+         &:after {
+            @include pseudo-block($vertical-thread-width);
+            background: $white10;
+            height: 100%;
+            top: 0;
+            left: 50%;
+
+            .breakpoint-small & {
+                content: none;
+            }
+        }    
+
+        h1 {
+            color: $white;
+            cursor: default;
+            font-size: 1.5em;
+            font-weight: 400;
+            margin-bottom: 1.5rem;
+            margin-top: 3.3rem;
+            padding-right: 4.7rem;
+            position: absolute;
+            right: 50%;
+            text-align: right;
+            text-transform: uppercase;
+            top: 0;
+            transition: opacity 0.5s;
+            width: auto;
+
+            .breakpoint-small & {
+                right: auto;
+                left: 1rem;
+                top: 2em;
+            }
+        }
+    }
+
+//    .component--expander {
+//        margin-bottom: 3em;
+//        border-top: 1px solid rgba( $ups-grey-1, 0.3);
+//
+//        .expander__wrapper {
+//            min-height: 3.5em;
+//
+//            ul li {
+//                display: inline-block;
+//            }
+//
+//            // & > span {
+//            //     background: red;
+//            // }
+//        }
+//
+//        h2 {
+//            margin-right: 0;
+//        }
+//
+//        .component--expander>.expander__wrapper.open-expander {
+//            background: $white05;
+//        }
+//
+//        .component--expander {
+//            border-top: none;
+//        }
+//    }
+
+    .map-info--state > .component--expander {
+        
+        height: auto;
+        display: block;
+
+        .breakpoint-medium & {
+            max-height: $state-list-scroll-height-medium;
+            overflow-y: scroll;
+        }
+
+        .breakpoint-large & {
+            max-height: $state-list-scroll-height-large;
+            overflow-y: scroll;
+        }
+        
+        .breakpoint-wide & {
+            max-height: $state-list-scroll-height-wide;
+            overflow-y: scroll;
+        }
+    }
 }

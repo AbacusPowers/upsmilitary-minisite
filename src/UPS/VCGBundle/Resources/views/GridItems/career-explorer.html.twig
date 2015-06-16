@@ -1,13 +1,11 @@
 <div class="grid-item grid--career-explorer">
-    <img src="{{ asset('bundles/vcg/images/handshake.png') }}" class="icon--large" alt="">
+    {% include 'VCGBundle:Svgs:handshake.svg.twig' %}
     <h1>Careers at UPS</h1>
     <div class="button-group">
-        <a href="{{ path('page',{'slug':'job-converter'}) }}" class="button black">Convert your Military Skills</a>
+        <a href="{{ path('page',{'slug':'job-converter'}) }}" class="button black"><span></span>Convert your Military Skills</a>
 
-        <a href="javascript:void" class="button black">Types of Jobs Available at UPS</a>
+        <a href="{{ path('page',{'slug':'jobs'}) }}" class="button black"><span></span>Types of Jobs Available at UPS</a>
 
-        <a href="javascript:void" class="button black">locations with the most jobs</a>
+        <a href="{{ path('page',{'slug':'job-map'}) }}" class="button black"><span></span>locations with the most jobs</a>
     </div>
-    
-    
 </div>

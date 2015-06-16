@@ -18,48 +18,81 @@
                 </div>
                   <div class="page page--culture">
                     <div class="grid-items-lines">
-                        {% include 'VCGBundle:GridItems:transition-guide-culture.html.twig' %}
+                        <a href="{{path('culture_benefits_page',{'slug':'values'}) }}" class="grid-item values-link">
+                            {% include 'VCGBundle:Svgs:circles.svg.twig' %}
+                            <h1>UPS Values</h1>
+                            <p>See all the advantages and benefits to working at UPS for veterans, families, students and more. Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+                        </a>
   
-                      <a href="javascript:void" class="grid-item grid--family">
-                        <img src="{{ asset('bundles/vcg/images/placeholder_logo_2_dark.png') }}" class="icon--large" alt="">
+                      <a href="{{path('culture_benefits_article',{'slug':'family'}) }}" class="grid-item grid--family article-link">
+                        {% include 'VCGBundle:Svgs:person.svg.twig' %}
                         <h1>Family</h1>
                         <p>See all the advantages and benefits to working at UPS for veterans, families, students and more.</p>
                       </a>
-                      <a href="javascript:void(0)" class="grid-item grid--ups-culture">
-                        <img src="{{ asset('bundles/vcg/images/placeholder_logo_2_dark.png') }}" class="icon--large" alt="">
+                      <a href="{{path('culture_benefits_article',{'slug':'benefits'}) }}" class="grid-item grid--ups-culture article-link">
+                        {% include 'VCGBundle:Svgs:dollar.svg.twig' %}
                         <h1>Benefits</h1>
                         <p>See all the advantages and benefits to working at UPS for veterans, families, students and more.</p>
                       </a>
-                      <div class="grid-item">
-                        <img src="{{ asset('bundles/vcg/images/placeholder_logo_2_dark.png') }}" alt="">
+                      <div class="grid-item grid--ra-guidebook">
+                        {% include 'VCGBundle:Svgs:venn.svg.twig' %}
                         <h1>Registered Apprentice Program</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, illum. 
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, illum.</p>
+                        <div class="button-group">
+							<a href="{{path('culture_benefits_article',{'slug':'ra-intro'}) }}" class="button black history-checkbox article-link"><span></span>Intro</a>
+							<a href="{{path('culture_benefits_article',{'slug':'ra-application'}) }}" class="button black history-checkbox article-link"><span></span>Application Process</a>
+							<a href="{{path('culture_benefits_article',{'slug':'ra-responsibilities'}) }}" class="button black history-checkbox article-link"><span></span>UPS Responsibilities</a>
+							<a href="{{path('culture_benefits_article',{'slug':'ra-gi-benefits'}) }}" class="button black history-checkbox article-link"><span></span>Recruiters</a>
+							<a href="{{path('culture_benefits_article',{'slug':'ra-post-911-payments'}) }}" class="button black history-checkbox article-link"><span></span>Career Fair</a>
+							<a href="{{path('culture_benefits_article',{'slug':'ra-mgib-payments'}) }}" class="button black history-checkbox article-link"><span></span>Interview</a>
+							<a href="{{path('culture_benefits_article',{'slug':'ra-glossary'}) }}" class="button black history-checkbox article-link"><span></span>Glossary</a>
+							<a href="{{path('culture_benefits_article',{'slug':'ra-faq'}) }}" class="button black history-checkbox article-link"><span></span>Registered Apprentice FAQ</a>
+							<a href="{{path('culture_benefits_article',{'slug':'ra-links'}) }}" class="button black history-checkbox article-link"><span></span>Links</a>
+						</div>
                       </div>
-                      <a href="javascript:void(0)" class="grid-item">
-                        <img src="{{ asset('bundles/vcg/images/placeholder_logo_2_dark.png') }}" alt="">
+                      <a href="{{path('culture_benefits_article',{'slug':'student-programs'}) }}" class="grid-item article-link">
+                        {% include 'VCGBundle:Svgs:resume.svg.twig' %}
                         <h1>Students</h1>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, illum.</p>
                       </a>
                       <a href="javascript:void(0)" class="grid-item">
-                        <img src="{{ asset('bundles/vcg/images/placeholder_logo_2_dark.png') }}" alt="">
+                        {% include 'VCGBundle:Svgs:increase.svg.twig' %}
                         <h1>ESGR</h1>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa ipsa et quis modi dolorem.</p>
                       </a>
-                      <a href="{{ path('culture_benefits_page', {'slug': 'faqs'}) }}" class="grid-item">
-                        <img src="{{ asset('bundles/vcg/images/placeholder_logo_2_dark.png') }}" alt="">
+                      <a href="{{ path('culture_benefits_page', {'slug': 'faqs'}) }}" class="grid-item article-link">
+                        {% include 'VCGBundle:Svgs:chat.svg.twig' %}
                         <h1>FAQs</h1>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa ipsa et quis modi dolorem.</p>
                       </a>
-                      <a href="javascript:void(0)" class="grid-item">
-                        <img src="{{ asset('bundles/vcg/images/placeholder_logo_2_dark.png') }}" alt="">
-                        <h1>Videos</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa ipsa et quis modi dolorem.</p>
-                      </a>
-                      <a href="{{ path('page', {'slug': 'partners'}) }}" class="grid-item">
-                        <img src="{{ asset('bundles/vcg/images/placeholder_logo_2_dark.png') }}" alt="">
+                      {#<a href="javascript:void(0)" class="grid-item">#}
+                        {#{% include 'VCGBundle:Svgs:play.svg.twig' %}#}
+                        {#<h1>Videos</h1>#}
+                        {#<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa ipsa et quis modi dolorem.</p>#}
+                      {#</a>#}
+                      <a href="{{ path('culture_benefits_page', {'slug': 'partners'}) }}" class="grid-item">
+                        {% include 'VCGBundle:Svgs:handshake.svg.twig' %}
                         <h1>Our Partners</h1>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa ipsa et quis modi dolorem.</p>
                       </a>
+                    </div>
+                    <div class="video-block">
+                      {% include 'VCGBundle:Svgs:bubbles.svg.twig' %}
+                      <h1>Videos</h1>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, illum.</p>
+                      <div class="scroll-container">
+                          <div id="video-list">
+                              <a href="{{ path('culture_benefits_video',{'slug':'feeder-driver'}) }}" class="video-link video-link--style"><img class="video-thumb" src="{{ asset('bundles/vcg/images/video-3.png') }}" alt=""><i class="fa fa-play-circle-o"></i></a>
+                              <a href="{{ path('culture_benefits_video',{'slug':'frontline-supervisor'}) }}" class="video-link video-link--style"><img class="video-thumb" src="{{ asset('bundles/vcg/images/video-4.png') }}" alt=""><i class="fa fa-play-circle-o"></i></a>
+                              <a href="{{ path('culture_benefits_video',{'slug':'hr'}) }}" class="video-link video-link--style"><img class="video-thumb" src="{{ asset('bundles/vcg/images/video-3.png') }}" alt=""><i class="fa fa-play-circle-o"></i></a>
+                              <a href="{{ path('culture_benefits_video',{'slug':'mechanic'}) }}" class="video-link video-link--style"><img class="video-thumb" src="{{ asset('bundles/vcg/images/video-4.png') }}" alt=""><i class="fa fa-play-circle-o"></i></a>
+                              <a href="{{ path('culture_benefits_video',{'slug':'otr-driver'}) }}" class="video-link video-link--style"><img class="video-thumb" src="{{ asset('bundles/vcg/images/video-3.png') }}" alt=""><i class="fa fa-play-circle-o"></i></a>
+                              <a href="{{ path('culture_benefits_video',{'slug':'package-driver'}) }}" class="video-link video-link--style"><img class="video-thumb" src="{{ asset('bundles/vcg/images/video-4.png') }}" alt=""><i class="fa fa-play-circle-o"></i></a>
+                              <a href="{{ path('culture_benefits_video',{'slug':'package-handler'}) }}" class="video-link video-link--style"><img class="video-thumb" src="{{ asset('bundles/vcg/images/video-3.png') }}" alt=""><i class="fa fa-play-circle-o"></i></a>
+                              <a href="{{ path('culture_benefits_video',{'slug':'sorter'}) }}" class="video-link video-link--style"><img class="video-thumb" src="{{ asset('bundles/vcg/images/video-4.png') }}" alt=""><i class="fa fa-play-circle-o"></i></a>
+                              <a href="{{ path('culture_benefits_video',{'slug':'technician'}) }}" class="video-link video-link--style"><img class="video-thumb" src="{{ asset('bundles/vcg/images/video-3.png') }}" alt=""><i class="fa fa-play-circle-o"></i></a>
+                          </div>
+                      </div>
                     </div>
                 </div>           
             </div>

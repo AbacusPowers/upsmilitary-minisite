@@ -1,38 +1,47 @@
 (function($) {
-    $JOB_MAP_SUBMAPS = [
-        { /* continental */
-            top: 49.384471,
-            left: -124.727821,
-            w: -57.772293,
-            h: 31.75
-        },
-        { /* alaska */
-            top: 71.344918,
-            left: -174.170710,
-            w: -41.5,
-            h: 17.0
-        },
-        { /* hawaii */
-            top: 0,
-            left: 0,
-            w: 0,
-            h: 0
-        }
-    ];
-    
 
     /*
      * Some constants isolated for easy reconfiguration.
      */
     var CONST = {
-        COLOR_PATH:         '#996D00',
-        COLOR_PATH_HILITE:  '#FFB500',
-        COLOR_STROKE:       '#351C15',
- 
-        RX_CAPITALIZE:      /(?:^|\s)[(]?\S/g,
+        ATTR_PEG: [
+            { fill: 'rgba(111,190,68, 0.5)' }, // Large
+            { fill: 'rgba(255,255,255,0.8)' }, // Medium
+            { fill: '#000000' }  // Small
+        ],
 
-        STROKE_WIDTH:       '0.5'
+        BASE_URL:           '/js/job-map/',
+        
+        COLOR_PATH:         '#888',
+        COLOR_PATH_HILITE:  '#FFB500',
+        COLOR_STROKE:       '#444',
+ 
+        SIZE_CLASSES:       [ 'large', 'medium', 'small' ],
+ 
+        STROKE_WIDTH:       '0.5',
+        
+        SUBMAPS: [
+            /* continental */
+            {
+                top:    49.384471,      bottom: 24.543958,
+                left:   -124.727821,    right:  -66.955528
+            },
+            
+            /* alaska */
+            {
+                top:    71.337524,      bottom: 51.648282,
+                left:   -177.977849,    right:  -130.016221
+            },
+            
+            /* hawaii */
+            {
+                top:    22.228893,      bottom: 18.916201,
+                left:   -160.243169,    right:  -154.813177
+            }
+        ]
     };
+    
+   
     CONST.ATTR_STATE        = { fill: CONST.COLOR_PATH };
     CONST.ATTR_STATE_HILITE = { fill: CONST.COLOR_PATH_HILITE };
 
@@ -55,23 +64,6 @@
 
 
         /*
-         * 
-         */
-        fetch_city: function(name) {
-            var result = this.cities[name];
-            if (result == null) {
-                result = {
-                    locations: [],
-                    name: name
-                };
-                this.cities[name] = result;
-                this.cityList.push(result);
-            }
-            return result;
-        },
-
- 
-        /*
          * Called when changing the focus to this state.
          */
         focus: function() {
@@ -87,27 +79,31 @@
         load: function() {
             if (this.loaded) { return; }
             
-            this.box = this.path.getBBox();
-            
-            var abbr = this.abbr;
-            this.cities = {};
-            this.cityList = [];
-            for (var i = 0, ilen = $JOB_MAP_DATA.length; i < ilen; ++i) {
-                var location = $JOB_MAP_DATA[i];
-                if (location.state_abbr === abbr) {
-                    this.fetch_city(location.city).locations.push(location);
+            $.ajax({
+                async:      false,
+                cache:      false,
+                context:    this,
+                dataType:   'json',
+                url:        CONST.BASE_URL + this.abbr + '-data.json',
+                
+                success:    function(data) {
+                    var cities = [];
+                    this.cityData = data;
+                    for (cityName in data) {
+                        cities.push(cityName);
+                    }
+                    cities.sort(function(a, b) {
+                        a = a.toUpperCase();
+                        b = b.toUpperCase();
+                        return (a < b) ? -1 : (a > b) ? 1 : 0;
+                    });
+                    this.cities = cities;
                 }
-            }
-            this.cityList.sort(function(a, b) {
-                a = a.name.toUpperCase();
-                b = b.name.toUpperCase();
-                return (a < b) ? -1 : (a > b) ? 1 : 0;
             });
             
+            this.box = this.path.getBBox();
             this.info = info.compile(this);
-            
             this.pegs = map.compile_pegs(this);
-            
             this.loaded = true;
         },
 
@@ -135,11 +131,8 @@
             container.on('click', '.hide-button', on_expander_click_hide);
             
             var template = this.template = $('.map-info--state', container).detach();
-            template.removeClass('hidden');
             
-            this.initial = $('.map-info--initial', container).detach();
             this.expander_id = 0;
-            this.show_initial();
         },
 
 
@@ -147,72 +140,83 @@
          * Compile info html for the given state.
          */
         compile: function(state) {
-            var result = this.template.clone();
-            var cities = state.cityList;
-
+            var result      = this.template.clone();
+            var cities      = state.cities;
+            var cityData    = state.cityData;
+            
             $('[data-info="name"]', result).text(state.name);
             $('[data-info="count"]', result).text(cities.length);
             
             var citiesContainer = $('[data-info="cities"]', result);
             var cityTemplate    = $(citiesContainer.children()[0]).detach();
             for (var i = 0, ilen = cities.length; i < ilen; ++i) {
-                var city        = cities[i];
-                var cityName    = capitalize(city.name);
-                var cityResult  = cityTemplate.clone();
-                var locations   = city.locations;
-                
-                $('[data-id]'               , cityResult).attr('data-id', this.expander_id++);
-                $('[data-info="city-name"]' , cityResult).text(cityName + " Area");
-                $('[data-info="city-count"]', cityResult).text(locations.length);
-                
-                var locationsContainer  = $('[data-info="locations"]', cityResult);
-                var locationTemplate    = $(locationsContainer.children()[0]).detach();
-                var outerHidden         = locationsContainer.closest('.hidden-part');
-                for (var j = 0, jlen = locations.length; j < jlen; ++j) {
-                    var location        = locations[j];
-                    var locationResult  = locationTemplate.clone();
-                    var jobs            = location.jobs.split(', ');
-                    
-                    $('[data-id]'               , locationResult).attr('data-id', this.expander_id++);
-                    $('[data-info="loc-name"]'  , locationResult).text(capitalize(location.name));
-                    $('[data-info="loc-count"]' , locationResult).text(jobs.length);
-                    
-                    var jobsContainer = $('[data-info="jobs"]', locationResult);
-                    for (var k = 0, klen = jobs.length; k < klen; ++k) {
-                        var job = jobs[k];
-                        var href='http://jobs-ups.com/search/'
-                        href += encodeURI(job) + '/ASCategory/-1/ASPostedDate/-1/ASCountry/-1/ASState/-1/ASCity/-1/ASLocation/-1/ASCompanyName/-1/ASCustom1/-1/ASCustom2/-1/ASCustom3/-1/ASCustom4/-1/ASCustom5/-1/ASIsRadius/true/ASCityStateZipcode/';
-                        href += location.zip + '/ASDistance/50/ASLatitude/-1/ASLongitude/-1/ASDistanceType/-1';
-                        jobsContainer.append($('<p><a href="' + href + '">' + job + '</a></p>'));
-                        //jobsContainer.append($('<p>' + jobs[k] + '</p>'));
-                    }
-                    
-                    $('.hidden-part', locationResult).data('outer', outerHidden);
-                    
-                    locationsContainer.append(locationResult);
-                }
-                
-                citiesContainer.append(cityResult);
+                var cityName = cities[i];
+                citiesContainer.append(this.compile_city(
+                    cityTemplate,
+                    cityName,
+                    cityData[cityName]
+                ));
+            }
+            return result;
+        },
+        
+        
+        compile_city: function(template, name, locations) {
+            var result = template.clone();
+            
+            $('[data-id]'                   , result).attr('data-id', this.expander_id++);
+            $('[data-info="city-name"]'     , result).text(name + ' Area');
+            $('[data-info="city-count"]'    , result).text(locations.length);
+            
+            var locationsContainer  = $('[data-info="locations"]', result);
+            var locationTemplate    = $(locationsContainer.children()[0]).detach();
+            var outerHidden         = locationsContainer.closest('.hidden-part');
+            for (var i = 0, ilen = locations.length; i < ilen; ++i) {
+                var loc = this.compile_location(locationTemplate, locations[i]);
+                $('.hidden-part', loc).data('outer', outerHidden);
+                locationsContainer.append(loc);
+            }
+            return result;
+        },
+        
+        
+        compile_location: function(template, location) {
+            var result  = template.clone();
+            var jobs    = location.jobs;
+            
+            var sizeIndicator = $(
+                '<i class="fa fa-circle location-'
+                + CONST.SIZE_CLASSES[location.size]
+                + '"></i>'
+            );
+            
+            $('[dataid]'                , result).attr('data-id', this.expander_id++);
+            $('[data-info="loc-name"]'  , result).text(location.name).prepend(sizeIndicator);
+            $('[data-info="loc-count"]' , result).text(jobs.length);
+            
+            var jobsContainer = $('[data-info="jobs"]', result);
+            for (var i = 0, ilen = jobs.length; i < ilen; ++i) {
+                var job = jobs[i];
+                var href = 'http://jobs-ups.com/search/'
+                    + encodeURI(job)
+                    + '/ASCategory/-1/ASPostedDate/-1/ASCountry/-1/ASState/-1/ASCity/-1/ASLocation/-1/ASCompanyName/-1/ASCustom1/-1/ASCustom2/-1/ASCustom3/-1/ASCustom4/-1/ASCustom5/-1/ASIsRadius/true/ASCityStateZipcode/'
+                    + location.zip
+                    + '/ASDistance/50/ASLatitude/-1/ASLongitude/-1/ASDistanceType/-1'
+                ;
+                jobsContainer.append($('<p><a href="' + href + '">' + job + '</a></p>'));
             }
             return result;
         },
 
 
         /*
-         * Revert to the initial html.
-         */
-        show_initial: function() {
-            this.container.empty();
-            this.container.append(this.initial);
-        },
- 
- 
-        /*
          * Switch to the info html for the given state.
          */
         show: function(elt) {
             this.container.empty();
-            this.container.append(elt);
+            if (elt != null) {
+                this.container.append(elt);
+            }
         }
     };
     
@@ -222,8 +226,8 @@
      */
     var map = {
         focus:      null,           // currently focused state, if any
-        states:     { '': null },   // map of state abbr's to their state objects
-        stateList:  [],             // just an array of all state objects
+        stateData:  { '': null },   // map of state abbr's to their state objects
+        states:     [],             // just an array of all state objects
  
  
         /*
@@ -238,12 +242,48 @@
             });
             
             this.box = snap.getBBox();
+
+            var continental = {
+                _:  'cont',
+                x:  snap.select('#WA').getBBox().x,
+                x2: snap.select('#ME').getBBox().x2,
+                y:  snap.select('#MN').getBBox().y + 18,
+                y2: snap.select('#FL').getBBox().y2 + 18
+            };
             
-            this.submapBoxes = [
-                this.box,
-                snap.select('path[id="AK"]').getBBox(),
-                snap.select('path[id="HI"]').getBBox()
+            var tmpbb = snap.select('path[id="AK"]').getBBox();
+            var alaska = {
+                _:  'ak',
+                x:  tmpbb.x,
+                x2: tmpbb.x2,
+                y:  tmpbb.y + 24,
+                y2: tmpbb.y2 + 24
+            };
+            
+            tmpbb = snap.select('path[id="HI"]').getBBox();
+            var hawaii = {
+                _:  'hi',
+                x:  tmpbb.x,
+                x2: tmpbb.x2,
+                y:  tmpbb.y,
+                y2: tmpbb.y2
+            };
+            
+            this.submaps = [
+                continental,
+                alaska,
+                hawaii
             ];
+            for (i = 0, ilen = this.submaps.length; i < ilen; ++i) {
+                var sm = this.submaps[i];
+                var smc = CONST.SUBMAPS[i];
+                sm.w = sm.x2 - sm.x;
+                sm.h = sm.y2 - sm.y;
+                sm.top = smc.top;
+                sm.left = smc.left;
+                sm.llh = smc.top - smc.bottom;
+                sm.llw = smc.left - smc.right;
+            }
             
             var statesGroup = this.statesGroup = snap.select('g.svg-states-group');
             statesGroup.transform('0,0,0,0,0,0');
@@ -267,15 +307,14 @@
             var state = $.extend(
                 {
                     abbr:   abbr,
-                    cities: [],
                     name:   path.attr('title'),
                     path:   path
                 },
                 BASE_STATE
             );
             
-            this.states[abbr] = state;
-            this.stateList.push(state);
+            this.stateData[abbr] = state;
+            this.states.push(state);
  
             path.data('state', state);
             path.mouseover(on_state_path_mouseover);
@@ -288,40 +327,45 @@
          * 
          */
         compile_pegs: function(state) {
-            var abbr = state.abbr;
-            var submap = (abbr == 'AK') ? 1 : (abbr == 'HI') ? 2 : 0;
+            var abbr        = state.abbr;
+            var submapIndex = (abbr == 'AK') ? 1 : (abbr == 'HI') ? 2 : 0;
+            var submap = this.submaps[submapIndex];
             
             var group = map.snap.g();
             group.addClass('svg-pegs-' + abbr);
             
-            var cities = state.cityList;
+            var pegBox = this.pegTemplate.getBBox();
+            var pegMidX = pegBox.w / 2;
+            var pegMidY = pegBox.h / 2;
+
+            var cities = state.cities;
             for (var i = 0, ilen = cities.length; i < ilen; ++i) {
-                var locations = cities[i].locations;
+                var cityName    = cities[i];
+                var locations   = state.cityData[cityName];
+                
                 for (var j = 0, jlen = locations.length; j < jlen; ++j) {
                     var location = locations[j];
+                    
                     if (location.lat == null) { continue; }
-
-                    var coords = ll_to_xy(submap, location.lat, location.lon);
+                    
                     var peg = this.pegTemplate.clone();
-                    peg.attr('id', 'svg-peg--' + location._LOC_NR);
+                    
+                    peg.attr('id', 'svg-peg--' + location.id);
                     peg.data('state', state);
-                    peg.data('location', location);
+                    peg.attr(CONST.ATTR_PEG[location.size]);
                     group.append(peg);
-                    if (location.size == "Medium") {
-                        peg.attr({ fill: '#0000d8' });
-                        peg.transform("matrix(0.4,0,0,0.4," + coords.x + "," + coords.y + ")");
-                    }
-                    else {
-                        peg.attr({ fill: '#d80000' });
-                        peg.transform("matrix(0.5,0,0,0.5," + coords.x + "," + coords.y + ")");
-                    }
-
+                    
+                    var x = -((location.lon - submap.left) / submap.llw) * submap.w;
+                    var y = -((location.lat - submap.top ) / submap.llh) * submap.h;
+                    x += submap.x;
+                    y += submap.y;
+                    peg.transform("matrix(0.5,0,0,0.5," + x + "," + y + ")");
+                    
                     peg.mouseover(on_state_path_mouseover);
                     peg.mouseout(on_state_path_mouseout);
                     peg.click(on_state_path_click);
                 }
             }
-            this.statesGroup.append(group);
             return group;
         },
  
@@ -336,15 +380,17 @@
             if (old != null) {
                 old.blur();
                 this.focus = null;
+                old.pegs.remove();
                 this.zoom();
                 stateSelect.val('');
-                info.show_initial();
+                info.show(null);
                 refresher.removeClass('shown');
             }
             
             if (state != null) {
                 state.focus();
                 this.focus = state;
+                this.statesGroup.append(state.pegs);
                 this.zoom();
                 stateSelect.val(state.abbr);
                 info.show(state.info);
@@ -399,20 +445,8 @@
         map.init();
         info.init();
         init_map_controls();
-
-//         var states = map.stateList;
-//         for(var i = 0, ilen = states.length; i < ilen; ++i) {
-//             states[i].load();
-//         }
+        info.container.removeClass('hidden');
     });
-    
-    
-    /*
-     * 
-     */
-    function capitalize(str) {
-        return str.toLowerCase().replace(CONST.RX_CAPITALIZE, function(a) { return a.toUpperCase() });
-    }
     
     
     /*
@@ -423,10 +457,10 @@
         stateSelect.append($('<option val=""></option>'));
         
         stateSelect.change(function(event) {
-            map.set_focus(map.states[stateSelect.val()]);
+            map.set_focus(map.stateData[stateSelect.val()]);
         });
         
-        var list = map.stateList;
+        var list = map.states;
         list.sort(function(a, b) {
             a = a.name.toUpperCase();
             b = b.name.toUpperCase();
@@ -446,19 +480,8 @@
         refresher.click(function() {
             map.set_focus(null);
         });
-    }
-    
-    
-    /*
-     * 
-     */
-    function ll_to_xy(submapIndex, lat, lon) {
-        var submap = $JOB_MAP_SUBMAPS[submapIndex];
-        var box = map.submapBoxes[submapIndex];
-        return {
-            x: (((submap.left - lon) / submap.w) * box.w) + box.x,
-            y: (((submap.top  - lat) / submap.h) * box.h) + box.y
-        };
+        
+        $('.map-controls').removeClass('hidden');
     }
     
     
@@ -525,7 +548,10 @@
      */
     function on_state_path_click(event) {
         var state = this.data('state');
-        map.set_focus(state.is_focus ? null : state);
+        if (! state.is_focus) {
+            map.set_focus(state);
+        }
     }
+    
     
 })(jQuery);

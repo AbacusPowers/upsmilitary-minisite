@@ -1,12 +1,10 @@
 .veteranGateway {
-    // background: url(../img/graphy-2-30.png) top center;
     background: $black;
     background-color: $black;
-    // @include linear-gradient(#212121, $black);
-
     position: relative;
-    // padding-bottom: 10em;
     margin-top: 0em;
+    z-index: 0;
+    display:block;
 
     &:before {
         .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & {
@@ -61,23 +59,6 @@
         padding-left: 0;
     }
 
-   
-
-    // .breakpoint-large & {
-    //     // max-width: 1000px;
-    //     margin-left: auto;
-    //     margin-right: auto;
-    //     padding-left: 0;
-    // }
-
-    // .breakpoint-wide & {
-    //     // max-width: 1400px;
-    //     margin-left: auto;
-    //     margin-right: auto;
-    //     padding-left: 0;
-
-    // }
-
     .title-block {
         // height: 5em;
         // background: red;
@@ -101,15 +82,11 @@
             background: $black;
             width: 50%;
             height: 5em;
-            // margin-top: -7.5em;
             @include position( -5em null null 0 );
-            // text-align: right;
             padding-top: 1em;
             padding-right: 5.5em;
             padding-left: 6.5em;
             border-bottom: 1px solid $ups-yellow;
-            // border-right: 1px solid $ups-yellow;
-
     
             h1 {
                 font-size: 1.7em;
@@ -171,16 +148,34 @@
 
 .page {
     @include clearfix;
-    #side--a, #side--b {
-        float: left;
-        width: 50%;
-        -webkit-transition: width .7s ease-in-out;
-                transition: width .7s ease-in-out;
-                
-                &.full-width {
-                    width: 100%;
-                }
+
+    .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & {
+        margin-top: -5em;
     }
+
+    #side--a {
+        z-index: 2;
+    }
+
+    #side--b {
+        z-index: 1;
+    }
+    
+    #side--a, #side--b {
+        // float: left;
+        // width: 50%;
+        .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & {
+            float: left;
+            width: 50%;
+        }
+        // -webkit-transition: width 1.5s ease-out;
+        // transition: width 1.5s ease-out;
+                
+                // &.full-width {
+                //     width: 100%;
+                // }
+    }
+
     .intro>i {
         float: left;
         @include size(84px);
@@ -218,6 +213,122 @@
         margin-bottom: 2em;
         // position: absolute;
     }
+
+    /*form stuff*/
+
+    
+    input[type=text] {
+        background-color: $ups-grey-1;
+        border: none;
+        border-radius: 0;
+    }
+
+    input[type=text]:focus {
+        background-color: $white;
+    }
+
+    input[type=submit] {
+        background-color: $ups-yellow;
+        border-radius: 0;
+        color: $black;
+        text-transform: uppercase;
+        width: 100%;
+        display: block;
+        // margin: 1em;
+
+        &.disabled-input {
+            // background: $grey60;
+        }
+    }
+
+
+//////////////////////*************CAREER SECTION PAGES**********////////////////////
+     #side--b{
+        // position: relative;
+        // &:before {
+        //     @include pseudo-block($vertical-thread-width);
+        //     background: $white05;
+        //     height: 100%;
+        //     left: 0;
+
+        //     .breakpoint-small & {
+        //         content: none;
+        //     }
+        // }     
+    }
+     
+
+    nav.nav--career-explorer {
+        position: absolute;
+        left: 50%;
+        top: -5em;
+        // position: relative;
+
+        .breakpoint-small & {
+            display: none;
+        }
+
+
+        a {
+            @include size(5em);
+            // vertical-align: top;
+            display: inline-block;
+            text-align: center;
+            // margin-left: 3em;
+            margin: 0;
+            margin-right: 0;
+            float: left;
+            margin-left: 0;
+            padding: 1em 0 0 0;
+
+            &:nth-child(1) {
+               background: $black50; 
+            }
+
+            &:nth-child(2) {
+               background: $black30; 
+            }
+
+            &:nth-child(3) {
+               background: $black10; 
+            }
+
+            &.current-page:after {
+                @include pseudo-block(4px);
+                bottom: -4px;
+                width: 5em;
+                background: $ups-yellow;
+            }
+        }
+
+        a:hover {
+            background: $ups-yellow;
+
+            .caption {
+                color: $black;
+            }
+            svg {
+                fill: $black;
+            }
+        }
+
+        img {
+            // @include site-icon;
+            @include size(2em);
+            border-radius: 50%;
+            border-color: $black;
+            display: inline-block;
+            float: none;
+        }
+
+        .caption {
+            color: $white;
+            text-transform: uppercase;
+            display: block;
+            font-size: 0.7em;
+        }
+    }
+    
 }
 
 h1.page--title {

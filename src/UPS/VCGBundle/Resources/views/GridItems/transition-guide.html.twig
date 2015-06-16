@@ -1,16 +1,16 @@
 <div class="grid-item grid--transition-guide">
     <a href="{{ path('page', {'slug': 'transition-guide'}) }}" >
-        <img src="{{ asset('bundles/vcg/images/document.png') }}" class="icon--large" alt="">
+        {% include 'VCGBundle:Svgs:document.svg.twig' %}
         <h1>Military Transition Guide</h1>
-        <p>Here's your useful guide for transitioning into a new civilian career. We've created these resources to help you plan how to move into any career, not just UPS.</p>
+        <p>Your useful guide for transitioning into a new civilian career. UPS has created these resources to help you plan how to move into any new career, at UPS or beyond.</p>
     </a>
     
     <h2>Service Member & Veteran Quick Start</h2>
 
     <div class="button-group">
-        <a class="button black" href="{{ path('transition_guide_page', {'slug':'dd-form-214-guide'}) }}">DD Form 214 Guide</a>
-        <a class="button black" href="{{path('transition_guide_article',{'slug':'cover-letter-resume'}) }}">Build Your Personal Brand</a>
-        <a class="button black" href="{{path('culture_benefits_page',{'slug':'partners'}) }}">Partner Programs & Organizations</a>
+        <a class="button black" href="{{ path('transition_guide_page', {'slug':'dd-form-214-guide'}) }}"><span></span>DD Form 214 Guide</a>
+        <a class="button black" href="{{path('transition_guide_article',{'slug':'cover-letter-resume'}) }}"><span></span>Build Your Personal Brand</a>
+        <a class="button black" href="{{path('culture_benefits_page',{'slug':'partners'}) }}"><span></span>Partner Programs & Organizations</a>
     </div>
     
     <div class="app-download-wrapper">

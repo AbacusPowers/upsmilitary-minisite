@@ -3,7 +3,6 @@
 {% block javascripts %}
     {% javascripts
         '@VCGBundle/Resources/public/js/vendor/Snap.svg/dist/snap.svg.js'
-        '@VCGBundle/Resources/public/js/job-map/job-map-data.js'
         '@VCGBundle/Resources/public/js/job-map/job-map.js'
     %}
         <script src="{{ asset_url }}"></script>
@@ -17,19 +16,38 @@
 {% endblock %}
 {% block breadcrumbs %}
         <a href="{{ url('homepage') }}">UPS Veteran Gateway</a>
-        <a href="#">Career Explorer</a>
-        <a href="#">Job Map</a>
+        <a href="#">UPS Jobs Map</a>
 {% endblock %}
 
 {% block page_content %}
     <div class="veteranGateway__liner">
         <div class="title-block">
-            <h1>UPS Career Explorer</h1>
-            <p>For Veterans &amp; Service Members</p>
+            <h1>UPS Jobs Map</h1>
+            <p>Showing UPS locations &amp; types of jobs</p>
         </div>
+
         <div class="page page--map">
+            <nav class="nav--career-explorer">
+                <a href="{{ path('page',{'slug':'jobs'}) }}">
+                    <img src="{{ asset('bundles/vcg/images/handshake.png') }}" class="" alt="">
+                    <span class="caption">Jobs</span>
+                </a>
+                <a href="{{ path('page',{'slug':'job-converter'}) }}">
+                    <img src="{{ asset('bundles/vcg/images/lightbulb.png') }}" class="" alt="">
+                    <span class="caption">Skills</span>
+                </a>
+                <a href="javascript:void(0)" class="current-page">
+                    <img src="{{ asset('bundles/vcg/images/bubbles.png') }}" class="" alt="">
+                    <span class="caption">Map</span>
+                </a>
+            </nav>
             <div id="side--a">
+
                 <section class="map-wrapper">
+                    <div class="">
+                        <a id="job-map--refresh" class="hidden"><i class="fa fa-refresh"></i></a>
+                        <!-- <h1 data-info="name"></h1> -->
+                    <div>
                     <svg class='svg-map' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 785">
                         <g class="svg-states-group">
                             <path id="divider1" class="land" d="M386.31,544.05L300.33,544.05L233.29,475.96L89.29,475.96L89.29,476.5L233.08,476.5L300.08,544.5L300.1,544.5L300.1,599.46L387.02,677.34L387.53,676.83L300.64,599.25L300.64,544.5L386.08,544.5L492.73,637.12L492.69,682.96L493.29,682.96L493.29,636.96z"/>
@@ -88,59 +106,63 @@
                         <g class="svg-peg-template" style="display: none;">
                             <g
                                 class="svg-peg"
-                                transform="matrix(0.4,0,0,0.4,0,0)"
+                                transform="matrix(0.5,0,0,0.5,0,0)"
                             >
                                 <path
                                     d="m 8.6620581,2.3332155 a 7.1594563,7.1594563 0 1 1 -14.3189125,0 7.1594563,7.1594563 0 1 1 14.3189125,0 z"
-                                    id="path5707"
-                                    style="fill:#993333;"
                                 />
                             </g>
                         </g>
                     </svg>
                 </section>
-                <section class="map-controls">
+                
+            </div>
+           
+            <div id="side--b" >
+                 <section class="map-controls hidden">
                     <form action="javascript:void">
                         <div>
-                            <label for="job-map--select-state">Select State</label>
+                            <label for="job-map--select-state"><h1>Select Your State</h1></label>
                             <select id="job-map--select-state" name="job-map--select-state"></select>
                         </div>
-                        <div>
-                            <a id="job-map--refresh" class="hidden"><i class="fa fa-refresh"></i> Refresh</a>
-                        <div>
                     </form>
                 </section>
-            </div>
-            <div id="side--b" class="map-info-container">
-                <div class="map-info--initial">
-                    <h1>UPS Jobs Map</h1>
-                    <p>Select your state of interest to continue.</p>
-                </div>
-                <div class="map-info--state hidden">
-                    <h1 data-info="name"></h1>
-                    <p><span data-info="count"></span> Cities</p>
-                    <div class="component--expander" data-info="cities">
-                        <section class='expander__wrapper'>
-                            <h2 class='expander__parent' data-info="city-name"></h2>
-                            <h3><span data-info="city-count"></span> Locations</h3>
-                            <a data-id=' ' class='button expand-button'><i class="fa fa-plus fa-2x"></i></a>
-                            <a data-id=' ' class='button hide-button'><i class="fa fa-minus fa-2x"></i></a>
-                            <div data-id=' ' class='hidden-part'>
-                                <div class="expander__child">
-                                    <div class="component--expander" data-info="locations">
-                                        <section class="expander__wrapper">
-                                            <h2 class="expander__parent" data-info="loc-name"></h2>
-                                            <h3><span data-info="loc-count"></span> Types of Jobs</h3>
-                                            <a data-id=' ' class='button expand-button'><i class="fa fa-plus fa-2x"></i></a>
-                                            <a data-id=' ' class='button hide-button'><i class="fa fa-minus fa-2x"></i></a>
-                                            <div data-id=' ' class='hidden-part'>
-                                                <div class="expander__child" data-info="jobs"></div>
-                                            </div>
-                                        </section>
+                <div class="map-info-container hidden">
+                    <div class="map-info--state">
+                        <div class="size-key">
+                            <ul>
+                                <li><i class="fa fa-circle"></i>&nbsp;Large Facility</li>
+                                <li><i class="fa fa-circle"></i>&nbsp;Medium Facility</li>
+                            </ul>
+                        </div>
+                        <h1 data-info="name"></h1>
+                        <!-- <p><span data-info="count"></span> Cities</p> -->
+                        <div class="component--expander expander__thin" data-info="cities">
+                            <section class='expander__wrapper'>
+                                <ul>
+                                    <li><h2 class='expander__parent' data-info="city-name"></h2></li>
+                                    <li><span>(<span data-info="city-count"></span>)</span></li>
+                                </ul>
+                        
+                                <a data-id=' ' class='button expand-button'><i class="fa fa-plus fa-2x"></i></a>
+                                <a data-id=' ' class='button hide-button'><i class="fa fa-minus fa-2x"></i></a>
+                                <div data-id=' ' class='hidden-part'>
+                                    <div class="expander__child">
+                                        <div class="component--expander" data-info="locations">
+                                            <section class="expander__wrapper">
+                                                <h2 class="expander__parent" data-info="loc-name"></h2>
+                                                <h3><span data-info="loc-count"></span>&nbspJob Types</h3>
+                                                <a data-id=' ' class='button expand-button'><i class="fa fa-plus fa-2x"></i></a>
+                                                <a data-id=' ' class='button hide-button'><i class="fa fa-minus fa-2x"></i></a>
+                                                <div data-id=' ' class='hidden-part'>
+                                                    <div class="expander__child" data-info="jobs"></div>
+                                                </div>
+                                            </section>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </section>
+                            </section>
+                        </div>
                     </div>
                 </div>
             </div>
