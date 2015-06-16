@@ -16,194 +16,212 @@
             <h1>UPS Career Explorer</h1>
             <p>For Veterans & Service Members</p>
         </div>
-        <div class="page page--career-explorer">
-            <section class="intro">
-                <img src="{{ asset('bundles/vcg/images/document.png') }}" alt="">
-                <h1 class="page--title">UPS HOT JOBS</h1>        
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias eos molestiae, a. Harum officia error amet excepturi veniam esse. Officia excepturi magni, error, minima ipsa laudantium accusantium autem eos non.
-Consectetur adipisicing elit. Incidunt officiis inventore amet temporibus veniam molestiae, distinctio vero ratione consequuntur sit porro error facere, harum sequi, sint ducimus quasi maxime corporis.</p>
-            </section>
-            <div class="component--expander">
-                <!-- <section class='expander__wrapper'>
-                    <h2 class='expander__parent'>Introduction</h2>
-                    <a data-id='1' class='button expand-button'>
-                        <i class="fa fa-plus fa-2x"></i>
-                    </a>
-                    <a data-id='1' class='button hide-button'>
-                        <i class="fa fa-minus fa-2x"></i>
-                    </a>
-                    <div data-id='1' class='hidden-part'>
-                        <div class="expander__child">
-                            <p class=''>
-                                <img src="http://placehold.it/100x135&text=DD+Form+214+Graphic" alt="">
-                                Non itaque saepe provident architecto vitae! Quia consequatur labore eos commodi, consequuntur! Repudiandae, laboriosam, optio. Itaque deleniti, ipsam nemo sequi veritatis qui. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo id perferendis sapiente quisquam eveniet praesentium quidem, error atque ea.
-                                Non itaque saepe provident architecto vitae! Quia consequatur labore eos commodi, consequuntur! Repudiandae, laboriosam, optio. Itaque deleniti, ipsam nemo sequi veritatis qui. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo id perferendis sapiente quisquam eveniet praesentium quidem, error atque ea.
-                            </p>
-                        </div>   
-                    </div>
-                </section> -->
-                <section class='expander__wrapper'>
-                    <h2 class='expander__parent'>Job One</h2>
-                    <h3>Lorem Ipsum</h3>
-                    <a data-id='2' class='button expand-button'>
-                        <i class="fa fa-plus fa-2x"></i>
-                    </a>
-                    <a data-id='2' class='button hide-button'>
-                        <i class="fa fa-minus fa-2x"></i>
-                    </a>
-                    <div data-id='2' class='hidden-part'>
-                        <div class="expander__child">
-                            <p class=''>
-                                Non itaque saepe provident architecto vitae! Quia consequatur labore eos commodi, consequuntur! Repudiandae, laboriosam, optio. Itaque deleniti, ipsam nemo sequi veritatis qui. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo id perferendis sapiente quisquam eveniet praesentium quidem, error atque ea.
-                                Non itaque saepe provident architecto vitae! Quia consequatur labore eos commodi, consequuntur! Repudiandae, laboriosam, optio. Itaque deleniti, ipsam nemo sequi veritatis qui. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo id perferendis sapiente quisquam eveniet praesentium quidem, error atque ea.
-                            </p>
-                        </div>   
-                    </div>
+        <div class="page page--jobs">
+            <nav class="nav--career-explorer">
+                <a href="{{ path('page',{'slug':'job-converter'}) }}" >
+                    <img src="{{ asset('bundles/vcg/images/lightbulb.png') }}" class="" alt="">
+                    <span class="caption">Skills</span>
+                </a>                
+                <a href="{{ path('page',{'slug':'jobs'}) }}" class="current-page">
+                    <img src="{{ asset('bundles/vcg/images/handshake.png') }}" class="" alt="">
+                    <span class="caption">Jobs</span>
+                </a>
+                <a href="{{ path('page',{'slug':'job-map'}) }}">
+                    <img src="{{ asset('bundles/vcg/images/bubbles.png') }}" class="" alt="">
+                    <span class="caption">Map</span>
+                </a>
+            </nav>            
+            <div id="side--a" class="ull-width">
+                <section class="intro">
+                    {% include 'VCGBundle:Svgs:handshake.svg.twig' %}
+                    <h1 class="page--title">UPS Job Descriptions</h1>        
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias eos molestiae, a. Harum officia error amet excepturi veniam esse. Incidunt officiis inventore amet temporibus veniam molestiae, distinctio vero ratione consequuntur sit porro error facere, harum sequi, sint ducimus quasi maxime corporis.</p>
                 </section>
-                <section class='expander__wrapper'>
-                    <h2 class='expander__parent'>Job Two</h2>
-                    <h3>Lorem Ipsum</h3>
-                    <a data-id='3' class='button expand-button'>
-                        <i class="fa fa-plus fa-2x"></i>
-                    </a>
-                    <a data-id='3' class='button hide-button'>
-                        <i class="fa fa-minus fa-2x"></i>
-                    </a>
-                    <div data-id='3' class='hidden-part'>
-                        <div class="expander__child">                                  
-                            <p class=''>
-                                Non itaque saepe provident architecto vitae! Quia consequatur labore eos commodi, consequuntur! Repudiandae, laboriosam, optio. Itaque deleniti, ipsam nemo sequi veritatis qui. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo id perferendis sapiente quisquam eveniet praesentium quidem, error atque ea.
-                                Non itaque saepe provident architecto vitae! Quia consequatur labore eos commodi, consequuntur! Repudiandae, laboriosam, optio. Itaque deleniti, ipsam nemo sequi veritatis qui. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo id perferendis sapiente quisquam eveniet praesentium quidem, error atque ea.
-                            </p>
-                        </div>   
-                    </div>
-                </section>
-                <section class='expander__wrapper'>
-                    <h2 class='expander__parent'>Job Three</h2>
-                    <h3>Lorem Ipsum</h3>
-                    <a data-id='4' class='button expand-button'>
-                        <i class="fa fa-plus fa-2x"></i>
-                    </a>
-                    <a data-id='4' class='button hide-button'>
-                        <i class="fa fa-minus fa-2x"></i>
-                    </a>
-                    <div data-id='4' class='hidden-part'>
-                        <div class="expander__child">                                
-                            <p class=''>
-                                Non itaque saepe provident architecto vitae! Quia consequatur labore eos commodi, consequuntur! Repudiandae, laboriosam, optio. Itaque deleniti, ipsam nemo sequi veritatis qui. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo id perferendis sapiente quisquam eveniet praesentium quidem, error atque ea.
-                                Non itaque saepe provident architecto vitae! Quia consequatur labore eos commodi, consequuntur! Repudiandae, laboriosam, optio. Itaque deleniti, ipsam nemo sequi veritatis qui. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo id perferendis sapiente quisquam eveniet praesentium quidem, error atque ea.
-                            </p>
-                        </div>   
-                    </div>
-                </section>
-                <section class='expander__wrapper'>
-                    <h2 class='expander__parent'>Job Four</h2>
-                    <h3>Lorem Ipsum</h3>
-                    <a data-id='5' class='button expand-button'>
-                        <i class="fa fa-plus fa-2x"></i>
-                    </a>
-                    <a data-id='5' class='button hide-button'>
-                        <i class="fa fa-minus fa-2x"></i>
-                    </a>
-                    <div data-id='5' class='hidden-part'>
-                        <div class="expander__child">                                  
-                            <p class=''>
-                                Non itaque saepe provident architecto vitae! Quia consequatur labore eos commodi, consequuntur! Repudiandae, laboriosam, optio. Itaque deleniti, ipsam nemo sequi veritatis qui. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo id perferendis sapiente quisquam eveniet praesentium quidem, error atque ea.
-                                Non itaque saepe provident architecto vitae! Quia consequatur labore eos commodi, consequuntur! Repudiandae, laboriosam, optio. Itaque deleniti, ipsam nemo sequi veritatis qui. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo id perferendis sapiente quisquam eveniet praesentium quidem, error atque ea.
-                            </p>
-                        </div>   
-                    </div>
-                </section>
-                <section class='expander__wrapper'>
-                    <h2 class='expander__parent'>Job Five</h2>
-                    <h3>Lorem Ipsum</h3>
-                    <a data-id='6' class='button expand-button'>
-                        <i class="fa fa-plus fa-2x"></i>
-                    </a>
-                    <a data-id='6' class='button hide-button'>
-                        <i class="fa fa-minus fa-2x"></i>
-                    </a>
-                    <div data-id='6' class='hidden-part'>
-                        <div class="expander__child">                                  
-                            <p class=''>
-                                Non itaque saepe provident architecto vitae! Quia consequatur labore eos commodi, consequuntur! Repudiandae, laboriosam, optio. Itaque deleniti, ipsam nemo sequi veritatis qui. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo id perferendis sapiente quisquam eveniet praesentium quidem, error atque ea.
-                                Non itaque saepe provident architecto vitae! Quia consequatur labore eos commodi, consequuntur! Repudiandae, laboriosam, optio. Itaque deleniti, ipsam nemo sequi veritatis qui. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo id perferendis sapiente quisquam eveniet praesentium quidem, error atque ea.
-                            </p>
-                        </div>   
-                    </div>
-                </section>
-                <section class='expander__wrapper'>
-                    <h2 class='expander__parent'>Job Six</h2>
-                    <h3>Lorem Ipsum</h3>
-                    <a data-id='7' class='button expand-button'>
-                        <i class="fa fa-plus fa-2x"></i>
-                    </a>
-                    <a data-id='7' class='button hide-button'>
-                        <i class="fa fa-minus fa-2x"></i>
-                    </a>
-                    <div data-id='7' class='hidden-part'>
-                        <div class="expander__child">
-                            <p class=''>
-                                Non itaque saepe provident architecto vitae! Quia consequatur labore eos commodi, consequuntur! Repudiandae, laboriosam, optio. Itaque deleniti, ipsam nemo sequi veritatis qui. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo id perferendis sapiente quisquam eveniet praesentium quidem, error atque ea.
-                                Non itaque saepe provident architecto vitae! Quia consequatur labore eos commodi, consequuntur! Repudiandae, laboriosam, optio. Itaque deleniti, ipsam nemo sequi veritatis qui. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo id perferendis sapiente quisquam eveniet praesentium quidem, error atque ea.
-                            </p>
-                        </div>   
-                    </div>
-                </section>
-                <section class='expander__wrapper'>
-                    <h2 class='expander__parent'>Job Seven</h2>
-                    <h3>Lorem Ipsum</h3>
-                    <a data-id='8' class='button expand-button'>
-                        <i class="fa fa-plus fa-2x"></i>
-                    </a>
-                    <a data-id='8' class='button hide-button'>
-                        <i class="fa fa-minus fa-2x"></i>
-                    </a>
-                    <div data-id='8' class='hidden-part'>
-                        <div class="expander__child">
-                            <p class=''>
-                                Non itaque saepe provident architecto vitae! Quia consequatur labore eos commodi, consequuntur! Repudiandae, laboriosam, optio. Itaque deleniti, ipsam nemo sequi veritatis qui. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo id perferendis sapiente quisquam eveniet praesentium quidem, error atque ea.
-                                Non itaque saepe provident architecto vitae! Quia consequatur labore eos commodi, consequuntur! Repudiandae, laboriosam, optio. Itaque deleniti, ipsam nemo sequi veritatis qui. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo id perferendis sapiente quisquam eveniet praesentium quidem, error atque ea.
-                            </p>
-                        </div>   
-                    </div>
-                </section>
-                <section class='expander__wrapper'>
-                    <h2 class='expander__parent'>Job Eight</h2>
-                    <h3>Lorem Ipsum</h3>
-                    <a data-id='9' class='button expand-button'>
-                        <i class="fa fa-plus fa-2x"></i>
-                    </a>
-                    <a data-id='9' class='button hide-button'>
-                        <i class="fa fa-minus fa-2x"></i>
-                    </a>
-                    <div data-id='9' class='hidden-part'>
-                        <div class="expander__child">
-                            <p class=''>
-                                Non itaque saepe provident architecto vitae! Quia consequatur labore eos commodi, consequuntur! Repudiandae, laboriosam, optio. Itaque deleniti, ipsam nemo sequi veritatis qui. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo id perferendis sapiente quisquam eveniet praesentium quidem, error atque ea.
-                                Non itaque saepe provident architecto vitae! Quia consequatur labore eos commodi, consequuntur! Repudiandae, laboriosam, optio. Itaque deleniti, ipsam nemo sequi veritatis qui. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo id perferendis sapiente quisquam eveniet praesentium quidem, error atque ea.
-                            </p>
-                        </div>   
-                    </div>
-                </section>
-                <section class='expander__wrapper'>
-                    <h2 class='expander__parent'>Job Nine</h2>
-                    <h3>Lorem Ipsum</h3>
-                    <a data-id='9' class='button expand-button'>
-                        <i class="fa fa-plus fa-2x"></i>
-                    </a>
-                    <a data-id='9' class='button hide-button'>
-                        <i class="fa fa-minus fa-2x"></i>
-                    </a>
-                    <div data-id='9' class='hidden-part'>
-                        <div class="expander__child">
-                            <p class=''>
-                                Non itaque saepe provident architecto vitae! Quia consequatur labore eos commodi, consequuntur! Repudiandae, laboriosam, optio. Itaque deleniti, ipsam nemo sequi veritatis qui. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo id perferendis sapiente quisquam eveniet praesentium quidem, error atque ea.
-                                Non itaque saepe provident architecto vitae! Quia consequatur labore eos commodi, consequuntur! Repudiandae, laboriosam, optio. Itaque deleniti, ipsam nemo sequi veritatis qui. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo id perferendis sapiente quisquam eveniet praesentium quidem, error atque ea.
-                            </p>
-                        </div>   
-                    </div>
-                </section>
+            <div class="scroll-indicator--h">
+                <span class="scroll-indicator__text">SCROLL</span>
+                <i class="fa fa-long-arrow-left"></i>
+                <i class="fa fa-long-arrow-right"></i>
+            </div>
+
+            <div class="scroll-container">
+                <div id="video-list">
+                    <a href="{{ path('homepage_video',{'slug':'feeder-driver'}) }}" class="video-link video-link--style"><img class="video-thumb" src="{{ asset('bundles/vcg/images/video-thumbs/feeder-driver-1.png') }}" alt=""><i class="fa fa-play-circle"></i></a>
+                    <a href="{{ path('homepage_video',{'slug':'frontline-supervisor'}) }}" class="video-link video-link--style"><img class="video-thumb" src="{{ asset('bundles/vcg/images/video-thumbs/frontline-supervisor-1.png') }}" alt=""><i class="fa fa-play-circle"></i></a>
+                    <a href="{{ path('homepage_video',{'slug':'hr'}) }}" class="video-link video-link--style"><img class="video-thumb" src="{{ asset('bundles/vcg/images/video-thumbs/human-resources-1.png') }}" alt=""><i class="fa fa-play-circle"></i></a>
+                    <a href="{{ path('homepage_video',{'slug':'mechanic'}) }}" class="video-link video-link--style"><img class="video-thumb" src="{{ asset('bundles/vcg/images/video-thumbs/mechanic-1.png') }}" alt=""><i class="fa fa-play-circle"></i></a>
+                    <a href="{{ path('homepage_video',{'slug':'otr-driver'}) }}" class="video-link video-link--style"><img class="video-thumb" src="{{ asset('bundles/vcg/images/video-thumbs/otr-driver-1.png') }}" alt=""><i class="fa fa-play-circle"></i></a>
+                    <a href="{{ path('homepage_video',{'slug':'package-driver'}) }}" class="video-link video-link--style"><img class="video-thumb" src="{{ asset('bundles/vcg/images/video-thumbs/package-car-driver-1.png') }}" alt=""><i class="fa fa-play-circle"></i></a>
+                    <a href="{{ path('homepage_video',{'slug':'package-handler'}) }}" class="video-link video-link--style"><img class="video-thumb" src="{{ asset('bundles/vcg/images/video-thumbs/package-handler-1.png') }}" alt=""><i class="fa fa-play-circle"></i></a>
+                    <a href="{{ path('homepage_video',{'slug':'sorter'}) }}" class="video-link video-link--style"><img class="video-thumb" src="{{ asset('bundles/vcg/images/video-thumbs/sorter-1.png') }}" alt=""><i class="fa fa-play-circle"></i></a>
+                    <a href="{{ path('homepage_video',{'slug':'technician'}) }}" class="video-link video-link--style"><img class="video-thumb" src="{{ asset('bundles/vcg/images/video-thumbs/technician-1.png') }}" alt=""><i class="fa fa-play-circle"></i></a>
+                </div>
+            </div>
+            </div>
+            <div id="side--b">
+                <div class="component--expander">
+                    <section class='expander__wrapper'>
+                        <h2 class='expander__parent'>Job One</h2>
+                        <h3>Lorem Ipsum</h3>
+                        <a data-id='2' class='button expand-button'>
+                            <i class="fa fa-plus fa-2x"></i>
+                        </a>
+                        <a data-id='2' class='button hide-button'>
+                            <i class="fa fa-minus fa-2x"></i>
+                        </a>
+                        <div data-id='2' class='hidden-part'>
+                            <div class="expander__child">
+                                <p class=''>
+                                    Non itaque saepe provident architecto vitae! Quia consequatur labore eos commodi, consequuntur! Repudiandae, laboriosam, optio. Itaque deleniti, ipsam nemo sequi veritatis qui. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo id perferendis sapiente quisquam eveniet praesentium quidem, error atque ea.
+                                    Non itaque saepe provident architecto vitae! Quia consequatur labore eos commodi, consequuntur! Repudiandae, laboriosam, optio. Itaque deleniti, ipsam nemo sequi veritatis qui. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo id perferendis sapiente quisquam eveniet praesentium quidem, error atque ea.
+                                </p>
+                            </div>   
+                        </div>
+                    </section>
+                    <section class='expander__wrapper'>
+                        <h2 class='expander__parent'>Job Two</h2>
+                        <h3>Lorem Ipsum</h3>
+                        <a data-id='3' class='button expand-button'>
+                            <i class="fa fa-plus fa-2x"></i>
+                        </a>
+                        <a data-id='3' class='button hide-button'>
+                            <i class="fa fa-minus fa-2x"></i>
+                        </a>
+                        <div data-id='3' class='hidden-part'>
+                            <div class="expander__child">                                  
+                                <p class=''>
+                                    Non itaque saepe provident architecto vitae! Quia consequatur labore eos commodi, consequuntur! Repudiandae, laboriosam, optio. Itaque deleniti, ipsam nemo sequi veritatis qui. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo id perferendis sapiente quisquam eveniet praesentium quidem, error atque ea.
+                                    Non itaque saepe provident architecto vitae! Quia consequatur labore eos commodi, consequuntur! Repudiandae, laboriosam, optio. Itaque deleniti, ipsam nemo sequi veritatis qui. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo id perferendis sapiente quisquam eveniet praesentium quidem, error atque ea.
+                                </p>
+                            </div>   
+                        </div>
+                    </section>
+                    <section class='expander__wrapper'>
+                        <h2 class='expander__parent'>Job Three</h2>
+                        <h3>Lorem Ipsum</h3>
+                        <a data-id='4' class='button expand-button'>
+                            <i class="fa fa-plus fa-2x"></i>
+                        </a>
+                        <a data-id='4' class='button hide-button'>
+                            <i class="fa fa-minus fa-2x"></i>
+                        </a>
+                        <div data-id='4' class='hidden-part'>
+                            <div class="expander__child">                                
+                                <p class=''>
+                                    Non itaque saepe provident architecto vitae! Quia consequatur labore eos commodi, consequuntur! Repudiandae, laboriosam, optio. Itaque deleniti, ipsam nemo sequi veritatis qui. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo id perferendis sapiente quisquam eveniet praesentium quidem, error atque ea.
+                                    Non itaque saepe provident architecto vitae! Quia consequatur labore eos commodi, consequuntur! Repudiandae, laboriosam, optio. Itaque deleniti, ipsam nemo sequi veritatis qui. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo id perferendis sapiente quisquam eveniet praesentium quidem, error atque ea.
+                                </p>
+                            </div>   
+                        </div>
+                    </section>
+                    <section class='expander__wrapper'>
+                        <h2 class='expander__parent'>Job Four</h2>
+                        <h3>Lorem Ipsum</h3>
+                        <a data-id='5' class='button expand-button'>
+                            <i class="fa fa-plus fa-2x"></i>
+                        </a>
+                        <a data-id='5' class='button hide-button'>
+                            <i class="fa fa-minus fa-2x"></i>
+                        </a>
+                        <div data-id='5' class='hidden-part'>
+                            <div class="expander__child">                                  
+                                <p class=''>
+                                    Non itaque saepe provident architecto vitae! Quia consequatur labore eos commodi, consequuntur! Repudiandae, laboriosam, optio. Itaque deleniti, ipsam nemo sequi veritatis qui. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo id perferendis sapiente quisquam eveniet praesentium quidem, error atque ea.
+                                    Non itaque saepe provident architecto vitae! Quia consequatur labore eos commodi, consequuntur! Repudiandae, laboriosam, optio. Itaque deleniti, ipsam nemo sequi veritatis qui. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo id perferendis sapiente quisquam eveniet praesentium quidem, error atque ea.
+                                </p>
+                            </div>   
+                        </div>
+                    </section>
+                    <section class='expander__wrapper'>
+                        <h2 class='expander__parent'>Job Five</h2>
+                        <h3>Lorem Ipsum</h3>
+                        <a data-id='6' class='button expand-button'>
+                            <i class="fa fa-plus fa-2x"></i>
+                        </a>
+                        <a data-id='6' class='button hide-button'>
+                            <i class="fa fa-minus fa-2x"></i>
+                        </a>
+                        <div data-id='6' class='hidden-part'>
+                            <div class="expander__child">                                  
+                                <p class=''>
+                                    Non itaque saepe provident architecto vitae! Quia consequatur labore eos commodi, consequuntur! Repudiandae, laboriosam, optio. Itaque deleniti, ipsam nemo sequi veritatis qui. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo id perferendis sapiente quisquam eveniet praesentium quidem, error atque ea.
+                                    Non itaque saepe provident architecto vitae! Quia consequatur labore eos commodi, consequuntur! Repudiandae, laboriosam, optio. Itaque deleniti, ipsam nemo sequi veritatis qui. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo id perferendis sapiente quisquam eveniet praesentium quidem, error atque ea.
+                                </p>
+                            </div>   
+                        </div>
+                    </section>
+                    <section class='expander__wrapper'>
+                        <h2 class='expander__parent'>Job Six</h2>
+                        <h3>Lorem Ipsum</h3>
+                        <a data-id='7' class='button expand-button'>
+                            <i class="fa fa-plus fa-2x"></i>
+                        </a>
+                        <a data-id='7' class='button hide-button'>
+                            <i class="fa fa-minus fa-2x"></i>
+                        </a>
+                        <div data-id='7' class='hidden-part'>
+                            <div class="expander__child">
+                                <p class=''>
+                                    Non itaque saepe provident architecto vitae! Quia consequatur labore eos commodi, consequuntur! Repudiandae, laboriosam, optio. Itaque deleniti, ipsam nemo sequi veritatis qui. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo id perferendis sapiente quisquam eveniet praesentium quidem, error atque ea.
+                                    Non itaque saepe provident architecto vitae! Quia consequatur labore eos commodi, consequuntur! Repudiandae, laboriosam, optio. Itaque deleniti, ipsam nemo sequi veritatis qui. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo id perferendis sapiente quisquam eveniet praesentium quidem, error atque ea.
+                                </p>
+                            </div>   
+                        </div>
+                    </section>
+                    <section class='expander__wrapper'>
+                        <h2 class='expander__parent'>Job Seven</h2>
+                        <h3>Lorem Ipsum</h3>
+                        <a data-id='8' class='button expand-button'>
+                            <i class="fa fa-plus fa-2x"></i>
+                        </a>
+                        <a data-id='8' class='button hide-button'>
+                            <i class="fa fa-minus fa-2x"></i>
+                        </a>
+                        <div data-id='8' class='hidden-part'>
+                            <div class="expander__child">
+                                <p class=''>
+                                    Non itaque saepe provident architecto vitae! Quia consequatur labore eos commodi, consequuntur! Repudiandae, laboriosam, optio. Itaque deleniti, ipsam nemo sequi veritatis qui. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo id perferendis sapiente quisquam eveniet praesentium quidem, error atque ea.
+                                    Non itaque saepe provident architecto vitae! Quia consequatur labore eos commodi, consequuntur! Repudiandae, laboriosam, optio. Itaque deleniti, ipsam nemo sequi veritatis qui. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo id perferendis sapiente quisquam eveniet praesentium quidem, error atque ea.
+                                </p>
+                            </div>   
+                        </div>
+                    </section>
+                    <section class='expander__wrapper'>
+                        <h2 class='expander__parent'>Job Eight</h2>
+                        <h3>Lorem Ipsum</h3>
+                        <a data-id='9' class='button expand-button'>
+                            <i class="fa fa-plus fa-2x"></i>
+                        </a>
+                        <a data-id='9' class='button hide-button'>
+                            <i class="fa fa-minus fa-2x"></i>
+                        </a>
+                        <div data-id='9' class='hidden-part'>
+                            <div class="expander__child">
+                                <p class=''>
+                                    Non itaque saepe provident architecto vitae! Quia consequatur labore eos commodi, consequuntur! Repudiandae, laboriosam, optio. Itaque deleniti, ipsam nemo sequi veritatis qui. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo id perferendis sapiente quisquam eveniet praesentium quidem, error atque ea.
+                                    Non itaque saepe provident architecto vitae! Quia consequatur labore eos commodi, consequuntur! Repudiandae, laboriosam, optio. Itaque deleniti, ipsam nemo sequi veritatis qui. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo id perferendis sapiente quisquam eveniet praesentium quidem, error atque ea.
+                                </p>
+                            </div>   
+                        </div>
+                    </section>
+                    <section class='expander__wrapper'>
+                        <h2 class='expander__parent'>Job Nine</h2>
+                        <h3>Lorem Ipsum</h3>
+                        <a data-id='9' class='button expand-button'>
+                            <i class="fa fa-plus fa-2x"></i>
+                        </a>
+                        <a data-id='9' class='button hide-button'>
+                            <i class="fa fa-minus fa-2x"></i>
+                        </a>
+                        <div data-id='9' class='hidden-part'>
+                            <div class="expander__child">
+                                <p class=''>
+                                    Non itaque saepe provident architecto vitae! Quia consequatur labore eos commodi, consequuntur! Repudiandae, laboriosam, optio. Itaque deleniti, ipsam nemo sequi veritatis qui. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo id perferendis sapiente quisquam eveniet praesentium quidem, error atque ea.
+                                    Non itaque saepe provident architecto vitae! Quia consequatur labore eos commodi, consequuntur! Repudiandae, laboriosam, optio. Itaque deleniti, ipsam nemo sequi veritatis qui. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo id perferendis sapiente quisquam eveniet praesentium quidem, error atque ea.
+                                </p>
+                            </div>   
+                        </div>
+                    </section>
+                </div>
             </div>
         </div>
     </div>

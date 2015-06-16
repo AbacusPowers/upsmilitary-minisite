@@ -31,13 +31,13 @@
             
             <div class="page page--job-converter">
             <nav class="nav--career-explorer">
+                <a href="{{ path('page',{'slug':'job-converter'}) }}" class="current-page">
+                    <img src="{{ asset('bundles/vcg/images/lightbulb.png') }}" class="" alt="">
+                    <span class="caption">Skills</span>
+                </a>
                 <a href="{{ path('page',{'slug':'jobs'}) }}">
                     <img src="{{ asset('bundles/vcg/images/handshake.png') }}" class="" alt="">
                     <span class="caption">Jobs</span>
-                </a>
-                <a href="javascript:void(0)" class="current-page">
-                    <img src="{{ asset('bundles/vcg/images/lightbulb.png') }}" class="" alt="">
-                    <span class="caption">Skills</span>
                 </a>
                 <a href="{{ path('page',{'slug':'job-map'}) }}">
                     <img src="{{ asset('bundles/vcg/images/bubbles.png') }}" class="" alt="">
