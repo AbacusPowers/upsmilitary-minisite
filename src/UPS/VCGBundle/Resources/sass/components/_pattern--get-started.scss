@@ -149,6 +149,11 @@
                     bottom: -5px;
                 }
             }
+
+            &:hover {
+                background: $black80 ;
+                color: $ups-yellow;
+            }
         }
     }
 
