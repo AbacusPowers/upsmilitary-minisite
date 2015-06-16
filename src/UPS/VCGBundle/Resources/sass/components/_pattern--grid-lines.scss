@@ -446,8 +446,16 @@ $grid-item-hover-color: #222;
 
     a {
         display: inline-block;
+        // @include transition (all 0.15s ease-out);
+
     }
+
+    a:hover i.fa {
+        color: $ups-grey-1;
+    }
+
     i.fa {
+        @include transition (all 0.15s ease-out);
         font-size: 3em;
         color: $ups-yellow;
         margin-top: 1rem;
@@ -468,7 +476,7 @@ $grid-item-hover-color: #222;
         margin-top: 1.2em;
     }
 
-     input[type="text"] {
+    input[type="text"] {
         background: $ups-grey-1;
         border-radius: 0px;
         border: 0;
@@ -485,6 +493,8 @@ $grid-item-hover-color: #222;
 
     .button {
         @include size(2.5em);
+        @include transition (all 0.15s ease-out);
+
         padding: 0.3em 0 0 0.5em;
         right: 1.5em;
         margin-top: 0;
@@ -492,6 +502,12 @@ $grid-item-hover-color: #222;
         text-transform: uppercase;
         display: inline-block;
         float: left;
+
+
+        &:hover {
+            background: $ups-brown-1;
+            color: $ups-yellow;
+        }
 
     }
 }
