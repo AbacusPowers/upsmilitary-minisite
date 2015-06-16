@@ -52,4 +52,40 @@
 //  padding: 0.4em;
 }
 
+@mixin constrain-content{
+  .breakpoint-medium & {
+      max-width: $max-width--medium;
+      margin-left: auto;
+      margin-right: auto;
+  }
+
+  .breakpoint-large & {
+      max-width: $max-width--large;
+      margin-left: auto;
+      margin-right: auto;
+  }
+
+  .breakpoint-wide & {
+      max-width: $max-width--wide;
+      // background: red;
+      margin-left: auto;
+      margin-right: auto;
+  }
+}
+
+@mixin header-heights {
+  .breakpoint-medium & {
+      height: $header-height--medium;
+  }
+
+  .breakpoint-large & {
+      height: $header-height--large;
+  }
+
+  .breakpoint-wide & {
+      height: $header-height--wide;
+  }
+}
+
+
 

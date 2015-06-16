@@ -10,18 +10,7 @@ header {
     background-size: cover;
     height: $carousel-height--mobile;
     position: relative;
-
-    .breakpoint-medium & {
-        height: $header-height--medium;
-    }
-
-    .breakpoint-large & {
-        height: $header-height--large;
-    }
-
-    .breakpoint-wide & {
-        height: $header-height--wide;
-    }
+    @include header-heights;
 
     img.logo {
         @include position(absolute, 1em);
@@ -51,28 +40,9 @@ header {
     }
 
     .header--liner { /*slider prototype--must be made full width*/
+        @include constrain-content;
         position: relative;
         z-index: 10;
-
-        .breakpoint-medium & {
-            max-width: $max-width--medium;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .breakpoint-large & {
-            max-width: $max-width--large;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .breakpoint-wide & {
-            max-width: $max-width--wide;
-            // background: red;
-            margin-left: auto;
-            margin-right: auto;
-        }
-    
 
         .slider-content {
 
