@@ -15,6 +15,7 @@
     filter: alpha(opacity=100);
     z-index: 2000;
 }
+
 #modal {
   height: 100%;
   .article &, .video &, .events &, .faqs &, .values & {
@@ -24,21 +25,12 @@
     }
   }
 }
+
 #modal {
   display: none;
   background: white;
   border-left: 10px solid $ups-yellow;
-
-  .video & {
-    // background: transparent;
-    // border-left: none;
-    // .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & {
-    //   padding-right: 6em;
-    // }
-  }
-
   box-sizing: border-box;
-  //    height: 100%;
   padding: 2em;
   position: fixed;
   top: 0;
@@ -77,6 +69,29 @@
       position: fixed;
       margin-left: -4.4em;
       margin-top: -0.36em;
+    }
+
+    .video & {
+      position: static;
+      margin-left: 1em;
+
+      .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & {
+        width: 3em;
+        position: static;
+        margin-left: 2em;
+        margin-top: 0.1em;
+        // margin-bottom: 0.2em;
+      }
+    }
+  }
+
+  .video & {
+    background: $grey--darker;
+    border-left: none;
+    padding: 0 0 0 0;
+    
+    .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & {
+      padding: 0;
     }
   }
 
@@ -123,6 +138,7 @@
         height: 0;
         overflow: hidden;
         overflow: display;
+
       }
 
       .video-container iframe,
@@ -152,6 +168,14 @@
       top: 1em;
     }
 
+    .video & {
+      top: 3.1em;
+
+      .breakpoint-small & {
+        top: 1em;
+      }
+    }
+
     & i {
       font-size: 1.4em;
       padding: 0.21em 0 0 0.32em;
@@ -173,34 +197,69 @@
   }
 
   a#prev-article, a#next-article {
-    position: absolute;
-    @include size(2em 6em);
+    position: relative;
     background: $white20;
-    color: $white;
-    top: 50%;
+    color: $white50;
+    @include size(5.5em);
+    width: 50%;
+    bottom: 0;
+    float: left;
 
-    & i {
-      font-size: 2em;
+    .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & {
+      color: $white;
+      position: absolute;
+      @include size(2em 6em);
+      top: calc( 50% - 3em );
+      float: none;
+      & i {
+        font-size: 2em;
+      }
     }
-
+    
+    & i {
+      font-size: 5em;
+    }
+    
     &:hover {
       background: $black;
       color: $grey30;
     }
   }
-  a#prev-article {
-    left: calc(-2em - 10px);
 
-    & i {
-      padding: 0.95em 0 0 0.3em;
+  a#prev-article {
+    left: 0;
+    text-align: center;
+    
+    .video & {
+      .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & { 
+        left: -2em;
+      }
     }
+
+    .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & { 
+      left: calc(-2em - 10px);
+
+      i {
+        padding: 0.95em 0 0 0em;
+      }
+      
+      
+    }
+
+
   }
 
   a#next-article {
-    right: -2em;
+    right: 0;
+    text-align: center;
+    border-left: 1px solid $grey--darker;
 
-    & i {
-      padding: 0.95em 0 0 0.3em;
+    .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & { 
+      right: -2em;
+
+      i {
+        padding: 0.95em 0 0 0em;
+      }
     }
   }
 }
@@ -208,6 +267,18 @@
 
 
 /*********************VIDEO MODAL********************************/
+
+.video {
+  #video-title {
+    color: $ups-yellow;
+    margin-left: 2.4em;
+    margin-top: -1.8em;
+
+    .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & {
+      margin-left: 3.5em;  
+    }
+  }
+}
 
 /*********************EVENTS MODAL*******************************/
 
@@ -225,17 +296,7 @@
     display: none;
     background:white;
     border-left: 10px solid $ups-yellow;
-
-    .video & {
-      // background: transparent;
-      // border-left: none;
-      // .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & {
-      //   padding-right: 6em;
-      // }
-    }
-
     box-sizing: border-box;
-    //    height: 100%;
     padding: 2em;
     position: fixed;
     top: 0;
