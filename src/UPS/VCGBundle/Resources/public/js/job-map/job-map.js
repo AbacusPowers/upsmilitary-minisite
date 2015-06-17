@@ -497,7 +497,9 @@
         elt.parent('.expander__wrapper').addClass('open-expander');
         
         var hidden = elt.siblings('.hidden-part');
-        hidden.slideDown();
+        $(this).parent('.expander__wrapper').toggleClass('open-expander');
+        hidden.slideToggle();
+        $(this).children('i.fa').toggleClass('fa-plus').toggleClass('fa-minus');
         //var height = hidden.children('.expander__child').height();
         //var outer  = hidden.data('outer');
         //if (outer != null) {
@@ -505,8 +507,8 @@
         //}
         //hidden.velocity({ height: height, opacity: 1 }, 400);
         
-        elt.hide();
-        elt.siblings('.hide-button').show();
+        //elt.hide();
+        //elt.siblings('.hide-button').show();
     }
     
     

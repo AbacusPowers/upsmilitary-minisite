@@ -140,21 +140,27 @@
                         <!-- <p><span data-info="count"></span> Cities</p> -->
                         <div class="component--expander expander__thin" data-info="cities">
                             <section class='expander__wrapper'>
-                                <ul>
-                                    <li><h2 class='expander__parent' data-info="city-name"></h2></li>
-                                    <li><span>(<span data-info="city-count"></span>)</span></li>
-                                </ul>
+
                         
-                                <a data-id=' ' class='button expand-button'><i class="fa fa-plus fa-2x"></i></a>
-                                <a data-id=' ' class='button hide-button'><i class="fa fa-minus fa-2x"></i></a>
+                                <a data-id=' ' class='button expand-button'>
+                                    <ul>
+                                        <li><h2 class='expander__parent' data-info="city-name"></h2></li>
+                                        <li><span>(<span data-info="city-count"></span>)</span></li>
+                                    </ul>
+                                    <i class="fa fa-plus fa-2x"></i>
+                                </a>
+                                {#<a data-id=' ' class='button hide-button'><i class="fa fa-minus fa-2x"></i></a>#}
                                 <div data-id=' ' class='hidden-part'>
                                     <div class="expander__child">
                                         <div class="component--expander" data-info="locations">
                                             <section class="expander__wrapper">
-                                                <h2 class="expander__parent" data-info="loc-name"></h2>
-                                                <h3><span data-info="loc-count"></span>&nbspJob Types</h3>
-                                                <a data-id=' ' class='button expand-button'><i class="fa fa-plus fa-2x"></i></a>
-                                                <a data-id=' ' class='button hide-button'><i class="fa fa-minus fa-2x"></i></a>
+
+                                                <a data-id=' ' class='button expand-button'>
+                                                    <h2 class="expander__parent" data-info="loc-name"></h2>
+                                                    <h3><span data-info="loc-count"></span>&nbspJob Types</h3>
+                                                    <i class="fa fa-plus fa-2x"></i>
+                                                </a>
+                                                {#<a data-id=' ' class='button hide-button'><i class="fa fa-minus fa-2x"></i></a>#}
                                                 <div data-id=' ' class='hidden-part'>
                                                     <div class="expander__child" data-info="jobs"></div>
                                                 </div>
