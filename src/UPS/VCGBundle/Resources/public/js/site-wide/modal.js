@@ -13,7 +13,7 @@ $('document').ready(function(){
         e.preventDefault();
         var href = $(this).attr('href');
         // Getting Content
-        getModalContent(href, true, 'page');
+        getVideoModalContent(href, true, 'page');
         showVideoModal();
     });
     //EVENTS FUNCTIONALITY
@@ -103,7 +103,7 @@ function loadAjaxFunctions() {
         var href = $(this).attr('href');
         if (History.getState().data.modal === 1) { //only true if triggered from article link (not direct visits to article)
             if (History.getState().data.origin === 'page') {
-                destroyModal();
+                destroyVideoModal();
                 var rewrite = History.getState().data.close;
                 History.pushState(null, null, rewrite);
             } else {
@@ -176,7 +176,7 @@ function getModalContent(url, addEntry, originType) {
                     var href = $(this).attr('href');
                     if (History.getState().data.modal === 1) { //only true if triggered from article link (not direct visits to article)
                         if (History.getState().data.origin === 'page') {
-                            destroyModal();
+                            destroyVideoModal();
                             var rewrite = History.getState().data.close;
                             History.pushState(null, null, rewrite);
                         } else {
@@ -212,6 +212,75 @@ function getModalContent(url, addEntry, originType) {
 
             }
     });  
+}
+function getVideoModalContent(url, addEntry, originType) {
+    $.get(url)
+        .done(function() {
+            var originUrl = document.URL;
+            // Updating Content on Page
+            $('#modal').load(url +' #modal-content', null, function() {
+
+                if(addEntry === true) {
+                    var newTitle = $('#single-modal-content h1').text();
+                    document.title = newTitle;
+                }
+
+                $('#modal', '.video-view').on('click', '#prev-article', function (e) {
+                    e.preventDefault();
+                    var href = $(this).attr('href');
+                    // Getting Content
+                    getModalContent(href, true, 'video');
+                });
+                $('#modal', '.video-view').on('click', '#next-article', function (e) {
+                    e.preventDefault();
+                    var href = $(this).attr('href');
+                    // Getting Content
+                    getModalContent(href, true, 'video');
+                });
+
+
+                $('#modal', '.video-view').on('click', '#close-modal', function (e) {
+                    e.preventDefault();
+
+                    var href = $(this).attr('href');
+                    if (History.getState().data.modal === 1) { //only true if triggered from article link (not direct visits to article)
+                        if (History.getState().data.origin === 'page') {
+                            destroyVideoModal();
+                            var rewrite = History.getState().data.close;
+                            History.pushState(null, null, rewrite);
+                        } else {
+                            window.location.href = href;
+                        }
+
+                    } else if ($('#modal-wrapper').hasClass('article')) {
+                        window.location.href = href;
+                    }
+                });
+                $('a.external').click(function(e){
+                    e.preventDefault();
+                    var href = $(this).attr('href');
+                    showLeaveSiteModal();
+                    $('#offsite-modal #forward-to').attr('href',href);
+
+                    if ($('#modal').is(':visible')) {
+                        $('#modal').hide();
+                        $('body').addClass('hold-modal');
+                    }
+                    var modalHeight = $('#offsite-modal').height();
+                    var screenHeight = $(window).height();
+                    console.log(modalHeight);
+                    var topHeight = .5*(screenHeight-modalHeight);
+                    $('#offsite-modal').css({'top': topHeight +'px'});
+                });
+            });
+            if(addEntry === true) {
+                // Add History Entry using pushState
+
+                History.pushState({ modal : 1, origin : originType, close : originUrl }, null, url);
+                console.log(History.getState().data);
+
+            }
+        });
 }
 function getLeaveSiteModalContent(url, addEntry, originType) {
     $.get(url)
@@ -362,46 +431,6 @@ function destroyLeaveSiteModal(){
         }
     });
 })(window);
-
-    
-    
-//    $('a.external').click(function(e){
-//        var isExternalRegexClosure = (function(){
-//        var domainRe = /https?:\/\/((?:[\w\d]+\.)+[\w\d]{2,})/i;
-//
-//        return function(url) {
-//            function domain(url) {
-//                var result = domainRe.exec(url);
-//                if (result !== null) {
-//                    return result[1];
-//                }
-//
-//            }
-//
-//            return domain(location.href) !== domain(url);
-//        };
-//    })();
-//        var href = $(this).attr('href');
-//        targetURL = href;
-//        if (isExternalRegexClosure(href)){
-//
-////            //DIALOG/ALERT BOX
-////            var leave = confirm("You are about to leave the jobs-ups.com site");
-////            if (!leave) {
-////                e.preventDefault();
-////            }
-//
-//            // MODAL
-//            e.preventDefault();
-//            getModalContent(leaveSiteUrl, false, 'page');
-//            showLeaveSiteModal(href);
-//
-//
-//        } else {
-//            console.log('internal');
-//        }
-//
-//    });
 
 
 $(document).keyup(function(e) {
