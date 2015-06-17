@@ -3,12 +3,12 @@ $('document').ready(function(){
     $('.expand-button','.veteranGateway').click(function(){
         $(this).parent('.expander__wrapper').toggleClass('open-expander');
         $(this).siblings('.hidden-part').slideToggle();
-        $('i.fa',this).toggleClass('fa-plus').toggleClass('fa-minus');
+        $(this).children('i.fa').toggleClass('fa-plus').toggleClass('fa-minus');
     });
     $('#modal').on('click','.expand-button',function(){
         $(this).parent('.expander__wrapper').toggleClass('open-expander');
         $(this).siblings('.hidden-part').slideToggle();
-        $('i.fa',this).toggleClass('fa-plus').toggleClass('fa-minus');
+        $(this).children('i.fa').toggleClass('fa-plus').toggleClass('fa-minus');
     });
     //$('.hide-button','.veteranGateway').click(function(){
     //    $(this).parent('.expander__wrapper').removeClass('open-expander');

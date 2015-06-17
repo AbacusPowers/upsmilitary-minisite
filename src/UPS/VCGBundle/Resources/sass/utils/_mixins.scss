@@ -74,18 +74,37 @@
 }
 
 @mixin header-heights {
+  .breakpoint-small & {
+    height: $header-height-short--small;
+  }
   .breakpoint-medium & {
-      height: $header-height--medium;
+      height: $header-height-short--medium;
   }
 
   .breakpoint-large & {
-      height: $header-height--large;
+      height: $header-height-short--large;
   }
 
   .breakpoint-wide & {
-      height: $header-height--wide;
+      height: $header-height-short--wide;
+  }
+
+}
+@mixin home-header-heights {
+  .breakpoint-small & {
+    height: $header-height--small;
+  }
+  .breakpoint-medium & {
+    height: $header-height--medium;
+  }
+
+  .breakpoint-large & {
+    height: $header-height--large;
+  }
+
+  .breakpoint-wide & {
+    height: $header-height--wide;
   }
 }
-
 
 

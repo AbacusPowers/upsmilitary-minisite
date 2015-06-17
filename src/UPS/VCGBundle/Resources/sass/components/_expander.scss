@@ -4,7 +4,7 @@
   .expander__wrapper{
     border-bottom: 1px solid rgba( $ups-grey-1, 0.3);
     line-height: 1.6;
-    padding: 0 0 0 2em;
+    padding: 0;
     position: relative;
     min-height: 75px;
     &:before {
@@ -47,7 +47,8 @@
     cursor: pointer;
     display: block;
     margin-right: 0;
-    padding: 1rem 0 0 0;
+    padding: 1rem 0 0 2rem;
+    position: relative;
 //    padding: 0.7rem 0 0 27px;
 
     //    position: absolute;
@@ -58,11 +59,12 @@
     &:hover {
         background: $white05;
     }
-    .fa {
+    .fa.fa-plus, .fa.fa-minus {
         position: absolute;
-        right: 0;
-        top: 0;
-        padding: 1.5rem;
+        height: .9em;
+        right: 1rem;
+        top: calc(50% - 0.45em);
+//        padding: 1.5rem;
     }
   }
 
@@ -121,6 +123,7 @@
   .hidden-part {
 //    height: 0;
     display: none;
+    padding-left: 2rem;
 //    margin-top: 5rem;
 //    opacity: 0;
   }
@@ -200,7 +203,12 @@
     margin-left: -2em;
     background: $white10;
     border-bottom: none;
-    padding-left: 3rem;
+    .button {
+      padding-left: 5rem;
+    }
+    .hidden-part {
+      padding-left: 5rem;
+    }
 
     h2 {
       font-weight: 400;
@@ -237,12 +245,12 @@
   }
 
   .button {
-    height: 5em;
-//    min-height: 3.5em;
+//    height: 5em;
+    min-height: 35px;
     padding-top: 0;
     i.fa {
-      padding: 0 1em 0 0;
-      line-height: 2.5em;
+//      padding: 0 1em 0 0;
+//      line-height: 2.5em;
     }
   }
 

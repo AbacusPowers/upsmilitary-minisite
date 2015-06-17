@@ -68,7 +68,7 @@
         </div>
         
         {% block siteheader %}
-            <header class="page--home">
+            <header class="{% block header_class %}{% endblock %}">
                 {% block headerimage %}
                     <!-- <div class="slider-content">
                         <h1>Slider Headline</h1>

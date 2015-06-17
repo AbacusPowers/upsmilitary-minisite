@@ -3,14 +3,23 @@ $header-height--medium: 26rem;
 $header-height--large: 28rem;
 $header-height--wide: 33rem;
 
+$header-height-short--small: 10rem;
+$header-height-short--medium: 18rem;
+$header-height-short--large: 20rem;
+$header-height-short--wide: 22rem;
+
 $carousel-height--mobile: 16rem;
 
 header {
     background: url(../img/bg-5b.png) bottom center no-repeat $grey90;
     background-size: cover;
-    height: $carousel-height--mobile;
+//    height: $carousel-height--mobile;
     position: relative;
+
     @include header-heights;
+    &.page--home {
+       @include home-header-heights;
+     }
 
     img.logo {
         @include position(absolute, 1em);
