@@ -213,7 +213,7 @@
     width: 50%;
     bottom: 0;
     float: left;
-    display: none;
+    // display: none;
 
     .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & {
       display: block;
