@@ -74,7 +74,7 @@ $state-list-scroll-height-wide:  $map-height-wide - $map-control-height;
 
         .breakpoint-medium & {
             height: $map-height-medium;
-            display: none;
+//            display: none;
         }
 
         .breakpoint-large & {

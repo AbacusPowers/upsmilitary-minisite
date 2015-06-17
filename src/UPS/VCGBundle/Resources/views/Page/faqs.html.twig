@@ -1,5 +1,286 @@
 {% extends 'VCGBundle::base.html.twig' %}
 {% block title %}FAQs{% endblock %}
+<<<<<<< HEAD
+{% block headerimage %}
+    <div class="header-static-bg">
+        <img class="header-static-bg-img" src="{{ asset('bundles/vcg/images/bg-5b.png') }}"
+    </div>
+{% endblock %}
+{% block breadcrumbs %}
+        <a href="{{ url('homepage') }}">UPS Veteran Gateway</a>
+        <a href="{{ path('page',{'slug':'culture-benefits'}) }}">UPS Benefits & Culture</a>
+        <a href="#">FAQs</a>
+{% endblock %}
+{% block page_content %}
+    <div class="veteranGateway__liner">
+        <div class="title-block">
+            <h1>UPS Culture &amp; Benefits</h1>
+            <p>Frequently Asked Questions</p>
+        </div>
+        <div class="page page--faqs">
+            <section class="intro">
+                <img src="{{ asset('bundles/vcg/images/document.png') }}" alt="">
+                <h1 class="page--title">Frequently Asked Questions</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias eos molestiae, a. Harum officia error amet excepturi veniam esse. Officia excepturi magni, error, minima ipsa laudantium accusantium autem eos non.
+Consectetur adipisicing elit. Incidunt officiis inventore amet temporibus veniam molestiae, distinctio vero ratione consequuntur sit porro error facere, harum sequi, sint ducimus quasi maxime corporis.</p>
+            </section>
+            <div class="component--expander">
+                <!-- <section class='expander__wrapper'>
+                    <h2 class='expander__parent'>Introduction</h2>
+                    <a data-id='1' class='button expand-button'>
+                        <i class="fa fa-plus fa-2x"></i>
+                    </a>
+                    <a data-id='1' class='button hide-button'>
+                        <i class="fa fa-minus fa-2x"></i>
+                    </a>
+                    <div data-id='1' class='hidden-part'>
+                        <div class="expander__child">
+                            <p class=''>
+                                <img src="http://placehold.it/100x135&text=DD+Form+214+Graphic" alt="">
+                                Non itaque saepe provident architecto vitae! Quia consequatur labore eos commodi, consequuntur! Repudiandae, laboriosam, optio. Itaque deleniti, ipsam nemo sequi veritatis qui. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo id perferendis sapiente quisquam eveniet praesentium quidem, error atque ea.
+                                Non itaque saepe provident architecto vitae! Quia consequatur labore eos commodi, consequuntur! Repudiandae, laboriosam, optio. Itaque deleniti, ipsam nemo sequi veritatis qui. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo id perferendis sapiente quisquam eveniet praesentium quidem, error atque ea.
+                            </p>
+                        </div>
+                    </div>
+                </section> -->
+                <section class='expander__wrapper'>
+                    <h2 class='expander__parent'>1.	When is the best time to contact UPS about working with them after I transition?</h2>
+                    <h3>Lorem Ipsum</h3>
+                    <a data-id='2' class='button expand-button'>
+                        <i class="fa fa-plus fa-2x"></i>
+                    </a>
+                    <a data-id='2' class='button hide-button'>
+                        <i class="fa fa-minus fa-2x"></i>
+                    </a>
+                    <div data-id='2' class='hidden-part'>
+                        <div class="expander__child">
+                            <a href="{{ path('faq_video',{'slug':'video1'}) }}" class="video-link video-link--style"><img class="video-thumb" src="{{ asset('bundles/vcg/images/video-1.png') }}" alt=""><i class="fa fa-play-circle-o"></i></a>
+                            <p class=''>
+                            It’s never too early to start researching career options and military benefits while you’re still a service member. The length of the hiring process will vary by the job you are seeking, but UPS recommends starting your search about six to nine months before ending your military career.</p>
+
+                            <p>Start by exploring the information on this site, such as this list of Hiring Resources [LINK to Hiring Resources page], downloading the UPS Transition Guide App [LINK to Transition App Page], and preparing career search resources like your resume and cover letter. If you’re considering a move, this is the time to determine the location where you’d like to find your new career.</p>
+
+                            <p>Remember, UPS vacancies are location-specific and change regularly, so be sure to search for jobs [LINK to http://jobs-ups.com] often when you’re ready to begin.</p>
+
+                            <p>Watch this video for more details. [LINK to Timeline for Contacting UPS as a Transitioning Service Member.mp4 in video player]</p>
+
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                <section class='expander__wrapper'>
+                    <h2 class='expander__parent'>2.	What training opportunities does UPS offer for transitioning service members?</h2>
+                    <h3>Lorem Ipsum</h3>
+                    <a data-id='3' class='button expand-button'>
+                        <i class="fa fa-plus fa-2x"></i>
+                    </a>
+                    <a data-id='3' class='button hide-button'>
+                        <i class="fa fa-minus fa-2x"></i>
+                    </a>
+                    <div data-id='3' class='hidden-part'>
+                        <div class="expander__child">
+
+                                <a href="{{ path('faq_video',{'slug':'video2'}) }}" class="video-link video-link--style"><img class="video-thumb" src="{{ asset('bundles/vcg/images/video-2.png') }}" alt=""><i class="fa fa-play-circle-o"></i></a>
+                                <p>At UPS, we pride ourselves on making high-quality training available to advance the personal and professional growth of all our employees, including those in part-time positions like package delivery drivers. Training opportunities and programs will vary based on the job you are seeking and your personal career goals. One example of the high-quality training programs provided to our employees is the UPS Registered Apprenticeship program for package delivery drivers.</p>
+
+<p>The UPS Registered Apprenticeship program provides transitioning service members the opportunity to earn a great wage while completing a career training program. The 48-month program offers U.S. veterans and reservists a full-time position while they work to further their career at UPS through advanced training. Opportunities are available across the country, and even more Registered Apprenticeship positions will be added soon!</p>
+
+<p>Visit the Registered Apprenticeship program section [LINK to Registered Apprenticeship Program page] and watch this video [LINK to Training Opportunities_RA.mp4 in video player] to learn more.
+
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                <section class='expander__wrapper'>
+                    <h2 class='expander__parent'>3.	How does UPS’ “promote from within” culture help support career development for transitioning military members?</h2>
+                    <h3>Lorem Ipsum</h3>
+                    <a data-id='4' class='button expand-button'>
+                        <i class="fa fa-plus fa-2x"></i>
+                    </a>
+                    <a data-id='4' class='button hide-button'>
+                        <i class="fa fa-minus fa-2x"></i>
+                    </a>
+                    <div data-id='4' class='hidden-part'>
+                        <div class="expander__child">
+                            <p class=''>
+                                At UPS, we give all employees an equal opportunity to advance, and we look to promote from within. No matter your background or beliefs, the values you demonstrated through your military service put you in a position for career growth at UPS. And our sense of teamwork means you will find great opportunities to step up, help out and receive additional compensation outside of your starting position.</p>
+
+<p>Watch this video to hear about the advancement opportunities presented to a few UPSers like you. [LINK to Promote From Within.mp4 in video player]</p>
+
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                <section class='expander__wrapper'>
+                    <h2 class='expander__parent'>4.	What benefits does UPS offer U.S. veteran employees?</h2>
+                    <h3>Lorem Ipsum</h3>
+                    <a data-id='5' class='button expand-button'>
+                        <i class="fa fa-plus fa-2x"></i>
+                    </a>
+                    <a data-id='5' class='button hide-button'>
+                        <i class="fa fa-minus fa-2x"></i>
+                    </a>
+                    <div data-id='5' class='hidden-part'>
+                        <div class="expander__child">
+                            <p class=''>
+                                We know veterans returning to civilian life and working for a civilian employer are searching for the kind of stability they received in the military. So we’re proud to offer veterans joining us a comprehensive benefits package that will help them transition smoothly. Because our employees stop at nothing to exceed the expectations of our customers, UPS stops at nothing to give our staffers the benefits they need to lead balanced, healthy lives.</p>
+
+<p>Watch this video to learn more about how military benefits compare to employee benefits at UPS, and how they can help ease your transition. [LINK to Benefits.mp4 in video player]</p>
+
+<p>Visit the Benefits section to learn more! [LINK to UPS Benefits page within culture and benefits section]
+
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                <section class='expander__wrapper'>
+                    <h2 class='expander__parent'>5.	I am currently serving as a member of the Reserve. Will I still be considered for a career at UPS?</h2>
+                    <h3>Lorem Ipsum</h3>
+                    <a data-id='6' class='button expand-button'>
+                        <i class="fa fa-plus fa-2x"></i>
+                    </a>
+                    <a data-id='6' class='button hide-button'>
+                        <i class="fa fa-minus fa-2x"></i>
+                    </a>
+                    <div data-id='6' class='hidden-part'>
+                        <div class="expander__child">
+                            <p class=''>
+                                UPS understands that hiring a Guard or Reserve member makes good business sense. We know you are a disciplined and skilled worker who displays pride, leadership, responsibility and professionalism in whatever you do. You would be a welcome addition to our team, and we guarantee UPS management will support you as you continue to serve our country.</p>
+
+<p>Watch this video for more details about how UPS supports your continued service to our country with outstanding benefits. [LINK to Military Reserve Force Members.mp4 in video player]</p>
+
+<p>Learn more about UPS’ commitment and the help of the agency Employer Support of the Guard and Reserve (ESGR). [LINK to ESGR page] </p>
+
+
+                        </div>
+                    </div>
+                </section>
+                <section class='expander__wrapper'>
+                    <h2 class='expander__parent'>6.	What opportunities does UPS have for student veterans?</h2>
+                    <h3>Lorem Ipsum</h3>
+                    <a data-id='7' class='button expand-button'>
+                        <i class="fa fa-plus fa-2x"></i>
+                    </a>
+                    <a data-id='7' class='button hide-button'>
+                        <i class="fa fa-minus fa-2x"></i>
+                    </a>
+                    <div data-id='7' class='hidden-part'>
+                        <div class="expander__child">
+                            <p class=''>
+                                When you’re a part-time employee at UPS, you are eligible to apply for up to $5,250 in educational assistance per calendar year. That money, plus the pay you earn while working at UPS, can contribute in a significant way to your college education—even after any GI Bill benefits you may receive.</p>
+
+<p>And part-time positions at UPS are great opportunities for students! You can pick the shift that works best with your class schedule and position yourself for further advancement with UPS once you obtain your degree.</p>
+
+<p>Watch this video about what it’s like to be a student while working for UPS. [LINK to Student Veterans.mp4 in video player]</p>
+
+
+                        </div>
+                    </div>
+                </section>
+                <section class='expander__wrapper'>
+                    <h2 class='expander__parent'>7.	How does my military career relate to a career at UPS?</h2>
+                    <h3>Lorem Ipsum</h3>
+                    <a data-id='8' class='button expand-button'>
+                        <i class="fa fa-plus fa-2x"></i>
+                    </a>
+                    <a data-id='8' class='button hide-button'>
+                        <i class="fa fa-minus fa-2x"></i>
+                    </a>
+                    <div data-id='8' class='hidden-part'>
+                        <div class="expander__child">
+                            <p class=''>
+                                UPS wants people with integrity, adaptability, leadership ability and a can-do attitude. All of those traits and more are attributes you possess that were strengthened through your military experience. Teamwork, accountability, efficiency and diversity are values that both the military and UPS seek out in recruits.</p>
+
+<p>Watch this video for more examples of how your military career relates to a career at UPS. [LINK to Military Relate to UPS.mp4 in video player]</p>
+
+<p>You can use the UPS Job Match tool [LINK to MOS Career Explorer Page] to learn more about which UPS jobs are directly related to the skills you demonstrated in your military service. Or, learn more about the most-needed UPS positions. [Link to Top Jobs page]</p>
+
+
+                        </div>
+                    </div>
+                </section>
+                <section class='expander__wrapper'>
+                    <h2 class='expander__parent'>8.	What job areas are best-suited for my military experience?</h2>
+                    <h3>Lorem Ipsum</h3>
+                    <a data-id='9' class='button expand-button'>
+                        <i class="fa fa-plus fa-2x"></i>
+                    </a>
+                    <a data-id='9' class='button hide-button'>
+                        <i class="fa fa-minus fa-2x"></i>
+                    </a>
+                    <div data-id='9' class='hidden-part'>
+                        <div class="expander__child">
+                            <p class=''>
+                                Your experience makes you a great candidate for a wide range of positions, and your military service demonstrates you are a dedicated team player who knows how to solve problems. Any position at UPS would benefit from your work ethic!</p>
+
+<p>Use the UPS Job Match tool to determine which UPS careers rely on the skills you honed during your military service. [LINK to MOS Career Explorer Page]</p>
+
+                        </div>
+                    </div>
+                </section>
+                <section class='expander__wrapper'>
+                    <h2 class='expander__parent'>9.	How do I articulate my military experience for UPS on my resume?</h2>
+                    <h3>Lorem Ipsum</h3>
+                    <a data-id='10' class='button expand-button'>
+                        <i class="fa fa-plus fa-2x"></i>
+                    </a>
+                    <a data-id='10' class='button hide-button'>
+                        <i class="fa fa-minus fa-2x"></i>
+                    </a>
+                    <div data-id='10' class='hidden-part'>
+                        <div class="expander__child">
+                            <p class=''>
+                                First impressions are everything, and one of the biggest challenges transitioning military members face is how to convey the depth and breadth of their training to a civilian hiring manager. You can find help with this online through sites like resumeengine.org [LINK to https://www.resumeengine.org] that feature skills translators.</p>
+
+<p>Watch this video for more tips on how to include your experience on your resume. [LINK to Resume.mp4 in video player]</p>
+
+<p>Read here about how you can use the information on your DD Form 214 to make your resume stand out. [LINK to http://wwwstaging.ups-veteran.iostudio.com/transition-guide/dd-form-214-guide.html]</p>
+                        </div>
+                    </div>
+                </section>
+                <section class='expander__wrapper'>
+                    <h2 class='expander__parent'>10.	How do I speak to my military experience in the interview with UPS?</h2>
+                    <h3>Lorem Ipsum</h3>
+                    <a data-id='11' class='button expand-button'>
+                        <i class="fa fa-plus fa-2x"></i>
+                    </a>
+                    <a data-id='11' class='button hide-button'>
+                        <i class="fa fa-minus fa-2x"></i>
+                    </a>
+                    <div data-id='11' class='hidden-part'>
+                        <div class="expander__child">
+                            <p class=''>
+                                Many of the skills, certifications and experiences you received in your military career are highly valued in the civilian world. Talk about the specific skills you developed in your military job, whether they are in technology, logistics or personnel management, and speak about them in general terms. Discuss attributes such as leadership, teamwork and working with diverse groups of people. Present yourself as a problem-solver and provide good examples.</p>
+
+<p>Watch this video for some tips on how to present your military experience in the interview. [LINK to Interview.mp4 in video player]</p>
+
+                        </div>
+                    </div>
+                </section>
+                <section class='expander__wrapper'>
+                    <h2 class='expander__parent'>11.	Are opportunities for military spouses available at UPS?</h2>
+                    <h3>Lorem Ipsum</h3>
+                    <a data-id='12' class='button expand-button'>
+                        <i class="fa fa-plus fa-2x"></i>
+                    </a>
+                    <a data-id='12' class='button hide-button'>
+                        <i class="fa fa-minus fa-2x"></i>
+                    </a>
+                    <div data-id='12' class='hidden-part'>
+                        <div class="expander__child">
+                            <p class=''>
+                                Service members’ families are integral to the career of any military member. They have provided energy, support and care so that a service member can focus solely on their job.</p>
+
+<p>A spouse whose loved one has deployed has had to bear the burden of keeping the family together and the household functioning. All of these experiences and pressures develop qualities such as strength, discipline and the ability to manage several tasks at once. These are qualities UPS highly values in our employees.</p>
+
+<a href="">Watch this video to learn more about how UPS values military spouses. [LINK to Military Spouses.mp4 in video player]</a>
+
+<a href="http://jobs-ups.com">Search for current job openings in your area.</a>
+
+
+                        </div>
+                    </div>
+=======
 {% block modal_class %}faqs{% endblock %}
 {% block page_class %}faqs{% endblock %}
 {% block modal %}
@@ -16,6 +297,7 @@
                     <h1 class="page--title">Frequently Asked Questions</h1>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias eos molestiae, a. Harum officia error amet excepturi veniam esse. Officia excepturi magni, error, minima ipsa laudantium accusantium autem eos non.
                         Consectetur adipisicing elit. Incidunt officiis inventore amet temporibus veniam molestiae, distinctio vero ratione consequuntur sit porro error facere, harum sequi, sint ducimus quasi maxime corporis.</p>
+>>>>>>> 53f2ef113da8f1903206cbd30b345b60b6554169
                 </section>
                 <div class="component--expander">
                     <section class='expander__wrapper'>
@@ -286,6 +568,8 @@
         <a href="{% block nextArticleLink %}{{ path(route, {'slug': video.Next | raw })}}{% endblock %}" id="next-article"><i class="fa fa-angle-right"></i></a>#}
     </div>
 {% endblock %}
+<<<<<<< HEAD
+=======
 {#{% extends "VCGBundle:Layouts:page.html.twig" %}#}
 {#{% block title %}FAQs{% endblock %}#}
 {#{% block headerimage %}#}
@@ -557,3 +841,4 @@
         {#</div>#}
     {#</div>#}
 {#{% endblock %}#}
+>>>>>>> 53f2ef113da8f1903206cbd30b345b60b6554169
