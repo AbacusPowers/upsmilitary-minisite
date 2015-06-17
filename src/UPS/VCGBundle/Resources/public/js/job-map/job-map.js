@@ -234,6 +234,8 @@
          * Initialize the map: init Snap.svg, gather states.
          */
         init: function() {
+            this.containers = $('.full-width');
+            
             var snap = this.snap = Snap('.svg-map');
             snap.attr({
                 fill:           CONST.COLOR_PATH,
@@ -385,6 +387,7 @@
                 stateSelect.val('');
                 info.show(null);
                 refresher.removeClass('shown');
+                this.containers.addClass('full-width');
             }
             
             if (state != null) {
@@ -395,6 +398,7 @@
                 stateSelect.val(state.abbr);
                 info.show(state.info);
                 refresher.addClass('shown');
+                this.containers.removeClass('full-width');
             }
         },
         
@@ -454,7 +458,7 @@
      */
     function init_map_controls() {
         stateSelect = $('#job-map--select-state');
-        stateSelect.append($('<option val=""></option>'));
+        stateSelect.append($('<option value="">Select State</option>'));
         
         stateSelect.change(function(event) {
             map.set_focus(map.stateData[stateSelect.val()]);

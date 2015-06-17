@@ -13,6 +13,8 @@ $state-list-scroll-height-wide:  $map-height-wide - $map-control-height;
 .page--map {
 
     #side--a {
+        transition: width 0.25s;
+        
        .map-wrapper {
          overflow: hidden;
          position: relative;
@@ -22,6 +24,8 @@ $state-list-scroll-height-wide:  $map-height-wide - $map-control-height;
     .map-controls {
         padding: 2.6em 3em 0em 3em;
         height: $map-control-height;
+        
+        transition: width 0.25s;
 
         select {
             margin-bottom: 0;
@@ -53,7 +57,6 @@ $state-list-scroll-height-wide:  $map-height-wide - $map-control-height;
 
         .breakpoint-medium & {
             height: $map-height-medium;
-            display: none;
         }
 
         .breakpoint-large & {
@@ -96,7 +99,8 @@ $state-list-scroll-height-wide:  $map-height-wide - $map-control-height;
         }
         
         .breakpoint-small & { 
-            display: none; 
+            top: 0.5rem;
+            right: 1rem;
         }
     }
 
@@ -188,35 +192,6 @@ $state-list-scroll-height-wide:  $map-height-wide - $map-control-height;
             }
         }
     }
-
-//    .component--expander {
-//        margin-bottom: 3em;
-//        border-top: 1px solid rgba( $ups-grey-1, 0.3);
-//
-//        .expander__wrapper {
-//            min-height: 3.5em;
-//
-//            ul li {
-//                display: inline-block;
-//            }
-//
-//            // & > span {
-//            //     background: red;
-//            // }
-//        }
-//
-//        h2 {
-//            margin-right: 0;
-//        }
-//
-//        .component--expander>.expander__wrapper.open-expander {
-//            background: $white05;
-//        }
-//
-//        .component--expander {
-//            border-top: none;
-//        }
-//    }
 
     .map-info--state > .component--expander {
         
