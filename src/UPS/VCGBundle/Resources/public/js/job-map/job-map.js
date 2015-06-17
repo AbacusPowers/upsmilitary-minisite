@@ -497,7 +497,7 @@
         elt.parent('.expander__wrapper').addClass('open-expander');
         
         var hidden = elt.siblings('.hidden-part');
-        hidden.velocity("transition.slideDownBigIn");
+        hidden.slideDown();
         //var height = hidden.children('.expander__child').height();
         //var outer  = hidden.data('outer');
         //if (outer != null) {
@@ -518,7 +518,7 @@
         elt.parent('.expander__wrapper').removeClass('open-expander');
         
         var hidden = elt.siblings('.hidden-part');
-        hidden.velocity("transition.slideUpBigOut");
+        hidden.slideUp();
         //var outer  = hidden.data('outer');
         //if (outer != null) {
         //    var height = hidden.children('.expander__child').height();
