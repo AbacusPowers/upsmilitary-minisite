@@ -37,6 +37,14 @@ header {
     .header-static-bg-img {
         position: absolute;
         width: 100%;
+//      .breakpoint-small & {
+//        position: relative;
+//        width: auto;
+//        min-width: 100%;
+//        max-width: none;
+//        min-height: 100%;
+//        margin-left: -50%;
+//      }
     }
 
     .header--liner { /*slider prototype--must be made full width*/

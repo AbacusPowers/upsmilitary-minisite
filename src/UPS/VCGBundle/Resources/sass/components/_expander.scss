@@ -116,8 +116,9 @@
   }
 
   .hidden-part {
-    height: 0;
-    opacity: 0;
+//    height: 0;
+    display: none;
+//    opacity: 0;
   }
 
   .hidden-part *{

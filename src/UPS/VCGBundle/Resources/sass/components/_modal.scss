@@ -335,7 +335,18 @@
     }
 
 
-
+    #forward-to, #forward-cancel {
+      display: inline-block;
+      padding: 1em;
+      color: white;
+      margin: 1em 10%;
+    }
+    #forward-cancel {
+      background-color: #ff6857;
+    }
+    #forward-to {
+      background-color: $ups-green;
+    }
     .logo {
       // position: fixed;
       width: 2.5em;
@@ -356,6 +367,10 @@
 
       &::-webkit-scrollbar {
         display: none; /*temporary fix*/
+      }
+      #single-offsite-modal-content #offsite-nav {
+        text-align: center;
+
       }
     }
 

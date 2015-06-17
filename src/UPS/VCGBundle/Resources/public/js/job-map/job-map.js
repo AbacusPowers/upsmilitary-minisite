@@ -493,12 +493,13 @@
         elt.parent('.expander__wrapper').addClass('open-expander');
         
         var hidden = elt.siblings('.hidden-part');
-        var height = hidden.children('.expander__child').height();
-        var outer  = hidden.data('outer');
-        if (outer != null) {
-            outer.velocity({ height: outer.height() + height }, 500);
-        }
-        hidden.velocity({ height: height, opacity: 1 }, 400);
+        hidden.velocity("transition.slideDownBigIn");
+        //var height = hidden.children('.expander__child').height();
+        //var outer  = hidden.data('outer');
+        //if (outer != null) {
+        //    outer.velocity({ height: outer.height() + height }, 500);
+        //}
+        //hidden.velocity({ height: height, opacity: 1 }, 400);
         
         elt.hide();
         elt.siblings('.hide-button').show();
@@ -513,12 +514,13 @@
         elt.parent('.expander__wrapper').removeClass('open-expander');
         
         var hidden = elt.siblings('.hidden-part');
-        var outer  = hidden.data('outer');
-        if (outer != null) {
-            var height = hidden.children('.expander__child').height();
-            outer.velocity({ height: outer.height() - height }, 500);
-        }
-        hidden.velocity({ height: 0, opacity: 0}, 400);
+        hidden.velocity("transition.slideUpBigOut");
+        //var outer  = hidden.data('outer');
+        //if (outer != null) {
+        //    var height = hidden.children('.expander__child').height();
+        //    outer.velocity({ height: outer.height() - height }, 500);
+        //}
+        //hidden.velocity({ height: 0, opacity: 0}, 400);
         
         elt.hide();
         elt.siblings('.expand-button').show();
