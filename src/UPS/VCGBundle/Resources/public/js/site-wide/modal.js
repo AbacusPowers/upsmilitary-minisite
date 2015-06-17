@@ -399,6 +399,7 @@ function destroyVideoModal(){
     $('body').removeClass('video-view');
     $('#modal-wrapper').removeClass('video');
     $('body').removeClass('hold-modal');
+    $('#single-modal-content').text('');
 }
 function destroyEventsModal(){
     $('#overlay').hide();
