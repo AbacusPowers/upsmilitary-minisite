@@ -1,6 +1,6 @@
 $map-height-small: 18em;
 $map-height-medium: 24em;
-$map-height-large: 30em;
+$map-height-large: 35em;
 $map-height-wide: 40em;
 
 $map-control-height: 4.5em;
@@ -13,19 +13,40 @@ $state-list-scroll-height-wide:  $map-height-wide - $map-control-height;
 .page--map {
 
     #side--a {
-       .map-wrapper {
+        .map-wrapper {
          overflow: hidden;
          position: relative;
-       }
+        }
+
+        &.full-width {
+            .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & {
+                width: 100%;
+                padding-top: 5em;
+                padding-right: 5em;
+            }
+        }
     }
     
     .map-controls {
-        padding: 2.6em 3em 0em 3em;
         height: $map-control-height;
+        padding: 1em 0 3em 1em;
+
+        .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & {
+            padding: 2.6em 3em 0em 3em;
+        }
 
         select {
             margin-bottom: 0;
             width: 12.1em;
+        }
+
+        &.full-width {
+            .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & {
+                position: absolute;
+                padding: 2.6em 3em 0em 3em;
+                left: 50%;
+                top: 0;
+            }
         }
     }
 
@@ -96,7 +117,10 @@ $state-list-scroll-height-wide:  $map-height-wide - $map-control-height;
         }
         
         .breakpoint-small & { 
-            display: none; 
+            // display: none; 
+            top: 14.6em;
+            right: auto;
+            left: 14.3rem;
         }
     }
 
@@ -117,6 +141,10 @@ $state-list-scroll-height-wide:  $map-height-wide - $map-control-height;
 
     .map-info-container {
         padding-top: 2.6em;
+
+        .breakpoint-small & { 
+            padding-top: 1.5em;
+        }
     }
     
     .map-info--state {
@@ -124,9 +152,9 @@ $state-list-scroll-height-wide:  $map-height-wide - $map-control-height;
 
         h2 i.fa-circle {
             vertical-align: middle;
-            
             font-size: 0.65em;
             margin-right: 0.5em;
+            margin-bottom: 0.2em;
             
             display: inline-block;
             
@@ -137,11 +165,17 @@ $state-list-scroll-height-wide:  $map-height-wide - $map-control-height;
               top: -0.5rem;
               padding-bottom: 0.8em;
 
+              h3 {
+                color: $ups-yellow;
+                margin-left: 1em;
+                float: left;
+                padding-top: 0.17em;
+              }
+
             ul li {
                 display: inline-block;
-                margin-left: 3rem;
+                margin-left: 1rem;
                 font-size: 0.8em;
-
 
                 i {
                     color: $white;
