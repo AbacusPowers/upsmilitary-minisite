@@ -15,6 +15,7 @@
     "metaquery": "~1.2.5",
     "Snap.svg": "~0.4.1",
     "jquery-csv": "*",
-    "jquery.selectBoxIt": "~3.8.1"
+    "jquery.selectBoxIt": "~3.8.1",
+    "velocity": "~1.2.2"
   }
 }
