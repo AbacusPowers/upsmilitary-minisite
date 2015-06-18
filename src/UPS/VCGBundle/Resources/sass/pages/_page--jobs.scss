@@ -1,4 +1,33 @@
 .page.page--jobs, .page.page--ddform214 {
+
+    #side--a {
+        position: relative;
+
+        .intro {
+            // background: $black70;
+            padding: 1.5em 3em 3em 0em;
+            ackground: $grey--dark;
+
+
+            h1 {
+                margin-left: 6.5rem;
+                  font-size: 1.3em;
+                  margin-top: 0.8em;
+                  margin-bottom: 1.5em;
+                  margin-left: 4.8em;
+                  margin-right: 0.7em;
+                  color: $white;
+
+            }
+
+            p {
+                margin-left: 2em;
+            }
+        }
+    }
+}
+
+.page.page--jobs {
     
     #side--a {
         position: relative;
