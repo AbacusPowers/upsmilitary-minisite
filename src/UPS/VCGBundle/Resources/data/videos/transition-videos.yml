@@ -1,20 +1,20 @@
 resume:
   Url: cfaSMhvsRsk
-  Title: Resumé
-  Prev: promote-from-within
-  Next: student-veterans
+  Title: Tips For Your Resume
+  Prev:
+  Next: networking
 networking:
   Url: f19OngH6qy4
-  Title: Networking
+  Title: Tips For Networking In Your Job Search
   Prev: resume
   Next: social-media
 social-media:
   Url: HQZ1yEH0idw
-  Title: Social Media
+  Title: Tips For Using Social Media In Your Job Search
   Prev: networking
   Next: interview
 interview:
   Url: V9SOJQ6p068
-  Title: Interview
+  Title: Tips For Your Interview
   Prev: social-media
   Next: resume

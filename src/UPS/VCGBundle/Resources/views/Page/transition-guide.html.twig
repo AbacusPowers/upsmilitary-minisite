@@ -27,12 +27,13 @@
             <p>This series of short articles will help you with everything from resumes to interviewing. Think of it as your own personal branding kit.</p>
 
             <div class="button-group">
+                <a href="{{path('transition_guide_article',{'slug':'brand-intro'}) }}" class="button black history-checkbox article-link"><span></span>Intro</a>
                 <a href="{{path('transition_guide_article',{'slug':'cover-letter-resume'}) }}" class="button black history-checkbox article-link"><span></span>Resume & Cover Letter</a>
                 <a href="{{path('transition_guide_article',{'slug':'marketing-yourself'}) }}" class="button black history-checkbox article-link"><span></span>Marketing Yourself Online</a>
                 <a href="{{path('transition_guide_article',{'slug':'networking-essentials'}) }}" class="button black history-checkbox article-link"><span></span>Networking</a>
-                <a href="{{path('transition_guide_article',{'slug':'cover-letter-resume'}) }}" class="button black history-checkbox article-link"><span></span>Dealing With Recruiters</a>
-                <a href="{{path('transition_guide_article',{'slug':'cover-letter-resume'}) }}" class="button black history-checkbox article-link"><span></span>Preparing For Career Fairs</a>
-                <a href="{{path('transition_guide_article',{'slug':'cover-letter-resume'}) }}" class="button black history-checkbox article-link"><span></span>Interviews</a>
+                <a href="{{path('transition_guide_article',{'slug':'recruiters'}) }}" class="button black history-checkbox article-link"><span></span>Dealing With Recruiters</a>
+                <a href="{{path('transition_guide_article',{'slug':'career-fair'}) }}" class="button black history-checkbox article-link"><span></span>Preparing For Career Fairs</a>
+                <a href="{{path('transition_guide_article',{'slug':'interview'}) }}" class="button black history-checkbox article-link"><span></span>Interviews</a>
             </div>
 
           </div>
@@ -58,10 +59,10 @@
 
                 <div class="scroll-container">
                     <div id="video-list">
-                        <a href="{{ path('transition_guide_video',{'slug':'resume'}) }}" class="video-link video-link--style"><img class="video-thumb" src="{{ asset('bundles/vcg/images/video.png') }}" alt=""><i class="fa fa-play-circle"></i></a>
-                        <a href="{{ path('transition_guide_video',{'slug':'networking'}) }}" class="video-link video-link--style"><img class="video-thumb" src="{{ asset('bundles/vcg/images/video.png') }}" alt=""><i class="fa fa-play-circle"></i></a>
-                        <a href="{{ path('transition_guide_video',{'slug':'social-media'}) }}" class="video-link video-link--style"><img class="video-thumb" src="{{ asset('bundles/vcg/images/video.png') }}" alt=""><i class="fa fa-play-circle"></i></a>
-                        <a href="{{ path('transition_guide_video',{'slug':'interview'}) }}" class="video-link video-link--style"><img class="video-thumb" src="{{ asset('bundles/vcg/images/video.png') }}" alt=""><i class="fa fa-play-circle"></i></a>
+                        <a href="{{ path('transition_guide_video',{'slug':'resume'}) }}" class="video-link video-link--style"><img class="video-thumb" src="{{ asset('bundles/vcg/images/video.png') }}" alt=""><i class="fa fa-play-circle"></i><span class="video-title">Tips For Your Resume</span></a>
+                        <a href="{{ path('transition_guide_video',{'slug':'networking'}) }}" class="video-link video-link--style"><img class="video-thumb" src="{{ asset('bundles/vcg/images/video.png') }}" alt=""><i class="fa fa-play-circle"></i><span class="video-title">Tips For Networking</span></a>
+                        <a href="{{ path('transition_guide_video',{'slug':'social-media'}) }}" class="video-link video-link--style"><img class="video-thumb" src="{{ asset('bundles/vcg/images/video.png') }}" alt=""><i class="fa fa-play-circle"></i><span class="video-title">Tips For Using Social Media</span></a>
+                        <a href="{{ path('transition_guide_video',{'slug':'interview'}) }}" class="video-link video-link--style"><img class="video-thumb" src="{{ asset('bundles/vcg/images/video.png') }}" alt=""><i class="fa fa-play-circle"></i><span class="video-title">Tips For Your Interview</span></a>
                     </div>
                 </div>
             </div>
