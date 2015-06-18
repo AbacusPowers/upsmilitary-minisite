@@ -1,4 +1,6 @@
-
+body.article-view, body.leave-site-view, body.video-view, body.events-view, body.values-view {
+  overflow: hidden;
+}
 #overlay {
     display: none;
     .article &, .video &, .events &, .faqs &, .values & {
