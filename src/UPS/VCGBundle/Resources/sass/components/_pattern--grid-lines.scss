@@ -58,26 +58,24 @@ $grid-item-hover-color: #222;
         }
 
         &:after {
-            @include pseudo-block(0.6em);
-            position: absolute;
+            @include border-mask;
             width: 1px;
             bottom: 0;
             right: -1px;
             // overflow: visible;
             z-index: 1;
             clip: auto;
-            background: $black;
+            // background: $black;
         }
 
         &:before {
-            @include pseudo-block(0.6em);
-            position: absolute;
+            @include border-mask;
             width: 1px;
             top: 0;
             right: -1px;
             z-index: 1;
             clip: auto;
-            background: $black;
+            // background: $black;
         }
     }
 
@@ -229,26 +227,23 @@ $grid-item-hover-color: #222;
     }
 
     .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & {    
-     
-        .grid-item:nth-child(3), .grid-item:last-child {
-            border-right: 0px;
+        .grid-item:nth-child(1) {
+        }
+
+        .grid-item:nth-child(3) {
+            border-right: 0;
+        }
+
+        .grid-item:nth-child(4) {
+        }
+
+        .grid-item:nth-child(4) {
         }
 
         .grid-item:last-child {
-            border-bottom: none;
         }
        
-        .grid--transition-guide-intro {
-            font-weight: 800;
-            font-size: 1em;
-
-            .button-group {
-                position: relative;
-                a {
-                    display: block;
-                }
-            }
-        }        
+          
     }
 }
 
