@@ -91,7 +91,7 @@ and open the template in the editor.
             }
 
             .expander__child p:last-of-type {
-                padding-bottom: 2em;
+                padding-bottom: 1em;
             }
         }
 
@@ -116,7 +116,7 @@ and open the template in the editor.
             }
 
             h4 {
-                text-transform: uppercase;
+                text-transform: none;
             }
 
             p {
@@ -165,24 +165,51 @@ and open the template in the editor.
     }
 
     .job-converter-job-search {
-        padding: 0 3em 3em 1em;
+        @include clearfix;
+        background: $white10;
+        padding: 1.5em 3em 2em 2.5em;
+        margin-left: -1.5em;
 
         h4 {
             color: $white;
             margin-top: 0;
+            margin-bottom: 0.6rem;
+        }
+        
+         label:first-of-type{
+            display: none;
+            // margin-top: 0;
+            // width: 49%;
         }
 
-        label:first-of-type{
-            margin-top: 0;
+        label:last-of-type {
+            display: none;
+            // width: 49%;
+            // position: relative;
+            // right: -51%;
+            // margin-top: -1.9em;           
         }
 
         select {
-            width: 100%;
-            margin-bottom: 2.5em;
+            display: none;
+            // width: 49.5%;
+            // float: right;
+            // margin-bottom: 0;
+        }
+
+        input[type=text] {
+            height: 2.5rem;
+            float: left;
+            width: 50%;
+            background:$white15;
+            margin-bottom: 0;
+            color: $ups-yellow;
+            padding-left: 0.6em;
         }
 
         input[type=submit] {
-
+            width: 50%;
+            float: right;
         }
     }
 

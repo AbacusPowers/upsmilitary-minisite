@@ -171,21 +171,19 @@ $state-list-scroll-height-wide:  $map-height-wide - $map-control-height;
         }
 
         .size-key {
-                position: absolute;
-              top: 4.8rem;
-              left: 0.1rem;
-              padding-bottom: 0.8em;
-              // width: 8rem;
+            position: absolute;
+            top: 4.8rem;
+            left: 0.1rem;
+            padding-bottom: 0.8em;
+            // background: $black10;
 
-              h3 {
+            h3 {
                 color: $ups-yellow;
                 margin-left: 1em;
-                // float: left;
                 padding-top: 0.17em;
-              }
+            }
 
             ul li {
-                // display: inline-block;
                 margin-left: 1rem;
                 font-size: 0.8em;
 
@@ -217,12 +215,7 @@ $state-list-scroll-height-wide:  $map-height-wide - $map-control-height;
             cursor: default;
             font-size: 1.5em;
             font-weight: 400;
-            // margin-bottom: 1.5rem;
-            // margin-top: 3.3rem;
-            // padding-right: 4.7rem;
             position: absolute;
-            // right: 50%;
-            // text-align: right;
             left: 1rem;
             text-transform: uppercase;
             top: 2.6rem;
