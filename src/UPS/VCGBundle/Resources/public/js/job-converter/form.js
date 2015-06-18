@@ -93,7 +93,7 @@ $( document ).ready(function() {
         branch = $('#branch-of-service').val();
         jobCode = $('#job-code').val();
         if(hints.indexOf(jobCode) >= 0) {
-            $.get("/bundles/vcg/data/mosdata.csv", function(data){
+            $.get("/bundles/vcg/data/jobs-data.csv", function(data){
     //        console.log(data);
             allJobs = $.csv.toObjects(data);
                     
@@ -123,28 +123,28 @@ $( document ).ready(function() {
                                 $('.hidden-part[data-id="3"]').parent('.expander__wrapper').removeClass('hidden');
                             }
                             if (match['Warehouse Associate'] === 'Y') {
-                                $('.hidden-part[data-id="4"]').parent('.expander__wrapper').removeClass('hidden');
+                                $('.hidden-part[data-id="8"]').parent('.expander__wrapper').removeClass('hidden');
                             }
                             if (match['Automotive Mechanic'] === 'Y') {
                                 $('.hidden-part[data-id="5"]').parent('.expander__wrapper').removeClass('hidden');
                             }
-                            if (match['Maintenance/Facilities Mechanic'] === 'Y') {
+                            if (match['Facilities Mechanic'] === 'Y') {
                                 $('.hidden-part[data-id="6"]').parent('.expander__wrapper').removeClass('hidden');
                             }
                             if (match['Feeder Driver'] === 'Y') {
-                                $('.hidden-part[data-id="7"]').parent('.expander__wrapper').removeClass('hidden');
+                                $('.hidden-part[data-id="4"]').parent('.expander__wrapper').removeClass('hidden');
                             }
-                            if (match['Over the Road Driver'] === 'Y') {
-                                $('.hidden-part[data-id="8"]').parent('.expander__wrapper').removeClass('hidden');
-                            }
-                            if (match['Part Time Supervisor'] === 'Y') {
+                            if (match['UPS Freight Over-the-Road (OTR) Driver'] === 'Y') {
                                 $('.hidden-part[data-id="9"]').parent('.expander__wrapper').removeClass('hidden');
                             }
-                            if (match['Business Analyst'] === 'Y') {
+                            if (match['Part-Time Operations Supervisor'] === 'Y') {
                                 $('.hidden-part[data-id="10"]').parent('.expander__wrapper').removeClass('hidden');
                             }
-                            if (match['ISR'] === 'Y') {
+                            if (match['Business Analyst'] === 'Y') {
                                 $('.hidden-part[data-id="11"]').parent('.expander__wrapper').removeClass('hidden');
+                            }
+                            if (match['Sales Representative'] === 'Y') {
+                                $('.hidden-part[data-id="7"]').parent('.expander__wrapper').removeClass('hidden');
                             }          
                         } else {
                             $('#form-error').text('Sorry, this job does not match branch of service.');
@@ -166,6 +166,7 @@ $( document ).ready(function() {
                                 $('#military-job-title').text(match["MOS title"]);
                                 $('#military-job-description').text(match["MOS description"]);
                                 console.log(match['Package Handler']);
+
                                 if (match['Package Handler'] === 'Y') {
                                     $('.hidden-part[data-id="1"]').parent('.expander__wrapper').removeClass('hidden');
                                 }
@@ -176,28 +177,28 @@ $( document ).ready(function() {
                                     $('.hidden-part[data-id="3"]').parent('.expander__wrapper').removeClass('hidden');
                                 }
                                 if (match['Warehouse Associate'] === 'Y') {
-                                    $('.hidden-part[data-id="4"]').parent('.expander__wrapper').removeClass('hidden');
+                                    $('.hidden-part[data-id="8"]').parent('.expander__wrapper').removeClass('hidden');
                                 }
                                 if (match['Automotive Mechanic'] === 'Y') {
                                     $('.hidden-part[data-id="5"]').parent('.expander__wrapper').removeClass('hidden');
                                 }
-                                if (match['Maintenance and Facilities Mechanic'] === 'Y') {
+                                if (match['Facilities Mechanic'] === 'Y') {
                                     $('.hidden-part[data-id="6"]').parent('.expander__wrapper').removeClass('hidden');
                                 }
                                 if (match['Feeder Driver'] === 'Y') {
-                                    $('.hidden-part[data-id="7"]').parent('.expander__wrapper').removeClass('hidden');
+                                    $('.hidden-part[data-id="4"]').parent('.expander__wrapper').removeClass('hidden');
                                 }
-                                if (match['Over the Road Driver'] === 'Y') {
-                                    $('.hidden-part[data-id="8"]').parent('.expander__wrapper').removeClass('hidden');
-                                }
-                                if (match['Part Time Supervisor'] === 'Y') {
+                                if (match['UPS Freight Over-the-Road (OTR) Driver'] === 'Y') {
                                     $('.hidden-part[data-id="9"]').parent('.expander__wrapper').removeClass('hidden');
                                 }
-                                if (match['Business Analyst'] === 'Y') {
+                                if (match['Part-Time Operations Supervisor'] === 'Y') {
                                     $('.hidden-part[data-id="10"]').parent('.expander__wrapper').removeClass('hidden');
                                 }
-                                if (match['ISR'] === 'Y') {
+                                if (match['Business Analyst'] === 'Y') {
                                     $('.hidden-part[data-id="11"]').parent('.expander__wrapper').removeClass('hidden');
+                                }
+                                if (match['Sales Representative'] === 'Y') {
+                                    $('.hidden-part[data-id="7"]').parent('.expander__wrapper').removeClass('hidden');
                                 }
                             } else {
                                 $('#form-error').text('Job does not match branch of service.');
