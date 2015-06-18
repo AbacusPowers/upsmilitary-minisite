@@ -284,9 +284,11 @@
     color: $ups-yellow;
     margin-left: 2.4em;
     margin-top: -1.8em;
+    max-width: calc( 100% - 2.4em );
 
     .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & {
       margin-left: 3.5em;  
+      max-width: none;
     }
   }
 
