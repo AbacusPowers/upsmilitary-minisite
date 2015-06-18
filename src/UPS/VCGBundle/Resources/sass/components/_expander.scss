@@ -56,7 +56,7 @@
 //    top: 0px;
 //    font-size: 13px;
 
-    &:hover {
+    &:hover, &.hover {
         background: $white05;
     }
     .fa.fa-plus, .fa.fa-minus {

@@ -51,26 +51,52 @@ $( document ).ready(function() {
         input = $('#search-field').val();
         location.href= 'http://jobs-ups.com/search/' + input + '/ASCategory/-1/ASPostedDate/-1/ASCountry/-1/ASState/-1/ASCity/-1/ASLocation/-1/ASCompanyName/-1/ASCustom1/-1/ASCustom2/-1/ASCustom3/-1/ASCustom4/-1/ASCustom5/-1/ASIsRadius/false/ASCityStateZipcode/-1/ASDistance/-1/ASLatitude/-1/ASLongitude/-1/ASDistanceType/-1';
     });
-
-    $('.job-converter-job-search').submit(function(e){
+    $('.job-description-job-search').submit(function(e){
         e.preventDefault();
-        jobTitle = $(this).closest('.expander__wrapper').children('.expander__parent').text();
+        jobTitle = $(this).closest('.expander__wrapper').find('.expander__parent').text();
 
         if( $(this).children('.zip-code').val() ) {
             zipCode = $(this).children('.zip-code').val();
+            radiusOn = 'true';
+            radius = '50';
         } else {
             zipCode = '-1';
-        }
-
-        if( $(this).children('.radius').val() ) {
-            radiusOn = 'true';
-            radius = $(this).children('.radius').val();
-        } else {
             radiusOn = 'false';
             radius = '-1';
         }
+
+        forwardURL = 'http://jobs-ups.com/search/' + encodeURIComponent(jobTitle) + '/ASCategory/-1/ASPostedDate/-1/ASCountry/-1/ASState/-1/ASCity/-1/ASLocation/-1/ASCompanyName/-1/ASCustom1/-1/ASCustom2/-1/ASCustom3/-1/ASCustom4/-1/ASCustom5/-1/ASIsRadius/' + radiusOn + '/ASCityStateZipcode/' + encodeURIComponent(zipCode) +'/ASDistance/'+ encodeURIComponent(radius) +'/ASLatitude/-1/ASLongitude/-1/ASDistanceType/-1'
         window.open(
-            'http://jobs-ups.com/search/' + encodeURIComponent(jobTitle) + '/ASCategory/-1/ASPostedDate/-1/ASCountry/-1/ASState/-1/ASCity/-1/ASLocation/-1/ASCompanyName/-1/ASCustom1/-1/ASCustom2/-1/ASCustom3/-1/ASCustom4/-1/ASCustom5/-1/ASIsRadius/' + radiusOn + '/ASCityStateZipcode/' + encodeURIComponent(zipCode) +'/ASDistance/'+ encodeURIComponent(radius) +'/ASLatitude/-1/ASLongitude/-1/ASDistanceType/-1',
+            forwardURL,
+            '_blank' // <- This is what makes it open in a new window.
+        );
+        //location.href= 'http://jobs-ups.com/search/' + encodeURIComponent(jobTitle) + '/ASCategory/-1/ASPostedDate/-1/ASCountry/-1/ASState/-1/ASCity/-1/ASLocation/-1/ASCompanyName/-1/ASCustom1/-1/ASCustom2/-1/ASCustom3/-1/ASCustom4/-1/ASCustom5/-1/ASIsRadius/' + radiusOn + '/ASCityStateZipcode/' + encodeURIComponent(zipCode) +'/ASDistance/'+ encodeURIComponent(radius) +'/ASLatitude/-1/ASLongitude/-1/ASDistanceType/-1';
+    });
+
+    $('.job-converter-job-search').submit(function(e){
+        e.preventDefault();
+        jobTitle = $(this).closest('.expander__wrapper').find('.expander__parent').text();
+
+        if( $(this).children('.zip-code').val() ) {
+            zipCode = $(this).children('.zip-code').val();
+            radiusOn = 'true';
+            radius = '50';
+        } else {
+            zipCode = '-1';
+            radiusOn = 'false';
+            radius = '-1';
+        }
+
+        //if( $(this).children('.radius').val() ) {
+        //    radiusOn = 'true';
+        //    radius = $(this).children('.radius').val();
+        //} else {
+        //    radiusOn = 'false';
+        //    radius = '-1';
+        //}
+        forwardURL = 'http://jobs-ups.com/search/' + encodeURIComponent(jobTitle) + '/ASCategory/-1/ASPostedDate/-1/ASCountry/-1/ASState/-1/ASCity/-1/ASLocation/-1/ASCompanyName/-1/ASCustom1/-1/ASCustom2/-1/ASCustom3/-1/ASCustom4/-1/ASCustom5/-1/ASIsRadius/' + radiusOn + '/ASCityStateZipcode/' + encodeURIComponent(zipCode) +'/ASDistance/'+ encodeURIComponent(radius) +'/ASLatitude/-1/ASLongitude/-1/ASDistanceType/-1'
+        window.open(
+            forwardURL,
             '_blank' // <- This is what makes it open in a new window.
         );
         //location.href= 'http://jobs-ups.com/search/' + encodeURIComponent(jobTitle) + '/ASCategory/-1/ASPostedDate/-1/ASCountry/-1/ASState/-1/ASCity/-1/ASLocation/-1/ASCompanyName/-1/ASCustom1/-1/ASCustom2/-1/ASCustom3/-1/ASCustom4/-1/ASCustom5/-1/ASIsRadius/' + radiusOn + '/ASCityStateZipcode/' + encodeURIComponent(zipCode) +'/ASDistance/'+ encodeURIComponent(radius) +'/ASLatitude/-1/ASLongitude/-1/ASDistanceType/-1';
@@ -90,7 +116,7 @@ $( document ).ready(function() {
         branch = $('#branch-of-service').val();
         jobCode = $('#job-code').val();
         if(hints.indexOf(jobCode) >= 0) {
-            $.get("/bundles/vcg/data/mosdata.csv", function(data){
+            $.get("/bundles/vcg/data/jobs-data.csv", function(data){
     //        console.log(data);
             allJobs = $.csv.toObjects(data);
                     
@@ -120,28 +146,28 @@ $( document ).ready(function() {
                                 $('.hidden-part[data-id="3"]').parent('.expander__wrapper').removeClass('hidden');
                             }
                             if (match['Warehouse Associate'] === 'Y') {
-                                $('.hidden-part[data-id="4"]').parent('.expander__wrapper').removeClass('hidden');
+                                $('.hidden-part[data-id="8"]').parent('.expander__wrapper').removeClass('hidden');
                             }
                             if (match['Automotive Mechanic'] === 'Y') {
                                 $('.hidden-part[data-id="5"]').parent('.expander__wrapper').removeClass('hidden');
                             }
-                            if (match['Maintenance/Facilities Mechanic'] === 'Y') {
+                            if (match['Facilities Mechanic'] === 'Y') {
                                 $('.hidden-part[data-id="6"]').parent('.expander__wrapper').removeClass('hidden');
                             }
                             if (match['Feeder Driver'] === 'Y') {
-                                $('.hidden-part[data-id="7"]').parent('.expander__wrapper').removeClass('hidden');
+                                $('.hidden-part[data-id="4"]').parent('.expander__wrapper').removeClass('hidden');
                             }
-                            if (match['Over the Road Driver'] === 'Y') {
-                                $('.hidden-part[data-id="8"]').parent('.expander__wrapper').removeClass('hidden');
-                            }
-                            if (match['Part Time Supervisor'] === 'Y') {
+                            if (match['UPS Freight Over-the-Road (OTR) Driver'] === 'Y') {
                                 $('.hidden-part[data-id="9"]').parent('.expander__wrapper').removeClass('hidden');
                             }
-                            if (match['Business Analyst'] === 'Y') {
+                            if (match['Part-Time Operations Supervisor'] === 'Y') {
                                 $('.hidden-part[data-id="10"]').parent('.expander__wrapper').removeClass('hidden');
                             }
-                            if (match['ISR'] === 'Y') {
+                            if (match['Business Analyst'] === 'Y') {
                                 $('.hidden-part[data-id="11"]').parent('.expander__wrapper').removeClass('hidden');
+                            }
+                            if (match['Sales Representative'] === 'Y') {
+                                $('.hidden-part[data-id="7"]').parent('.expander__wrapper').removeClass('hidden');
                             }          
                         } else {
                             $('#form-error').text('Sorry, this job does not match branch of service.');
@@ -163,6 +189,7 @@ $( document ).ready(function() {
                                 $('#military-job-title').text(match["MOS title"]);
                                 $('#military-job-description').text(match["MOS description"]);
                                 console.log(match['Package Handler']);
+
                                 if (match['Package Handler'] === 'Y') {
                                     $('.hidden-part[data-id="1"]').parent('.expander__wrapper').removeClass('hidden');
                                 }
@@ -173,28 +200,28 @@ $( document ).ready(function() {
                                     $('.hidden-part[data-id="3"]').parent('.expander__wrapper').removeClass('hidden');
                                 }
                                 if (match['Warehouse Associate'] === 'Y') {
-                                    $('.hidden-part[data-id="4"]').parent('.expander__wrapper').removeClass('hidden');
+                                    $('.hidden-part[data-id="8"]').parent('.expander__wrapper').removeClass('hidden');
                                 }
                                 if (match['Automotive Mechanic'] === 'Y') {
                                     $('.hidden-part[data-id="5"]').parent('.expander__wrapper').removeClass('hidden');
                                 }
-                                if (match['Maintenance and Facilities Mechanic'] === 'Y') {
+                                if (match['Facilities Mechanic'] === 'Y') {
                                     $('.hidden-part[data-id="6"]').parent('.expander__wrapper').removeClass('hidden');
                                 }
                                 if (match['Feeder Driver'] === 'Y') {
-                                    $('.hidden-part[data-id="7"]').parent('.expander__wrapper').removeClass('hidden');
+                                    $('.hidden-part[data-id="4"]').parent('.expander__wrapper').removeClass('hidden');
                                 }
-                                if (match['Over the Road Driver'] === 'Y') {
-                                    $('.hidden-part[data-id="8"]').parent('.expander__wrapper').removeClass('hidden');
-                                }
-                                if (match['Part Time Supervisor'] === 'Y') {
+                                if (match['UPS Freight Over-the-Road (OTR) Driver'] === 'Y') {
                                     $('.hidden-part[data-id="9"]').parent('.expander__wrapper').removeClass('hidden');
                                 }
-                                if (match['Business Analyst'] === 'Y') {
+                                if (match['Part-Time Operations Supervisor'] === 'Y') {
                                     $('.hidden-part[data-id="10"]').parent('.expander__wrapper').removeClass('hidden');
                                 }
-                                if (match['ISR'] === 'Y') {
+                                if (match['Business Analyst'] === 'Y') {
                                     $('.hidden-part[data-id="11"]').parent('.expander__wrapper').removeClass('hidden');
+                                }
+                                if (match['Sales Representative'] === 'Y') {
+                                    $('.hidden-part[data-id="7"]').parent('.expander__wrapper').removeClass('hidden');
                                 }
                             } else {
                                 $('#form-error').text('Job does not match branch of service.');
