@@ -128,7 +128,7 @@
         init: function() {
             var container = this.container = $('.map-info-container');
             container.on('click', '.expand-button', on_expander_click_expand);
-            container.on('click', '.hide-button', on_expander_click_hide);
+            container.on('click', '.hide-button', on_expander_click_expand); //CHANGED THIS AS THIS FUNCTION IS NOW JUST A TOGGLE
             
             var template = this.template = $('.map-info--state', container).detach();
             

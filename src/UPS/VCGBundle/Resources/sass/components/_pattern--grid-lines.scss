@@ -529,6 +529,18 @@ $grid-item-hover-color: #222;
     }
 }
 
+/**PARTNERS PAGE**/
+.page--partners .grid-item-lines  {
+  .grid-item {
+    .breakpoint-large &, .breakpoint-wide & {
+
+      height: 24em;
+    }
+    .breakpoint-medium & {
+      height: 31em;
+    }
+  }
+}
 
 
 

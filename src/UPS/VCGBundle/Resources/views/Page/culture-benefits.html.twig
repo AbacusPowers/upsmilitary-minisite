@@ -14,7 +14,7 @@
 <div class="veteranGateway__liner">
     <div class="title-block">
         <h1>UPS Culture &amp; Benefits</h1>
-        <p>Lorem Ipsum Valentis</p>
+        <p>For Veterans & Service Members</p>
     </div>
     <div class="page page--culture">
         <div class="grid-items-lines">
@@ -38,9 +38,9 @@
 
             <a href="{{path('culture_benefits_article',{'slug':'ra-intro'}) }}" class="grid-item grid--ra-guidebook article-link">
                 {% include 'VCGBundle:Svgs:person.svg.twig' %}
-                <h1>Registered Apprentice Program</h1>
-                <p>Learn more.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquam aspernatur dolor dolore hic nulla qui quisquam. Labore neque, quia. Delectus doloremque eveniet magnam. Dolorem eaque id officiis optio quod.</p>
+                <h1>Registered Apprenticeship Program</h1>
+                <p>The UPS Registered Apprenticeship (RA) program is part of a national Department of Labor program. These full-time positions combine job-related technical instruction with on-the-job experience. The UPS RA program offers structured, practical training and a competitive paycheck. In addition to receiving UPS pay, U.S. veterans may be able to receive extra compensation in the form of a monthly stipend through GI Bill benefits. Learn how to apply in this step-by-step guide.</p>
+                <p>Currently, we have Registered Apprenticeship openings available for the position of driver service provider. We’ll be adding additional positions to the program once approved.</p>
                 {#<div class="button-group">#}
 					{#<a href="{{path('culture_benefits_article',{'slug':'ra-intro'}) }}" class="button black history-checkbox article-link"><span></span>Intro</a>#}
 					{#<a href="{{path('culture_benefits_article',{'slug':'ra-application'}) }}" class="button black history-checkbox article-link"><span></span>Application Process</a>#}
@@ -60,7 +60,7 @@
                 <p>UPS helps U.S. veterans who are students obtain their degree while also receiving a paycheck.</p>
             </a>
 
-            <a href="javascript:void(0)" class="grid-item">
+            <a href="{{ path('culture_benefits_article', {'slug': 'esgr'}) }}" class="grid-item">
               {% include 'VCGBundle:Svgs:esgr.svg.twig' %}
               <h1>ESGR</h1>
               <p>Know your rights and your responsibilities as a member of a National Guard or Reserve.</p>
@@ -69,13 +69,13 @@
             <a href="{{ path('culture_benefits_page', {'slug': 'faqs'}) }}" class="grid-item article-link">
               {% include 'VCGBundle:Svgs:chat.svg.twig' %}
               <h1>FAQs</h1>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa ipsa et quis modi dolorem.</p>
+              <p>Asking the right questions can simplify your search for a civilian career. Find answers about opportunities and benefits at UPS.</p>
             </a>
 
             <a href="{{ path('page', {'slug': 'partners'}) }}" class="grid-item">
               {% include 'VCGBundle:Svgs:handshake.svg.twig' %}
               <h1>Our Partners</h1>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa ipsa et quis modi dolorem.</p>
+              <p>UPS partners with other companies and the military branches to train current service members and transitioning U.S. veterans in corporate management and other business skills. Learn more about these programs here.</p>
             </a>
         </div>
         <div class="video-block">
@@ -88,15 +88,15 @@
             </div>
             <div class="scroll-container">
                 <div id="video-list">
-                    <a href="{{ path('culture_benefits_video',{'slug':'feeder-driver'}) }}" class="video-link video-link--style"><img class="video-thumb" src="{{ asset('bundles/vcg/images/video-thumbs/feeder-driver-1.png') }}" alt=""><i class="fa fa-play-circle"></i></a>
-                    <a href="{{ path('culture_benefits_video',{'slug':'frontline-supervisor'}) }}" class="video-link video-link--style"><img class="video-thumb" src="{{ asset('bundles/vcg/images/video-thumbs/frontline-supervisor-1.png') }}" alt=""><i class="fa fa-play-circle"></i></a>
-                    <a href="{{ path('culture_benefits_video',{'slug':'hr'}) }}" class="video-link video-link--style"><img class="video-thumb" src="{{ asset('bundles/vcg/images/video-thumbs/human-resources-1.png') }}" alt=""><i class="fa fa-play-circle"></i></a>
-                    <a href="{{ path('culture_benefits_video',{'slug':'mechanic'}) }}" class="video-link video-link--style"><img class="video-thumb" src="{{ asset('bundles/vcg/images/video-thumbs/mechanic-1.png') }}" alt=""><i class="fa fa-play-circle"></i></a>
-                    <a href="{{ path('culture_benefits_video',{'slug':'otr-driver'}) }}" class="video-link video-link--style"><img class="video-thumb" src="{{ asset('bundles/vcg/images/video-thumbs/otr-driver-1.png') }}" alt=""><i class="fa fa-play-circle"></i></a>
-                    <a href="{{ path('culture_benefits_video',{'slug':'package-driver'}) }}" class="video-link video-link--style"><img class="video-thumb" src="{{ asset('bundles/vcg/images/video-thumbs/package-car-driver-1.png') }}" alt=""><i class="fa fa-play-circle"></i></a>
-                    <a href="{{ path('culture_benefits_video',{'slug':'package-handler'}) }}" class="video-link video-link--style"><img class="video-thumb" src="{{ asset('bundles/vcg/images/video-thumbs/package-handler-1.png') }}" alt=""><i class="fa fa-play-circle"></i></a>
-                    <a href="{{ path('culture_benefits_video',{'slug':'sorter'}) }}" class="video-link video-link--style"><img class="video-thumb" src="{{ asset('bundles/vcg/images/video-thumbs/sorter-1.png') }}" alt=""><i class="fa fa-play-circle"></i></a>
-                    <a href="{{ path('culture_benefits_video',{'slug':'technician'}) }}" class="video-link video-link--style"><img class="video-thumb" src="{{ asset('bundles/vcg/images/video-thumbs/technician-1.png') }}" alt=""><i class="fa fa-play-circle"></i></a>
+                    <a href="{{ path('culture_benefits_video',{'slug':'feeder-driver'}) }}" class="video-link video-link--style"><img class="video-thumb" src="{{ asset('bundles/vcg/images/video-thumbs/feeder-driver-1.png') }}" alt=""><i class="fa fa-play-circle"></i><span class="video-title">Feeder Driver</span></a>
+                    <a href="{{ path('culture_benefits_video',{'slug':'frontline-supervisor'}) }}" class="video-link video-link--style"><img class="video-thumb" src="{{ asset('bundles/vcg/images/video-thumbs/frontline-supervisor-1.png') }}" alt=""><i class="fa fa-play-circle"></i><span class="video-title">Frontline Supervisor</span></a>
+                    <a href="{{ path('culture_benefits_video',{'slug':'hr'}) }}" class="video-link video-link--style"><img class="video-thumb" src="{{ asset('bundles/vcg/images/video-thumbs/human-resources-1.png') }}" alt=""><i class="fa fa-play-circle"></i><span class="video-title">Human Resources</span></a>
+                    <a href="{{ path('culture_benefits_video',{'slug':'mechanic'}) }}" class="video-link video-link--style"><img class="video-thumb" src="{{ asset('bundles/vcg/images/video-thumbs/mechanic-1.png') }}" alt=""><i class="fa fa-play-circle"></i><span class="video-title">Mechanic</span></a>
+                    <a href="{{ path('culture_benefits_video',{'slug':'otr-driver'}) }}" class="video-link video-link--style"><img class="video-thumb" src="{{ asset('bundles/vcg/images/video-thumbs/otr-driver-1.png') }}" alt=""><i class="fa fa-play-circle"></i><span class="video-title">Over The Road Driver</span></a>
+                    <a href="{{ path('culture_benefits_video',{'slug':'package-driver'}) }}" class="video-link video-link--style"><img class="video-thumb" src="{{ asset('bundles/vcg/images/video-thumbs/package-car-driver-1.png') }}" alt=""><i class="fa fa-play-circle"></i><span class="video-title">Package Delivery Driver</span></a>
+                    <a href="{{ path('culture_benefits_video',{'slug':'package-handler'}) }}" class="video-link video-link--style"><img class="video-thumb" src="{{ asset('bundles/vcg/images/video-thumbs/package-handler-1.png') }}" alt=""><i class="fa fa-play-circle"></i><span class="video-title">Package Handler</span></a>
+                    <a href="{{ path('culture_benefits_video',{'slug':'sorter'}) }}" class="video-link video-link--style"><img class="video-thumb" src="{{ asset('bundles/vcg/images/video-thumbs/sorter-1.png') }}" alt=""><i class="fa fa-play-circle"></i><span class="video-title">Sorter</span></a>
+                    <a href="{{ path('culture_benefits_video',{'slug':'technician'}) }}" class="video-link video-link--style"><img class="video-thumb" src="{{ asset('bundles/vcg/images/video-thumbs/technician-1.png') }}" alt=""><i class="fa fa-play-circle"></i><span class="video-title">Technician</span></a>
                 </div>
             </div>
         </div>

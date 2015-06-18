@@ -36,7 +36,7 @@ $('document').ready(function(){
     $('a.external').click(function(e){
         e.preventDefault();
         var href = $(this).attr('href');
-        showLeaveSiteModal();
+        showLeaveSiteModal(href);
         //loadAjaxFunctions();
         $('#offsite-modal #forward-to').attr('href',href);
         if ($('#modal').is(':visible')) {
@@ -306,6 +306,7 @@ function getLeaveSiteModalContent(url, addEntry, originType) {
                     showLeaveSiteModal();
                     $('#offsite-modal #forward-to').attr('href',href);
 
+
                     if ($('#modal').is(':visible')) {
                         $('#modal').hide();
                         $('body').addClass('hold-modal');
@@ -349,9 +350,10 @@ function showValuesModal(){
     $('body').addClass('values-view');
     $('#modal-wrapper').addClass('values');
 }
-function showLeaveSiteModal(){
+function showLeaveSiteModal(href){
     $('#overlay').show();
     $('#offsite-modal').fadeIn();
+    $('#destination').text(href);
     $('body').addClass('leave-site-view');
     $('#modal-wrapper').addClass('leave-site');
     $('#offsite-modal','.leave-site-view').on('click','#close-offsite-modal', function(e){
