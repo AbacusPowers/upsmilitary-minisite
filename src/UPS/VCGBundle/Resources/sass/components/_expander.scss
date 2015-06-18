@@ -213,8 +213,12 @@
       .expander__child .job-wrapper {
         position: relative;
 
-        &:last-child p, &:last-child a {
+        &:last-child p {
          border-bottom: 1px dotted rgba( $ups-yellow, 0.4 );
+        }
+
+        &:last-child a {
+          border-bottom: none;
         }
       }
     }
