@@ -1,20 +1,47 @@
 .page--transition-guide {
 
-    .grid--transition-guide-intro {
-        font-weight: 800;
-        font-size: 1em;
 
-        .button-group {
-            position: relative;
-            a {
-                display: block;
-            }
+    ///////////////////////TRANSITION GUIDE GRIDLINE CONTROL////////////////////////
+
+    .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & {
+        .grid-item:nth-child(1) {
+            border-bottom: none;
         }
-    }      
+
+        .grid-item:nth-child(2) {
+
+        }
+
+        .grid-item:nth-child(3) {
+
+        }
+        
+        .grid-item:nth-child(4) {
+        }
+
+        .grid-item:nth-child(5) {
+        }
+
+        .grid-item:nth-child(6) {
+        }
+        
+        .grid-item:nth-child(7) {
+        }
+        
+        .grid-item:nth-child(8) {
+        }
+
+        .grid-item:nth-child(9) {
+        }
+    }
+
+    ///////////////////////TRANSITION GUIDE CONTENT CONTROL////////////////////////
+
 
     .grid-item:nth-child(1) {
         height: auto;
-        border-bottom: none;
+        font-weight: 800;
+        font-size: 1em;
 
         .breakpoint-small & {
             border-bottom: 1px solid $ups-yellow;
@@ -23,6 +50,11 @@
         .button-group {
             margin-top: 2em;
             margin-bottom: 0;
+            position: relative;
+
+            a {
+                display: block;
+            }
 
              &:last-child:before {
                 

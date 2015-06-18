@@ -5,7 +5,7 @@ $grid-item-hover-color: #222;
     $dark-gray: #333 !default;
     $light-gray: #DDD !default;
 
-    $medium-screen: em(640) !default;
+    // $medium-screen: em(640) !default;
 
     $base-font-color: $dark-gray !default;
     $grid-item-background: none;
@@ -27,14 +27,14 @@ $grid-item-hover-color: #222;
     }
       
     .grid-item {
-        @include transition (all 0.15s ease-out);
         // background: $grid-item-background;
+        @include transition (all 0.15s ease-out);
         border-bottom: $grid-item-border;
         border-right: none;
         float: left;
-        position: relative;
         outline: none;
         padding: 1.5em 0 1.5em 0 ;
+        position: relative;
         text-decoration: none;
         width: 100%;
 
@@ -58,24 +58,15 @@ $grid-item-hover-color: #222;
         }
 
         &:after {
+            //THESE MAKE THE COOL COVERED TIPS OF THE VERTICAL GRID LINES//
             @include border-mask;
-            width: 1px;
             bottom: 0;
-            right: -1px;
-            // overflow: visible;
-            z-index: 1;
-            clip: auto;
-            // background: $black;
         }
 
         &:before {
+            //THESE MAKE THE COOL COVERED TIPS OF THE VERTICAL GRID LINES//
             @include border-mask;
-            width: 1px;
             top: 0;
-            right: -1px;
-            z-index: 1;
-            clip: auto;
-            // background: $black;
         }
     }
 
@@ -83,11 +74,12 @@ $grid-item-hover-color: #222;
         .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & {
             @include grid-item-columns($grid-item-big-columns);
         }
-        p {
-            @include media($medium-screen) {
-                max-width: 60%;
-            }  
-        }
+
+        // p {
+        //     @include media($medium-screen) {
+        //         max-width: 60%;
+        //     }  
+        // }
     }
     
     a.grid-item:hover {
@@ -98,6 +90,7 @@ $grid-item-hover-color: #222;
 // Custom Grid Styles
 
     .grid-icon {
+    ///THE TOP LEFT MAIN ICON IN EACH GRID CELL///
       @include site-icon;
     }
 
@@ -144,20 +137,20 @@ $grid-item-hover-color: #222;
     }
     
     .button {
+        // @include position( absolute, null null 0 null);
+        // text-transform: capitalize;
         @include transition (all 0.15s ease-out);
         background: $ups-yellow;
-        width: 100%;
-        min-height: 2.5em;
-        // @include position( absolute, null null 0 null);
-        text-align: left;
-        // text-transform: capitalize;
-        padding-top: 0.5em;
-        padding-bottom: 0.5em;
-        padding-right: 0.8em;
-        margin-top: 1px;
-        padding-left: 2em;
         color: $grey;
         display: inherit;
+        margin-top: 1px;
+        min-height: 2.5em;
+        padding-bottom: 0.5em;
+        padding-left: 2em;
+        padding-right: 0.8em;
+        padding-top: 0.5em;
+        text-align: left;
+        width: 100%;
 
         &:hover {
             color: $black;
@@ -226,8 +219,15 @@ $grid-item-hover-color: #222;
         }
     }
 
+
+
+//////////////////BASE GRID LINE CONTROL/////////////////////////////////
+
     .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & {    
         .grid-item:nth-child(1) {
+        }
+
+        .grid-item:nth-child(2) {
         }
 
         .grid-item:nth-child(3) {
@@ -237,305 +237,21 @@ $grid-item-hover-color: #222;
         .grid-item:nth-child(4) {
         }
 
-        .grid-item:nth-child(4) {
+        .grid-item:nth-child(1) {
+        }
+
+        .grid-item:nth-child(1) {
         }
 
         .grid-item:last-child {
+            border-right: none;
+            border-bottom: none;
         }
        
           
     }
 }
 
-
-
-
-
-///////////////////Home Page Grid Styles. IDs should control content appearance.///////////////
-.grid-item#grid-item--transition-guide {
-    height: auto;
-    padding-top: 0;
-    background: $grey--dark;
-    border-bottom: none;
-    .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & {
-      min-height: 1000px;
-    }
-
-    &:before, &:after {
-        content: none;
-    }
-
-    & > a {
-        min-height: $grid-item-height;
-    }
-    
-    & > a:hover {
-        background: #222;
-    }
-
-    .button-group {
-        position: relative;
-        margin-top: 1em;     
-        margin-bottom: 0;      
-    }
-    
-    .app-download-wrapper {
-        margin-top: 1em;
-        position: relative;
-        padding-bottom:1em;
-
-        h2 {
-            margin-left: 2rem;
-            padding-right: 2em;
-        }
-    }
-
-    img.app-hand {
-        border: none;
-        border-radius: 0;
-        padding: 0;
-        height: auto;
-        width: auto;
-        bottom: 0;
-        display: block;
-        clear: left;
-        float: none;
-        margin-top: 1.5em;
-    }
-
-    img.badge--apple, img.badge--google {
-        border: none;
-        border-radius: 0;
-        padding: 0;
-        height: auto;
-        width: auto;
-        position: absolute;
-        display: block;
-        clear: left;
-        float: none;
-        right: 4em;
-    }
-
-    img.badge--apple {
-        top: 6em;
-        width: 8.5em;
-    }
-
-    img.badge--google {
-        top: 10em;
-        width: 8.5em;
-    }
-
-}
-
-.grid-item#grid-item--career-explorer {
-
-    ul {
-        padding-top: 1em;
-        margin-left: 1em;
-    }
-
-    ul li {
-        list-style: disc;
-        line-height: 1.5em;
-    }
-    
-}
-
-.grid-item#grid-item--culture {
-    // background: red;
-}
-
-.grid-item#grid-item--events {
-    padding-bottom: 2.5em;
-    height: auto;
-
-    .all-events-wrapper {
-        height: 2em;
-        padding-left: 0.5em;
-    }
-
-    .event__wrapper {
-        padding: 0;
-        max-width: 14em;
-        float: left;
-        margin-bottom: 1em;
-
-        h2, p {
-            white-space: normal;
-            margin-left: 1.5rem;
-            margin-top: 0;
-        }
-
-        .breakpoint-small & {
-            width: 100%;
-        }
-    }
-
-    .scroll-indicator--h {
-        right: 1.5em;
-        padding-top: 0em;
-        margin-top: -0.9em;
-    }
-
-    .scroll-container {
-        height: auto;
-        padding-top: 1.4em;
-        padding-bottom: 0em;
-        margin-top: -0.9em;
-    }
-
-    .button.all-events-link {
-        padding-top: 0.5em;
-        text-transform: uppercase;
-        text-align: center;
-        height: 2em;
-        position: absolute;
-        bottom: 0;        
-        // background: none;
-        color: $ups-yellow;    
-    }
-
-    &:hover .button.all-events-link {
-        background: $ups-yellow;
-        color: black;
-    }
-}
-
-
-.grid-item#grid-item--videos, .video-block {
-    padding-bottom: 0;
-    overflow: hidden;
-    height: auto;
-
-    .breakpoint-small & {
-        height: auto;
-        // padding-bottom: 4em;
-    }
-
-    h2 {
-        margin-top: 1.5em;
-    }
-
-    a {
-        position: relative;
-        float: left;
-        margin-right: 1px;
-    }
-
-    .scroll-indicator--h {
-        right: 1.5em;
-        padding-top: 0em;
-        margin-top: -0.6em;
-    }
-
-    .scroll-container {
-        padding-top: 1.4em;
-        margin-top: -0.9em;
-        height: calc( 200px + 1.4em ); /*specify/modify as need in parent element*/
-    }    
-}
-
-.grid-item#grid-item--social {
-     height: auto;
-
-    a {
-        display: inline-block;
-        // @include transition (all 0.15s ease-out);
-
-    }
-
-    a:hover i.fa {
-        color: $ups-grey-1;
-    }
-
-    i.fa {
-        @include transition (all 0.15s ease-out);
-        font-size: 3em;
-        color: $ups-yellow;
-        margin-top: 1rem;
-        margin-right: 1rem;
-    }  
-
-    .social-wrapper {
-        padding-left:2em;
-
-        &:before {
-            @include pseudo-block(100%);
-            right: 100%;
-            height: 140%;
-            background: $dark-gray;
-            z-index: -1;
-            top: -1em;
-        }
-
-        &:after {
-            @include pseudo-block(100%);
-            right: 100%;
-            width: 1px;
-            background: $ups-yellow;
-            z-index: -1;
-            top: -1px;
-        }
-    }
-}
-
-.grid-item#grid-item--search {
-
-    height: auto;
-    padding-bottom: none;
-
-    form {
-        margin-top: 1.2em;
-    }
-
-    input[type="text"] {
-        background: $ups-grey-1;
-        border-radius: 0px;
-        border: 0;
-        margin: 0em 1.5em 1.5em;
-        margin-right: 0;
-        width: calc( 100% - 6em );
-        height: 2.5em;
-        display: inline-block;
-        float: left;
-        margin-left: 1.75rem;
-        // top: 7.5em;
-        // position: absolute;
-    }
-
-    .button {
-        @include size(2.5em);
-        @include transition (all 0.15s ease-out);
-
-        padding: 0.3em 0 0 0.5em;
-        right: 1.5em;
-        margin-top: 0;
-        border-radius: 0;
-        text-transform: uppercase;
-        display: inline-block;
-        float: left;
-
-
-        &:hover {
-            background: $ups-brown-1;
-            color: $ups-yellow;
-        }
-    }
-}
-
-/**PARTNERS PAGE**/
-.page--partners .grid-item-lines  {
-  .grid-item {
-    .breakpoint-large &, .breakpoint-wide & {
-
-      height: 24em;
-    }
-    .breakpoint-medium & {
-      height: 31em;
-    }
-  }
-}
 
 
 

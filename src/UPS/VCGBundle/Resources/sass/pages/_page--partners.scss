@@ -1,4 +1,7 @@
 
+
+////////////////PARTNERS PAGE GRID LINE CONTROL/////////////////////////
+
 .page.page--partners {
 
     .grid-items-lines {
@@ -10,11 +13,21 @@
         .grid-item:nth-child(6) {
             border-right: none;
         }
-
-        .grid-item {
-            .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & {
-                height: 19rem;
-            }
-        }
     }
 }
+
+
+
+/////////////////PARTNERS PAGE CONTENT STYLES/////////////////////
+.page--partners .grid-item-lines {
+  .grid-item {
+    .breakpoint-large &, .breakpoint-wide & {
+      height: 24em;
+    }
+    .breakpoint-medium & {
+      height: 31em;
+    }
+  }
+}
+
+

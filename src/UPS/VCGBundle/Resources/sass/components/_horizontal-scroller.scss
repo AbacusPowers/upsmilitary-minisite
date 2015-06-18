@@ -3,76 +3,61 @@
 // Don't forget to use overflow hidden on the parent container
 
 .scroll-container {
-    height: auto; /*change in parent if needed*/
-    overflow-x: scroll;
-    overflow-y: hidden;
-    white-space: nowrap;
-    -webkit-overflow-scrolling: touch; /*gotta have this for idevice scrolling*/
-    padding-top: 1.4em; /*gives room for custom scroll indicator*/
+  height: auto; /*change in parent if needed*/
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch; /*gotta have this for idevice scrolling*/
+  padding-top: 1.4em; /*gives room for custom scroll indicator*/
+}
+
+.scroll-container {
+  padding-top: 1.4em;
+  margin-top: -0.9em;
+  height: calc( 200px + 1.4em ); /*specify/modify as need in parent element*/
 }
 
 #video-list {
-    width: 10000px;
+  width: 10000px;
 
-    a {
-        position: relative;
-        float: left;
-        margin-right: 1px;
-    }
+  a {
+      position: relative;
+      float: left;
+      margin-right: 1px;
+  }
 
-    a.video-link:before {
-        @include pseudo-block(100%);
-        background: $black40;
-        @include transition (all 0.15s ease-out);
-    }
+  a.video-link:before {
+    @include pseudo-block(100%);
+    @include transition (all 0.15s ease-out);
+    background: $black40;
+  }
 
-    a.video-link:hover:before {
-        background: none;
-        @include transition (all 0.15s ease-out);
-    }
+  a.video-link:hover:before {
+    @include transition (all 0.15s ease-out);
+    background: none;
+  }
 
-//    a.video-link:hover:after {
-//        @include pseudo-block(100%);
-//        background: $black60;
-//        bottom: 0;
-//        height: 20%;
-//        content: 'Video Title';
-//        padding-top: 0.4em;
-//        padding-left: 0.5em;
-//        overflow: hidden;
-//        color: $ups-yellow;
-//        font-size: 0.8em;
-//        font-weight: 800;
-//    }
-    span.video-title {
-      display: none;
-    }
-    a.video-link:hover > span.video-title {
-//      @include pseudo-block(100%);
-      background: $black60;
-      position: absolute;
-      width: 100%;
-      bottom: 0;
-      height: 20%;
-//      content: 'Video Title';
-      display: block;
-      padding-top: 0.4em;
-      padding-left: 0.5em;
-      overflow: hidden;
-      color: $ups-yellow;
-      font-size: 0.8em;
-      font-weight: 800;
-    }
+  span.video-title {
+    display: none;
+  }
+
+  a.video-link:hover > span.video-title {
+    background: $black60;
+    bottom: 0;
+    color: $ups-yellow;
+    display: block;
+    font-size: 0.8em;
+    font-weight: 800;
+    height: 20%;
+    overflow: hidden;
+    padding-left: 0.5em;
+    padding-top: 0.4em;
+    position: absolute;
+    width: 100%;
+  }
 }
 
 
-
-    .scroll-container {
-        padding-top: 1.4em;
-        margin-top: -0.9em;
-        height: calc( 200px + 1.4em ); /*specify/modify as need in parent element*/
-
-    }
 
 img.video-thumb {
     width: 200px;
@@ -88,6 +73,7 @@ img.video-thumb {
     top: 0.5rem;
 }  
 
+
 // SCROLL INDICATOR STUFF
 .scroll-indicator--h {
     right: 1.5em;
@@ -95,10 +81,14 @@ img.video-thumb {
     margin-top: -0.6em;
 }
 
-
-
 .scroll-container {
-padding-top: 1.4em;
-margin-top: -0.9em;
-height: calc( 200px + 1.4em ); /*specify/modify as need in parent element*/
+  padding-top: 1.4em;
+  margin-top: -0.9em;
+  height: calc( 200px + 1.4em ); /*specify/modify as need in parent element*/
 }   
+
+
+
+
+
+
