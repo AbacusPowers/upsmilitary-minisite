@@ -15,6 +15,7 @@ class VideoController extends Controller
      * @Route("/culture-benefits/video/{slug}.html", name="culture_benefits_video")
      * @Route("/transition-guide/video/{slug}.html", name="transition_guide_video")
      * @Route("/culture-benefits/faq/video/{slug}.html", name="faq_video")
+     * @Route("/culture-benefits/jobs/video/{slug}.html", name="jobs_video")
      */
     public function indexAction($slug)
     {
@@ -28,6 +29,9 @@ class VideoController extends Controller
             if($routeName === 'homepage_video') {
                 $videos = $yaml->parse(file_get_contents( dirname(dirname(__FILE__)). "/Resources/data/videos/career-videos.yml"));
                 $parent = '/';
+            } elseif ($routeName === 'jobs_video') {
+                $videos = $yaml->parse(file_get_contents( dirname(dirname(__FILE__)). "/Resources/data/videos/career-videos.yml"));
+                $parent = 'jobs';
             } elseif ($routeName === 'culture_benefits_video') {
                 $videos = $yaml->parse(file_get_contents( dirname(dirname(__FILE__)). "/Resources/data/videos/career-videos.yml"));
                 $parent = 'culture-benefits';
