@@ -95,34 +95,7 @@
     }
 }
 
-.article {
 
-    & .component--expander .expander__wrapper:before {
-        display: none;
-    }
-
-    .component--expander .expander__wrapper {
-
-        padding-left: 0;
-
-        i.fa-circle {
-            padding-top: 1em;
-            margin-right: 1.4em;
-            color: $ups-yellow;
-            float: left;
-            font-size: 1.1em;
-        }
-
-        h2 {
-            padding-top: 0.75em;
-            text-transform: capitalize;
-        }
-    }
-
-    .component--expander .expander__child p {
-        margin-left: 0;
-    }
-}
 
 
 .navCard.eventsCalendar {

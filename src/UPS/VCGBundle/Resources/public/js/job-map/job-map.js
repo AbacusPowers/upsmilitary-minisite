@@ -203,7 +203,7 @@
                     + location.zip
                     + '/ASDistance/50/ASLatitude/-1/ASLongitude/-1/ASDistanceType/-1'
                 ;
-                jobsContainer.append($('<p><a href="' + href + '">' + job + '</a></p>'));
+                jobsContainer.append($('<div class="job-wrapper"><p>' + job + '</p>' + '<a class="search-button" target="_blank" href="' + href + '"><div>search</div></a></div>'));
             }
             return result;
         },

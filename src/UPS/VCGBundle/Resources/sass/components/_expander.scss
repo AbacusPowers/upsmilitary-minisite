@@ -6,7 +6,7 @@
     line-height: 1.6;
     padding: 0;
     position: relative;
-    min-height: 75px;
+    // min-height: 75px;
     &:before {
       @include pseudo-block($vertical-thread-width);
       left: 0;
@@ -41,13 +41,13 @@
 
   a.button{
 //    height: 78px;
-    min-height: 75px;
+    // min-height: 75px;
     width: 100%;
     color: $grey70;
     cursor: pointer;
     display: block;
     margin-right: 0;
-    padding: 1rem 0 0 2rem;
+    padding: 1rem 0 1rem 2rem;
     position: relative;
 //    padding: 0.7rem 0 0 27px;
 
@@ -81,16 +81,14 @@
     margin-left: 1rem;
     margin-right: 80px;
     font-weight: 700;
-    padding-bottom: 0px;
+    padding-bottom: 0;
 
     p{
       line-height: 1.9;
     }
   }
   
-  h3 {
-    margin-left: 1rem;
-  }
+
 
   .expander__child {
     position: relative;
@@ -203,18 +201,86 @@
     margin-left: -2em;
     background: $white10;
     border-bottom: none;
+
     .button {
-      padding-left: 5rem;
+      padding-left: 3.7rem;
     }
+
     .hidden-part {
-      padding-left: 5rem;
+      padding-left: 0rem;
+      border-top: 1px dotted $black;
+
+      .expander__child .job-wrapper {
+        position: relative;
+
+        &:last-child p, &:last-child a {
+         border-bottom: 1px dotted rgba( $ups-yellow, 0.4 );
+        }
+      }
     }
 
     h2 {
       font-weight: 400;
+      padding-bottom: 0;
+    }
+
+     h3 {
+      margin-left: 1rem;
+      // padding-bottom: 1rem;
+    }
+
+    a.button {
+      border-top: 1px solid $black;
+
+    }
+
+
+
+    p {
+      @include transition (all 0.15s ease-out);
+      margin: 0 0 0 $vertical-thread-width;
+      padding: 1em 0 1em 4.3rem;
+      border-bottom: 1px dotted $black;
+    }
+    
+
+    p + a.search-button {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      padding-top: 0;
+      display: block;
+      background: $white05;
+      color: $white60;
+      height: 100%;
+      @include transition (all 0.15s ease-out);
+      width: 6em;
+      text-align: center;
+      border-bottom: 1px solid $black;
+
+      & div {
+        font-size: 0.8em;
+        text-transform: uppercase;
+        position: relative;
+        top: 50%;
+        transform: translateY(-40%);
+      }
+
+      &:hover {
+        background: $ups-yellow;
+        color: $black;
+      }
+    }
+  
+    p:hover {
+      background: $white10;
+
+      & + a {
+        background: $ups-yellow;
+        color: $black;
+      }
     }
   }
-
 }
 
 
@@ -226,18 +292,14 @@
   .expander__wrapper {
     min-height: 0;
     margin-top: 0;
-    padding-top: 0;
 
     ul li {
       display: inline-block;
-      h2 {
-        line-height: 3em;
-      }
     }
 
-    // & > span {
-    //     background: red;
-    // }
+    &:last-child {
+      margin-bottom: 30em;
+    }
   }
 
   h2 {
@@ -247,7 +309,7 @@
   .button {
 //    height: 5em;
     min-height: 35px;
-    padding-top: 0;
+    padding-top: 1rem;
     i.fa {
 //      padding: 0 1em 0 0;
 //      line-height: 2.5em;
@@ -260,5 +322,48 @@
 
   .component--expander {
     border-top: none;
+    
+    .expander__wrapper {
+      margin-bottom: 0;
+
+      & .hidden-part {
+            // border-bottom: 1px solid $black;
+
+      }
+    }
+
   }
+}
+
+
+/////Expanders in Articles/////////////////
+
+.article {
+
+    & .component--expander .expander__wrapper:before {
+        display: none;
+    }
+
+    .component--expander .expander__wrapper {
+
+        padding-left: 0;
+
+        i.fa-circle {
+            padding-top: 1em;
+            margin-right: 1.4em;
+            color: $ups-yellow;
+            float: left;
+            font-size: 1.1em;
+        }
+
+        h2 {
+            // padding-top: 0.75em;
+            // text-transform: capitalize;
+        }
+
+    }
+
+    .component--expander .expander__child p {
+        margin-left: 0;
+    }
 }
