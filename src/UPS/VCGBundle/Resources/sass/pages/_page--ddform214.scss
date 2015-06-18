@@ -1,10 +1,17 @@
 .page.page--ddform214 {
     // margin-bottom: 5em;
 
+    #side--b {
+        p {
+            font-size: 1em;
+            line-height: 1.6;
+        }
+    }
+
     .expander__wrapper:before{
 
-        .breakpoint-small &, .breakpoint-medium & {
-            content: none;
+        .breakpoint-small & {
+            // content: none;
         }
     }
     
@@ -49,7 +56,7 @@
             }
         } 
 
-        .breakpoint-small &, .breakpoint-medium & {
+        .breakpoint-small & {
             p{
                 margin: 3em;
             }
@@ -61,10 +68,10 @@
     section.dd-form214 {
         display: none;
         
-        .breakpoint-large &, .breakpoint-wide & {
+        .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & {
             display: block;
             /*@include size( 50% auto);*/
-            @include position(static, 14em auto);
+            // @include position(static, 14em auto);
         }
 
         svg {
@@ -72,9 +79,10 @@
             display: block;
             margin-left: auto;
             margin-right: auto;
-            margin-top: 2em;
+            // margin-top: 2em;
             /*padding: 1em;*/
             background: white;
+            margin-bottom: 2rem;
         }
     }
 
@@ -84,6 +92,7 @@
 
     h3 {
         color: $ups-yellow;
+        margin-left: 1rem;
     }
 
 
@@ -98,6 +107,4 @@
         }
         
     }
-    
-
 }

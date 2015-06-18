@@ -4,9 +4,9 @@ $header-height--large: 28rem;
 $header-height--wide: 30rem;
 
 $header-height-short--small: 10rem;
-$header-height-short--medium: 18rem;
-$header-height-short--large: 20rem;
-$header-height-short--wide: 22rem;
+$header-height-short--medium: 25rem;
+$header-height-short--large: 25rem;
+$header-height-short--wide: 27rem;
 
 $carousel-height--mobile: 16rem;
 
@@ -17,9 +17,10 @@ header {
     position: relative;
 
     @include header-heights;
+
     &.page--home {
        @include home-header-heights;
-     }
+    }
 
     img.logo {
         @include position(absolute, 1em);
@@ -46,14 +47,6 @@ header {
     .header-static-bg-img {
         position: absolute;
         width: 100%;
-//      .breakpoint-small & {
-//        position: relative;
-//        width: auto;
-//        min-width: 100%;
-//        max-width: none;
-//        min-height: 100%;
-//        margin-left: -50%;
-//      }
     }
 
     .header--liner { /*slider prototype--must be made full width*/
@@ -95,37 +88,9 @@ header {
             }       
         }
     }
-
-    // $drop-down-height: 3em;
-    // $drop-down-vertical-padding: 0.8em;
-    // nav.drop-down {
-    //     @include position( absolute, null 0 0 null );
-    //     @include size( auto $drop-down-height );
-    //     background: $grey70;
-    //     color: $white;
-    //     width: 100%;
-
-    //     .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & {
-    //         width: 400px;
-    //     }
-
-    //     p {
-    //         @include size( auto $drop-down-height );
-    //         padding: $drop-down-vertical-padding 0 0 1em;
-    //     }
-
-    //     i {
-    //         @include size( $drop-down-height );
-    //         float: right;
-    //         background: $grey80;
-    //         margin-top: -$drop-down-height;
-    //         padding: 0.95em;
-    //     }
-    // }
     
     /*Dev Indicator Notes*/
     .breakpoint-small & {
-        // background: rgba( red, 0.3 );
         &:before {
             content:'small breakpoint';
             color: $white20;

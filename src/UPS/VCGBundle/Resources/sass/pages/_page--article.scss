@@ -55,12 +55,14 @@
       display: block;
       float: left;
       width: 49%;
-      margin-top: .5em;
+      // margin-top: .5em;
+      border-top: 1px solid $ups-grey-1;
       &:nth-child(2n+1) {
         clear: both;
       }
       &:nth-child(odd) {
-        margin-right: 1%;
+        // margin-right: 1%;
+        border-right: 1px solid $ups-grey-1;
       }
 
 
