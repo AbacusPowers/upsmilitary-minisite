@@ -19,13 +19,18 @@
 
 
 /////////////////PARTNERS PAGE CONTENT STYLES/////////////////////
-.page--partners .grid-item-lines {
+.page.page--partners .grid-items-lines {
   .grid-item {
-    .breakpoint-large &, .breakpoint-wide & {
+    .breakpoint-wide & {
+      height: 19em;
+    }
+
+    .breakpoint-large & {
       height: 24em;
     }
+    
     .breakpoint-medium & {
-      height: 31em;
+      height: 32em;
     }
   }
 }
