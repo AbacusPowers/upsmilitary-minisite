@@ -24,7 +24,7 @@
                     <div class="slider-text-wrapper">
                         <a href="{{ path('page',{'slug':'jobs'}) }}"><h1 class="slider-text">Discover UPS' long history of U.S. veteran support.</h1></a>
                     </div>
-                    <img src="{{ asset('bundles/vcg/images/slider/3.jpg') }}">
+                    <img src="{{ asset('bundles/vcg/images/slider/ups-history-1.jpg') }}">
             </div>
             <input class="carousel-open" type="radio" id="carousel-4" name="carousel" aria-hidden="true" hidden="">
             <div class="carousel-item">
@@ -104,45 +104,51 @@
             <label for="carousel-2" class="carousel-control prev control-3"><i class="fa fa-angle-left"></i></label>
             <label for="carousel-1" class="carousel-control next control-11"><i class="fa fa-angle-right"></i></label>
             <label for="carousel-1" class="carousel-control prev control-2"><i class="fa fa-angle-left"></i></label>
-
-            <ol class="carousel-indicators">
-                <li>
-                    <label for="carousel-1" class="carousel-bullet"><i class="fa fa-circle"></i></label>
-                </li>
-                <li>
-                    <label for="carousel-2" class="carousel-bullet"><i class="fa fa-circle"></i></label>
-                </li>
-                <li>
-                    <label for="carousel-3" class="carousel-bullet"><i class="fa fa-circle"></i></label>
-                </li>
-                <li>
-                    <label for="carousel-4" class="carousel-bullet"><i class="fa fa-circle"></i></label>
-                </li>
-                <li>
-                    <label for="carousel-5" class="carousel-bullet"><i class="fa fa-circle"></i></label>
-                </li>
-                <li>
-                    <label for="carousel-6" class="carousel-bullet"><i class="fa fa-circle"></i></label>
-                </li>
-                <li>
-                    <label for="carousel-7" class="carousel-bullet"><i class="fa fa-circle"></i></label>
-                </li>
-                <li>
-                    <label for="carousel-8" class="carousel-bullet"><i class="fa fa-circle"></i></label>
-                </li>
-                <li>
-                    <label for="carousel-9" class="carousel-bullet"><i class="fa fa-circle"></i></label>
-                </li>
-                <li>
-                    <label for="carousel-10" class="carousel-bullet"><i class="fa fa-circle"></i></label>
-                </li>
-                <li>
-                    <label for="carousel-11" class="carousel-bullet"><i class="fa fa-circle"></i></label>
-                </li>
-            </ol>
+            
+            <div class="carousel__ui-wrapper"> 
+                <ol class="carousel-indicators">
+                    <li>
+                        <label for="carousel-1" class="carousel-bullet"><i class="fa fa-circle"></i></label>
+                    </li>
+                    <li>
+                        <label for="carousel-2" class="carousel-bullet"><i class="fa fa-circle"></i></label>
+                    </li>
+                    <li>
+                        <label for="carousel-3" class="carousel-bullet"><i class="fa fa-circle"></i></label>
+                    </li>
+                    <li>
+                        <label for="carousel-4" class="carousel-bullet"><i class="fa fa-circle"></i></label>
+                    </li>
+                    <li>
+                        <label for="carousel-5" class="carousel-bullet"><i class="fa fa-circle"></i></label>
+                    </li>
+                    <li>
+                        <label for="carousel-6" class="carousel-bullet"><i class="fa fa-circle"></i></label>
+                    </li>
+                    <li>
+                        <label for="carousel-7" class="carousel-bullet"><i class="fa fa-circle"></i></label>
+                    </li>
+                    <li>
+                        <label for="carousel-8" class="carousel-bullet"><i class="fa fa-circle"></i></label>
+                    </li>
+                    <li>
+                        <label for="carousel-9" class="carousel-bullet"><i class="fa fa-circle"></i></label>
+                    </li>
+                    <li>
+                        <label for="carousel-10" class="carousel-bullet"><i class="fa fa-circle"></i></label>
+                    </li>
+                    <li>
+                        <label for="carousel-11" class="carousel-bullet"><i class="fa fa-circle"></i></label>
+                    </li>
+                </ol>
+                <div class="pause-play__wrapper">
+                    <i class="slider-control pause-slider fa fa-pause"></i>
+                    <!-- <i class="slider-control start-slider fa fa-play"></i> -->
+                </div>
+            </div>
         </div>
-        <button class="slider-control pause-slider">Pause</button>
-        <button class="slider-control start-slider">Start</button>
+
+        
     </div>
 {% endblock %}
 {% block page_content %}
@@ -153,7 +159,7 @@
 
 
     <!-- <nav><a href="">Military Transition Guide</a><a href="">UPS Careers</a></nav> -->
-    <div class="veteranGateway__liner">
+    <!-- <div class="veteranGateway__liner"> -->
         <div class="title-block">
             <h1>UPS Veteran Career Gateway</h1>
             <p>For Veterans & Service Members</p>
@@ -171,5 +177,5 @@
                 {% include 'VCGBundle:GridItems:search.html.twig' %}
             </div>
         </div>           
-    </div>    
+    <!-- </div>     -->
 {% endblock %}

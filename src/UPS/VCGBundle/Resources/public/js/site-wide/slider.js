@@ -38,14 +38,14 @@ $( document ).ready(function() {
         }
         //}
     }
-    var slider = setInterval(sliderGo, 1000);
+    var slider = setInterval(sliderGo, 6000);
     //doNext();
 
     $('.pause-slider').click(function() {
         clearInterval(slider);
     });
     $('.start-slider').click(function() {
-        slider = setInterval(sliderGo, 1000);
+        slider = setInterval(sliderGo, 6000);
     });
 
 });

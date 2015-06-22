@@ -2,7 +2,7 @@
 
 ////////////////PARTNERS PAGE GRID LINE CONTROL/////////////////////////
 
-.page.page--partners {
+.page .page--partners {
 
     .grid-items-lines {
       
@@ -19,7 +19,7 @@
 
 
 /////////////////PARTNERS PAGE CONTENT STYLES/////////////////////
-.page.page--partners .grid-items-lines {
+.page .page--partners .grid-items-lines {
   .grid-item {
     .breakpoint-wide & {
       height: 19em;
