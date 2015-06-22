@@ -9,18 +9,6 @@ and open the template in the editor.
 */
 
 .page .page--job-converter {
-
-    .intro {
-        /*position: relative;*/
-    }
-    
-    
-
-    // .full-width .form-section {
-    //         max-width: 40em;
-    //         background-color: $white10;
-    //     }
-
     .form-section {
         padding: 2.6em 3em 3em 3em;
         // max-width: 30em;
@@ -78,7 +66,7 @@ and open the template in the editor.
         }
         
         .component--expander {
-            margin-bottom: 3em;
+            margin-bottom: 4em;
 
             .expander__wrapper:after {
                 @include pseudo-block(100px);
@@ -91,7 +79,7 @@ and open the template in the editor.
             }
 
             .expander__child p:last-of-type {
-                padding-bottom: 2em;
+                padding-bottom: 1em;
             }
         }
 
@@ -116,7 +104,7 @@ and open the template in the editor.
             }
 
             h4 {
-                text-transform: uppercase;
+                text-transform: none;
             }
 
             p {
@@ -163,28 +151,4 @@ and open the template in the editor.
         margin-right: auto;
         margin-left: auto;
     }
-
-    .job-converter-job-search {
-        padding: 0 3em 3em 1em;
-
-        h4 {
-            color: $white;
-            margin-top: 0;
-        }
-
-        label:first-of-type{
-            margin-top: 0;
-        }
-
-        select {
-            width: 100%;
-            margin-bottom: 2.5em;
-        }
-
-        input[type=submit] {
-
-        }
-    }
-
-
 }

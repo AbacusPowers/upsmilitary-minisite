@@ -1,21 +1,38 @@
 
+
+////////////////PARTNERS PAGE GRID LINE CONTROL/////////////////////////
+
 .page.page--partners {
 
     .grid-items-lines {
-
-
-        .grid-item:nth-child(6) {
-        border-right: 0;
-        }
-        .grid-item:nth-child(7), .grid-item:nth-child(8) {
+      
+        .grid-item:nth-child(4), .grid-item:nth-child(5), .grid-item:nth-child(6) {
             border-bottom: 0;
         }
 
-        .grid-item {
-
-            .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & {
-                height: 19rem;
-            }
+        .grid-item:nth-child(6) {
+            border-right: none;
         }
     }
 }
+
+
+
+/////////////////PARTNERS PAGE CONTENT STYLES/////////////////////
+.page.page--partners .grid-items-lines {
+  .grid-item {
+    .breakpoint-wide & {
+      height: 19em;
+    }
+
+    .breakpoint-large & {
+      height: 24em;
+    }
+    
+    .breakpoint-medium & {
+      height: 32em;
+    }
+  }
+}
+
+

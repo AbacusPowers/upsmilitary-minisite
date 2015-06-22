@@ -106,7 +106,7 @@ $state-list-scroll-height-wide:  $map-height-wide - $map-control-height;
         transition: opacity 0.5s;
         position: absolute;
         left: 1.1rem;
-        top: 9.5rem;
+        top: 10.3rem;
         font-size: 1.7em;
         z-index: 100;
         border-radius: 50%;
@@ -171,22 +171,24 @@ $state-list-scroll-height-wide:  $map-height-wide - $map-control-height;
         }
 
         .size-key {
-                position: absolute;
-              top: 4.8rem;
-              left: 0.1rem;
-              padding-bottom: 0.8em;
-              // width: 8rem;
+            position: absolute;
+            top: 4.9rem;
+            left: 1rem;
+            padding: 0.2em 0.6em 0.4em 0.5em ;
+            background: $black20;
 
-              h3 {
+            h3 {
                 color: $ups-yellow;
-                margin-left: 1em;
-                // float: left;
+                // margin-left: 1em;
                 padding-top: 0.17em;
-              }
+            }
+
+            ul {
+                // margin-top: -0.1em;
+            }
 
             ul li {
-                // display: inline-block;
-                margin-left: 1rem;
+                // margin-left: 1rem;
                 font-size: 0.8em;
 
                 i {
@@ -217,12 +219,7 @@ $state-list-scroll-height-wide:  $map-height-wide - $map-control-height;
             cursor: default;
             font-size: 1.5em;
             font-weight: 400;
-            // margin-bottom: 1.5rem;
-            // margin-top: 3.3rem;
-            // padding-right: 4.7rem;
             position: absolute;
-            // right: 50%;
-            // text-align: right;
             left: 1rem;
             text-transform: uppercase;
             top: 2.6rem;

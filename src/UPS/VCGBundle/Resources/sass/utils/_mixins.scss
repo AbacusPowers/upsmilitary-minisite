@@ -90,6 +90,7 @@
   }
 
 }
+
 @mixin home-header-heights {
   .breakpoint-small & {
     height: $header-height--small;
@@ -105,6 +106,14 @@
   .breakpoint-wide & {
     height: $header-height--wide;
   }
+}
+
+@mixin border-mask {
+  @include pseudo-block(0.6em); 
+  background: $black; 
+  width: 1px;
+  right: -1px;
+  bottom: 0;
 }
 
 
