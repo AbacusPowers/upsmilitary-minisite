@@ -93,6 +93,7 @@ class JobMapImportCommand extends ContainerAwareCommand
         //      8   Available Jobs  (save as 'jobs')    Comma-separated list of job titles.
         //      9   Lat             (save as 'lat')     Location lattitude.
         //      10  Long            (save as 'lon')     Location longitude.
+        //      11  JOBS            (drop)
         
         $handle = fopen($csvPath, 'r');
         $result = array();
@@ -107,7 +108,7 @@ class JobMapImportCommand extends ContainerAwareCommand
                 'zip'   => trim(strval($data[5])),
                 'size'  => ($size == 'Large' ? 0 : ($size == 'Medium' ? 1 : 2)),
                 'jobs'  => array_map('trim', preg_split('/,\s?/', $data[8])),
-                'lat'   => floatval(trim($data[9])),
+                'lat'   =>  floatval(trim($data[9])),
                 'lon'   => floatval(trim($data[10]))
             );
         }
