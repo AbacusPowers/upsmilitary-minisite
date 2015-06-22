@@ -13,7 +13,7 @@ $state-list-scroll-height-wide:  $map-height-wide - $map-control-height;
 .page--map {
 
     #side--a {
-        @include transition (all 0.5s ease-in);
+        @include transition (all 0.25s ease-in);
 
         .map-wrapper {
          overflow: hidden;
@@ -29,8 +29,37 @@ $state-list-scroll-height-wide:  $map-height-wide - $map-control-height;
         }
     }
     
+    #side--b {
+        &:before {
+            @include transition (all 1s ease-out 0.25s);
+            @include pseudo-block($vertical-thread-width);
+            background: $white10;
+            height: 100%;
+            top: 0;
+            left: 50%;
+            opacity: 1;
+            z-index: -10;
+
+            .breakpoint-small & {
+                content: none;
+            }
+        }   
+
+        &.pseudo-block--hidden {
+            // @include transition (all 3s ease-out);
+
+
+            &:before {
+                // @include transition (all 3s ease-out);
+               opacity: 0;
+               // display: none;
+               // @include transition(all 2s ease-in );
+            }
+        }
+    }
+
     .map-controls {
-        // @include transition (all 5.5s ease-out);
+        // @include transition (all 0.25s ease-out);
 
         height: $map-control-height;
         padding: 1em 0 3em 1em;
@@ -65,6 +94,16 @@ $state-list-scroll-height-wide:  $map-height-wide - $map-control-height;
             color: $ups-yellow;
             font-size: 1.15em;
         }
+    }
+
+    .map-info-container {
+        opacity: 0;
+        @include transition (all 1s ease-out 0.25s);
+
+        &.opacity {
+            opacity: 1;
+        }
+
     }
     
     .map-info-container p > a {
@@ -199,20 +238,7 @@ $state-list-scroll-height-wide:  $map-height-wide - $map-control-height;
             ul li:nth-child(1) i{
                 color: $ups-green;
             }
-        }
-
-         &:after {
-            @include transition (all 1s ease-out);
-            @include pseudo-block($vertical-thread-width);
-            background: $white10;
-            height: 100%;
-            top: 0;
-            left: 50%;
-
-            .breakpoint-small & {
-                content: none;
-            }
-        }    
+        } 
 
         h1 {
             color: $white;

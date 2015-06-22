@@ -388,6 +388,9 @@
                 info.show(null);
                 refresher.removeClass('shown');
                 this.containers.addClass('full-width');
+                $('.map-info-container').removeClass('opacity');
+                $('#side--b').addClass('pseudo-block--hidden');
+
             }
             
             if (state != null) {
@@ -399,6 +402,8 @@
                 info.show(state.info);
                 refresher.addClass('shown');
                 this.containers.removeClass('full-width');
+                $('.map-info-container').addClass('opacity');
+                $('#side--b').removeClass('pseudo-block--hidden');
             }
         },
         

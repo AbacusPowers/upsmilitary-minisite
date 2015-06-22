@@ -13,7 +13,7 @@ and open the template in the editor.
         padding: 2.6em 3em 3em 3em;
         // max-width: 30em;
         margin: 0 auto auto auto;
-        background: $grey--dark;
+        // background: $grey--dark;
         height: 100%;
         
         //  -webkit-transition: height 1.5s ease-out;
@@ -59,6 +59,8 @@ and open the template in the editor.
             background: $white10;
             height: 100%;
             left: 0;
+            opacity: 1;
+            @include transition(opacity 4.0s ease-in);
 
             .breakpoint-small & {
                 content: none;
@@ -68,15 +70,15 @@ and open the template in the editor.
         .component--expander {
             margin-bottom: 4em;
 
-            .expander__wrapper:after {
-                @include pseudo-block(100px);
-                width: 100%;
-                right: 100%;
-                height: calc( 200% - 1px );
-                z-index: 1;
-                top: 0;
-                background: $grey--dark;
-            }
+            // .expander__wrapper:after {
+            //     @include pseudo-block(100px);
+            //     width: 100%;
+            //     right: 100%;
+            //     height: calc( 200% - 1px );
+            //     z-index: 1;
+            //     top: 0;
+            //     background: $grey--dark;
+            // }
 
             .expander__child p:last-of-type {
                 padding-bottom: 1em;

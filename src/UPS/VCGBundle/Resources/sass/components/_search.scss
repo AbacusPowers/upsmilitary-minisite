@@ -38,11 +38,16 @@
         background:$black90;
         margin-bottom: 0;
         color: $ups-yellow;
-        padding-left: 0.6em;
+        padding-left: 0.7em;
     }
 
     input[type=submit] {
         width: 50%;
         float: right;
+
+        &:hover {
+            // background: $ups-brown-1;
+            // color: $ups-yellow;
+        }
     }
 }
