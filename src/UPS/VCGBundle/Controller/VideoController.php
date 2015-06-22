@@ -60,6 +60,7 @@ class VideoController extends Controller
                 array('slug' => $slug, 'error' => $error)
             );
         }
+
         return $response;
     }
 }
