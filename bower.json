@@ -16,6 +16,7 @@
     "Snap.svg": "~0.4.1",
     "jquery-csv": "*",
     "jquery.selectBoxIt": "~3.8.1",
-    "velocity": "~1.2.2"
+    "velocity": "~1.2.2",
+    "sticky-kit": "~1.1.2"
   }
 }

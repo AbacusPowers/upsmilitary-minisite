@@ -153,6 +153,8 @@
 
     #side--a {
         z-index: 2;
+        -webkit-transition: min-height 0.5s;
+        transition: min-height 0.5s;
     }
 
     #side--b {
