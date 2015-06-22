@@ -133,3 +133,16 @@ header {
           }
     }
 }
+
+.slider-control {
+  position: absolute;
+  top: 10px;
+  z-index: 5000;
+
+  &.pause-slider {
+    left: 5px;
+  }
+  &.start-slider {
+    left: 100px;
+  }
+}
