@@ -22,7 +22,7 @@ $('document').ready(function(){
         var href = $(this).attr('href');
         // Getting Content
         getModalContent(href, true, 'page');
-        showEventsModal();
+        showEventsModal(href);
     });
     //UPS VALUES FUNCTIONALITY
     $('.values-link').on('click', function(e){
@@ -186,6 +186,9 @@ function getModalContent(url, addEntry, originType) {
                                 destroyVideoModal();
                             } else if ($('body').hasClass('values-view')) {
                                 destroyValuesModal();
+                            } else if ($('body').hasClass('events-view')) {
+                                destroyEventsModal();
+                                console.log('destroyEventsModal');
                             } else {
                                 destroyModal();
                             }
@@ -369,9 +372,15 @@ function showVideoModal(){
     $('body').addClass('video-view');
     $('#modal-wrapper').addClass('video');
 }
-function showEventsModal(){
+function showEventsModal(url){
+    var id = url.substring(url.lastIndexOf('#'));
     $('#overlay').show();
-    $('#modal').fadeIn();
+    $('#modal').fadeIn(function(){
+        if(id) {
+            $("#modal-content").delay(200).animate({scrollTop: $(id).offset().top }, 1000);
+            $(id).closest('.event__wrapper').addClass('selected-event');
+        }
+    });
     $('body').addClass('events-view');
     $('#modal-wrapper').addClass('events');
 }
@@ -441,7 +450,7 @@ function destroyValuesModal(){
     $('#modal-wrapper').removeClass('values');
     $('body').removeClass('hold-modal');
     $('#single-modal-content').text('');
-    console.log('aaaaaa');
+    //console.log('aaaaaa');
 }
 function destroyEventsModal(){
     $('#overlay').hide();

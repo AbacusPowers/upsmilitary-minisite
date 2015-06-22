@@ -17,6 +17,7 @@
     h3, h4 {
       color: $grey--medium;
     }
+
 }
 
 .article, .events, .faqs, .leave-site {
@@ -68,6 +69,9 @@
             border-bottom: 1px solid $ups-grey-1;
             margin-bottom: 20em;
         }
+      &.selected-event {
+        background: $grey20;
+      }
     }
     
     .event__date {
