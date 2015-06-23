@@ -373,13 +373,14 @@ function showVideoModal(){
     $('#modal-wrapper').addClass('video');
 }
 function showEventsModal(url){
-    var id = url.substring(url.lastIndexOf('#'));
+    //var id = url.substring(url.lastIndexOf('#'));
+    //console.log(id);
     $('#overlay').show();
     $('#modal').fadeIn(function(){
-        if(id) {
-            $("#modal-content").delay(200).animate({scrollTop: $(id).offset().top }, 1000);
-            $(id).closest('.event__wrapper').addClass('selected-event');
-        }
+        //if(id) {
+        //    $("#modal-content").delay(200).animate({scrollTop: $(id).offset().top }, 1000);
+        //    $(id).closest('.event__wrapper').addClass('selected-event');
+        //}
     });
     $('body').addClass('events-view');
     $('#modal-wrapper').addClass('events');
