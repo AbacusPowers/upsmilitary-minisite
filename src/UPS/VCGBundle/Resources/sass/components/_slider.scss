@@ -101,17 +101,17 @@
             }
 
             .breakpoint-medium & {
-                bottom: 14rem;
+                bottom: 9rem;
                 max-width: calc( 100% - 6rem );
             }
             
             .breakpoint-large & {
-                bottom: 14rem;
+                bottom: 9rem;
                 max-width: calc( 67% - 6rem );
             }
 
             .breakpoint-wide & {
-                bottom: 14rem;
+                bottom: 9rem;
                 max-width: calc( 50% - 6rem );
             }
         }

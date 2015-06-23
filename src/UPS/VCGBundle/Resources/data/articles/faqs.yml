@@ -8,8 +8,6 @@ Body: |
     <section class="intro">
         <img src="/bundles/vcg/images/document.png" alt="">
         <h1 class="page--title">Frequently Asked Questions</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias eos molestiae, a. Harum officia error amet excepturi veniam esse. Officia excepturi magni, error, minima ipsa laudantium accusantium autem eos non.
-            Consectetur adipisicing elit. Incidunt officiis inventore amet temporibus veniam molestiae, distinctio vero ratione consequuntur sit porro error facere, harum sequi, sint ducimus quasi maxime corporis.</p>
     </section>
     <div class="component--expander">
         <section class='expander__wrapper'>
