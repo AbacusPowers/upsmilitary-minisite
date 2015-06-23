@@ -16,6 +16,22 @@
         COLOR_PATH_HILITE:  '#FFB500',
         COLOR_STROKE:       '#444',
  
+        JOB_DESC: {
+            'Package Handler': 'Package handlers load and unload packages into or out of UPS vehicles.',
+            'Driver Helper (Oct-Dec)': 'Driver helpers deliver and pick up UPS packages during peak season.',
+            'Package Delivery Driver': 'Package delivery drivers must have excellent customer contact and driving skills.',
+            'Feeder Driver': 'Feeder drivers transport packages by tractor-trailer between our centers and hubs.',
+            'Automotive Mechanic': 'Automotive mechanics ensure we’re able to meet and exceed all challenges, efficiently and effectively.',
+            'Facilities Mechanic': 'Facilities maintenance mechanics help maintain our infrastructure and facilities.',
+            'Sales Representative': 'Sales representatives help customers identify and meet their business needs with UPS services.',
+            'Warehouse Associate': 'Warehouse associates participate in a range of daily operations, including loading and unloading.',
+            'UPS Freight Over the Road Driver': 'Over-the-road drivers operate tractor-trailers to deliver freight to two or more locations.',
+            'Part-time Operations Supervisor': 'Part-time operations supervisors provide direct supervision to seven to 10 part-time package handlers.',
+            'Business Analyst': 'Business systems analysts serve as liaisons between the business community and UPS Information Services.'
+        },
+ 
+        RX_JOB_RM:          / (\(Oct-Dec\))/i,
+ 
         SIZE_CLASSES:       [ 'large', 'medium', 'small' ],
  
         STROKE_WIDTH:       '0.5',
@@ -145,7 +161,7 @@
             var cityData    = state.cityData;
             
             $('[data-info="name"]', result).text(state.name);
-            $('[data-info="count"]', result).text(cities.length);
+            //$('[data-info="count"]', result).text(cities.length);
             
             var citiesContainer = $('[data-info="cities"]', result);
             var cityTemplate    = $(citiesContainer.children()[0]).detach();
@@ -190,22 +206,44 @@
                 + '"></i>'
             );
             
-            $('[dataid]'                , result).attr('data-id', this.expander_id++);
+            $('[data-id]'               , result).attr('data-id', this.expander_id++);
             $('[data-info="loc-name"]'  , result).text(location.name).prepend(sizeIndicator);
             $('[data-info="loc-count"]' , result).text(jobs.length);
             
             var jobsContainer = $('[data-info="jobs"]', result);
             for (var i = 0, ilen = jobs.length; i < ilen; ++i) {
                 var job = jobs[i];
+                var jobDesc = CONST.JOB_DESC[job];
+                if (jobDesc === undefined) {
+                    jobDesc = '';
+                }
                 var href = 'http://jobs-ups.com/search/'
-                    + encodeURI(job)
+                    + this.encode_job(job)
                     + '/ASCategory/-1/ASPostedDate/-1/ASCountry/-1/ASState/-1/ASCity/-1/ASLocation/-1/ASCompanyName/-1/ASCustom1/-1/ASCustom2/-1/ASCustom3/-1/ASCustom4/-1/ASCustom5/-1/ASIsRadius/true/ASCityStateZipcode/'
                     + location.zip
                     + '/ASDistance/50/ASLatitude/-1/ASLongitude/-1/ASDistanceType/-1'
                 ;
-                jobsContainer.append($('<div class="job-wrapper"><p>' + job + '</p>' + '<a class="search-button" target="_blank" href="' + href + '"><div>search</div></a></div>'));
+                jobsContainer.append($(
+                    '<div class="job-wrapper"><p><span>'
+                    + job
+                    + '</span>&nbsp;&nbsp;&nbsp;'
+                    + jobDesc
+                    +'</p>'
+                    + '<a class="search-button" target="_blank" href="'
+                    + href
+                    + '"><div>search</div></a></div>'
+                ));
             }
             return result;
+        },
+ 
+ 
+        /*
+         * 
+         */
+        encode_job: function(job) {
+            var result = job.replace(CONST.RX_JOB_RM, '');
+            return encodeURI(result);
         },
 
 
