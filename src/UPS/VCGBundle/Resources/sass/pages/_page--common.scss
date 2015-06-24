@@ -173,6 +173,7 @@
                 height: 2rem;
                 background: $grey--darker;
                 border-bottom: 1px solid $ups-yellow;
+                z-index: 1;
             }
         }
        
@@ -292,6 +293,17 @@
         // }     
     }
      
+     .page--jobs, .page--map, .page--job-converter {
+        .breakpoint-large & .title-block, .breakpoint-wide & .title-block {
+            width: 50%;
+        }
+        .breakpoint-medium & .title-block h1:after {
+            border-bottom: none;
+            background: $black;
+            // border-left: 1px solid $ups-yellow;
+        }
+     }
+    
 
     nav.nav--career-explorer {
         position: absolute;
@@ -303,6 +315,9 @@
             display: none;
         }
 
+        .breakpoint-medium & {
+            top: -7em;
+        }
 
         a {
             @include size(5em);
