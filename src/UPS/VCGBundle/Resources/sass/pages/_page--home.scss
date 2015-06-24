@@ -120,7 +120,7 @@
         margin-top: 1.5em;
     }
 
-    img.badge--apple, img.badge--google {
+    img.badge--apple, img.badge--google, svg#badge--google {
         border: none;
         border-radius: 0;
         padding: 0;
@@ -136,11 +136,13 @@
     img.badge--apple {
         top: 6em;
         width: 8.5em;
+        height: 2.79em;
     }
 
-    img.badge--google {
+    img.badge--google, svg#badge--google {
         top: 10em;
         width: 8.5em;
+        height: 2.79em;
     }
 
 }
