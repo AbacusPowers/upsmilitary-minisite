@@ -17,7 +17,7 @@ Body: |
             </a>
             <div data-id='1' class='hidden-part'>
                 <div class="expander__child">
-                    <a href="{{ path('faq_video',{'slug':'timeline'}) }}" class="video-link video-link--style"><img class="video-thumb" src="{{ asset('bundles/vcg/images/video-3.png') }}" alt=""><i class="fa fa-play-circle-o"></i></a>
+                    <iframe width="420" height="315" src="https://www.youtube.com/embed/YF6_kuQSeVg" frameborder="0" allowfullscreen></iframe>
 
                     <p class='faq-answer'>
                         It’s never too early to start researching career options and military benefits while you’re still a service member. The length of the hiring process will vary by the job you are seeking, but UPS recommends starting your search about six to nine months before ending your military career.
@@ -42,7 +42,7 @@ Body: |
             </a>
             <div data-id='2' class='hidden-part'>
                 <div class="expander__child">
-                    <a href="{{ path('faq_video',{'slug':'training-opportunities'}) }}" class="video-link video-link--style"><img class="video-thumb" src="{{ asset('bundles/vcg/images/video-3.png') }}" alt=""><i class="fa fa-play-circle-o"></i></a>
+                    <iframe width="420" height="315" src="https://www.youtube.com/embed/8uljmLWweCU" frameborder="0" allowfullscreen></iframe>
                     <p class='faq-answer'>
                         At UPS, we pride ourselves on making high-quality training available to advance the personal and professional growth of all our employees, including those in part-time positions like package delivery drivers. Training opportunities and programs will vary based on the job you are seeking and your personal career goals. One training opportunity that has recently become available is the UPS Registered Apprenticeship program.
                     </p>
@@ -63,7 +63,7 @@ Body: |
             </a>
             <div data-id='3' class='hidden-part'>
                 <div class="expander__child">
-                    <a href="{{ path('faq_video',{'slug':'promote-from-within'}) }}" class="video-link video-link--style"><img class="video-thumb" src="{{ asset('bundles/vcg/images/video-3.png') }}" alt=""><i class="fa fa-play-circle-o"></i></a>
+                    <iframe width="420" height="315" src="https://www.youtube.com/embed/CExJVTkvbK4" frameborder="0" allowfullscreen></iframe>
 
                     <p class='faq-answer'>
                         At UPS, we give all employees an equal opportunity to advance, and we look to promote from within. No matter your background or beliefs, the values you demonstrated through your military service put you in a position for career growth at UPS. And our sense of teamwork means you will find great opportunities to step up, help out and receive additional compensation outside of your starting position.
@@ -81,7 +81,7 @@ Body: |
             </a>
             <div data-id='4' class='hidden-part'>
                 <div class="expander__child">
-                    <a href="{{ path('faq_video',{'slug':'benefits'}) }}" class="video-link video-link--style"><img class="video-thumb" src="{{ asset('bundles/vcg/images/video-3.png') }}" alt=""><i class="fa fa-play-circle-o"></i></a>
+                    <iframe width="420" height="315" src="https://www.youtube.com/embed/fxABsgybUZg" frameborder="0" allowfullscreen></iframe>
 
                     <p class='faq-answer'>
                         We know veterans returning to civilian life and working for a civilian employer are searching for the kind of stability they received in the military. So we’re proud to offer veterans joining us a comprehensive benefits package that will help them transition smoothly. Because our employees stop at nothing to exceed the expectations of our customers, UPS stops at nothing to give our staffers the benefits they need to lead balanced, healthy lives.
@@ -102,7 +102,7 @@ Body: |
             </a>
             <div data-id='5' class='hidden-part'>
                 <div class="expander__child">
-                    <a href="{{ path('faq_video',{'slug':'military-reserve-force-members'}) }}" class="video-link video-link--style"><img class="video-thumb" src="{{ asset('bundles/vcg/images/video-3.png') }}" alt=""><i class="fa fa-play-circle-o"></i></a>
+                    <iframe width="420" height="315" src="https://www.youtube.com/embed/fsA750v3mIA" frameborder="0" allowfullscreen></iframe>
 
                     <p class='faq-answer'>
                         UPS understands that hiring a Guard or Reserve member makes good business sense. We know you are a disciplined and skilled worker who displays pride, leadership, responsibility and professionalism in whatever you do. You would be a welcome addition to our team, and we guarantee UPS management will support you as you continue to serve our country.
@@ -123,7 +123,7 @@ Body: |
             </a>
             <div data-id='6' class='hidden-part'>
                 <div class="expander__child">
-                    <a href="{{ path('faq_video',{'slug':'student-veterans'}) }}" class="video-link video-link--style"><img class="video-thumb" src="{{ asset('bundles/vcg/images/video-3.png') }}" alt=""><i class="fa fa-play-circle-o"></i></a>
+                    <iframe width="420" height="315" src="https://www.youtube.com/embed/d0W6tN5IeKE" frameborder="0" allowfullscreen></iframe>
 
                     <p class='faq-answer'>
                         When you’re a part-time employee at UPS, you are eligible to apply for up to $5,250 in educational assistance per calendar year. That money, plus the pay you earn while working at UPS, can contribute in a significant way to your college education—even after any GI Bill benefits you may receive.
@@ -144,7 +144,7 @@ Body: |
             </a>
             <div data-id='7' class='hidden-part'>
                 <div class="expander__child">
-                    <a href="{{ path('faq_video',{'slug':'military-relate-to-ups'}) }}" class="video-link video-link--style"><img class="video-thumb" src="{{ asset('bundles/vcg/images/video-3.png') }}" alt=""><i class="fa fa-play-circle-o"></i></a>
+                    <iframe width="420" height="315" src="https://www.youtube.com/embed/AvMksSN7DT0" frameborder="0" allowfullscreen></iframe>
 
                     <p class='faq-answer'>
                         UPS wants people with integrity, adaptability, leadership ability and a can-do attitude. All of those traits and more are attributes you possess that were strengthened through your military experience. Teamwork, accountability, efficiency and diversity are values that both the military and UPS seek out in recruits.
@@ -182,7 +182,7 @@ Body: |
             </a>
             <div data-id='9' class='hidden-part'>
                 <div class="expander__child">
-                    <a href="{{ path('faq_video',{'slug':'resume'}) }}" class="video-link video-link--style"><img class="video-thumb" src="{{ asset('bundles/vcg/images/video-3.png') }}" alt=""><i class="fa fa-play-circle-o"></i></a>
+                    <iframe width="420" height="315" src="https://www.youtube.com/embed/cfaSMhvsRsk" frameborder="0" allowfullscreen></iframe>
 
                     <p class='faq-answer'>
                         First impressions are everything, and one of the biggest challenges transitioning military members face is how to convey the depth and breadth of their training to a civilian hiring manager. You can find help with this online through sites like <a href="https://www.resumeengine.org">resumeengine.org</a> that feature skills translators.
@@ -203,7 +203,7 @@ Body: |
             </a>
             <div data-id='10' class='hidden-part'>
                 <div class="expander__child">
-                    <a href="{{ path('faq_video',{'slug':'interview'}) }}" class="video-link video-link--style"><img class="video-thumb" src="{{ asset('bundles/vcg/images/video-3.png') }}" alt=""><i class="fa fa-play-circle-o"></i></a>
+                    <iframe width="420" height="315" src="https://www.youtube.com/embed/V9SOJQ6p068" frameborder="0" allowfullscreen></iframe>
 
                     <p class='faq-answer'>
                         Many of the skills, certifications and experiences you received in your military career are highly valued in the civilian world. Talk about the specific skills you developed in your military job, whether they are in technology, logistics or personnel management, and speak about them in general terms. Discuss attributes such as leadership, teamwork and working with diverse groups of people. Present yourself as a problem-solver and provide good examples.
@@ -221,7 +221,7 @@ Body: |
             </a>
             <div data-id='11' class='hidden-part'>
                 <div class="expander__child">
-                    <a href="{{ path('faq_video',{'slug':'military-spouses'}) }}" class="video-link video-link--style"><img class="video-thumb" src="{{ asset('bundles/vcg/images/video-3.png') }}" alt=""><i class="fa fa-play-circle-o"></i></a>
+                    <iframe width="420" height="315" src="https://www.youtube.com/embed/5t98V0YsK7s" frameborder="0" allowfullscreen></iframe>
 
                     <p class='faq-answer'>
                         Service members’ families are integral to the career of any military member. They have provided energy, support and care so that a service member can focus solely on their job.
