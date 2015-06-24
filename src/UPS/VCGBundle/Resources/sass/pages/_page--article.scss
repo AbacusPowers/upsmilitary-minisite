@@ -77,13 +77,13 @@
           position: absolute;
           left: 0;
           padding: 0 .5em;
-          color: $white;
+          color: $black;
           z-index: 5000;
         }
         &:visited {
           span {
             &:before {
-              color: $white
+              color: $black;
             }
 
           }
@@ -96,7 +96,7 @@
             position: absolute;
             left: 0;
             padding: 0 .5em;
-            color: $black;
+            color: $white;
           }
 
         }

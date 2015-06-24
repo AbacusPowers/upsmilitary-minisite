@@ -39,6 +39,8 @@ $('document').ready(function(){
         showLeaveSiteModal(href);
         //loadAjaxFunctions();
         $('#offsite-modal #forward-to').attr('href',href);
+        $('#destination').text(href);
+        console.log(href);
         if ($('#modal').is(':visible')) {
             $('#modal').hide();
             $('body').addClass('hold-modal');
@@ -226,7 +228,8 @@ function getModalContent(url, addEntry, originType) {
                     var href = $(this).attr('href');
                     showLeaveSiteModal();
                     $('#offsite-modal #forward-to').attr('href',href);
-
+                    $('#destination').text(href);
+                    console.log(href);
                     if ($('#modal').is(':visible')) {
                         $('#modal').hide();
                         $('body').addClass('hold-modal');
@@ -339,7 +342,8 @@ function getLeaveSiteModalContent(url, addEntry, originType) {
                     var href = $(this).attr('href');
                     showLeaveSiteModal();
                     $('#offsite-modal #forward-to').attr('href',href);
-
+                    $('#destination').text(href);
+                    console.log(href);
 
                     if ($('#modal').is(':visible')) {
                         $('#modal').hide();
@@ -394,7 +398,7 @@ function showValuesModal(){
 function showLeaveSiteModal(href){
     $('#overlay').show();
     $('#offsite-modal').fadeIn();
-    $('#destination').text(href);
+
     $('body').addClass('leave-site-view');
     $('#modal-wrapper').addClass('leave-site');
     $('#offsite-modal','.leave-site-view').on('click','#close-offsite-modal', function(e){
