@@ -184,33 +184,34 @@
 
             <div class="footer-links">
                 <ul>
-                    <li><a href=""><h3>Service Member & Veteran Transition Guide</h3></a></li>
-                    <li><a href="javascript:void">DD Form 214 Guide</a></li>
+                    <li><a href="{{ path('page',{'slug':'transition-guide'}) }}"><h3>Service Member & Veteran Transition Guide</h3></a></li>
+                    <li><a href="{{ path('transition_guide_page',{'slug':'dd-form-214-guide'}) }}">DD Form 214 Guide</a></li>
                     <li><h4>Building Your Brand</h4></li>
-                    <li><a href="javascript:void">Your Resume & Cover Letter</a></li>
-                    <li><a href="javascript:void">Your Online Presence</a></li>
-                    <li><a href="javascript:void">Networking</a></li>
-                    <li><a href="javascript:void">Recruiters</a></li>
-                    <li><a href="javascript:void">Career Fairs</a></li>
-                    <li><a href="javascript:void">Interviewing</a></li>
+                    <li><a href="{{ path('transition_guide_article',{'slug':'brand-intro'}) }}" class="article-link">Introduction</a></li>
+                    <li><a href="{{ path('transition_guide_article',{'slug':'cover-letter-resume'}) }}" class="article-link">Resume & Cover Letter</a></li>
+                    <li><a href="{{ path('transition_guide_article',{'slug':'marketing-yourself'}) }}" class="article-link">Marketing Yourself Online</a></li>
+                    <li><a href="{{ path('transition_guide_article',{'slug':'networking-essentials'}) }}" class="article-link">Networking</a></li>
+                    <li><a href="{{ path('transition_guide_article',{'slug':'recruiters'}) }}" class="article-link">Dealing With Recruiters</a></li>
+                    <li><a href="{{ path('transition_guide_article',{'slug':'career-fair'}) }}" class="article-link">Preparing for Career Fairs</a></li>
+                    <li><a href="{{ path('transition_guide_article',{'slug':'interview'}) }}" class="article-link">Interviewing</a></li>
                 </ul>
                 <ul>
-                    <li><h3>UPS Veteran Career Explorer</h3></li>
-                    <li><a href="javascript:void">Hot Jobs</a></li>
-                    <li><a href="javascript:void">Job Map</a></li>
-                    <li><a href="javascript:void">Qualify by MOS</a></li>
+                    <li><a href="{{ path('page',{'slug':'jobs'}) }}"><h3>UPS Veteran Career Explorer</h3></a></li>
+                    <li><a href="{{ path('page',{'slug':'job-converter'}) }}">Military Skills Translator</a></li>
+                    <li><a href="{{ path('page',{'slug':'jobs'}) }}">UPS Job Descriptions</a></li>
+                    <li><a href="{{ path('page',{'slug':'job-map'}) }}">UPS Jobs Map</a></li>
                 </ul>
                 
                 <ul>
-                    <li><a href="javascript:void"><h3>UPS Culture & Benefits</h3></a></li>
+                    <li><a href="{{ path('page',{'slug':'culture-benefits'}) }}"><h3>UPS Culture & Benefits</h3></a></li>
                     <li><h4>Articles</h4></li>
-                    <li><a href="javascript:void">UPS Values</a></li>
-                    <li><a href="javascript:void">Veterans Benefits</a></li>
-                    <li><a href="javascript:void">Veteran Student Programs</a></li>
-                    <li><a href="javascript:void">Registered Apprentice Program</a></li>
-                    <li><a href="javascript:void">Family Support</a></li>
-                    <li><a href="javascript:void">ESGR</a></li>
-                    <li><a href="javascript:void">UPS FAQs</a></li>
+                    <li><a href="{{ path('culture_benefits_article',{'slug':'values'}) }}" class="values-link">UPS Values</a></li>
+                    <li><a href="{{ path('culture_benefits_article',{'slug':'benefits'}) }}" class="article-link">Veterans Benefits</a></li>
+                    <li><a href="{{ path('culture_benefits_article',{'slug':'student-programs'}) }}" class="article-link">Veteran Student Programs</a></li>
+                    <li><a href="{{ path('culture_benefits_article',{'slug':'ra-intro'}) }}" class="article-link">Registered Apprentice Program</a></li>
+                    <li><a href="{{ path('culture_benefits_article',{'slug':'family-programs'}) }}" class="article-link">Family Support</a></li>
+                    <li><a href="{{ path('culture_benefits_article',{'slug':'esgr'}) }}" class="article-link">ESGR</a></li>
+                    <li><a href="{{ path('culture_benefits_article',{'slug':'faqs'}) }}" class="article-link">UPS FAQs</a></li>
                 </ul>
             </div>
 
