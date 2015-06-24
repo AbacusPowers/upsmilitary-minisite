@@ -96,20 +96,7 @@ $state-list-scroll-height-wide:  $map-height-wide - $map-control-height;
         }
     }
 
-    .map-info-container {
-        opacity: 0;
-        @include transition (all 1s ease-out 0.25s);
-
-        &.opacity {
-            opacity: 1;
-        }
-
-    }
-    
-    .map-info-container p > a {
-        color: #fff;
-        font-size: 0.9rem;
-    }
+   
     
     .svg-map {
         width: 100%;
@@ -191,6 +178,21 @@ $state-list-scroll-height-wide:  $map-height-wide - $map-control-height;
         .breakpoint-small & { 
             padding-top: 1.5em;
         }
+    }
+
+     .map-info-container {
+        opacity: 0;
+        @include transition (all 1s ease-out 0.25s);
+
+        &.opacity {
+            opacity: 1;
+        }
+
+    }
+    
+    .map-info-container p > a {
+        color: #fff;
+        font-size: 0.9rem;
     }
     
     .map-info--state {
@@ -277,6 +279,15 @@ $state-list-scroll-height-wide:  $map-height-wide - $map-control-height;
         .breakpoint-wide & {
             max-height: $state-list-scroll-height-wide;
             overflow-y: scroll;
+        }
+    }
+
+    .component--expander .component--expander .expander__wrapper .job-wrapper p {
+        // margin-right: 6em;
+        padding-right: 7rem;
+        & span {
+            font-weight: 800;
+            color: $ups-yellow;
         }
     }
 }

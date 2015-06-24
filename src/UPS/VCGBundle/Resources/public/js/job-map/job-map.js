@@ -226,7 +226,7 @@
                 jobsContainer.append($(
                     '<div class="job-wrapper"><p><span>'
                     + job
-                    + '</span>&nbsp;&nbsp;&nbsp;'
+                    + '</span>&nbsp;:&nbsp;'
                     + jobDesc
                     +'</p>'
                     + '<a class="search-button" target="_blank" href="'
