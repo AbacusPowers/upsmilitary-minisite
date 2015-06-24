@@ -13,7 +13,6 @@ $carousel-height--mobile: 16rem;
 header {
     background: url(../img/bg-5b.png) bottom center no-repeat $grey90;
     background-size: cover;
-//    height: $carousel-height--mobile;
     position: relative;
 
     @include header-heights;
@@ -27,13 +26,15 @@ header {
         @include size(3em auto);
 
        .breakpoint-medium &, .breakpoint-large & {
-            @include position(absolute, 2em);
-            width: 4em;
+            @include position(absolute, 1.2em);
+            width: 3em;
         }
 
         .breakpoint-wide & {
             // @include position(absolute, 2em);
-            width: 4em;
+            @include position(absolute, 1.2em);
+            width: 3em;
+
         }
     }
 
@@ -89,6 +90,121 @@ header {
         }
     }
     
+    p.header__country {
+        font-size: 0.7em;
+        font-weight: 800;
+        position: absolute;
+        left: 5.1rem;
+        color: $white70;
+        top: 0.2rem;
+
+        .breakpoint-small & {
+            display: none;
+        }
+    }
+
+    nav.header__nav--top-right {
+        position: absolute;
+        right: 1em;
+        top: 0.1em;
+        z-index: 2000;
+
+        .breakpoint-small & {
+            display: none;
+        }
+
+        ul li {
+            float: right;
+            color: $white70;
+            padding-left: 1.8em;
+            font-size: 1em;
+            font-weight: 800;
+            cursor: pointer;
+            &:hover {
+                color: $ups-yellow;
+            }
+        }
+        p {
+            float: right;
+            display: inline;
+            font-size: 0.7em;
+            padding-left: 1rem;
+            color: $white70;
+            cursor: pointer;
+            &:hover {
+                color: $ups-yellow;
+            }
+        }
+    }
+    
+    nav.header__nav--main {
+        background: rgba( $ups-brown-1, 0.9);
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 1.5em;
+        width: calc( 100% - 5rem );
+        z-index: 1000;
+
+        .breakpoint-small & {
+            display: none;
+        }
+
+        ul li {
+            color: $white;
+            font-size: 0.9em;
+            // display: inline-block;
+            float: left;
+            border-left: 1px solid $white10;
+            padding: 0.6rem 2rem 0.5rem 2rem;
+            height: 2.5rem;
+            // border: 1px dashed $white30;
+            border-right: none;
+            font-weight: 800;
+            @include transition (all 0.2s ease-out);
+
+            i {
+                margin-right: 0.5em;
+                font-size: 1.1em;
+            }
+
+
+
+            &:first-child {
+                border-left: none;
+            }
+
+            &.current-section {
+                color: rgba( $ups-yellow, 1) ;
+            }
+            &:hover {
+                background: rgba( $ups-yellow, 0.9);
+                background: $white70;
+                color: $white;
+                color: $ups-brown-1;
+                // background:red;
+            }
+        }
+
+        &:before {
+            // @include pseudo-block(2.5rem);
+            left: calc( -100% - 5em ); 
+            background: rgba( $ups-brown-1, 0.9);
+             width: 100%;
+        }
+
+        &:after {
+            @include pseudo-block(2.5rem);
+             right: -100%; 
+             background: rgba( $ups-brown-1, 0.9);
+             width: 100%;
+
+
+
+
+        }
+    }
+
     /*Dev Indicator Notes*/
     .breakpoint-small & {
         &:before {
