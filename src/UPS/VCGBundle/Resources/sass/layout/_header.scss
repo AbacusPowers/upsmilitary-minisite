@@ -220,7 +220,7 @@ header {
         // background: green;
         &:before {
             content:'medium-breakpoint';
-            color: $white20;
+            color: red;
             text-transform: uppercase;
             @include position(absolute, 0.25em null null 0.75em );
             z-index: 200;
@@ -231,7 +231,7 @@ header {
         // background: blue;
         &:before {
             content:'large breakpoint';
-            color: $white20;
+            color: red;
             text-transform: uppercase;
             @include position(absolute, 0.25em null null 0.75em );
             z-index: 200;
@@ -242,7 +242,7 @@ header {
         // background: pink;
         &:before {
             content: 'wide breakpoint';
-            color: $white20;
+            color: red;
             text-transform: uppercase;
             @include position(absolute, 0.25em null null 0.75em );
             z-index: 200;

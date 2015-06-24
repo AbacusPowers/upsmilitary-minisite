@@ -22,7 +22,7 @@ footer {
         // background: green;
         &:before {
             content:'medium-breakpoint';
-            color: $white10;
+            color: red;
         }
       }
 
@@ -30,7 +30,7 @@ footer {
         // background: blue;
         &:before {
             content:'large breakpoint';
-            color: $white10;
+            color: red;
         }
     }
 
@@ -38,7 +38,7 @@ footer {
         // background: pink;
         &:before {
             content: 'wide breakpoint';
-            color: $white10;
+            color: red;
           }
     }
 }   
