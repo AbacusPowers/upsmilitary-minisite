@@ -41,11 +41,13 @@ $( document ).ready(function() {
     var slider = setInterval(sliderGo, 6000);
     //doNext();
 
-    $('.pause-slider').click(function() {
+    $('.carousel').on('click','.pause-slider',function() {
         clearInterval(slider);
+        $(this).removeClass('pause-slider fa-pause').addClass('start-slider fa-play');
     });
-    $('.start-slider').click(function() {
+    $('.carousel').on('click','.start-slider',function() {
         slider = setInterval(sliderGo, 6000);
+        $(this).removeClass('start-slider fa-play').addClass('pause-slider fa-pause');
     });
 
 });
