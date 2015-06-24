@@ -6,7 +6,6 @@ File:
 Group: culture-benefits
 Body: |
     <section class="intro">
-        <img src="/bundles/vcg/images/document.png" alt="">
         <h1 class="page--title">Frequently Asked Questions</h1>
     </section>
     <div class="component--expander">

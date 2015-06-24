@@ -295,7 +295,6 @@
         position: absolute;
         left: 50%;
         top: -5em;
-        // position: relative;
 
         .breakpoint-small & {
             display: none;
@@ -307,10 +306,8 @@
 
         a {
             @include size(5em);
-            // vertical-align: top;
             display: inline-block;
             text-align: center;
-            // margin-left: 3em;
             margin: 0;
             margin-right: 0;
             float: left;
@@ -349,10 +346,7 @@
         }
 
         img {
-            // @include site-icon;
             @include size(2em);
-            border-radius: 50%;
-            border-color: $black;
             display: inline-block;
             float: none;
         }

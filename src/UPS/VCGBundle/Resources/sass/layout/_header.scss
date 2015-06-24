@@ -208,8 +208,8 @@ header {
     /*Dev Indicator Notes*/
     .breakpoint-small & {
         &:before {
-            content:'small breakpoint';
-            color: grgrey;
+            content:'s';
+            color: red;
             text-transform: uppercase;
             @include position(absolute, 0.25em null null 0.75em );
             z-index: 200;
@@ -219,8 +219,8 @@ header {
     .breakpoint-medium & {
         // background: green;
         &:before {
-            content:'medium-breakpoint';
-            color: grey;
+            content:'m';
+            color: red;
             text-transform: uppercase;
             @include position(absolute, 0.25em null null 0.75em );
             z-index: 200;
@@ -230,8 +230,8 @@ header {
     .breakpoint-large & {
         // background: blue;
         &:before {
-            content:'large breakpoint';
-            color: grey;
+            content:'l';
+            color: red;
             text-transform: uppercase;
             @include position(absolute, 0.25em null null 0.75em );
             z-index: 200;
@@ -241,8 +241,8 @@ header {
     .breakpoint-wide & {
         // background: pink;
         &:before {
-            content: 'wide breakpoint';
-            color: grey;
+            content: 'w';
+            color: red;
             text-transform: uppercase;
             @include position(absolute, 0.25em null null 0.75em );
             z-index: 200;

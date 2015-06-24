@@ -24,4 +24,7 @@
         }
 
     }
+    iframe {
+        @include position( 0 auto );
+    }
 }
