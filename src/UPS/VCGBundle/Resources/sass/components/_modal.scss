@@ -312,6 +312,9 @@ body.article-view, body.leave-site-view, body.video-view, body.events-view, body
     border-left: none;
     padding: 0;
   }
+  img.logo {
+    display: none;
+  }
 }
 
 /*********************OFFSITE LINK MODAL*************************/
