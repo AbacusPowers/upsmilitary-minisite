@@ -209,7 +209,7 @@ header {
     .breakpoint-small & {
         &:before {
             content:'small breakpoint';
-            color: $white20;
+            color: green;
             text-transform: uppercase;
             @include position(absolute, 0.25em null null 0.75em );
             z-index: 200;

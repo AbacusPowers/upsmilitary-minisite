@@ -22,7 +22,10 @@
         @include position( absolute, nul null 0.4em -1.62em);
         z-index: 1000;
     }*/
-
+    
+    .breakpoint-medium & {
+      top: -9em;
+    }
 }
 
 .breadcrumb {   
