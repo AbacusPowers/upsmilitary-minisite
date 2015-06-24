@@ -96,13 +96,6 @@
             @include position(absolute, -5em 0 null null );
             text-align: right;
             padding-right: 6rem;
-
-            &:after {
-                // @include pseudo-block(5em);
-                @include position(absolute, 0 null null 100% );
-                width: 100%;
-                background: rgba( $ups-yellow, 0.6 );
-            }
             
             i {
                 display: inline;
@@ -120,8 +113,11 @@
             }
         }
 
+
         .breakpoint-medium & {
             padding-top: 0.7em;
+            top: -7em;
+            height: 5em;
 
             p {
                 padding-left: 2em;
@@ -148,6 +144,11 @@
                     right: 0;
                     bottom: -5px;
                 }
+            }
+
+            .breakpoint-medium & {
+                // top: 1em;
+                height: 5rem;
             }
 
             &:hover {

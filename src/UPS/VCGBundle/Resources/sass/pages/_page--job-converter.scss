@@ -65,6 +65,9 @@ and open the template in the editor.
             .breakpoint-small & {
                 content: none;
             }
+            .breakpoint-medium & {
+                top: -2em;
+            }
         }
         
         .component--expander {

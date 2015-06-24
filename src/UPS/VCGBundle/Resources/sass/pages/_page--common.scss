@@ -71,9 +71,7 @@
             height: 5.5em;
         }
 
-        .breakpoint-medium & {
-            padding-right: 2em !important;
-        }
+        
 
         .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & {
             background: $black;
@@ -108,6 +106,8 @@
                 @include position(absolute, 0 null null -100%);
                 background: $black;
                 border-bottom: 1px solid $ups-yellow;
+
+
             }
 
             &:after {
@@ -118,6 +118,27 @@
                 z-index: 0;
             }
         }
+
+        .breakpoint-large &, .breakpoint-wide & {
+            width: 66.6%;
+        }
+
+        .breakpoint-medium & {
+            padding-right: 2em !important;
+            height: 7em;
+            top: -7em;
+
+            &:before {
+                height: 7em;
+            }
+            &:after {
+                height: 5em;
+                top: 0;
+        
+             }
+        }
+
+
         
         ul {
             // background: $black10;
@@ -141,7 +162,20 @@
             display: inline-block;
             
         }
-
+        
+        .breakpoint-medium & h1 { /*infill hack to match the right side height. should be reengineered*/
+            &:after {
+                @include pseudo-block(200%);
+                // height: 5em;
+                // top: 0;
+                left: 100%;
+                bottom: -1px;
+                height: 2rem;
+                background: $grey--darker;
+                border-bottom: 1px solid $ups-yellow;
+                z-index: 1;
+            }
+        }
        
     }    
 }
@@ -259,6 +293,17 @@
         // }     
     }
      
+     .page--jobs, .page--map, .page--job-converter {
+        .breakpoint-large & .title-block, .breakpoint-wide & .title-block {
+            width: 50%;
+        }
+        .breakpoint-medium & .title-block h1:after {
+            border-bottom: none;
+            background: $black;
+            // border-left: 1px solid $ups-yellow;
+        }
+     }
+    
 
     nav.nav--career-explorer {
         position: absolute;
@@ -270,6 +315,9 @@
             display: none;
         }
 
+        .breakpoint-medium & {
+            top: -7em;
+        }
 
         a {
             @include size(5em);

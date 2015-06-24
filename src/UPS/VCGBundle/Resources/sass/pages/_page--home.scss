@@ -30,6 +30,7 @@
     //         background: #222;
     // }
 
+
     .grid-item:nth-child(4) {
         border-right: none;        
     }
@@ -62,6 +63,12 @@
 
 
 ///////////////////Home Page Grid Styles. Content appearance below.///////////////
+// .breakpoint-medium .veteranGateway__liner .title-block:after {
+//         height: 5em !important;
+//         top: 2em !important;
+//     }
+
+
 .grid-item#grid-item--transition-guide {
     height: auto;
     padding-top: 0;

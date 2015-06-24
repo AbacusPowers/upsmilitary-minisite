@@ -11,6 +11,7 @@
     left: 0;
     right: 0;
     @include home-header-heights;
+    background: $black;
 
     // .breakpoint-medium & {
     //     max-width: $max-width--medium;
@@ -160,8 +161,8 @@
     cursor: pointer;
     display: none;
     // font-family: sans-serif;
-    font-size: 1.3em;
-    height: 80px;
+    font-size: 1em;
+    height: 2rem;
     // line-height: 35px;
     position: absolute;
     text-align: center;
@@ -169,11 +170,13 @@
     transform: translate(0, -50%);
     -ms-transform: translate(0, -50%);
     -webkit-transform: translate(0, -50%);
-    width: 2.2rem;
+    width: 2rem;
     z-index: 10;
+    border-radius: 50%;
+    padding: 0;
 
     i {
-        margin-top: 1.8rem;
+        margin-top: 0.45rem;
     }
 
     .breakpoint-small & {
@@ -185,11 +188,11 @@
 }
 
 .carousel-control.prev {
-    left: 0;
+    left: 0.2em;
 }
 
 .carousel-control.next {
-    right: 0;
+    right: 0.2em;
 }
 
 .carousel-control:hover {
@@ -217,6 +220,17 @@
     left: 0;
     position: absolute;
     text-align: center;
+
+    .breakpoint-medium & {
+            width: 50%;
+            left: auto;
+            bottom: 7em;
+        }
+
+    .breakpoint-small & {
+        font-size: 0.9em;
+        bottom: 0;
+    }
 
     .carousel-indicators {
         // background: red;
@@ -248,7 +262,7 @@
         color: $white80;
         cursor: pointer;
         display: block;
-        font-size: 1.4rem;
+        font-size: 1rem;
         font-family: sans-serif;
         position: relative;
         padding: 0rem 0.5rem 0 0.5rem;
@@ -256,6 +270,13 @@
 
         &:hover {
             color: $ups-yellow;
+        }
+
+        .breakpoint-medium & {
+            font-size: 0.9em;
+        }
+        .breakpoint-small & {
+        font-size: 0.9em;
         }
     }
 
@@ -278,7 +299,7 @@
         color: $white80;
         cursor: pointer;
         display: inline-block;
-        font-size: 1.4rem;
+        font-size: 1rem;
         // float: right;
         // position: relative;
         padding: 0rem 0.5rem 0 0.5rem;
@@ -287,6 +308,14 @@
 
         &:hover {
             color: $ups-yellow;
+        }
+
+        .breakpoint-medium & {
+            font-size: 0.9em;
+        }
+
+        .breakpoint-small & {
+            font-size: 0.9em;
         }
 
     }

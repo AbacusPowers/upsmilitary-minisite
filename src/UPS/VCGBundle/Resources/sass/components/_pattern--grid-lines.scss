@@ -111,8 +111,12 @@ $grid-item-hover-color: #222;
         color: $ups-grey-1;
         line-height: 1.5;
         margin-left: 2rem;
-        margin-top: 0;
+        margin-top: 1em;
         margin-right: 2rem;
+
+        &:first-child {
+            margin-top: 0;
+        }
         
         .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & {
             max-width: 80%;
