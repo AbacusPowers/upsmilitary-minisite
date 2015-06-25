@@ -11,9 +11,9 @@ Body: |
     
     <h3>Military OneSource</h3>
     
-    <p>This one-stop shop for military support offers everything from advice on parenting to tax tips for U.S. veterans. It’s a comprehensive source of help for all things military and is available to all service members and their families. 800-342-9647; <a href="http://www.militaryonesource.mil/" class="external">militaryonesource.mil</a></p>
+    <p>This one-stop shop for military support offers everything from advice on parenting to tax tips for U.S. veterans. It’s a comprehensive source of help for all things military and is available to all service members and their families. 800-342-9647; <a href="http://www.militaryonesource.mil" class="external">militaryonesource.mil</a></p>
 
-    <h3><Legal Support</h3>
+    <h3>Legal Support</h3>
     
     <p>All currently serving reservists and National Guard soldiers have access to legal support through the military’s legal specialists. The judge advocate general, or JAG, office on each military installation can help with documents like wills or powers of attorney, and can advise on a wide range of legal matters. Individuals can contact the information desk or website of their nearest installation for a phone number and nearest legal assistance office.</p>
     
@@ -27,7 +27,7 @@ Body: |
     
     <h3>Veterans Affairs</h3>
     
-    <p>Service members who have deployed for a certain amount of time, or who have served stateside for a number of years, are eligible for benefits through the Department of Veterans Affairs (VA). The two most used are home loan programs, which let first-time homebuyers take advantage of a government-secured loan, and VA hospitals, which provide free or low-cost medical services for U.S. veterans. 800-827-1000;<a href="http://www.va.gov/" class="external">va.gov</a></p>
+    <p>Service members who have deployed for a certain amount of time, or who have served stateside for a number of years, are eligible for benefits through the Department of Veterans Affairs (VA). The two most used are home loan programs, which let first-time homebuyers take advantage of a government-secured loan, and VA hospitals, which provide free or low-cost medical services for U.S. veterans. 800-827-1000; <a href="http://www.va.gov/" class="external">va.gov</a></p>
     
     <h3>Defense Centers of Excellence for Psychological Health &amp; Traumatic Brain Injury</h3>
     
@@ -48,6 +48,6 @@ Body: |
     <p>Find more support resources at <a href="http://www.ebenefits.va.gov/ebenefits/nrd" class="external">www.ebenefits.va.gov/ebenefits/nrd</a></p>
 
 
-    <p>This document contains links to an external website or websites that UPS does not administer or fund. UPS does not endorse any products or services advertised on or available through this website or websites, nor does it control the opinions or information presented there.</p>
+    <p class="disclaimer--article">This document contains links to an external website or websites that UPS does not administer or fund. UPS does not endorse any products or services advertised on or available through this website or websites, nor does it control the opinions or information presented there.</p>
 
 Expanders:

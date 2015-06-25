@@ -47,11 +47,11 @@ Body: |
 
     <p>Yes. Not everyone wants to use their GI Bill benefits to go to college. UPS has made certain that our Registered Apprenticeship program meets all the requirements set out by the DOL and Veterans Affairs (VA) to allow you to use any available GI Bill benefits. The benefits are given in the form of monthly stipends, and they are tax-free. You can learn more about these benefits at <a href="http://benefits.va.gov/gibill" class="external">benefits.va.gov/gibill</a>.</p>
     
-    <p>How much will my GI Bill benefits pay?</p>
+    <h3>How much will my GI Bill benefits pay?</h3>
     
     <p>It’s complicated, but generally your GI Bill benefits will last for 36 months, depending on whether or not you have used any benefits before signing up for the UPS RA program. There are other variables as well, including your length of active duty service, whether you are in the Montgomery GI Bill or Post-9/11 GI Bill program, your discharge status and other factors. The only way to know for certain is to apply to the VA. To learn more and apply, visit <a href="http://benefits.va.gov/gibill/apply.asp" class="external">benefits.va.gov/gibill/apply.asp</a>.</p>
     
-    <p>I already used my GI Bill benefits. Can I still qualify for an apprenticeship?</p>
+    <h3>I already used my GI Bill benefits. Can I still qualify for an apprenticeship?</h3>
     
     <p>Yes. Your acceptance into the UPS Registered Apprenticeship program is in no way dependent on your receiving GI Bill benefits.</p>
     
@@ -71,6 +71,6 @@ Body: |
 
     <p>You’ll receive a Certificate of Completion from the DOL, and UPS will notify the DOL and the VA that you have completed the program.</p>
     
-    <p>This document contains links to an external website or websites that UPS does not administer or fund. UPS does not endorse any products or services advertised on or available through this website or websites, nor does it control the opinions or information presented there.</p>
+    <p class="disclaimer--article">This document contains links to an external website or websites that UPS does not administer or fund. UPS does not endorse any products or services advertised on or available through this website or websites, nor does it control the opinions or information presented there.</p>
 
 Expanders:

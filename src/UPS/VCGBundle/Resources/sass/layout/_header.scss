@@ -1,4 +1,4 @@
-$header-height--small: 16rem;
+$header-height--small: 20rem;
 $header-height--medium: 26rem;
 $header-height--large: 28rem;
 $header-height--wide: 30rem;
@@ -205,48 +205,48 @@ header {
         }
     }
 
-    /*Dev Indicator Notes*/
-    .breakpoint-small & {
-        &:before {
-            content:'small breakpoint';
-            color: green;
-            text-transform: uppercase;
-            @include position(absolute, 0.25em null null 0.75em );
-            z-index: 200;
-        }
-    }
+    // /*Dev Indicator Notes*/
+    // .breakpoint-small & {
+    //     &:before {
+    //         content:'s';
+    //         color: red;
+    //         text-transform: uppercase;
+    //         @include position(absolute, 0.25em null null 0.75em );
+    //         z-index: 200;
+    //     }
+    // }
 
-    .breakpoint-medium & {
-        // background: green;
-        &:before {
-            content:'medium-breakpoint';
-            color: red;
-            text-transform: uppercase;
-            @include position(absolute, 0.25em null null 0.75em );
-            z-index: 200;
-        }
-    }
+    // .breakpoint-medium & {
+    //     // background: green;
+    //     &:before {
+    //         content:'m';
+    //         color: red;
+    //         text-transform: uppercase;
+    //         @include position(absolute, 0.25em null null 0.75em );
+    //         z-index: 200;
+    //     }
+    // }
 
-    .breakpoint-large & {
-        // background: blue;
-        &:before {
-            content:'large breakpoint';
-            color: red;
-            text-transform: uppercase;
-            @include position(absolute, 0.25em null null 0.75em );
-            z-index: 200;
-        }
-    }
+    // .breakpoint-large & {
+    //     // background: blue;
+    //     &:before {
+    //         content:'l';
+    //         color: red;
+    //         text-transform: uppercase;
+    //         @include position(absolute, 0.25em null null 0.75em );
+    //         z-index: 200;
+    //     }
+    // }
 
-    .breakpoint-wide & {
-        // background: pink;
-        &:before {
-            content: 'wide breakpoint';
-            color: red;
-            text-transform: uppercase;
-            @include position(absolute, 0.25em null null 0.75em );
-            z-index: 200;
-          }
-    }
+    // .breakpoint-wide & {
+    //     // background: pink;
+    //     &:before {
+    //         content: 'w';
+    //         color: red;
+    //         text-transform: uppercase;
+    //         @include position(absolute, 0.25em null null 0.75em );
+    //         z-index: 200;
+    //       }
+    // }
 }
 

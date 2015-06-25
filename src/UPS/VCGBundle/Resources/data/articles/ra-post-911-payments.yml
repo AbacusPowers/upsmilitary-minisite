@@ -42,7 +42,7 @@ Body: |
 
     <p>By law, every GI Bill participant under the post-9/11 program receives the Basic Allowance for Housing (BAH) rate at the E-5 level regardless of their rank while they were in the military. This chart shows dollar amounts for an E-5 that represent the maximum payout level for an apprenticeship program at each location at that rank. (Rates are current as of August 2014.)*</p>
 
-    <table>
+    <table class="table--location">
       <tr>
         <td>Location</td>
         <td>ZIP</td>
@@ -155,6 +155,6 @@ Body: |
       </tr>
     </table>
 
-    <h4>*Please note that not all veterans will receive the maximum payout, these figures change<br />annually, and every GI Bill participant receives the BAH rate at the E-5 level. Only the VA can determine your individual benefits. To search for current BAH rates at other locations, go to <a href="http://defensetravel.dod.mil/site/bahCalc.cfm" class="external">defensetravel.dod.mil/site/bahCalc.cfm</a>.</h4>
+    <h4>*Please note that not all veterans will receive the maximum payout, these figures change annually, and every GI Bill participant receives the BAH rate at the E-5 level. Only the VA can determine your individual benefits. To search for current BAH rates at other locations, go to <a href="http://defensetravel.dod.mil/site/bahCalc.cfm" class="external">defensetravel.dod.mil/site/bahCalc.cfm</a>.</h4>
 
 Expanders:

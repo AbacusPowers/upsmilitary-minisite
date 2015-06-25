@@ -57,8 +57,6 @@
     }
 
     .title-block {
-        // height: 5em;
-        // background: red;
         background: #222;
         padding-left: 1em;
         padding-top: 1.5em;
@@ -70,8 +68,6 @@
         .breakpoint-small & {
             height: 5.5em;
         }
-
-        
 
         .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & {
             background: $black;
@@ -176,9 +172,12 @@
                 z-index: 1;
             }
         }
-       
     }    
+
 }
+
+
+ 
 
 .page {
     @include clearfix;
@@ -279,37 +278,23 @@
 
 
 //////////////////////*************CAREER SECTION PAGES**********////////////////////
-     #side--b{
-        // position: relative;
-        // &:before {
-        //     @include pseudo-block($vertical-thread-width);
-        //     background: $white05;
-        //     height: 100%;
-        //     left: 0;
-
-        //     .breakpoint-small & {
-        //         content: none;
-        //     }
-        // }     
-    }
      
-     .page--jobs, .page--map, .page--job-converter {
+     .page--jobs, .page--map, .page--job-converter, .page--ddform214 {
         .breakpoint-large & .title-block, .breakpoint-wide & .title-block {
             width: 50%;
         }
+
         .breakpoint-medium & .title-block h1:after {
             border-bottom: none;
             background: $black;
-            // border-left: 1px solid $ups-yellow;
         }
-     }
+    }
     
 
     nav.nav--career-explorer {
         position: absolute;
         left: 50%;
         top: -5em;
-        // position: relative;
 
         .breakpoint-small & {
             display: none;
@@ -321,10 +306,8 @@
 
         a {
             @include size(5em);
-            // vertical-align: top;
             display: inline-block;
             text-align: center;
-            // margin-left: 3em;
             margin: 0;
             margin-right: 0;
             float: left;
@@ -362,11 +345,8 @@
             }
         }
 
-        img {
-            // @include site-icon;
+        img, svg {
             @include size(2em);
-            border-radius: 50%;
-            border-color: $black;
             display: inline-block;
             float: none;
         }

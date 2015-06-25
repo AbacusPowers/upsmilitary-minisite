@@ -27,7 +27,10 @@
             'Warehouse Associate': 'Warehouse associates participate in a range of daily operations, including loading and unloading.',
             'UPS Freight Over the Road Driver': 'Over-the-road drivers operate tractor-trailers to deliver freight to two or more locations.',
             'Part-time Operations Supervisor': 'Part-time operations supervisors provide direct supervision to seven to 10 part-time package handlers.',
-            'Business Analyst': 'Business systems analysts serve as liaisons between the business community and UPS Information Services.'
+            'Business Analyst': 'Business systems analysts serve as liaisons between the business community and UPS Information Services.',
+            'General Management Staff': 'Employees in these positions work in areas such as Operations, Marketing, Human resources and more.',
+            'Administrative Support Staff': 'Employees in these positions perform general business functions, like customer service and organizational tasks.',
+            'Information Technology Staff': 'Employees in these positions work with advanced technology to support UPS operations.'
         },
  
         RX_JOB_RM:          / (\(Oct-Dec\))/i,

@@ -55,6 +55,10 @@ $( document ).ready(function() {
         e.preventDefault();
         jobTitle = $(this).closest('.expander__wrapper').find('.expander__parent').text();
 
+        if (jobTitle == 'Driver Helper (October-December)') {
+            jobTitle = 'Driver Helper';
+        }
+
         if( $(this).children('.zip-code').val() ) {
             zipCode = $(this).children('.zip-code').val();
             radiusOn = 'true';
@@ -76,6 +80,10 @@ $( document ).ready(function() {
     $('.job-search--job-converter').submit(function(e){
         e.preventDefault();
         jobTitle = $(this).closest('.expander__wrapper').find('.expander__parent').text();
+
+        if (jobTitle == 'Driver Helper (October-December)') {
+            jobTitle = 'Driver Helper';
+        }
 
         if( $(this).children('.zip-code').val() ) {
             zipCode = $(this).children('.zip-code').val();

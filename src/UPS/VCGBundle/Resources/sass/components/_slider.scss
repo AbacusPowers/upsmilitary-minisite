@@ -12,26 +12,6 @@
     right: 0;
     @include home-header-heights;
     background: $black;
-
-    // .breakpoint-medium & {
-    //     max-width: $max-width--medium;
-    //     margin-left: auto;
-    //     margin-right: auto;
-    // }
-
-    // .breakpoint-large & {
-    //     max-width: $max-width--large;
-    //     margin-left: auto;
-    //     margin-right: auto;
-    // }
-
-    // .breakpoint-wide & {
-    //     max-width: $max-width--wide;
-    //     // background: red;
-    //     margin-left: auto;
-    //     margin-right: auto;
-    // }
-
 }
 
 .carousel-inner {
@@ -54,7 +34,6 @@
     .slider-text-wrapper {
         @include constrain-content;
         @include home-header-heights;
-        // background:yellow;
         position: absolute;
         text-align: left;
         top: 0;
@@ -74,19 +53,12 @@
             bottom: 7rem;
             z-index: 0;
         }
-        
-        .breakpoint-wide &:after {
-            // @include pseudo-block(100%);
-            background: $black10;
-            left: 100%;
-            z-index: 0;
-            bottom: 5rem;
-        }
 
         a {
             font-weight: 400;
             bottom: 3rem;
             position: absolute;
+            margin-left: -0.5rem;
             
             h1.slider-text {
                 display: table;
@@ -118,8 +90,6 @@
         }
     }
 
-    
-
     .breakpoint-medium & {
       height: $header-height--medium;
     }
@@ -135,7 +105,6 @@
     .breakpoint-small & {
 
     }
-
 }
 
 .carousel-item img {

@@ -39,7 +39,7 @@ Body: |
 
     <p>Learn more details about the program at <a href="http://www.crcprogram.com" class="external">crcprogram.com</a>.</p>
     
-    <p>This document contains links to an external website or websites that UPS does not administer or fund. UPS does not endorse any products or services advertised on or available through this website or websites, nor does it control the opinions or information presented there. </p>
+    <p class="disclaimer--article">This document contains links to an external website or websites that UPS does not administer or fund. UPS does not endorse any products or services advertised on or available through this website or websites, nor does it control the opinions or information presented there. </p>
     
     <h3>A quick look at UPS Education Assistance benefits:</h3>
 
