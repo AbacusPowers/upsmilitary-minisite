@@ -55,7 +55,7 @@ $( document ).ready(function() {
         e.preventDefault();
         jobTitle = $(this).closest('.expander__wrapper').find('.expander__parent').text();
 
-        if (jobTitle = 'Driver Helper (October-December)') {
+        if (jobTitle == 'Driver Helper (October-December)') {
             jobTitle = 'Driver Helper';
         }
 
@@ -81,7 +81,7 @@ $( document ).ready(function() {
         e.preventDefault();
         jobTitle = $(this).closest('.expander__wrapper').find('.expander__parent').text();
 
-        if (jobTitle = 'Driver Helper (October-December)') {
+        if (jobTitle == 'Driver Helper (October-December)') {
             jobTitle = 'Driver Helper';
         }
 
