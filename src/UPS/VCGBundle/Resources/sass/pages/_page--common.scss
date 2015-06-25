@@ -345,7 +345,7 @@
             }
         }
 
-        img {
+        img, svg {
             @include size(2em);
             display: inline-block;
             float: none;
