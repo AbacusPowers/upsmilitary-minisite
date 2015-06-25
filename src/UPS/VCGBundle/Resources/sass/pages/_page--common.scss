@@ -66,7 +66,8 @@
         }
 
         .breakpoint-small & {
-            height: 5.5em;
+            height: 8.5em;
+            padding-top: 3.5em;
         }
 
         .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & {
@@ -233,13 +234,6 @@
                 display: block;
             }
         }
-
-        .component--expander {
-            /*width: 50%;*/
-            /*margin-left: 50%;*/
-/*            right:0;
-            top: 0;*/
-        }
     }
 
     section.title {
@@ -249,7 +243,7 @@
         // position: absolute;
     }
 
-    /*form stuff*/
+    ////////////////*form stuff*********************************/
 
     
     input[type=text] {
@@ -289,94 +283,97 @@
             background: $black;
         }
     }
+
+    .page--jobs, .page--map, .page--job-converter {
+        
+        .breakpoint-small & {
+            .title-block {
+                position: relative;
+                top: 5em;
+            }
+        }
     
 
-    nav.nav--career-explorer {
-        position: absolute;
-        left: 50%;
-        top: -5em;
+        nav.nav--career-explorer {
+            position: absolute;
+            left: 50%;
+            top: -5em;
 
-        .breakpoint-small & {
-            display: none;
-        }
-
-        .breakpoint-medium & {
-            top: -7em;
-        }
-
-        a {
-            @include size(5em);
-            display: inline-block;
-            text-align: center;
-            margin: 0;
-            margin-right: 0;
-            float: left;
-            margin-left: 0;
-            padding: 1em 0 0 0;
-
-            &:nth-child(1) {
-               background: $black60;
-            }
-
-            &:nth-child(2) {
-               background: $black40;
-            }
-
-            &:nth-child(3) {
-               background: $black20;
-            }
-
-            &.current-page:after {
-                @include pseudo-block(4px);
-                bottom: -4px;
-                width: 5em;
+            .breakpoint-small & {
+                position: relative;
+                height: 5em;
                 background: $ups-yellow;
+                top: -5.5em;
+                left: 0;
             }
-            svg {
-              fill: $white;
-            }
-        }
 
-        a:hover {
-            background: $ups-yellow;
+            .breakpoint-medium & {
+                top: -7em;
+            }
+
+            a {
+                @include size(5em);
+                display: inline-block;
+                text-align: center;
+                margin: 0;
+                margin-right: 0;
+                float: left;
+                margin-left: 0;
+                padding: 1em 0 0 0;
+
+                &:nth-child(1) {
+                   background: $black60;
+                }
+
+                &:nth-child(2) {
+                   background: $black40;
+                }
+
+                &:nth-child(3) {
+                   background: $black20;
+                }
+
+                &.current-page:after {
+                    @include pseudo-block(4px);
+                    bottom: -4px;
+                    width: 5em;
+                    background: $ups-yellow;
+                }
+
+                svg {
+                  fill: $white;
+                }
+            }
+
+            a:hover {
+                background: $ups-yellow;
+
+                .caption {
+                    color: $black;
+                }
+                svg {
+                    fill: $black;
+                }
+            }
+
+            img, svg {
+                @include size(2em);
+                display: inline-block;
+                float: none;
+            }
+
 
             .caption {
-                color: $black;
+                color: $white;
+                text-transform: uppercase;
+                display: block;
+                font-size: 0.7em;
             }
-            svg {
-                fill: $black;
-            }
-        }
-
-        img, svg {
-            @include size(2em);
-            display: inline-block;
-            float: none;
-        }
-
-
-        .caption {
-            color: $white;
-            text-transform: uppercase;
-            display: block;
-            font-size: 0.7em;
         }
     }
-    
 }
 
 h1.page--title {
-    // @include position(relative, 4rem null null 2rem );
-    // padding-top: 30px;
     color: $grey70;
     margin: 0 1rem 1rem;
-    // background: red;
-
-    .breakpoint-wide & {
-        // left: 0;
-    }
-}
-
- section.intro {
-    // padding: 1em;
 }

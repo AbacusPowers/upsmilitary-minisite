@@ -112,12 +112,16 @@
         border-radius: 0;
         padding: 0;
         height: auto;
-        width: auto;
+        width: 50%;
         bottom: 0;
         display: block;
         clear: left;
         float: none;
         margin-top: 1.5em;
+    }
+        
+    .badge-wrapper {
+        background: red;
     }
 
     img.badge--apple, img.badge--google, svg#badge--google {
@@ -134,15 +138,37 @@
     }
 
     img.badge--apple {
-        top: 7em;
+        top: 9em;
         width: 8.5em;
         height: 2.79em;
+
+        .breakpoint-small & {
+            top: auto;
+            bottom: 5rem;
+            right: 2rem;
+        }
+
+        .breakpoint-medium & {
+            top: 12em;
+            right: 1.5em;
+        }
     }
 
     img.badge--google, svg#badge--google {
-        top: 11em;
+        top: 13em;
         width: 8.5em;
         height: 2.79em;
+         .breakpoint-small & {
+            top: auto;
+            bottom: 1rem;
+            right: 2rem;
+
+        }
+
+        .breakpoint-medium & {
+            top: 16em;
+            right: 1.5em;
+        }
     }
 
 }

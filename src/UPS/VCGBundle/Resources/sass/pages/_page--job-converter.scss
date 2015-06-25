@@ -10,15 +10,10 @@ and open the template in the editor.
 
 .page .page--job-converter {
     .form-section {
-        padding: 2.6em 3em 3em 3em;
-        // max-width: 30em;
+        padding: 1em 1em 3em 1em;
         margin: 0 auto auto auto;
-        // background: $grey--dark;
         height: 100%;
         
-        //  -webkit-transition: height 1.5s ease-out;
-        // transition: height 1.5s ease-out;
-
         .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & {
             padding: 3em 3em 10em 6.5em;
         }
@@ -34,25 +29,27 @@ and open the template in the editor.
             margin-left: 6em;
             margin-bottom: 0.8em;
             margin-top: -0.3em;
+            .breakpoint-small & {
+                margin-left: 5.1em;
+            }
         }
 
         select {
             position: relative;
             width: 100%;
-            // z-index: 100;
         }
-
-
+        
+        input[type="text"].disabled-input {
+            background: $grey--dark;
+        }
     }
 
     #side--a {
         position: relative;
-        // z-index: 10;
     }
 
     #side--b{
         position: relative;
-        // padding-bottom: 3em;
 
         &:before {
             @include pseudo-block($vertical-thread-width);
@@ -73,16 +70,6 @@ and open the template in the editor.
         .component--expander {
             margin-bottom: 4em;
 
-            // .expander__wrapper:after {
-            //     @include pseudo-block(100px);
-            //     width: 100%;
-            //     right: 100%;
-            //     height: calc( 200% - 1px );
-            //     z-index: 1;
-            //     top: 0;
-            //     background: $grey--dark;
-            // }
-
             .expander__child p:last-of-type {
                 padding-bottom: 1em;
             }
@@ -94,6 +81,10 @@ and open the template in the editor.
             padding: 2.6em 3em 1.5em 3em;
             -webkit-transition: opacity 1.5s ease-out;
             transition: opacity 1.5s ease-out;
+
+            .breakpoint-small & {
+                padding: 1em;
+            }
             
             h1 {
                 color: $white;
@@ -104,7 +95,6 @@ and open the template in the editor.
             }
 
             h3 {
-                // margin-top: 0;
                 color: $grey--medium;
             }
 

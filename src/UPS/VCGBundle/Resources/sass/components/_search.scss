@@ -4,6 +4,10 @@
     padding: 1.5em 3em 2em 2.5em;
     margin-left: -1.5em;
 
+    .breakpoint-small & {
+        padding-right: 2em;
+    }
+
     h4 {
         color: $white;
         margin-top: 0;
