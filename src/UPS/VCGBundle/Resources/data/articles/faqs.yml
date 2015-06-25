@@ -8,7 +8,7 @@ Body: |
     <section class="intro">
         <h1 class="page--title">Frequently Asked Questions</h1>
     </section>
-    <div class="component--expander">
+    <div class="component--expander component--expander--faq">
         <section class='expander__wrapper'>
             <a data-id='1' class='button expand-button'>
                 <h2 class='expander__parent'>When is the best time to contact UPS about working with them after I transition?</h2>

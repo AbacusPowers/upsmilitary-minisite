@@ -74,11 +74,7 @@ Body: |
       </tr>
       <tr>
         <td>Regular military compensation, housing allowance with cost of living allowances, additional hostile fire pay, etc.</td>
-        <td>Competitive compensation packages, salaries</td>
-      </tr>
-      <tr>
-        <td>and hourly rates</td>
-        <td></td>
+        <td>Competitive compensation packages, salaries and hourly rates</td>
       </tr>
       <tr>
         <td>GI Bill</td>
@@ -119,6 +115,6 @@ Body: |
 
     <h6>The compensation and benefits information provided here is for informational purposes only. Not every product or service is available or applicable to every employee, and the availability of a product or service is subject to change. UPS reserves the right to alter or delete the information provided as required by UPS’ business needs.</h6>
 
-    <p>This document contains links to an external website or websites that UPS does not administer or fund. UPS does not endorse any products or services advertised on or available through this website or websites, nor does it control the opinions or information presented there. </p>
+    <p class="disclaimer--article">This document contains links to an external website or websites that UPS does not administer or fund. UPS does not endorse any products or services advertised on or available through this website or websites, nor does it control the opinions or information presented there. </p>
 
 Expanders:

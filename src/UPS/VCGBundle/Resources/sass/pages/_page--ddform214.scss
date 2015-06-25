@@ -1,5 +1,26 @@
 .page .page--ddform214 {
-    // margin-bottom: 5em;
+
+    #side--a {
+        position: relative;
+
+        .intro {            
+
+            h1 {
+                margin-left: 6.5rem;
+                  font-size: 1.3em;
+                  margin-top: 0.8em;
+                  margin-bottom: 1.5em;
+                  margin-left: 4.8em;
+                  margin-right: 0.7em;
+                  color: $white;
+
+            }
+
+            p {
+                margin-left: 2em;
+            }
+        }
+    }
 
     #side--b {
         p {
@@ -16,6 +37,8 @@
     }
     
     .intro {
+        padding: 1.5em 3em 1.5em 0em;
+
         img {
             @include position(absolute, 0 null null 1em );
             @include size(6em);
@@ -58,12 +81,23 @@
 
         .breakpoint-small & {
             p{
-                margin: 3em;
+                margin: 2em;
             }
 
         }
+
       .dd214-download {
         color: $ups-yellow;
+        margin-left: 1.8rem;
+        position: absolute;
+        font-size: 0.8em;
+        // text-align: right;
+        // right: 3rem;
+        margin-top: 0.5em;
+        .breakpoint-small & {
+            right: 1rem;
+        }
+
         &:hover {
           color: $grey60;
         }
@@ -73,11 +107,16 @@
 
     section.dd-form214 {
         display: none;
+        margin-top: 2em;
+        text-align: center;
+        
         
         .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & {
             display: block;
-            /*@include size( 50% auto);*/
-            // @include position(static, 14em auto);
+        }
+        
+        h2 {
+            color: $ups-yellow;
         }
 
         svg {
@@ -85,7 +124,7 @@
             display: block;
             margin-left: auto;
             margin-right: auto;
-            // margin-top: 2em;
+            
             /*padding: 1em;*/
             background: white;
             margin-bottom: 2rem;
@@ -93,6 +132,12 @@
             a.svg-target {
                 cursor: pointer;
             }
+        }
+    }
+
+    .component--expander {
+        .breakpoint-small & {
+            border-top: 1px solid $white30;
         }
     }
 

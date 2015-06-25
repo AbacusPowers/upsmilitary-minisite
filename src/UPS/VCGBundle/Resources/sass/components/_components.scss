@@ -2,8 +2,9 @@
 
 /*modal content styling*/
 
-.article, .events, .faqs, .video, .leave-site {
-    p, h1, h2, ul li {
+
+.article, .events, .faqs, .leave-site {
+    p, h1, h2, h3, h4, ul li, ol li {
         color: $black;
     }
 
@@ -13,39 +14,111 @@
         width: 100%;
         text-transform: capitalize;
         margin-bottom: 1.2em;
+
+        .breakpoint-small &, .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & {
+            width: calc( 100% - 8rem );
+        }
+
+        .breakpoint-small & {
+            font-size: 1.2em;
+            margin-left: 4rem;
+            margin-top: -3.3rem;
+        }
     }
+
     h3, h4 {
       color: $grey--medium;
     }
 
-}
-
-.article, .events, .faqs, .leave-site {
-
-    h1 {
-        .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & {
-            width: calc( 100% - 8rem );
-        }
-
+    h2 {
+        color: $black50;
+        font-size: 1.2em;
+        margin-top: 2rem;
+        margin-bottom: 1em;
     }
 
-    h2 {
-        font-size: 1.2em;
+    h3 {
+        color: $black50;
+        text-transform: capitalize;
+        margin-top: 2rem;
+        margin-bottom: 0.2em;
+    }
+
+    h4 {
+        color: $black80;
+        &.definition {
+            margin-bottom: 1em;
+            span {
+                font-weight: 400;
+                font-size: 0.9rem;
+            }
+        }
+    }
+
+    h6 {
+        font-size: 0.7em;
+        font-weight: 800;
+        margin-top: 1rem;
+    }
+
+    p {
+        margin-bottom: 1rem;
+
+        &:first-of-type{ 
+            // margin-top: 1em;
+        }
+    }
+
+    p.disclaimer--article{
+        font-weight: 800;
+        font-size: 0.7em;
+        margin-top: 2rem;
+    }
+
+    p > a {
+        color: $ups-brown-1;
+        font-weight: 800;
+
+        &:hover {
+          color: $grey;
+        }
+    }
+
+    ul, ol {
+        margin-left: 2em;
+        margin-bottom: 1em;
+    }
+
+    ol li {
+        font-size: 0.9em;
+        list-style-type: decimal;
+        margin-bottom: 0.5em;
     }
 
     ul li {
-        font-weight: 800;
-        text-transform: capitalize;
-
+        font-size: 0.9em;
+        list-style-type: circle;
+        margin-bottom: 0.5em;
     }
 
-    ul {
-        list-style-type: disc;
+    td {
+        font-size: 0.9em;
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+
+    tr > td:last-child {
+        border-left: 1px dotted rgba( $black, 0.04 );
+    }
+    table.table--location td {
+        border-right: 1px dotted rgba( $black, 0.04 );
+        &:last-child {
+            border-right: none;
+        }
     }
 }
 
 .events {
-
     .event__wrapper {
         border-top: 1px solid $ups-grey-1;
         padding-top: 1em;
