@@ -91,7 +91,7 @@ $( function(){
     //STICKY!
     //requires sticky-kit
     $("section.dd-form214").stick_in_parent({recalc_every: 1, bottoming: true});
-    $('.expander__wrapper').on('classChange', function() {
+    $('.expander__wrapper','html:not(.breakpoint-small)').on('classChange', function() {
         var columnHeight = $('#side--b').height();
         $('#side--a').css('min-height', columnHeight).trigger("sticky_kit:recalc");
     });

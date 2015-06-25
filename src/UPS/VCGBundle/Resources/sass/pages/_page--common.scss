@@ -315,15 +315,15 @@
             padding: 1em 0 0 0;
 
             &:nth-child(1) {
-               background: $black50; 
+               background: $black60;
             }
 
             &:nth-child(2) {
-               background: $black30; 
+               background: $black40;
             }
 
             &:nth-child(3) {
-               background: $black10; 
+               background: $black20;
             }
 
             &.current-page:after {
@@ -331,6 +331,9 @@
                 bottom: -4px;
                 width: 5em;
                 background: $ups-yellow;
+            }
+            svg {
+              fill: $white;
             }
         }
 
@@ -350,6 +353,7 @@
             display: inline-block;
             float: none;
         }
+
 
         .caption {
             color: $white;
