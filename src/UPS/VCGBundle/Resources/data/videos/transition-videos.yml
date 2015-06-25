@@ -1,20 +1,20 @@
 resume:
   Url: cfaSMhvsRsk
-  Title: Tips For Your Resume
+  Title: Tips for Your Resume
   Prev: interview
   Next: networking
 networking:
   Url: f19OngH6qy4
-  Title: Tips For Networking In Your Job Search
+  Title: Tips for Networking in Your Job Search
   Prev: resume
   Next: social-media
 social-media:
   Url: HQZ1yEH0idw
-  Title: Tips For Using Social Media In Your Job Search
+  Title: Tips for Using Social Media in Your Job Search
   Prev: networking
   Next: interview
 interview:
   Url: V9SOJQ6p068
-  Title: Tips For Your Interview
+  Title: Tips for Your Interview
   Prev: social-media
   Next: resume
