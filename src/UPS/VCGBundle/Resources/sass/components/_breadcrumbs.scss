@@ -56,7 +56,6 @@
   $breadcrumb-color-hover: white;
   $breadcrumb-color-active: $breadcrumb-color;
 
-  // margin-bottom: $base-spacing;
   text-align: left;
 
 
@@ -68,7 +67,6 @@
     display: inline-block;
     font-size: 1em;
     line-height: $breadcrumb-height;
-    // margin-bottom: 2px;
     margin-right: -5px;
     padding: 0 ($breadcrumb-height / 4) 0 ($breadcrumb-height / 2);
     position: relative;
