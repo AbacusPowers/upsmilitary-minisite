@@ -7,38 +7,54 @@ footer {
     text-align: center;
     padding-top: 30px;
     font-size: 0.9rem;
+    position: relative;
 
-    // .breakpoint-small & {
-    //     // background: red;
-    //     &:before {
-    //         content:'small breakpoint';
-    //         color: $white10;
-    //     }
-    //   }
+   .breakpoint-small & {
+        &:before {
+            content:'s';
+            color: rgba( red, 0.5 );
+            font-size: 0.8em;
+            text-transform: uppercase;
+            @include position(absolute, null null 0.75em 0.75em );
+            z-index: 200;
+        }
+    }
 
-    // .breakpoint-medium & {
-    //     // background: green;
-    //     &:before {
-    //         content:'medium-breakpoint';
-    //         color: red;
-    //     }
-    //   }
+    .breakpoint-medium & {
+        // background: green;
+        &:before {
+            content:'m';
+            color: rgba( red, 0.5 );
+            font-size: 0.8em;
+            text-transform: uppercase;
+            @include position(absolute, null null 0.75em 0.75em );
+            z-index: 200;
+        }
+    }
 
-    // .breakpoint-large & {
-    //     // background: blue;
-    //     &:before {
-    //         content:'large breakpoint';
-    //         color: red;
-    //     }
-    // }
+    .breakpoint-large & {
+        // background: blue;
+        &:before {
+            content:'l';
+            color: rgba( red, 0.5 );
+            font-size: 0.8em;
+            text-transform: uppercase;
+            @include position(absolute, null null 0.75em 0.75em );
+            z-index: 200;
+        }
+    }
 
-    // .breakpoint-wide & {
-    //     // background: pink;
-    //     &:before {
-    //         content: 'wide breakpoint';
-    //         color: red;
-    //       }
-    // }
+    .breakpoint-wide & {
+        // background: pink;
+        &:before {
+            content: 'w';
+            color: rgba( red, 0.5 );
+            font-size: 0.8em;
+            text-transform: uppercase;
+            @include position(absolute, null null 0.75em 0.75em );
+            z-index: 200;
+          }
+    }
     
     h2 {
         color: $ups-yellow;
