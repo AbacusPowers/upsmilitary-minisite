@@ -50,7 +50,7 @@ $('document').ready(function(){
         var topHeight = 0.5*(screenHeight-modalHeight);
         $('#offsite-modal').css({'top': topHeight +'px'});
     });
-    $(document).on('click', '.article #prev-article', function (e) {
+    $(document).on('click', '#prev-article', function (e) {
         e.preventDefault();
         var href = $(this).attr('href');
         // Getting Content
@@ -63,7 +63,7 @@ $('document').ready(function(){
         }
         getModalContent(href, true, originType);
     })
-    .on('click', '.article #next-article', function (e) {
+    .on('click', '#next-article', function (e) {
         e.preventDefault();
         var href = $(this).attr('href');
         // Getting Content
@@ -95,10 +95,12 @@ $('document').ready(function(){
         $('#offsite-modal').css({'top': topHeight +'px'});
     })
     .on('click', '.article-view #close-modal', function (e) {
-        //FIX THIS STUFFFFFFF!!!!!!
         e.preventDefault();
         var href = $(this).attr('href');
-        if ( History.getState().data.modal === 1 ) { //should only be true if triggered from article link (not direct visits to article)
+        if ( $('#modal-wrapper').hasClass('article-page') ) {
+            console.log('article page')
+            window.location.href = href;
+        } else if ( History.getState().data.modal === 1 ) { //should only be true if triggered from article link (not direct visits to article)
             if ( History.getState().data.origin === 'page' ) {
                 if ( $('body').hasClass('video-view') ) {
                     destroyVideoModal();
