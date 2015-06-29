@@ -102,13 +102,13 @@ body.article-view, body.leave-site-view, body.video-view, body.events-view, body
   #modal-content {
     height: 100%;
     overflow-y: auto;
-    -webkit-overflow-scrolling: touch; /*gotta have this for idevice scrolling*/
+
+    @include styled-scrolling;
+
     padding-top: 2em;
     /*padding-bottom: 100%;*/
 
-    &::-webkit-scrollbar {
-      display: none; /*temporary fix*/
-    }
+
     #section-svg, .section-svg {
       width: 3rem;
       height: 3rem;

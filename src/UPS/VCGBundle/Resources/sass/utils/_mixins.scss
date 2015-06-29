@@ -116,4 +116,10 @@
   bottom: 0;
 }
 
-
+@mixin styled-scrolling {
+  -webkit-overflow-scrolling: touch; /*gotta have this for idevice scrolling*/
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  &::-webkit-scrollbar {
+    display: none; /*temporary fix*/
+  }
+}
