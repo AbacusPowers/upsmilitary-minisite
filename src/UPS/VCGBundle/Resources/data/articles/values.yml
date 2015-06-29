@@ -5,7 +5,7 @@ Parent: culture-benefits
 File:
 Group:
 Body: |
-    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 612 792" enable-background="new 0 0 612 792" xml:space="preserve">
+    <svg version="1.1" id="values_svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 612 792" enable-background="new 0 0 612 792" xml:space="preserve">
         <g>
             <defs>
                 <rect id="SVGID_1_" width="612" height="792"/>

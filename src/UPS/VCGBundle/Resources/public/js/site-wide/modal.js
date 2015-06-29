@@ -12,7 +12,7 @@ $('document').ready(function(){
         e.preventDefault();
         var href = $(this).attr('href');
         // Getting Content
-        getVideoModalContent(href, true, 'page');
+        getModalContent(href, true, 'page');
         showVideoModal();
     });
     //EVENTS FUNCTIONALITY
@@ -113,8 +113,8 @@ $('document').ready(function(){
                     destroyModal();
                 }
 
-                var rewrite = History.getState().data.close;
-                History.pushState(null, null, rewrite);
+                //var rewrite = History.getState().data.close;
+                History.pushState(null, null, href);
             } else {
                 console.log('one: ' + href);
                 window.location.href = href;
@@ -144,11 +144,8 @@ function getModalContent(url, addEntry, originType) {
         if(addEntry === true) {
             var newTitle = $('#single-modal-content h1').text();
             document.title = newTitle;
-        }
 
-        if(addEntry === true) {
             // Add History Entry using pushState
-
             History.pushState({ modal : 1, origin : originType, close : originUrl }, null, url);
             console.log(History.getState().data);
 
@@ -156,23 +153,23 @@ function getModalContent(url, addEntry, originType) {
     });
 }
 
-function getVideoModalContent(url, addEntry, originType) {
-    var originUrl = document.URL;
-    // Updating Content on Page
-    $('#modal').load(url +' #modal-content', null, function() {
-
-        if(addEntry === true) {
-            var newTitle = $('#single-modal-content h1').text();
-            document.title = newTitle;
-
-            // Add History Entry using pushState
-
-            History.pushState({ modal : 1, origin : originType, close : originUrl }, null, url);
-            console.log(History.getState().data);
-
-        }
-    });
-}
+//function getVideoModalContent(url, addEntry, originType) {
+//    var originUrl = document.URL;
+//    // Updating Content on Page
+//    $('#modal').load(url +' #modal-content', null, function() {
+//
+//        if(addEntry === true) {
+//            var newTitle = $('#single-modal-content h1').text();
+//            document.title = newTitle;
+//
+//            // Add History Entry using pushState
+//
+//            History.pushState({ modal : 1, origin : originType, close : originUrl }, null, url);
+//            console.log(History.getState().data);
+//
+//        }
+//    });
+//}
 function getLeaveSiteModalContent(url, addEntry, originType) {
 
     // Updating Content on Page
@@ -248,6 +245,13 @@ function showValuesModal(){
     $('#modal').fadeIn();
     $('body').addClass('values-view');
     $('#modal-wrapper').addClass('values');
+    modalWidth = $('#modal-content').width();
+    $('svg#values_svg').width(modalWidth).height(modalWidth * 1.3021288292);
+    $(window).resize(function(){
+        modalWidth = $('#modal-content').width();
+        $('svg#values_svg').width(modalWidth).height(modalWidth * 1.3021288292);
+    });
+
 }
 function showLeaveSiteModal(href){
     $('#overlay').show();
