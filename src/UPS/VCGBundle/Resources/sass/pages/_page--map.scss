@@ -1,4 +1,4 @@
-$map-height-small: 18em;
+$map-height-small: 24em;
 $map-height-medium: 24em;
 $map-height-large: 35em;
 $map-height-wide: 50em;
@@ -121,24 +121,20 @@ $state-list-scroll-height-wide:  $map-height-wide - $map-control-height;
     }
 
     #job-map--refresh {
-        color: $black;
-        font-weight: bold;
-        opacity: 0;
-        
-        // height: 2em;
-        
-        display: inline-block;
-        
-        transition: opacity 0.5s;
-        position: absolute;
-        left: 1.1rem;
-        top: 10.3rem;
-        font-size: 1.7em;
-        z-index: 100;
-        border-radius: 50%;
         background: $ups-yellow;
+        border-radius: 50%;
+        color: $black;
         display: block;
+        display: inline-block;
+        font-size: 1.7em;
+        font-weight: bold;
+        left: 1.1rem;
+        opacity: 0;        
         padding: 0.05rem 0em 0 0.5rem;
+        position: absolute;
+        top: 10.3rem;
+        transition: opacity 0.5s;
+        z-index: 100;
         @include size(2.5rem);
         
         &.shown {
@@ -147,12 +143,8 @@ $state-list-scroll-height-wide:  $map-height-wide - $map-control-height;
         }
         
         .breakpoint-small & { 
-            // display: none;
-//            top: 14.6em;
-//            right: auto;
-//            left: 14.3rem;
-            top: 0.5rem;
-            right: 1rem;
+            top: 20.5rem;
+            left: 1rem;
         }
     }
 
@@ -218,10 +210,22 @@ $state-list-scroll-height-wide:  $map-height-wide - $map-control-height;
             padding: 0.2em 0.6em 0.4em 0.5em ;
             background: $black20;
 
+            .breakpoint-small & {
+                top: 34.8em;
+                left: auto;
+                right: 0;
+                padding-bottom: 0.3em;
+                padding-right: 0.4em;
+            }
+
             h3 {
                 color: $ups-yellow;
                 // margin-left: 1em;
                 padding-top: 0.17em;
+
+                .breakpoint-small & {
+                    display: none;
+                }
             }
 
             ul {
@@ -255,9 +259,10 @@ $state-list-scroll-height-wide:  $map-height-wide - $map-control-height;
             width: auto;
 
             .breakpoint-small & {
+                font-size: 1.2em;
                 right: auto;
-                left: 1.5rem;
-                top: 2em;
+                left: 1rem;
+                top: 14.3rem;
             }
         }
     }
@@ -283,11 +288,6 @@ $state-list-scroll-height-wide:  $map-height-wide - $map-control-height;
     }
 
     .component--expander .component--expander .expander__wrapper .job-wrapper p {
-        // margin-right: 6em;
-        padding-right: 7rem;
-        & span {
-            font-weight: 800;
-            color: $ups-yellow;
-        }
+        
     }
 }

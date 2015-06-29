@@ -34,6 +34,14 @@
             // background: $black70;
             padding: 1.5em 3em 3em 0em;
             background: $grey--dark;
+             
+             .breakpoint-small & {
+                padding: 1em 1em 1em 0;
+
+                svg {
+                    margin-left: 1em;
+                }
+            }
 
 
             h1 {
@@ -44,11 +52,18 @@
                   margin-left: 4.8em;
                   margin-right: 0.7em;
                   color: $white;
-
+                
+                .breakpoint-small & {
+                    display: none;
+                }
             }
 
             p {
                 margin-left: 2em;
+
+                .breakpoint-small & {
+                    margin-left: 6em;
+                }
             }
         }
 
@@ -62,6 +77,10 @@
             left: 2.8em;
             right: auto;
             bottom: 0.1em;
+
+            .breakpoint-small & {
+                left: 2.2em;
+            }
         }
 
         .scroll-container {
@@ -77,6 +96,10 @@
             height: 100%;
             background: $white10;
             z-index: 0;
+
+            .breakpoint-small & {
+                display: none;
+            }
         }
 
         &:after {

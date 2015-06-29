@@ -50,12 +50,10 @@
     margin-right: 0;
     padding: 1rem 0 1rem 2rem;
     position: relative;
-//    padding: 0.7rem 0 0 27px;
-
-    //    position: absolute;
-//    right: 0;
-//    top: 0px;
-//    font-size: 13px;
+    
+    .breakpoint-small & {
+      padding-left: 0;
+    }
 
     &:hover, &.hover {
         background: $white05;
@@ -120,16 +118,15 @@
   }
 
   .hidden-part {
-//    height: 0;
     display: none;
     padding-left: 2rem;
-//    margin-top: 5rem;
-//    opacity: 0;
+
+    .breakpoint-small & {
+      padding-left: 1em;
+    }
   }
 
-  .hidden-part *{
-    /*opacity: 0;*/
-  }
+  
 
   .faq.expander__parent:before, .expander__child:before{
     color: $grey80;
@@ -205,6 +202,10 @@
 
     .button {
       padding-left: 3.7rem;
+
+      .breakpoint-small & {
+        padding-left: 1rem;
+      }
     }
 
     .hidden-part {
@@ -225,6 +226,7 @@
     }
 
     h2 {
+      font-size: 1.2rem;
       font-weight: 400;
       padding-bottom: 0;
     }
@@ -246,6 +248,19 @@
       margin: 0 0 0 $vertical-thread-width;
       padding: 1em 0 1em 4.3rem;
       border-bottom: 1px dotted $black;
+      padding-right: 7rem;
+
+        
+
+      .breakpoint-small & {
+        padding-left: 1.5rem;
+        padding-right: 5.5rem;
+      }
+
+      & span {
+            font-weight: 800;
+            color: $ups-yellow;
+        }
     }
     
 
@@ -263,6 +278,10 @@
       text-align: center;
       border-bottom: 1px solid $black;
 
+      .breakpoint-small & {
+        width: 5em;
+      }
+
       & div {
         font-size: 0.8em;
         text-transform: uppercase;
@@ -271,7 +290,7 @@
         transform: translateY(-40%);
       }
 
-      &:hover {
+      &:hover, &:focus {
         background: $ups-yellow;
         color: $black;
       }

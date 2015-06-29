@@ -26,6 +26,11 @@
     .breakpoint-medium & {
       top: -9em;
     }
+
+    .breakpoint-small & {
+      top: 0;
+
+    }
 }
 
 .breadcrumb {   
@@ -51,7 +56,6 @@
   $breadcrumb-color-hover: white;
   $breadcrumb-color-active: $breadcrumb-color;
 
-  display: none;
   // margin-bottom: $base-spacing;
   text-align: left;
 
@@ -71,6 +75,15 @@
     text-decoration: none;
     border-bottom: none;
     border-top: none;
+
+    .breakpoint-small & {
+      display: block;
+      float: left;
+      font-size: 0.7em;
+      border-bottom: 1px solid $grey--darker;
+      padding-left: 1.1em;
+    }
+
 
     &:first-child {
       // border-bottom-left-radius: $base-border-radius;
@@ -126,9 +139,9 @@
     // }
   }
 
-  .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & {
-    display: inline-block;
-  }
+  // .breakpoint-small &, .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & {
+  //   display: inline-block;
+  // }
 }
 
 
