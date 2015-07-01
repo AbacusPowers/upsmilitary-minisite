@@ -4,6 +4,8 @@
      * Some constants isolated for easy reconfiguration.
      */
     var CONST = {
+        DEBUG: 1,
+        
         ATTR_PEG: [
             { fill: 'rgba(111,190,68, 0.5)' }, // Large
             { fill: 'rgba(255,255,255,0.8)' }, // Medium
@@ -146,8 +148,8 @@
          */
         init: function() {
             var container = this.container = $('.map-info-container');
-            container.on('click', '.expand-button', on_expander_click_expand);
-            container.on('click', '.hide-button', on_expander_click_expand); //CHANGED THIS AS THIS FUNCTION IS NOW JUST A TOGGLE
+            container.on('click', '.expand-button', on_expander_click);
+            container.on('click', '.hide-button', on_expander_click);
             
             var template = this.template = $('.map-info--state', container).detach();
             
@@ -426,12 +428,13 @@
                 old.pegs.remove();
                 this.zoom();
                 stateSelect.val('');
-                info.show(null);
-                refresher.removeClass('shown');
-                this.containers.addClass('full-width');
-                $('.map-info-container').removeClass('opacity');
-                $('#side--b').addClass('pseudo-block--hidden');
-
+                if (!CONST.DEBUG) {
+                    info.show(null);
+                    refresher.removeClass('shown');
+                    this.containers.addClass('full-width');
+                    $('.map-info-container').removeClass('opacity');
+                    $('#side--b').addClass('pseudo-block--hidden');
+                }
             }
             
             if (state != null) {
@@ -440,11 +443,13 @@
                 this.statesGroup.append(state.pegs);
                 this.zoom();
                 stateSelect.val(state.abbr);
-                info.show(state.info);
-                refresher.addClass('shown');
-                this.containers.removeClass('full-width');
-                $('.map-info-container').addClass('opacity');
-                $('#side--b').removeClass('pseudo-block--hidden');
+                if (!CONST.DEBUG) {
+                    info.show(state.info);
+                    refresher.addClass('shown');
+                    this.containers.removeClass('full-width');
+                    $('.map-info-container').addClass('opacity');
+                    $('#side--b').removeClass('pseudo-block--hidden');
+                }
             }
         },
         
@@ -453,6 +458,8 @@
          * Perform the zoom animation to bring visual focus to the logical focus.
          */
         zoom: function() {
+            if (CONST.DEBUG) return;
+            
             var scale = 1, translateX = 0, translateY = 0;
             var state = this.focus;
             if (state != null) {
@@ -536,9 +543,9 @@
     
     
     /*
-     * Event handler: show expandable.
+     * Event handler: toggle expandable.
      */
-    function on_expander_click_expand() {
+    function on_expander_click() {
         var elt = $(this);
         elt.parent('.expander__wrapper').addClass('open-expander');
         
@@ -546,39 +553,9 @@
         $(this).parent('.expander__wrapper').toggleClass('open-expander');
         hidden.slideToggle();
         $(this).children('i.fa').toggleClass('fa-plus').toggleClass('fa-minus');
-        //var height = hidden.children('.expander__child').height();
-        //var outer  = hidden.data('outer');
-        //if (outer != null) {
-        //    outer.velocity({ height: outer.height() + height }, 500);
-        //}
-        //hidden.velocity({ height: height, opacity: 1 }, 400);
-        
-        //elt.hide();
-        //elt.siblings('.hide-button').show();
     }
     
     
-    /*
-     * Event handler: hide expandable.
-     */
-    function on_expander_click_hide() {
-        var elt = $(this);
-        elt.parent('.expander__wrapper').removeClass('open-expander');
-        
-        var hidden = elt.siblings('.hidden-part');
-        hidden.slideUp();
-        //var outer  = hidden.data('outer');
-        //if (outer != null) {
-        //    var height = hidden.children('.expander__child').height();
-        //    outer.velocity({ height: outer.height() - height }, 500);
-        //}
-        //hidden.velocity({ height: 0, opacity: 0}, 400);
-        
-        elt.hide();
-        elt.siblings('.expand-button').show();
-    }
-    
-
     /*
      * Event handler.
      */
