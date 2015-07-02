@@ -98,7 +98,7 @@ $state-list-scroll-height-wide:  $map-height-wide - $map-control-height;
 
    
     
-    #map-container {
+    #map-container svg {
         width: 100%;
         height: $map-height-small;
         display: block;
@@ -178,6 +178,7 @@ $state-list-scroll-height-wide:  $map-height-wide - $map-control-height;
 
         &.opacity {
             opacity: 1;
+            display: block;
         }
 
     }

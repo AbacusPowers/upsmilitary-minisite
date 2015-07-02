@@ -102,7 +102,7 @@
                         region: code
                     });
                 },
-                550
+                600
             );
         },
  
@@ -157,7 +157,7 @@
                         y: 0.5
                     });
                 },
-                500
+                600
             );
         }
     };
@@ -355,6 +355,7 @@
                     fill: '#FFB500'
                 }
             },
+            zoomMax: 5,
             zoomOnScroll: false
         });
         vmap = mapContainer.vectorMap('get', 'mapObject');
