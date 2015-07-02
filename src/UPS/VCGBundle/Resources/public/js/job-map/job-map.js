@@ -4,7 +4,7 @@
      * Some constants isolated for easy reconfiguration.
      */
     var CONST = {
-        DEBUG: 1,
+        DEBUG: 0,
         
         ATTR_PEG: [
             { fill: 'rgba(111,190,68, 0.5)' }, // Large
@@ -43,20 +43,24 @@
         
         SUBMAPS: [
             /* continental */
-            {
+            /*{
                 top:    49.384471,      bottom: 24.543958,
                 left:   -124.727821,    right:  -66.955528
+            },*/
+            {
+                top:      49.384472,    bottom:  24.520833,
+                left:   -124.785000,    right:  -66.947028
             },
             
             /* alaska */
             {
-                top:    71.337524,      bottom: 51.648282,
+                top:      71.337524,    bottom:   51.648282,
                 left:   -177.977849,    right:  -130.016221
             },
             
             /* hawaii */
             {
-                top:    22.228893,      bottom: 18.916201,
+                top:      22.228893,    bottom:   18.916201,
                 left:   -160.243169,    right:  -154.813177
             }
         ]
@@ -292,8 +296,10 @@
                 _:  'cont',
                 x:  snap.select('#WA').getBBox().x,
                 x2: snap.select('#ME').getBBox().x2,
-                y:  snap.select('#MN').getBBox().y + 18,
-                y2: snap.select('#FL').getBBox().y2 + 18
+                y:  snap.select('#MN').getBBox().y,
+                y2: snap.select('#FL').getBBox().y2,
+                ax: 0,
+                ay: 18
             };
             
             var tmpbb = snap.select('path[id="AK"]').getBBox();
@@ -302,7 +308,9 @@
                 x:  tmpbb.x,
                 x2: tmpbb.x2,
                 y:  tmpbb.y + 24,
-                y2: tmpbb.y2 + 24
+                y2: tmpbb.y2 + 24,
+                ax: 0,
+                ay: 0
             };
             
             tmpbb = snap.select('path[id="HI"]').getBBox();
@@ -311,7 +319,9 @@
                 x:  tmpbb.x,
                 x2: tmpbb.x2,
                 y:  tmpbb.y,
-                y2: tmpbb.y2
+                y2: tmpbb.y2,
+                ax: 0,
+                ay: 0
             };
             
             this.submaps = [
@@ -400,11 +410,8 @@
                     peg.attr(CONST.ATTR_PEG[location.size]);
                     group.append(peg);
                     
-                    var x = -((location.lon - submap.left) / submap.llw) * submap.w;
-                    var y = -((location.lat - submap.top ) / submap.llh) * submap.h;
-                    x += submap.x;
-                    y += submap.y;
-                    peg.transform("matrix(0.5,0,0,0.5," + x + "," + y + ")");
+                    var coords = projection(submap, location.lon, location.lat);
+                    peg.transform("matrix(0.5,0,0,0.5," + coords.x + "," + coords.y + ")");
                     
                     peg.mouseover(on_state_path_mouseover);
                     peg.mouseout(on_state_path_mouseout);
@@ -582,6 +589,17 @@
         if (! state.is_focus) {
             map.set_focus(state);
         }
+    }
+    
+    
+    function projection(submap, lon, lat) {
+        var x = -((lon - submap.left) / submap.llw) * submap.w;
+        x += submap.x + submap.ax;
+        
+        var y = -((lat - submap.top ) / submap.llh) * submap.h;
+        y += submap.y + submap.ay;
+        
+        return {x: x, y: y};
     }
     
     
