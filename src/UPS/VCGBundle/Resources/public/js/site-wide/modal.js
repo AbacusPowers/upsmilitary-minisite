@@ -146,9 +146,16 @@ function getModalContent(url, addEntry, originType) {
             document.title = newTitle;
 
             // Add History Entry using pushState
-            History.pushState({ modal : 1, origin : originType, close : originUrl }, null, url);
+            History.pushState({ modal : 1, origin : originType, close : originUrl }, newTitle, url);
             console.log(History.getState().data);
 
+            //ANALYTICS - SET PAGE URL AND TITLE
+            ga('set', {
+                page: url,
+                title: newTitle
+            });
+            //ANALYTICS - SEND PAGEVIEW
+            ga('send', 'pageview');
         }
     });
 }

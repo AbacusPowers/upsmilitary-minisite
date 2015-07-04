@@ -123,6 +123,12 @@ $( document ).ready(function() {
         
         branch = $('#branch-of-service').val();
         jobCode = $('#job-code').val();
+
+        /**
+         * GA TRACKING
+         */
+            //ga('send','event','job_converter','translate', branch + '_' + jobCode);
+
         if(hints.indexOf(jobCode) >= 0) {
             $.get("/bundles/vcg/data/jobs-data.csv", function(data){
     //        console.log(data);
