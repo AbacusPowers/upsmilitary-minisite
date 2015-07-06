@@ -13,8 +13,8 @@ var videoCount;
 var refreshIntervalId;
 
 function onYouTubeIframeAPIReady() {
-  videoCount = $('.yt-video').length;
-  $('.yt-video').each(function(){
+  videoCount = $('iframe').length;
+  $('iframe').each(function(){
     var video = $(this).attr('src');
     var reg = /(?:https?:\/\/)?(?:www\.)?(?:youtu\.be\/|youtube\.com(?:\/embed\/|\/v\/|\/watch\?v=))([\w-]{10,12})/g;
     var vidId = reg.exec(video)[1];

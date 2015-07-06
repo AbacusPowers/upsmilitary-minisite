@@ -2,6 +2,20 @@
 // * Created by justin on 7/1/15.
 // */
 
+//Debounce function to use anywhere.
+function debounce(fn, delay) {
+    var timer = null;
+    return function () {
+        var context = this, args = arguments;
+        clearTimeout(timer);
+        timer = setTimeout(function () {
+            fn.apply(context, args);
+        }, delay);
+    };
+}
+
+
+
 //SLIDERS
 $('.carousel-control.next').click(function(){
     forSlide = $(this).attr('for');
@@ -22,22 +36,33 @@ $('.carousel-bullet').click(function(){
 
 });
 //VIDEOS
-//ga('send','event','video','open', videoTitle)
-//ga('send','event','video','close', videoTitle)
-//ga('send','event','video','play', videoTitle)
-//ga('send','event','video','pause', videoTitle)
-//ga('send','event','video','25_percent', videoTitle)
-//ga('send','event','video','50_percent', videoTitle)
-//ga('send','event','video','75_percent', videoTitle)
-//ga('send','event','video','100_percent', videoTitle)
-//
+//this adds the youtube api
+//actual tracking code is loaded in modal.js (if modal) and video-tracking.js (if normal pageview)
+$(document).ready(function(e){
+    var tag = document.createElement('script');
+    tag.src = "https://www.youtube.com/iframe_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+});
+
 
 //VIDEO CAROUSEL EVENTS ??
-//// probably need to use .debounce() http://jsfiddle.net/cowboy/cTZJU/light/
-//ga('send','event','video','scroll_left', 'carousel')
-//ga('send','event','video','scroll_right', 'carousel')
-//
-//
+var videoLastPos = 0;
+var videoScrollDetect = function () {
+    var videoCurrPos = $('#video-list').closest('.scroll-container').scrollLeft();
+
+    if (videoLastPos < videoCurrPos) {
+        //console.log('scroll right');
+        ga('send','event','video','scroll_right', 'carousel');
+    }
+    if (videoLastPos > videoCurrPos)
+    {
+        //console.log('scroll left');
+        ga('send','event','video','scroll_left', 'carousel');
+    }
+    videoLastPos = videoCurrPos;
+}
+$('#video-list').closest('.scroll-container').scroll( debounce(videoScrollDetect, 500) );
 
 //CTA GO
 $('.cta-button--go').click(function(){
@@ -112,15 +137,32 @@ $('body').on('click','.job-wrapper .search-button',function(){
     ga('send','event','job_map','job_map_search', 'results_' + positionTitle );
 });
 
-////CAREER CAROUSEL EVENTS
-//ga('send','event','career_events','scroll_left', 'carousel')
-//ga('send','event','career_events','scroll_right', 'carousel')
-//ga('send','event','career_events','google_map_click', eventTitle ) //why is this "google_map_click"?? we don't have google maps
-//
-//
-////JOB SEARCH
-//g
-//
+//EVENTS CAROUSEL EVENTS
+var eventLastPos = 0;
+var eventScrollDetect = function () {
+    var eventCurrPos = $('.all-events-wrapper').closest('.scroll-container').scrollLeft();
+
+    if (eventLastPos < eventCurrPos) {
+        //console.log('scroll right');
+        ga('send','event','career_events','scroll_right', 'carousel');
+    }
+    if (eventLastPos > eventCurrPos)
+    {
+        //console.log('scroll left');
+        ga('send','event','career_events','scroll_left', 'carousel');
+    }
+    eventLastPos = eventCurrPos;
+}
+$('.all-events-wrapper').closest('.scroll-container').scroll( debounce(eventScrollDetect, 500) );
+
+
+//EVENTS GMAP LINK CLICK
+$('.event__map-link').click(function() {
+    var eventTitle = $(this).closest('.event__wrapper').find('.event__title').text();
+    ga('send','event','career_events','google_map_click', eventTitle);
+});
+
+//JOB SEARCH
 $('#search-submit').click(function(e, input) {
     input = $('#search-field').val();
     ga('send','event','job_search','search', input );
