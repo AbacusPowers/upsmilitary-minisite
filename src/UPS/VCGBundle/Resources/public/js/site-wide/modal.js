@@ -159,6 +159,8 @@ function getModalContent(url, addEntry, originType) {
             onYouTubeIframeAPIReady();
             //console.log('video test');
         }
+
+
         //----------YOUTUBE IFRAME EVENT TRACKING------------------//
 
         var playerArray = new Array();
@@ -339,18 +341,30 @@ function showEventsModal(url){
     $('body').addClass('events-view');
     $('#modal-wrapper').addClass('events');
 }
-function showValuesModal(){
+function showValuesModal(f){
     $('#overlay').show();
-    $('#modal').fadeIn();
+    $('#modal').show();
     $('body').addClass('values-view');
     $('#modal-wrapper').addClass('values');
-    modalWidth = $('#modal-content').width();
-    $('svg#values_svg').width(modalWidth).height(modalWidth * 1.3021288292);
+    console.log('done');
+}
+function svgSize(){ //call this if jquery sizing is necessary
+    //var modalWidth = $('#modal-content').width();
+    //
+    //$('svg#values_svg').width(modalWidth).height(modalWidth * 1.3021288292);
+    //console.log('width: ' + $('svg#values_svg').width() + ', height: ' + $('svg#values_svg').height());
+    setTimeout(function(){
+        var modalWidth = $('#modal-content').width();
+
+        $('svg#values_svg').width(modalWidth).height(modalWidth * 1.3021288292);
+        console.log('width: ' + $('svg#values_svg').width() + ', height: ' + $('svg#values_svg').height());
+
+    }, 201);
+
     $(window).resize(function(){
         modalWidth = $('#modal-content').width();
         $('svg#values_svg').width(modalWidth).height(modalWidth * 1.3021288292);
     });
-
 }
 function showLeaveSiteModal(href){
     $('#overlay').show();
