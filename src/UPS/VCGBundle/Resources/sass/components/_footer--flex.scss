@@ -14,7 +14,8 @@
 
 
     .item {
-        width: 0;
+        // width: 0;
+        flex-basis: 0; /*width normalizer?*/
     
         // text-align: center;
         // text-transform: uppercase;
