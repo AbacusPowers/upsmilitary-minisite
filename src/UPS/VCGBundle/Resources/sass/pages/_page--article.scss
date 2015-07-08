@@ -45,9 +45,6 @@
 }
 
 .article {
-
-
-
   .group-links {
     list-style-type: none;
     margin-bottom: 3rem;
@@ -61,7 +58,6 @@
       display: block;
       float: left;
       width: 50%;
-      // margin-top: .5em;
       border-bottom: 1px solid $ups-grey-1;
       margin-bottom: 0;
       margin-right: 0;
@@ -73,16 +69,13 @@
       &:nth-child(2n+1) {
         clear: both;
       }
+
       &:nth-child(even) {
         // margin-right: 1%;
         border-left: 1px dotted rgba( $ups-grey-1, 0.5);
           .breakpoint-small & {
             border-left: none;
           }
-      }
-
-      &:last-child {
-        border-bottom: none;
       }
 
       a.button {
@@ -129,5 +122,31 @@
         }
       }
     }
+
+    &.group-links--registered-apprentice {
+       li:nth-last-child(2) {
+        border-bottom: none;
+      }
+      li:last-child {
+        border-bottom: none;
+      }
+    }
+
+    &.group-links--culture-benefits {
+      li:nth-last-child(2) {
+        border-bottom: none;
+      }
+      li:last-child {
+        border-bottom: none;
+      }
+    }
+
+    &.group-links--building-your-brand {
+      li:last-child {
+        border-bottom: none;
+      }
+    }
+
+
   }
 }
