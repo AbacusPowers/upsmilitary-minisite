@@ -168,8 +168,6 @@ header {
                 font-size: 1.1em;
             }
 
-
-
             &:first-child {
                 border-left: none;
             }
@@ -177,6 +175,7 @@ header {
             &.current-section {
                 color: rgba( $ups-yellow, 1) ;
             }
+            
             &:hover {
                 background: rgba( $ups-yellow, 0.9);
                 background: $white70;
