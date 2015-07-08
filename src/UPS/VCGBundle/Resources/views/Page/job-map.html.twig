@@ -32,12 +32,12 @@
                     {% include 'VCGBundle:Svgs:jobs-lightbulb.svg.twig' %}
                     <span class="caption">Skills</span>
                 </a>
-                <a href="{{ path('page',{'slug':'jobs'}) }}" class="current-page">
+                <a href="{{ path('page',{'slug':'jobs'}) }}">
                     {#<img src="{{ asset('bundles/vcg/images/handshake.png') }}" class="" alt="">#}
                     {% include 'VCGBundle:Svgs:jobs-handshake.svg.twig' %}
                     <span class="caption">Jobs</span>
                 </a>
-                <a href="{{ path('page',{'slug':'job-map'}) }}">
+                <a href="{{ path('page',{'slug':'job-map'}) }}" class="current-page">
                     {#<img src="{{ asset('bundles/vcg/images/bubbles.png') }}" class="" alt="">#}
                     {% include 'VCGBundle:Svgs:jobs-map-pin.svg.twig' %}
                     <span class="caption">Map</span>
