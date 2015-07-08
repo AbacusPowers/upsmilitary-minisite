@@ -2,6 +2,14 @@
 {% block title %} {{ video.Title }} {% endblock %}
 {% block modal_class %}video article-page{% endblock %}
 {% block page_class %}video{% endblock %}
+{%  block javascripts %}
+    {% javascripts
+    '@VCGBundle/Resources/public/js/tracking/video-tracking.js'
+    %}
+    <script src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+{% endblock %}
+
 {% block modal %}
 {# you can use "route" to echo the route name #}
         <div id="modal-content">
@@ -14,14 +22,7 @@
                         </div>
                     </div>
             {% endblock %}
-            <a href="
-            {% block parentPageLink %}
-                {% if (parent == '/') %}
-                    {{ url('homepage') }}
-                {% else %}
-                    {{ path('page', {'slug': parent })}}
-                {% endif %}
-            {% endblock %}" id="close-modal"><i class="fa fa-times"></i></a>
+            <a href="{% block parentPageLink %}{% if (parent == '/') %}{{ url('homepage') }}{% else %}{{ path('page', {'slug': parent })}}{% endif %}{% endblock %}" id="close-modal"><i class="fa fa-times"></i></a>
             <a href="{% block prevArticleLink %}{{ path(route, {'slug': video.Prev | raw })}}{% endblock %}" id="prev-article"><i class="fa fa-angle-left"></i></a>
             <a href="{% block nextArticleLink %}{{ path(route, {'slug': video.Next | raw })}}{% endblock %}" id="next-article"><i class="fa fa-angle-right"></i></a>
         </div>
