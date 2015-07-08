@@ -450,6 +450,10 @@ function destroyLeaveSiteModal(){
 }
 (function(window, undefined) {
     History.Adapter.bind(window,'statechange',function(){ // Note: We are using statechange instead of popstate
+        if ($('#article-page-marker').length > 0) { //detect if this is a dummy page
+            window.location = window.location.href; //reload the ACTUAL page at the current url
+            //console.log('bing');
+        }
         if(History.getState().data.modal !== 1) {
             destroyModal();
             console.log('ping');
