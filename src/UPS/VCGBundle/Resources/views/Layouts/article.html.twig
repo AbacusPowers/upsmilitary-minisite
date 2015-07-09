@@ -10,7 +10,7 @@
             {% block modalbody %}
                     <div id="single-modal-content">
                     {% if article.File %}
-                        <a href="/bundles/vcg/downloads/{{ article.File }}" class="article-download"><i class="fa fa-download"></i>&nbspDownload</a>
+                        <a href="/bundles/vcg/downloads/{{ article.File }}" class="article-download" target="_blank"><i class="fa fa-download"></i>&nbspDownload</a>
                     {% endif %}
                     {{ article.Body | raw }} 
                     {% if article.Expanders %}
