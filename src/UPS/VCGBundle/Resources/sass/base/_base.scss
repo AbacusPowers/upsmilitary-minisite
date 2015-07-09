@@ -68,23 +68,10 @@ a:active {
     display: none;
 }
 
-// .grid--articles {
-//   position: relative;
-// }
-
-
-// .grid--articles:hover {
-//   background: none;
-// }
-
-//
-//svg.section-svg {
-//  width: 35px;
-//  height: 35px;
-//  float: left;
-//  margin-right: 1em;
-//}
-
 .grid-icon {
   @include site-icon;
+}
+
+.text--bold {
+    font-weight: 800;
 }
