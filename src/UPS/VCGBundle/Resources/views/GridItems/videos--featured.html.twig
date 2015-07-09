@@ -1,0 +1,18 @@
+<div id="grid-item--videos" class="grid-item grid-item-big">
+    {% include 'VCGBundle:Svgs:play.svg.twig' %}
+    <h1>Featured Videos</h1>
+<!--     <div class="scroll-indicator--h">
+        <span class="scroll-indicator__text">SCROLL</span>
+        <i class="fa fa-arrows-h"></i>
+    </div>
+ -->
+    <div class="scroll-container">
+        <div id="video-list">
+            
+          
+            <a href="{{ path('homepage_video',{'slug':'package-handler'}) }}" class="video-link video-link--style"><img class="video-thumb" src="{{ asset('bundles/vcg/images/video-thumbs/package-handler-1.png') }}" alt=""><i class="fa fa-play-circle"></i><span class="video-title">Package Handler</span></a>
+            <a href="{{ path('homepage_video',{'slug':'package-driver'}) }}" class="video-link video-link--style"><img class="video-thumb" src="{{ asset('bundles/vcg/images/video-thumbs/package-car-driver-1.png') }}" alt=""><i class="fa fa-play-circle"></i><span class="video-title">Package Delivery Driver</span></a>
+            <a href="{{ path('homepage_video',{'slug':'sorter'}) }}" class="video-link video-link--style"><img class="video-thumb" src="{{ asset('bundles/vcg/images/video-thumbs/sorter-1.png') }}" alt=""><i class="fa fa-play-circle"></i><span class="video-title">Sorter</span></a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,53 @@
+.footer--flex {
+    display: flex; /* or inline-flex */
+    flex-direction: row;
+    // background: grey;
+    height: 20em;
+    justify-content: space-between;
+    align-items: stretch;
+    -webkit-flex-wrap: wrap;
+
+    .breakpoint-wide &, .breakpoint-large & {
+        max-width: 1000px;
+        margin: auto;
+    }
+
+
+    .item {
+        width: 0;
+    
+        // text-align: center;
+        // text-transform: uppercase;
+        // font-weight: 800;
+        // font-size: 0.7em;
+        // height: 10em;
+        // padding: 1em;
+        // align-items: center;
+        // display: flex;
+        // flex-grow: 1;
+
+        // p {
+        //     background: grey;
+        //     position: absolute;
+        // }
+    }
+
+    .item:nth-child(1) {
+        background: $white10;
+        color: white;
+        flex-grow: 1;
+    }
+
+    .item:nth-child(2) {
+        background: $white20;
+        // height: 15em;
+        // align-self: center;
+        flex-grow: 1;
+    }
+
+    .item:nth-child(3) {
+        background: $white30;
+        color: white;
+        flex-grow: 1;
+    }
+}
