@@ -10,7 +10,7 @@
         font-size: 1.9em;
         padding-top: 0.1em;
         width: 100%;
-        text-transform: capitalize;
+        // text-transform: capitalize;
         margin-bottom: 1.2em;
 
         .breakpoint-small &, .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & {
@@ -24,10 +24,6 @@
         }
     }
 
-    h3, h4 {
-      color: $grey--medium;
-    }
-
     h2 {
         color: $black50;
         font-size: 1.2em;
@@ -36,14 +32,17 @@
     }
 
     h3 {
-        color: $black50;
-        text-transform: capitalize;
+        color: $black90;
+        // text-transform: capitalize;
         margin-top: 2rem;
         margin-bottom: 0.2em;
     }
 
     h4 {
-        color: $black80;
+        color: $black40;
+        font-weight: 400;
+        font-size: 1.3em;
+
         &.definition {
             margin-bottom: 1em;
             span {

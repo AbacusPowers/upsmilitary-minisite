@@ -291,7 +291,7 @@ body.article-view, body.leave-site-view, body.video-view, body.events-view, body
     margin-left: 3.9em;
     margin-top: -2.8em;
     padding-top: 0.1em;
-    text-transform: capitalize;
+    // text-transform: capitalize;
 
     .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & {
       font-size: 1.9em;
