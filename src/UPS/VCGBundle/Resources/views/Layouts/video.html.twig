@@ -2,13 +2,13 @@
 {% block title %} {{ video.Title }} {% endblock %}
 {% block modal_class %}video article-page{% endblock %}
 {% block page_class %}video{% endblock %}
-{%  block javascripts %}
-    {% javascripts
-    '@VCGBundle/Resources/public/js/tracking/video-tracking.js'
-    %}
-    <script src="{{ asset_url }}"></script>
-    {% endjavascripts %}
-{% endblock %}
+{#{%  block javascripts %}#}
+    {#{% javascripts#}
+    {#'@VCGBundle/Resources/public/js/tracking/video-tracking.js'#}
+    {#%}#}
+    {#<script src="{{ asset_url }}"></script>#}
+    {#{% endjavascripts %}#}
+{#{% endblock %}#}
 
 {% block modal %}
 {# you can use "route" to echo the route name #}
