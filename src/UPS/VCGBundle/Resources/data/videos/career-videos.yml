@@ -27,7 +27,7 @@ mechanic:
   Next: otr-driver
 otr-driver:
   Url: WxCciKUub5Q
-  Title: Over the Road Driver
+  Title: Over-the-Road Driver
   Prev: mechanic
   Next: package-driver
 package-driver:
