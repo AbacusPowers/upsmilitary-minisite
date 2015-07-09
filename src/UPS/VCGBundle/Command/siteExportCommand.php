@@ -8,7 +8,7 @@ use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
 
-class siteExportCommand extends ContainerAwareCommand
+class SiteExportCommand extends ContainerAwareCommand
 {
 
     private $urls = array(
@@ -17,15 +17,10 @@ class siteExportCommand extends ContainerAwareCommand
 
 
     protected function configure() {
-//        $this
-//            ->setName('ups:jobmap:import')
-//            ->setDescription('Read CSV data and generate job-map data files.')
-//            ->addArgument(
-//                self::ARG_CSV,
-//                InputArgument::REQUIRED,
-//                'Path to the CSV file.'
-//            )
-//        ;
+        $this
+            ->setName('ups:site:export')
+            ->setDescription('Export site to flat file setup')
+        ;
     }
 
 
