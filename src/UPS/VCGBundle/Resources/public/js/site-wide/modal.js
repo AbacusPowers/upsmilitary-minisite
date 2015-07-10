@@ -149,6 +149,20 @@ function getModalContent(url, addEntry, originType) {
             History.pushState({ modal : 1, origin : originType, close : originUrl }, newTitle, url);
             console.log(History.getState().data);
 
+            //add url to history cookie
+            var cookie = getCookie('uvgHistory');
+            var newCookieUrl = window.location.origin + url;
+            if ( cookie.length ) {
+                historyArray = JSON.parse(cookie);
+                if (searchStringInArray(newCookieUrl, historyArray) === -1) {
+                    historyArray.push(newCookieUrl);
+                    setCookie('uvgHistory',JSON.stringify(historyArray), 365);
+                    console.log('I set a cookie');
+                }
+            } else {
+                historyArray = [newCookieUrl];
+                setCookie('uvgHistory',JSON.stringify(historyArray));
+            }
             //ANALYTICS - SET PAGE URL AND TITLE
             ga('set', {
                 page: url,
@@ -325,7 +339,21 @@ function showModal(){
     $('#modal').fadeIn();
     $('body').addClass('article-view');
     $('#modal-wrapper').addClass('article');
-}
+    var cookie = getCookie('uvgHistory');
+    $('.group-link').each(function(){
+        var historyArray = JSON.parse(cookie);
+        var linkUrl = $(this).attr('href');
+        if (searchStringInArray(linkUrl, historyArray) === -1) {
+            console.log(linkUrl + 'is not in the history');
+        } else {
+            $(this).addClass('in-history');
+        }
+    });
+    console.log('new url is: ' + newCookieUrl);
+
+
+
+    }
 function showVideoModal(){
     $('#overlay').show();
     $('#modal').fadeIn();
