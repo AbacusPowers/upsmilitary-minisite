@@ -6,6 +6,7 @@ $('document').ready(function(){
         // Getting Content
         getModalContent(href, true, 'page');
         showModal();
+        $(this).addClass('in-history');
     });
     //VIDEO FUNCTIONALITY
     $('.video-link').on('click', function(e){
@@ -157,12 +158,29 @@ function getModalContent(url, addEntry, originType) {
                 if (searchStringInArray(newCookieUrl, historyArray) === -1) {
                     historyArray.push(newCookieUrl);
                     setCookie('uvgHistory',JSON.stringify(historyArray), 365);
+                    currentUrl = newCookieUrl;
                     console.log('I set a cookie');
                 }
             } else {
                 historyArray = [newCookieUrl];
                 setCookie('uvgHistory',JSON.stringify(historyArray));
             }
+            $('.group-link').each(function(){
+                var historyArray = JSON.parse(cookie);
+                var linkUrl = window.location.origin + $(this).children('a.history-checkbox').attr('href');
+                if (searchStringInArray(linkUrl, historyArray) === -1) {
+                    console.log(linkUrl + 'is not in the history');
+                    if (currentUrl == linkUrl) {
+                        $(this).children('a.history-checkbox').addClass('in-history');
+                        console.log(linkUrl + ' is the current page');
+                    }
+                } else if (currentUrl == linkUrl) {
+                    $(this).children('a.history-checkbox').addClass('in-history');
+                    console.log(linkUrl + ' is the current page');
+                } else {
+                    $(this).children('a.history-checkbox').addClass('in-history');
+                }
+            });
             //ANALYTICS - SET PAGE URL AND TITLE
             ga('set', {
                 page: url,
@@ -339,21 +357,7 @@ function showModal(){
     $('#modal').fadeIn();
     $('body').addClass('article-view');
     $('#modal-wrapper').addClass('article');
-    var cookie = getCookie('uvgHistory');
-    $('.group-link').each(function(){
-        var historyArray = JSON.parse(cookie);
-        var linkUrl = $(this).attr('href');
-        if (searchStringInArray(linkUrl, historyArray) === -1) {
-            console.log(linkUrl + 'is not in the history');
-        } else {
-            $(this).addClass('in-history');
-        }
-    });
-    console.log('new url is: ' + newCookieUrl);
-
-
-
-    }
+}
 function showVideoModal(){
     $('#overlay').show();
     $('#modal').fadeIn();

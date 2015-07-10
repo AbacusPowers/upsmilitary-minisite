@@ -39,11 +39,27 @@ $(document).ready(function(){
 
     //SET GROUP LINK CLASSES BASED ON COOKIE
     $('.group-link').each(function(){
-        var linkUrl = $(this).children('a.history-checkbox').attr('href');
+        var linkUrl = window.location.origin + $(this).children('a.history-checkbox').attr('href');
+        console.log(linkUrl + '------' + currentUrl);
         if (searchStringInArray(linkUrl, historyArray) === -1) {
             console.log(linkUrl + 'is not in the history');
+        } else if (currentUrl == linkUrl) {
+            $(this).children('a.history-checkbox').addClass('in-history');
+            console.log(linkUrl + ' is the current page');
         } else {
             $(this).children('a.history-checkbox').addClass('in-history');
+        }
+    });
+    $('.history-checkbox').each(function(){
+        var linkUrl = window.location.origin + $(this).attr('href');
+        console.log(linkUrl + '------' + currentUrl);
+        if (searchStringInArray(linkUrl, historyArray) === -1) {
+            console.log(linkUrl + 'is not in the history');
+        } else if (currentUrl == linkUrl) {
+            $(this).addClass('in-history');
+            console.log(linkUrl + ' is the current page');
+        } else {
+            $(this).addClass('in-history');
         }
     });
 });

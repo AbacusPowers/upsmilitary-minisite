@@ -93,26 +93,29 @@
           color: $black;
           z-index: 5000;
         }
-        &:visited {
-          span {
-            &:before {
-              color: $black;
-            }
-
-          }
+        &.in-history:before {
+          content: "\f046";
         }
-        span {
-          display: block;
-          &:before {
-            font-family: FontAwesome;
-            content: "\f046";
-            position: absolute;
-            left: 0;
-            padding: 0 0.5em 0 1em;
-            color: $white;
-          }
-
-        }
+        //&:visited {
+        //  span {
+        //    &:before {
+        //      color: $black;
+        //    }
+        //
+        //  }
+        //}
+        //span {
+        //  display: block;
+        //  &:before {
+        //    font-family: FontAwesome;
+        //    content: "\f046";
+        //    position: absolute;
+        //    left: 0;
+        //    padding: 0 0.5em 0 1em;
+        //    color: $white;
+        //  }
+        //
+        //}
         &.black {
           background: $black;
           color: $white;
