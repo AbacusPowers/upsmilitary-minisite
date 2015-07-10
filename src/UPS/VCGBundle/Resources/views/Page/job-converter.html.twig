@@ -32,15 +32,18 @@
             </div>
             <nav class="nav--career-explorer">
                 <a href="{{ path('page',{'slug':'job-converter'}) }}" class="current-page">
-                    <img src="{{ asset('bundles/vcg/images/lightbulb.png') }}" class="" alt="">
+                    {#<img src="{{ asset('bundles/vcg/images/lightbulb.png') }}" class="" alt="">#}
+                    {% include 'VCGBundle:Svgs:jobs-lightbulb.svg.twig' %}
                     <span class="caption">Skills</span>
                 </a>
                 <a href="{{ path('page',{'slug':'jobs'}) }}">
-                    <img src="{{ asset('bundles/vcg/images/handshake.png') }}" class="" alt="">
+                    {#<img src="{{ asset('bundles/vcg/images/handshake.png') }}" class="" alt="">#}
+                    {% include 'VCGBundle:Svgs:jobs-handshake.svg.twig' %}
                     <span class="caption">Jobs</span>
                 </a>
                 <a href="{{ path('page',{'slug':'job-map'}) }}">
-                    <img src="{{ asset('bundles/vcg/images/bubbles.png') }}" class="" alt="">
+                    {#<img src="{{ asset('bundles/vcg/images/bubbles.png') }}" class="" alt="">#}
+                    {% include 'VCGBundle:Svgs:jobs-map-pin.svg.twig' %}
                     <span class="caption">Map</span>
                 </a>
             </nav>
@@ -69,7 +72,7 @@
                                 <!-- <img id="ajax-spinner" class="working-spinner hidden" src="{{ asset('bundles/vcg/images/ajax-loader-2.gif') }}" alt="working..."> -->
                             </div>
 
-                            <input type="submit" value="Translate" class="disabled-input" disabled />
+                            <input type="submit" value="Translate" class="disabled-input translate-button" disabled />
                         </form>
                         
                     </section>
@@ -80,7 +83,7 @@
                         <h1 id="military-job-title"></h1>
                         <p id="military-job-description"></p>
                         <h4><i class="fa fa-chevron-circle-down"></i>&nbsp;See below for suggested starting points for your UPS career.</h4> 
-                        <p class="tip"><i class="fa fa-star"></i>&nbsp; <span class="tip__icon">TIP:&nbsp;</span>You may qualify for additional jobs based on your other skills, experience, and education.</p>
+                        <p class="tip"><i class="fa fa-star"></i>&nbsp; <span class="tip__icon">TIP:&nbsp;</span>You may qualify for additional jobs based on your other skills, experience and education.</p>
                     </div>
                     <h1 id="job-types" class="hidden">Suggested UPS Jobs</h1>
                     <div class="component--expander hidden">
@@ -109,7 +112,7 @@
                         </section>
                         <section class='expander__wrapper hidden'>
                             <a data-id='2' class='button expand-button'>
-                                <h2 class='expander__parent'>Driver Helper (October-December)</h2>
+                                <h2 class='expander__parent'>Driver Helper (October&ndash;December)</h2>
                                 <i class="fa fa-plus fa-2x"></i>
                             </a>
                             {#<a data-id='2' class='button hide-button'>#}

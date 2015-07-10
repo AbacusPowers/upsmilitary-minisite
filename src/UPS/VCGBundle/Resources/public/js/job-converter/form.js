@@ -55,7 +55,7 @@ $( document ).ready(function() {
         e.preventDefault();
         jobTitle = $(this).closest('.expander__wrapper').find('.expander__parent').text();
 
-        if (jobTitle == 'Driver Helper (October-December)') {
+        if (jobTitle == 'Driver Helper (October\u2013December)') {
             jobTitle = 'Driver Helper';
         }
 
@@ -81,7 +81,7 @@ $( document ).ready(function() {
         e.preventDefault();
         jobTitle = $(this).closest('.expander__wrapper').find('.expander__parent').text();
 
-        if (jobTitle == 'Driver Helper (October-December)') {
+        if (jobTitle == 'Driver Helper (October\u2013December)') {
             jobTitle = 'Driver Helper';
         }
 
@@ -123,6 +123,12 @@ $( document ).ready(function() {
         
         branch = $('#branch-of-service').val();
         jobCode = $('#job-code').val();
+
+        /**
+         * GA TRACKING
+         */
+            //ga('send','event','job_converter','translate', branch + '_' + jobCode);
+
         if(hints.indexOf(jobCode) >= 0) {
             $.get("/bundles/vcg/data/jobs-data.csv", function(data){
     //        console.log(data);

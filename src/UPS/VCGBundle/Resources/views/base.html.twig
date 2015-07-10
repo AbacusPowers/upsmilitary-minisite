@@ -37,8 +37,16 @@
 
         %}
             <script src="{{ asset_url }}"></script>
-        {% endjavascripts %}
 
+        {% endjavascripts %}
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+            ga('create', 'UA-63771111-1', 'auto');
+            ga('send', 'pageview');
+        </script>
         {% block javascripts %}{% endblock %}
         
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
@@ -55,8 +63,8 @@
                         <img src="{{ asset('bundles/vcg/images/UPS-shield-logo.png') }}" alt="" class="logo">
                         {% block offsite_modal_body %}
                             <div id="single-offsite-modal-content">
-                                <h1 id="leave-site-title">You are about to leave UPS Jobs</h1>
-                                <p>You are leaving the UPSJobs.com website and going to a website that UPS does not administer or fund. UPS does not endorse any products or services advertised or available through this website, nor do they control the opinions or information presented there. In going there, you will be subject to the privacy, accessibility, copyrighting and other policies and rules that apply to that site.</p>
+                                <h1 id="leave-site-title">You are about to leave UPS</h1>
+                                <p>You are leaving the UPS Veteran Career Gateway and going to a website that UPS does not administer or fund. UPS does not endorse any products or services advertised or available through this website, nor do they control the opinions or information presented there. In going there, you will be subject to the privacy, accessibility, copyrighting and other policies and rules that apply to that site.</p>
                                 <p>Your destination is: <span id="destination"></span></p>
                                 <div id="offsite-nav">
                                     <a id="forward-cancel" href="">Cancel</a>
@@ -169,7 +177,7 @@
             </div>
             <div class="pattern--get-started get-started--footer">
                 <p>Get started on your UPS career</p>
-                <a class="button" href="https://ups.managehr.com/candidate/">Apply Now</a>
+                <a class="button cta-button cta-button--go cta-button--apply" href="https://ups.managehr.com/candidate/">Apply Now</a>
             </div> 
     </main>
 

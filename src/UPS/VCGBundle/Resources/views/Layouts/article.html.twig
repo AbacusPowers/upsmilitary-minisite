@@ -10,7 +10,7 @@
             {% block modalbody %}
                     <div id="single-modal-content">
                     {% if article.File %}
-                        <a href="/bundles/vcg/downloads/{{ article.File }}" class="article-download"><i class="fa fa-download"></i>&nbspDownload</a>
+                        <a href="/bundles/vcg/downloads/{{ article.File }}" class="article-download" target="_blank"><i class="fa fa-download"></i>&nbspDownload</a>
                     {% endif %}
                     {{ article.Body | raw }} 
                     {% if article.Expanders %}
@@ -40,7 +40,7 @@
                         {% if article.Group == 'building-your-brand' %}
                             <div>
                                 <h3>Related Articles</h3>
-                                <ul class="group-links">
+                                <ul class="group-links group-links--building-your-brand">
                                     <li class="group-link">
                                         <a href="{{path('transition_guide_article',{'slug':'brand-intro'}) }}" class="article-link button history-checkbox"><span></span>Building Your Brand Intro</a>
                                     </li>
@@ -68,7 +68,7 @@
                         {% if article.Group == 'culture-benefits' %}
                             <div>
                                 <h3>Related Articles</h3>
-                                <ul class="group-links">
+                                <ul class="group-links group-links--culture-benefits">
                                     <li class="group-link">
                                         <a href="{{path('culture_benefits_article',{'slug':'values'}) }}" class="article-link button history-checkbox"><span></span>Values</a>
                                     </li>
@@ -85,7 +85,7 @@
                                         <a href="{{path('culture_benefits_article',{'slug':'esgr'}) }}" class="article-link button history-checkbox"><span></span>ESGR</a>
                                     </li>
                                     <li class="group-link">
-                                        <a href="{{path('culture_benefits_article',{'slug':'faq'}) }}" class="article-link button history-checkbox"><span></span>FAQs</a>
+                                        <a href="{{path('culture_benefits_article',{'slug':'faq'}) }}" class="article-link button history-checkbox"><span></span>FAQ</a>
                                     </li>
                                 </ul>
                             </div>
@@ -93,7 +93,7 @@
                         {% if article.Group == 'registered-apprentice' %}
                             <div>
                                 <h3>Related Articles</h3>
-                                <ul class="group-links">
+                                <ul class="group-links group-links--registered-apprentice">
                                     <li class="group-link">
                                         <a href="{{path('culture_benefits_article',{'slug':'ra-intro'}) }}" class="article-link button history-checkbox"><span></span>Intro</a>
                                     </li>
@@ -104,16 +104,19 @@
                                         <a href="{{path('culture_benefits_article',{'slug':'ra-responsibilities'}) }}" class="article-link button history-checkbox"><span></span>Responsibilities</a>
                                     </li>
                                     <li class="group-link">
-                                        <a href="{{path('culture_benefits_article',{'slug':'ra-gi-benefits'}) }}" class="article-link button history-checkbox"><span></span>GI Benefits</a>
+                                        <a href="{{path('culture_benefits_article',{'slug':'ra-gi-benefits'}) }}" class="article-link button history-checkbox"><span></span>GI Bill Benefits</a>
                                     </li>
                                     <li class="group-link">
-                                        <a href="{{path('culture_benefits_article',{'slug':'ra-post-911-payments'}) }}" class="article-link button history-checkbox"><span></span>Post 911 Payments</a>
+                                        <a href="{{path('culture_benefits_article',{'slug':'ra-post-911-payments'}) }}" class="article-link button history-checkbox"><span></span>Post-9/11 Payments</a>
                                     </li>
                                     <li class="group-link">
                                         <a href="{{path('culture_benefits_article',{'slug':'ra-mgib-payments'}) }}" class="article-link button history-checkbox"><span></span>MGIB Payments</a>
                                     </li>
                                     <li class="group-link">
                                         <a href="{{path('culture_benefits_article',{'slug':'ra-glossary'}) }}" class="article-link button history-checkbox"><span></span>Glossary</a>
+                                    </li>
+                                    <li class="group-link">
+                                        <a href="{{path('culture_benefits_article',{'slug':'ra-faq'}) }}" class="article-link button history-checkbox"><span></span>RA Program FAQ</a>
                                     </li>
                                 </ul>
                             </div>
