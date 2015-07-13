@@ -5,6 +5,7 @@ namespace UPS\VCGBundle\Command;
 use Symfony\Bundle\FrameworkBundle\Command\ContainerAwareCommand;
 //use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
+use Symfony\Component\Console\Input\ArrayInput;
 //use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
 //use Symfony\Component\Console\Formatter\OutputFormatterStyle;
@@ -16,6 +17,8 @@ use Symfony\Component\DomCrawler\Crawler;
 
 use Symfony\Component\Filesystem\Filesystem;
 use Symfony\Component\Filesystem\Exception\IOExceptionInterface;
+
+use Symfony\Component\Process\Process;
 
 class SiteExportCommand extends ContainerAwareCommand
 {
@@ -74,6 +77,19 @@ EOT
         return $kernel;
     }
 
+    protected function dumpAssets(OutputInterface $output)
+    {
+        $command = $this->getApplication()->find('assetic:dump');
+
+        $arguments = array(
+            'command' => 'assetic:dump'
+        );
+
+        $input = new ArrayInput($arguments);
+        $command->run($input, $output);
+
+        $output->writeln('Dumping assets');
+    }
 
     protected function writeSite($client, $dryRun, OutputInterface $output) {
 
@@ -100,13 +116,19 @@ EOT
                     $output->writeln('Folder path ' . $folderPath . ' will be created.' );
                 }
                 try {
-                    $response = $client->request( 'GET', $url )->response();
-                    $output->writeln($response);
+                    $response = $client->request( 'GET', $url );
+                    $statusCode = $client->getResponse()->getStatusCode();
+                    if($statusCode != 200){
+                        throw new \Exception("Page Does Not Exist", 3489);
+                    }
+                    var_dump($statusCode);
+//                    $output->writeln($response);
                     $output->writeln('<fg=green>'.$slug . ' will be written to ' . $folderPath.$slug.'</fg=green>' );
                 } catch (\Exception $ex) {
                     $output->writeln('<fg=red>Nothing found at ' . $url .'</fg=red>' );
                 }
             } else {
+                $this->dumpAssets($output);
                 try {
                     //create appropriate folder in ROOT/site-export/
                     $fs->mkdir($folderPath);
@@ -115,14 +137,25 @@ EOT
                     echo "An error occurred while creating your directory at ".$e->getPath();
                 }
                 $crawler = $client->request( 'GET', $url );
+                $statusCode = $client->getResponse()->getStatusCode();
+                if($statusCode == 200) {
+                    $fs->dumpFile($folderPath . $slug, "<!DOCTYPE html>\n<html>\n" . $crawler->html() . "\n</html>");
+                    $output->writeln($slug . ' has been written to ' . $folderPath . $slug);
 
-
-                $fs->dumpFile('<html>' . $folderPath.$slug, $crawler->html() . '</html>');
-                $output->writeln($slug . ' has been written to ' . $folderPath.$slug );
+                    $output->writeln('assets have been copied to /site-export/bundles');
+                }else{
+                    unlink($folderPath . $slug);
+                }
             }
 
         }
 
+        if($dryRun == true){
+            $this->dumpAssets($output);
+            $fs->mirror('web/css', 'site-export/css');
+            $fs->mirror('web/js', 'site-export/js');
+            $fs->mirror('web/bundles', 'site-export/bundles');
+        }
+
     }
 }
-?>
