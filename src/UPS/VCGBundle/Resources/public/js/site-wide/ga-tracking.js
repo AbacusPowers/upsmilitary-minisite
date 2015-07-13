@@ -18,22 +18,26 @@ function debounce(fn, delay) {
 
 //SLIDERS
 $('.carousel-control.next').click(function(){
-    forSlide = $(this).attr('for');
-    slideTitle = $('#' + forSlide + ' + .carousel-item .slider-text').text();
+    var forSlide = $(this).attr('for');
+    var slideTitle = $('#' + forSlide + ' + .carousel-item .slider-text').text();
     ga('send','event','slider','arrow_right',slideTitle);
 });
 $('.carousel-control.prev').click(function(){
-    forSlide = $(this).attr('for');
-    slideTitle = $('#' + forSlide + ' + .carousel-item .slider-text').text();
+    var forSlide = $(this).attr('for');
+    var slideTitle = $('#' + forSlide + ' + .carousel-item .slider-text').text();
     ga('send','event','slider','arrow_right',slideTitle);
 });
 $('.carousel-bullet').click(function(){
-    forSlide = $(this).attr('for');
-    forArray = forSlide.split('-');
-    circleNumber = forArray[1];
-    slideTitle = $('#' + forSlide + ' + .carousel-item .slider-text').text();
+    var forSlide = $(this).attr('for');
+    var forArray = forSlide.split('-');
+    var circleNumber = forArray[1];
+    var slideTitle = $('#' + forSlide + ' + .carousel-item .slider-text').text();
     ga('send','event','slider','circle_' + circleNumber, slideTitle);
 
+});
+$(document).on('click','.slider-text-wrapper a',function(){
+    var slideTitle = $(this).children('.slider-text').text();
+    ga('send','event','slider','click', slideTitle);
 });
 //VIDEOS
 //this adds the youtube api
@@ -83,14 +87,14 @@ $('.social-button').click(function(){
 });
 
 //PDF DOWNLOADS FROM MODAL
-$('.article-download').click(function(){
+$(document).on('click','.article-download',function(){
     fileName = $(this).attr('href').split('downloads/')[1];
     ga('send','event','pdf_download','click', fileName)
 });
 
 
 //ACCORDION EXPAND/COLLAPSE
-$('.expander__wrapper .expand-button').click(function(){
+$(document).on('click','.expander__wrapper .expand-button',function(){
     expanderSectionName = $('.expander__parent',this).text();
 
     if ( $('i.fa',this).hasClass('fa-minus') ) {
@@ -129,7 +133,7 @@ $('.job-search--job-description').submit(function(){
     }
     ga('send','event','hot_jobs','job_description_search', 'results_' + positionTitle );
 });
-$('body').on('click','.job-wrapper .search-button',function(){
+$(document).on('click','.job-wrapper .search-button',function(){
     positionTitle = $(this).closest('.job-wrapper').find('p span').text();
     if (positionTitle == 'Driver Helper (Oct-Dec)') {
         positionTitle = 'Driver Helper';
@@ -157,7 +161,7 @@ $('.all-events-wrapper').closest('.scroll-container').scroll( debounce(eventScro
 
 
 //EVENTS GMAP LINK CLICK
-$('.event__map-link').click(function() {
+$(document).on('click','.event__map-link',function() {
     var eventTitle = $(this).closest('.event__wrapper').find('.event__title').text();
     ga('send','event','career_events','google_map_click', eventTitle);
 });
