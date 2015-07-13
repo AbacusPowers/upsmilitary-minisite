@@ -127,7 +127,8 @@
 
             {% endblock %}
 
-            <a href="{% block parentPageLink %}{{ path('page', {'slug': article.Parent | raw })}}{% endblock %}" id="close-modal"><i class="fa fa-times"></i></a>
+            <a href="{% block parentPageLink %}{% if article.Parent %}{{ path('page', {'slug': article.Parent | raw }) }}{% else %}{{ path('homepage') }}{% endif %}{% endblock %}" id="close-modal"><i class="fa fa-times"></i></a>
+
             {% if article.Prev %}
                 <a href="{% block prevArticleLink %}{{ path(route, {'slug': article.Prev | raw })}}{% endblock %}" id="prev-article"><i class="fa fa-angle-left"></i></a>
             {% endif %}
