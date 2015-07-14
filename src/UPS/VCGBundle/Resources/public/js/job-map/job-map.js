@@ -190,6 +190,7 @@
         refresher.click(function() {
             focus_state(NONE_STATE);
             stateSelect.val('');
+            ga('send', 'event', 'career_explorer', 'click', 'reset_button');
         });
     });
     
@@ -421,8 +422,10 @@
      * 
      */
     function on_region_selected(event, code) {
-        focus_state(fetch_state(code));
+        var state = fetch_state(code);
+        focus_state(state);
         stateSelect.val(code);
+        ga('send', 'event', 'career_explorer', 'click', state.name);
     }
     
     
@@ -430,12 +433,14 @@
      * 
      */
     function on_state_select_change() {
-        var val = stateSelect.val();
-        if (val == '') {
+        var code = stateSelect.val();
+        if (code == '') {
             focus_state(NONE_STATE);
         }
         else {
-            vmap.setSelectedRegions(val);
+            vmap.setSelectedRegions(code);
+            var state = fetch_state(code);
+            ga('send', 'event', 'career_explorer', 'dropdown_select', state.name);
         }
     }
     
