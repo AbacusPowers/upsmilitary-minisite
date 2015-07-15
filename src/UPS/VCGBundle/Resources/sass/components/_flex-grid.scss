@@ -174,11 +174,11 @@ a.grid-item:hover {
 }
 
 
-.page--culture {
+.page--culture, .page--partners {
 
-    .grid-area {
-        border-bottom: 1px solid $ups-yellow;
-    }
+    // .grid-area {
+    //     border-bottom: 1px solid $ups-yellow;
+    // }
 
     .breakpoint-large &, .breakpoint-wide & {
         .grid-item:nth-child(3n + 1) {
@@ -186,7 +186,7 @@ a.grid-item:hover {
         }
 
         .grid-item:nth-last-child(3) {
-            border-bottom: 0px;
+            border-bottom: none;
         }
     }
     
@@ -194,12 +194,20 @@ a.grid-item:hover {
         .grid-item:nth-child(odd) {
             border-left: 0px;
         }
+    }
+}
 
-        .grid-item:nth-last-child(2) {
-            border-bottom: 1px solid $ups-yellow;
-        }
+.page--culture {
+
+    .breakpoint-medium & .grid-item:nth-last-child(2) {
+        border-bottom: 1px solid $ups-yellow;
     }
 
-
+    .breakpoint-medium & .grid-item:nth-last-child(1) {
+        border-bottom: 1px solid $ups-yellow;
+    }
 }
+
+
+
 
