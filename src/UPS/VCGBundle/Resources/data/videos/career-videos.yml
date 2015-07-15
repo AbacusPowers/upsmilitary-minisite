@@ -19,11 +19,16 @@ hr:
   Url: 6PdGdZdA0uc
   Title: Human Resources Manager
   Prev: frontline-supervisor
+  Next: cover-driver
+cover-driver:
+  Url: y0XtA0v_JHo
+  Title: Cover Driver
+  Prev: hr
   Next: mechanic
 mechanic:
   Url: ovi3sv7Sxrs
   Title: Mechanic
-  Prev: hr
+  Prev: cover-driver
   Next: otr-driver
 otr-driver:
   Url: WxCciKUub5Q

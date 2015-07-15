@@ -8,10 +8,6 @@ function aContainsB (a, b) {
 }
 
 $( document ).ready(function() {
-//    $('#ajax-spinner').hide();
-//    $('.expander__wrapper','.page--job-converter').hide();
-//    $('#form-error').hide();
-//    $('#military-job').hide();
     
     $('#branch-of-service').change(function(){
         $('#job-code').val('');
@@ -69,12 +65,15 @@ $( document ).ready(function() {
             radius = '-1';
         }
 
-        forwardURL = 'http://jobs-ups.com/search/' + encodeURIComponent(jobTitle) + '/ASCategory/-1/ASPostedDate/-1/ASCountry/-1/ASState/-1/ASCity/-1/ASLocation/-1/ASCompanyName/-1/ASCustom1/-1/ASCustom2/-1/ASCustom3/-1/ASCustom4/-1/ASCustom5/-1/ASIsRadius/' + radiusOn + '/ASCityStateZipcode/' + encodeURIComponent(zipCode) +'/ASDistance/'+ encodeURIComponent(radius) +'/ASLatitude/-1/ASLongitude/-1/ASDistanceType/-1'
+        if (jQuery.browser.mobile) {
+            forwardURL = 'http://m.jobs-ups.com/search';
+        } else {
+            forwardURL = 'http://jobs-ups.com/search/' + encodeURIComponent(jobTitle) + '/ASCategory/-1/ASPostedDate/-1/ASCountry/-1/ASState/-1/ASCity/-1/ASLocation/-1/ASCompanyName/-1/ASCustom1/-1/ASCustom2/-1/ASCustom3/-1/ASCustom4/-1/ASCustom5/-1/ASIsRadius/' + radiusOn + '/ASCityStateZipcode/' + encodeURIComponent(zipCode) +'/ASDistance/'+ encodeURIComponent(radius) +'/ASLatitude/-1/ASLongitude/-1/ASDistanceType/-1';
+        }
         window.open(
             forwardURL,
             '_blank' // <- This is what makes it open in a new window.
         );
-        //location.href= 'http://jobs-ups.com/search/' + encodeURIComponent(jobTitle) + '/ASCategory/-1/ASPostedDate/-1/ASCountry/-1/ASState/-1/ASCity/-1/ASLocation/-1/ASCompanyName/-1/ASCustom1/-1/ASCustom2/-1/ASCustom3/-1/ASCustom4/-1/ASCustom5/-1/ASIsRadius/' + radiusOn + '/ASCityStateZipcode/' + encodeURIComponent(zipCode) +'/ASDistance/'+ encodeURIComponent(radius) +'/ASLatitude/-1/ASLongitude/-1/ASDistanceType/-1';
     });
 
     $('.job-search--job-converter').submit(function(e){
@@ -95,19 +94,17 @@ $( document ).ready(function() {
             radius = '-1';
         }
 
-        //if( $(this).children('.radius').val() ) {
-        //    radiusOn = 'true';
-        //    radius = $(this).children('.radius').val();
-        //} else {
-        //    radiusOn = 'false';
-        //    radius = '-1';
-        //}
-        forwardURL = 'http://jobs-ups.com/search/' + encodeURIComponent(jobTitle) + '/ASCategory/-1/ASPostedDate/-1/ASCountry/-1/ASState/-1/ASCity/-1/ASLocation/-1/ASCompanyName/-1/ASCustom1/-1/ASCustom2/-1/ASCustom3/-1/ASCustom4/-1/ASCustom5/-1/ASIsRadius/' + radiusOn + '/ASCityStateZipcode/' + encodeURIComponent(zipCode) +'/ASDistance/'+ encodeURIComponent(radius) +'/ASLatitude/-1/ASLongitude/-1/ASDistanceType/-1'
+        if (jQuery.browser.mobile) {
+            forwardURL = 'http://m.jobs-ups.com/search';
+        } else {
+            forwardURL = 'http://jobs-ups.com/search/' + encodeURIComponent(jobTitle) + '/ASCategory/-1/ASPostedDate/-1/ASCountry/-1/ASState/-1/ASCity/-1/ASLocation/-1/ASCompanyName/-1/ASCustom1/-1/ASCustom2/-1/ASCustom3/-1/ASCustom4/-1/ASCustom5/-1/ASIsRadius/' + radiusOn + '/ASCityStateZipcode/' + encodeURIComponent(zipCode) +'/ASDistance/'+ encodeURIComponent(radius) +'/ASLatitude/-1/ASLongitude/-1/ASDistanceType/-1';
+        }
+
         window.open(
             forwardURL,
             '_blank' // <- This is what makes it open in a new window.
         );
-        //location.href= 'http://jobs-ups.com/search/' + encodeURIComponent(jobTitle) + '/ASCategory/-1/ASPostedDate/-1/ASCountry/-1/ASState/-1/ASCity/-1/ASLocation/-1/ASCompanyName/-1/ASCustom1/-1/ASCustom2/-1/ASCustom3/-1/ASCustom4/-1/ASCustom5/-1/ASIsRadius/' + radiusOn + '/ASCityStateZipcode/' + encodeURIComponent(zipCode) +'/ASDistance/'+ encodeURIComponent(radius) +'/ASLatitude/-1/ASLongitude/-1/ASDistanceType/-1';
+
     });
     
     $('#job-converter').submit(function(e){
@@ -255,11 +252,11 @@ $( document ).ready(function() {
     });
 });
 
-
-$(document)
-  .ajaxStart(function () {
-    $('#ajax-spinner').removeClass('hidden');
-  })
-  .ajaxStop(function () {
-    $('#ajax-spinner').addClass('hidden');
-  });
+//
+//$(document)
+//  .ajaxStart(function () {
+//    $('#ajax-spinner').removeClass('hidden');
+//  })
+//  .ajaxStop(function () {
+//    $('#ajax-spinner').addClass('hidden');
+//  });

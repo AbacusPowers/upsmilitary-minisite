@@ -37,7 +37,7 @@
                         </div>
                     {% endif %}
                     {%  if article.Group %}
-                        {% if article.Group == 'building-your-brand' %}
+                        {% if article.Group == ('building-your-brand' or 'brand-home') %}
                             <div>
                                 <h3>Related Articles</h3>
                                 <ul class="group-links group-links--building-your-brand">
@@ -130,10 +130,13 @@
             <a href="{% block parentPageLink %}{% if article.Parent %}{{ path('page', {'slug': article.Parent | raw }) }}{% else %}{{ path('homepage') }}{% endif %}{% endblock %}" id="close-modal"><i class="fa fa-times"></i></a>
 
             {% if article.Prev %}
-                <a href="{% block prevArticleLink %}{{ path(route, {'slug': article.Prev | raw })}}{% endblock %}" id="prev-article"><i class="fa fa-angle-left"></i></a>
+                <a href="{% block prevArticleLink %}{% if article.Group == 'brand-home' %}{{ path('transition_guide_article', {'slug': article.Prev | raw })}}{% else %}{{ path(route, {'slug': article.Prev | raw })}}{% endif %}
+                {% endblock %}" id="prev-article"><i class="fa fa-angle-left"></i></a>
+
             {% endif %}
             {% if article.Prev %}
-                <a href="{% block nextArticleLink %}{{ path(route, {'slug': article.Next | raw })}}{% endblock %}" id="next-article"><i class="fa fa-angle-right"></i></a>
+                <a href="{% block nextArticleLink %}
+                {% if article.Group == 'brand-home' %}{{ path('transition_guide_article', {'slug': article.Next | raw })}}{% else %}{{ path(route, {'slug': article.Next | raw })}}{% endif %}{% endblock %}" id="next-article"><i class="fa fa-angle-right"></i></a>
             {% endif %}
         </div>
 {% endblock %}
