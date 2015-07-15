@@ -15,6 +15,7 @@
 #IGNORE PROJECT FILES
 nbproject/
 .idea/
+/web/css
 
 #IGNORE GULP STUFF
 node_modules/
