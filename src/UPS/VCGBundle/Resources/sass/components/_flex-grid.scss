@@ -36,7 +36,7 @@
     }
     
     .button-group { /*For the Quick Start Linking*/
-        margin-top: 1.15rem;
+        margin-top: 1.3rem;
     }
 
     .button-group a {
@@ -136,9 +136,9 @@ a.grid-item:hover {
 
 // Universal styles
 
-.grid-item:nth-last-child(2) {
-    border-bottom: 0px;
-}
+// .grid-item:nth-last-child(2) {
+//     border-bottom: 0px;
+// }
 
 .grid-item:nth-last-child(1) {
     border-bottom: 0px;
@@ -150,6 +150,7 @@ a.grid-item:hover {
 .page--home {
     #grid-item--videos .link-wrapper {
         margin-left: -1.5em;
+        margin-top: 1.2em;
 
         a {
             width: calc( 50% - 1px );
@@ -173,12 +174,28 @@ a.grid-item:hover {
     }
 }
 
+.page--transition-guide {
+
+    .left-column {
+        padding: 1.5rem;
+
+        .button-group {
+            width: calc( 100% + 3rem );
+            margin-left: -1.5rem;
+        }
+
+        .breakpoint-small & {
+            border-bottom: 1px solid $ups-yellow;
+        }
+    }
+
+    .grid-item:nth-child(3) {
+        width: 100%;
+    }
+}
+
 
 .page--culture, .page--partners {
-
-    // .grid-area {
-    //     border-bottom: 1px solid $ups-yellow;
-    // }
 
     .breakpoint-large &, .breakpoint-wide & {
         .grid-item:nth-child(3n + 1) {

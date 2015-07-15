@@ -17,9 +17,9 @@
             <h1>Career Transition Guide</h1>
             <p>For Veterans & Service Members</p>
         </div>
-        <div class="grid-items-lines">
-          <div class="grid-item">
-              {% include 'VCGBundle:Svgs:person.svg.twig' %}
+        <div class="flex-wrapper">
+          <div class="left-column">
+            {% include 'VCGBundle:Svgs:person.svg.twig' %}
 
             <h1>Learn How to Build Your Brand</h1>
 
@@ -28,51 +28,54 @@
             <p>This series of short articles will help you with everything from resumes to interviewing. Think of it as your own personal branding kit.</p>
 
             <div class="button-group">
-                <a href="{{path('transition_guide_article',{'slug':'brand-intro'}) }}" class="button black history-checkbox article-link"><span></span>Intro</a>
-                <a href="{{path('transition_guide_article',{'slug':'cover-letter-resume'}) }}" class="button black history-checkbox article-link"><span></span>Resume & Cover Letter</a>
-                <a href="{{path('transition_guide_article',{'slug':'marketing-yourself'}) }}" class="button black history-checkbox article-link"><span></span>Marketing Yourself Online</a>
-                <a href="{{path('transition_guide_article',{'slug':'networking-essentials'}) }}" class="button black history-checkbox article-link"><span></span>Networking</a>
-                <a href="{{path('transition_guide_article',{'slug':'recruiters'}) }}" class="button black history-checkbox article-link"><span></span>Dealing With Recruiters</a>
-                <a href="{{path('transition_guide_article',{'slug':'career-fair'}) }}" class="button black history-checkbox article-link"><span></span>Preparing for Career Fairs</a>
-                <a href="{{path('transition_guide_article',{'slug':'interview'}) }}" class="button black history-checkbox article-link"><span></span>Interviews</a>
+                <a href="{{path('transition_guide_article',{'slug':'brand-intro'}) }}" class="block-link black history-checkbox article-link"><span></span>Intro</a>
+                <a href="{{path('transition_guide_article',{'slug':'cover-letter-resume'}) }}" class="block-link black history-checkbox article-link"><span></span>Resume & Cover Letter</a>
+                <a href="{{path('transition_guide_article',{'slug':'marketing-yourself'}) }}" class="block-link black history-checkbox article-link"><span></span>Marketing Yourself Online</a>
+                <a href="{{path('transition_guide_article',{'slug':'networking-essentials'}) }}" class="block-link black history-checkbox article-link"><span></span>Networking</a>
+                <a href="{{path('transition_guide_article',{'slug':'recruiters'}) }}" class="block-link black history-checkbox article-link"><span></span>Dealing With Recruiters</a>
+                <a href="{{path('transition_guide_article',{'slug':'career-fair'}) }}" class="block-link black history-checkbox article-link"><span></span>Preparing for Career Fairs</a>
+                <a href="{{path('transition_guide_article',{'slug':'interview'}) }}" class="block-link black history-checkbox article-link"><span></span>Interviews</a>
             </div>
-
           </div>
-          <a href="{{ path('transition_guide_page', {'slug':'dd-form-214-guide'}) }}" class="grid-item grid--career-explorer grid--bottom-left">
-              {% include 'VCGBundle:Svgs:document.svg.twig' %}
-            <h1>Your DD Form 214</h1>
-              <p>Translate your military experience, awards and education into language civilian employers understand.</p>
-          </a>
-          <a href="https://www.resumeengine.org/" target="new" class="grid-item grid--ups-culture external">
-          {% include 'VCGBundle:Svgs:resume.svg.twig' %}
-            <h1>Create Your Civilian Resume</h1>
-              <p>Complete the process quickly with resumeengine.org &nbsp;<i class="fa fa-external-link-square"></i></p>
-          </a>
+            
+          <div class="grid-area grid-area--left-column">
+            <a href="{{ path('transition_guide_page', {'slug':'dd-form-214-guide'}) }}" class="grid-item grid--career-explorer grid--bottom-left">
+                {% include 'VCGBundle:Svgs:document.svg.twig' %}
+              <h1>Your DD Form 214</h1>
+                <p>Translate your military experience, awards and education into language civilian employers understand.</p>
+            </a>
+            
+            <a href="https://www.resumeengine.org/" target="new" class="grid-item grid--ups-culture external">
+            {% include 'VCGBundle:Svgs:resume.svg.twig' %}
+              <h1>Create Your Civilian Resume</h1>
+                <p>Complete the process quickly with resumeengine.org &nbsp;<i class="fa fa-external-link-square"></i></p>
+            </a>
 
             <div id="grid-item--videos" class="grid-item grid-item-big">
-                {% include 'VCGBundle:Svgs:play.svg.twig' %}
-                <h1>Advice From Human Resources</h1>
+              {% include 'VCGBundle:Svgs:play.svg.twig' %}
+              <h1>Advice From Human Resources</h1>
               <!--   <div class="scroll-indicator--h">
                     <span class="scroll-indicator__text">SCROLL</span>
                     <i class="fa fa-long-arrow-left"></i>
                     <i class="fa fa-long-arrow-right"></i>
                 </div> -->
 
-                <div class="scroll-container">
-                    <div id="video-list">
-                        <a href="{{ path('transition_guide_video',{'slug':'resume'}) }}" class="video-link video-link--style"><img class="video-thumb" src="{{ asset('bundles/vcg/images/video-thumbs/resume-1.png') }}" alt=""><i class="fa fa-play-circle"></i><span class="video-title">Tips for Your Resume</span></a>
-                        <a href="{{ path('transition_guide_video',{'slug':'networking'}) }}" class="video-link video-link--style"><img class="video-thumb" src="{{ asset('bundles/vcg/images/video-thumbs/networking-1.png') }}" alt=""><i class="fa fa-play-circle"></i><span class="video-title">Tips for Networking</span></a>
-                        <a href="{{ path('transition_guide_video',{'slug':'social-media'}) }}" class="video-link video-link--style"><img class="video-thumb" src="{{ asset('bundles/vcg/images/video-thumbs/social-media-1.png') }}" alt=""><i class="fa fa-play-circle"></i><span class="video-title">Tips for Using Social Media</span></a>
-                        <a href="{{ path('transition_guide_video',{'slug':'interview'}) }}" class="video-link video-link--style"><img class="video-thumb" src="{{ asset('bundles/vcg/images/video-thumbs/interview-1.png') }}" alt=""><i class="fa fa-play-circle"></i><span class="video-title">Tips for Your Interview</span></a>
-                    </div>
+              <div class="scroll-container">
+                <div id="video-list">
+                  <a href="{{ path('transition_guide_video',{'slug':'resume'}) }}" class="video-link video-link--style"><img class="video-thumb" src="{{ asset('bundles/vcg/images/video-thumbs/resume-1.png') }}" alt=""><i class="fa fa-play-circle"></i><span class="video-title">Tips for Your Resume</span></a>
+                  <a href="{{ path('transition_guide_video',{'slug':'networking'}) }}" class="video-link video-link--style"><img class="video-thumb" src="{{ asset('bundles/vcg/images/video-thumbs/networking-1.png') }}" alt=""><i class="fa fa-play-circle"></i><span class="video-title">Tips for Networking</span></a>
+                  <a href="{{ path('transition_guide_video',{'slug':'social-media'}) }}" class="video-link video-link--style"><img class="video-thumb" src="{{ asset('bundles/vcg/images/video-thumbs/social-media-1.png') }}" alt=""><i class="fa fa-play-circle"></i><span class="video-title">Tips for Using Social Media</span></a>
+                  <a href="{{ path('transition_guide_video',{'slug':'interview'}) }}" class="video-link video-link--style"><img class="video-thumb" src="{{ asset('bundles/vcg/images/video-thumbs/interview-1.png') }}" alt=""><i class="fa fa-play-circle"></i><span class="video-title">Tips for Your Interview</span></a>
                 </div>
+              </div>
             </div>
 
-          <a href="{{path('transition_guide_article',{'slug':'hiring-resources'}) }}" class="grid-item grid-item-big grid--employment-resources article-link">
-            {% include 'VCGBundle:Svgs:business.svg.twig' %}
-            <h1>Employment Resources</h1>
-              <p>This list of free sites provides information on job openings, government support and much more.</p>
-          </a>
+            <a href="{{path('transition_guide_article',{'slug':'hiring-resources'}) }}" class="grid-item grid-item-big grid--employment-resources article-link">
+              {% include 'VCGBundle:Svgs:business.svg.twig' %}
+              <h1>Employment Resources</h1>
+                <p>This list of free sites provides information on job openings, government support and much more.</p>
+            </a>
+          </div>
         </div>
       </div>
     </div>
