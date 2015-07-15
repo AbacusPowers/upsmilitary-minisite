@@ -98,7 +98,7 @@ $state-list-scroll-height-wide:  $map-height-wide - $map-control-height;
 
    
     
-    .svg-map {
+    #map-container svg {
         width: 100%;
         height: $map-height-small;
         display: block;
@@ -178,6 +178,7 @@ $state-list-scroll-height-wide:  $map-height-wide - $map-control-height;
 
         &.opacity {
             opacity: 1;
+            display: block;
         }
 
     }
@@ -286,8 +287,14 @@ $state-list-scroll-height-wide:  $map-height-wide - $map-control-height;
             overflow-y: scroll;
         }
     }
-
-    .component--expander .component--expander .expander__wrapper .job-wrapper p {
-        
-    }
 }
+
+.jvectormap-container,
+.jvectormap-container svg {
+    //@include transition (all 0.25s ease-in);
+}
+
+.jvectormap-tip { display: none !important; }
+
+.jvectormap-zoomin,
+.jvectormap-zoomout { display: none !important; }
