@@ -322,6 +322,31 @@ body.article-view, body.leave-site-view, body.video-view, body.events-view, body
   img.logo {
     display: none;
   }
+  .values-row {
+    width: 100%;
+
+    &#values-header {
+      background-color: #351c15;
+    }
+    &#values-integrity {
+      background-color: #009cbd;
+    }
+    &#values-teamwork {
+      background-color: #40c1ac;
+    }
+    &values-service {
+      background-color: #f68b20;
+    }
+    &values-accountability {
+      background-color: #e1c8b0;
+    }
+    &values-quality {
+      background-color: #351c15;
+    }
+    &values-diversity {
+      background-color: #64a70b;
+    }
+  }
 }
 
 /*********************OFFSITE LINK MODAL*************************/
