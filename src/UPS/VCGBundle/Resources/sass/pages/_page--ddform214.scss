@@ -3,23 +3,15 @@
     #side--a {
         position: relative;
 
-        .intro {            
-
-            h1 {
-                margin-left: 6.5rem;
-                  font-size: 1.3em;
-                  margin-top: 0.8em;
-                  margin-bottom: 1.5em;
-                  margin-left: 4.8em;
-                  margin-right: 0.7em;
-                  color: $white;
-
-            }
-
-            p {
-                margin-left: 2em;
-            }
+        .intro {  
+            @include grid-typography;
+            padding: 1.5em;
         }
+
+        .grid-icon {
+            @include site-icon;
+        }
+
     }
 
     #side--b {
@@ -37,7 +29,7 @@
     }
     
     .intro {
-        padding: 1.5em 3em 1.5em 0em;
+        // padding: 1.5em 3em 1.5em 0em;
 
         img {
             @include position(absolute, 0 null null 1em );
@@ -63,36 +55,33 @@
 
 
         h1 {
-            margin-left: 4.5em;
+            // margin-left: 4.5em;
             color: $white;
-            margin-bottom: 2.5em;
+            // margin-bottom: 2.5em;
 
-            .breakpoint-small & {
-                margin-left: 3rem;
-                font-size: 1.2em;
-            }
+            // .breakpoint-small & {
+            //     margin-left: 3rem;
+            //     font-size: 1.2em;
+            // }
 
-            .breakpoint-medium & {
-                margin-left: 6.5em;
-                margin-top: -1em;
-                margin-bottom: 3em;
-            }
+            // .breakpoint-medium & {
+            //     margin-left: 6.5em;
+            //     margin-top: -1em;
+            //     margin-bottom: 3em;
+            // }
         } 
 
         .breakpoint-small & {
-            p{
-                margin: 2em;
-            }
+            // p{
+            //     margin: 2em;
+            // }
 
         }
 
       .dd214-download {
         color: $ups-yellow;
-        margin-left: 1.8rem;
         position: absolute;
         font-size: 0.8em;
-        // text-align: right;
-        // right: 3rem;
         margin-top: 0.5em;
         .breakpoint-small & {
             right: 1rem;
