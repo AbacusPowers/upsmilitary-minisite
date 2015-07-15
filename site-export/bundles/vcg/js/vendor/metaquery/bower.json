@@ -1,9 +1,0 @@
-{
-  "name": "metaquery",
-  "main": ["metaquery.min.js"],
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "components"
-  ]
-}

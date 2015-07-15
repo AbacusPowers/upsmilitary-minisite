@@ -118,7 +118,7 @@ EOT
                 try {
                     $response = $client->request( 'GET', $url );
                     $statusCode = $client->getResponse()->getStatusCode();
-                    if($statusCode != 200){
+                    if ($statusCode != 200) {
                         throw new \Exception("Page Does Not Exist", 3489);
                     }
                     var_dump($statusCode);
@@ -144,18 +144,20 @@ EOT
 
                     $output->writeln('assets have been copied to /site-export/bundles');
                 }else{
-                    unlink($folderPath . $slug);
+                    if ( $fs->exists($folderPath . $slug) ) {
+                        unlink($folderPath . $slug);
+                    }
                 }
             }
 
         }
 
-        if($dryRun == true){
+        if($dryRun != true){
             $this->dumpAssets($output);
+            $fs->copy('web/favicon.ico','site-export/favicon.ico')
             $fs->mirror('web/css', 'site-export/css');
             $fs->mirror('web/js', 'site-export/js');
             $fs->mirror('web/bundles', 'site-export/bundles');
         }
-
     }
 }
