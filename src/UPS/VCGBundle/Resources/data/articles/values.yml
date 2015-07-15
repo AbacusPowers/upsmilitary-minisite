@@ -13,7 +13,7 @@ Body: |
     	<div id="values-integrity" class="values-row">
     		<div class="values-row__content">
     			<h1 class="values-row__header">Integrity</h1>
-    			<p class="values-row__graf">In the military, it's all about honor. At UPS, it's who we are and the foundation of all we do.</p>
+    			<p class="row-content__graf">In the military, it's all about honor. At UPS, it's who we are and the foundation of all we do.</p>
     		</div>
     		<div class="values-row__graphic">
     			<svg version="1.1" id="integrity-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -70,10 +70,6 @@ Body: |
     		</div>
     	</div>
     	<div id="values-teamwork" class="values-row">
-    		<div class="values-row__content">
-    			<h1 class="values-row__header">Teamwork</h1>
-    			<p class="values-row__graf">In the military, completing missions as a team is a way of life. At UPS, determined people working together can accomplish anything.</p>
-    		</div>
     		<div class="values-row__graphic">
     			<svg version="1.1" id="teamwork-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
     				 viewBox="-191 2.875 227.417 97.125" enable-background="new -191 2.875 227.417 97.125" xml:space="preserve">
@@ -169,11 +165,15 @@ Body: |
     			</g>
     			</svg>
     		</div>
+    		<div class="values-row__content">
+    			<h1 class="values-row__header">Teamwork</h1>
+    			<p class="row-content__graf">In the military, completing missions as a team is a way of life. At UPS, determined people working together can accomplish anything.</p>
+    		</div>
     	</div>
     	<div id="values-service" class="values-row">
     		<div class="values-row__content">
     			<h1 class="values-row__header">Service</h1>
-    			<p class="values-row__graf">In the military, putting others before self is the very definition of service. At UPS, meeting the needs of our customers and communities is central to our success.</p>
+    			<p class="row-content__graf">In the military, putting others before self is the very definition of service. At UPS, meeting the needs of our customers and communities is central to our success.</p>
     		</div>
     		<div class="values-row__graphic">
     			<svg version="1.1" id="service-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -695,10 +695,6 @@ Body: |
     		</div>
     	</div>
     	<div id="values-accountability" class="values-row">
-    		<div class="values-row__content">
-    			<h1 class="values-row__header">Accountability</h1>
-    			<p class="values-row__graf">In the military, you have a duty to your teammates, and no one leaves anyone behind. At UPS, we take responsibility for our actions, for each other's safety, and we all grow together.</p>
-    		</div>
     		<div class="values-row__graphic">
     			<svg version="1.1" id="accountability-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
     				 viewBox="0 0 136 129.333" enable-background="new 0 0 136 129.333" xml:space="preserve">
@@ -836,11 +832,15 @@ Body: |
     			</g>
     			</svg>
     		</div>
+    		<div class="values-row__content">
+    			<h1 class="values-row__header">Accountability</h1>
+    			<p class="row-content__graf">In the military, you have a duty to your teammates, and no one leaves anyone behind. At UPS, we take responsibility for our actions, for each other's safety, and we all grow together.</p>
+    		</div>
     	</div>
     	<div id="values-quality" class="values-row">
     		<div class="values-row__content">
     			<h1 class="values-row__header">Quality &amp; Efficiency</h1>
-    			<p class="values-row__graf">In the military, precision leads to excellence, and cutting corners is never an option. At UPS, we never stop pursuing faster, smarter and better solutions.</p>
+    			<p class="row-content__graf">In the military, precision leads to excellence, and cutting corners is never an option. At UPS, we never stop pursuing faster, smarter and better solutions.</p>
     		</div>
     		<div class="values-row__graphic">
     			<svg version="1.1" id="quality-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -990,10 +990,6 @@ Body: |
     		</div>
     	</div>
     	<div id="values-diversity" class="values-row">
-    		<div class="values-row__content">
-    			<h1 class="values-row__header">Diversity &amp; Opportunity</h1>
-    			<p class="values-row__graf">In the military, diverse backgrounds and beliefs meld into one united force. At UPS, our strength starts with tolerance and respect for all and anyone who works hard can rise through our ranks.</p>
-    		</div>
     		<div class="values-row__graphic">
     			<svg version="1.1" id="diversity-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
     				 viewBox="0 0 224.167 148.71" enable-background="new 0 0 224.167 148.71" xml:space="preserve">
@@ -1060,6 +1056,10 @@ Body: |
     				</g>
     			</g>
     			</svg>
+    		</div>
+    		<div class="values-row__content">
+    			<h1 class="values-row__header">Diversity &amp; Opportunity</h1>
+    			<p class="row-content__graf">In the military, diverse backgrounds and beliefs meld into one united force. At UPS, our strength starts with tolerance and respect for all and anyone who works hard can rise through our ranks.</p>
     		</div>
     	</div>
     </div>
