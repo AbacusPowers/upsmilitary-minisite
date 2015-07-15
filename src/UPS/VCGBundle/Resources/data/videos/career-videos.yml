@@ -17,7 +17,7 @@ frontline-supervisor:
   Next: hr
 hr:
   Url: 6PdGdZdA0uc
-  Title: Human Resources
+  Title: Human Resources Manager
   Prev: frontline-supervisor
   Next: mechanic
 mechanic:
