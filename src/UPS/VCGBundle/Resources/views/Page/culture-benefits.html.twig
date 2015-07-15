@@ -18,66 +18,66 @@
             <h1>UPS Culture &amp; Benefits</h1>
             <p>For Veterans & Service Members</p>
         </div>
-        <div class="grid-items-lines">
-            <a href="{{path('culture_benefits_article',{'slug':'values'}) }}" class="grid-item values-link">
-                {% include 'VCGBundle:Svgs:heart.svg.twig' %}
-                <h1>UPS Values</h1>
-                <p>Among the many reasons veterans thrive at UPS is a mutual belief in doing things right.</p>
-            </a>
+        <div class="flex-wrapper">
+            <div class="grid-area">                
+                <a href="{{path('culture_benefits_article',{'slug':'values'}) }}" class="grid-item values-link">
+                    {% include 'VCGBundle:Svgs:heart.svg.twig' %}
+                    <h1>UPS Values</h1>
+                    <p>Among the many reasons veterans thrive at UPS is a mutual belief in doing things right.</p>
+                </a>
 
-            <a href="{{path('culture_benefits_article',{'slug':'family-programs'}) }}" class="grid-item grid--family article-link">
-                {% include 'VCGBundle:Svgs:family.svg.twig' %}
-                <h1>Family</h1>
-                <p>Here are some resources to help support you and your loved ones.</p>
-            </a>
+                <a href="{{path('culture_benefits_article',{'slug':'family-programs'}) }}" class="grid-item grid--family article-link">
+                    {% include 'VCGBundle:Svgs:family.svg.twig' %}
+                    <h1>Family</h1>
+                    <p>Here are some resources to help support you and your loved ones.</p>
+                </a>
 
-            <a href="{{path('culture_benefits_article',{'slug':'benefits'}) }}" class="grid-item grid--ups-culture article-link">
-                {% include 'VCGBundle:Svgs:plus.svg.twig' %}
-                <h1>Benefits</h1>
-                <p>If you liked the benefits you received in the military, you’re going to love UPS.</p>
-            </a>
+                <a href="{{path('culture_benefits_article',{'slug':'benefits'}) }}" class="grid-item grid--ups-culture article-link">
+                    {% include 'VCGBundle:Svgs:plus.svg.twig' %}
+                    <h1>Benefits</h1>
+                    <p>If you liked the benefits you received in the military, you’re going to love UPS.</p>
+                </a>
 
-            <a href="{{path('culture_benefits_article',{'slug':'ra-intro'}) }}" class="grid-item grid--ra-guidebook article-link">
-                {% include 'VCGBundle:Svgs:person.svg.twig' %}
-                <h1>Registered Apprenticeship Program</h1>
-                <p>The UPS Registered Apprenticeship (RA) program is part of a national Department of Labor program. These full-time positions combine job-related technical instruction with on-the-job experience. The UPS RA program offers structured, practical training and a competitive paycheck. In addition to receiving UPS pay, U.S. veterans may be able to receive extra compensation in the form of a monthly stipend through GI Bill benefits. Learn how to apply in this step-by-step guide.</p>
-                <p>Currently, we have Registered Apprenticeship openings available for the position of driver service provider. We’ll be adding additional positions to the program once approved.</p>
-                {#<div class="button-group">#}
-					{#<a href="{{path('culture_benefits_article',{'slug':'ra-intro'}) }}" class="button black history-checkbox article-link"><span></span>Intro</a>#}
-					{#<a href="{{path('culture_benefits_article',{'slug':'ra-application'}) }}" class="button black history-checkbox article-link"><span></span>Application Process</a>#}
-					{#<a href="{{path('culture_benefits_article',{'slug':'ra-responsibilities'}) }}" class="button black history-checkbox article-link"><span></span>UPS Responsibilities</a>#}
-					{#<a href="{{path('culture_benefits_article',{'slug':'ra-gi-benefits'}) }}" class="button black history-checkbox article-link"><span></span>Recruiters</a>#}
-					{#<a href="{{path('culture_benefits_article',{'slug':'ra-post-911-payments'}) }}" class="button black history-checkbox article-link"><span></span>Career Fair</a>#}
-					{#<a href="{{path('culture_benefits_article',{'slug':'ra-mgib-payments'}) }}" class="button black history-checkbox article-link"><span></span>Interview</a>#}
-					{#<a href="{{path('culture_benefits_article',{'slug':'ra-glossary'}) }}" class="button black history-checkbox article-link"><span></span>Glossary</a>#}
-					{#<a href="{{path('culture_benefits_article',{'slug':'ra-faq'}) }}" class="button black history-checkbox article-link"><span></span>Registered Apprentice FAQ</a>#}
-					{#<a href="{{path('culture_benefits_article',{'slug':'ra-links'}) }}" class="button black history-checkbox article-link"><span></span>Links</a>#}
-				{#</div>#}
-            </a>
+                <a href="{{path('culture_benefits_article',{'slug':'ra-intro'}) }}" class="grid-item grid--ra-guidebook article-link">
+                    {% include 'VCGBundle:Svgs:person.svg.twig' %}
+                    <h1>Registered Apprenticeship Program</h1>
+                    <p>The UPS Registered Apprenticeship (RA) program is part of a national Department of Labor program. These full-time positions combine job-related technical instruction with on-the-job experience. </p>
+<!-- 
+                    <p>The UPS RA program offers structured, practical training and a competitive paycheck. In addition to receiving UPS pay, U.S. veterans may be able to receive extra compensation in the form of a monthly stipend through GI Bill benefits. Learn how to apply in this step-by-step guide.</p>
+                    <p>Currently, we have Registered Apprenticeship openings available for the position of driver service provider. We’ll be adding additional positions to the program once approved.</p>
+ -->               
+                </a>
 
-            <a href="{{path('culture_benefits_article',{'slug':'student-programs'}) }}" class="grid-item article-link">
-              {% include 'VCGBundle:Svgs:student.svg.twig' %}
-              <h1>Students</h1>
-                <p>UPS helps U.S. veterans who are students obtain their degree while also receiving a paycheck.</p>
-            </a>
+                <a href="{{path('culture_benefits_article',{'slug':'student-programs'}) }}" class="grid-item article-link">
+                  {% include 'VCGBundle:Svgs:student.svg.twig' %}
+                  <h1>Students</h1>
+                    <p>UPS helps U.S. veterans who are students obtain their degree while also receiving a paycheck.</p>
+                </a>
 
-            <a href="{{ path('culture_benefits_article', {'slug': 'esgr'}) }}" class="grid-item article-link">
-              {% include 'VCGBundle:Svgs:esgr.svg.twig' %}
-              <h1>ESGR</h1>
-              <p>Know your rights and responsibilities as a member of the National Guard or Reserve.</p>
-            </a>
+                <a href="{{ path('culture_benefits_article', {'slug': 'esgr'}) }}" class="grid-item article-link">
+                  {% include 'VCGBundle:Svgs:esgr.svg.twig' %}
+                  <h1>ESGR</h1>
+                  <p>Know your rights and responsibilities as a member of the National Guard or Reserve.</p>
+                </a>
 
-            <a href="{{ path('culture_benefits_article', {'slug': 'faq'}) }}" class="grid-item article-link">
-              {% include 'VCGBundle:Svgs:chat.svg.twig' %}
-              <h1>FAQ</h1>
-              <p>Asking the right questions can simplify your search for a civilian career. Find answers about opportunities and benefits at UPS.</p>
-            </a>
+                <a href="javascript:void(0)" class="grid-item article-link">
+                  {% include 'VCGBundle:Svgs:chat.svg.twig' %}
+                  <h1>History</h1>
+                  <p>A look into our long standing support for veterans.</p>
+                </a>
+            
+                <a href="{{ path('culture_benefits_article', {'slug': 'faq'}) }}" class="grid-item article-link">
+                  {% include 'VCGBundle:Svgs:chat.svg.twig' %}
+                  <h1>FAQ</h1>
+                  <p>Asking the right questions can simplify your search for a civilian career. Find answers about opportunities and benefits at UPS.</p>
+                </a>
 
-            <a href="{{ path('page', {'slug': 'partners'}) }}" class="grid-item">
-              {% include 'VCGBundle:Svgs:handshake.svg.twig' %}
-              <h1>Our Partners</h1>
-              <p>UPS partners with other companies and the military branches to train current service members and transitioning U.S. veterans in corporate management and other business skills. Learn more about these programs here.</p>
-            </a>
+                <a href="{{ path('page', {'slug': 'partners'}) }}" class="grid-item">
+                  {% include 'VCGBundle:Svgs:handshake.svg.twig' %}
+                  <h1>Our Partners</h1>
+                  <p>UPS partners with other companies and the military branches to train current service members and transitioning U.S. veterans in corporate management and other business skills. Learn more about these programs here.</p>
+                </a>
+            </div>
         </div>
         <div class="video-block">
             {% include 'VCGBundle:Svgs:play.svg.twig' %}
