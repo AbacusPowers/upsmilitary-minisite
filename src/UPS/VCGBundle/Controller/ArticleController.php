@@ -11,8 +11,8 @@ use Symfony\Component\Yaml\Parser;
 class ArticleController extends Controller
 {   
     /**
-     * @Route("/article/{slug}")
-     * @Route("/article/{slug}.html")
+     * @Route("/article/{slug}" )
+     * @Route("/article/{slug}.html", name="home_article")
      * @Route("/culture-benefits/article/{slug}.html", name="culture_benefits_article")
      * @Route("/transition-guide/article/{slug}.html", name="transition_guide_article")
      */

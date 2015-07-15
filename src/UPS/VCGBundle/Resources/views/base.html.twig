@@ -5,8 +5,8 @@
         
         <title>
             {% block title %}
-                UPS - Veteran Careers Gateway
-            {% endblock %}
+
+            {% endblock %} | UPS Veteran Careers Gateway
         </title>
         
         <!--METAQUERY-->
@@ -15,6 +15,7 @@
         <meta name="breakpoint" content="medium" media="(min-width: 769px) and (max-width: 1024px)">
         <meta name="breakpoint" content="large" media="(min-width: 1025px) and (max-width: 1399px)">
         <meta name="breakpoint" content="wide" media="(min-width: 1400px)">
+
         <!--[if gt IE 9]><!--><script type="text/javascript" charset="utf-8">
           !function(a,b){var c={breakpoints:{},_namedEvents:{},_eventMatchCache:{},_globalEvents:[],onBreakpointChange:function(){var a=Array.prototype.slice.call(arguments),b=a.pop(),d=a.pop();"undefined"==typeof d?c._globalEvents.push(b):(c._namedEvents[d]=[]).push(b),k()}},d=function(c){/in/.test(b.readyState)?a.setTimeout(function(){d(c)},9):c()},e=function(a,c,d){b.addEventListener?a.addEventListener(c,d):a.attachEvent("on"+c,d)},f=function(a,b){return-1!==a.className.split(" ").indexOf(b)},g=function(a,b){var c=a.className.split(" "),d=c.indexOf(b);f(a,b)&&(c.splice(d,1),a.className=c.join(" "))},h=function(a,b){f(a,b)||(a.className=""!==a.className?a.className+" "+b:b)},i=function(a,c){var d="breakpoint-"+c,e=b.documentElement;a?h(e,d):g(e,d)},j=function(a,c){if(a)for(var d=b.getElementsByTagName("img"),e=0;e<d.length;e++){var f=d[e],g=f.getAttribute("data-mq-src");g&&(f.src=g.replace("[breakpoint]",c))}},k=function(){for(var b in c.breakpoints){var d=c.breakpoints[b],e=a.matchMedia(d).matches;if(c._namedEvents[b]&&c._eventMatchCache[b]!==e)for(var f=0;f<c._namedEvents[b].length;f++){var g=c._namedEvents[b][f];c._eventMatchCache[b]=e,"function"==typeof g&&g(e)}if(e)for(var h=0;h<c._globalEvents.length;h++){var k=c._globalEvents[h];"function"==typeof k&&k()}i(e,b),j(e,b)}},l=function(){for(var a=b.getElementsByTagName("meta"),d=0;d<a.length;d++)if("breakpoint"===a[d].name){var e=a[d].getAttribute("content"),f=a[d].getAttribute("media");c.breakpoints[e]=f}},m=function(){l(),k()},n=function(){l(),e(a,"resize",k),k()};a.metaQuery=c,m(),d(n)}(this,this.document);
         </script><!--<![endif]-->
@@ -47,6 +48,7 @@
             ga('create', 'UA-63771111-1', 'auto');
             ga('send', 'pageview');
         </script>
+        {% block stylesheets %}{% endblock %}
         {% block javascripts %}{% endblock %}
         
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
@@ -76,7 +78,8 @@
                         {#<a href="{% block prevArticleLink %}{{ path(route, {'slug': video.Prev | raw })}}{% endblock %}" id="prev-article"><i class="fa fa-angle-left"></i></a>
                         <a href="{% block nextArticleLink %}{{ path(route, {'slug': video.Next | raw })}}{% endblock %}" id="next-article"><i class="fa fa-angle-right"></i></a>#}
                     </div>
-                {% endblock %}</div>
+                {% endblock %}
+            </div>
         </div>
         
         {% block siteheader %}
@@ -96,7 +99,7 @@
                         <i class="fa fa-circle"></i>
                         <i class="fa fa-circle-thin"></i>
                         <i class="fa fa-circle-thin"></i>
-                    </div>    -->  
+                    </div>    -->
                 {% endblock %}
                 <div class="header--liner">
                     <img src="{{ asset('bundles/vcg/images/UPS-shield-logo.png') }}" alt="" class="logo">
@@ -166,7 +169,7 @@
                     <div class="breadcrumb">
                         
                         {% block breadcrumbs %}
-                            <a href="{{ url('homepage') }}">UPS Veteran Career Gateway</a>
+                            <a href="{{ path('homepage') }}">UPS Veteran Career Gateway</a>
                         {% endblock %}
                     </div>
                     {% block page_content %}
@@ -177,7 +180,7 @@
             </div>
             <div class="pattern--get-started get-started--footer">
                 <p>Get started on your UPS career</p>
-                <a class="button cta-button cta-button--go cta-button--apply" href="https://ups.managehr.com/candidate/">Apply Now</a>
+                <a class="button cta-button cta-button--go cta-button--apply" href="http://jobs-ups.com/">Apply Now</a>
             </div> 
     </main>
 

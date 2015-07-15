@@ -1,12 +1,12 @@
 {% extends "VCGBundle:Layouts:page.html.twig" %}
-{% block title %}UPS Culture &amp; Benefits{% endblock %}
+{% block title %}UPS Partnerships{% endblock %}
 {% block headerimage %}
     <div class="header-static-bg">
-        <img class="header-static-bg-img" src="{{ asset('bundles/vcg/images/slider/photo-2.png') }}"    
+        <img class="header-static-bg-img" src="{{ asset('bundles/vcg/images/slider/photo-2.png') }}" />
     </div>
 {% endblock %}
 {% block breadcrumbs %}
-        <a href="{{ url('homepage') }}">UPS Veteran Career Gateway</a>
+        <a href="{{ path('homepage') }}">UPS Veteran Career Gateway</a>
         <a href="{{ path('page',{'slug':'culture-benefits'}) }}">UPS Culture &amp; Benefits</a>
         <a href="{{ path('page', {'slug': 'partners'}) }}">Partners</a>
 {% endblock %}
@@ -26,7 +26,7 @@
                         <p>This 10-month program uses a hands-on educational experience to provide officers with management skills and technical expertise as they study best practices with industry leaders.</p>
                       </a>
   
-                      <a href="https://www.hrc.army.mil/Enlisted/TWI%20Eligibility%20Requirements" class="grid-item external">
+                      <a href="https://www.hrc.army.mil/Enlisted/NCOs%20Broadening%20Program" class="grid-item external">
                         {% include 'VCGBundle:Svgs:handshake.svg.twig' %}
                         <h1>Army Training With Industry</h1>
                         <p>This one-year work experience training program is designed to take selected officers out of the military environment and expose them to the latest commercial business practices, organizational structures and cultures, technology development processes, and the latest corporate management techniques. The U.S. Army offers unique programs for each unit type, such as quartermaster and ordnance.</p>
@@ -44,7 +44,7 @@
                       <a href="http://westillserve.com/mssa/" class="grid-item external">
                         {% include 'VCGBundle:Svgs:handshake.svg.twig' %}
                         <h1>Microsoft Software &amp; Systems Academy</h1>
-                        <p>This opportunity provides a full-time, 16-week information technology job skills training program for active duty U.S. military service members who have received their separation date. Upon successful completion, participants will be given the opportunity to interview at Microsoft for a full-time position with Microsoft or one of its participating partners.</p>
+                        <p>This opportunity provides a full-time, 16-week information technology job skills training program for active duty U.S. service members who have received their separation date. Upon successful completion, participants will be given the opportunity to interview at Microsoft for a full-time position there or at one of its participating partners.</p>
                       </a>
                       <a href="http://www.pva.org/site/c.ajIRK9NJLcJ2E/b.7750849/k.36C/Operation_PAVE_Paving_Access_for_Veterans_Employment.htm" class="grid-item external">
                         {% include 'VCGBundle:Svgs:handshake.svg.twig' %}
