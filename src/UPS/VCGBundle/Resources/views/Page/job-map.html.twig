@@ -25,11 +25,11 @@
 
 {% block headerimage %}
     <div class="header-static-bg">
-        <img class="header-static-bg-img" src="{{ asset('bundles/vcg/images/slider/photo-3.png') }}">
+        <img class="header-static-bg-img" src="{{ asset('bundles/vcg/images/slider/photo-3.png') }}" />
     </div>
 {% endblock %}
 {% block breadcrumbs %}
-        <a href="{{ url('homepage') }}">UPS Veteran Career Gateway</a>
+        <a href="{{ path('homepage') }}">UPS Veteran Career Gateway</a>
         <a hfref="#">UPS Jobs Map</a>
 {% endblock %}
 
@@ -105,7 +105,7 @@
                                             <section class="expander__wrapper">
                                                 <a data-id=' ' class='button expand-button'>
                                                     <h2 class="expander__parent" data-info="loc-name"></h2>
-                                                    <h3><span data-info="loc-count"></span>&nbspJob Types</h3>
+                                                    <h3><span data-info="loc-count"></span>&nbsp;Job Types</h3>
                                                     <i class="fa fa-plus fa-2x"></i>
                                                 </a>
                                                 {#<a data-id=' ' class='button hide-button'><i class="fa fa-minus fa-2x"></i></a>#}
