@@ -134,124 +134,125 @@ $grid-item-hover-color: #222;
             position: relative;
             margin-top: 3em;
         }
-
     }
+
+}
     
-    .button {
-        // @include position( absolute, null null 0 null);
-        // text-transform: capitalize;
-        @include transition (all 0.15s ease-out);
-        background: $ups-yellow;
-        color: $grey;
-        display: inherit;
-        margin-top: 1px;
-        min-height: 2.5em;
-        padding-bottom: 0.5em;
-        padding-left: 2em;
-        padding-right: 0.8em;
-        padding-top: 0.5em;
-        text-align: left;
-        width: 100%;
+    // .button {
+    //     // @include position( absolute, null null 0 null);
+    //     // text-transform: capitalize;
+    //     @include transition (all 0.15s ease-out);
+    //     background: $ups-yellow;
+    //     color: $grey;
+    //     display: inherit;
+    //     margin-top: 1px;
+    //     min-height: 2.5em;
+    //     padding-bottom: 0.5em;
+    //     padding-left: 2em;
+    //     padding-right: 0.8em;
+    //     padding-top: 0.5em;
+    //     text-align: left;
+    //     width: 100%;
 
-        &:hover {
-            color: $black;
-          span {
-            &:before {
-              color: $ups-yellow !important;
-            }
+    //     &:hover {
+    //         color: $black;
+    //       span {
+    //         &:before {
+    //           color: $ups-yellow !important;
+    //         }
 
-          }
-        }
+    //       }
+    //     }
 
-        &.black {
-            background: none;
-            border-top: 1px solid rgba( $ups-yellow, 0.1 );
-            color: $white;
-            margin-top: 0;
+    //     &.black {
+    //         background: none;
+    //         border-top: 1px solid rgba( $ups-yellow, 0.1 );
+    //         color: $white;
+    //         margin-top: 0;
 
-            &.history-checkbox {
-                padding-left: 4em;
+    //         &.history-checkbox {
+    //             padding-left: 4em;
 
-                &:before {
-                    font-family: FontAwesome;
-                    content: "\f096";
-                    position: absolute;
-                    left: 0;
-                    padding: 0 2em;
-                    color: $white;
-                    z-index: 1;
-                }
+    //             &:before {
+    //                 font-family: FontAwesome;
+    //                 content: "\f096";
+    //                 position: absolute;
+    //                 left: 0;
+    //                 padding: 0 2em;
+    //                 color: $white;
+    //                 z-index: 1;
+    //             }
 
-                &:visited {
-                    span {
-                        &:before {
-                            color: $white
-                        }
-                    }
-                }
+    //             &:visited {
+    //                 span {
+    //                     &:before {
+    //                         color: $white
+    //                     }
+    //                 }
+    //             }
 
-                span {
-                    display: block;
+    //             span {
+    //                 display: block;
                     
-                    &:before {
-                        font-family: FontAwesome;
-                        content: "\f046";
-                        position: absolute;
-                        left: 0;
-                        padding: 0 2em;
-                        color: $black;
-                    }
-                }
-            }
-        }
+    //                 &:before {
+    //                     font-family: FontAwesome;
+    //                     content: "\f046";
+    //                     position: absolute;
+    //                     left: 0;
+    //                     padding: 0 2em;
+    //                     color: $black;
+    //                 }
+    //             }
+    //         }
+    //     }
         
-        &.black:last-child {
-            border-bottom: 1px solid rgba( $ups-yellow, 0.1 );
-        }
+    //     &.black:last-child {
+    //         border-bottom: 1px solid rgba( $ups-yellow, 0.1 );
+    //     }
 
-        &.black:last-child:hover {
-            border-bottom: 1px solid rgba( $ups-yellow, 1 );
-        }
+    //     &.black:last-child:hover {
+    //         border-bottom: 1px solid rgba( $ups-yellow, 1 );
+    //     }
 
-        &.black:hover {
-            color: $black;
-            background: $ups-yellow;
-            border-top: 1px solid $black;
-        }
-    }
+    //     &.black:hover {
+    //         color: $black;
+    //         background: $ups-yellow;
+    //         border-top: 1px solid $black;
+    //     }
+    // }
 
 
 
 //////////////////BASE GRID LINE CONTROL/////////////////////////////////
 
-    .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & {    
-        .grid-item:nth-child(1) {
-        }
+    // .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & {    
+    //     .grid-item:nth-child(1) {
+    //     }
 
-        .grid-item:nth-child(2) {
-        }
+    //     .grid-item:nth-child(2) {
+    //     }
 
-        .grid-item:nth-child(3) {
-            border-right: 0;
-        }
+    //     .grid-item:nth-child(3) {
+    //         border-right: 0;
+    //     }
 
-        .grid-item:nth-child(4) {
-        }
+    //     .grid-item:nth-child(4) {
+    //     }
 
-        .grid-item:nth-child(1) {
-        }
+    //     .grid-item:nth-child(1) {
+    //     }
 
-        .grid-item:nth-child(1) {
-        }
+    //     .grid-item:nth-child(1) {
+    //     }
 
-        .grid-item:last-child {
-            border-right: none;
-            border-bottom: none;
-        }
+    //     .grid-item:last-child {
+    //         border-right: none;
+    //         border-bottom: none;
+    //     }
        
           
-    }
-}
+    // }
+
 
 
 

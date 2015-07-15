@@ -49,12 +49,13 @@ body {
 @import "components/footer";
 @import "components/breadcrumbs";
 @import "components/modal";
-@import "components/pattern--grid-lines";
+// @import "components/pattern--grid-lines";
 @import "components/pattern--get-started";
 @import "components/slider";
 @import "components/scroll-indicator";
 @import "components/horizontal-scroller";
 @import "components/footer--flex";
+@import "components/flex-grid.scss";
 
 
 @import "pages/page--home";

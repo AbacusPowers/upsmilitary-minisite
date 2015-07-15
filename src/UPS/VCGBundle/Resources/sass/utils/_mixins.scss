@@ -44,12 +44,9 @@
 
 @mixin site-icon {
   @include size(3.5em);
-//  border-radius: 50%;
-//  border: 1px $ups-yellow solid;
   display: block;
   float: left;
-  margin-left: 1.5em;
-//  padding: 0.4em;
+  // margin-left: 1.5em;
 }
 
 @mixin constrain-content{
@@ -110,7 +107,7 @@
 
 @mixin border-mask {
   @include pseudo-block(0.6em); 
-  background: $black; 
+  // background: $black; 
   width: 1px;
   right: -1px;
   bottom: 0;
@@ -123,3 +120,86 @@
     display: none; /*temporary fix*/
   }
 }
+
+
+@mixin block-link {
+  @include transition (all 0.15s ease-out);
+  background: $ups-yellow;
+  color: $grey;
+  display: inherit;
+  margin-top: 1px;
+  margin-left: -1.5rem;
+  min-height: 2.5em;
+  padding-bottom: 0.5em;
+  padding-left: 1.5rem;
+  padding-right: 0.8em;
+  padding-top: 0.5em;
+  text-align: left;
+  width: calc( 100% + 1.5rem );
+
+  &:hover {
+      color: $black;
+    span {
+      &:before {
+        color: $ups-yellow !important;
+      }
+    }
+  }
+
+  &.black {
+      background: none;
+      border-top: 1px solid rgba( $ups-yellow, 0.1 );
+      color: $white;
+      margin-top: 0;
+
+      &.history-checkbox {
+          padding-left: 4em;
+
+          &:before {
+              font-family: FontAwesome;
+              content: "\f096";
+              position: absolute;
+              left: 0;
+              padding: 0 2em;
+              color: $white;
+              z-index: 1;
+          }
+
+          &:visited {
+              span {
+                  &:before {
+                      color: $white
+                  }
+              }
+          }
+
+          span {
+              display: block;
+              
+              &:before {
+                  font-family: FontAwesome;
+                  content: "\f046";
+                  position: absolute;
+                  left: 0;
+                  padding: 0 2em;
+                  color: $black;
+              }
+          }
+      }
+  }
+  
+  &.black:last-child {
+      border-bottom: 1px solid rgba( $ups-yellow, 0.1 );
+  }
+
+  &.black:last-child:hover {
+      border-bottom: 1px solid rgba( $ups-yellow, 1 );
+  }
+
+  &.black:hover {
+      color: $black;
+      background: $ups-yellow;
+      border-top: 1px solid $black;
+  }
+}
+

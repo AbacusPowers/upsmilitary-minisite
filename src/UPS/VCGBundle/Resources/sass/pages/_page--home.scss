@@ -11,51 +11,32 @@
     .grid-item:nth-child(1) {
         
     }
-    // .grid-item:nth-child(3):hover:after {
-    //         @include pseudo-block(0.6em);
-    //         width: 1px;
-    //         bottom: 0;
-    //         left: -1px;
-    //         // overflow: visible;
-    //         z-index: 1;
-    //         background: #222;
-    // }
-
-    // .grid-item:nth-child(3):hover:before {
-    //         @include pseudo-block(0.6em);
-    //         width: 1px;
-    //         top: 0;
-    //         left: -1px;
-    //         z-index: 1;
-    //         background: #222;
-    // }
-
 
     .grid-item:nth-child(4) {
-        border-right: none;        
+        // border-right: none;        
     }
 
     .grid-item:nth-child(5) {
-      border-right: none;
+      // border-right: none;
     }
 
     .grid-item:nth-child(6) {
-        border-left: 0px solid $ups-yellow;
-        border-bottom: 0px;
-        padding-bottom: 2em;
+        // border-left: 0px solid $ups-yellow;
+        // border-bottom: 0px;
+        // padding-bottom: 2em;
 
         .breakpoint-small & {
-            border-bottom: 1px solid $ups-yellow;
+            // border-bottom: 1px solid $ups-yellow;
         }
     }
 
     .grid-item:nth-child(7) {
-        border-right: 0px;
-        border-bottom: none;
-        padding-bottom: 0;
+        // border-right: 0px;
+        // border-bottom: none;
+        // padding-bottom: 0;
 
         .breakpoint-small & {
-            min-height: 16em;
+            // min-height: 16em;
         }
     }
 }
@@ -83,7 +64,7 @@
     }
 
     & > a {
-        min-height: $grid-item-height;
+        // min-height: $grid-item-height;
     }
     
     & > a:hover {
@@ -261,7 +242,7 @@
 }
 
 
-.grid-item#grid-item--videos, .video-block {
+.rid-item#grid-item--videos, .video-block {
     padding-bottom: 0;
     overflow: hidden;
     height: auto;
@@ -294,10 +275,11 @@
 }
 
 .grid-item#grid-item--social {
-     height: auto;
+    padding-bottom: 1.5em;
 
     a {
         display: inline-block;
+        line-height: 0;
     }
 
     a:hover i.fa {
@@ -312,33 +294,33 @@
         margin-right: 1rem;
     }  
 
-    .social-wrapper {
-        padding-left:2em;
+    // .social-wrapper {
+        // padding-left:2em;
 
-        &:before {
-            @include pseudo-block(100%);
-            right: 100%;
-            height: 140%;
-            background: $dark-gray;
-            z-index: -1;
-            top: -1em;
-        }
+        // &:before {
+        //     @include pseudo-block(100%);
+        //     right: 100%;
+        //     height: 140%;
+        //     background: $dark-gray;
+        //     z-index: -1;
+        //     top: -1em;
+        // }
 
-        &:after {
-            @include pseudo-block(100%);
-            right: 100%;
-            width: 1px;
-            background: $ups-yellow;
-            z-index: -1;
-            top: -1px;
-        }
-    }
+        // &:after {
+        //     @include pseudo-block(100%);
+        //     right: 100%;
+        //     width: 1px;
+        //     background: $ups-yellow;
+        //     z-index: -1;
+        //     top: -1px;
+        // }
+    // }
 }
 
 .grid-item#grid-item--search {
 
-    height: auto;
-    padding-bottom: none;
+    // height: auto;
+    // padding-bottom: none;
 
     form {
         margin-top: 1.2em;
@@ -349,27 +331,28 @@
         color: $ups-yellow;
         border-radius: 0px;
         border: 0;
-        margin: 0em 1.5em 1.5em;
+        margin: 0em 1.5rem 1.5rem 0;
         margin-right: 0;
-        width: calc( 100% - 11em );
+        width: calc( 100% - 8.5rem);
         height: 2.5em;
-        display: inline-block;
+        // display: inline-block;
         float: left;
-        margin-left: 2rem;
+        // margin-left: 2rem;
         padding-left: 0.7em;
     }
 
     .button {
-        @include size(7em 2.5em);
+        @include size(7rem 2.5rem);
         @include transition (all 0.15s ease-out);
-
+        background: $ups-yellow;
+        color: $black;
         padding: 0.3em 0 0 0;
-        right: 1.5em;
+        // right: 1.5em;
         margin-top: 0;
         border-radius: 0;
         text-transform: uppercase;
         display: inline-block;
-        float: left;
+        // float: left;
         text-align: center;
 
 
