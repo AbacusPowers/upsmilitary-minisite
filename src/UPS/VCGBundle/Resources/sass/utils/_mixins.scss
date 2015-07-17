@@ -50,17 +50,17 @@
 }
 
 @mixin constrain-content{
-  .breakpoint-medium & {
-      max-width: $max-width--medium;
-      margin-left: auto;
-      margin-right: auto;
-  }
+  // .breakpoint-medium & {
+  //     max-width: $max-width--medium;
+  //     margin-left: auto;
+  //     margin-right: auto;
+  // }
 
-  .breakpoint-large & {
-      max-width: $max-width--large;
-      margin-left: auto;
-      margin-right: auto;
-  }
+  // .breakpoint-large & {
+  //     max-width: $max-width--large;
+  //     margin-left: auto;
+  //     margin-right: auto;
+  // }
 
   .breakpoint-wide & {
       max-width: $max-width--wide;

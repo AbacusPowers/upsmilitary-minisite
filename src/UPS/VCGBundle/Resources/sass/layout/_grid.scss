@@ -7,34 +7,34 @@
 
 
 
-.page  {
+// .page  {
 
     // Define the container constraints of the "page" class
 
-    .breakpoint-small & {
-        // max-width: 800px;
-        margin-left: auto;
-        margin-right: auto;
-    }
+    // .breakpoint-small & {
+    //     // max-width: 800px;
+    //     margin-left: auto;
+    //     margin-right: auto;
+    // }
 
-    .breakpoint-medium & {
-        max-width: $max-width--medium;
-        // background: yellow;
-        margin-left: auto;
-        margin-right: auto;
-    }
+    // .breakpoint-medium & {
+    //     max-width: $max-width--medium;
+    //     // background: yellow;
+    //     margin-left: auto;
+    //     margin-right: auto;
+    // }
 
-    .breakpoint-large & {
-        max-width: $max-width--large;
-        // background: green;
-        margin-left: auto;
-        margin-right: auto;
-    }
+    // .breakpoint-large & {
+    //     max-width: $max-width--large;
+    //     // background: green;
+    //     margin-left: auto;
+    //     margin-right: auto;
+    // }
 
-    .breakpoint-wide & {
-        max-width: $max-width--wide;
-        // background: blue;
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
+    // .breakpoint-wide & {
+    //     max-width: $max-width--wide;
+    //     // background: blue;
+    //     margin-left: auto;
+    //     margin-right: auto;
+    // }
+// }
