@@ -1,10 +1,10 @@
-body.article-view, body.leave-site-view, body.video-view, body.events-view, body.values-view {
+body.article-view, body.leave-site-view, body.video-view, body.photo-view, body.events-view, body.values-view {
   overflow: hidden;
 }
 
 #overlay {
     display: none;
-    .article &, .video &, .events &, .faqs &, .values & {
+    .article &, .video &, .photo &, .events &, .faqs &, .values & {
         display: block;
     }
     position: fixed; 
@@ -20,7 +20,7 @@ body.article-view, body.leave-site-view, body.video-view, body.events-view, body
 
 #modal {
   height: 100%;
-  .article &, .video &, .events &, .faqs &, .values & {
+  .article &, .video &, .photo &, .events &, .faqs &, .values & {
     display: block;
     .hold-modal & {
       display: none;
@@ -74,7 +74,7 @@ body.article-view, body.leave-site-view, body.video-view, body.events-view, body
       margin-top: -0.36em;
     }
 
-    .video & {
+    .video &, .photo & {
       position: static;
       margin-left: 1em;
       margin-top: -1em;
@@ -94,6 +94,15 @@ body.article-view, body.leave-site-view, body.video-view, body.events-view, body
     border-left: none;
     padding: 0 0 0 0;
     
+    .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & {
+      padding: 0;
+    }
+  }
+  .photo & {
+    background: $grey--darker;
+    border-left: none;
+    padding: 0 0 0 0;
+
     .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & {
       padding: 0;
     }
@@ -179,7 +188,7 @@ body.article-view, body.leave-site-view, body.video-view, body.events-view, body
       top: 1em;
     }
 
-    .video & {
+    .video &, .photo & {
       top: 3.1em;
 
       .breakpoint-small & {
@@ -243,7 +252,7 @@ body.article-view, body.leave-site-view, body.video-view, body.events-view, body
     left: 0;
     text-align: center;
     
-    .video & {
+    .video &, .photo {
       .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & { 
         left: -2em;
       }
@@ -301,6 +310,44 @@ body.article-view, body.leave-site-view, body.video-view, body.events-view, body
     }
   }
 
+  .breakpoint-small & {
+    a#prev-article, a#next-article{
+      display: block;
+    }
+  }
+
+
+}
+
+/*********************PHOTO MODAL********************************/
+
+.photo {
+  #photo-title {
+
+    font-size: 1.2em;
+    width: calc( 100% - 7em );
+    color: $ups-yellow;
+    margin-bottom: 1.2em;
+    margin-left: 3.9em;
+    margin-top: -2.8em;
+    padding-top: 0.1em;
+    // text-transform: capitalize;
+
+    .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & {
+      font-size: 1.9em;
+      margin-left: 3.5em;
+      margin-top: -2em;
+      width: calc( 100% - 5em );
+    }
+  }
+  .photo-container {
+    img {
+      width: 100%;
+    }
+  }
+  .photo-caption {
+    color: $white;
+  }
   .breakpoint-small & {
     a#prev-article, a#next-article{
       display: block;

@@ -1,0 +1,20 @@
+## YAML Template.
+---
+1:
+  Filename: 1.jpg
+  Title: Test Photo 1
+  Prev: 3
+  Next: 2
+  Caption: Testing a long caption. With multiple sentences.
+2:
+  Filename: 2.jpg
+  Title: Test Photo 2
+  Prev: 1
+  Next: 3
+  Caption: Testing a short caption.
+3:
+  Filename: 3.jpg
+  Title: Test Photo 3
+  Prev: 2
+  Next: 1
+  Caption: Testing a long caption. With multiple sentences.

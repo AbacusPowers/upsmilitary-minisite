@@ -14,25 +14,28 @@
 {% block page_content %}
                 <div class="veteranGateway__liner">
                   
-                  <div class="page--partners">
+                  <div class="page--history">
                     <div class="title-block">
                         <h1>UPS History</h1>
                         <p>Lorem ipsum dolor sit amet.</p>
                     </div>
                     <div class="flex-wrapper">
                       <div class="grid-area">
-                        <a href="javascript:void(0)" class="grid-item">
+                        <a href="{{ path('history_photo',{'slug':'1'}) }}" class="grid-item photo-link">
                           {% include 'VCGBundle:Svgs:handshake.svg.twig' %}
                           <h1>Photo goes here</h1>
+                          <img src="{{ asset('bundles/vcg/images/history/1_thumb.jpg') }}" class="history-thumb" />
                         </a>
     
-                        <a href="javascript:void(0)" class="grid-item">
+                        <a href="{{ path('history_photo',{'slug':'2'}) }}" class="grid-item photo-link">
                           {% include 'VCGBundle:Svgs:handshake.svg.twig' %}
                           <h1>Photo goes here</h1>
+                          <img src="{{ asset('bundles/vcg/images/history/2_thumb.jpg') }}" class="history-thumb" />
                         </a>
-                        <a href="javascript:void(0)" class="grid-item grid--ups-culture">
+                        <a href="{{ path('history_photo',{'slug':'3'}) }}" class="grid-item photo-link">
                           {% include 'VCGBundle:Svgs:handshake.svg.twig' %}
                           <h1>Photo goes here</h1>
+                          <img src="{{ asset('bundles/vcg/images/history/3_thumb.jpg') }}" class="history-thumb" />
                         </a>
                         <a href="javascript:void(0)" class="grid-item">
                           {% include 'VCGBundle:Svgs:handshake.svg.twig' %}
