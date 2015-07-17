@@ -34,7 +34,7 @@ body {
 @import "base/base";
 @import "base/styles";
 
-@import "layout/grid";
+// @import "layout/grid";
 @import "layout/header";
 @import "layout/navigation";
 @import "layout/footer";
@@ -56,6 +56,7 @@ body {
 @import "components/horizontal-scroller";
 @import "components/footer--flex";
 @import "components/flex-grid.scss";
+@import "components/pattern--videos";
 
 
 @import "pages/page--home";

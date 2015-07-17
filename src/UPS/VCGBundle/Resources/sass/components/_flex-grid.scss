@@ -148,7 +148,7 @@ a.grid-item:hover {
 // Page specific Styles
 
 .page--home {
-    #grid-item--videos .link-wrapper {
+    #grid-item--videos .video-link-wrapper {
         margin-left: -1.5em;
         margin-top: 1.2em;
 
@@ -161,6 +161,7 @@ a.grid-item:hover {
             img {
                 width: 100%;
                 display: block;
+                height: 37.5%;
             }
         }
     }

@@ -1,0 +1,116 @@
+// Styles for the two item featured videos grid
+#grid-item--videos {
+    .video-link-wrapper {
+      
+        span {
+            @include transition--smooth;
+            background: $black60;
+            bottom: 0;
+            color: $ups-yellow;
+            display: block;
+            font-size: 0.8em;
+            font-weight: 800;
+            height: 25%;
+            overflow: hidden;
+            padding-left: 0.8em;
+            padding-top: 0.4em;
+            position: absolute;
+            width: 100%;
+        }
+
+        a:hover span {
+            height: calc( 25% + 0.6rem );
+            background: $black80;
+
+        }
+
+        a:before {
+            @include pseudo-block(100%);
+            @include transition (all 0.15s ease-out);
+            background: $black10;
+        }
+
+        a:hover:before {
+            @include transition (all 0.15s ease-out);
+            background: none;
+        }
+
+        .video-link--style i {
+            color: rgba( $ups-yellow, 0.9 );
+            display: inline-block;
+            font-size: 1.5em;
+            position: absolute;
+            right: 0.6rem;
+            top: 0.5rem;
+        }  
+    }
+}
+
+
+// Styles for the career videos set
+#video-list {
+  width: 10000px;
+
+  a {
+      position: relative;
+      float: left;
+      margin-right: 1px;
+  }
+
+  a.video-link:before {
+    @include pseudo-block(100%);
+    @include transition--smooth;
+    background: $black10;
+  }
+
+  a.video-link:hover:before {
+    // @include transition--smooth;
+    background: none;
+  }
+
+  span.video-title {
+    // display: none;
+    @include transition--smooth;
+    background: $black60;
+    bottom: 0;
+    color: $ups-yellow;
+    display: block;
+    font-size: 0.8em;
+    font-weight: 800;
+    height: 25%;
+    overflow: hidden;
+    padding-left: 0.8em;
+    padding-top: 0.4em;
+    position: absolute;
+    width: 100%;
+  }
+
+  a.video-link:hover > span.video-title {
+    background: $black80;
+    // bottom: 0;
+    // color: $ups-yellow;
+    // display: block;
+    // font-size: 0.8em;
+    // font-weight: 800;
+    height: calc( 25% + 0.6rem );
+    // overflow: hidden;
+    // padding-left: 0.8em;
+    // padding-top: 0.4em;
+    // position: absolute;
+    // width: 100%;
+  }
+
+  img.video-thumb {
+      width: 200px;
+      height: 200px;
+  }
+
+  .video-link--style i {
+      color: rgba( $ups-yellow, 0.9 );
+      display: inline-block;
+      font-size: 1.5em;
+      position: absolute;
+      right: 0.6rem;
+      top: 0.5rem;
+  }  
+}
