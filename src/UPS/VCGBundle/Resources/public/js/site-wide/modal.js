@@ -136,23 +136,24 @@ $('document').ready(function(){
             //console.log('two');
         }
     })
-    //.on('click','.leave-site-view #close-offsite-modal', function(e){
-    //    e.preventDefault();
-    //    destroyLeaveSiteModal();
-    //    ga('send','event','external_link','close', href);
-    //})
-    //.on('click','.leave-site-view #forward-to', function(e){
-    //    destroyLeaveSiteModal();
-    //    var href = $(this).attr('href');
-    //    ga('send','event','external_link','continue', href);
-    //    })
-    //.on('click','.leave-site-view #forward-cancel', function(e){
-    //    e.preventDefault();
-    //    var href = $(this).siblings('#forward-to').attr('href');
-    //    destroyLeaveSiteModal();
-    //    ga('send','event','external_link','cancel', href);
-    //})
-    ;
+    .on('click','.leave-site-view #close-offsite-modal', function(e){
+        e.preventDefault();
+        destroyLeaveSiteModal();
+        var href = $('#forward-to').attr('href');
+        ga('send','event','external_link','close', href);
+    })
+    .on('click','.leave-site-view #forward-to', function(e){
+        destroyLeaveSiteModal();
+        var href = $(this).attr('href');
+        ga('send','event','external_link','continue', href);
+        })
+    .on('click','.leave-site-view #forward-cancel', function(e){
+        e.preventDefault();
+        var href = $(this).siblings('#forward-to').attr('href');
+        destroyLeaveSiteModal();
+        ga('send','event','external_link','cancel', href);
+    });
+
 });
 
 function getModalContent(url, addEntry, originType) {
@@ -324,20 +325,7 @@ function showLeaveSiteModal(href){
 
     $('body').addClass('leave-site-view');
     $('#modal-wrapper').addClass('leave-site');
-    $('#offsite-modal','.leave-site-view').on('click','#close-offsite-modal', function(e){
-        e.preventDefault();
-        destroyLeaveSiteModal();
-        ga('send','event','external_link','close', href);
-    });
-    $('#offsite-modal','.leave-site-view').on('click','#forward-to', function(e){
-        destroyLeaveSiteModal();
-        ga('send','event','external_link','continue', href);
-    });
-    $('#offsite-modal','.leave-site-view').on('click','#forward-cancel', function(e){
-        e.preventDefault();
-        destroyLeaveSiteModal();
-        ga('send','event','external_link','cancel', href);
-    });
+
 
 }
 function destroyModal(){
@@ -393,8 +381,8 @@ function destroyLeaveSiteModal(){
 
     $('#offsite-modal').hide();
 
-
     $('#modal-wrapper').removeClass('leave-site');
+
 }
 (function(window, undefined) {
     History.Adapter.bind(window,'statechange',function(){ // Note: We are using statechange instead of popstate
