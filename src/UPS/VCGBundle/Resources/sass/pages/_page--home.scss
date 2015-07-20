@@ -1,82 +1,19 @@
 
 .page--home {
     a {
-        display: block;
-        position: relative;
-    }
-}
-
-////////////HOME PAGE GRID OUTLINE CONTROLS ONLY////////////////////
-.page--home {
-    .grid-item:nth-child(1) {
-        
-    }
-
-    .grid-item:nth-child(4) {
-        // border-right: none;        
-    }
-
-    .grid-item:nth-child(5) {
-      // border-right: none;
-    }
-
-    .grid-item:nth-child(6) {
-        // border-left: 0px solid $ups-yellow;
-        // border-bottom: 0px;
-        // padding-bottom: 2em;
-
-        .breakpoint-small & {
-            // border-bottom: 1px solid $ups-yellow;
-        }
-    }
-
-    .grid-item:nth-child(7) {
-        // border-right: 0px;
-        // border-bottom: none;
-        // padding-bottom: 0;
-
-        .breakpoint-small & {
-            // min-height: 16em;
-        }
+        // display: block;
+        // position: relative;
     }
 }
 
 
 
 ///////////////////Home Page Grid Styles. Content appearance below.///////////////
-// .breakpoint-medium .veteranGateway__liner .title-block:after {
-//         height: 5em !important;
-//         top: 2em !important;
-//     }
-
 
 .grid-item#grid-item--transition-guide {
-    height: auto;
-    padding-top: 0;
-    background: $grey--dark;
-    border-bottom: none;
-    .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & {
-      min-height: 1000px;
-    }
-
-    &:before, &:after {
-        content: none;
-    }
-
-    & > a {
-        // min-height: $grid-item-height;
-    }
     
-    & > a:hover {
-        background: #222;
-    }
+// Styles for the mobile app link area
 
-    .button-group {
-        position: relative;
-        margin-top: 1.5em;     
-        margin-bottom: 0;      
-    }
-    
     .app-download-wrapper {
         margin-top: 1em;
         position: relative;
@@ -154,26 +91,9 @@
 
 }
 
-// .grid-item#grid-item--career-explorer {
-
-//     ul {
-//         padding-top: 1em;
-//         margin-left: 1em;
-//     }
-
-//     ul li {
-//         list-style: disc;
-//         line-height: 1.5em;
-//     }
-    
-// }
-
-// .grid-item#grid-item--culture {
-//     // background: red;
-// }
 
 .grid-item#grid-item--events {
-    padding-bottom: 2.5em;
+    // padding-bottom: 2.5em;
     height: auto;
 
     .all-events-wrapper {
@@ -208,37 +128,18 @@
         }
     }
 
-    .scroll-indicator--h {
-        right: 0.3em;
-        padding-top: 0em;
-        margin-top: -0.6em;
-    }
-
     .scroll-container {
         height: auto;
         padding-top: 1.4em;
         padding-bottom: 0em;
-        margin-top: -0.9em;
     }
 
-    .button.all-events-link {
+    .block-link.all-events-link {
         padding-top: 0.5em;
         text-transform: uppercase;
         text-align: center;
         height: 2em;
-        position: absolute;
-        bottom: 0;        
-        color: $ups-yellow;
     }
-
-    a.button.all-events-link:hover {
-        color: $black;
-    }
-
-    // &:hover .button {
-    //     background: $ups-yellow;
-    //     color: black;
-    // }
 }
 
 

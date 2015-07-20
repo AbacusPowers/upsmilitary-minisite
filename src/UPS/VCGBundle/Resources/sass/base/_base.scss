@@ -76,3 +76,7 @@ a:active {
 .text--bold {
     font-weight: 800;
 }
+
+.block-link {
+    @include block-link;
+}
