@@ -1,20 +1,14 @@
 // Use this with the scroll-indicator component for extra affordance
 
-// Don't forget to use overflow hidden on the parent container
+// Don't forget to use overflow hidden on the parent container(?)
 
 .scroll-container {
-  height: auto; /*change in parent if needed*/
   overflow-x: scroll;
   overflow-y: hidden;
   white-space: nowrap;
   -webkit-overflow-scrolling: touch; /*gotta have this for idevice scrolling*/
-  padding-top: 1.4em; /*gives room for custom scroll indicator*/
-}
-
-.scroll-container {
-  padding-top: 1.4em;
-  margin-left: -1.5rem;
-  height: calc( 200px + 1.4em ); /*specify/modify as need in parent element*/
+  padding-top: 1.4em; /*gives room for scroll indicator*/
+  margin-left: -1.5rem; /*gives proper position in padded cell*/
 }
 
 

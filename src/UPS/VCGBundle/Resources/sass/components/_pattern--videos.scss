@@ -49,7 +49,6 @@
 
 // Styles for the other video sets on transition guide page, jobs page, and culture page
 #video-list {
-  width: 10000px;
 
   a {
       position: relative;
@@ -87,17 +86,7 @@
 
   a.video-link:hover > span.video-title {
     background: $black80;
-    // bottom: 0;
-    // color: $ups-yellow;
-    // display: block;
-    // font-size: 0.8em;
-    // font-weight: 800;
     height: calc( 25% + 0.6rem );
-    // overflow: hidden;
-    // padding-left: 0.8em;
-    // padding-top: 0.4em;
-    // position: absolute;
-    // width: 100%;
   }
 
   img.video-thumb {

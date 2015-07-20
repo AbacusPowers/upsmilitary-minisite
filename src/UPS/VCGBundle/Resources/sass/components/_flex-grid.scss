@@ -144,7 +144,7 @@ a.grid-item:hover {
 
 .page--home {
 
-    .grid-item:nth-child(3) {
+    .grid-item:nth-child(3) { /*Featured videos section*/
         width: 100%;
     }
 
@@ -152,35 +152,9 @@ a.grid-item:hover {
         border-bottom: 1px solid $ups-yellow;
     }
 
-    a.guide-link {
-        @include transition (all 0.15s ease-out);
-        padding-top: 1.5rem;
-        padding-left: 1.5rem;
-        min-height: 14.8em;
-    }
-
-    #grid-item--videos .video-link-wrapper {
-        margin-left: -1.5em;
-        margin-top: 1.2em;
-
-        a {
-            width: calc( 50% - 1px );
-            display: inline-block;
-            float: left;
-            margin-right: 1px;
-
-            img {
-                width: 100%;
-                display: block;
-                height: 37.5%;
-            }
-        }
-    }
-    
-    #grid-item--events {
+    #grid-item--events { /*Needs to stay in in case events section is ever included*/
         width: 100%;
     }
-
 }
 
 .page--transition-guide {
