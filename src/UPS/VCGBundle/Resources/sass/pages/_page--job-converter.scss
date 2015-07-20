@@ -100,6 +100,7 @@ and open the template in the editor.
 
             h4 {
                 text-transform: none;
+                margin-top: 0.9rem;
             }
 
             p {
@@ -109,6 +110,7 @@ and open the template in the editor.
             #military-job-description {
                 color: $grey--medium;
                 font-size: 0.9em;
+                display: none;
             }
 
             p.tip {

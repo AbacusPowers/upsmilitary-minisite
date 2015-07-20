@@ -19,30 +19,30 @@
             margin-left: 0;
             margin-top: 0;
         }
-    }
 
-    img.app-hand {
-        width: 50%;
-        display: inline-block;
-        margin-top: 1.5em;
-        margin-left: -1.5em;
-    }
-        
-    .badge-wrapper {
-        width: 50%;
-        float: right;
-        padding-top: 2.5em;
-        text-align: right;
-        // background: red;
-    }
+        img.app-hand {
+            width: 50%;
+            display: inline-block;
+            margin-top: 1.5em;
+            margin-left: -1.5em;
+        }
+            
+        .badge-wrapper {
+            width: 50%;
+            float: right;
+            padding-top: 2.5em;
+            text-align: right;
+            // background: red;
+        }
 
-    img.badge--apple, img.badge--google, svg#badge--google {
-        width: 100%;
-        margin-bottom: 0.5rem;
+        img.badge--apple, img.badge--google, svg#badge--google {
+            width: 100%;
+            margin-bottom: 0.5rem;
 
-        .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & {
-            width: 75%;
-            margin-right: 1.5em;
+            .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & {
+                width: 75%;
+                margin-right: 1.5em;
+            }
         }
     }
 }

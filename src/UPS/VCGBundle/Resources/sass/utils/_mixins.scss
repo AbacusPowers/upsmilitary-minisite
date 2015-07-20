@@ -247,3 +247,7 @@
   @include transition (all 0.15s ease);
 }
 
+@mixin link--yellow {
+  color: $ups-yellow;
+}
+
