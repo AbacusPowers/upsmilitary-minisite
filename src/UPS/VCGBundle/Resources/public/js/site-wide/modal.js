@@ -16,6 +16,14 @@ $('document').ready(function(){
         getModalContent(href, true, 'page');
         showVideoModal();
     });
+    //PHOTO FUNCTIONALITY
+    $('.photo-link').on('click', function(e){
+        e.preventDefault();
+        var href = $(this).attr('href');
+        // Getting Content
+        getModalContent(href, true, 'page');
+        showPhotoModal();
+    });
     //EVENTS FUNCTIONALITY
     $('.all-events-link').on('click', function(e){
         e.preventDefault();
@@ -105,6 +113,8 @@ $('document').ready(function(){
             if ( History.getState().data.origin === 'page' ) {
                 if ( $('body').hasClass('video-view') ) {
                     destroyVideoModal();
+                } else if ( $('body').hasClass('photo-view') ) {
+                    destroyPhotoModal();
                 } else if ( $('body').hasClass('values-view') ) {
                     destroyValuesModal();
                 } else if ( $('body').hasClass('events-view') ) {
@@ -129,6 +139,7 @@ $('document').ready(function(){
     .on('click','.leave-site-view #close-offsite-modal', function(e){
         e.preventDefault();
         destroyLeaveSiteModal();
+        var href = $('#forward-to').attr('href');
         ga('send','event','external_link','close', href);
     })
     .on('click','.leave-site-view #forward-to', function(e){
@@ -142,6 +153,7 @@ $('document').ready(function(){
         destroyLeaveSiteModal();
         ga('send','event','external_link','cancel', href);
     });
+
 });
 
 function getModalContent(url, addEntry, originType) {
@@ -264,6 +276,19 @@ function showVideoModal(){
     }, 201);
 
 }
+function showPhotoModal(){
+    $('#overlay').show();
+    $('#modal').fadeIn();
+    $('body').addClass('photo-view');
+    $('#modal-wrapper').addClass('photo');
+
+    //setTimeout(function(){ //VIDEO OPEN TRACKING
+    //    videoTitle = $('#video-title').text();
+    //    //video open tracking
+    //    ga('send','event','video','open',videoTitle);
+    //}, 201);
+
+}
 function showEventsModal(url){
     //var id = url.substring(url.lastIndexOf('#'));
     //console.log(id);
@@ -300,17 +325,7 @@ function showLeaveSiteModal(href){
 
     $('body').addClass('leave-site-view');
     $('#modal-wrapper').addClass('leave-site');
-    $('#offsite-modal','.leave-site-view').on('click','#close-offsite-modal', function(e){
-        e.preventDefault();
-        destroyLeaveSiteModal();
-    });
-    $('#offsite-modal','.leave-site-view').on('click','#forward-to', function(e){
-        destroyLeaveSiteModal();
-    });
-    $('#offsite-modal','.leave-site-view').on('click','#forward-cancel', function(e){
-        e.preventDefault();
-        destroyLeaveSiteModal();
-    });
+
 
 }
 function destroyModal(){
@@ -330,6 +345,15 @@ function destroyVideoModal(){
     $('body').removeClass('hold-modal');
     $('#single-modal-content').text('');
     ga('send','event','video','close',videoTitle); //VIDEO CLOSE TRACKING
+}
+function destroyPhotoModal(){
+    $('#overlay').hide();
+    $('#modal').hide();
+    $('body').removeClass('photo-view');
+    $('#modal-wrapper').removeClass('photo');
+    $('body').removeClass('hold-modal');
+    $('#single-modal-content').text('');
+    //ga('send','event','video','close',videoTitle); //VIDEO CLOSE TRACKING
 }
 function destroyValuesModal(){
     $('#overlay').hide();
@@ -357,8 +381,8 @@ function destroyLeaveSiteModal(){
 
     $('#offsite-modal').hide();
 
-
     $('#modal-wrapper').removeClass('leave-site');
+
 }
 (function(window, undefined) {
     History.Adapter.bind(window,'statechange',function(){ // Note: We are using statechange instead of popstate

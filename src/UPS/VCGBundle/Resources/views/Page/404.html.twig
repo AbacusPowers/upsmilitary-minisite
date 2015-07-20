@@ -1,7 +1,16 @@
 {% extends "VCGBundle:Layouts:page.html.twig" %}
+{% block title %}Not Found{% endblock %}
+{% block headerimage %}
+    <div class="header-static-bg">
+        <img class="header-static-bg-img" src="{{ asset('bundles/vcg/images/slider/photo-2.png') }}" />
+    </div>
+{% endblock %}
 {% block page_content %}
-    <h1 style="text-align: center; padding-top: 2em;">Oops! Either this page isn't built yet, or it doesn't exist.</h1>
-    <p>Tried to find {{slug}}.html</p>
-    <p style="text-align: center;">Error: {{ error }}</p>
+<div class="veteranGateway__liner page--404">
+    <h1>Something went wrong.</h1>
+    <a href="{{ path('homepage') }}" class="button button--404">Back to the site</a>
+
+    {#<p>Error: {{ error }}</p>#}
+</div>
 {% endblock %}
     

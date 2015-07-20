@@ -60,19 +60,19 @@
                   <p>Know your rights and responsibilities as a member of the National Guard or Reserve.</p>
                 </a>
 
-                <a href="javascript:void(0)" class="grid-item article-link">
+                <a href="{{ path('culture_benefits_page', {'slug': 'history'}) }}" class="grid-item">
                   {% include 'VCGBundle:Svgs:chat.svg.twig' %}
                   <h1>History</h1>
                   <p>A look into our long standing support for veterans.</p>
                 </a>
             
-                <a href="{{ path('culture_benefits_article', {'slug': 'faq'}) }}" class="grid-item article-link">
+                <a href="{{ path('culture_benefits_article', {'slug': 'faq'}) }}" class="grid-item">
                   {% include 'VCGBundle:Svgs:chat.svg.twig' %}
                   <h1>FAQ</h1>
                   <p>Asking the right questions can simplify your search for a civilian career. Find answers about opportunities and benefits at UPS.</p>
                 </a>
 
-                <a href="{{ path('page', {'slug': 'partners'}) }}" class="grid-item">
+                <a href="{{ path('culture_benefits_page', {'slug': 'partners'}) }}" class="grid-item">
                   {% include 'VCGBundle:Svgs:handshake.svg.twig' %}
                   <h1>Our Partners</h1>
                   <p>UPS partners with other companies and the military branches to train current service members and transitioning U.S. veterans in corporate management and other business skills. Learn more about these programs here.</p>

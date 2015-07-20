@@ -1,0 +1,30 @@
+{% extends 'VCGBundle::base.html.twig' %}
+{% block title %} {{ photo.Title }} {% endblock %}
+{% block modal_class %}photo article-page{% endblock %}
+{% block page_class %}photo{% endblock %}
+{#{%  block javascripts %}#}
+    {#{% javascripts#}
+    {#'@VCGBundle/Resources/public/js/tracking/photo-tracking.js'#}
+    {#%}#}
+    {#<script src="{{ asset_url }}"></script>#}
+    {#{% endjavascripts %}#}
+{#{% endblock %}#}
+
+{% block modal %}
+{# you can use "route" to echo the route name #}
+        <div id="modal-content">
+            <img src="{{ asset('bundles/vcg/images/UPS-shield-logo.png') }}" alt="" class="logo">
+            {% block modalbody %}
+                    <div id="single-modal-content">
+                        <h1 id="photo-title">{{ photo.Title }}</h1>
+                        <div class="photo-container">
+                            <img src="{{ asset('bundles/vcg/images/history/' ~ photo.Filename) }}" frameborder="0" allowfullscreen></img>
+                        </div>
+                        <p class="photo-caption">{{ photo.Caption }}</p>
+                    </div>
+            {% endblock %}
+            <a href="{% block parentPageLink %}{% if (parent == 'history') %}{{ path('culture_benefits_page',{'slug':'history'}) }}{% else %}{{ path('page', {'slug': parent })}}{% endif %}{% endblock %}" id="close-modal"><i class="fa fa-times"></i></a>
+            <a href="{% block prevArticleLink %}{{ path(route, {'slug': photo.Prev | raw })}}{% endblock %}" id="prev-article"><i class="fa fa-angle-left"></i></a>
+            <a href="{% block nextArticleLink %}{{ path(route, {'slug': photo.Next | raw })}}{% endblock %}" id="next-article"><i class="fa fa-angle-right"></i></a>
+        </div>
+{% endblock %}

@@ -80,6 +80,8 @@ class SiteExportCommand extends ContainerAwareCommand
         '/jobs.html',
         '/job-converter.html',
         '/culture-benefits.html',
+        '/culture-benefits/partners.html',
+        '/culture-benefits/history.html',
         '/culture-benefits/article/faq.html',
         '/culture-benefits/article/values.html',
         '/culture-benefits/article/family-programs.html',

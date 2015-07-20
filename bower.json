@@ -18,6 +18,7 @@
     "jquery.selectBoxIt": "~3.8.1",
     "velocity": "~1.2.2",
     "sticky-kit": "~1.1.2",
-    "page-scroll-to-id": "~1.5.4"
+    "page-scroll-to-id": "~1.5.4",
+    "waypoints": "~3.1.1"
   }
 }
