@@ -105,6 +105,23 @@
   }
 }
 
+@mixin fourohfour-header-heights {
+  .breakpoint-small & {
+    height: $header-height--small;
+  }
+  .breakpoint-medium & {
+    height: 14em;
+  }
+
+  .breakpoint-large & {
+    height: 14em;
+  }
+
+  .breakpoint-wide & {
+    height: 14em;
+  }
+}
+
 @mixin border-mask {
   @include pseudo-block(0.6em); 
   // background: $black; 

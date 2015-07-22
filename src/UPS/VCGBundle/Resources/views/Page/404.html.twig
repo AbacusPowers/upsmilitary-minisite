@@ -1,16 +1,85 @@
 {% extends "VCGBundle:Layouts:page.html.twig" %}
 {% block title %}Not Found{% endblock %}
+{% block header_class %}header--404{% endblock %}
 {% block headerimage %}
     <div class="header-static-bg">
-        <img class="header-static-bg-img" src="{{ asset('bundles/vcg/images/slider/photo-2.png') }}" />
+        {#<img src="{{ asset('bundles/vcg/images/UPS_404.png') }}">#}
     </div>
 {% endblock %}
+{#{% block page_class %}page--404{% endblock %}#}
 {% block page_content %}
-<div class="veteranGateway__liner page--404">
-    <h1>Something went wrong.</h1>
-    <a href="{{ path('homepage') }}" class="button button--404">Back to the site</a>
+<div class="veteranGateway__liner">
+
 
     {#<p>Error: {{ error }}</p>#}
+
+    <div class="page--404">
+        <div class="title-block">
+            <h1>404</h1>
+            <p>Page not found</p>
+        </div>
+        <img id="fourohfour-graphic" src="{{ asset('bundles/vcg/images/UPS_404.png') }}">
+
+        <h1 class="error-message">The requested page doesn't exist, but here are some suggestions:</h1>
+        {#<a href="{{ path('homepage') }}" class="button button--404">Back to the site</a>#}
+        <div class="flex-wrapper">
+          <div class="grid-area">
+            <a href="{{ path('page',{'slug':'transition-guide'}) }}" class="grid-item external">
+              {% include 'VCGBundle:Svgs:handshake.svg.twig' %}
+              <h1>Transition Guide</h1>
+              {#<p>This 10-month program uses a hands-on educational experience to provide officers with management skills and technical expertise as they study best practices with industry leaders.</p>#}
+            </a>
+
+            <a href="{{ path('page',{'slug':'jobs'}) }}" class="grid-item external">
+              {% include 'VCGBundle:Svgs:handshake.svg.twig' %}
+              <h1>Jobs</h1>
+              {#<p>This one-year work experience training program is designed to take selected officers out of the military environment and expose them to the latest commercial business practices, organizational structures and cultures, technology development processes, and the latest corporate management techniques. The U.S. Army offers unique programs for each unit type, such as quartermaster and ordnance.</p>#}
+            </a>
+            <a href="{{ path('page',{'slug':'culture-benefits'}) }}" class="grid-item grid--ups-culture external">
+              {% include 'VCGBundle:Svgs:handshake.svg.twig' %}
+              <h1>Culture &amp; Benefits</h1>
+              {#<p>Open to currently serving and recently separated veterans (including members of the Reserve and National Guard), this program connects veteran proteges with corporate mentors for a yearlong mentorship focused on a successful transition from the military to the civilian workforce.</p>#}
+            </a>
+
+          </div>
+        </div>
+        {% block get_started %}
+        {% endblock %}
+        {#<div class="link-dump">#}
+            {#<div class="fourohfour-links">#}
+                {#<ul>#}
+                    {#<li><a href="{{ path('page',{'slug':'transition-guide'}) }}"><h3>Veteran &amp; Service Member Transition Guide</h3></a></li>#}
+                    {#<li><a href="{{ path('transition_guide_page',{'slug':'dd-form-214-guide'}) }}">DD Form 214 Guide</a></li>#}
+                    {#<li><h3>Building Your Brand</h3></li>#}
+                    {#<li><a href="{{ path('transition_guide_article',{'slug':'brand-intro'}) }}">Introduction</a></li>#}
+                    {#<li><a href="{{ path('transition_guide_article',{'slug':'cover-letter-resume'}) }}">Resume & Cover Letter</a></li>#}
+                    {#<li><a href="{{ path('transition_guide_article',{'slug':'marketing-yourself'}) }}">Marketing Yourself Online</a></li>#}
+                    {#<li><a href="{{ path('transition_guide_article',{'slug':'networking-essentials'}) }}">Networking</a></li>#}
+                    {#<li><a href="{{ path('transition_guide_article',{'slug':'recruiters'}) }}">Dealing With Recruiters</a></li>#}
+                    {#<li><a href="{{ path('transition_guide_article',{'slug':'career-fair'}) }}">Preparing for Career Fairs</a></li>#}
+                    {#<li><a href="{{ path('transition_guide_article',{'slug':'interview'}) }}">Interviewing</a></li>#}
+                {#</ul>#}
+                {#<ul>#}
+                    {#<li><a href="{{ path('page',{'slug':'jobs'}) }}"><h3>UPS Veteran Career Explorer</h3></a></li>#}
+                    {#<li><a href="{{ path('page',{'slug':'job-converter'}) }}">Military Skills Translator</a></li>#}
+                    {#<li><a href="{{ path('page',{'slug':'jobs'}) }}">UPS Job Descriptions</a></li>#}
+                    {#<li><a href="{{ path('page',{'slug':'job-map'}) }}">UPS Jobs Map</a></li>#}
+                {#</ul>#}
+
+                {#<ul>#}
+                    {#<li><a href="{{ path('page',{'slug':'culture-benefits'}) }}"><h3>UPS Culture & Benefits</h3></a></li>#}
+                    {#<li><h4>Articles</h4></li>#}
+                    {#<li><a href="{{ path('culture_benefits_article',{'slug':'values'}) }}">UPS Values</a></li>#}
+                    {#<li><a href="{{ path('culture_benefits_article',{'slug':'benefits'}) }}">Veteran Benefits</a></li>#}
+                    {#<li><a href="{{ path('culture_benefits_article',{'slug':'student-programs'}) }}">Veteran Student Programs</a></li>#}
+                    {#<li><a href="{{ path('culture_benefits_article',{'slug':'ra-intro'}) }}">Registered Apprenticeship Program</a></li>#}
+                    {#<li><a href="{{ path('culture_benefits_article',{'slug':'family-programs'}) }}">Family Support</a></li>#}
+                    {#<li><a href="{{ path('culture_benefits_article',{'slug':'esgr'}) }}">ESGR</a></li>#}
+                    {#<li><a href="{{ path('culture_benefits_article',{'slug':'faq'}) }}">UPS FAQ</a></li>#}
+                {#</ul>#}
+            {#</div>#}
+        {#</div>#}
+    </div>
 </div>
 {% endblock %}
     

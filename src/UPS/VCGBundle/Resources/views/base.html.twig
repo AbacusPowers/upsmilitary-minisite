@@ -103,7 +103,7 @@
                     </div>    -->
                 {% endblock %}
                 <div class="header--liner">
-                    <img src="{{ asset('bundles/vcg/images/UPS-shield-logo.png') }}" alt="" class="logo">
+                    <a href="{{ path('homepage') }}"><img src="{{ asset('bundles/vcg/images/UPS-shield-logo.png') }}" alt="" class="logo"></a>
                     <p class="header__country">United States Jobs <i class="fa fa-caret-down"></i></p>
                     <nav class="header__nav--top-right">
                         <ul >
@@ -168,9 +168,9 @@
             <div class="veteranGateway__liner">
                 <div class="{% block page_class %}base{% endblock %}">
                     <div class="breadcrumb">
-                        
+                        <a href="{{ path('homepage') }}"><i class="fa fa-home"></i>UPS Veteran Career Gateway Home</a>
                         {% block breadcrumbs %}
-                            <a href="{{ path('homepage') }}">UPS Veteran Career Gateway</a>
+
                         {% endblock %}
                     </div>
                     {% block page_content %}
@@ -179,10 +179,12 @@
 
                 </div>
             </div>
+            {% block get_started %}
             <div class="pattern--get-started get-started--footer">
                 <p>Get started on your UPS career</p>
                 <a class="button cta-button cta-button--go cta-button--apply" href="http://jobs-ups.com/">Apply Now</a>
-            </div> 
+            </div>
+            {% endblock %}
     </main>
 
         
