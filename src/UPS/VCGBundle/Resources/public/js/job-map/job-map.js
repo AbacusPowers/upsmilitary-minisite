@@ -264,13 +264,7 @@
             var job     = jobs[i];
             var jobDesc = CONST.JOB_DESC[job] || '';
             var jobEnc  = encodeURI(job.replace(CONST.RX_JOB_RM, ''));
-            var href    =
-                'http://jobs-ups.com/search/'
-                + jobEnc
-                + '/ASCategory/-1/ASPostedDate/-1/ASCountry/-1/ASState/-1/ASCity/-1/ASLocation/-1/ASCompanyName/-1/ASCustom1/-1/ASCustom2/-1/ASCustom3/-1/ASCustom4/-1/ASCustom5/-1/ASIsRadius/true/ASCityStateZipcode/'
-                + location.zip
-                + '/ASDistance/50/ASLatitude/-1/ASLongitude/-1/ASDistanceType/-1'
-            ;
+            var href    = location_href(jobEnc, location.zip);
             
             jobsContainer.append($(
                 '<div class="job-wrapper"><p><span>'
@@ -384,6 +378,27 @@
         }
         
         $('.map-controls').removeClass('hidden');
+    }
+    
+    
+    /*
+     * 
+     */
+    function location_href(enc, zip) {
+        var href;
+        if ($.browser.mobile) {
+            href = 'http://m.jobs-ups.com/search';
+        }
+        else {
+            href =
+                'http://jobs-ups.com/search/'
+                + enc
+                + '/ASCategory/-1/ASPostedDate/-1/ASCountry/-1/ASState/-1/ASCity/-1/ASLocation/-1/ASCompanyName/-1/ASCustom1/-1/ASCustom2/-1/ASCustom3/-1/ASCustom4/-1/ASCustom5/-1/ASIsRadius/true/ASCityStateZipcode/'
+                + zip
+                + '/ASDistance/50/ASLatitude/-1/ASLongitude/-1/ASDistanceType/-1'
+            ;
+        }
+        return href;
     }
 
     

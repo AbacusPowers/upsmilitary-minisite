@@ -14,9 +14,8 @@
     </div>
 {% endblock %}
 {% block breadcrumbs %}
-        <a href="{{ path('homepage') }}">UPS Veteran Career Gateway</a>
         <a href="{{ path('page',{'slug':'transition-guide'}) }}">Transition Guide</a>
-        <a href="#">DD Form 214 Guide</a>
+        <a href="{{ path('transition_guide_page',{'slug':'dd-form-214-guide'}) }}">DD Form 214 Guide</a>
 {% endblock %}
 
 {% block page_content %}

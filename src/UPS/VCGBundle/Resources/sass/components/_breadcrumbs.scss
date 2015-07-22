@@ -131,6 +131,9 @@
       border-left-color: $ups-yellow;
     }
 
+    i {
+      margin-right: 0.5em;
+    }
     // @include media($medium-screen) {
     //   font-size: 1em;
     //   padding: 0 ($breadcrumb-height / 2) 0 ($breadcrumb-height / 1.5);

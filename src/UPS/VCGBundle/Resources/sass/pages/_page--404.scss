@@ -1,9 +1,22 @@
+.header--404 {
+  //height: 14em;
+  background: url(/bundles/vcg/images/bg-5b.png) bottom center no-repeat $grey90; //<--this photo is unnecessary
+  background-size: cover;
+
+
+}
 .page--404 {
   text-align: center;
   padding-top: 2em;
   padding-bottom: 4em;
-  background: $grey--darkest;
+  //background: $grey--darkest;
+  .breadcrumb {
+    top: 0;
+  }
 
+  #fourohfour-graphic {
+    max-width: 400px;
+  }
   .button--404 {
     background-color: $ups-yellow;
     color: $black;
@@ -12,7 +25,124 @@
     margin: 2em;
   }
 
-  h1 {
+  h1.error-message {
     margin: 2em;
   }
 }
+
+.liner--404 {
+  .get-started--footer {
+    display: none;
+  }
+}
+
+
+////////////////PARTNERS PAGE GRID LINE CONTROL/////////////////////////
+
+.page .page--404 {
+
+  .grid-items-lines {
+
+    .grid-item:nth-child(4), .grid-item:nth-child(5), .grid-item:nth-child(6) {
+      border-bottom: 0;
+    }
+
+    .grid-item:nth-child(6) {
+      border-right: none;
+    }
+  }
+
+}
+
+
+
+/////////////////PARTNERS PAGE CONTENT STYLES/////////////////////
+.page .page--404 .grid-items-lines {
+  .grid-item {
+    .breakpoint-wide & {
+      height: 19em;
+    }
+
+    .breakpoint-large & {
+      height: 24em;
+    }
+
+    .breakpoint-medium & {
+      height: 32em;
+    }
+  }
+}
+//
+//
+//.link-dump {
+//  margin: 0 auto;
+//  $base-spacing: 1.5em !default;
+//  $action-color: #477DCA !default;
+//  $medium-screen: em(640) !default;
+//  $large-screen: em(860) !default;
+//  $footer-background: red;
+//  $footer-color: white;
+//  $footer-link-color: transparentize($footer-color, 0.6);
+//  $footer-disclaimer-color: $white;
+//
+//  // background: $footer-background;
+//  padding: ($base-spacing * 2) $gutter;
+//  // width: 100%;
+//  @include constrain-content;
+//  //border-bottom: 15em solid $grey--darker;
+//
+//  .fourohfour-links {
+//    @include clearfix;
+//    margin-bottom: $base-spacing;
+//
+//    @include media($medium-screen) {
+//      @include shift(3);
+//    }
+//  }
+//
+//  ul {
+//    margin-bottom: $base-spacing * 2;
+//    padding: 0;
+//
+//    @include media($medium-screen) {
+//      @include span-columns(3);
+//      @include omega(3n);
+//      @include clearfix;
+//    }
+//  }
+//
+//  li {
+//    line-height: 1.5em;
+//    list-style: none;
+//    text-align: center;
+//
+//    @include media($medium-screen) {
+//      text-align: left;
+//    }
+//  }
+//
+//  li a {
+//    color: $white70;
+//    text-decoration: none;
+//
+//    &:focus,
+//    &:hover {
+//      color: $ups-grey-1;
+//    }
+//  }
+//
+//  li h3 {
+//    color: $footer-color;
+//    font-size: 1em;
+//    font-weight: 800;
+//    margin-bottom: 0.4em;
+//  }
+//
+//  hr {
+//    border: 1px solid transparentize($footer-disclaimer-color, 0.3);
+//    margin: 0 auto $base-spacing;
+//    width: 12em;
+//  }
+//
+//
+//}

@@ -105,6 +105,23 @@
   }
 }
 
+@mixin fourohfour-header-heights {
+  .breakpoint-small & {
+    height: $header-height--small;
+  }
+  .breakpoint-medium & {
+    height: 14em;
+  }
+
+  .breakpoint-large & {
+    height: 14em;
+  }
+
+  .breakpoint-wide & {
+    height: 14em;
+  }
+}
+
 @mixin border-mask {
   @include pseudo-block(0.6em); 
   // background: $black; 
@@ -155,36 +172,18 @@
       &.history-checkbox {
           padding-left: 4em;
 
-          &:before {
-              font-family: FontAwesome;
-              content: "\f096";
-              position: absolute;
-              left: 0;
-              padding: 0 2em;
-              color: $white;
-              z-index: 1;
-          }
-
-          &:visited {
-              span {
-                  &:before {
-                      color: $white
-                  }
-              }
-          }
-
-          span {
-              display: block;
-              
-              &:before {
-                  font-family: FontAwesome;
-                  content: "\f046";
-                  position: absolute;
-                  left: 0;
-                  padding: 0 2em;
-                  color: $grey--dark;
-              }
-          }
+        &:before {
+          font-family: FontAwesome;
+          content: "\f096";
+          position: absolute;
+          left: 0;
+          padding: 0 0.5em 0 1em;
+          color: $white;
+          z-index: 5000;
+        }
+        &.in-history:before {
+          content: "\f046";
+        }
       }
   }
   
