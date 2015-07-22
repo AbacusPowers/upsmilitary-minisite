@@ -1,47 +1,47 @@
-$('document').ready(function(){
-    //ARTICLE FUNCTIONALITY
-    $('.article-link').on('click', function(e){
+$(document)
+    .on('click','.article-link', function(e){
         e.preventDefault();
         var href = $(this).attr('href');
         // Getting Content
         getModalContent(href, true, 'page');
         showModal();
         $(this).addClass('in-history');
-    });
+        $('i.fa',this).removeClass('fa-square-o').addClass('fa-check-square-o');
+    })
     //VIDEO FUNCTIONALITY
-    $('.video-link').on('click', function(e){
+    .on('click','.video-link', function(e){
         e.preventDefault();
         var href = $(this).attr('href');
         // Getting Content
         getModalContent(href, true, 'page');
         showVideoModal();
-    });
+    })
     //PHOTO FUNCTIONALITY
-    $('.photo-link').on('click', function(e){
+    .on('click','.photo-link', function(e){
         e.preventDefault();
         var href = $(this).attr('href');
         // Getting Content
         getModalContent(href, true, 'page');
         showPhotoModal();
-    });
+    })
     //EVENTS FUNCTIONALITY
-    $('.all-events-link').on('click', function(e){
+    .on('click','.all-events-link', function(e){
         e.preventDefault();
         var href = $(this).attr('href');
         // Getting Content
         getModalContent(href, true, 'page');
         showEventsModal(href);
-    });
+    })
     //UPS VALUES FUNCTIONALITY
-    $('.values-link').on('click', function(e){
+    .on('click', '.values-link', function(e){
         e.preventDefault();
         var href = $(this).attr('href');
         // Getting Content
         getModalContent(href, true, 'page');
         showValuesModal();
-    });
-
-    $('a.external').click(function(e){
+    })
+    //EXTERNAL LINKS
+    .on('click','a.external',function(e){
         e.preventDefault();
         var href = $(this).attr('href');
         showLeaveSiteModal(href);
@@ -58,8 +58,9 @@ $('document').ready(function(){
         console.log(modalHeight);
         var topHeight = 0.5*(screenHeight-modalHeight);
         $('#offsite-modal').css({'top': topHeight +'px'});
-    });
-    $(document).on('click', '#prev-article', function (e) {
+    })
+    //ARTICLE NAVIGATION
+    .on('click', '#prev-article', function (e) {
         e.preventDefault();
         var href = $(this).attr('href');
         // Getting Content
@@ -146,15 +147,13 @@ $('document').ready(function(){
         destroyLeaveSiteModal();
         var href = $(this).attr('href');
         ga('send','event','external_link','continue', href);
-        })
+    })
     .on('click','.leave-site-view #forward-cancel', function(e){
         e.preventDefault();
         var href = $(this).siblings('#forward-to').attr('href');
         destroyLeaveSiteModal();
         ga('send','event','external_link','cancel', href);
     });
-
-});
 
 function getModalContent(url, addEntry, originType) {
     $('#modal').load(url +' #modal-content', null, function() {
@@ -167,37 +166,9 @@ function getModalContent(url, addEntry, originType) {
             History.pushState({ modal : 1, origin : originType, close : originUrl }, newTitle, url);
             //console.log(History.getState().data);
 
-            //add url to history cookie
-            var cookie = getCookie('uvgHistory');
-            var newCookieUrl = window.location.origin + url;
-            if ( cookie.length ) {
-                historyArray = JSON.parse(cookie);
-                if (searchStringInArray(newCookieUrl, historyArray) === -1) {
-                    historyArray.push(newCookieUrl);
-                    setCookie('uvgHistory',JSON.stringify(historyArray), 365);
-                    currentUrl = newCookieUrl;
-                    //console.log('I set a cookie');
-                }
-            } else {
-                historyArray = [newCookieUrl];
-                setCookie('uvgHistory',JSON.stringify(historyArray));
-            }
-            $('.group-link').each(function(){
-                var historyArray = JSON.parse(cookie);
-                var linkUrl = window.location.origin + $(this).children('a.history-checkbox').attr('href');
-                if (searchStringInArray(linkUrl, historyArray) === -1) {
-                    //console.log(linkUrl + 'is not in the history');
-                    if (currentUrl == linkUrl) {
-                        $(this).children('a.history-checkbox').addClass('in-history');
-                        //console.log(linkUrl + ' is the current page');
-                    }
-                } else if (currentUrl == linkUrl) {
-                    $(this).children('a.history-checkbox').addClass('in-history');
-                    //console.log(linkUrl + ' is the current page');
-                } else {
-                    $(this).children('a.history-checkbox').addClass('in-history');
-                }
-            });
+            ////add url to history cookie
+            updateCookie(siteOrigin + url);
+            
             //ANALYTICS - SET PAGE URL AND TITLE
             ga('set', {
                 page: url,

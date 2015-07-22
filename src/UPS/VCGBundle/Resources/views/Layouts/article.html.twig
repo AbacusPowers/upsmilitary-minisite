@@ -134,9 +134,8 @@
                 {% endblock %}" id="prev-article"><i class="fa fa-angle-left"></i></a>
 
             {% endif %}
-            {% if article.Prev %}
-                <a href="{% block nextArticleLink %}
-                {% if article.Group == 'brand-home' %}{{ path('transition_guide_article', {'slug': article.Next | raw })}}{% else %}{{ path(route, {'slug': article.Next | raw })}}{% endif %}{% endblock %}" id="next-article"><i class="fa fa-angle-right"></i></a>
+            {% if article.Next %}
+                <a href="{% block nextArticleLink %}{% if article.Group == 'brand-home' %}{{ path('transition_guide_article', {'slug': article.Next | raw })}}{% else %}{{ path(route, {'slug': article.Next | raw })}}{% endif %}{% endblock %}" id="next-article"><i class="fa fa-angle-right"></i></a>
             {% endif %}
         </div>
 {% endblock %}
