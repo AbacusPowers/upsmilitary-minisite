@@ -364,6 +364,7 @@ function destroyLeaveSiteModal(){
         if(History.getState().data.modal !== 1) {
             destroyModal();
             //console.log('ping');
+
         } else {
             showModal();
             //console.log('ding');
