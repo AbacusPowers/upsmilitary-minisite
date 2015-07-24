@@ -1,14 +1,8 @@
-$(document).ready(function(){
-    $('.article-link').click(function(){
-        $('i.fa',this).removeClass('fa-square-o').addClass('fa-check-square-o');
-        console.log('click');
-    });
-});
 function setCookie(cname, cvalue, exdays) {
-    var d = new Date();
-    d.setTime(d.getTime() + (exdays*24*60*60*1000));
-    var expires = "expires="+d.toUTCString();
-    document.cookie = cname + "=" + cvalue + "; " + expires;
+        var d = new Date();
+        d.setTime(d.getTime() + (exdays*24*60*60*1000));
+        var expires = "expires="+d.toUTCString();
+        document.cookie = cname + "=" + cvalue + "; " + expires +"; path=/";
 }
 
 function getCookie(cname) {
@@ -24,31 +18,42 @@ function getCookie(cname) {
 
 function searchStringInArray (str, strArray) {
     for (var j=0; j<strArray.length; j++) {
-        if (strArray[j].match(str)) return j;
+        re = new RegExp(str);
+        if (strArray[j].match(re)) return j;
     }
     return -1;
 }
+currentUrl = encodeURI(window.location.href);
 
-$(document).ready(function(){
-    currentUrl = window.location.href;
-    var cookie = getCookie('uvgHistory');
-    if ( cookie.length ) {
-        historyArray = JSON.parse(cookie);
-        if (searchStringInArray(currentUrl, historyArray) === -1) {
-            historyArray.push(currentUrl);
+function updateCookie(url){
+
+    if (!window.location.origin) {
+        //for IE 10
+        siteOrigin = window.location.protocol + "//" + window.location.hostname;
+    } else {
+        siteOrigin = window.location.origin;
+    }
+    if(url) {
+        newURL = url;
+    } else{
+        newURL = currentUrl;
+    }
+    var historyCookie = getCookie('uvgHistory');
+    if ( historyCookie.length ) {
+        historyArray = JSON.parse(historyCookie);
+        if (searchStringInArray(newURL, historyArray) === -1) { //if the url is NOT already in the array
+            historyArray.push(newURL);
+            //cookie('uvgHistory','',-1);
             setCookie('uvgHistory',JSON.stringify(historyArray), 365);
         }
     } else {
-        historyArray = [currentUrl];
+        historyArray = [newURL];
         setCookie('uvgHistory',JSON.stringify(historyArray));
     }
-
-    //SET GROUP LINK CLASSES BASED ON COOKIE
     $('.group-link').each(function(){
-        if (!window.location.origin) { //if you're using IE, window.location.origin isn't automatically available
-            window.location.origin = window.location.protocol + "//" + window.location.hostname + (window.location.port ? ':' + window.location.port: '');
-        }
-        var linkUrl = window.location.origin + $(this).children('a.history-checkbox').attr('href'); //combine link path with origin
+
+        //console.log('origin is: ' + siteOrigin);
+        var linkUrl = siteOrigin + $(this).children('a.history-checkbox').attr('href'); //combine link path with siteOrigin
 
         if (searchStringInArray(linkUrl, historyArray) === -1) {
             //nothing
@@ -59,18 +64,27 @@ $(document).ready(function(){
         }
     });
     $('.history-checkbox').each(function(){
-        var linkUrl = window.location.origin + $(this).attr('href');
 
+        var linkUrl = siteOrigin + $(this).attr('href');
+        //console.log(linkUrl);
         if (searchStringInArray(linkUrl, historyArray) === -1) {
             //nothing
+            //console.log('not visited');
         } else if (currentUrl == linkUrl) {
-            $(this).addClass('in-history'); //ADD THE CLASS HERE
+            $(this).addClass($(this).attr('href') + 'in-history'); //ADD THE CLASS HERE
 
         } else {
             $(this).addClass('in-history'); //ADD THE CLASS HERE
         }
     });
+}
+
+$(document).ready(function(){
+    updateCookie();
+
+
 });
+
 /**
  * jQuery.browser.mobile (http://detectmobilebrowser.com/)
  *
@@ -146,10 +160,6 @@ $( function(){
       .velocity({height:0});
   });
 } );
-///**
-// * Created by justin on 7/1/15.
-// */
-
 //Debounce function to use anywhere.
 function debounce(fn, delay) {
     var timer = null;
@@ -173,7 +183,7 @@ $('.carousel-control.next').click(function(){
 $('.carousel-control.prev').click(function(){
     var forSlide = $(this).attr('for');
     var slideTitle = $('#' + forSlide + ' + .carousel-item .slider-text').text();
-    ga('send','event','slider','arrow_right',slideTitle);
+    ga('send','event','slider','arrow_left',slideTitle);
 });
 $('.carousel-bullet').click(function(){
     var forSlide = $(this).attr('for');
@@ -187,6 +197,7 @@ $(document).on('click','.slider-text-wrapper a',function(){
     var slideTitle = $(this).children('.slider-text').text();
     ga('send','event','slider','click', slideTitle);
 });
+
 //VIDEOS
 //this adds the youtube api
 //actual tracking code is loaded in modal.js (if modal) and video-tracking.js (if normal pageview)
@@ -215,6 +226,43 @@ var videoScrollDetect = function () {
     videoLastPos = videoCurrPos;
 }
 $('#video-list').closest('.scroll-container').scroll( debounce(videoScrollDetect, 500) );
+//var waypoints = $('.video-link').waypoint(function(direction) {
+//    var videoName = $(this);
+//    console.log(videoName);
+//}, {
+//    context: $('.scroll-container'),
+//    horizontal: true
+//});
+viewedVideos = [];
+function testViewedVideos(){
+    $('.video-link').each(function(index){
+        if(isScrolledIntoView($(this)) ) {
+            var videoTitle = $(this).children('.video-title').text();
+            //console.log(videoTitle + ' - ' + viewedVideos.indexOf(videoTitle))
+            if (viewedVideos.indexOf(videoTitle) === -1) {
+                viewedVideos.push(videoTitle);
+                var position = index + 1;
+                ga('send','event','video_carousel','shown_position_'+position,videoTitle);
+            }
+        }
+    });
+}
+$(document).ready(function(){
+    testViewedVideos();
+});
+function isScrolledIntoView(elem) {
+    var docViewLeft = elem.parent('.scroll-container').scrollLeft();
+    var docViewBottom = docViewLeft + $('.scroll-container').width();
+
+    var elemLeft = $(elem).offset().left;
+    var elemBottom = elemLeft + $(elem).width();
+
+    return ((elemBottom <= docViewBottom) && (elemLeft >= docViewLeft));
+}
+$('.scroll-container').scroll(function(){
+        testViewedVideos();
+    }
+);
 
 //CTA GO
 $('.cta-button--go').click(function(){
@@ -254,14 +302,14 @@ $(document).on('click','.expander__wrapper .expand-button',function(){
 
 
 //TRANSLATE BUTTON
-$('#job-converter').submit(function(e) {
+$('#military-skills-translator').submit(function(e) {
     branch = $('#branch-of-service').val();
     jobCode = $('#job-code').val();
-    ga('send', 'event', 'job_converter', 'translate', branch + '_' + jobCode);
+    ga('send', 'event', 'military_skills_translator', 'translate', branch + '_' + jobCode);
 });
 
 //JOB CONVERTER/SEARCH LINKS
-$('.job-search--job-converter').submit(function(){
+$('.job-search--military-skills-translator').submit(function(){
     positionTitle = $(this).closest('.expander__wrapper').find('.expander__parent').text();
     if (positionTitle == 'Driver Helper (October-December)') {
         positionTitle = 'Driver Helper';
@@ -269,7 +317,7 @@ $('.job-search--job-converter').submit(function(){
     if( $(this).children('.zip-code').val() ) {
         zipCode = $(this).children('.zip-code').val();
     }
-    ga('send','event','job_converter','job_converter_search', 'results_' + positionTitle );
+    ga('send','event','military_skills_translator','military_skills_translator_search', 'results_' + positionTitle );
 });
 $('.job-search--job-description').submit(function(){
     positionTitle = $(this).closest('.expander__wrapper').find('.expander__parent').text();
@@ -352,42 +400,51 @@ $(document).ready(function(){
     $('.all-events-wrapper').width(eventWidth * eventNum);
 });
 
-$('document').ready(function(){
-    //ARTICLE FUNCTIONALITY
-    $('.article-link').on('click', function(e){
+$(document)
+    .on('click','.article-link', function(e){
         e.preventDefault();
         var href = $(this).attr('href');
         // Getting Content
         getModalContent(href, true, 'page');
         showModal();
         $(this).addClass('in-history');
-    });
+        $('i.fa',this).removeClass('fa-square-o').addClass('fa-check-square-o');
+    })
     //VIDEO FUNCTIONALITY
-    $('.video-link').on('click', function(e){
+    .on('click','.video-link', function(e){
         e.preventDefault();
         var href = $(this).attr('href');
         // Getting Content
         getModalContent(href, true, 'page');
         showVideoModal();
-    });
+    })
+    //PHOTO FUNCTIONALITY
+    .on('click','.photo-link', function(e){
+        e.preventDefault();
+        var href = $(this).attr('href');
+        // Getting Content
+        getModalContent(href, true, 'page');
+        showPhotoModal();
+        //console.log('test');
+    })
     //EVENTS FUNCTIONALITY
-    $('.all-events-link').on('click', function(e){
+    .on('click','.all-events-link', function(e){
         e.preventDefault();
         var href = $(this).attr('href');
         // Getting Content
         getModalContent(href, true, 'page');
         showEventsModal(href);
-    });
+    })
     //UPS VALUES FUNCTIONALITY
-    $('.values-link').on('click', function(e){
+    .on('click', '.values-link', function(e){
         e.preventDefault();
         var href = $(this).attr('href');
         // Getting Content
         getModalContent(href, true, 'page');
         showValuesModal();
-    });
-
-    $('a.external').click(function(e){
+    })
+    //EXTERNAL LINKS
+    .on('click','a.external',function(e){
         e.preventDefault();
         var href = $(this).attr('href');
         showLeaveSiteModal(href);
@@ -401,22 +458,36 @@ $('document').ready(function(){
         }
         var modalHeight = $('#offsite-modal').height();
         var screenHeight = $(window).height();
-        console.log(modalHeight);
+        //console.log(modalHeight);
         var topHeight = 0.5*(screenHeight-modalHeight);
         $('#offsite-modal').css({'top': topHeight +'px'});
-    });
-    $(document).on('click', '#prev-article', function (e) {
+    })
+    //ARTICLE NAVIGATION
+    .on('click', '#prev-article', function (e) {
         e.preventDefault();
         var href = $(this).attr('href');
         // Getting Content
         origin = History.getState().data.origin;
         if ( origin == 'page') {
             originType = 'page';
-            console.log('page!')
+            //console.log('page!')
         } else {
             originType = 'article';
         }
+        if ($('#modal-wrapper').hasClass('values')){
+            $('#modal-wrapper').removeClass('values');
+            $('#culture-articles').show();
+        }
         getModalContent(href, true, originType);
+        setTimeout(function(){
+            if ($('#wrapper--values').length){
+                $('#modal-wrapper').addClass('values');
+                $('#culture-articles').hide();
+                //console.log('yes');
+            } else {
+                //console.log('no');
+            }
+        }, 300);
     })
     .on('click', '#next-article', function (e) {
         e.preventDefault();
@@ -425,12 +496,25 @@ $('document').ready(function(){
         origin = History.getState().data.origin;
         console.log(origin);
         if ( origin == 'page') {
-            console.log('ooops!');
+            //console.log('ooops!');
             originType = 'page';
         } else {
             originType = 'article';
         }
+        if ($('#modal-wrapper').hasClass('values')){
+            $('#modal-wrapper').removeClass('values');
+            $('#culture-articles').show();
+        }
         getModalContent(href, true, originType);
+        setTimeout(function(){
+            if ($('#wrapper--values').length){
+                $('#modal-wrapper').addClass('values');
+                $('#culture-articles').hide();
+                //console.log('yes');
+            } else {
+                //console.log('no');
+            }
+        }, 300);
     })
     .on('click','#modal a.external',function(e){
         e.preventDefault();
@@ -459,6 +543,8 @@ $('document').ready(function(){
             if ( History.getState().data.origin === 'page' ) {
                 if ( $('body').hasClass('video-view') ) {
                     destroyVideoModal();
+                } else if ( $('body').hasClass('photo-view') ) {
+                    destroyPhotoModal();
                 } else if ( $('body').hasClass('values-view') ) {
                     destroyValuesModal();
                 } else if ( $('body').hasClass('events-view') ) {
@@ -480,24 +566,23 @@ $('document').ready(function(){
             //console.log('two');
         }
     })
-    //.on('click','.leave-site-view #close-offsite-modal', function(e){
-    //    e.preventDefault();
-    //    destroyLeaveSiteModal();
-    //    ga('send','event','external_link','close', href);
-    //})
-    //.on('click','.leave-site-view #forward-to', function(e){
-    //    destroyLeaveSiteModal();
-    //    var href = $(this).attr('href');
-    //    ga('send','event','external_link','continue', href);
-    //    })
-    //.on('click','.leave-site-view #forward-cancel', function(e){
-    //    e.preventDefault();
-    //    var href = $(this).siblings('#forward-to').attr('href');
-    //    destroyLeaveSiteModal();
-    //    ga('send','event','external_link','cancel', href);
-    //})
-    ;
-});
+    .on('click','.leave-site-view #close-offsite-modal', function(e){
+        e.preventDefault();
+        destroyLeaveSiteModal();
+        var href = $('#forward-to').attr('href');
+        ga('send','event','external_link','close', href);
+    })
+    .on('click','.leave-site-view #forward-to', function(e){
+        destroyLeaveSiteModal();
+        var href = $(this).attr('href');
+        ga('send','event','external_link','continue', href);
+    })
+    .on('click','.leave-site-view #forward-cancel', function(e){
+        e.preventDefault();
+        var href = $(this).siblings('#forward-to').attr('href');
+        destroyLeaveSiteModal();
+        ga('send','event','external_link','cancel', href);
+    });
 
 function getModalContent(url, addEntry, originType) {
     $('#modal').load(url +' #modal-content', null, function() {
@@ -510,37 +595,9 @@ function getModalContent(url, addEntry, originType) {
             History.pushState({ modal : 1, origin : originType, close : originUrl }, newTitle, url);
             //console.log(History.getState().data);
 
-            //add url to history cookie
-            var cookie = getCookie('uvgHistory');
-            var newCookieUrl = window.location.origin + url;
-            if ( cookie.length ) {
-                historyArray = JSON.parse(cookie);
-                if (searchStringInArray(newCookieUrl, historyArray) === -1) {
-                    historyArray.push(newCookieUrl);
-                    setCookie('uvgHistory',JSON.stringify(historyArray), 365);
-                    currentUrl = newCookieUrl;
-                    //console.log('I set a cookie');
-                }
-            } else {
-                historyArray = [newCookieUrl];
-                setCookie('uvgHistory',JSON.stringify(historyArray));
-            }
-            $('.group-link').each(function(){
-                var historyArray = JSON.parse(cookie);
-                var linkUrl = window.location.origin + $(this).children('a.history-checkbox').attr('href');
-                if (searchStringInArray(linkUrl, historyArray) === -1) {
-                    //console.log(linkUrl + 'is not in the history');
-                    if (currentUrl == linkUrl) {
-                        $(this).children('a.history-checkbox').addClass('in-history');
-                        //console.log(linkUrl + ' is the current page');
-                    }
-                } else if (currentUrl == linkUrl) {
-                    $(this).children('a.history-checkbox').addClass('in-history');
-                    //console.log(linkUrl + ' is the current page');
-                } else {
-                    $(this).children('a.history-checkbox').addClass('in-history');
-                }
-            });
+            ////add url to history cookie
+            updateCookie(siteOrigin + url);
+            
             //ANALYTICS - SET PAGE URL AND TITLE
             ga('set', {
                 page: url,
@@ -619,6 +676,19 @@ function showVideoModal(){
     }, 201);
 
 }
+function showPhotoModal(){
+    $('#overlay').show();
+    $('#modal').fadeIn();
+    $('body').addClass('photo-view');
+    $('#modal-wrapper').addClass('photo');
+
+    //setTimeout(function(){ //VIDEO OPEN TRACKING
+    //    videoTitle = $('#video-title').text();
+    //    //video open tracking
+    //    ga('send','event','video','open',videoTitle);
+    //}, 201);
+
+}
 function showEventsModal(url){
     //var id = url.substring(url.lastIndexOf('#'));
     //console.log(id);
@@ -632,6 +702,9 @@ function showValuesModal(f){
     $('#modal').show();
     $('body').addClass('values-view');
     $('#modal-wrapper').addClass('values');
+    setTimeout(function(){
+        $('#culture-articles').hide();
+    }, 500);
     //console.log('done');
 }
 function svgSize(){ //call this if jquery sizing is necessary
@@ -655,20 +728,7 @@ function showLeaveSiteModal(href){
 
     $('body').addClass('leave-site-view');
     $('#modal-wrapper').addClass('leave-site');
-    $('#offsite-modal','.leave-site-view').on('click','#close-offsite-modal', function(e){
-        e.preventDefault();
-        destroyLeaveSiteModal();
-        ga('send','event','external_link','close', href);
-    });
-    $('#offsite-modal','.leave-site-view').on('click','#forward-to', function(e){
-        destroyLeaveSiteModal();
-        ga('send','event','external_link','continue', href);
-    });
-    $('#offsite-modal','.leave-site-view').on('click','#forward-cancel', function(e){
-        e.preventDefault();
-        destroyLeaveSiteModal();
-        ga('send','event','external_link','cancel', href);
-    });
+
 
 }
 function destroyModal(){
@@ -688,6 +748,15 @@ function destroyVideoModal(){
     $('body').removeClass('hold-modal');
     $('#single-modal-content').text('');
     ga('send','event','video','close',videoTitle); //VIDEO CLOSE TRACKING
+}
+function destroyPhotoModal(){
+    $('#overlay').hide();
+    $('#modal').hide();
+    $('body').removeClass('photo-view');
+    $('#modal-wrapper').removeClass('photo');
+    $('body').removeClass('hold-modal');
+    $('#single-modal-content').text('');
+    //ga('send','event','video','close',videoTitle); //VIDEO CLOSE TRACKING
 }
 function destroyValuesModal(){
     $('#overlay').hide();
@@ -715,8 +784,8 @@ function destroyLeaveSiteModal(){
 
     $('#offsite-modal').hide();
 
-
     $('#modal-wrapper').removeClass('leave-site');
+
 }
 (function(window, undefined) {
     History.Adapter.bind(window,'statechange',function(){ // Note: We are using statechange instead of popstate
@@ -739,6 +808,24 @@ $(document).keyup(function(e) {
     if (e.keyCode == 27) $('#close-modal').click();   // esc
 });
 
+$(document).mouseup(function (e)
+{
+    var container = $("#modal",'.article-view');
+
+    if (!container.is(e.target) // if the target of the click isn't the container...
+        && container.has(e.target).length === 0) // ... nor a descendant of the container
+    {
+        $('#close-modal').click();
+    }
+});
+
+$(document).ready(function(){
+    if ($('#wrapper--values').length){
+        $('#modal-wrapper').addClass('values');
+        $('#culture-articles').hide();
+    }
+
+})
 $(document).ready(function(){
     $('#job-search').submit(function(e){
         e.preventDefault();

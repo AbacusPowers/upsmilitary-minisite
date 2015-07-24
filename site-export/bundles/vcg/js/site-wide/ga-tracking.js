@@ -1,7 +1,3 @@
-///**
-// * Created by justin on 7/1/15.
-// */
-
 //Debounce function to use anywhere.
 function debounce(fn, delay) {
     var timer = null;
@@ -25,7 +21,7 @@ $('.carousel-control.next').click(function(){
 $('.carousel-control.prev').click(function(){
     var forSlide = $(this).attr('for');
     var slideTitle = $('#' + forSlide + ' + .carousel-item .slider-text').text();
-    ga('send','event','slider','arrow_right',slideTitle);
+    ga('send','event','slider','arrow_left',slideTitle);
 });
 $('.carousel-bullet').click(function(){
     var forSlide = $(this).attr('for');
@@ -39,6 +35,7 @@ $(document).on('click','.slider-text-wrapper a',function(){
     var slideTitle = $(this).children('.slider-text').text();
     ga('send','event','slider','click', slideTitle);
 });
+
 //VIDEOS
 //this adds the youtube api
 //actual tracking code is loaded in modal.js (if modal) and video-tracking.js (if normal pageview)
@@ -67,6 +64,43 @@ var videoScrollDetect = function () {
     videoLastPos = videoCurrPos;
 }
 $('#video-list').closest('.scroll-container').scroll( debounce(videoScrollDetect, 500) );
+//var waypoints = $('.video-link').waypoint(function(direction) {
+//    var videoName = $(this);
+//    console.log(videoName);
+//}, {
+//    context: $('.scroll-container'),
+//    horizontal: true
+//});
+viewedVideos = [];
+function testViewedVideos(){
+    $('.video-link').each(function(index){
+        if(isScrolledIntoView($(this)) ) {
+            var videoTitle = $(this).children('.video-title').text();
+            //console.log(videoTitle + ' - ' + viewedVideos.indexOf(videoTitle))
+            if (viewedVideos.indexOf(videoTitle) === -1) {
+                viewedVideos.push(videoTitle);
+                var position = index + 1;
+                ga('send','event','video_carousel','shown_position_'+position,videoTitle);
+            }
+        }
+    });
+}
+$(document).ready(function(){
+    testViewedVideos();
+});
+function isScrolledIntoView(elem) {
+    var docViewLeft = elem.parent('.scroll-container').scrollLeft();
+    var docViewBottom = docViewLeft + $('.scroll-container').width();
+
+    var elemLeft = $(elem).offset().left;
+    var elemBottom = elemLeft + $(elem).width();
+
+    return ((elemBottom <= docViewBottom) && (elemLeft >= docViewLeft));
+}
+$('.scroll-container').scroll(function(){
+        testViewedVideos();
+    }
+);
 
 //CTA GO
 $('.cta-button--go').click(function(){
