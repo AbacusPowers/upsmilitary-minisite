@@ -1,0 +1,66 @@
+/*********************UPS VALUES MODAL*************************/
+.values {
+  #modal {
+    background: transparent;
+    border-left: none;
+    padding: 0;
+  }
+  img.logo {
+    display: none;
+  }
+  .values-row {
+    width: 100%;
+    padding: 2em;
+    @include clearfix;
+
+
+    &#values-header {
+      background-color: #351c15;
+      padding-right: 25%;
+      h1, p {
+        color: $ups-yellow;
+      }
+    }
+    .values-row__graphic {
+      width: 50%;
+      float: left;
+
+      svg {
+        max-height: 200px;
+      }
+    }
+    .values-row__content {
+      width: 50%;
+      float: left;
+      h1, p {
+        color: $white;
+      }
+
+    }
+    &#values-integrity {
+      background-color: #009cbd;
+    }
+    &#values-teamwork {
+      background-color: #40c1ac;
+    }
+    &#values-service {
+      background-color: #f68b20;
+    }
+    &#values-accountability {
+      background-color: #e1c8b0;
+      .values-row__content {
+        h1, p {
+          color: $black;
+        }
+
+      }
+    }
+    &#values-quality {
+      background-color: #351c15;
+    }
+    &#values-diversity {
+      background-color: #64a70b;
+    }
+
+  }
+}

@@ -52,7 +52,7 @@ function updateCookie(url){
     }
     $('.group-link').each(function(){
 
-        console.log('origin is: ' + siteOrigin);
+        //console.log('origin is: ' + siteOrigin);
         var linkUrl = siteOrigin + $(this).children('a.history-checkbox').attr('href'); //combine link path with siteOrigin
 
         if (searchStringInArray(linkUrl, historyArray) === -1) {
@@ -66,10 +66,10 @@ function updateCookie(url){
     $('.history-checkbox').each(function(){
 
         var linkUrl = siteOrigin + $(this).attr('href');
-        console.log(linkUrl);
+        //console.log(linkUrl);
         if (searchStringInArray(linkUrl, historyArray) === -1) {
             //nothing
-            console.log('not visited');
+            //console.log('not visited');
         } else if (currentUrl == linkUrl) {
             $(this).addClass($(this).attr('href') + 'in-history'); //ADD THE CLASS HERE
 
