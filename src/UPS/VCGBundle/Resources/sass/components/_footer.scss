@@ -12,7 +12,7 @@
   padding: ($base-spacing * 2) $gutter;
   // width: 100%;
   @include constrain-content;
-  border-bottom: 15em solid $grey--darker;
+  //border-bottom: 15em solid $grey--darker;
 
   .footer-logo {
     margin-bottom: 2em;
@@ -92,5 +92,26 @@
     padding-top: 10em;
     margin-bottom: -10em;
   }
+  #ups-footer {
+    p {
+      margin-top: 3em;
+      a {
+        margin: 0 0.3em 0 0;
+        color: $white;
 
+        &:after {
+          content: ' | ';
+          margin-left: 0.3em;
+        }
+        &:last-of-type {
+          &:after {
+            content: '';
+          }
+        }
+        &:hover {
+          color: $ups-grey-1;
+        }
+      }
+    }
+  }
 }

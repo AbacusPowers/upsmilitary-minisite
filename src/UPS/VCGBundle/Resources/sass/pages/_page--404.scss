@@ -1,9 +1,7 @@
 .header--404 {
   //height: 14em;
-  background: url(/bundles/vcg/images/bg-5b.png) bottom center no-repeat $grey90; //<--this photo is unnecessary
+  background: url('/bundles/vcg/images/bg-5b.png') bottom center no-repeat $grey90;
   background-size: cover;
-
-
 }
 .page--404 {
   text-align: center;

@@ -117,13 +117,17 @@ header {
 
         ul li {
             float: right;
-            color: $white70;
             padding-left: 1.8em;
             font-size: 1em;
             font-weight: 800;
             cursor: pointer;
+            a {
+                color: $white70;
+            }
             &:hover {
-                color: $ups-yellow;
+                a{
+                    color: $ups-yellow;
+                }
             }
         }
         p {
@@ -165,6 +169,10 @@ header {
             font-weight: 800;
             @include transition (all 0.2s ease-out);
 
+            a {
+                color: $white;
+
+            }
             i {
                 margin-right: 0.5em;
                 font-size: 1.1em;
@@ -181,8 +189,10 @@ header {
             &:hover {
                 background: rgba( $ups-yellow, 0.9);
                 background: $white70;
-                color: $white;
-                color: $ups-brown-1;
+                //color: $white;
+                a {
+                    color: $ups-brown-1;
+                }
                 // background:red;
             }
         }
