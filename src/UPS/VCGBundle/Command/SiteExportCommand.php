@@ -78,7 +78,7 @@ class SiteExportCommand extends ContainerAwareCommand
         '/events.html',
         '/job-map.html',
         '/jobs.html',
-        '/job-converter.html',
+        '/military-skills-translator.html',
         '/culture-benefits.html',
         '/culture-benefits/partners.html',
         '/culture-benefits/history.html',

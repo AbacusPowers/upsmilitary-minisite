@@ -5,7 +5,7 @@
     {% javascripts 
         '@VCGBundle/Resources/public/js/vendor/jquery-csv/src/jquery.csv.js'
         '@VCGBundle/Resources/public/js/vendor/jquery.selectBoxIt/src/javascripts/jquery.selectBoxIt.js'
-        '@VCGBundle/Resources/public/js/job-converter/form.js'
+        '@VCGBundle/Resources/public/js/military-skills-translator/form.js'
     %}
         <script src="{{ asset_url }}"></script>
     {% endjavascripts %}
@@ -16,14 +16,14 @@
     </div>
 {% endblock %}
 {% block breadcrumbs %}
-        <a href="{{ path('page',{'slug':'job-converter'}) }}">Military Skills Translator</a>
+        <a href="{{ path('page',{'slug':'military-skills-translator'}) }}">Military Skills Translator</a>
 {% endblock %}
 
 
 {% block page_content %}
         <!-- <div class="veteranGateway__liner"> -->
             
-        <div class="page--job-converter">
+        <div class="page--military-skills-translator">
             <div class="title-block">
                 <h1>Military Skills Translator</h1>
                 <p>
@@ -31,7 +31,7 @@
                 </p>
             </div>
             <nav class="nav--career-explorer">
-                <a href="{{ path('page',{'slug':'job-converter'}) }}" class="current-page">
+                <a href="{{ path('page',{'slug':'military-skills-translator'}) }}" class="current-page">
                     {#<img src="{{ asset('bundles/vcg/images/lightbulb.png') }}" class="" alt="">#}
                     {% include 'VCGBundle:Svgs:jobs-lightbulb.svg.twig' %}
                     <span class="caption">Skills</span>
@@ -54,8 +54,8 @@
                         <p class="instructions">Select your branch of service and fill in the code or name of your military specialty or rating.</p>
                         <p class="instructions"> We'll give you a list of jobs that could be great starting points for your career at UPS.</p>
 
-                        <form action="" name="job-converter" id="job-converter">
-                            <label class="job-converter-label" for="branch-of-service">1. Your Branch of Service</label>
+                        <form action="" name="military-skills-translator" id="military-skills-translator">
+                            <label class="military-skills-translator-label" for="branch-of-service">1. Your Branch of Service</label>
                             <select name="branch-of-service" id="branch-of-service">
                                 <option value="">Select Branch</option>
                                 <option value="Air Force">Air Force</option>
@@ -64,7 +64,7 @@
                                 <option value="Marines">Marines</option>
                                 <option value="Navy">Navy</option>
                             </select>
-                            <label class="job-converter-label disabled-input" for="job-code">2. Your Military Specialty/Rating Name or Code</label>
+                            <label class="military-skills-translator-label disabled-input" for="job-code">2. Your Military Specialty/Rating Name or Code</label>
                             <input type="text" name="job-code" id="job-code" class="disabled-input" placeholder="Specialty/Rating" disabled alt="" />
                            
                             <div class="error-spinner-wrapper">
@@ -101,9 +101,9 @@
                                     <p class=''>
                                         The package handler loads and unloads packages into or out of UPS vehicles. In this physical and fast-paced position, package handlers continually lift, lower and slide packages weighing between 25 and 70 pounds.
                                     </p>
-                                    <form class="job-search--job-converter">
+                                    <form class="job-search--military-skills-translator">
                                         <h4>Search to see openings for this job near you:</h4>
-                                        <label for="zip-code" class="job-converter-label">ZIP Code <span class="optional job-converter-label">(optional)</span></label>
+                                        <label for="zip-code" class="military-skills-translator-label">ZIP Code <span class="optional military-skills-translator-label">(optional)</span></label>
                                         <input name="zip-code" type="text" class="zip-code" placeholder="ZIP Code" />
                                         <input type="submit" value="Search" />
                                     </form>
@@ -123,9 +123,9 @@
                                     <p class=''>
                                         The driver helper performs the task of delivering and picking up UPS packages. This is a seasonal, part-time position with a wealth of opportunities.
                                     </p>
-                                    <form class="job-search--job-converter">
+                                    <form class="job-search--military-skills-translator">
                                         <h4>Search to see openings for this job near you:</h4>
-                                        <label for="zip-code" class="job-converter-label">ZIP Code <span class="optional job-converter-label">(optional)</span></label>
+                                        <label for="zip-code" class="military-skills-translator-label">ZIP Code <span class="optional military-skills-translator-label">(optional)</span></label>
                                         <input name="zip-code" type="text" class="zip-code" placeholder="ZIP Code" />
                                         <input type="submit" value="Search" />
                                     </form>
@@ -145,9 +145,9 @@
                                     <p class=''>
                                         Package delivery drivers must have excellent customer contact and driving skills, including the ability to operate a vehicle equipped with a standard (manual) transmission. As a UPS driver, you’re an ambassador to the community, to neighbors and to friends.
                                     </p>
-                                    <form class="job-search--job-converter">
+                                    <form class="job-search--military-skills-translator">
                                         <h4>Search to see openings for this job near you:</h4>
-                                        <label for="zip-code" class="job-converter-label">ZIP Code <span class="optional job-converter-label">(optional)</span></label>
+                                        <label for="zip-code" class="military-skills-translator-label">ZIP Code <span class="optional military-skills-translator-label">(optional)</span></label>
                                         <input name="zip-code" type="text" class="zip-code" placeholder="ZIP Code" />
                                         <input type="submit" value="Search" />
                                     </form>
@@ -167,9 +167,9 @@
                                     <p class=''>
                                         Feeder drivers play a critical role in UPS operations by transporting customers’ packages between our centers and hubs. This position involves driving a tractor-trailer unit to one or more destinations, and then returning to the original hub during the same work shift.
                                     </p>
-                                    <form class="job-search--job-converter">
+                                    <form class="job-search--military-skills-translator">
                                         <h4>Search to see openings for this job near you:</h4>
-                                        <label for="zip-code" class="job-converter-label">ZIP Code <span class="optional job-converter-label">(optional)</span></label>
+                                        <label for="zip-code" class="military-skills-translator-label">ZIP Code <span class="optional military-skills-translator-label">(optional)</span></label>
                                         <input name="zip-code" type="text" class="zip-code" placeholder="ZIP Code" />
                                         <input type="submit" value="Search" />
                                     </form>
@@ -190,9 +190,9 @@
                                     <p class=''>
                                         UPS mechanics ensure we’re able to meet and exceed all challenges, efficiently and effectively. UPS automotive mechanics must be at least 21 years old, be proficient at operating standard transmission vehicles, meet Department of Transportation driving requirements and meet other conditions as required by job assignment.
                                     </p>
-                                    <form class="job-search--job-converter">
+                                    <form class="job-search--military-skills-translator">
                                         <h4>Search to see openings for this job near you:</h4>
-                                        <label for="zip-code" class="job-converter-label">ZIP Code <span class="optional job-converter-label">(optional)</span></label>
+                                        <label for="zip-code" class="military-skills-translator-label">ZIP Code <span class="optional military-skills-translator-label">(optional)</span></label>
                                         <input name="zip-code" type="text" class="zip-code" placeholder="ZIP Code" />
                                         <input type="submit" value="Search" />
                                     </form>
@@ -213,9 +213,9 @@
                                     <p class=''>
                                         Facilities maintenance mechanics at UPS help maintain our infrastructure and facilities to ensure we’re able to meet and exceed all challenges. This position may require experience working with three-phase motors; electrical troubleshooting; conveyors; and arc, MIG and acetylene welding and cutting.
                                     </p>
-                                    <form class="job-search--job-converter">
+                                    <form class="job-search--military-skills-translator">
                                         <h4>Search to see openings for this job near you:</h4>
-                                        <label for="zip-code" class="job-converter-label">ZIP Code <span class="optional job-converter-label">(optional)</span></label>
+                                        <label for="zip-code" class="military-skills-translator-label">ZIP Code <span class="optional military-skills-translator-label">(optional)</span></label>
                                         <input name="zip-code" type="text" class="zip-code" placeholder="ZIP Code" />
                                         <input type="submit" value="Search" />
                                     </form>
@@ -236,9 +236,9 @@
                                     <p class=''>
                                         As a UPS sales representative, you can feel confident selling for a company that sets the standard in reliability. Employees in this position use available resources to learn customers’ businesses, identify business needs and position UPS’ small package products and services to meet their needs.
                                     </p>
-                                    <form class="job-search--job-converter">
+                                    <form class="job-search--military-skills-translator">
                                         <h4>Search to see openings for this job near you:</h4>
-                                        <label for="zip-code" class="job-converter-label">ZIP Code <span class="optional job-converter-label">(optional)</span></label>
+                                        <label for="zip-code" class="military-skills-translator-label">ZIP Code <span class="optional military-skills-translator-label">(optional)</span></label>
                                         <input name="zip-code" type="text" class="zip-code" placeholder="ZIP Code" />
                                         <input type="submit" value="Search" />
                                     </form>
@@ -259,9 +259,9 @@
                                     <p class=''>
                                         UPS warehouse associates participate in a wide range of daily operations, including loading and unloading, inbound processing, scanning orders, and inventory control. This position may require you to operate powered equipment such as a forklift or hydraulic jack lift to perform duties.
                                     </p>
-                                    <form class="job-search--job-converter">
+                                    <form class="job-search--military-skills-translator">
                                         <h4>Search to see openings for this job near you:</h4>
-                                        <label for="zip-code" class="job-converter-label">ZIP Code <span class="optional job-converter-label">(optional)</span></label>
+                                        <label for="zip-code" class="military-skills-translator-label">ZIP Code <span class="optional military-skills-translator-label">(optional)</span></label>
                                         <input name="zip-code" type="text" class="zip-code" placeholder="ZIP Code" />
                                         <input type="submit" value="Search" />
                                     </form>
@@ -282,9 +282,9 @@
                                     <p class=''>
                                         UPS OTR drivers operate tractor-trailers for the over-the-road delivery of freight to two or more locations. These drivers are typically on the road seven to 10 days at a time and normally pull 53-foot van trailers. OTR drivers must pass a Department of Transportation physical and UPS Freight road test, plus meet other conditions as required by job assignment.
                                     </p>
-                                    <form class="job-search--job-converter">
+                                    <form class="job-search--military-skills-translator">
                                         <h4>Search to see openings for this job near you:</h4>
-                                        <label for="zip-code" class="job-converter-label">ZIP Code <span class="optional job-converter-label">(optional)</span></label>
+                                        <label for="zip-code" class="military-skills-translator-label">ZIP Code <span class="optional military-skills-translator-label">(optional)</span></label>
                                         <input name="zip-code" type="text" class="zip-code" placeholder="ZIP Code" />
                                         <input type="submit" value="Search" />
                                     </form>
@@ -305,9 +305,9 @@
                                     <p class=''>
                                         The part-time operations supervisor provides innovative and effective leadership while directly supervising seven to 10 part-time package handlers. Employees in this part-time position train, develop and hold their work groups responsible for safety, production and attendance.
                                     </p>
-                                    <form class="job-search--job-converter">
+                                    <form class="job-search--military-skills-translator">
                                         <h4>Search to see openings for this job near you:</h4>
-                                        <label for="zip-code" class="job-converter-label">ZIP Code <span class="optional job-converter-label">(optional)</span></label>
+                                        <label for="zip-code" class="military-skills-translator-label">ZIP Code <span class="optional military-skills-translator-label">(optional)</span></label>
                                         <input name="zip-code" type="text" class="zip-code" placeholder="ZIP Code" />
                                         <input type="submit" value="Search" />
                                     </form>
@@ -328,9 +328,9 @@
                                     <p class=''>
                                         At UPS, our business systems analysts serve as liaisons between the business community and UPS Information Services. This position contributes to the identification of solutions, eliciting and developing functional requirements to meet the needs of the business in a date-driven business environment.
                                     </p>
-                                    <form class="job-search--job-converter">
+                                    <form class="job-search--military-skills-translator">
                                         <h4>Search to see openings for this job near you:</h4>
-                                        <label for="zip-code" class="job-converter-label">ZIP Code <span class="optional job-converter-label">(optional)</span></label>
+                                        <label for="zip-code" class="military-skills-translator-label">ZIP Code <span class="optional military-skills-translator-label">(optional)</span></label>
                                         <input name="zip-code" type="text" class="zip-code" placeholder="ZIP Code" />
                                         <input type="submit" value="Search" />
                                     </form>
