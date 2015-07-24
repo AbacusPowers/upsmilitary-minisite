@@ -1,9 +1,8 @@
-<div id="grid-item--events" class="grid-item grid-item-big">
+<div id="grid-item--events" class="grid-item">
     {% include 'VCGBundle:Svgs:calendar.svg.twig' %}
     <h1>Events</h1>
     <div class="scroll-indicator--h">
         <span class="scroll-indicator__text">SCROLL</span>
-        <!-- <i class="fa fa-long-arrow-left"></i> -->
         <i class="fa fa-arrows-h"></i>
     </div>
     <div class="scroll-container">
@@ -122,5 +121,5 @@
         </div>
     </div>
 
-    <a href="{{ path('page',{'slug':'events'}) }}" class="button black all-events-link ">See all Events</a>
+    <a href="{{ path('page',{'slug':'events'}) }}" class="block-link black all-events-link ">See all Events</a>
 </div>

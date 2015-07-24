@@ -7,7 +7,7 @@
     line-height: 1.6;
     padding: 0;
     position: relative;
-    // min-height: 75px;
+
     &:before {
       @include pseudo-block($vertical-thread-width);
       left: 0;
@@ -24,25 +24,11 @@
     }
   }
 
-  .expander__wrapper:nth-child(odd) {
-    // background: $white15;
-    // border-left: 10px solid $ups-yellow;
-
-  }
-
-  .expander__wrapper:nth-child(even) {
-    // background: $white15;
-    // border-left: 10px solid $ups-yellow;
-
-  }
-
   i {
     display: block;
   }
 
   a.button{
-//    height: 78px;
-    // min-height: 75px;
     width: 100%;
     color: $grey70;
     cursor: pointer;
@@ -63,22 +49,12 @@
         height: .9em;
         right: 1rem;
         top: calc(50% - 0.45em);
-//        padding: 1.5rem;
     }
-  }
-
-  a:nth-child(odd) {    
-    // background: $black05;
-  }
-
-  a.hide-button{
-    /*z-index: -1;*/
-//    display: none;
   }
 
   h2.expander__parent {
     margin-left: 1rem;
-    margin-right: 80px;
+    margin-right: 4em;
     font-weight: 700;
     padding-bottom: 0;
 
@@ -87,16 +63,12 @@
     }
   }
   
-
-
   .expander__child {
     position: relative;
   }
 
   .expander__child p{
     margin: 1em;
-    // margin-left: 1em;
-    // margin-right: 1em;
 
     &:last-of-type {
       padding-bottom: 1em;
@@ -138,11 +110,6 @@
   .faq.expander__parent:before{ /*for use with FAQ's*/
     content: 'Q:';
   }
-
-  // .expander__child:before{
-  //   content: 'A:';
-  // }
-
 
   .video {
     background: $grey30;
@@ -195,7 +162,7 @@
     content: none;
   }
 
-  .component--expander .expander__wrapper{
+  .component--expander .expander__wrapper {
     margin-left: -2em;
     background: $white10;
     border-bottom: none;
@@ -241,16 +208,12 @@
 
     }
 
-
-
     p {
       @include transition (all 0.15s ease-out);
       margin: 0 0 0 $vertical-thread-width;
       padding: 1em 0 1em 4.3rem;
       border-bottom: 1px dotted $black;
-      padding-right: 7rem;
-
-        
+      padding-right: 7rem;   
 
       .breakpoint-small & {
         padding-left: 1.5rem;
@@ -263,7 +226,6 @@
         }
     }
     
-
     p + a.search-button {
       position: absolute;
       right: 0;
@@ -307,87 +269,57 @@
   }
 }
 
-
-//THIN EXPANDER
-.component--expander.expander__thin {
-  margin-bottom: 3em;
-  border-top: 1px solid rgba( $ups-grey-1, 0.3);
-
-  .expander__wrapper {
-    min-height: 0;
-    margin-top: 0;
-
-    ul li {
-      display: inline-block;
-    }
-
-    &:last-child {
-      margin-bottom: 30em;
-    }
-  }
-
-  h2 {
-    margin-right: 0;
-  }
-
-  .button {
-//    height: 5em;
-    min-height: 35px;
-    padding-top: 1rem;
-    i.fa {
-//      padding: 0 1em 0 0;
-//      line-height: 2.5em;
-    }
-  }
-
-  .component--expander>.expander__wrapper.open-expander {
-    background: $white05;
-  }
-
-  .component--expander {
-    border-top: none;
-    
-    .expander__wrapper {
-      margin-bottom: 0;
-
-      & .hidden-part {
-            // border-bottom: 1px solid $black;
-
-      }
-    }
-
-  }
-}
-
-
 /////Expanders in Articles/////////////////
 
 .article {
 
-    & .component--expander .expander__wrapper:before {
-        display: none;
+  .component--expander .expander__wrapper:before {
+      display: none;
+  }
+
+  .component--expander .expander__wrapper {
+      padding-left: 0;
+
+      i.fa-circle {
+          padding-top: 1em;
+          margin-right: 1.4em;
+          color: $ups-yellow;
+          float: left;
+          font-size: 1.1em;
+      }
+  }
+
+  .component--expander .expander__child p {
+      margin-left: 0;
+  }
+
+  .component--expander--faq {
+    margin-top: 2em;
+    
+    a.button {
+      padding-left: 1rem;
     }
 
-    .component--expander .expander__wrapper {
+    .hidden-part {
+      padding-left: 1em;
+    }
 
-        padding-left: 0;
-
-        i.fa-circle {
-            padding-top: 1em;
-            margin-right: 1.4em;
-            color: $ups-yellow;
-            float: left;
-            font-size: 1.1em;
+    iframe {
+        width: calc( 100% - 1em );
+        margin-top: 1px;
+        
+        .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & {
         }
-
-        h2 {
-            // padding-top: 0.75em;
-            // text-transform: capitalize;
-        }
-
     }
 
-    .component--expander .expander__child p {
-        margin-left: 0;
+    h2.expander__parent {
+      margin-left: 0;
+      margin-top: 0;
+      margin-bottom: 0;
+
+      .breakpoint-small & {
+        font-size: 1em;
+      }
     }
+  }
 }

@@ -1,4 +1,4 @@
-<div id="rid-item--transition-guide" class="left-column">
+<div id="grid-item--transition-guide" class="left-column">
     <a href="{{ path('page', {'slug': 'transition-guide'}) }}" class="guide-link">
         {% include 'VCGBundle:Svgs:document.svg.twig' %}
         <h1>Career Transition Guide</h1>
@@ -13,20 +13,13 @@
         <a class="block-link black" href="{{path('culture_benefits_page',{'slug':'partners'}) }}"><span></span>Partner Programs & Organizations</a>
     </div>
 
-    <!-- <a href="javascript:void(0)">
-        <div class="app-download-wrapper">
-            <h2>Download the Transition Guide App</h2>
-            <p>A Guide for family, career and personal issues when transitioning to civilian life. Begin using it as early as nine months before the end of your service.</p>
-            <img class="app-hand" src="{{ asset('bundles/vcg/images/hand-2.png') }}" alt="">
-            <div class="badge-wrapper">
-                <img class="badge--apple" src="{{ asset('bundles/vcg/images/Download_on_the_App_Store_Badge_US-UK_135x40.svg') }}" alt="">
-                {% include 'VCGBundle:Svgs:android-app.svg.twig' %}
-                {#<img class="badge--google" alt="Android app on Google Play" src="https://developer.android.com/images/brand/en_app_rgb_wo_45.png" />#}
-            </div>
-            
+    <a href="javascript:void(0)" class="app-download-wrapper">
+        <h2>Download the Transition Guide App</h2>
+        <p>A Guide for family, career and personal issues when transitioning to civilian life. Begin using it as early as nine months before the end of your service.</p>
+        <img class="app-hand" src="{{ asset('bundles/vcg/images/hand-2.png') }}" alt="">
+        <div class="badge-wrapper">
+            <img class="badge--apple" src="{{ asset('bundles/vcg/images/apple-badge-no-outline.svg') }}" alt="">
+            {% include 'VCGBundle:Svgs:android-app.svg.twig' %}
         </div>    
-    </a> -->
-    
-    
-    
+    </a>
 </div>

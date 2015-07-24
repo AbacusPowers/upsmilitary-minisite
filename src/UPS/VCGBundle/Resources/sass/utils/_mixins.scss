@@ -50,17 +50,17 @@
 }
 
 @mixin constrain-content{
-  .breakpoint-medium & {
-      max-width: $max-width--medium;
-      margin-left: auto;
-      margin-right: auto;
-  }
+  // .breakpoint-medium & {
+  //     max-width: $max-width--medium;
+  //     margin-left: auto;
+  //     margin-right: auto;
+  // }
 
-  .breakpoint-large & {
-      max-width: $max-width--large;
-      margin-left: auto;
-      margin-right: auto;
-  }
+  // .breakpoint-large & {
+  //     max-width: $max-width--large;
+  //     margin-left: auto;
+  //     margin-right: auto;
+  // }
 
   .breakpoint-wide & {
       max-width: $max-width--wide;
@@ -236,5 +236,17 @@
         padding-bottom: 1.5em;
       }
   }
+}
+
+@mixin transition--standard {
+  @include transition (all 0.15s ease-out);
+}
+
+@mixin transition--smooth {
+  @include transition (all 0.15s ease);
+}
+
+@mixin link--yellow {
+  color: $ups-yellow;
 }
 

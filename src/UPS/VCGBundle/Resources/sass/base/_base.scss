@@ -60,7 +60,6 @@ a:visited {
 }
 
 a:hover {
-    // background-color: #eee;
     color: $grey60;
 }
 
@@ -71,10 +70,14 @@ a:active {
     display: none;
 }
 
-// .grid-icon {
-//   @include site-icon;
-// }
+.grid-icon {
+  @include site-icon;
+}
 
 .text--bold {
     font-weight: 800;
+}
+
+.block-link {
+    @include block-link;
 }

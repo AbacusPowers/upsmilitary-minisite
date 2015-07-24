@@ -1,0 +1,105 @@
+// Styles for the two-item featured-videos grid cell on the home page
+#grid-item--videos {
+    .video-link-wrapper {
+      
+        span {
+            @include transition--smooth;
+            background: $black60;
+            bottom: 0;
+            color: $ups-yellow;
+            display: block;
+            font-size: 0.8em;
+            font-weight: 800;
+            height: 25%;
+            overflow: hidden;
+            padding-left: 0.8em;
+            padding-top: 0.4em;
+            position: absolute;
+            width: 100%;
+        }
+
+        a:hover span {
+            height: calc( 25% + 0.6rem );
+            background: $black80;
+
+        }
+
+        a:before {
+            @include pseudo-block(100%);
+            @include transition (all 0.15s ease-out);
+            background: $black10;
+        }
+
+        a:hover:before {
+            @include transition (all 0.15s ease-out);
+            background: none;
+        }
+
+        .video-link--style i {
+            color: rgba( $ups-yellow, 0.9 );
+            display: inline-block;
+            font-size: 1.5em;
+            position: absolute;
+            right: 0.6rem;
+            top: 0.5rem;
+        }  
+    }
+}
+
+
+// Styles for the other video sets on transition guide page, jobs page, and culture page
+#video-list {
+
+  a {
+      position: relative;
+      float: left;
+      margin-right: 1px;
+      line-height: 0;
+  }
+
+  a.video-link:before {
+    @include pseudo-block(100%);
+    @include transition--smooth;
+    background: $black10;
+  }
+
+  a.video-link:hover:before {
+    background: none;
+  }
+
+  span.video-title {
+    @include transition--smooth;
+    background: $black60;
+    bottom: 0;
+    color: $ups-yellow;
+    display: block;
+    font-size: 0.8em;
+    font-weight: 800;
+    height: 25%;
+    line-height: 1;
+    overflow: hidden;
+    padding-left: 0.8em;
+    padding-top: 0.4em;
+    position: absolute;
+    width: 100%;
+  }
+
+  a.video-link:hover > span.video-title {
+    background: $black80;
+    height: calc( 25% + 0.6rem );
+  }
+
+  img.video-thumb {
+      width: 200px;
+      height: 200px;
+  }
+
+  .video-link--style i {
+      color: rgba( $ups-yellow, 0.9 );
+      display: inline-block;
+      font-size: 1.5em;
+      position: absolute;
+      right: 0.6rem;
+      top: 0.5rem;
+  }  
+}

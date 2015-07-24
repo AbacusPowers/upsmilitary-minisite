@@ -3,7 +3,6 @@
 .flex-wrapper {
     @include grid-typography;
     display: flex;
-    display: flex;
     display: -ms-flexbox;
     flex-wrap: wrap;
     -ms-flex-wrap: wrap;
@@ -14,23 +13,15 @@
     }
 
     a {
+        position: relative;
         display: block;
     }
 }
 
 .left-column { /*full height left hand column inside flex wrapper*/
     background: $grey--dark;
-    width: 33.34%;
-    // padding-left: 1.5rem;
-    // padding-top: 1.5rem;
+    width: 100%;
     
-    a.guide-link {
-        @include transition (all 0.15s ease-out);
-        padding-top: 1.5rem;
-        padding-left: 1.5rem;
-        min-height: 14.8em;
-    }
-
     & > a:hover {
         background: $grey--darker;
     }
@@ -45,12 +36,12 @@
         width: 100%;
     }
 
-    .breakpoint-small & {
-        width: 100%;
-    }
-
     .breakpoint-medium & {
         width: 50%;
+    }
+
+    .breakpoint-large &, .breakpoint-wide & {
+        width: 33.34%;
     }
 }
 
@@ -64,32 +55,33 @@
 }
 
 .grid-area--left-column { /*For when the grid area is next to a separate full height left column*/
-    width: 66.66%;
-
-    .grid-item {
-        width: 50%;
-        .breakpoint-small & {
-            width: 100%;
-        }
-
-        .breakpoint-medium & {
-            width: 100%;
-        }
-    }
-
-    .breakpoint-small & {
-        width: 100%;
-    }
+    width: 100%;
 
     .breakpoint-medium & {
         width: 50%;
     }
+
+    .breakpoint-large &, .breakpoint-wide & {
+        width: 66.66%;
+    }
+
+    .grid-item {
+        width: 100%;
+
+        .breakpoint-medium & {
+            width: 100%;
+        }
+
+        .breakpoint-large &, .breakpoint-wide & {
+            width: 50%;
+        }
+    }
 }
 
 .grid-item {
-    width: 33.33%;
+    width: 100%;
     display: block;
-    border-left: 1px solid $ups-yellow;
+    // border-left: 1px solid $ups-yellow;
     border-bottom: 1px solid $ups-yellow;
     flex-basis: 1;
     flex-grow: 1;
@@ -98,13 +90,14 @@
     padding-top: 1.5rem;
     position: relative;
 
-    .breakpoint-small &{
-        width: 100%;
-        border-left: none;
-    }
-
     .breakpoint-medium & {
         width: 50%;
+        border-left: 1px solid $ups-yellow;
+    }
+
+    .breakpoint-large &, .breakpoint-wide & {
+        width: 33%;
+        border-left: 1px solid $ups-yellow;
     }
     
     &:before {
@@ -134,43 +127,33 @@ a.grid-item:hover {
 }
 
 
-// Universal styles
-
-// .grid-item:nth-last-child(2) {
-//     border-bottom: 0px;
-// }
+// Universal styles /////////////////////////////////////
 
 .grid-item:nth-last-child(1) {
-    border-bottom: 0px;
+    border-bottom: none;
+}
+
+.grid-item:nth-last-child(2) {
+    .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & {
+        border-bottom: none;
+    }
 }
 
 
 // Page specific Styles
 
 .page--home {
-    #grid-item--videos .link-wrapper {
-        margin-left: -1.5em;
-        margin-top: 1.2em;
 
-        a {
-            width: calc( 50% - 1px );
-            display: inline-block;
-            float: left;
-            margin-right: 1px;
-
-            img {
-                width: 100%;
-                display: block;
-            }
-        }
-    }
-
-    .grid-item:nth-child(3) {
+    .grid-item:nth-child(3) { /*Featured videos section*/
         width: 100%;
     }
 
     .breakpoint-medium & .grid-item:nth-last-child(2){
         border-bottom: 1px solid $ups-yellow;
+    }
+
+    #grid-item--events { /*Needs to stay in in case events section is ever included*/
+        width: 100%;
     }
 }
 
@@ -191,6 +174,10 @@ a.grid-item:hover {
 
     .grid-item:nth-child(3) {
         width: 100%;
+    }
+
+    .grid-item:nth-last-child(2) {
+        border-bottom: 1px solid $ups-yellow;
     }
 }
 
@@ -221,7 +208,7 @@ a.grid-item:hover {
     }
 
     .breakpoint-medium & .grid-item:nth-last-child(1) {
-        border-bottom: 1px solid $ups-yellow;
+        // border-bottom: 1px solid $ups-yellow;
     }
 }
 

@@ -1,154 +1,99 @@
-.page .page--ddform214 {
-
+.page--ddform214 {
     #side--a {
+        @include grid-typography;
         position: relative;
 
-        .intro {  
-            @include grid-typography;
+        .intro {
             padding: 1.5em;
-        }
+            padding-bottom: 2em;
 
-        .grid-icon {
-            @include site-icon;
+            .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & {
+                padding-bottom: 1.5em;
+            }
+
+            .dd214-download {
+                @include link--yellow;
+                position: absolute;
+                font-size: 0.8em;
+                margin-top: 0.5em;
+
+                .breakpoint-small & {
+                    right: 1rem;
+                    bottom: 0.5rem;
+                }
+
+                &:hover {
+                  color: $grey60;
+                }
+            }
+        } 
+
+        // #form-guide-image {
+        //     & > g {
+        //     opacity: 0;
+        //         &#Frame {
+        //             opacity: 1;
+        //             display: block;
+        //         }
+        //     }       
+        // }
+
+        section.dd-form214 {
+            display: none;
+            margin-top: 2em;
+            text-align: center;
+        
+            .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & {
+                display: block;
+            }
+            
+            h2 {
+                color: $ups-yellow;
+            }
+
+            svg {
+                width: 20em;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;            
+                background: white;
+                margin-bottom: 2rem;
+
+                a.svg-target {
+                    cursor: pointer;
+                }
+            }
         }
 
     }
 
     #side--b {
+        h3 {
+            color: $ups-yellow;
+            margin-left: 1rem;
+        }
+
         p {
             font-size: 1em;
             line-height: 1.6;
         }
-    }
 
-    .expander__wrapper:before{
-
-        .breakpoint-small & {
-            // content: none;
+        a {
+            @include link--yellow;
         }
-    }
-    
-    .intro {
-        // padding: 1.5em 3em 1.5em 0em;
 
-        img {
-            @include position(absolute, 0 null null 1em );
-            @include size(6em);
-            border-radius: 50%;
-            border: 1px $ups-yellow solid;
-            padding: 1.3em;
-            margin-top: -1.2em;
-            
+        img, svg {
+            width: 4em;
+        }
+
+        .component--expander {
             .breakpoint-small & {
-                position: relative;
-                margin-left: calc( 50% - 4em );
-                margin-top: 1.5em;
-                margin-bottom: 1em;
-                @include size(6em);
-                padding: 1.3em;
-            }
-
-            .breakpoint-medium & {
-                @include position(absolute, 5em null null 1em );
+                border-top: 1px solid $white30;
             }
         }
 
-
-        h1 {
-            // margin-left: 4.5em;
-            color: $white;
-            // margin-bottom: 2.5em;
-
-            // .breakpoint-small & {
-            //     margin-left: 3rem;
-            //     font-size: 1.2em;
-            // }
-
-            // .breakpoint-medium & {
-            //     margin-left: 6.5em;
-            //     margin-top: -1em;
-            //     margin-bottom: 3em;
-            // }
-        } 
-
-        .breakpoint-small & {
-            // p{
-            //     margin: 2em;
-            // }
-
+        .component--expander .expander__child p img {
+            margin-bottom: 0;
         }
-
-      .dd214-download {
-        color: $ups-yellow;
-        position: absolute;
-        font-size: 0.8em;
-        margin-top: 0.5em;
-        .breakpoint-small & {
-            right: 1rem;
-        }
-
-        &:hover {
-          color: $grey60;
-        }
-      }
-    }
-    
-
-    section.dd-form214 {
-        display: none;
-        margin-top: 2em;
-        text-align: center;
-        
-        
-        .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & {
-            display: block;
-        }
-        
-        h2 {
-            color: $ups-yellow;
-        }
-
-        svg {
-            width: 20em;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            
-            /*padding: 1em;*/
-            background: white;
-            margin-bottom: 2rem;
-
-            a.svg-target {
-                cursor: pointer;
-            }
-        }
-    }
-
-    .component--expander {
-        .breakpoint-small & {
-            border-top: 1px solid $white30;
-        }
-    }
-
-    .component--expander .expander__child p img {
-        margin-bottom: 0;
-    }
-
-    h3 {
-        color: $ups-yellow;
-        margin-left: 1rem;
-    }
-
-
-    #form-guide-image {
-        
-        & > g {
-            opacity: 0;
-            &#Frame {
-                opacity: 1;
-                display: block;
-            }
-        }
-        
     }
 }

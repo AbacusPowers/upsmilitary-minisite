@@ -1,5 +1,8 @@
+// Default styles here. See page specific areas for additional styles
+
 .scroll-indicator--h {
     position: absolute;
+    right: 0;
 
     .scroll-indicator__text {
         width: 100%;
@@ -9,20 +12,6 @@
         font-size: 0.7em;
     }
 
-    i.fa-long-arrow-left {  
-        color: $ups-yellow;
-        right: calc( 50% + 1.6rem );
-        position: absolute;
-        margin-top: -1.0em;
-    }
-
-    i.fa-long-arrow-right {
-        color: $ups-yellow;
-        left: calc( 50% + 1.6rem );
-        position: absolute;
-        margin-top: -1.0em;
-    }
-
      i.fa-arrows-h {
         color: $ups-yellow;
         left: -1.3em;
@@ -30,3 +19,4 @@
         margin-top: -1.0em;
     }
 }
+

@@ -19,42 +19,10 @@
 
 
 .veteranGateway__liner {
+    @include constrain-content;
     position: relative;
-
-    .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & {
-        // padding-top: 9.5em;
-    }
-
-     .breakpoint-small & {
-        // max-width: 768px;
-        margin-left: auto;
-        margin-right: auto;
-        padding-left: 0;
-    }
-
-    .breakpoint-medium & {
-        max-width: $max-width--medium;
-        // background: yellow;
-        margin-left: auto;
-        margin-right: auto;
-        padding-left: 0;
-    }
-
-    .breakpoint-large & {
-        max-width: $max-width--large;
-        // background: green;
-        margin-left: auto;
-        margin-right: auto;
-        padding-left: 0;
-    }
-
-    .breakpoint-wide & {
-        max-width: $max-width--wide;
-        // background: blue;
-        margin-left: auto;
-        margin-right: auto;
-        padding-left: 0;
-    }
+    
+  
 
     .title-block {
         background: #222;
@@ -183,9 +151,9 @@
 .page {
     @include clearfix;
 
-    .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & {
-        // margin-top: -5em;
-    }
+    // .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & {
+    //     // margin-top: -5em;
+    // }
 
     #side--a {
         z-index: 2;
@@ -198,18 +166,10 @@
     }
     
     #side--a, #side--b {
-        // float: left;
-        // width: 50%;
         .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & {
             float: left;
             width: 50%;
         }
-        // -webkit-transition: width 1.5s ease-out;
-        // transition: width 1.5s ease-out;
-                
-                // &.full-width {
-                //     width: 100%;
-                // }
     }
 
     .intro>i {
@@ -224,8 +184,6 @@
         position: relative;
 
         .intro {
-            /*width: 50%;*/
-            /*position: absolute;*/
             padding: 0;
             padding: 0 2.5em 0 2.7em;
 
@@ -323,14 +281,37 @@
 
                 &:nth-child(1) {
                    background: $black60;
+                   // &:before {
+                   //  @include pseudo-block(5em);
+                   //  top: 100%;
+                   //  background: rgba( $white, 0.06 );
+                   //  height: 50em;
+                   //  z-index: 1;
+                   // }
                 }
 
                 &:nth-child(2) {
                    background: $black40;
+                   //  &:before {
+                   //  @include pseudo-block(5em);
+                   //  top: 100%;
+                   //  background: rgba( $white, 0.04 );
+                   //  height: 50em;
+                   //  z-index: 1;
+
+                   // }
                 }
 
                 &:nth-child(3) {
                    background: $black20;
+
+                   // &:before {
+                   //  @include pseudo-block(5em);
+                   //  top: 100%;
+                   //  background: rgba( $white, 0.02 );
+                   //  height: 50em;
+                   //  z-index: 1;
+                   // }
                 }
 
                 &.current-page:after {
