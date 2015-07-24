@@ -71,7 +71,20 @@ $(document)
         } else {
             originType = 'article';
         }
+        if ($('#modal-wrapper').hasClass('values')){
+            $('#modal-wrapper').removeClass('values');
+            $('#culture-articles').show();
+        }
         getModalContent(href, true, originType);
+        setTimeout(function(){
+            if ($('#wrapper--values').length){
+                $('#modal-wrapper').addClass('values');
+                $('#culture-articles').hide();
+                console.log('yes');
+            } else {
+                console.log('no');
+            }
+        }, 300);
     })
     .on('click', '#next-article', function (e) {
         e.preventDefault();
@@ -85,7 +98,20 @@ $(document)
         } else {
             originType = 'article';
         }
+        if ($('#modal-wrapper').hasClass('values')){
+            $('#modal-wrapper').removeClass('values');
+            $('#culture-articles').show();
+        }
         getModalContent(href, true, originType);
+        setTimeout(function(){
+            if ($('#wrapper--values').length){
+                $('#modal-wrapper').addClass('values');
+                $('#culture-articles').hide();
+                console.log('yes');
+            } else {
+                console.log('no');
+            }
+        }, 300);
     })
     .on('click','#modal a.external',function(e){
         e.preventDefault();
@@ -273,6 +299,7 @@ function showValuesModal(f){
     $('#modal').show();
     $('body').addClass('values-view');
     $('#modal-wrapper').addClass('values');
+    $('#culture-articles').hide();
     //console.log('done');
 }
 function svgSize(){ //call this if jquery sizing is necessary
@@ -386,3 +413,11 @@ $(document).mouseup(function (e)
         $('#close-modal').click();
     }
 });
+
+$(document).ready(function(){
+    if ($('#wrapper--values').length){
+        $('#modal-wrapper').addClass('values');
+        $('#culture-articles').hide();
+    }
+
+})
