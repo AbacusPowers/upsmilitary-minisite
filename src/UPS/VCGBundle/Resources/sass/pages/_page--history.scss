@@ -3,8 +3,30 @@
 
     .left-column.history-intro {
       padding: 1.5rem;
+      background: transparent;
+      margin: 0.5em 0;
       .breakpoint-medium & {
         width: 100%;
+      }
+      .breakpoint-large &, .breakpoint-wide & {
+        border-right: 1px solid $ups-yellow;
+      }
+      &:before, &:after {
+        content: '';
+        display: block;
+        height: 2em;
+        position: absolute;
+        width: 0.6em;
+        z-index: 1000;
+        width: 1px;
+        right: -1px;
+        background: #101010;
+      }
+      &:before {
+        top: 0;
+      }
+      &:after {
+        bottom: 0;
       }
     }
     .photo-grid {
