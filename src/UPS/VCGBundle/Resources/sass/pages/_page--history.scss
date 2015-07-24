@@ -1,0 +1,60 @@
+.page--history{
+  .flex-wrapper {
+
+    .left-column.history-intro {
+      padding: 1.5rem;
+      .breakpoint-medium & {
+        width: 100%;
+      }
+    }
+    .photo-grid {
+      width: 100%;
+      padding: 1.5rem;
+      .breakpoint-large &, .breakpoint-wide & {
+        width: 66%;
+      }
+
+        div {
+          &.photo-grid-item {
+            width: 33.33%;
+            float:left;
+//            display: block;
+            flex-basis: 1;
+            flex-grow: 1;
+
+            padding-left: 1.5rem;
+            padding-top: 1.5rem;
+            text-align: center;
+//            position: relative;
+            .breakpoint-large &, .breakpoint-wide & {
+              &:nth-child(3n+1) {
+                clear: both;
+              }
+            }
+
+            .breakpoint-small & {
+              width: 100%;
+              border-left: none;
+
+            }
+
+            .breakpoint-medium & {
+              width: 50%;
+
+              &:nth-child(2n+1) {
+                clear: both;
+              }
+
+            }
+            img {
+//              width: 100%;
+            }
+
+          }
+        }
+
+    }
+
+  }
+
+  }

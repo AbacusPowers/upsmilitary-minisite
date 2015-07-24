@@ -11,46 +11,55 @@
 {% endblock %}
 
 {% block page_content %}
-                <div class="veteranGateway__liner">
-                  
-                  <div class="page--history">
-                    <div class="title-block">
-                        <h1>UPS History</h1>
-                        <p>Lorem ipsum dolor sit amet.</p>
-                    </div>
-                    <div class="flex-wrapper">
-                      <div class="grid-area">
-                        <a href="{{ path('history_photo',{'slug':'1'}) }}" class="grid-item photo-link">
-                          {% include 'VCGBundle:Svgs:handshake.svg.twig' %}
-                          <h1>Photo goes here</h1>
-                          <img src="{{ asset('bundles/vcg/images/history/1_thumb.jpg') }}" class="history-thumb" />
-                        </a>
-    
-                        <a href="{{ path('history_photo',{'slug':'2'}) }}" class="grid-item photo-link">
-                          {% include 'VCGBundle:Svgs:handshake.svg.twig' %}
-                          <h1>Photo goes here</h1>
-                          <img src="{{ asset('bundles/vcg/images/history/2_thumb.jpg') }}" class="history-thumb" />
-                        </a>
-                        <a href="{{ path('history_photo',{'slug':'3'}) }}" class="grid-item photo-link">
-                          {% include 'VCGBundle:Svgs:handshake.svg.twig' %}
-                          <h1>Photo goes here</h1>
-                          <img src="{{ asset('bundles/vcg/images/history/3_thumb.jpg') }}" class="history-thumb" />
-                        </a>
-                        <a href="javascript:void(0)" class="grid-item">
-                          {% include 'VCGBundle:Svgs:handshake.svg.twig' %}
-                          <h1>Photo goes here</h1>
-                        </a>
-                        <a href="javascript:void(0)" class="grid-item">
-                          {% include 'VCGBundle:Svgs:handshake.svg.twig' %}
-                          <h1>Photo goes here</h1>
-                        </a>
-                        <a href="javascript:void(0)" class="grid-item">
-                          {% include 'VCGBundle:Svgs:handshake.svg.twig' %}
-                          <h1>Photo goes here</h1>
-                        </a>
-                      </div>
-                    </div>
-                </div>           
+    <div class="veteranGateway__liner">
+        <div class="page--history">
+            <div class="title-block">
+                <h1>UPS History</h1>
+                <p>Lorem ipsum dolor sit amet.</p>
             </div>
-          </div>
+            <div class="flex-wrapper">
+                <div class="history-intro left-column">
+                    {% include 'VCGBundle:Svgs:document.svg.twig' %}
+
+                    <h1>Intro Section</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, aspernatur dolorem explicabo fugit maxime nesciunt placeat quasi ratione totam velit! A aliquam dignissimos esse exercitationem explicabo id molestiae quasi repellendus!
+                    </p>
+                </div>
+
+                <div class="photo-grid">
+                        <div class="photo-grid-item">
+                            <a href="{{ path('history_photo',{'slug':'1'}) }}" class="photo-link">
+                                <img src="{{ asset('bundles/vcg/images/history/1_thumb.jpg') }}" class="history-thumb" />
+                            </a>
+                        </div>
+                        <div class="photo-grid-item">
+                            <a href="{{ path('history_photo',{'slug':'2'}) }}" class="photo-link">
+                                <img src="{{ asset('bundles/vcg/images/history/2_thumb.jpg') }}" class="history-thumb" />
+                            </a>
+                        </div>
+                        <div class="photo-grid-item">
+                            <a href="{{ path('history_photo',{'slug':'3'}) }}" class="photo-link">
+                                <img src="{{ asset('bundles/vcg/images/history/3_thumb.jpg') }}" class="history-thumb" />
+                            </a>
+                        </div>
+                        <div class="photo-grid-item">
+                            <a href="{{ path('history_photo',{'slug':'1'}) }}" class="photo-link">
+                                <img src="{{ asset('bundles/vcg/images/history/1_thumb.jpg') }}" class="history-thumb" />
+                            </a>
+                        </div>
+                        <div class="photo-grid-item">
+                            <a href="{{ path('history_photo',{'slug':'2'}) }}" class="photo-link">
+                                <img src="{{ asset('bundles/vcg/images/history/2_thumb.jpg') }}" class="history-thumb" />
+                            </a>
+                        </div>
+                        <div class="photo-grid-item">
+                            <a href="{{ path('history_photo',{'slug':'3'}) }}" class="photo-link">
+                                <img src="{{ asset('bundles/vcg/images/history/3_thumb.jpg') }}" class="history-thumb" />
+                            </a>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}
