@@ -28,15 +28,15 @@
             }
         } 
 
-        // #form-guide-image {
-        //     & > g {
-        //     opacity: 0;
-        //         &#Frame {
-        //             opacity: 1;
-        //             display: block;
-        //         }
-        //     }       
-        // }
+        #form-guide-image {
+             & > g {
+             opacity: 0;
+                 &#Frame {
+                     opacity: 1;
+                     display: block;
+                 }
+             }
+        }
 
         section.dd-form214 {
             display: none;
