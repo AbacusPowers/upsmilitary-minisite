@@ -3,10 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-function aContainsB (a, b) {
-    return a.indexOf(b) >= 0;
-}
-
 
 //var bucketDescriptions = [];
 //bucketDescriptions[0] = 'Bucket 0 description';
@@ -32,14 +28,37 @@ buckets[7] = {name: 'Professional Workers', description: 'Professional bucket de
 buckets[8] = {name: 'Information Systems', description: 'Information systems bucket description'};
 buckets[9] = {name: 'Air Operations', description: 'Air operations bucket description'};
 
-
-function search(nameKey, myArray){
-    for (var i=0; i < myArray.length; i++) {
-        if (myArray[i].Search === nameKey) {
-            return myArray[i];
-        }
-    }
-    return {};
+var categories = {
+    'Delivery Drivers': [
+        'Driver',
+        'Driver Helper',
+        'Package Delivery Driver',
+        'Part Time'
+    ],
+    'Freight Drivers': [
+        'CDL A (Hazmat REQ) Tractor Trailer Truckload Driver Dedicated',
+        'CDL A Tractor Trailer Truckload Driver Dedicated',
+        'Flatbed Driver',
+        'Freight (Air, Ocean and Ground)',
+        'Freight Forwarding',
+        'FT Freight PU and Delivery Driver',
+        'Line Hail Sleeper Team Driver',
+        'OTR CDL A Tractor Trailer Truckload Driver (Hazmat REQ)',
+        'OTR CDL A Tractor Trailer Truckload Driver Dedicated',
+        'OTR CDL A Tractor Trailer Truckload Driver',
+        'OTR CDL A Tractor Trailer Truckload Driver (Hazmat REQ) Dedicated',
+        'OTR Team CDL A Tractor Trailer Truckload Driver (Hazmat REQ)',
+        'OTR Team Driver CDL A Tractor Trailer Truckload Dedicated',
+        'Part time Road Driver',
+        'PR Freight PU and Delivery Driver',
+        'Team Driver CDL A Tractor Trailer Truckload Dedicated',
+        'Tractor Trailer Driver',
+        'Yard Shifter (Tractor Trailer)',
+        'Part Time'
+    ],
+};
+function aContainsB (a, b) {
+    return a.indexOf(b) >= 0;
 }
 
 function buildHints(branchKey, myArray){
@@ -65,6 +84,15 @@ function checkBranch(val){
     console.log('value: ' + val + ' matches item ' + hints.indexOf(val));
 }
 
+function search(nameKey, myArray){
+    for (var i=0; i < myArray.length; i++) {
+        if (myArray[i].Search === nameKey) {
+            return myArray[i];
+        }
+    }
+    return {};
+}
+
 function shuffle(array) {
     var m = array.length, t, i;
 
@@ -81,6 +109,14 @@ function shuffle(array) {
     }
 
     return array;
+}
+
+function objectLength(obj) {
+    var size = 0, key;
+    for (key in obj) {
+        if (obj.hasOwnProperty(key)) size++;
+    }
+    return size;
 }
 
 $( document ).ready(function() {
@@ -142,12 +178,35 @@ $( document ).ready(function() {
             var b = result.Bucket;
             if (b > 0) {
                 var bucketTitle = buckets[b].name;
+
                 var bucketDescription = buckets[b].description;
+
                 $('.wrap--match-bucket .expander__parent').text(bucketTitle);
                 $('.wrap--match-bucket .expander__child p').text(bucketDescription);
-                //reveal direct ma
+
+                //reveal direct match
                 $('.wrap--match-bucket').removeClass('hidden');
                 console.log('direct match with bucket  ' + bucketTitle);
+
+
+                if (categories.hasOwnProperty(bucketTitle)) {
+
+                    var cats = categories[bucketTitle];
+
+                    for (j = 0; j < cats.length; j++) {
+
+                        var categoryTitle = categories[bucketTitle][j];
+
+                        console.log(categoryTitle);
+
+                        var categoryURL = 'http://jobs-ups.com/search/advanced-search/ASCategory/' + encodeURIComponent(categoryTitle) + '/ASPostedDate/-1/ASCountry/-1/ASState/-1/ASCity/-1/ASLocation/-1/ASCompanyName/-1/ASCustom1/-1/ASCustom2/-1/ASCustom3/-1/ASCustom4/-1/ASCustom5/-1/ASIsRadius/false/ASCityStateZipcode/-1/ASDistance/-1/ASLatitude/-1/ASLongitude/-1/ASDistanceType/-1';
+
+                        $('.hidden-part').attr('data-id','0').children('.expander__child').append('<div class="job-category"><h3 class="job-category_title">' + categoryTitle + '</h3><a href="' + categoryURL + '">Search</a></div>');
+
+                        console.log('test');
+                    }
+                }
+
             } else {
                 $('.wrap--no-match-bucket').removeClass('hidden');
                 console.log('no direct match');
@@ -155,6 +214,7 @@ $( document ).ready(function() {
 
             //generate other buckets
             var otherBuckets = [];
+
             for( i = 1; i < buckets.length; i++) {
 
                 //exclude the matched bucket
@@ -164,21 +224,41 @@ $( document ).ready(function() {
             }
             //randomize buckets
             var randBuckets = shuffle(otherBuckets);
+
             console.log(randBuckets);
+
             //loop through randomized bucket list
             for( i = 0; i < randBuckets.length; i++) {
+
                 var randBucketTitle = randBuckets[i].name;
+
+                console.log(randBucketTitle);
+
                 var randBucketDescription = randBuckets[i].description;
-                $('.wrap--all-buckets .component--expander').append('<section class="expander__wrapper"><a data-id="' + i + '" class="button expand-button"><h2 class="expander__parent">' + randBucketTitle + '</h2><i class="fa fa-plus fa-2x"></i></a><div data-id="' + i + '" class="hidden-part"><div class="expander__child"><p class="">' + randBucketDescription + '</p><form class="job-search--military-skills-translator"><h4>Search to see openings for this job near you:</h4><input type="submit" value="Search" /></form></div></div></section>');
+
+                $('.wrap--all-buckets .component--expander').append('<section class="expander__wrapper"><a data-id="' + i + '" class="button expand-button"><h2 class="expander__parent">' + randBucketTitle + '</h2><i class="fa fa-plus fa-2x"></i></a><div data-id="' + i + '" class="hidden-part"><div class="expander__child"><p class="">' + randBucketDescription + '</p></div></div></section>');
+
+                if (categories.hasOwnProperty(randBucketTitle)) {
+
+                    var cats = categories[randBucketTitle];
+
+                    for (j = 0; j < cats.length; j++) {
+
+                        var categoryTitle = categories[randBucketTitle][j];
+
+                        console.log(categoryTitle);
+
+                        var categoryURL = 'http://jobs-ups.com/search/advanced-search/ASCategory/' + encodeURIComponent(categoryTitle) + '/ASPostedDate/-1/ASCountry/-1/ASState/-1/ASCity/-1/ASLocation/-1/ASCompanyName/-1/ASCustom1/-1/ASCustom2/-1/ASCustom3/-1/ASCustom4/-1/ASCustom5/-1/ASIsRadius/false/ASCityStateZipcode/-1/ASDistance/-1/ASLatitude/-1/ASLongitude/-1/ASDistanceType/-1';
+
+                        $('.hidden-part[data-id="'+i+'"]').children('.expander__child').append('<div class="job-category"><h3 class="job-category_title">' + categoryTitle + '</h3><a href="' + categoryURL + '">Search</a></div>');
+
+                        console.log('test');
+                    }
+                }
+
             }
             //reveal randomized bucket list
             $('.wrap--all-buckets').removeClass('hidden');
-
-
-            //reveal all relevant divs
-
-            //$('.wrap--match-bucket .expander__wrapper').removeClass('hidden');
-            //$('.wrap--match-bucket .component--expander').removeClass('hidden');
 
 
         } else {
