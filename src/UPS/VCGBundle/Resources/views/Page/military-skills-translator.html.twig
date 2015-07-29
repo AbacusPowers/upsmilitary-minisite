@@ -87,10 +87,10 @@
                         <p class="tip"><i class="fa fa-star"></i>&nbsp; <span class="tip__icon">TIP:&nbsp;</span>You may qualify for additional jobs based on your other skills, experience and education.</p>
                     </div>
                     <h1 id="job-types" class="hidden">Suggested UPS Jobs</h1>
-                    <div class="wrap--match-bucket">
+                    <div class="wrap--match-bucket hidden">
                         <p>Your specialty matches</p>
-                        <div class="component--expander hidden">
-                            <section class='expander__wrapper hidden'>
+                        <div class="component--expander">
+                            <section class='expander__wrapper'>
                                 <a data-id='1' class='button expand-button'>
                                     <h2 class='expander__parent'>REPLACE</h2>
                                     <i class="fa fa-plus fa-2x"></i>
@@ -110,9 +110,10 @@
                         </div>
                     </div>
                     <div class="wrap--no-match-bucket hidden">
+                        <p>:::::no direct match:::::</p>
                     </div>
                     <div class="wrap--all-buckets hidden">
-                        <div class="component--expander barrel--all-buckets hidden">
+                        <div class="component--expander">
 
                             {#<section class='expander__wrapper hidden'>#}
 
@@ -138,14 +139,11 @@
                                 {#</div>#}
                             {#</section>#}
                             {#<section class='expander__wrapper hidden'>#}
-                                {#<a data-id='2' class='button expand-button'>#}
+                                {#<a data-id="' + i + '" class='button expand-button'>#}
                                     {#<h2 class='expander__parent'>Driver Helper (October&ndash;December)</h2>#}
                                     {#<i class="fa fa-plus fa-2x"></i>#}
                                 {#</a>#}
-                                {#&#123;&#35;<a data-id='2' class='button hide-button'>&#35;&#125;#}
-                                    {#&#123;&#35;<i class="fa fa-minus fa-2x"></i>&#35;&#125;#}
-                                {#&#123;&#35;</a>&#35;&#125;#}
-                                {#<div data-id='2' class='hidden-part'>#}
+                                {#<div data-id="' + i + '" class='hidden-part'>#}
                                     {#<div class="expander__child">#}
                                         {#<p class=''>#}
                                             {#The driver helper performs the task of delivering and picking up UPS packages. This is a seasonal, part-time position with a wealth of opportunities.#}
