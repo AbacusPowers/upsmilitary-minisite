@@ -182,7 +182,7 @@ $( document ).ready(function() {
                 var bucketDescription = buckets[b].description;
 
                 $('.wrap--match-bucket .expander__parent').text(bucketTitle);
-                $('.wrap--match-bucket .expander__child p').text(bucketDescription);
+                $('.wrap--match-bucket .expander__parent+p').text(bucketDescription);
 
                 //reveal direct match
                 $('.wrap--match-bucket').removeClass('hidden');
