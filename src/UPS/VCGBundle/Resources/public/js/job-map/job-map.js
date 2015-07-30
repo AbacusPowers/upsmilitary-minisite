@@ -1,11 +1,11 @@
 (function($) {
-    
+
     /*
      * Some constants isolated for easy configuration.
      */
     var CONST = {
         BASE_DATA_URL: '/js/job-map/',
-
+ 
         JOB_DESC: {
             'Package Handler': 'Package handlers load and unload packages into or out of UPS vehicles.',
             'Driver Helper (Oct-Dec)': 'Driver helpers deliver and pick up UPS packages during peak season.',
@@ -32,6 +32,8 @@
         RX_JOB_RM: / (\(Oct-Dec\))/i,
  
         SIZE_CLASSES: [ 'large', 'medium', 'small' ],
+ 
+        TRANSITIONEND: 'transitionend mstransitionend webkitTransitionEnd oTransitionEnd'
     };
     
     
@@ -75,20 +77,32 @@
          */
         focus: function() {
             this.load();
+
+            var foc = {animate: true, region: this.code};
+            var markers = this.markers;
             
-            infoContainer.append(this.info).addClass('opacity');
+            var do_focus = function() {
+                vmap.setFocus(foc);
+                vmap.addMarkers(markers);
+            }
+            
+            if (zoomed) {
+                do_focus();
+            }
+            else {
+                var on_transition_end = function() {
+                    vmap.updateSize();
+                    do_focus();
+                    zoomed = true;
+                    containers.unbind(CONST.TRANSITIONEND, on_transition_end);
+                };
+                containers.one(CONST.TRANSITIONEND, on_transition_end);
+            }
+            
+            containers.removeClass('full-width');
             refresher.addClass('shown');
             bside.removeClass('pseudo-block--hidden');
-            containers.removeClass('full-width');
-            
-            var code = this.code;
-            var markers = this.markers;
-            setTimeout(
-                function() {
-                    zoom_map(code, markers);
-                },
-                zoomed ? 0 : 400
-            );
+            infoContainer.append(this.info).addClass('opacity');
         },
  
         /*
@@ -128,14 +142,20 @@
          * Focusing the none-state equates to resetting.
          */
         focus: function() {
+            var foc = {animate: false, scale: 1, x: 0.5, y: 0.5};
+            
+            var on_transition_end = function() {
+                vmap.updateSize();
+                vmap.setFocus(foc);
+                containers.unbind(CONST.TRANSITIONEND, on_transition_end);
+            }
+            containers.one(CONST.TRANSITIONEND, on_transition_end);
+            
+            zoomed = false;
+            bside.addClass('pseudo-block--hidden');
             refresher.removeClass('shown');
             infoContainer.removeClass('opacity');
-            bside.addClass('pseudo-block--hidden');
             containers.addClass('full-width');
-            setTimeout(
-                function() { zoom_map(null); },
-                400
-            );
         }
     };
     
@@ -279,7 +299,7 @@
             focusedState = state;
         }
     }
-    
+
     
     /*
      * 
@@ -306,10 +326,10 @@
                 initial: {
                     opacity: 1,
                     
-                    r: 8,
+                    r: 8.5,
                     
-                    'stroke-color': '#888',
-                    'stroke-opacity': 0.7
+                    'stroke-color': '#777',
+                    'stroke-opacity': 0.5
                 }
             },
             markersSelectable: false,
@@ -332,11 +352,10 @@
                     fill: '#FFB500'
                 }
             },
-            zoomMax: 4,
+            zoomMax: 3.6,
             zoomOnScroll: false
         });
         vmap = mapContainer.vectorMap('get', 'mapObject');
-        zoom_map(null);
     }
 
 
@@ -442,36 +461,5 @@
         }
     }
     
-    
-    /*
-     * 
-     */
-    function update_size() { vmap.updateSize(); }
-    
-    function zoom_map(code, markers) {
-        if (code === null) {
-            update_size();
-            vmap.setFocus({
-                animate: true,
-                scale: 1,
-                x: 0.5,
-                y: 0.5
-            });
-            update_size();
-            setTimeout(update_size, 400);
-            zoomed = false;
-        }
-        else {
-            update_size();
-            vmap.setFocus({
-                animate: true,
-                region: code
-            });
-            vmap.addMarkers(markers);
-            update_size();
-            setTimeout(update_size, 400);
-            zoomed = true;
-        }
-    }
-    
+   
 })(jQuery);
