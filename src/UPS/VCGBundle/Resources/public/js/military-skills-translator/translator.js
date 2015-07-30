@@ -172,7 +172,9 @@ $( document ).ready(function() {
         if (!$.isEmptyObject(result)) {
             //we have a result! (not an empty cell)
             //set the military job title
-            $('#military-job-title').text(result.Title).removeClass('hidden');
+            $('#military-job-title').text(result.Title);
+            //show the military job
+            $('#military-job').removeClass('hidden');
 
             //fill in bucket info
             var b = result.Bucket;
