@@ -1,0 +1,2245 @@
+Branch,Bucket,Code,Search,Title
+Air Force,0,2T1X1,2T1X1 Vehicle Operations,Vehicle Operations
+Air Force,0,11AX,11AX Airlift Pilot,Airlift Pilot
+Air Force,0,11BX,11BX Bomber Pilot,Bomber Pilot
+Air Force,0,11EX,11EX Experimental Test Pilot,Experimental Test Pilot
+Air Force,0,11FX,11FX Fighter Pilot,Fighter Pilot
+Air Force,0,11GX,11GX Generalist Pilot,Generalist Pilot
+Air Force,0,11HX,11HX Helicopter Pilot,Helicopter Pilot
+Air Force,0,11KX,11KX Trainer Pilot,Trainer Pilot
+Air Force,0,11RX,11RX Reconnaissance/Surveillance/Electronic Warfare Pilot,Reconnaissance/Surveillance/Electronic Warfare Pilot
+Air Force,0,11SX,11SX Special Operations Pilot,Special Operations Pilot
+Air Force,0,11TX,11TX Tanker Pilot,Tanker Pilot
+Air Force,0,12AX,12AX Airlift Navigator,Airlift Navigator
+Air Force,0,12BX,12BX Bomber Navigator,Bomber Navigator
+Air Force,0,12EX,12EX Experimental Test Navigator,Experimental Test Navigator
+Air Force,0,12FX,12FX Fighter Navigator,Fighter Navigator
+Air Force,0,12GX,12GX Generalist Navigator,Generalist Navigator
+Air Force,0,12KX,12KX Trainer Navigator,Trainer Navigator
+Air Force,0,12RX,12RX Reconnaissance/Surveillance/Electronic Warfare Navigator,Reconnaissance/Surveillance/Electronic Warfare Navigator
+Air Force,0,12SX,12SX Special Operations Navigator,Special Operations Navigator
+Air Force,0,12TX,12TX Tanker Navigator,Tanker Navigator
+Air Force,0,13AX,13AX Astronaut,Astronaut
+Air Force,0,13BX,13BX Air Battle Manager,Air Battle Manager
+Air Force,0,13DX,13DX Control and Recovery,Control and Recovery
+Air Force,0,13MX,13MX Airfield Operation,Airfield Operation
+Air Force,0,13SX,13SX Space & Missile Operations,Space & Missile Operations
+Air Force,0,14NX,14NX Intelligence,Intelligence
+Air Force,0,15WX,15WX Weather,Weather
+Air Force,0,16FX,16FX Regional Affairs Strategist,Regional Affairs Strategist
+Air Force,0,16GX,16GX Air Force Operations Staff Officer,Air Force Operations Staff Officer
+Air Force,0,16PX,16PX Political-Military Affairs Strategist,Political-Military Affairs Strategist
+Air Force,0,16RX,16RX Planning and Programming,Planning and Programming
+Air Force,0,21AX,21AX Aircraft Maintenance,Aircraft Maintenance
+Air Force,0,21BX,21BX Maintenance,Maintenance
+Air Force,0,21MX,21MX Munitions and Missile Maintenance,Munitions and Missile Maintenance
+Air Force,0,21RX,21RX Logistics Readiness Officer (LRO),Logistics Readiness Officer (LRO)
+ ,0,31PX,31PX Security Forces,Security Forces
+Air Force,0,32EX,32EX Civil Engineer,Civil Engineer
+Air Force,0,33SX,33SX Communications & Information,Communications & Information
+Air Force,0,34MX,34MX Services,Services
+Air Force,0,35BX,35BX Band,Band
+Air Force,0,35PX,35PX Public Affairs,Public Affairs
+Air Force,0,36MX,36MX Mission Support,Mission Support
+Air Force,0,36PX,36PX Personnel,Personnel
+Air Force,0,38MX,38MX Manpower Field,Manpower Field
+Air Force,0,41AX,41AX Health Services Administrator,Health Services Administrator
+Air Force,0,42BX,42BX Physical Therapist,Physical Therapist
+Air Force,0,42EX,42EX Optometrist,Optometrist
+Air Force,0,42FX,42FX Podiatrist,Podiatrist
+Air Force,0,42GX,42GX Physician Assistant,Physician Assistant
+Air Force,0,42NX,42NX Audiology/Speech Pathologist,Audiology/Speech Pathologist
+Air Force,0,42PX,42PX Clinical Psychologist,Clinical Psychologist
+Air Force,0,42SX,42SX Clinical Social Worker,Clinical Social Worker
+Air Force,0,42TX,42TX Occupational Therapist Biomedical Specialists,Occupational Therapist Biomedical Specialists
+Air Force,0,43AX,43AX Aerospace & Operational Physiologist,Aerospace & Operational Physiologist
+Air Force,0,43BX,43BX Biomedical Scientist,Biomedical Scientist
+Air Force,0,43DX,43DX Dietitian,Dietitian
+Air Force,0,43EX,43EX Bioenvironmental Engineer,Bioenvironmental Engineer
+Air Force,0,43HX,43HX Public Health,Public Health
+Air Force,0,43MX,43MX Medical Entomologist,Medical Entomologist
+Air Force,0,43PX,43PX Pharmacist,Pharmacist
+Air Force,0,43TX,43TX Biomedical Laboratory,Biomedical Laboratory
+Air Force,0,43VX,43VX Veterinary Clinician,Veterinary Clinician
+Air Force,0,43YX,43YX Health Physicist,Health Physicist
+Air Force,0,44AX,"44AX Chief, Hospital/Clinic Services","Chief, Hospital/Clinic Services"
+Air Force,0,44DX,44DX Pathologist,Pathologist
+Air Force,0,44EX,44EX Emergency Services Physician,Emergency Services Physician
+Air Force,0,44FX,44FX Family Physician,Family Physician
+Air Force,0,44GX,44GX General Practice Physician,General Practice Physician
+Air Force,0,44HX,44HX Nuclear Medicine Physician,Nuclear Medicine Physician
+Air Force,0,44JX,44JX Clinical Geneticist,Clinical Geneticist
+Air Force,0,44KX,44KX Pediatrician,Pediatrician
+Air Force,0,44MX,44MX Internist,Internist
+Air Force,0,44NX,44NX Neurologist,Neurologist
+Air Force,0,44PX,44PX Psychiatrist,Psychiatrist
+Air Force,0,44RX,44RX Diagnostic Radiologist,Diagnostic Radiologist
+Air Force,0,44SX,44SX Dermatologist,Dermatologist
+Air Force,0,44TX,44TX Radiotherapist,Radiotherapist
+Air Force,0,44YX,44YX Critical Care Medicine,Critical Care Medicine
+Air Force,0,44ZX,44ZX Allergist,Allergist
+Air Force,0,45AX,45AX Anesthesiologist,Anesthesiologist
+Air Force,0,45BX,45BX Orthopedic Surgeon,Orthopedic Surgeon
+Air Force,0,45EX,45EX Ophthalmologist,Ophthalmologist
+Air Force,0,45GX,45GX OB/GYN,OB/GYN
+Air Force,0,45NX,45NX Otorhinolaryngologist,Otorhinolaryngologist
+Air Force,0,45PX,45PX Physical Medicine Physician,Physical Medicine Physician
+Air Force,0,45SX,45SX Surgeon,Surgeon
+Air Force,0,45UX,45UX Urologist,Urologist
+Air Force,0,46AX,46AX Nurse Administrator,Nurse Administrator
+Air Force,0,46FX,46FX Flight Nurse,Flight Nurse
+Air Force,0,46GX,46GX Nurse-Midwife,Nurse-Midwife
+Air Force,0,46MX,46MX Nurse Anesthetist,Nurse Anesthetist
+Air Force,0,46NX,46NX Clinical Nurse,Clinical Nurse
+Air Force,0,46PX,46PX Mental Health Nurse,Mental Health Nurse
+Air Force,0,46SX,46SX Operating Room Nurse,Operating Room Nurse
+Air Force,0,47BX,47BX Orthodontist,Orthodontist
+Air Force,0,47DX,47DX Oral and Maxillofacial Pathologist,Oral and Maxillofacial Pathologist
+Air Force,0,47EX,47EX Endodontist,Endodontist
+Air Force,0,47GX,47GX Dentist,Dentist
+Air Force,0,47HX,47HX Periodontist,Periodontist
+Air Force,0,47KX,47KX Pediatric Dentist,Pediatric Dentist
+Air Force,0,47PX,47PX Prosthodontist,Prosthodontist
+Air Force,0,47SX,47SX Oral and Maxillofacial Surgeon,Oral and Maxillofacial Surgeon
+Air Force,0,48AX,48AX Aerospace Medicine Specialist,Aerospace Medicine Specialist
+Air Force,0,48EX,48EX Occupational Medicine Specialist,Occupational Medicine Specialist
+Air Force,0,48FX,48FX Family Practice Specialist,Family Practice Specialist
+Air Force,0,48GX,48GX Aerospace Medicine Physician,Aerospace Medicine Physician
+Air Force,0,48PX,48PX Preventive Medicine Specialist,Preventive Medicine Specialist
+Air Force,0,51JX,51JX Judge Advocate,Judge Advocate
+Air Force,0,52RX,52RX Chaplain,Chaplain
+Air Force,0,61SX,61SX Scientist,Scientist
+Air Force,0,62EX,62EX Developmental Engineer,Developmental Engineer
+Air Force,0,63AX,63AX Acquisition Manager,Acquisition Manager
+Air Force,0,64PX,64PX Contracting,Contracting
+Air Force,0,65AX,65AX Audit,Audit
+Air Force,0,65FX,65FX Financial Management,Financial Management
+Air Force,0,65WX,65WX Cost Analysis,Cost Analysis
+Air Force,0,71SX,71SX Special Investigator,Special Investigator
+Air Force,0,80C0,"80C0 Commander, Cadet Squadron, USAFA","Commander, Cadet Squadron, USAFA"
+Air Force,0,81C0,"81C0 Training Commander, OTS","Training Commander, OTS"
+Air Force,0,81T0,81T0 Instructor,Instructor
+Air Force,0,82A0,82A0 Academic Program Manager,Academic Program Manager
+Air Force,0,83R0,83R0 Recruiting Service,Recruiting Service
+Air Force,0,84H0,84H0 Historian,Historian
+Air Force,0,85G0,85G0 USAF Honor Guard,USAF Honor Guard
+Air Force,0,86M0,86M0 Operations Management,Operations Management
+Air Force,0,86P0,86P0 Command and Control,Command and Control
+Air Force,0,87G0,87G0 Installation Inspector General,Installation Inspector General
+Air Force,0,88A0,88A0 Aide-de-Camp,Aide-de-Camp
+Air Force,0,88PO,88PO Protocol,Protocol
+Air Force,0,8A100,8A100 Career Assistance Adviser,Career Assistance Adviser
+Air Force,0,8A200,8A200 Enlisted Aide,Enlisted Aide
+Air Force,0,8B000,8B000 Military Training Instructor,Military Training Instructor
+Air Force,0,8B100,8B100 Military Training Leader,Military Training Leader
+Air Force,0,8B200,8B200 Academy Military Training NCO,Academy Military Training NCO
+Air Force,0,8C000,8C000 Family Support Center,Family Support Center
+Air Force,0,8D000,8D000 Linguist Debriefer/Interrogator,Linguist Debriefer/Interrogator
+Air Force,0,8E+00,8E+00 Research and Development Technician,Research and Development Technician
+Air Force,0,8F000,8F000 First Sergeant,First Sergeant
+Air Force,0,8G000,8G000 USAF Honor Guard,USAF Honor Guard
+Air Force,0,8J000,8J000 Correctional Custody Supervisor,Correctional Custody Supervisor
+Air Force,0,8M000,8M000 Postal,Postal
+Air Force,0,8P000,8P000 Courier,Courier
+Air Force,0,8P100,8P100 Defense Attache,Defense Attache
+Air Force,0,8R000,8R000 Recruiter,Recruiter
+Air Force,0,8S0X0,8S0X0 Missile Facility Manager,Missile Facility Manager
+Air Force,0,8S100,8S100 Sensor Operator,Sensor Operator
+Air Force,0,8T000,8T000 Professional Military Education Instructor,Professional Military Education Instructor
+Air Force,0,6C0X1,6C0X1 Contracting,Contracting
+Air Force,0,6F0X1,6F0X1 Financial Management and Comptroller,Financial Management and Comptroller
+Air Force,0,5J0X1,5J0X1 Paralegal,Paralegal
+Air Force,0,5R0X1,5R0X1 Chaplain Assistant,Chaplain Assistant
+Air Force,0,2A0X1,2A0X1 Avionics Test Station and Components,Avionics Test Station and Components
+Air Force,0,2A3X1,"2A3X1 A-10, F-15 and U-2 Avionics Systems","A-10, F-15 and U-2 Avionics Systems"
+Air Force,0,2A3X2,"2A3X2 F-16, F-117, RQ-1 and CV-22 Avionics Systems","F-16, F-117, RQ-1 and CV-22 Avionics Systems"
+Air Force,0,2A3X3,2A3X3 Tactical Aircraft Maintenance,Tactical Aircraft Maintenance
+Air Force,0,2A5X1,2A5X1 Aerospace Maintenance,Aerospace Maintenance
+Air Force,0,2A5X2,2A5X2 Helicopter Maintenance,Helicopter Maintenance
+Air Force,0,2A5X3,2A5X3 Integrated Avionics Systems,Integrated Avionics Systems
+Air Force,0,2A6X1,2A6X1 Aerospace Propulsion,Aerospace Propulsion
+Air Force,0,2A6X2,2A6X2 Aerospace Ground Equipment,Aerospace Ground Equipment
+Air Force,0,2A6X3,2A6X3 Aircrew Egress Systems,Aircrew Egress Systems
+Air Force,0,2A6X4,2A6X4 Aircraft Fuel Systems,Aircraft Fuel Systems
+Air Force,0,2A6X5,2A6X5 Aircraft Hydraulic Systems,Aircraft Hydraulic Systems
+Air Force,0,2A6X6,2A6X6 Aircraft Electrical and Environmental Systems,Aircraft Electrical and Environmental Systems
+Air Force,0,2A7X1,2A7X1 Aircraft Metals Technology,Aircraft Metals Technology
+Air Force,0,2A7X2,2A7X2 Nondestructive Inspection,Nondestructive Inspection
+Air Force,0,2A7X3,2A7X3 Aircraft Structural Maintenance,Aircraft Structural Maintenance
+Air Force,0,2F0X1,2F0X1 Fuels,Fuels
+Air Force,0,2G0X1,2G0X1 Logistics Plans,Logistics Plans
+Air Force,0,2M0X1,2M0X1 Missile and Space Systems Electronic Maintenance,Missile and Space Systems Electronic Maintenance
+Air Force,0,2M0X2,2M0X2 Missile and Space Systems Maintenance,Missile and Space Systems Maintenance
+Air Force,0,2M0X3,2M0X3 Missile and Space Facilities,Missile and Space Facilities
+Air Force,0,2P0X1,2P0X1 Precision Measurement Equipment Laboratory,Precision Measurement Equipment Laboratory
+Air Force,0,2R0X1,2R0X1 Maintenance Management Analysis,Maintenance Management Analysis
+Air Force,0,2R1X1,2R1X1 Maintenance Management Production,Maintenance Management Production
+Air Force,0,2S0X1,2S0X1 Supply Management,Supply Management
+Air Force,0,2S0X2,2S0X2 Supply Systems Analysis,Supply Systems Analysis
+Air Force,0,2T0X1,2T0X1 Traffic Management,Traffic Management
+Air Force,0,2T2X1,2T2X1 Air Transportation,Air Transportation
+Air Force,0,2T3X1,2T3X1 Vehicle and Vehicular Equipment Maintenance,Vehicle and Vehicular Equipment Maintenance
+Air Force,0,2T3X2,2T3X2 Special Vehicle Maintenance,Special Vehicle Maintenance
+Air Force,0,2T3X5,2T3X5 Vehicle Body Maintenance,Vehicle Body Maintenance
+Air Force,0,2T3X7,2T3X7 Vehicle Management and Analysis,Vehicle Management and Analysis
+Air Force,0,2W0X1,2W0X1 Munitions Systems,Munitions Systems
+Air Force,0,2W1X1,2W1X1 Aircraft Armament Systems,Aircraft Armament Systems
+Air Force,0,2W2X1,2W2X1 Nuclear Weapons,Nuclear Weapons
+Air Force,1,4A0X1,4A0X1 Health Services Management,Health Services Management
+Air Force,1,4A1X1,4A1X1 Medical Materiel,Medical Materiel
+Air Force,1,4A2X1,4A2X1 Biomedical Equipment,Biomedical Equipment
+Air Force,1,4C0X1,4C0X1 Mental Health Service,Mental Health Service
+Air Force,1,4D0X1,4D0X1 Diet Therapy,Diet Therapy
+Air Force,1,4E0X1,4E0X1 Public Health,Public Health
+Air Force,1,4H0X1,4H0X1 Cardiopulmonary Laboratory,Cardiopulmonary Laboratory
+Air Force,1,4J0X2,4J0X2 Physical Medicine,Physical Medicine
+Air Force,1,4M0X1,4M0X1 Aerospace Physiology,Aerospace Physiology
+Air Force,1,4N0X1,4N0X1 Aerospace Medical Service,Aerospace Medical Service
+Air Force,1,4N1X1,4N1X1 Surgical Service,Surgical Service
+Air Force,1,4P0X1,4P0X1 Pharmacy,Pharmacy
+Air Force,1,4R0X1,4R0X1 Diagnostic Imaging,Diagnostic Imaging
+Air Force,1,4T0X1,4T0X1 Medical Laboratory,Medical Laboratory
+Air Force,1,4T0X2,4T0X2 Histopathology,Histopathology
+Air Force,1,4T0X3,4T0X3 Cytotechnology,Cytotechnology
+Air Force,1,4V0X1,4V0X1 Optometry,Optometry
+Air Force,1,4Y0X1,4Y0X1 Dental Assistant,Dental Assistant
+Air Force,1,4Y0X2,4Y0X2 Dental Laboratory,Dental Laboratory
+Air Force,1,1A0X1,1A0X1 In-Flight Refueling,In-Flight Refueling
+Air Force,1,1A1X1,1A1X1 Flight Engineer,Flight Engineer
+Air Force,1,1A2X1,1A2X1 Aircraft Loadmaster,Aircraft Loadmaster
+Air Force,1,1A3X1,1A3X1 Airborne Mission Systems,Airborne Mission Systems
+Air Force,1,1A4X1,1A4X1 Airborne Battle Management Systems,Airborne Battle Management Systems
+Air Force,1,1A6X1,1A6X1 Flight Attendant,Flight Attendant
+Air Force,1,1A7X1,1A7X1 Aerial Gunner,Aerial Gunner
+Air Force,1,1A8X1,1A8X1 Airborne Cryptologic Linguist,Airborne Cryptologic Linguist
+Air Force,1,1C0X2,1C0X2 Aviation Resource Management,Aviation Resource Management
+Air Force,1,1C1X1,1C1X1 Air Traffic Control,Air Traffic Control
+Air Force,1,1C2X1,1C2X1 Combat Control,Combat Control
+Air Force,1,1C3X1,1C3X1 Command Post,Command Post
+Air Force,1,1C4X1,1C4X1 Tactical Air Command and Control,Tactical Air Command and Control
+Air Force,1,1C5X1,1C5X1 Aerospace Control and Warning Systems,Aerospace Control and Warning Systems
+Air Force,1,1C6X1,1C6X1 Space Systems Operations,Space Systems Operations
+Air Force,1,1C7X1,1C7X1 Airfield Management,Airfield Management
+Air Force,1,1N0X1,1N0X1 Operations Intelligence,Operations Intelligence
+Air Force,1,1N1X1,1N1X1 Imagery Analysis,Imagery Analysis
+Air Force,1,1N2X1,1N2X1 Communication Signals Intelligence Production,Communication Signals Intelligence Production
+Air Force,1,1N3XX,1N3XX Cryptologic Linguist,Cryptologic Linguist
+Air Force,1,1N4X1,1N4X1 Network Intelligence Analysis,Network Intelligence Analysis
+Air Force,1,1N5X1,1N5X1 Electronic Signals Intelligence Exploitation,Electronic Signals Intelligence Exploitation
+Air Force,1,1N6X1,1N6X1 Electronic System Security Assessment,Electronic System Security Assessment
+Air Force,1,1P0X1,1P0X1 Aircrew Equipment,Aircrew Equipment
+Air Force,1,1T0X1,"1T0X1 Survival, Evasion, Resistance and Escape Operations","Survival, Evasion, Resistance and Escape Operations"
+Air Force,1,1T2X1,1T2X1 Pararescue,Pararescue
+Air Force,1,1S0X1,1S0X1 Safety,Safety
+Air Force,1,1U0X1,1U0X1 Unmanned Aerospace System (UAS) Sensor Operator,Unmanned Aerospace System (UAS) Sensor Operator
+Air Force,1,1W0X1,1W0X1 Weather,Weather
+Air Force,1,1W0X2,1W0X2 Special Operations Weather (Combat Weather),Special Operations Weather (Combat Weather)
+Air Force,1,7S0X1,7S0X1 Special Investigations,Special Investigations
+Air Force,1,3D0X1,3D0X1 Knowledge Operations Management,Knowledge Operations Management
+Air Force,1,3D0X2,3D0X2 Cyber Systems Operations,Cyber Systems Operations
+Air Force,1,3D0X3,3D0X3 Cyber Surety,Cyber Surety
+Air Force,1,3D0X4,3D0X4 Computer Systems Programming,Computer Systems Programming
+Air Force,1,3D1X1,3D1X1 Client Systems,Client Systems
+Air Force,1,3D1X2,3D1X2 Cyber Transport,Cyber Transport
+Air Force,1,3D1X3,3D1X3 RF Transmission Systems,RF Transmission Systems
+Air Force,1,3D1X4,3D1X4 Spectrum Operations,Spectrum Operations
+Air Force,1,3D1X5,3D1X5 Radar,Radar
+Air Force,1,3D1X6,3D1X6 Airfield Systems,Airfield Systems
+Air Force,1,3D1X7,3D1X7 Cable and Antenna Systems,Cable and Antenna Systems
+Air Force,1,3H0X1,3H0X1 Historian,Historian
+Air Force,1,3M0X1,3M0X1 Services,Services
+Air Force,1,3N0X1,3N0X1 Public Affairs,Public Affairs
+Air Force,1,3N0X2,3N0X2 Radio and Television Broadcasting,Radio and Television Broadcasting
+Air Force,1,3N1X1,3N1X1 Regional Band,Regional Band
+Air Force,1,3N2X1,3N2X1 Premier Band,Premier Band
+Air Force,1,3P0X1,3P0X1 Security Forces,Security Forces
+Air Force,1,3E0X1,3E0X1 Electrical Systems,Electrical Systems
+Air Force,1,3E0X2,3E0X2 Electrical Power Production,Electrical Power Production
+Air Force,1,3E1X1,"3E1X1 Heating, Ventilation, Air Conditioning and Refrigeration","Heating, Ventilation, Air Conditioning and Refrigeration"
+Air Force,1,3E2X1,3E2X1 Pavements and Construction Equipment,Pavements and Construction Equipment
+Air Force,1,3E3X1,3E3X1 Structural,Structural
+Air Force,1,3E4X2,3E4X2 Water and Fuels Systems Maintenance,Water and Fuels Systems Maintenance
+Air Force,1,3E4X3,3E4X3 Pest Management,Pest Management
+Air Force,1,3E5X1,3E5X1 Engineering,Engineering
+Air Force,1,3E6X1,3E6X1 Operations Management,Operations Management
+Air Force,1,3E7X1,3E7X1 Fire Protection,Fire Protection
+Air Force,1,3E8X1,3E8X1 Explosive Ordnance Disposal,Explosive Ordnance Disposal
+Air Force,1,3E9X1,3E9X1 Emergency Management,Emergency Management
+Air Force,1,3S0X1,3S0X1 Personnel,Personnel
+Air Force,1,3S1X1,3S1X1 Military Equal Opportunity,Military Equal Opportunity
+Air Force,1,3S2X1,3S2X1 Education and Training,Education and Training
+Air Force,1,3S3X1,3S3X1 Manpower,Manpower
+Air Force,1,3V0X0,3V0X0 Visual Information Services,Visual Information Services
+Air Force,1,3V0X1,3V0X1 Visual Information,Visual Information
+Air Force,1,3V0X2,3V0X2 Still Photography,Still Photography
+Air Force,1,3V0X3,3V0X3 Visual Information Production-Documentation,Visual Information Production-Documentation
+Air Force,1,4B0X1,4B0X1 Bioenvironmental Engineer,Bioenvironmental Engineer
+Army,1,88M,88M Motor Transport Operator,Motor Transport Operator
+Army,1,88O,88O Transportation Officer,Transportation Officer
+Army,1,88Z,88Z Transportation Senior Sergeant,Transportation Senior Sergeant
+Army,1,15R,15R AH-64 Attack Helicopter Repairer,AH-64 Attack Helicopter Repairer
+Army,1,15X,15X AH-64A Armament and Electrical System Repairer,AH-64A Armament and Electrical System Repairer
+Army,1,15Y,15Y AH-64D Armament/Electrical/Avionics Repairer,AH-64D Armament/Electrical/Avionics Repairer
+Army,1,14O,14O Air Defense Artillery Officer,Air Defense Artillery Officer
+Army,1,14Z,14Z Air Defense Artillery Senior Sergeant,Air Defense Artillery Senior Sergeant
+Army,1,94D,94D Air Traffic Control Equipment Repairer,Air Traffic Control Equipment Repairer
+Army,1,15Q,15Q Air Traffic Control Operator,Air Traffic Control Operator
+Army,1,15K,15K Aircraft Components Repair Supervisor,Aircraft Components Repair Supervisor
+Army,1,15F,15F Aircraft Electrician,Aircraft Electrician
+Army,1,15Z,15Z Aircraft Maintenance Senior Sergeant,Aircraft Maintenance Senior Sergeant
+Army,1,15H,15H Aircraft Pneudraulics Repairer,Aircraft Pneudraulics Repairer
+Army,1,15B,15B Aircraft Powerplant Repairer,Aircraft Powerplant Repairer
+Army,1,15D,15D Aircraft Powertrain Repairer,Aircraft Powertrain Repairer
+Army,1,15G,15G Aircraft Structural Repairer,Aircraft Structural Repairer
+Army,1,921A,921A Airdrop Systems Technician,Airdrop Systems Technician
+Army,1,350F,350F All Source Intelligence Technician,All Source Intelligence Technician
+Army,1,91E,91E Allied Trades Specialist (Machinist),Allied Trades Specialist (Machinist)
+Army,1,89B,89B Ammunition Specialist,Ammunition Specialist
+Army,1,890A,890A Ammunition Technician,Ammunition Technician
+Army,1,68T,68T Animal Care Specialist,Animal Care Specialist
+Army,1,45K,45K Armament Repairer,Armament Repairer
+Army,1,19O,19O Armor Officer,Armor Officer
+Army,1,19Z,19Z Armor Senior Sergeant,Armor Senior Sergeant
+Army,1,63D,63D Artillery Mechanic,Artillery Mechanic
+Army,1,92A,92A Automated Logistical Specialist,Automated Logistical Specialist
+Army,1,39B,39B Automatic Test Equipment Operator and Maintainer,Automatic Test Equipment Operator and Maintainer
+Army,1,915A,915A Automotive Maintenance Warrant Officer,Automotive Maintenance Warrant Officer
+Army,1,14S,14S AVENGER Crewmember,AVENGER Crewmember
+Army,1,27T,27T AVENGER System Repairer,AVENGER System Repairer
+Army,1,15O,15O Aviation Officer,Aviation Officer
+Army,1,15P,15P Aviation Operations Specialist,Aviation Operations Specialist
+Army,1,94L,94L Avionic Communications Equipment Repairer,Avionic Communications Equipment Repairer
+Army,1,15N,15N Avionic Mechanic,Avionic Mechanic
+Army,1,94R,94R Avionic Radar Repairer,Avionic Radar Repairer
+Army,1,02Z,02Z Bands Senior Sergeant,Bands Senior Sergeant
+Army,1,02C,02C Baritone or Euphonium Player,Baritone or Euphonium Player
+Army,1,02K,02K Bassoon Player,Bassoon Player
+Army,1,68A,68A Biomedical Equipment Specialist,Biomedical Equipment Specialist
+Army,1,14R,14R Bradley Linebacker Crewmember,Bradley Linebacker Crewmember
+Army,1,21C,21C Bridge Crewmember,Bridge Crewmember
+Army,1,46R,46R Broadcast Journalist,Broadcast Journalist
+Army,1,25L,25L Cable Systems lnstaller - Maintainer,Cable Systems lnstaller - Maintainer
+Army,1,13B,13B Cannon Crewmember,Cannon Crewmember
+Army,1,13E,13E Cannon Fire Direction Specialist,Cannon Fire Direction Specialist
+Army,1,88H,88H Cargo Specialist,Cargo Specialist
+Army,1,21W,21W Carpentry and Masonry Specialist,Carpentry and Masonry Specialist
+Army,1,19D,19D Cavalry Scout,Cavalry Scout
+Army,1,27G,27G CHAPARRAL and REDEYE Repairer,CHAPARRAL and REDEYE Repairer
+Army,1,56O,56O Chaplain,Chaplain
+Army,1,56M,56M Chaplain Assistant,Chaplain Assistant
+Army,1,74D,74D Chemical Operations Specialist,Chemical Operations Specialist
+Army,1,74O,"74O Chemical, Biological, Radiological and Nuclear (CBRN) Officer","Chemical, Biological, Radiological and Nuclear (CBRN) Officer"
+Army,1,38O,38O Civil Affairs Officer,Civil Affairs Officer
+Army,1,38B,38B Civil Affairs Specialist,Civil Affairs Specialist
+Army,1,02J,02J Clarinet Player,Clarinet Player
+Army,1,73BO,73BO Clinical Psychologist,Clinical Psychologist
+Army,1,25V,25V Combat Documentation & Production Specialist,Combat Documentation & Production Specialist
+Army,1,21B,21B Combat Engineer,Combat Engineer
+Army,1,21Z,21Z Combat Engineering Senior Sergeant,Combat Engineering Senior Sergeant
+Army,1,35H,35H Common Ground Station Operator,Common Ground Station Operator
+Army,1,98H,98H Communications Locator/Interceptor,Communications Locator/Interceptor
+Army,1,21V,21V Concrete and Asphalt Equipment Operator,Concrete and Asphalt Equipment Operator
+Army,1,21H,21H Construction Engineering Supervisor,Construction Engineering Supervisor
+Army,1,91L,91L Construction Equipment Repairer,Construction Equipment Repairer
+Army,1,21N,21N Construction Equipment Supervisor,Construction Equipment Supervisor
+Army,1,02B,02B Cornet or Trumpet Player,Cornet or Trumpet Player
+Army,1,31E,31E Corrections Specialist,Corrections Specialist
+Army,1,351L,351L Counterintelligence Technician,Counterintelligence Technician
+Army,1,97Z,97Z Counterintelligence/Human Intelligence Senior Sergeant,Counterintelligence/Human Intelligence Senior Sergeant
+Army,1,35L,35L Counterintelligence Agent,Counterintelligence Agent
+Army,1,21F,21F Crane Operator,Crane Operator
+Army,1,31D,31D Criminal Investigation Special Agent,Criminal Investigation Special Agent
+Army,1,35P,35P Cryptologic Communications,Cryptologic Communications
+Army,1,98G,98G Cryptologic Linguist,Cryptologic Linguist
+Army,1,63O,63O Dental Corps Officer,Dental Corps Officer
+Army,1,68E,68E Dental Specialist,Dental Specialist
+Army,1,21D,21D Diver,Diver
+Army,1,14J,14J Early Warning System Operator,Early Warning System Operator
+Army,1,02U,02U Electric Bass Guitar Player,Electric Bass Guitar Player
+Army,2,98J,98J Electronic Intelligence Interceptor/Analyst,Electronic Intelligence Interceptor/Analyst
+Army,2,94W,94W Electronic Maintenance Chief,Electronic Maintenance Chief
+Army,2,29E,29E Electronic Warfare Specialist,Electronic Warfare Specialist
+Army,2,12O,12O Engineer Officer,Engineer Officer
+Army,2,89D,89D Explosive Ordnance Disposal Specialist,Explosive Ordnance Disposal Specialist
+Army,2,92S,92S Fabric Repair Specialist,Fabric Repair Specialist
+Army,2,13R,13R Field Artillery Firefinder Radar Operator,Field Artillery Firefinder Radar Operator
+Army,2,13W,13W Field Artillery Meteorological Crewmember,Field Artillery Meteorological Crewmember
+Army,2,13O,13O Field Artillery Officer,Field Artillery Officer
+Army,2,13Z,13Z Field Artillery Senior Sergeant,Field Artillery Senior Sergeant
+Army,2,13S,13S Field Artillery Surveyor,Field Artillery Surveyor
+Army,2,13D,13D Field Artillery Tactical Data Systems Specialist,Field Artillery Tactical Data Systems Specialist
+Army,2,131A,131A Field Artillery Targeting Technician,Field Artillery Targeting Technician
+Army,2,36B,36B Financial Management Technician,Financial Management Technician
+Army,2,45G,45G Fire Control System Repairer,Fire Control System Repairer
+Army,2,13F,13F Fire Support Specialist,Fire Support Specialist
+Army,2,21M,21M Firefighter,Firefighter
+Army,2,61NO,61NO Flight Surgeon,Flight Surgeon
+Army,2,02G,02G Flute or Piccolo Player,Flute or Piccolo Player
+Army,2,92G,92G Food Service Specialist,Food Service Specialist
+Army,2,02D,02D French Horn Player,French Horn Player
+Army,2,63G,63G Fuel and Electrical Systems Repairer,Fuel and Electrical Systems Repairer
+Army,2,21J,21J General Construction Equipment Operator,General Construction Equipment Operator
+Army,2,21X,21X General Engineering Supervisor,General Engineering Supervisor
+Army,2,96R,96R Ground Surveillance Systems Operator,Ground Surveillance Systems Operator
+Army,2,02T,02T Guitar Player,Guitar Player
+Army,2,68W,68W Health Care Specialist,Health Care Specialist
+Army,2,21E,21E Heavy Construction Equipment Operator,Heavy Construction Equipment Operator
+Army,2,63S,63S Heavy-Wheel Vehicle Mechanic,Heavy-Wheel Vehicle Mechanic
+Army,2,68M,68M Hospital Food Service Specialist,Hospital Food Service Specialist
+Army,2,351M,351M Human Intelligence Collection Technician,Human Intelligence Collection Technician
+Army,2,35M,35M Human Intelligence Collector,Human Intelligence Collector
+Army,2,42BO,42BO Human Resources Officer,Human Resources Officer
+Army,2,42A,42A Human Resources Specialist,Human Resources Specialist
+Army,2,420A,420A Human Resources Technician,Human Resources Technician
+Army,2,35G,35G Imagery Analyst,Imagery Analyst
+Army,2,350G,350G Imagery Intelligence Technician,Imagery Intelligence Technician
+Army,2,11C,11C Indirect Fire Infantryman,Indirect Fire Infantryman
+Army,2,11O,11O Infantry Officer,Infantry Officer
+Army,2,11Z,11Z Infantry Senior Sergeant,Infantry Senior Sergeant
+Army,2,11B,11B Infantryman,Infantryman
+Army,2,30AO,30AO Information Operations Officer,Information Operations Officer
+Army,2,25Y,25Y Information Systems Chief,Information Systems Chief
+Army,2,255A,255A Information Systems Technician,Information Systems Technician
+Army,2,25B,25B Information Technologies Specialist,Information Technologies Specialist
+Army,2,94Y,94Y Integrated Family of Test Equipment Operator and Maintainer,Integrated Family of Test Equipment Operator and Maintainer
+Army,2,35F,35F Intelligence Analyst,Intelligence Analyst
+Army,2,96Z,96Z Intelligence Senior Sergeant,Intelligence Senior Sergeant
+Army,2,21R,21R Interior Electrician,Interior Electrician
+Army,2,27O,27O JAG Corps Attorney,JAG Corps Attorney
+Army,2,02N,02N Keyboard Player,Keyboard Player
+Army,2,94A,94A Land Combat Electrician,Land Combat Electrician
+Army,2,27E,27E Land Combat Electronic Missile System Repairer,Land Combat Electronic Missile System Repairer
+Army,2,57E,57E Laundry & Shower Specialist,Laundry & Shower Specialist
+Army,2,63B,63B Light-Wheel Vehicle Mechanic,Light-Wheel Vehicle Mechanic
+Army,2,21L,21L Lithographer,Lithographer
+Army,2,90AO,90AO Logistics Officer,Logistics Officer
+Army,2,63A,63A M1 Abrams Systems Maintainer,M1 Abrams Systems Maintainer
+Army,2,19K,19K M1 Armor Crewman,M1 Armor Crewman
+Army,2,63M,63M M2/3 Bradley Fighting Vehicle System Maintainer,M2/3 Bradley Fighting Vehicle System Maintainer
+Army,2,44E,44E Machinist,Machinist
+Army,2,63Z,63Z Mechanical Maintenance Supervisor,Mechanical Maintenance Supervisor
+Army,2,62O,62O Medical Corps Officer,Medical Corps Officer
+Army,2,68K,68K Medical Laboratory Specialist,Medical Laboratory Specialist
+Army,2,68J,68J Medical Logistics Specialist,Medical Logistics Specialist
+Army,2,70H,70H Medical Operations Officer,Medical Operations Officer
+Army,2,67O,67O Medical Service Corps Officer,Medical Service Corps Officer
+Army,2,65O,65O Medical Specialist Corps Officer,Medical Specialist Corps Officer
+Army,2,15U,15U Medium Helicopter Repairer,Medium Helicopter Repairer
+Army,2,68X,68X Mental Health Specialist,Mental Health Specialist
+Army,2,44B,44B Metal Worker,Metal Worker
+Army,2,25P,25P Microwave Systems Operator - Maintainer,Microwave Systems Operator - Maintainer
+Army,2,35O,35O Military Intelligence Officer,Military Intelligence Officer
+Army,2,35T,35T Military Intelligence Systems Maintainer/Integrator,Military Intelligence Systems Maintainer/Integrator
+Army,2,31B,31B Military Police,Military Police
+Army,2,31O,31O Military Police Officer,Military Police Officer
+Army,2,882A,882A Mobility Officer,Mobility Officer
+Army,2,92M,92M Mortuary Affairs Specialist,Mortuary Affairs Specialist
+Army,2,25Q,25Q Multichannel Transmission Systems Operator - Maintainer,Multichannel Transmission Systems Operator - Maintainer
+Army,2,25M,25M Multimedia Illustrator,Multimedia Illustrator
+Army,2,13M,13M Multiple Launch Rocket System (MLRS) Crewmember,Multiple Launch Rocket System (MLRS) Crewmember
+Army,2,13P,13P Multiple Launch Rocket System (MLRS) Operations/Fire Detection Specialist,Multiple Launch Rocket System (MLRS) Operations/Fire Detection Specialist
+Army,2,27M,27M Multiple Launch Rocket System (MLRS) Repairer,Multiple Launch Rocket System (MLRS) Repairer
+Army,2,25F,25F Network Switching Systems Operator - Maintainer,Network Switching Systems Operator - Maintainer
+Army,2,25N,25N Nodal Network Systems Operator - Maintainer,Nodal Network Systems Operator - Maintainer
+Army,2,66O,66O Nurse Corps Officer,Nurse Corps Officer
+Army,2,02H,02H Oboe Player,Oboe Player
+Army,2,15J,"15J OH-58D Armament, Electrical, Avionics Sytems Repairer","OH-58D Armament, Electrical, Avionics Sytems Repairer"
+Army,2,15S,15S OH-58D Helicopter Repairer,OH-58D Helicopter Repairer
+Army,2,68D,68D Operating Room Specialist,Operating Room Specialist
+Army,2,68H,68H Optical Laboratory Specialist,Optical Laboratory Specialist
+Army,2,91O,91O Ordnance Officer,Ordnance Officer
+Army,2,92R,92R Parachute Rigger,Parachute Rigger
+Army,2,27D,27D Paralegal Specialist,Paralegal Specialist
+Army,2,68G,68G Patient Administration Specialist,Patient Administration Specialist
+Army,2,14E,14E PATRIOT Fire Control Enhanced Operator and Maintainer,PATRIOT Fire Control Enhanced Operator and Maintainer
+Army,2,94S,94S PATRIOT System Repairer,PATRIOT System Repairer
+Army,2,02M,02M Percussion Player,Percussion Player
+Army,2,92L,92L Petroleum Laboratory Specialist,Petroleum Laboratory Specialist
+Army,2,92F,92F Petroleum Supply Specialist,Petroleum Supply Specialist
+Army,2,68Q,68Q Pharmacy Specialist,Pharmacy Specialist
+Army,2,21K,21K Plumber,Plumber
+Army,2,52D,52D Power Generation Equipment Repairer,Power Generation Equipment Repairer
+Army,2,68S,68S Preventive Medicine Specialist,Preventive Medicine Specialist
+Army,2,21P,21P Prime Power Production Specialist,Prime Power Production Specialist
+Army,2,920A,920A Property Accounting Technician,Property Accounting Technician
+Army,2,37F,37F Psychological Operations Specialist,Psychological Operations Specialist
+Army,2,46Z,46Z Public Affairs Chief,Public Affairs Chief
+Army,2,46Q,46Q Public Affairs Specialist,Public Affairs Specialist
+Army,2,21G,21G Quarrying Specialist,Quarrying Specialist
+Army,2,63J,63J Quartermaster and Chemical Equipment Repairer,Quartermaster and Chemical Equipment Repairer
+Army,2,92O,92O Quartermaster Officer,Quartermaster Officer
+Army,2,94M,94M Radar Repairer,Radar Repairer
+Army,2,94E,94E Radio and Communications Security Repairer,Radio and Communications Security Repairer
+Army,2,25C,25C Radio Operator - Maintainer,Radio Operator - Maintainer
+Army,2,68P,68P Radiology Specialist,Radiology Specialist
+Army,3,79R,79R Recruiter NCO,Recruiter NCO
+Army,3,79T,79T Recruiting and Retention NCO,Recruiting and Retention NCO
+Army,3,68V,68V Respiratory Specialist,Respiratory Specialist
+Army,3,79S,79S Retention NCO,Retention NCO
+Army,3,25S,25S Satellite Communication Systems Operator - Maintainer,Satellite Communication Systems Operator - Maintainer
+Army,3,25T,25T Satellite/Microwave Systems Chief,Satellite/Microwave Systems Chief
+Army,3,02L,02L Saxophone Player,Saxophone Player
+Army,3,45D,45D Self-propelled Field Artillery Turret Mechanic,Self-propelled Field Artillery Turret Mechanic
+Army,3,94Z,94Z Senior Electronic Maintenance Chief,Senior Electronic Maintenance Chief
+Army,3,42HO,42HO Senior Human Resources Officer,Senior Human Resources Officer
+Army,3,92Z,92Z Senior Noncommissioned Logistician,Senior Noncommissioned Logistician
+Army,3,25X,25X Senior Signal Sergeant,Senior Signal Sergeant
+Army,3,25O,25O Signal Officer,Signal Officer
+Army,3,25U,25U Signal Support Systems Specialist,Signal Support Systems Specialist
+Army,3,98K,98K Signals Collection/Identification Analyst,Signals Collection/Identification Analyst
+Army,3,35N,35N Signals Intelligence Analyst,Signals Intelligence Analyst
+Army,3,98C,98C Signals Intelligence Analyst,Signals Intelligence Analyst
+Army,3,98Z,98Z Signals Intelligence Senior Sergeant,Signals Intelligence Senior Sergeant
+Army,3,254A,254A Signals Systems Technician,Signals Systems Technician
+Army,3,57AO,57AO Simulations Operations Officer,Simulations Operations Officer
+Army,3,45B,45B Small Arms/Artillery Repairer,Small Arms/Artillery Repairer
+Army,3,42S,42S Special Band Member,Special Band Member
+Army,3,94F,94F Special Electronic Devices Repairer,Special Electronic Devices Repairer
+Army,3,18F,18F Special Forces Assistant Operations & Intelligence Sergeant,Special Forces Assistant Operations & Intelligence Sergeant
+Army,3,18E,18E Special Forces Communications Sergeant,Special Forces Communications Sergeant
+Army,3,18C,18C Special Forces Engineer Sergeant,Special Forces Engineer Sergeant
+Army,3,18D,18D Special Forces Medical Sergeant,Special Forces Medical Sergeant
+Army,3,18O,18O Special Forces Officer,Special Forces Officer
+Army,3,18Z,18Z Special Forces Senior Sergeant,Special Forces Senior Sergeant
+Army,3,180W,180W Special Forces Warrant Officer,Special Forces Warrant Officer
+Army,3,18B,18B Special Forces Weapons Sergeant,Special Forces Weapons Sergeant
+Army,3,52X,52X Special Purpose Equipment Repairer,Special Purpose Equipment Repairer
+Army,3,920B,920B Supply Systems Technician,Supply Systems Technician
+Army,3,53AO,53AO Systems Automation Management Officer,Systems Automation Management Officer
+Army,3,13C,13C Tactical Automated Fire Control Systems (TAFCS) Specialist,Tactical Automated Fire Control Systems (TAFCS) Specialist
+Army,3,96U,96U Tactical Unmanned Aerial Vehicle Operator,Tactical Unmanned Aerial Vehicle Operator
+Army,3,21T,21T Technical Engineering Specialist,Technical Engineering Specialist
+Army,3,94J,94J Telecommunication Terminal Device Repairer,Telecommunication Terminal Device Repairer
+Army,3,25W,25W Telecommunications Operations Chief,Telecommunications Operations Chief
+Army,3,25D,25D Telecommunications Operator - Maintainer,Telecommunications Operator - Maintainer
+Army,3,94H,"94H Test, Measurement and Diagnostic Equipment Support Specialist","Test, Measurement and Diagnostic Equipment Support Specialist"
+Army,3,21U,21U Topographic Analyst,Topographic Analyst
+Army,3,21Y,21Y Topographic Engineering Supervisor,Topographic Engineering Supervisor
+Army,3,21S,21S Topographic Surveyor,Topographic Surveyor
+Army,3,63Y,63Y Track Vehicle Mechanic,Track Vehicle Mechanic
+Army,3,63H,63H Track Vehicle Repairer,Track Vehicle Repairer
+Army,3,21Q,21Q Transmission and Distribution Specialist,Transmission and Distribution Specialist
+Army,3,88N,88N Transportation Management Coordinator,Transportation Management Coordinator
+Army,3,02E,02E Trombone Player,Trombone Player
+Army,3,02F,02F Tuba Player,Tuba Player
+Army,3,52F,52F Turbine Engine Driven Generator Repairer,Turbine Engine Driven Generator Repairer
+Army,3,15T,15T UH-60 Helicopter Repairer,UH-60 Helicopter Repairer
+Army,3,92Y,92Y Unit Supply Specialist,Unit Supply Specialist
+Army,3,52C,52C Utilities Equipment Repairer,Utilities Equipment Repairer
+Army,3,15M,15M Utility Helicopter Repairer,Utility Helicopter Repairer
+Army,3,64O,64O Veterinary Corps Officer,Veterinary Corps Officer
+Army,3,68R,68R Veterinary Food Inspection Specialist,Veterinary Food Inspection Specialist
+Army,3,25Z,25Z Visual Information Operations Chief,Visual Information Operations Chief
+Army,3,352P,352P Voice Interception Technician,Voice Interception Technician
+Army,3,92W,92W Water Treatment Specialist,Water Treatment Specialist
+Army,3,88L,88L Watercraft Engineer,Watercraft Engineer
+Army,3,88K,88K Watercraft Operator,Watercraft Operator
+Army,3,63W,63W Wheel Vehicle Repairer,Wheel Vehicle Repairer
+Army,3,94N,94N Wire Systems Equipment Repairer,Wire Systems Equipment Repairer
+Army,3,948B,948B Electronic Systems Maintenance Warrant Officer,Electronic Systems Maintenance Warrant Officer
+Army,3,96B,96B Intelligence Analyst,Intelligence Analyst
+Coast Guard,3,AMT,AMT Aviation Maintenance Technician ,Aviation Maintenance Technician 
+Coast Guard,3,AST,AST Aviation Survival Technician,Aviation Survival Technician
+Coast Guard,3,AVT,AVT Avionics Technician,Avionics Technician
+Coast Guard,3,BM,BM Boatswain's Mate,Boatswain's Mate
+Coast Guard,3,DC,DC Damage Controlman,Damage Controlman
+Coast Guard,3,EM,EM Electrician's Mate,Electrician's Mate
+Coast Guard,4,ET,ET Electronics Technician,Electronics Technician
+Coast Guard,4,FS,FS Food Service Specialist,Food Service Specialist
+Coast Guard,4,GM,GM Gunner's Mate,Gunner's Mate
+Coast Guard,4,HS,HS Health Services Technician,Health Services Technician
+Coast Guard,4,IT,IT Information Systems Technician,Information Systems Technician
+Coast Guard,4,IV,IV Investigator,Investigator
+Coast Guard,4,MK,MK Machinery Technician,Machinery Technician
+Coast Guard,4,MST,MST Marine Science Technician ,Marine Science Technician 
+Coast Guard,4,MU,MU Musician,Musician
+Coast Guard,4,OS,OS Operations Specialist ,Operations Specialist 
+Coast Guard,4,PA,PA Public Affairs Specialist ,Public Affairs Specialist 
+Coast Guard,4,PS,PS Port Security Specialist ,Port Security Specialist 
+Coast Guard,4,SK,SK Storekeeper,Storekeeper
+Coast Guard,4,YN,YN Yeoman,Yeoman
+Coast Guard,4,ME,ME Maritime Law Enforcement Specialist ,Maritime Law Enforcement Specialist 
+Coast Guard,4,IS,IS Intelligence Specialist ,Intelligence Specialist 
+Coast Guard,4,AE,AE Aviation Electrician's Mate ,Aviation Electrician's Mate 
+Coast Guard,4,AM,AM Aviation Metalsmith ,Aviation Metalsmith 
+Coast Guard,4,DP,DP Data Processing Technician ,Data Processing Technician 
+Coast Guard,4,FT,FT Fire Control Technician ,Fire Control Technician 
+Coast Guard,4,QM,QM Quartermaster,Quartermaster
+Coast Guard,4,RD,RD Radarman,Radarman
+Coast Guard,4,RM/TC,RM/TC Radioman/Telecommunications Specialist,Radioman/Telecommunications Specialist
+Coast Guard,4,TT,TT Telephone Technician ,Telephone Technician 
+Coast Guard,4,, Aviator,Aviator
+Coast Guard,4,, Aviation Maintenance Officer,Aviation Maintenance Officer
+Coast Guard,4,, Flight Safety Officer,Flight Safety Officer
+Coast Guard,4,, Computer Information Systems Management,Computer Information Systems Management
+Coast Guard,4,, Electrical Engineering,Electrical Engineering
+Coast Guard,4,, Telecommunications Management,Telecommunications Management
+Coast Guard,4,, Engineering Logistics,Engineering Logistics
+Coast Guard,4,, Civil Engineering,Civil Engineering
+Coast Guard,4,, Naval Engineering,Naval Engineering
+Coast Guard,4,, Financial Resource Management,Financial Resource Management
+Coast Guard,4,, Health Services,Health Services
+Coast Guard,4,, Legal,Legal
+Coast Guard,4,, Marine Safety,Marine Safety
+Coast Guard,5,, Operations - Afloat,Operations - Afloat
+Coast Guard,5,, Operations - Ashore,Operations - Ashore
+Coast Guard,5,, Operations - Intelligence,Operations - Intelligence
+Coast Guard,5,, Operations - Law Enforcement,Operations - Law Enforcement
+Marines,5,3533,3533 Logistics Vehicle System Operator,Logistics Vehicle System Operator
+Marines,5,3538,3538 Licensing Examiner,Licensing Examiner
+Marines,5,311,311 Rifleman,Rifleman
+Marines,5,312,312 Riverine Assault Craft,Riverine Assault Craft
+Marines,5,313,313 LAV Crewman,LAV Crewman
+Marines,5,314,314 Rigid Raiding Craft,Rigid Raiding Craft
+Marines,5,316,316 Combat Rubber Reconnaissance Craft,Combat Rubber Reconnaissance Craft
+Marines,5,317,317 Scout Sniper,Scout Sniper
+Marines,5,321,321 Reconnaissance Man,Reconnaissance Man
+Marines,5,323,"323 Reconnaissance Man, Parachute Qualified","Reconnaissance Man, Parachute Qualified"
+Marines,5,324,"324 Reconnaissance Man, Combatant Diver Qualified","Reconnaissance Man, Combatant Diver Qualified"
+Marines,5,326,"326 Reconnaissance Man, Parachute and Combatant Diver Qualified","Reconnaissance Man, Parachute and Combatant Diver Qualified"
+Marines,5,331,331 Machine Gunner,Machine Gunner
+Marines,5,341,341 Mortarman,Mortarman
+Marines,5,351,351 Infantry Assaultman,Infantry Assaultman
+Marines,5,352,352 Anti-tank Missileman,Anti-tank Missileman
+Marines,5,369,369 Infantry Unit Leader,Infantry Unit Leader
+Marines,5,121,121 Personnel Clerk,Personnel Clerk
+Marines,5,143,143 Career Retention Specialist,Career Retention Specialist
+Marines,5,147,147 Equal Opportunity Advisor (EOA),Equal Opportunity Advisor (EOA)
+Marines,5,149,149 Substance Abuse Control Specialist,Substance Abuse Control Specialist
+Marines,5,151,151 Administrative Clerk,Administrative Clerk
+Marines,5,161,161 Postal Clerk,Postal Clerk
+Marines,5,171,171 Manpower Information Systems,Manpower Information Systems
+Marines,5,193,193 Personnel/Administrative Chief,Personnel/Administrative Chief
+Marines,6,211,211 Counterintelligence/HUMINT Specialist,Counterintelligence/HUMINT Specialist
+Marines,6,212,212 Technical Surveillance Countermeasures,Technical Surveillance Countermeasures
+Marines,6,231,231 Intelligence Specialist,Intelligence Specialist
+Marines,6,241,241 Imagery Analysis Specialist,Imagery Analysis Specialist
+Marines,6,261,261 Geographic Intelligence Specialist,Geographic Intelligence Specialist
+Marines,6,291,291 Intelligence Chief,Intelligence Chief
+Marines,6,411,411 Maintenance Management Specialist,Maintenance Management Specialist
+Marines,6,431,431 Logistics/Embarkation Specialist,Logistics/Embarkation Specialist
+Marines,6,451,451 Airborne and Air Delivery Specialist,Airborne and Air Delivery Specialist
+Marines,6,471,471 Personnel Retrieval and Processing Specialist,Personnel Retrieval and Processing Specialist
+Marines,6,472,472 Personnel Retrieval and Processing Technician,Personnel Retrieval and Processing Technician
+Marines,6,481,481 Landing Support Specialist,Landing Support Specialist
+Marines,6,491,491 Logistics Mobility Chief,Logistics Mobility Chief
+Marines,6,511,511 MAGTF Planning Specialist,MAGTF Planning Specialist
+Marines,6,521,521 Psychological Operations Noncommissioned Officer,Psychological Operations Noncommissioned Officer
+Marines,6,531,531 Civil Affairs Noncommissioned Officer,Civil Affairs Noncommissioned Officer
+Marines,6,612,612 Field Wireman,Field Wireman
+Marines,6,613,613 Construction Wireman,Construction Wireman
+Marines,6,614,614 Unit Level Circuit Switch (ULCS) Operator/Maintainer,Unit Level Circuit Switch (ULCS) Operator/Maintainer
+Marines,6,618,618 Electronic Switching Operator/Maintainer,Electronic Switching Operator/Maintainer
+Marines,6,619,619 Wire Chief,Wire Chief
+Marines,6,621,621 Field Radio Operator,Field Radio Operator
+Marines,6,622,622 Digital (Multi-channel) Wideband Transmission Equipment Operator,Digital (Multi-channel) Wideband Transmission Equipment Operator
+Marines,6,623,623 Tropospheric Scatter Radio Multi-channel Equipment Operator,Tropospheric Scatter Radio Multi-channel Equipment Operator
+Marines,6,627,627 SHF Satellite Communications Operator-Maintainer,SHF Satellite Communications Operator-Maintainer
+Marines,6,628,628 EHF Satellite Communications Operator-Maintainer,EHF Satellite Communications Operator-Maintainer
+Marines,6,629,629 Radio Chief,Radio Chief
+Marines,6,648,648 Strategic Spectrum Manager,Strategic Spectrum Manager
+Marines,6,651,651 Data Network Specialist,Data Network Specialist
+Marines,6,652,652 Certification Authority Workstation,Certification Authority Workstation
+Marines,6,653,653 Defense Message System,Defense Message System
+Marines,6,656,656 Tactical Network Specialist,Tactical Network Specialist
+Marines,6,658,658 Tactical Data Network Gateway Systems Administrator,Tactical Data Network Gateway Systems Administrator
+Marines,6,659,659 Data Chief,Data Chief
+Marines,6,681,681 Information Security Technician,Information Security Technician
+Marines,6,689,689 Information Assurance Technician,Information Assurance Technician
+Marines,6,699,699 Communications Chief,Communications Chief
+Marines,6,811,811 Field Artillery Cannoneer,Field Artillery Cannoneer
+Marines,6,814,814 High Mobility Artillery Rocket System,High Mobility Artillery Rocket System
+Marines,6,842,842 Field Artillery Radar Operator,Field Artillery Radar Operator
+Marines,6,844,844 Field Artillery Fire Control Man,Field Artillery Fire Control Man
+Marines,6,847,847 Artillery Meteorological Man,Artillery Meteorological Man
+Marines,6,848,848 Field Artillery Operations Man,Field Artillery Operations Man
+Marines,6,861,861 Fire Support Man,Fire Support Man
+Marines,6,911,911 Drill Instructor,Drill Instructor
+Marines,6,913,913 Marine Combat Instructor,Marine Combat Instructor
+Marines,6,916,916 Martial Arts Instructor,Martial Arts Instructor
+Marines,6,917,917 Martial Arts Instructor-Trainer,Martial Arts Instructor-Trainer
+Marines,6,918,918 Water Safety/Survival Instructor,Water Safety/Survival Instructor
+Marines,6,931,931 Marksmanship Instructor,Marksmanship Instructor
+Marines,6,932,932 Small Arms Weapons Instructor,Small Arms Weapons Instructor
+Marines,6,933,933 Marksmanship Coach,Marksmanship Coach
+Marines,6,1141,1141 Electrician,Electrician
+Marines,6,1142,1142 Engineer Equipment Electrical Systems Technician,Engineer Equipment Electrical Systems Technician
+Marines,6,1161,1161 Refrigeration and Air Conditioning Technician,Refrigeration and Air Conditioning Technician
+Marines,6,1169,1169 Utilities Chief,Utilities Chief
+Marines,6,1171,1171 Water Support Technician,Water Support Technician
+Marines,6,1316,1316 Metal Worker,Metal Worker
+Marines,6,1341,1341 Engineer Equipment Mechanic,Engineer Equipment Mechanic
+Marines,6,1342,1342 Small Craft Mechanic,Small Craft Mechanic
+Marines,6,1343,1343 Assault Breacher Vehicle/Joint Assault Bridge (JAB) Mechanic,Assault Breacher Vehicle/Joint Assault Bridge (JAB) Mechanic
+Marines,6,1345,1345 Engineer Equipment Operator,Engineer Equipment Operator
+Marines,6,1349,1349 Engineer Equipment Chief,Engineer Equipment Chief
+Marines,6,1361,1361 Engineer Assistant,Engineer Assistant
+Marines,6,1371,1371 Combat Engineer,Combat Engineer
+Marines,6,1372,1372 Assault Breacher Vehicle,Assault Breacher Vehicle
+Marines,6,1812,1812 M1A1 Tank Crewman,M1A1 Tank Crewman
+Marines,6,1833,1833 Assault Amphibious Vehicle (AAV) Crewmember,Assault Amphibious Vehicle (AAV) Crewmember
+Marines,6,1834,1834 Expeditionary Fighting Vehicle (EFV) Crewman,Expeditionary Fighting Vehicle (EFV) Crewman
+Marines,6,2111,2111 Small Arms Repairer/Technician,Small Arms Repairer/Technician
+Marines,6,2112,2112 Precision Weapons Repairer/Technician,Precision Weapons Repairer/Technician
+Marines,6,2131,2131 Towed Artillery Systems Technician,Towed Artillery Systems Technician
+Marines,6,2141,2141 Assault Amphibious Vehicle (AAV) Repairer/Technician,Assault Amphibious Vehicle (AAV) Repairer/Technician
+Marines,6,2146,2146 Main Battle Tank (MBT) Repairer/Technician,Main Battle Tank (MBT) Repairer/Technician
+Marines,6,2147,2147 Light Armored Vehicle (LAV) Repairer/Technician,Light Armored Vehicle (LAV) Repairer/Technician
+Marines,6,2148,2148 Expeditionary Fighting Vehicle (EFV) Repairer/Technician,Expeditionary Fighting Vehicle (EFV) Repairer/Technician
+Marines,6,2149,2149 Ordnance Vehicle Maintenance Chief,Ordnance Vehicle Maintenance Chief
+Marines,6,2161,2161 Machinist,Machinist
+Marines,6,2171,2171 Electro-Optical Ordnance Repairer,Electro-Optical Ordnance Repairer
+Marines,6,2181,2181 Senior Ground Ordnance Weapons Chief,Senior Ground Ordnance Weapons Chief
+Marines,6,7312,"7312 Fixed-Wing Transport Aircraft Specialist, KC-130J","Fixed-Wing Transport Aircraft Specialist, KC-130J"
+Marines,6,7313,"7313 Helicopter Specialist, AH-1Z/UH-1Y","Helicopter Specialist, AH-1Z/UH-1Y"
+Marines,6,7314,7314 Unmanned Aerial Vehicle (UAV) Air Vehicle Operator,Unmanned Aerial Vehicle (UAV) Air Vehicle Operator
+Marines,6,7374,7374 Vertical Takeoff Unmanned Aerial Vehicle Specialist,Vertical Takeoff Unmanned Aerial Vehicle Specialist
+Marines,6,7212,7212 Low Altitude Air Defense (LAAD) Gunner,Low Altitude Air Defense (LAAD) Gunner
+Marines,6,7234,7234 Air Control Electronics Operator,Air Control Electronics Operator
+Marines,6,7236,7236 Tactical Air Defense Controller,Tactical Air Defense Controller
+Marines,6,7242,7242 Air Support Operations Operator,Air Support Operations Operator
+Marines,6,7251,7251 Air Traffic Controller-Trainee,Air Traffic Controller-Trainee
+Marines,6,7252,7252 Air Traffic Controller-Tower,Air Traffic Controller-Tower
+Marines,6,7253,7253 Air Traffic Controller-Radar Arrival/Departure Controller,Air Traffic Controller-Radar Arrival/Departure Controller
+Marines,6,7254,7254 Air Traffic Controller-Radar Approach Controller,Air Traffic Controller-Radar Approach Controller
+Marines,6,7257,7257 Air Traffic Controller,Air Traffic Controller
+Marines,6,7277,7277 Weapons and Tactics Instructor-Air Control,Weapons and Tactics Instructor-Air Control
+Marines,6,7291,7291 Senior Air Traffic Controller,Senior Air Traffic Controller
+Marines,6,7011,7011 Expeditionary Airfield Systems Technician,Expeditionary Airfield Systems Technician
+Marines,6,7041,7041 Aviation Operations Specialist,Aviation Operations Specialist
+Marines,6,7051,7051 Aircraft Rescue and Firefighting Specialist,Aircraft Rescue and Firefighting Specialist
+Marines,6,6821,6821 METOC Observer,METOC Observer
+Marines,6,6842,6842 METOC Analyst Forecaster,METOC Analyst Forecaster
+Marines,6,6852,6852 METOC Impact Analyst,METOC Impact Analyst
+Marines,6,6617,6617 Enlisted Aviation Logistician,Enlisted Aviation Logistician
+Marines,6,6672,6672 Aviation Supply Specialist,Aviation Supply Specialist
+Marines,6,6694,6694 Aviation Information Systems (AIS) Specialist,Aviation Information Systems (AIS) Specialist
+Marines,6,6312,"6312 Aircraft Communications/Navigation/Radar Systems Technician, AV-8","Aircraft Communications/Navigation/Radar Systems Technician, AV-8"
+Marines,6,6313,"6313 Aircraft Communications/Navigation/Radar Systems Technician, EA-6","Aircraft Communications/Navigation/Radar Systems Technician, EA-6"
+Marines,6,6314,6314 Unmanned Aerial System (UAS) Avionics Technician,Unmanned Aerial System (UAS) Avionics Technician
+Marines,6,6316,"6316 Aircraft Communications/Navigation Systems Technician, KC-130","Aircraft Communications/Navigation Systems Technician, KC-130"
+Marines,6,6317,"6317 Aircraft Communications/Navigation/Radar Systems Technician, F/A-18","Aircraft Communications/Navigation/Radar Systems Technician, F/A-18"
+Marines,6,6322,"6322 Aircraft Communications/Navigation Electrical Systems Technician, CH-46","Aircraft Communications/Navigation Electrical Systems Technician, CH-46"
+Marines,6,6323,"6323 Aircraft Communications/Navigation/Electrical Systems Technician, CH-53","Aircraft Communications/Navigation/Electrical Systems Technician, CH-53"
+Marines,6,6324,"6324 Aircraft Communications/Navigation/Electrical/Weapon Systems Technician, U/AH-l","Aircraft Communications/Navigation/Electrical/Weapon Systems Technician, U/AH-l"
+Marines,6,6326,"6326 Aircraft Communications/Navigation/Electrical/Systems Technician, V-22","Aircraft Communications/Navigation/Electrical/Systems Technician, V-22"
+Marines,6,6332,"6332 Aircraft Electrical Systems Technician, AV-8","Aircraft Electrical Systems Technician, AV-8"
+Marines,6,6333,"6333 Aircraft Electrical Systems Technician, EA-6","Aircraft Electrical Systems Technician, EA-6"
+Marines,6,6336,"6336 Aircraft Electrical Systems Technician, KC-130","Aircraft Electrical Systems Technician, KC-130"
+Marines,6,6337,"6337 Aircraft Electrical Systems Technician, F/A-18","Aircraft Electrical Systems Technician, F/A-18"
+Marines,6,6386,"6386 Aircraft Electronic Countermeasures Systems Technician, EA-6B","Aircraft Electronic Countermeasures Systems Technician, EA-6B"
+Marines,6,6391,6391 Avionics Maintenance Chief,Avionics Maintenance Chief
+Marines,6,6412,"6412 Aircraft Communications Systems Technician, IMA","Aircraft Communications Systems Technician, IMA"
+Marines,6,6413,"6413 Aircraft Navigation Systems Technician, I FF/RADAR/TACAN , IMA","Aircraft Navigation Systems Technician, I FF/RADAR/TACAN , IMA"
+Marines,7,6414,"6414 Advanced Aircraft Communications/Navigation Systems Technician, IMA","Advanced Aircraft Communications/Navigation Systems Technician, IMA"
+Marines,7,6422,"6422 Aircraft Cryptographic Systems Technician, IMA","Aircraft Cryptographic Systems Technician, IMA"
+Marines,7,6423,"6423 Aviation Electronic Microminiature/Instrument and Cable Repair Technician, IMA","Aviation Electronic Microminiature/Instrument and Cable Repair Technician, IMA"
+Marines,7,6432,"6432 Aircraft Electrical/lnstrument/Flight Control Systems Technician, Fixed Wing, IMA","Aircraft Electrical/lnstrument/Flight Control Systems Technician, Fixed Wing, IMA"
+Marines,7,6433,"6433 Aircraft Electrical/Instrument/Flight Control Systems Technician, Helicopter, IMA","Aircraft Electrical/Instrument/Flight Control Systems Technician, Helicopter, IMA"
+Marines,7,6434,"6434 Advanced Aircraft Electrical/Instrument/Flight Control Systems Technician, IMA","Advanced Aircraft Electrical/Instrument/Flight Control Systems Technician, IMA"
+Marines,7,6461,"6461 Hybrid Test Set Technician, IMA","Hybrid Test Set Technician, IMA"
+Marines,7,6462,"6462 Avionics Test Set (ATS) Technician, IMA","Avionics Test Set (ATS) Technician, IMA"
+Marines,7,6463,"6463 CASS HP Configuration Operator/Maintainer/Technician, IMA","CASS HP Configuration Operator/Maintainer/Technician, IMA"
+Marines,7,6464,"6464 Aircraft Inertial Navigation System Technician, IMA","Aircraft Inertial Navigation System Technician, IMA"
+Marines,7,6466,6466 CASS EO Configuration Operator/Maintainer/Technician/IMA,CASS EO Configuration Operator/Maintainer/Technician/IMA
+Marines,7,6467,"6467 Consolidated Automatic Support System (CASS) Technician, IMA","Consolidated Automatic Support System (CASS) Technician, IMA"
+Marines,7,6469,"6469 CASS Test Station IMA Advanced Maintenance Technician, IMA","CASS Test Station IMA Advanced Maintenance Technician, IMA"
+Marines,7,6482,"6482 Aircraft Electronic Countermeasures Systems Technician, Fixed-Wing, IMA","Aircraft Electronic Countermeasures Systems Technician, Fixed-Wing, IMA"
+Marines,7,6483,"6483 Aircraft Electronic Countermeasures Systems Technician, Helicopter, IMA","Aircraft Electronic Countermeasures Systems Technician, Helicopter, IMA"
+Marines,7,6484,"6484 CASS EW Configuration Operator/Maintainer/Technician, IMA","CASS EW Configuration Operator/Maintainer/Technician, IMA"
+Marines,7,6492,"6492 Aviation Precision Measurement Equipment/Calibration and Repair Technician, IMA","Aviation Precision Measurement Equipment/Calibration and Repair Technician, IMA"
+Marines,7,6493,"6493 Aviation Meteorological Equipment Technician, OMA/IMA","Aviation Meteorological Equipment Technician, OMA/IMA"
+Marines,7,6012,6012 Aviation Maintenance Controller/Production Controller,Aviation Maintenance Controller/Production Controller
+Marines,7,6018,"6018 Aviation Quality Assurance Representative (QAR) , Collateral Duty Quality Assurance Representative (CDQAR), and Collateral Duty Inspector (COI)","Aviation Quality Assurance Representative (QAR) , Collateral Duty Quality Assurance Representative (CDQAR), and Collateral Duty Inspector (COI)"
+Marines,7,6019,6019 Aircraft Maintenance Chief,Aircraft Maintenance Chief
+Marines,7,6023,6023 Aircraft Power Plants Test Cell Operator,Aircraft Power Plants Test Cell Operator
+Marines,7,6033,6033 Aircraft Nondestructive Inspection Technician,Aircraft Nondestructive Inspection Technician
+Marines,7,6042,6042 Individual Material Readiness List (IMRS) Asset Manager,Individual Material Readiness List (IMRS) Asset Manager
+Marines,7,6043,6043 Aircraft Welder,Aircraft Welder
+Marines,7,6046,6046 Aircraft Maintenance Administration Specialist,Aircraft Maintenance Administration Specialist
+Marines,7,6048,6048 Flight Equipment Technician,Flight Equipment Technician
+Marines,7,6049,6049 NALCOMIS Application Administrator/Analyst,NALCOMIS Application Administrator/Analyst
+Marines,7,6062,6062 Aircraft Intermediate Level Hydraulic/Pneumatic Mechanic,Aircraft Intermediate Level Hydraulic/Pneumatic Mechanic
+Marines,7,6072,6072 Aircraft Maintenance Support Equipment Hydraulic/Pneumatic/Structures Mechanic,Aircraft Maintenance Support Equipment Hydraulic/Pneumatic/Structures Mechanic
+Marines,7,6073,6073 Aircraft Maintenance Support Equipment Electrician/Refrigeration Mechanic,Aircraft Maintenance Support Equipment Electrician/Refrigeration Mechanic
+Marines,7,6074,6074 Cryogenics Equipment Operator,Cryogenics Equipment Operator
+Marines,7,6092,6092 Aircraft Intermediate Level Structures Mechanic,Aircraft Intermediate Level Structures Mechanic
+Marines,7,6111,6111 Helicopter/Tiltrotor Mechanic-Trainee,Helicopter/Tiltrotor Mechanic-Trainee
+Marines,7,6112,"6112 Helicopter Mechanic, CH-46","Helicopter Mechanic, CH-46"
+Marines,7,6113,"6113 Helicopter Mechanic, CH-53","Helicopter Mechanic, CH-53"
+Marines,7,6114,"6114 Helicopter Mechanic, UH/AH-1","Helicopter Mechanic, UH/AH-1"
+Marines,7,6116,"6116 Tiltrotor Mechanic, MV-22","Tiltrotor Mechanic, MV-22"
+Marines,7,6122,"6122 Helicopter Power Plants Mechanic, T-5E1","Helicopter Power Plants Mechanic, T-5E1"
+Marines,7,6123,"6123 Helicopter Power Plants Mechanic, T-64","Helicopter Power Plants Mechanic, T-64"
+Marines,7,6124,"6124 Helicopter Power Plants Mechanic, T-400/T-700","Helicopter Power Plants Mechanic, T-400/T-700"
+Marines,7,6132,6132 Helicopter/Tiltrotor Dynamic Components Mechanic,Helicopter/Tiltrotor Dynamic Components Mechanic
+Marines,7,6152,"6152 Helicopter Airframe Mechanic, CH-46","Helicopter Airframe Mechanic, CH-46"
+Marines,7,6153,"6153 Helicopter Airframe Mechanic, CH-53","Helicopter Airframe Mechanic, CH-53"
+Marines,7,6154,"6154 Helicopter Airframe Mechanic, UH/AH-1","Helicopter Airframe Mechanic, UH/AH-1"
+Marines,7,6156,"6156 Tiltrotor Airframe Mechanic, MV-22","Tiltrotor Airframe Mechanic, MV-22"
+Marines,7,6162,6162 Presidential Support Specialist,Presidential Support Specialist
+Marines,7,6172,"6172 Helicopter Crew Chief, CH-46","Helicopter Crew Chief, CH-46"
+Marines,7,6173,"6173 Helicopter Crew Chief, CH-53","Helicopter Crew Chief, CH-53"
+Marines,7,6174,"6174 Helicopter Crew Chief, UH-1","Helicopter Crew Chief, UH-1"
+Marines,7,6176,"6176 Tiltrotor Crew Chief, MV-22","Tiltrotor Crew Chief, MV-22"
+Marines,7,6177,6177 Weapons and Tactics Crew Chief Instructor,Weapons and Tactics Crew Chief Instructor
+Marines,7,6178,6178 VH-GON Presidential Helicopter Crew Chief,VH-GON Presidential Helicopter Crew Chief
+Marines,7,6179,6179 VH-3D Presidential Helicopter Crew Chief,VH-3D Presidential Helicopter Crew Chief
+Marines,7,6199,6199 Enlisted Aircrew/Aerial Observer/Gunner,Enlisted Aircrew/Aerial Observer/Gunner
+Marines,7,6212,"6212 Fixed-Wing Aircraft Mechanic, AV-8/TAV-S","Fixed-Wing Aircraft Mechanic, AV-8/TAV-S"
+Marines,7,6213,"6213 Fixed-Wing Aircraft Mechanic, EA-6","Fixed-Wing Aircraft Mechanic, EA-6"
+Marines,7,6214,6214 Unmanned Aerial Vehicle (UAV) Mechanic,Unmanned Aerial Vehicle (UAV) Mechanic
+Marines,7,6216,"6216 Fixed-Wing Aircraft Mechanic, KC-130","Fixed-Wing Aircraft Mechanic, KC-130"
+Marines,7,6217,"6217 Fixed-Wing Aircraft Mechanic, F/A-18","Fixed-Wing Aircraft Mechanic, F/A-18"
+Marines,7,6222,"6222 Fixed Wing Aircraft Power Plants Mechanic, F-402","Fixed Wing Aircraft Power Plants Mechanic, F-402"
+Marines,7,6223,"6223 Fixed-Wing Aircraft Power Plants Mechanic, J-52","Fixed-Wing Aircraft Power Plants Mechanic, J-52"
+Marines,7,6226,"6226 Fixed-Wing Aircraft Power Plants Mechanic, T-56","Fixed-Wing Aircraft Power Plants Mechanic, T-56"
+Marines,7,6227,"6227 Fixed-Wing Aircraft Power Plants Mechanic, F-404","Fixed-Wing Aircraft Power Plants Mechanic, F-404"
+Marines,7,6242,"6242 Fixed-Wing Aircraft Flight Engineer, KC-130","Fixed-Wing Aircraft Flight Engineer, KC-130"
+Marines,7,6243,"6243 Fixed-Wing Transport Aircraft Specialist, C-9","Fixed-Wing Transport Aircraft Specialist, C-9"
+Marines,7,6244,"6244 Fixed-Wing Transport Aircraft Specialist, C-12","Fixed-Wing Transport Aircraft Specialist, C-12"
+Marines,7,6246,"6246 Fixed-Wing Transport Aircraft Specialist, C-20","Fixed-Wing Transport Aircraft Specialist, C-20"
+Marines,7,6247,"6247 Fixed-Wing Transport Aircraft Specialist, UC-35","Fixed-Wing Transport Aircraft Specialist, UC-35"
+Marines,8,6251,6251 Fixed-Wing Aircraft Airframe Mechanic-Trainee,Fixed-Wing Aircraft Airframe Mechanic-Trainee
+Marines,8,6252,"6252 Fixed-Wing Aircraft Airframe Mechanic, AV-8/TAV-8","Fixed-Wing Aircraft Airframe Mechanic, AV-8/TAV-8"
+Marines,8,6253,"6253 Fixed-Wing Aircraft Airframe Mechanic, EA-6","Fixed-Wing Aircraft Airframe Mechanic, EA-6"
+Marines,8,6256,"6256 Fixed-Wing Aircraft Airframe Mechanic, KC-130","Fixed-Wing Aircraft Airframe Mechanic, KC-130"
+Marines,8,6257,"6257 Fixed-Wing Aircraft Airframe Mechanic, F/A-18","Fixed-Wing Aircraft Airframe Mechanic, F/A-18"
+Marines,8,6276,"6276 Fixed-Wing Aircraft Crew Chief, KC-130","Fixed-Wing Aircraft Crew Chief, KC-130"
+Marines,8,6281,6281 Fixed-Wing Aircraft Safety Equipment Mechanic-Trainee,Fixed-Wing Aircraft Safety Equipment Mechanic-Trainee
+Marines,8,6282,"6282 Fixed-Wing Aircraft Safety Equipment Mechanic, AV-8/TJW-B","Fixed-Wing Aircraft Safety Equipment Mechanic, AV-8/TJW-B"
+Marines,8,6283,"6283 Fixed-Wing Aircraft Safety Equipment Mechanic, EA-6","Fixed-Wing Aircraft Safety Equipment Mechanic, EA-6"
+Marines,8,6286,"6286 Fixed-Wing Aircraft Safety Equipment Mechanic, KC-130","Fixed-Wing Aircraft Safety Equipment Mechanic, KC-130"
+Marines,8,6287,"6287 Fixed-Wing Aircraft Safety Equipment Mechanic, F/A-18","Fixed-Wing Aircraft Safety Equipment Mechanic, F/A-18"
+Marines,8,5912,5912 Avenger System Maintainer,Avenger System Maintainer
+Marines,8,5939,5939 Aviation Communication Systems Technician,Aviation Communication Systems Technician
+Marines,8,5942,5942 Aviation Radar Repairer,Aviation Radar Repairer
+Marines,8,5948,5948 Aviation Radar Technician,Aviation Radar Technician
+Marines,8,5952,5952 Air Traffic Control Navigational Aids Technician,Air Traffic Control Navigational Aids Technician
+Marines,8,5953,5953 Air Traffic Control Radar Technician,Air Traffic Control Radar Technician
+Marines,8,5954,5954 Air Traffic Control Communications Technician,Air Traffic Control Communications Technician
+Marines,8,5959,5959 Air Traffic Control Systems Maintenance,Air Traffic Control Systems Maintenance
+Marines,8,5974,5974 Tactical Data Systems Administrator,Tactical Data Systems Administrator
+Marines,8,5979,5979 Tactical Air Operations Module/Air Defense Technician,Tactical Air Operations Module/Air Defense Technician
+Marines,8,5993,5993 Electronics Maintenance Chief,Electronics Maintenance Chief
+Marines,8,5811,5811 Military Police,Military Police
+Marines,8,5812,5812 Working Dog Handler,Working Dog Handler
+Marines,8,5813,5813 Accident Investigator,Accident Investigator
+Marines,8,5814,5814 Physical Security Specialist,Physical Security Specialist
+Marines,8,5816,5816 Special Reaction Team (3RT) Member,Special Reaction Team (3RT) Member
+Marines,8,5819,5819 Military Police Investigator (MPI),Military Police Investigator (MPI)
+Marines,8,5821,5821 Criminal Investigator CID Agent,Criminal Investigator CID Agent
+Marines,8,5822,5822 Forensic Psycho-physiologist (Polygraph Examiner),Forensic Psycho-physiologist (Polygraph Examiner)
+Marines,8,5831,5831 Correctional Specialist,Correctional Specialist
+Marines,8,5832,5832 Correctional Counselor,Correctional Counselor
+Marines,8,5711,"5711 Chemical, Biological, Radiological, and Nuclear (CBRN) Defense Specialist","Chemical, Biological, Radiological, and Nuclear (CBRN) Defense Specialist"
+Marines,8,5731,"5731 Joint Chemical, Biological, Radiological, Nuclear Reconnaissance System Operator (JCBRNRS) LAV Operator","Joint Chemical, Biological, Radiological, Nuclear Reconnaissance System Operator (JCBRNRS) LAV Operator"
+Marines,8,5511,"5511 Member, ""The President's Own,"" United States Marine Band","Member, ""The President's Own,"" United States Marine Band"
+Marines,8,5512,"5512 Member, ""The Commandant's Own,"" U.S. Marine Drum & Bugle Corps","Member, ""The Commandant's Own,"" U.S. Marine Drum & Bugle Corps"
+Marines,8,5517,5517 Bandmaster,Bandmaster
+Marines,8,5519,5519 Enlisted Conductor,Enlisted Conductor
+Marines,8,5521,5521 Drum Major,Drum Major
+Marines,8,5522,5522 Small Ensemble Leader,Small Ensemble Leader
+Marines,8,5523,5523 Instrument Repair Technician,Instrument Repair Technician
+Marines,8,5524,5524 Musician,Musician
+Marines,8,5526,"5526 Musician, Oboe","Musician, Oboe"
+Marines,8,5528,"5528 Musician, Bassoon","Musician, Bassoon"
+Marines,8,5534,"5534 Musician, Clarinet","Musician, Clarinet"
+Marines,8,5536,"5536 Musician, Flute/Piccolo","Musician, Flute/Piccolo"
+Marines,8,5537,"5537 Musician, Saxophone","Musician, Saxophone"
+Marines,8,5541,"5541 Musician, Trumpet","Musician, Trumpet"
+Marines,8,5543,"5543 Musician, Euphonium","Musician, Euphonium"
+Marines,8,5544,"5544 Musician, Horn","Musician, Horn"
+Marines,8,5546,"5546 Musician, Trombone","Musician, Trombone"
+Marines,8,5547,"5547 Musician, Tuba/Sousaphone","Musician, Tuba/Sousaphone"
+Marines,8,5548,"5548 Musician, Electric Bass","Musician, Electric Bass"
+Marines,8,5563,"5563 Musician, Percussion (Drums, Tympani, and Mallets)","Musician, Percussion (Drums, Tympani, and Mallets)"
+Marines,8,5566,"5566 Musician, Guitar","Musician, Guitar"
+Marines,8,4611,4611 Combat Illustrator,Combat Illustrator
+Marines,8,4612,4612 Combat Lithographer,Combat Lithographer
+Marines,8,4641,4641 Combat Photographer,Combat Photographer
+Marines,8,4671,4671 Combat Videographer,Combat Videographer
+Marines,8,4691,4691 Visual Information Chief,Visual Information Chief
+Marines,8,4421,4421 Legal Services Specialist,Legal Services Specialist
+Marines,8,4429,4429 Legal Services Reporter,Legal Services Reporter
+Marines,8,4313,4313 Broadcast Journalist,Broadcast Journalist
+Marines,8,4341,4341 Combat Correspondent,Combat Correspondent
+Marines,8,4133,4133 Marine Corps Community Services Marine,Marine Corps Community Services Marine
+Marines,8,3521,3521 Automotive Organizational Mechanic,Automotive Organizational Mechanic
+Marines,8,3522,3522 Automotive Intermediate Mechanic,Automotive Intermediate Mechanic
+Marines,8,3523,3523 Logistics Vehicle System Mechanic,Logistics Vehicle System Mechanic
+Marines,8,3524,3524 Fuel and Electrical Systems Mechanic,Fuel and Electrical Systems Mechanic
+Marines,8,3526,3526 Crash/Fire/Rescue Vehicle Mechanic,Crash/Fire/Rescue Vehicle Mechanic
+Marines,8,3529,3529 Motor Transport Maintenance Chief,Motor Transport Maintenance Chief
+Marines,8,3531,3531 Motor Vehicle Operator,Motor Vehicle Operator
+Marines,8,3534,3534 Semitrailer Refueler Operator,Semitrailer Refueler Operator
+Marines,8,3536,3536 Vehicle Recovery Operator,Vehicle Recovery Operator
+Marines,8,3537,3537 Motor Transport Operations Chief,Motor Transport Operations Chief
+Marines,8,3432,3432 Finance Technician,Finance Technician
+Marines,8,3441,3441 NAF Audit Technician,NAF Audit Technician
+Marines,8,3451,3451 Financial Management Resource Analyst,Financial Management Resource Analyst
+Marines,8,3372,3372 Marine Aide,Marine Aide
+Marines,8,3381,"3381 Food Service, Specialist","Food Service, Specialist"
+Marines,8,3112,3112 Traffic Management Specialist,Traffic Management Specialist
+Marines,8,3043,3043 Supply Administration and Operations Specialist,Supply Administration and Operations Specialist
+Marines,8,3044,3044 Contract Specialist,Contract Specialist
+Marines,8,3051,3051 Warehouse Clerk,Warehouse Clerk
+Marines,8,3052,3052 Packaging Specialist,Packaging Specialist
+Marines,8,2821,2821 Technical Controller Marine,Technical Controller Marine
+Marines,8,2822,2822 Electronic Switching Equipment Technician,Electronic Switching Equipment Technician
+Marines,8,2823,2823 Technical Control Chief,Technical Control Chief
+Marines,8,2827,2827 Tactical Electronic Reconnaissance Process/Evaluation Systems (TERPES) Technician,Tactical Electronic Reconnaissance Process/Evaluation Systems (TERPES) Technician
+Marines,8,2831,2831 AN/TRC-170 Technician,AN/TRC-170 Technician
+Marines,8,2834,2834 Satellite Communications (SATCOM) Technician,Satellite Communications (SATCOM) Technician
+Marines,8,2844,2844 Ground Communications Organizational Repairer,Ground Communications Organizational Repairer
+Marines,8,2846,2846 Ground Radio Intermediate Repairer,Ground Radio Intermediate Repairer
+Marines,8,2847,2847 Telephone Systems/PersonalComputer Intermediate Repairer,Telephone Systems/PersonalComputer Intermediate Repairer
+Marines,8,2848,2848 Tactical Remote Sensor System (TRSS) Maintainer,Tactical Remote Sensor System (TRSS) Maintainer
+Marines,8,2862,2862 Electronics Maintenance Technician,Electronics Maintenance Technician
+Marines,8,2871,2871 Test Measurement and Diagnostic Equipment Technician,Test Measurement and Diagnostic Equipment Technician
+Marines,8,2874,2874 Metrology Technician,Metrology Technician
+Marines,8,2881,2881 2M/ATE Technician,2M/ATE Technician
+Marines,8,2887,2887 Artillery Electronics Technician,Artillery Electronics Technician
+Marines,8,2891,2891 Electronics Maintenance Chief,Electronics Maintenance Chief
+Marines,8,2671,2671 Middle East Cryptologic Linguist,Middle East Cryptologic Linguist
+Marines,8,2673,2673 Asia-Pacific Cryptologic Linguist,Asia-Pacific Cryptologic Linguist
+Marines,8,2674,2674 European I (West) Cryptologic Linguist,European I (West) Cryptologic Linguist
+Marines,8,2676,2676 European II (East) Cryptologic Linguist,European II (East) Cryptologic Linguist
+Marines,8,2691,2691 Signals Intelligence/Electronic Warfare Chief,Signals Intelligence/Electronic Warfare Chief
+Marines,8,2711,2711 Afghan Pashto Linguist (MGySgt-Pvt) EMOS,Afghan Pashto Linguist (MGySgt-Pvt) EMOS
+Marines,8,2712,2712 Arabic (Mod Std) Linguist,Arabic (Mod Std) Linguist
+Marines,8,2713,2713 Arabic (Egyptian) Linguist,Arabic (Egyptian) Linguist
+Marines,8,2714,2714 Arabic (Syrian) Linguist,Arabic (Syrian) Linguist
+Marines,8,2715,2715 Persian-Afghan (Dari) Linguist,Persian-Afghan (Dari) Linguist
+Marines,8,2716,2716 Amharic Linguist,Amharic Linguist
+Marines,8,2717,2717 Bengali Linguist,Bengali Linguist
+Marines,8,2718,2718 Hebrew Linguist,Hebrew Linguist
+Marines,8,2719,2719 Hindi Linguist,Hindi Linguist
+Marines,8,2721,2721 Kurdish Linguist,Kurdish Linguist
+Marines,8,2722,2722 Persian-Farsi Linguist,Persian-Farsi Linguist
+Marines,8,2723,2723 Somali Linguist,Somali Linguist
+Marines,8,2724,2724 Swahili Linguist,Swahili Linguist
+Marines,8,2726,2726 Turkish Linguist,Turkish Linguist
+Marines,8,2727,2727 Urdu Linguist,Urdu Linguist
+Marines,8,2728,2728 Arabic (Iraqi) Linguist,Arabic (Iraqi) Linguist
+Marines,8,2733,2733 Burmese Linguist,Burmese Linguist
+Marines,8,2734,2734 Cambodian Linguist,Cambodian Linguist
+Marines,8,2736,2736 Chinese (Cant) Linguist,Chinese (Cant) Linguist
+Marines,8,2738,2738 Indonesian Linguist,Indonesian Linguist
+Marines,8,2739,2739 Japanese Linguist,Japanese Linguist
+Marines,8,2741,2741 Korean Linguist,Korean Linguist
+Marines,9,2742,2742 Laotian Linguist,Laotian Linguist
+Marines,9,2743,2743 Malay Linguist,Malay Linguist
+Marines,9,2744,2744 Tagalog Linguist,Tagalog Linguist
+Marines,9,2746,2746 Thai Linguist,Thai Linguist
+Marines,9,2754,2754 Dutch Linguist,Dutch Linguist
+Marines,9,2756,2756 Finnish Linguist,Finnish Linguist
+Marines,9,2757,2757 French Linguist,French Linguist
+Marines,9,2758,2758 German Linguist,German Linguist
+Marines,9,2759,2759 Greek Linguist,Greek Linguist
+Marines,9,2761,2761 Haitian-Creole Linguist,Haitian-Creole Linguist
+Marines,9,2763,2763 Italian Linguist,Italian Linguist
+Marines,9,2764,2764 Norwegian Linguist,Norwegian Linguist
+Marines,9,2766,2766 Portuguese (BR) Linguist,Portuguese (BR) Linguist
+Marines,9,2767,2767 Portuguese (EU) Linguist,Portuguese (EU) Linguist
+Marines,9,2768,2768 Spanish Linguist,Spanish Linguist
+Marines,9,2769,2769 Swedish Linguist,Swedish Linguist
+Marines,9,2776,2776 Albanian Linguist,Albanian Linguist
+Marines,9,2777,2777 Armenian Linguist,Armenian Linguist
+Marines,9,2778,2778 Bulgarian Linguist,Bulgarian Linguist
+Marines,9,2779,2779 Czech Linguist,Czech Linguist
+Marines,9,2781,2781 Estonian Linguist,Estonian Linguist
+Marines,9,2782,2782 Georgian Linguist,Georgian Linguist
+Marines,9,2783,2783 Hungarian Linguist,Hungarian Linguist
+Marines,9,2784,2784 Latvian Linguist,Latvian Linguist
+Marines,9,2786,2786 Lithuanian Linguist,Lithuanian Linguist
+Marines,9,2787,2787 Macedonian Linguist,Macedonian Linguist
+Marines,9,2788,2788 Polish Linguist,Polish Linguist
+Marines,9,2789,2789 Romanian Linguist,Romanian Linguist
+Marines,9,2791,2791 Russian Linguist,Russian Linguist
+Marines,9,2792,2792 Serb-Croat Linguist,Serb-Croat Linguist
+Marines,9,2793,2793 Slovenian Linguist,Slovenian Linguist
+Marines,9,2794,2794 Ukrainian Linguist,Ukrainian Linguist
+Marines,9,2799,2799 Military Interpreter/Translator,Military Interpreter/Translator
+Marines,9,2611,2611 Cryptologic Digital Network Technician/Analyst,Cryptologic Digital Network Technician/Analyst
+Marines,9,2621,2621 Special Communications Signals Collection Operator,Special Communications Signals Collection Operator
+Marines,9,2629,2629 Signals Intelligence Analyst,Signals Intelligence Analyst
+Marines,9,2631,2631 Electronic Intelligence (ELINT) Intercept Operator/Analyst,Electronic Intelligence (ELINT) Intercept Operator/Analyst
+Marines,9,2651,2651 Special Intelligence System Administrator/Communicator,Special Intelligence System Administrator/Communicator
+Marines,9,2311,2311 Ammunition Technician,Ammunition Technician
+Marines,9,2336,2336 Explosive Ordnance Disposal,Explosive Ordnance Disposal
+Marines,9,160,160 Postal Officer,Postal Officer
+Marines,9,170,170 Personnel Officer,Personnel Officer
+Marines,9,180,180 Adjutant,Adjutant
+Marines,9,202,202 Marine Air-Ground Task Force (MAGTF) Intelligence Officer,Marine Air-Ground Task Force (MAGTF) Intelligence Officer
+Marines,9,203,203 Ground Intelligence Officer,Ground Intelligence Officer
+Marines,9,204,204 Human Source Intelligence Officer,Human Source Intelligence Officer
+Marines,9,205,205 Senior All-Source Intelligence Analysis Officer,Senior All-Source Intelligence Analysis Officer
+Marines,9,206,206 Signals Intelligence/Ground Electronic Warfare Officer,Signals Intelligence/Ground Electronic Warfare Officer
+Marines,9,207,207 Air Intelligence Officer,Air Intelligence Officer
+Marines,9,210,210 Counterintelligence/Human Source Intelligence (CI/HUMINT) Officer,Counterintelligence/Human Source Intelligence (CI/HUMINT) Officer
+Marines,9,215,215 Technical Surveillance Countermeasures Trained Counterintelligence/Human Source Intelligence Officer,Technical Surveillance Countermeasures Trained Counterintelligence/Human Source Intelligence Officer
+Marines,9,220,220 Surveillance Sensor Officer,Surveillance Sensor Officer
+Marines,9,277,277 Weapons and Tactics Instructor/Intelligence Officer,Weapons and Tactics Instructor/Intelligence Officer
+Marines,9,302,302 Infantry Officer,Infantry Officer
+Marines,9,303,303 Light-Armored Reconnaissance (LAR) Officer,Light-Armored Reconnaissance (LAR) Officer
+Marines,9,306,306 Infantry Weapons Officer,Infantry Weapons Officer
+Marines,9,502,502 Force Deployment Planning and Execution Officer,Force Deployment Planning and Execution Officer
+Marines,9,505,505 Marine Air-Ground Task Force (MAGTF) Planner,Marine Air-Ground Task Force (MAGTF) Planner
+Marines,9,510,510 Information Operations Staff Officer,Information Operations Staff Officer
+Marines,9,520,520 Psychological Operations Officer,Psychological Operations Officer
+Marines,9,530,530 Civil Affairs Officer,Civil Affairs Officer
+Marines,9,540,540 Space Operations Staff Officer,Space Operations Staff Officer
+Marines,9,602,602 Communications Officer,Communications Officer
+Marines,9,603,603 C4 Planner,C4 Planner
+Marines,9,610,610 Telephone Systems Officer,Telephone Systems Officer
+Marines,9,620,620 Tactical Communications Planning and Engineer Officer,Tactical Communications Planning and Engineer Officer
+Marines,9,640,640 Strategic Spectrum Planner,Strategic Spectrum Planner
+Marines,9,650,650 Network Operations and Systems Officer,Network Operations and Systems Officer
+Marines,9,802,802 Field Artillery Officer,Field Artillery Officer
+Marines,9,803,803 Targeting Effects Officer,Targeting Effects Officer
+Marines,9,840,840 Naval Surface Fire Support Planner,Naval Surface Fire Support Planner
+Marines,9,1302,1302 Combat Engineer Officer,Combat Engineer Officer
+Marines,9,1310,1310 Engineer Equipment Officer,Engineer Equipment Officer
+Marines,9,1330,1330 Facilities Management Officer,Facilities Management Officer
+Marines,9,1390,1390 Bulk Fuel Officer,Bulk Fuel Officer
+Marines,9,1802,1802 Tank Officer,Tank Officer
+Marines,9,1803,1803 Assault Amphibious Vehicle (AAV) Officer,Assault Amphibious Vehicle (AAV) Officer
+Marines,9,4302,4302 Public Affairs Officer,Public Affairs Officer
+Marines,9,4305,4305 Mass Communication Specialist,Mass Communication Specialist
+Marines,9,5803,5803 Military Police Officer,Military Police Officer
+Marines,9,5804,5804 Corrections Officer,Corrections Officer
+Marines,9,5805,5805 Criminal Investigation Officer,Criminal Investigation Officer
+Marines,9,2102,2102 Ordnance Officer,Ordnance Officer
+Marines,9,2110,2110 Ordnance Vehicle Maintenance Officer,Ordnance Vehicle Maintenance Officer
+Marines,9,2120,2120 Weapons Repair Officer,Weapons Repair Officer
+Marines,9,2125,2125 Electro-Optic Instrument Repair Officer,Electro-Optic Instrument Repair Officer
+Marines,9,2305,2305 Explosive Ordnance Disposal Officer,Explosive Ordnance Disposal Officer
+Marines,9,2340,2340 Ammunition Officer,Ammunition Officer
+Marines,9,2602,2602 Signals Intelligence/Electronic Warfare Officer ,Signals Intelligence/Electronic Warfare Officer 
+Marines,9,2802,2802 Electronics Maintenance Officer (Ground),Electronics Maintenance Officer (Ground)
+Marines,9,2805,2805 Data/Communications Maintenance Officer ,Data/Communications Maintenance Officer 
+Marines,9,4801,4801 Recruiting Officer-Marine Corps Total Force Expert,Recruiting Officer-Marine Corps Total Force Expert
+Marines,9,4802,4802 Recruiting Officer-Operational Expert,Recruiting Officer-Operational Expert
+Marines,9,4803,4803 Recruiting Officer-Officer Procurement Expert,Recruiting Officer-Officer Procurement Expert
+Marines,9,4804,4804 Recruiting Officer-Multiple Tour Expert,Recruiting Officer-Multiple Tour Expert
+Marines,9,4810,4810 Recruiting Officer ,Recruiting Officer 
+Marines,9,5502,5502 Band Officer,Band Officer
+Marines,9,5505,"5505 Director/Assistant Director, ""The President's Own"" U.S. Marine Band ","Director/Assistant Director, ""The President's Own"" U.S. Marine Band "
+Marines,9,5506,"5506 Staff Officer, ""The President's Own"" U.S. Marine Band ","Staff Officer, ""The President's Own"" U.S. Marine Band "
+Marines,9,5507,5507 U.S. Marine Drum and Bugle Corps Officer ,U.S. Marine Drum and Bugle Corps Officer 
+Marines,9,5702,"5702 Chemical, Biological, Radiological and Nuclear (CBRN) Defense Officer","Chemical, Biological, Radiological and Nuclear (CBRN) Defense Officer"
+Marines,9,5902,5902 Electronics Maintenance Officer (Aviation),Electronics Maintenance Officer (Aviation)
+Marines,9,5910,5910 Aviation Radar Maintenance Officer,Aviation Radar Maintenance Officer
+Marines,9,5950,5950 Air Traffic Control Systems Maintenance Officer,Air Traffic Control Systems Maintenance Officer
+Marines,9,5970,5970 Data Systems Maintenance Officer,Data Systems Maintenance Officer
+Marines,9,6002,6002 Aircraft Maintenance Officer,Aircraft Maintenance Officer
+Marines,9,6004,6004 Aircraft Maintenance Engineer Officer,Aircraft Maintenance Engineer Officer
+Marines,9,6302,6302 Avionics Officer ,Avionics Officer 
+Marines,9,6502,6502 Aviation Ordnance Officer,Aviation Ordnance Officer
+Marines,9,6602,6602 Aviation Supply Officer,Aviation Supply Officer
+Marines,9,6604,6604 Aviation Supply Operations Officer,Aviation Supply Operations Officer
+Marines,9,6607,6607 Aviation Logistician,Aviation Logistician
+Marines,9,6608,6608 AIRSpeed Officer NMOS,AIRSpeed Officer NMOS
+Marines,9,6802,6802 Meteorology and Oceanography (METOC) Officer ,Meteorology and Oceanography (METOC) Officer 
+Marines,9,6877,6877 Weapons and Tactics Instructor-METOC ,Weapons and Tactics Instructor-METOC 
+Marines,9,7002,7002 Expeditionary Airfield and Emergency Services Officer,Expeditionary Airfield and Emergency Services Officer
+Marines,9,7202,7202 Air Command and Control Officer ,Air Command and Control Officer 
+Marines,9,7204,7204 Low Altitude Air Defense Officer,Low Altitude Air Defense Officer
+Marines,9,7208,7208 Air Support Control Officer ,Air Support Control Officer 
+Marines,9,7210,7210 Air Defense Control Officer,Air Defense Control Officer
+Marines,9,7220,7220 Air Traffic Control Officer,Air Traffic Control Officer
+Marines,9,7237,7237 Senior Air Director (SAD) ,Senior Air Director (SAD) 
+Marines,9,7502,7502 Forward Air Controller/Air Officer,Forward Air Controller/Air Officer
+Marines,9,7503,7503 Billet Designator - Fixed-Wing Pilot,Billet Designator - Fixed-Wing Pilot
+Marines,9,7507,7507 FRS Basic AV-8B Pilot,FRS Basic AV-8B Pilot
+Marines,9,7508,7508 AV-8A/C Qualified,AV-8A/C Qualified
+Marines,9,7509,7509 AV-8B Qualified,AV-8B Qualified
+Marines,9,7513,7513 Pilot Helicopter AH-1Z/UH-1Y,Pilot Helicopter AH-1Z/UH-1Y
+Marines,9,7521,7521 FRS Basic F/A-18 Pilot,FRS Basic F/A-18 Pilot
+Marines,9,7523,7523 Pilot VMFA F/A-18 Qualified,Pilot VMFA F/A-18 Qualified
+Marines,9,7524,7524 FRS Basic F/A-18D Weapons Systems Officer (WSO),FRS Basic F/A-18D Weapons Systems Officer (WSO)
+Marines,9,7525,7525 Qualified F/A-18D WSO,Qualified F/A-18D WSO
+Marines,0,7527,7527 Pilot VMFA F/A-18D Qualified,Pilot VMFA F/A-18D Qualified
+Marines,0,7531,7531 FRS Basic V-22 Pilot,FRS Basic V-22 Pilot
+Marines,0,7532,7532 Pilot V-22 Qualified,Pilot V-22 Qualified
+Marines,0,7541,7541 FRS Basic EA-6B Pilot,FRS Basic EA-6B Pilot
+Marines,0,7542,7542 EA-6A Qualified,EA-6A Qualified
+Marines,0,7543,7543 EA-6B Qualified,EA-6B Qualified
+Marines,0,7550,7550 Pilot VMGR Maritime Advance (NATC),Pilot VMGR Maritime Advance (NATC)
+Marines,0,7551,7551 Pilot C-9 Qualified,Pilot C-9 Qualified
+Marines,0,7552,7552 Pilot TC-4C Qualified,Pilot TC-4C Qualified
+Marines,0,7553,7553 Pilot C-20/C-37 Qualified,Pilot C-20/C-37 Qualified
+Marines,0,7554,7554 Pilot UC-35 Qualified,Pilot UC-35 Qualified
+Marines,0,7555,7555 Pilot UC-128 Qualified,Pilot UC-128 Qualified
+Marines,0,7556,7556 KC-130 Co-Pilot (T2P/T3P),KC-130 Co-Pilot (T2P/T3P)
+Marines,0,7557,7557 Pilot KC-130 Aircraft Commander,Pilot KC-130 Aircraft Commander
+Marines,0,7558,7558 FRS Basic CH-53D Pilot,FRS Basic CH-53D Pilot
+Marines,0,7559,7559 Pilot CT-39 Qualified,Pilot CT-39 Qualified
+Marines,0,7560,7560 FRS Basic CH-53E Pilot,FRS Basic CH-53E Pilot
+Marines,0,7561,7561 FRS Basic CH-46 Pilot,FRS Basic CH-46 Pilot
+Marines,0,7562,7562 Pilot CH-46 Qualified,Pilot CH-46 Qualified
+Marines,0,7563,7563 Pilot UH-1 Qualified,Pilot UH-1 Qualified
+Marines,0,7564,7564 Pilot CH-53 A/D Qualified,Pilot CH-53 A/D Qualified
+Marines,0,7565,7565 Pilot AH-1 Qualified,Pilot AH-1 Qualified
+Marines,0,7566,7566 Pilot CH-53E Qualified,Pilot CH-53E Qualified
+Marines,0,7567,7567 FRS Basic UH-IN Pilot,FRS Basic UH-IN Pilot
+Marines,0,7568,7568 FRS Basic AH-1 Pilot,FRS Basic AH-1 Pilot
+Marines,0,7577,7577 Weapons and Tactics Instructor,Weapons and Tactics Instructor
+Marines,0,7578,7578 NFO Student (TBS),NFO Student (TBS)
+Marines,0,7580,7580 Tactical Navigator Flight Student (NATC),Tactical Navigator Flight Student (NATC)
+Marines,0,7582,7582 FRS Basic EA-68 Electronic Warfare Officer,FRS Basic EA-68 Electronic Warfare Officer
+Marines,0,7588,7588 Qualified EA-68 Electronics Warfare Officer,Qualified EA-68 Electronics Warfare Officer
+Marines,0,7589,7589 V/STOL Landing Signal Officer,V/STOL Landing Signal Officer
+Marines,0,7594,7594 Landing Signal Officer,Landing Signal Officer
+Marines,0,7595,7595 Test Pilot/Flight Test Project Officer,Test Pilot/Flight Test Project Officer
+Marines,0,7596,7596 Aviation Safety Officer,Aviation Safety Officer
+Marines,0,7597,7597 Basic Rotary-Wing Pilot,Basic Rotary-Wing Pilot
+Marines,0,7599,7599 Flight Student (TBS),Flight Student (TBS)
+Marines,0,402,402 Logistics Officer,Logistics Officer
+Marines,0,930,930 Range Officer,Range Officer
+Marines,0,1120,1120 Utilities Officer,Utilities Officer
+Marines,0,3102,3102 Traffic Management Officer,Traffic Management Officer
+Marines,0,3302,3302 Food Service Officer,Food Service Officer
+Marines,0,3402,3402 Finance Officer,Finance Officer
+Marines,0,3404,3404 Financial Management Officer,Financial Management Officer
+Marines,0,3408,3408 Financial Management Resource Officer (FMRO),Financial Management Resource Officer (FMRO)
+Marines,0,3410,3410 NAF Auditing Officer,NAF Auditing Officer
+Marines,0,4130,4130 Marine Corps Community Services (MCCS),Marine Corps Community Services (MCCS)
+Marines,0,4402,4402 Judge Advocate,Judge Advocate
+Marines,0,4405,4405 Master of International Law,Master of International Law
+Marines,0,4406,4406 Master of Environmental Law,Master of Environmental Law
+Marines,0,4407,4407 Master of Labor Law,Master of Labor Law
+Marines,0,4408,4408 Master of Procurement Law,Master of Procurement Law
+Marines,0,4409,4409 Master of Criminal Law,Master of Criminal Law
+Marines,0,4410,4410 Master of Law (General),Master of Law (General)
+Marines,0,4602,4602 Combat Camera (COMCAM) Officer,Combat Camera (COMCAM) Officer
+Marines,0,4606,4606 Combat Artist (Officer),Combat Artist (Officer)
+Marines,0,313,313 LAV Crewman,LAV Crewman
+Marines,0,323,"323 Reconnaissance Man, Parachute Qualified","Reconnaissance Man, Parachute Qualified"
+Marines,0,8411,8411 Production Recruiter,Production Recruiter
+Marines,0,8412,8412 Career Recruiter,Career Recruiter
+Marines,0,8156,8156 Security Guard,Security Guard
+Marines,0,6531,6531 Aircraft Ordnance Technician,Aircraft Ordnance Technician
+Marines,0,6541,6541 Aviation Ordnance Systems Technician,Aviation Ordnance Systems Technician
+Marines,0,6591,6591 Aviation Ordnance Chief,Aviation Ordnance Chief
+Navy,0,ABE,ABE Aviation Boatswain's Mate - Launch/Recovery ,Aviation Boatswain's Mate - Launch/Recovery 
+Navy,0,ABF,ABF Aviation Boatswain's Mate - Fuels ,Aviation Boatswain's Mate - Fuels 
+Navy,1,ABH,ABH Aviation Boatswain's Mate - Aircraft Handler ,Aviation Boatswain's Mate - Aircraft Handler 
+Navy,1,AC,AC Air Traffic Controller ,Air Traffic Controller 
+Navy,1,AD,AD Aviation Machinist's Mate ,Aviation Machinist's Mate 
+Navy,1,PR,PR Aircrew Survival Equipmentman ,Aircrew Survival Equipmentman 
+Navy,1,AG,AG Aerographer's Mate,Aerographer's Mate
+Navy,1,AM,AM Aviation Structural Mechanic ,Aviation Structural Mechanic 
+Navy,1,AME,AME Aviation Structural Mechanic Safety Equipment ,Aviation Structural Mechanic Safety Equipment 
+Navy,1,AE,AE Aviation Electrician ,Aviation Electrician 
+Navy,1,AT,AT Aviation Electronics Technician ,Aviation Electronics Technician 
+Navy,1,AZ,AZ Aviation Maintenance Administrationman ,Aviation Maintenance Administrationman 
+Navy,1,AO,AO Aviation Ordnanceman ,Aviation Ordnanceman 
+Navy,1,AS,AS Aviation Support Equipment Technician ,Aviation Support Equipment Technician 
+Navy,1,EA,EA Engineering Aid ,Engineering Aid 
+Navy,1,CM,CM Construction Mechanic ,Construction Mechanic 
+Navy,1,UT,UT Utilitiesman,Utilitiesman
+Navy,1,EO,EO Equipment Operator ,Equipment Operator 
+Navy,1,CE,CE Construction Electrician ,Construction Electrician 
+Navy,1,BU,BU Builder,Builder
+Navy,1,SW,SW Steelworker ,Steelworker 
+Navy,1,ND,ND Navy Diver ,Navy Diver 
+Navy,1,SO,SO Special Warfare Operator,Special Warfare Operator
+Navy,1,SB,SB Special Warfare Boat Operator ,Special Warfare Boat Operator 
+Navy,1,EOD,EOD Explosive Ordnance Disposal ,Explosive Ordnance Disposal 
+Navy,1,RP,RP Religious Program Specialist ,Religious Program Specialist 
+Navy,1,HM,HM Hospital Corpsman ,Hospital Corpsman 
+Navy,1,HMDA,HMDA Hospital Corpsman - Dental Assistant ,Hospital Corpsman - Dental Assistant 
+Navy,1,MU,MU Musician,Musician
+Navy,1,MA,MA Master at Arms ,Master at Arms 
+Navy,1,SH,SH Ship's Serviceman ,Ship's Serviceman 
+Navy,1,MC,MC Mass Communication Specialist ,Mass Communication Specialist 
+Navy,1,LS,LS Logistics Specialist ,Logistics Specialist 
+Navy,1,CS,CS Culinary Specialist ,Culinary Specialist 
+Navy,1,YN,YN Yeoman,Yeoman
+Navy,1,BM,BM Boatswain's Mate ,Boatswain's Mate 
+Navy,1,QM,QM Quartermaster,Quartermaster
+Navy,1,PS,PS Personnel Specialist ,Personnel Specialist 
+Navy,1,DC,DC Damage Controlman ,Damage Controlman 
+Navy,1,EN,EN Engineman ,Engineman 
+Navy,1,EM,EM Electrician's Mate ,Electrician's Mate 
+Navy,1,IC,IC Interior Communications Electrician ,Interior Communications Electrician 
+Navy,1,GSE,GSE Gas Turbine Systems Technician - Electrical ,Gas Turbine Systems Technician - Electrical 
+Navy,1,GSM,GSM Gas Turbine Systems Technician - Mechanical ,Gas Turbine Systems Technician - Mechanical 
+Navy,1,HT,HT Hull Maintenance Technician ,Hull Maintenance Technician 
+Navy,1,MM,MM Machinist's Mate ,Machinist's Mate 
+Navy,1,MR,MR Machinery Repairman ,Machinery Repairman 
+Navy,1,GM,GM Gunner's Mate ,Gunner's Mate 
+Navy,1,MT,MT Missile Technician ,Missile Technician 
+Navy,1,MN,MN Mineman,Mineman
+Navy,1,IT,"IT Information Systems Technician, Surface ","Information Systems Technician, Surface "
+Navy,1,ITS,"ITS Information Systems Technician, Submarines","Information Systems Technician, Submarines"
+Navy,1,OS,OS Operations Specialist ,Operations Specialist 
+Navy,1,IS,IS Intelligence Specialist ,Intelligence Specialist 
+Navy,1,STG,"STG Sonar Technician, Surface ","Sonar Technician, Surface "
+Navy,1,STS,"STS Sonar Technician, Submarine ","Sonar Technician, Submarine "
+Navy,1,CTM,CTM Cryptologic Technician - Maintenance ,Cryptologic Technician - Maintenance 
+Navy,1,CTI,CTI Cryptologic Technician - Interpretive ,Cryptologic Technician - Interpretive 
+Navy,1,CTN,CTN Cryptologic Technician - Networks ,Cryptologic Technician - Networks 
+Navy,1,CTT,CTT Cryptologic Technician - Technical ,Cryptologic Technician - Technical 
+Navy,1,CTR,CTR Cryptologic Technician - Collection ,Cryptologic Technician - Collection 
+Navy,1,AWF,AWF Naval Aircrewman (Mechanical),Naval Aircrewman (Mechanical)
+Navy,1,AWO,AWO Naval Aircrewman (Operator) ,Naval Aircrewman (Operator) 
+Navy,1,AWS,AWS Naval Aircrewman (Helicopter) ,Naval Aircrewman (Helicopter) 
+Navy,1,AWV,AWV Naval Aircrewman (Avionics) ,Naval Aircrewman (Avionics) 
+Navy,1,UCT,UCT Seabee UCT Diver Challenge,Seabee UCT Diver Challenge
+Navy,1,ET,ET Electronics Technician ,Electronics Technician 
+Navy,1,FC,FC Fire Controlman ,Fire Controlman 
+Navy,1,Nuke ET,Nuke ET Electronics Technician (Nuclear),Electronics Technician (Nuclear)
+Navy,1,Nuke MM,Nuke MM Machinist's Mate (Nuclear),Machinist's Mate (Nuclear)
+Navy,1,Nuke EM,Nuke EM Electrician's Mate (Nuclear),Electrician's Mate (Nuclear)
+Navy,1,SECF,SECF Submarine Electronics/Computer Field ,Submarine Electronics/Computer Field 
+Navy,1,BDCP,BDCP Baccalaureate Degree Completion Program,Baccalaureate Degree Completion Program
+Navy,1,NROTC,NROTC Navy Reserve Officer Training Corps,Navy Reserve Officer Training Corps
+Navy,1,AMDO,AMDO Aerospace Maintenance Duty Officer,Aerospace Maintenance Duty Officer
+Navy,1,AOC,AOC Naval Aviation - Pilot,Naval Aviation - Pilot
+Navy,1,NFOC,NFOC Naval Aviation - Naval Flight Officer,Naval Aviation - Naval Flight Officer
+Navy,1,, Chaplain (Direct Appointment),Chaplain (Direct Appointment)
+Navy,1,, Chaplain (Student Selection Program),Chaplain (Student Selection Program)
+Navy,1,, Civil Engineer,Civil Engineer
+Navy,1,, CEC Collegiate,CEC Collegiate
+Navy,1,, Cryptology,Cryptology
+Navy,1,EDO,EDO Engineering Duty Officer,Engineering Duty Officer
+Navy,1,INTEL,INTEL Intelligence,Intelligence
+Navy,1,, JAG Direct Appointment,JAG Direct Appointment
+Navy,1,, JAG Student Selection,JAG Student Selection
+Navy,1,, Physician,Physician
+Navy,1,, Dentist,Dentist
+Navy,1,, Nurse,Nurse
+Navy,1,, Health Care Administration,Health Care Administration
+Navy,2,, Health Care Sciences,Health Care Sciences
+Navy,2,, Medical Support,Medical Support
+Navy,2,, Naval Reactors Engineer,Naval Reactors Engineer
+Navy,2,, NUPOC Surface,NUPOC Surface
+Navy,2,, NUPOC Sub,NUPOC Sub
+Navy,2,, Nuclear Power School Instructor,Nuclear Power School Instructor
+Navy,2,, Oceanography,Oceanography
+Navy,2,PAO,PAO Public Affairs Officer,Public Affairs Officer
+Navy,2,UMCM,UMCM Underwater Mine Countermeasures,Underwater Mine Countermeasures
+Navy,2,ODS,ODS Operational Diving and Salvage ,Operational Diving and Salvage 
+Navy,2,EOM,EOM Explosive Ordnance Management ,Explosive Ordnance Management 
+Navy,2,, Supply,Supply
+Navy,2,SWO,SWO Surface Warfare Officer,Surface Warfare Officer
+Navy,2,CRF,CRF Career Recruiting Force,Career Recruiting Force
+Navy,2,CANREC,CANREC Canvassing Recruiter,Canvassing Recruiter
+Navy,2,Supply,Supply Supply Corps,Supply Corps
+Navy,2,, NUPOC Submarine,NUPOC Submarine
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
