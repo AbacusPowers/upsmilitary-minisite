@@ -161,7 +161,6 @@ header {
             // display: inline-block;
             float: left;
             border-left: 1px solid $white10;
-            padding: 0.6rem 2rem 0.5rem 2rem;
             height: 2.5rem;
             // border: 1px dashed $white30;
             border-right: none;
@@ -169,7 +168,9 @@ header {
             @include transition (all 0.2s ease-out);
 
             a {
-                color: $white;
+              color: $white;
+              display: block;
+              padding: 0.6rem 2rem 0.5rem 2rem;
 
             }
             i {

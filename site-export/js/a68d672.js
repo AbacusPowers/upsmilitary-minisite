@@ -76,7 +76,7 @@ $( document ).ready(function() {
         );
     });
 
-    $('.job-search--job-converter').submit(function(e){
+    $('.job-search--military-skills-translator').submit(function(e){
         e.preventDefault();
         jobTitle = $(this).closest('.expander__wrapper').find('.expander__parent').text();
 
@@ -107,7 +107,7 @@ $( document ).ready(function() {
 
     });
     
-    $('#job-converter').submit(function(e){
+    $('#military-skills-translator').submit(function(e){
         e.preventDefault();
         $('.expander__wrapper').addClass('hidden');
         $('#side--a').addClass('full-width');
@@ -124,7 +124,7 @@ $( document ).ready(function() {
         /**
          * GA TRACKING
          */
-            //ga('send','event','job_converter','translate', branch + '_' + jobCode);
+            //ga('send','event','military_skills_translator','translate', branch + '_' + jobCode);
 
         if(hints.indexOf(jobCode) >= 0) {
             $.get("/bundles/vcg/data/jobs-data.csv", function(data){

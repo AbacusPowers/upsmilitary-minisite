@@ -140,14 +140,14 @@ $(document).on('click','.expander__wrapper .expand-button',function(){
 
 
 //TRANSLATE BUTTON
-$('#job-converter').submit(function(e) {
+$('#military-skills-translator').submit(function(e) {
     branch = $('#branch-of-service').val();
     jobCode = $('#job-code').val();
-    ga('send', 'event', 'job_converter', 'translate', branch + '_' + jobCode);
+    ga('send', 'event', 'military_skills_translator', 'translate', branch + '_' + jobCode);
 });
 
 //JOB CONVERTER/SEARCH LINKS
-$('.job-search--job-converter').submit(function(){
+$('.job-search--military-skills-translator').submit(function(){
     positionTitle = $(this).closest('.expander__wrapper').find('.expander__parent').text();
     if (positionTitle == 'Driver Helper (October-December)') {
         positionTitle = 'Driver Helper';
@@ -155,7 +155,7 @@ $('.job-search--job-converter').submit(function(){
     if( $(this).children('.zip-code').val() ) {
         zipCode = $(this).children('.zip-code').val();
     }
-    ga('send','event','job_converter','job_converter_search', 'results_' + positionTitle );
+    ga('send','event','military_skills_translator','military_skills_translator_search', 'results_' + positionTitle );
 });
 $('.job-search--job-description').submit(function(){
     positionTitle = $(this).closest('.expander__wrapper').find('.expander__parent').text();
@@ -211,21 +211,24 @@ $('#search-submit').click(function(e, input) {
 
 //EXTERNAL UPS LINKS
 $(document).on('click','a',function(){
-    var href = $(this).attr('href').toLowerCase();
-    //Put UPS urls here
-    var upsUrls = [
-        'ups.com',
-        'upsjobs.com',
-        'jobs-ups.com',
-        'upsjobs', //facebook, twitter, youtube
-        'ups/careers', //linkedin
-        '106158684691824289340' //google + account
-    ];
-    var arrLength = upsUrls.length;
-    for ( var i = 0; i < arrLength; i++) {
-        if ( href.indexOf(upsUrls[i].toLowerCase()) != -1) {
-            ga('send','event','external_link','click', href );
+    if (!$(this).hasClass('expand-button')){
+        var href = $(this).attr('href').toLowerCase();
+        //Put UPS urls here
+        var upsUrls = [
+            'ups.com',
+            'upsjobs.com',
+            'jobs-ups.com',
+            'upsjobs', //facebook, twitter, youtube
+            'ups/careers', //linkedin
+            '106158684691824289340' //google + account
+        ];
+        var arrLength = upsUrls.length;
+        for ( var i = 0; i < arrLength; i++) {
+            if ( href.indexOf(upsUrls[i].toLowerCase()) != -1) {
+                ga('send','event','external_link','click', href );
+            }
         }
     }
+
 
 });

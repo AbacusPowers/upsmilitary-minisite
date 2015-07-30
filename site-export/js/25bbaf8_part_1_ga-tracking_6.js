@@ -1,7 +1,3 @@
-///**
-// * Created by justin on 7/1/15.
-// */
-
 //Debounce function to use anywhere.
 function debounce(fn, delay) {
     var timer = null;
@@ -25,7 +21,7 @@ $('.carousel-control.next').click(function(){
 $('.carousel-control.prev').click(function(){
     var forSlide = $(this).attr('for');
     var slideTitle = $('#' + forSlide + ' + .carousel-item .slider-text').text();
-    ga('send','event','slider','arrow_right',slideTitle);
+    ga('send','event','slider','arrow_left',slideTitle);
 });
 $('.carousel-bullet').click(function(){
     var forSlide = $(this).attr('for');
@@ -39,6 +35,7 @@ $(document).on('click','.slider-text-wrapper a',function(){
     var slideTitle = $(this).children('.slider-text').text();
     ga('send','event','slider','click', slideTitle);
 });
+
 //VIDEOS
 //this adds the youtube api
 //actual tracking code is loaded in modal.js (if modal) and video-tracking.js (if normal pageview)
@@ -67,6 +64,43 @@ var videoScrollDetect = function () {
     videoLastPos = videoCurrPos;
 }
 $('#video-list').closest('.scroll-container').scroll( debounce(videoScrollDetect, 500) );
+//var waypoints = $('.video-link').waypoint(function(direction) {
+//    var videoName = $(this);
+//    console.log(videoName);
+//}, {
+//    context: $('.scroll-container'),
+//    horizontal: true
+//});
+viewedVideos = [];
+function testViewedVideos(){
+    $('.video-link').each(function(index){
+        if(isScrolledIntoView($(this)) ) {
+            var videoTitle = $(this).children('.video-title').text();
+            //console.log(videoTitle + ' - ' + viewedVideos.indexOf(videoTitle))
+            if (viewedVideos.indexOf(videoTitle) === -1) {
+                viewedVideos.push(videoTitle);
+                var position = index + 1;
+                ga('send','event','video_carousel','shown_position_'+position,videoTitle);
+            }
+        }
+    });
+}
+$(document).ready(function(){
+    testViewedVideos();
+});
+function isScrolledIntoView(elem) {
+    var docViewLeft = elem.parent('.scroll-container').scrollLeft();
+    var docViewBottom = docViewLeft + $('.scroll-container').width();
+
+    var elemLeft = $(elem).offset().left;
+    var elemBottom = elemLeft + $(elem).width();
+
+    return ((elemBottom <= docViewBottom) && (elemLeft >= docViewLeft));
+}
+$('.scroll-container').scroll(function(){
+        testViewedVideos();
+    }
+);
 
 //CTA GO
 $('.cta-button--go').click(function(){
@@ -106,14 +140,14 @@ $(document).on('click','.expander__wrapper .expand-button',function(){
 
 
 //TRANSLATE BUTTON
-$('#job-converter').submit(function(e) {
+$('#military-skills-translator').submit(function(e) {
     branch = $('#branch-of-service').val();
     jobCode = $('#job-code').val();
-    ga('send', 'event', 'job_converter', 'translate', branch + '_' + jobCode);
+    ga('send', 'event', 'military_skills_translator', 'translate', branch + '_' + jobCode);
 });
 
 //JOB CONVERTER/SEARCH LINKS
-$('.job-search--job-converter').submit(function(){
+$('.job-search--military-skills-translator').submit(function(){
     positionTitle = $(this).closest('.expander__wrapper').find('.expander__parent').text();
     if (positionTitle == 'Driver Helper (October-December)') {
         positionTitle = 'Driver Helper';
@@ -121,7 +155,7 @@ $('.job-search--job-converter').submit(function(){
     if( $(this).children('.zip-code').val() ) {
         zipCode = $(this).children('.zip-code').val();
     }
-    ga('send','event','job_converter','job_converter_search', 'results_' + positionTitle );
+    ga('send','event','military_skills_translator','military_skills_translator_search', 'results_' + positionTitle );
 });
 $('.job-search--job-description').submit(function(){
     positionTitle = $(this).closest('.expander__wrapper').find('.expander__parent').text();
@@ -170,4 +204,28 @@ $(document).on('click','.event__map-link',function() {
 $('#search-submit').click(function(e, input) {
     input = $('#search-field').val();
     ga('send','event','job_search','search', input );
+});
+
+//EXTERNAL LINKS w/ MODAL
+//see modal.js
+
+//EXTERNAL UPS LINKS
+$(document).on('click','a',function(){
+    var href = $(this).attr('href').toLowerCase();
+    //Put UPS urls here
+    var upsUrls = [
+        'ups.com',
+        'upsjobs.com',
+        'jobs-ups.com',
+        'upsjobs', //facebook, twitter, youtube
+        'ups/careers', //linkedin
+        '106158684691824289340' //google + account
+    ];
+    var arrLength = upsUrls.length;
+    for ( var i = 0; i < arrLength; i++) {
+        if ( href.indexOf(upsUrls[i].toLowerCase()) != -1) {
+            ga('send','event','external_link','click', href );
+        }
+    }
+
 });

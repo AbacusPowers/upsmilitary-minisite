@@ -1,68 +1,91 @@
-$('document').ready(function(){
-    //ARTICLE FUNCTIONALITY
-    $('.article-link').on('click', function(e){
+$(document)
+    .on('click','.article-link', function(e){
         e.preventDefault();
         var href = $(this).attr('href');
         // Getting Content
         getModalContent(href, true, 'page');
         showModal();
         $(this).addClass('in-history');
-    });
+        $('i.fa',this).removeClass('fa-square-o').addClass('fa-check-square-o');
+    })
     //VIDEO FUNCTIONALITY
-    $('.video-link').on('click', function(e){
+    .on('click','.video-link', function(e){
         e.preventDefault();
         var href = $(this).attr('href');
         // Getting Content
         getModalContent(href, true, 'page');
         showVideoModal();
-    });
+    })
+    //PHOTO FUNCTIONALITY
+    .on('click','.photo-link', function(e){
+        e.preventDefault();
+        var href = $(this).attr('href');
+        // Getting Content
+        getModalContent(href, true, 'page');
+        showPhotoModal();
+        //console.log('test');
+    })
     //EVENTS FUNCTIONALITY
-    $('.all-events-link').on('click', function(e){
+    .on('click','.all-events-link', function(e){
         e.preventDefault();
         var href = $(this).attr('href');
         // Getting Content
         getModalContent(href, true, 'page');
         showEventsModal(href);
-    });
+    })
     //UPS VALUES FUNCTIONALITY
-    $('.values-link').on('click', function(e){
+    .on('click', '.values-link', function(e){
         e.preventDefault();
         var href = $(this).attr('href');
         // Getting Content
         getModalContent(href, true, 'page');
         showValuesModal();
-    });
-
-    $('a.external').click(function(e){
+    })
+    //EXTERNAL LINKS
+    .on('click','a.external',function(e){
         e.preventDefault();
         var href = $(this).attr('href');
         showLeaveSiteModal(href);
         //loadAjaxFunctions();
         $('#offsite-modal #forward-to').attr('href',href);
         $('#destination').text(href);
-        console.log(href);
+        ga('send','event','external_link','open', href);
         if ($('#modal').is(':visible')) {
             $('#modal').hide();
             $('body').addClass('hold-modal');
         }
         var modalHeight = $('#offsite-modal').height();
         var screenHeight = $(window).height();
-        console.log(modalHeight);
+        //console.log(modalHeight);
         var topHeight = 0.5*(screenHeight-modalHeight);
         $('#offsite-modal').css({'top': topHeight +'px'});
-    });
-    $(document).on('click', '#prev-article', function (e) {
+    })
+    //ARTICLE NAVIGATION
+    .on('click', '#prev-article', function (e) {
         e.preventDefault();
         var href = $(this).attr('href');
         // Getting Content
         origin = History.getState().data.origin;
         if ( origin == 'page') {
             originType = 'page';
-            console.log('page!')
+            //console.log('page!')
         } else {
             originType = 'article';
         }
+        if ($('#modal-wrapper').hasClass('values')){
+            $('#modal-wrapper').removeClass('values');
+            $('#culture-articles').show();
+        }
         getModalContent(href, true, originType);
+        setTimeout(function(){
+            if ($('#wrapper--values').length){
+                $('#modal-wrapper').addClass('values');
+                $('#culture-articles').hide();
+                //console.log('yes');
+            } else {
+                //console.log('no');
+            }
+        }, 300);
     })
     .on('click', '#next-article', function (e) {
         e.preventDefault();
@@ -71,12 +94,25 @@ $('document').ready(function(){
         origin = History.getState().data.origin;
         console.log(origin);
         if ( origin == 'page') {
-            console.log('ooops!');
+            //console.log('ooops!');
             originType = 'page';
         } else {
             originType = 'article';
         }
+        if ($('#modal-wrapper').hasClass('values')){
+            $('#modal-wrapper').removeClass('values');
+            $('#culture-articles').show();
+        }
         getModalContent(href, true, originType);
+        setTimeout(function(){
+            if ($('#wrapper--values').length){
+                $('#modal-wrapper').addClass('values');
+                $('#culture-articles').hide();
+                //console.log('yes');
+            } else {
+                //console.log('no');
+            }
+        }, 300);
     })
     .on('click','#modal a.external',function(e){
         e.preventDefault();
@@ -84,14 +120,14 @@ $('document').ready(function(){
         showLeaveSiteModal();
         $('#offsite-modal #forward-to').attr('href',href);
         $('#destination').text(href);
-        console.log(href);
+        ga('send','event','external_link','open', href);
         if ($('#modal').is(':visible')) {
             $('#modal').hide();
             $('body').addClass('hold-modal');
         }
         var modalHeight = $('#offsite-modal').height();
         var screenHeight = $(window).height();
-        console.log(modalHeight);
+        //console.log(modalHeight);
         var topHeight = .5*(screenHeight-modalHeight);
         $('#offsite-modal').css({'top': topHeight +'px'});
     })
@@ -99,17 +135,19 @@ $('document').ready(function(){
         e.preventDefault();
         var href = $(this).attr('href');
         if ( $('#modal-wrapper').hasClass('article-page') ) {
-            console.log('article page')
+            //console.log('article page')
             window.location.href = href;
         } else if ( History.getState().data.modal === 1 ) { //should only be true if triggered from article link (not direct visits to article)
             if ( History.getState().data.origin === 'page' ) {
                 if ( $('body').hasClass('video-view') ) {
                     destroyVideoModal();
+                } else if ( $('body').hasClass('photo-view') ) {
+                    destroyPhotoModal();
                 } else if ( $('body').hasClass('values-view') ) {
                     destroyValuesModal();
                 } else if ( $('body').hasClass('events-view') ) {
                     destroyEventsModal();
-                    console.log('destroyEventsModal');
+                    //console.log('destroyEventsModal');
                 } else {
                     destroyModal();
                 }
@@ -117,27 +155,32 @@ $('document').ready(function(){
                 //var rewrite = History.getState().data.close;
                 History.pushState(null, null, href);
             } else {
-                console.log('one: ' + href);
+                //console.log('one: ' + href);
                 window.location.href = href;
             }
 
         } else if ($('#modal-wrapper').hasClass('article')) {
             window.location.href = href;
-            console.log('two');
+            //console.log('two');
         }
     })
     .on('click','.leave-site-view #close-offsite-modal', function(e){
         e.preventDefault();
         destroyLeaveSiteModal();
+        var href = $('#forward-to').attr('href');
+        ga('send','event','external_link','close', href);
     })
     .on('click','.leave-site-view #forward-to', function(e){
         destroyLeaveSiteModal();
+        var href = $(this).attr('href');
+        ga('send','event','external_link','continue', href);
     })
     .on('click','.leave-site-view #forward-cancel', function(e){
         e.preventDefault();
+        var href = $(this).siblings('#forward-to').attr('href');
         destroyLeaveSiteModal();
+        ga('send','event','external_link','cancel', href);
     });
-});
 
 function getModalContent(url, addEntry, originType) {
     $('#modal').load(url +' #modal-content', null, function() {
@@ -148,39 +191,11 @@ function getModalContent(url, addEntry, originType) {
 
             // Add History Entry using pushState
             History.pushState({ modal : 1, origin : originType, close : originUrl }, newTitle, url);
-            console.log(History.getState().data);
+            //console.log(History.getState().data);
 
-            //add url to history cookie
-            var cookie = getCookie('uvgHistory');
-            var newCookieUrl = window.location.origin + url;
-            if ( cookie.length ) {
-                historyArray = JSON.parse(cookie);
-                if (searchStringInArray(newCookieUrl, historyArray) === -1) {
-                    historyArray.push(newCookieUrl);
-                    setCookie('uvgHistory',JSON.stringify(historyArray), 365);
-                    currentUrl = newCookieUrl;
-                    console.log('I set a cookie');
-                }
-            } else {
-                historyArray = [newCookieUrl];
-                setCookie('uvgHistory',JSON.stringify(historyArray));
-            }
-            $('.group-link').each(function(){
-                var historyArray = JSON.parse(cookie);
-                var linkUrl = window.location.origin + $(this).children('a.history-checkbox').attr('href');
-                if (searchStringInArray(linkUrl, historyArray) === -1) {
-                    console.log(linkUrl + 'is not in the history');
-                    if (currentUrl == linkUrl) {
-                        $(this).children('a.history-checkbox').addClass('in-history');
-                        console.log(linkUrl + ' is the current page');
-                    }
-                } else if (currentUrl == linkUrl) {
-                    $(this).children('a.history-checkbox').addClass('in-history');
-                    console.log(linkUrl + ' is the current page');
-                } else {
-                    $(this).children('a.history-checkbox').addClass('in-history');
-                }
-            });
+            ////add url to history cookie
+            updateCookie(siteOrigin + url);
+            
             //ANALYTICS - SET PAGE URL AND TITLE
             ga('set', {
                 page: url,
@@ -233,7 +248,7 @@ function getLeaveSiteModalContent(url, addEntry, originType) {
         if(addEntry === true) {
             // Add History Entry using pushState
             History.pushState({ modal : 1, origin : originType, close : originUrl }, null, url);
-            console.log(History.getState().data);
+            //console.log(History.getState().data);
         }
     });
 
@@ -259,6 +274,19 @@ function showVideoModal(){
     }, 201);
 
 }
+function showPhotoModal(){
+    $('#overlay').show();
+    $('#modal').fadeIn();
+    $('body').addClass('photo-view');
+    $('#modal-wrapper').addClass('photo');
+
+    //setTimeout(function(){ //VIDEO OPEN TRACKING
+    //    videoTitle = $('#video-title').text();
+    //    //video open tracking
+    //    ga('send','event','video','open',videoTitle);
+    //}, 201);
+
+}
 function showEventsModal(url){
     //var id = url.substring(url.lastIndexOf('#'));
     //console.log(id);
@@ -272,7 +300,10 @@ function showValuesModal(f){
     $('#modal').show();
     $('body').addClass('values-view');
     $('#modal-wrapper').addClass('values');
-    console.log('done');
+    setTimeout(function(){
+        $('#culture-articles').hide();
+    }, 500);
+    //console.log('done');
 }
 function svgSize(){ //call this if jquery sizing is necessary
 
@@ -280,7 +311,7 @@ function svgSize(){ //call this if jquery sizing is necessary
         var modalWidth = $('#modal-content').width();
 
         $('svg#values_svg').width(modalWidth).height(modalWidth * 1.3021288292);
-        console.log('width: ' + $('svg#values_svg').width() + ', height: ' + $('svg#values_svg').height());
+        //console.log('width: ' + $('svg#values_svg').width() + ', height: ' + $('svg#values_svg').height());
 
     }, 201);
 
@@ -295,17 +326,7 @@ function showLeaveSiteModal(href){
 
     $('body').addClass('leave-site-view');
     $('#modal-wrapper').addClass('leave-site');
-    $('#offsite-modal','.leave-site-view').on('click','#close-offsite-modal', function(e){
-        e.preventDefault();
-        destroyLeaveSiteModal();
-    });
-    $('#offsite-modal','.leave-site-view').on('click','#forward-to', function(e){
-        destroyLeaveSiteModal();
-    });
-    $('#offsite-modal','.leave-site-view').on('click','#forward-cancel', function(e){
-        e.preventDefault();
-        destroyLeaveSiteModal();
-    });
+
 
 }
 function destroyModal(){
@@ -325,6 +346,15 @@ function destroyVideoModal(){
     $('body').removeClass('hold-modal');
     $('#single-modal-content').text('');
     ga('send','event','video','close',videoTitle); //VIDEO CLOSE TRACKING
+}
+function destroyPhotoModal(){
+    $('#overlay').hide();
+    $('#modal').hide();
+    $('body').removeClass('photo-view');
+    $('#modal-wrapper').removeClass('photo');
+    $('body').removeClass('hold-modal');
+    $('#single-modal-content').text('');
+    //ga('send','event','video','close',videoTitle); //VIDEO CLOSE TRACKING
 }
 function destroyValuesModal(){
     $('#overlay').hide();
@@ -352,8 +382,8 @@ function destroyLeaveSiteModal(){
 
     $('#offsite-modal').hide();
 
-
     $('#modal-wrapper').removeClass('leave-site');
+
 }
 (function(window, undefined) {
     History.Adapter.bind(window,'statechange',function(){ // Note: We are using statechange instead of popstate
@@ -363,10 +393,10 @@ function destroyLeaveSiteModal(){
         }
         if(History.getState().data.modal !== 1) {
             destroyModal();
-            console.log('ping');
+            //console.log('ping');
         } else {
             showModal();
-            console.log('ding');
+            //console.log('ding');
         }
     });
 })(window);
@@ -375,3 +405,22 @@ function destroyLeaveSiteModal(){
 $(document).keyup(function(e) {
     if (e.keyCode == 27) $('#close-modal').click();   // esc
 });
+
+$(document).mouseup(function (e)
+{
+    var container = $("#modal",'.article-view');
+
+    if (!container.is(e.target) // if the target of the click isn't the container...
+        && container.has(e.target).length === 0) // ... nor a descendant of the container
+    {
+        $('#close-modal').click();
+    }
+});
+
+$(document).ready(function(){
+    if ($('#wrapper--values').length){
+        $('#modal-wrapper').addClass('values');
+        $('#culture-articles').hide();
+    }
+
+})

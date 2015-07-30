@@ -32,6 +32,7 @@
         RX_JOB_RM:          / (\(Oct-Dec\))/i,
  
         SIZE_CLASSES: [ 'large', 'medium', 'small' ],
+
     };
     
     /*

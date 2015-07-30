@@ -23,6 +23,7 @@ $(document)
         // Getting Content
         getModalContent(href, true, 'page');
         showPhotoModal();
+        //console.log('test');
     })
     //EVENTS FUNCTIONALITY
     .on('click','.all-events-link', function(e){
@@ -55,7 +56,7 @@ $(document)
         }
         var modalHeight = $('#offsite-modal').height();
         var screenHeight = $(window).height();
-        console.log(modalHeight);
+        //console.log(modalHeight);
         var topHeight = 0.5*(screenHeight-modalHeight);
         $('#offsite-modal').css({'top': topHeight +'px'});
     })
@@ -67,7 +68,7 @@ $(document)
         origin = History.getState().data.origin;
         if ( origin == 'page') {
             originType = 'page';
-            console.log('page!')
+            //console.log('page!')
         } else {
             originType = 'article';
         }
@@ -80,9 +81,9 @@ $(document)
             if ($('#wrapper--values').length){
                 $('#modal-wrapper').addClass('values');
                 $('#culture-articles').hide();
-                console.log('yes');
+                //console.log('yes');
             } else {
-                console.log('no');
+                //console.log('no');
             }
         }, 300);
     })
@@ -93,7 +94,7 @@ $(document)
         origin = History.getState().data.origin;
         console.log(origin);
         if ( origin == 'page') {
-            console.log('ooops!');
+            //console.log('ooops!');
             originType = 'page';
         } else {
             originType = 'article';
@@ -107,9 +108,9 @@ $(document)
             if ($('#wrapper--values').length){
                 $('#modal-wrapper').addClass('values');
                 $('#culture-articles').hide();
-                console.log('yes');
+                //console.log('yes');
             } else {
-                console.log('no');
+                //console.log('no');
             }
         }, 300);
     })
@@ -299,7 +300,9 @@ function showValuesModal(f){
     $('#modal').show();
     $('body').addClass('values-view');
     $('#modal-wrapper').addClass('values');
-    $('#culture-articles').hide();
+    setTimeout(function(){
+        $('#culture-articles').hide();
+    }, 500);
     //console.log('done');
 }
 function svgSize(){ //call this if jquery sizing is necessary
