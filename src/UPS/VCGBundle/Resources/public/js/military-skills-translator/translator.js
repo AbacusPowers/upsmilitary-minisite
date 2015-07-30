@@ -120,35 +120,35 @@ function objectLength(obj) {
 }
 
 $( document ).ready(function() {
-    $.get("/bundles/vcg/data/new-jobs-data.csv", function(data){
+    $.get("/bundles/vcg/data/new-jobs-data.csv", function (data) {
         //        console.log(data);
         allJobs = $.csv.toObjects(data);
 
     });
 
-    $('#branch-of-service').change(function(){
+    $('#branch-of-service').change(function () {
         var val = $(this).val();
         $('#job-code').val('');
-        $('#job-code').prop('disabled',false).removeClass('disabled-input');
+        $('#job-code').prop('disabled', false).removeClass('disabled-input');
         $('label[for="job-code"]').removeClass('disabled-input');
 
-        hints = buildHints(val,allJobs);
+        hints = buildHints(val, allJobs);
         $('#job-code').autocomplete({
             source: hints,
-            select: function(event, ui) {
+            select: function (event, ui) {
                 checkBranch(ui.item.value);
             }
         });
     });
-    $('#job-code').on('input',function(){
+    $('#job-code').on('input', function () {
         var val = $(this).val();
         checkBranch(val);
     });
-    $('#branch-of-service').on('autocompletechange',function(){
+    $('#branch-of-service').on('autocompletechange', function () {
         var val = $(this).val();
         checkBranch(val);
     });
-    $('#military-skills-translator').submit(function(e){
+    $('#military-skills-translator').submit(function (e) {
         e.preventDefault();
         //hide old search results
         $('#side--a').addClass('full-width');
@@ -203,7 +203,7 @@ $( document ).ready(function() {
 
                         var categoryURL = 'http://jobs-ups.com/search/advanced-search/ASCategory/' + encodeURIComponent(categoryTitle) + '/ASPostedDate/-1/ASCountry/-1/ASState/-1/ASCity/-1/ASLocation/-1/ASCompanyName/-1/ASCustom1/-1/ASCustom2/-1/ASCustom3/-1/ASCustom4/-1/ASCustom5/-1/ASIsRadius/false/ASCityStateZipcode/-1/ASDistance/-1/ASLatitude/-1/ASLongitude/-1/ASDistanceType/-1';
 
-                        $('.hidden-part').attr('data-id','0').children('.expander__child').append('<div class="job-category"><h3 class="job-category_title">' + categoryTitle + '</h3><a href="' + categoryURL + '">Search</a></div>');
+                        $('.hidden-part').attr('data-id', '0').children('.expander__child').append('<div class="job-category"><h3 class="job-category_title">' + categoryTitle + '</h3><a href="' + categoryURL + '">Search</a></div>');
 
                         console.log('test');
                     }
@@ -217,7 +217,7 @@ $( document ).ready(function() {
             //generate other buckets
             var otherBuckets = [];
 
-            for( i = 1; i < buckets.length; i++) {
+            for (i = 1; i < buckets.length; i++) {
 
                 //exclude the matched bucket
                 if (i != b) {
@@ -230,7 +230,7 @@ $( document ).ready(function() {
             console.log(randBuckets);
 
             //loop through randomized bucket list
-            for( i = 0; i < randBuckets.length; i++) {
+            for (i = 0; i < randBuckets.length; i++) {
 
                 var randBucketTitle = randBuckets[i].name;
 
@@ -252,7 +252,7 @@ $( document ).ready(function() {
 
                         var categoryURL = 'http://jobs-ups.com/search/advanced-search/ASCategory/' + encodeURIComponent(categoryTitle) + '/ASPostedDate/-1/ASCountry/-1/ASState/-1/ASCity/-1/ASLocation/-1/ASCompanyName/-1/ASCustom1/-1/ASCustom2/-1/ASCustom3/-1/ASCustom4/-1/ASCustom5/-1/ASIsRadius/false/ASCityStateZipcode/-1/ASDistance/-1/ASLatitude/-1/ASLongitude/-1/ASDistanceType/-1';
 
-                        $('.hidden-part[data-id="'+i+'"]').children('.expander__child').append('<div class="job-category"><h3 class="job-category_title">' + categoryTitle + '</h3><a href="' + categoryURL + '">Search</a></div>');
+                        $('.hidden-part[data-id="' + i + '"]').children('.expander__child').append('<div class="job-category"><h3 class="job-category_title">' + categoryTitle + '</h3><a href="' + categoryURL + '">Search</a></div>');
 
                         console.log('test');
                     }
@@ -264,6 +264,7 @@ $( document ).ready(function() {
 
         }
     });
+});
 //
 //$(document)
 //  .ajaxStart(function () {
