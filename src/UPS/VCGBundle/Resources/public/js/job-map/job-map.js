@@ -29,10 +29,11 @@
             small: {}
         },
  
-        RX_JOB_RM:          / (\(Oct-Dec\))/i,
+        RX_JOB_RM: / (\(Oct-Dec\))/i,
  
         SIZE_CLASSES: [ 'large', 'medium', 'small' ],
     };
+    
     
     /*
      * Basis for all state objects.
@@ -60,17 +61,6 @@
                 var cityLocations = data[cityName];
                 for (var i = 0, len = cityLocations.length; i < len; ++i) {
                     var location = cityLocations[i];
-                    /*{
-                     * "id":"KYALH",
-                     * "name":"Upsco Airline Hangar",
-                     * "city":"Louisville",
-                     * "state":"KY",
-                     * "zip":"40213",
-                     * "size":0,
-                     * "jobs":["Package Handler","Feeder Driver","Part-time Operations Supervisor"],
-                     * "lat":38.160764,
-                     * "lon":-85.728404
-                     * }*/
                     markers.push({
                         latLng: [location.lat, location.lon],
                         style: CONST.MARKER_STYLES[CONST.SIZE_CLASSES[location.size]]
@@ -85,24 +75,19 @@
          */
         focus: function() {
             this.load();
-            vmap.addMarkers(this.markers);
             
-            infoContainer.append(this.info);
+            infoContainer.append(this.info).addClass('opacity');
             refresher.addClass('shown');
-            infoContainer.addClass('opacity');
             bside.removeClass('pseudo-block--hidden');
             containers.removeClass('full-width');
             
             var code = this.code;
+            var markers = this.markers;
             setTimeout(
                 function() {
-                    vmap.updateSize();
-                    vmap.setFocus({
-                        animate: true,
-                        region: code
-                    });
+                    zoom_map(code, markers);
                 },
-                600
+                zoomed ? 0 : 400
             );
         },
  
@@ -148,16 +133,8 @@
             bside.addClass('pseudo-block--hidden');
             containers.addClass('full-width');
             setTimeout(
-                function() {
-                    vmap.updateSize();
-                    vmap.setFocus({
-                        animate: true,
-                        scale: 1,
-                        x: 0.5,
-                        y: 0.5
-                    });
-                },
-                600
+                function() { zoom_map(null); },
+                400
             );
         }
     };
@@ -328,7 +305,11 @@
             markerStyle: {
                 initial: {
                     opacity: 1,
-                    'stroke-opacity': 0
+                    
+                    r: 8,
+                    
+                    'stroke-color': '#888',
+                    'stroke-opacity': 0.7
                 }
             },
             markersSelectable: false,
@@ -344,16 +325,18 @@
                 },
                 initial: {
                     fill: '#888888',
-                    stroke: '#444444'
+                    stroke: '#444444',
+                    'stroke-width': 0
                 },
                 selected: {
                     fill: '#FFB500'
                 }
             },
-            zoomMax: 5,
+            zoomMax: 4,
             zoomOnScroll: false
         });
         vmap = mapContainer.vectorMap('get', 'mapObject');
+        zoom_map(null);
     }
 
 
@@ -456,6 +439,38 @@
             vmap.setSelectedRegions(code);
             var state = fetch_state(code);
             ga('send', 'event', 'career_explorer', 'dropdown_select', state.name);
+        }
+    }
+    
+    
+    /*
+     * 
+     */
+    function update_size() { vmap.updateSize(); }
+    
+    function zoom_map(code, markers) {
+        if (code === null) {
+            update_size();
+            vmap.setFocus({
+                animate: true,
+                scale: 1,
+                x: 0.5,
+                y: 0.5
+            });
+            update_size();
+            setTimeout(update_size, 400);
+            zoomed = false;
+        }
+        else {
+            update_size();
+            vmap.setFocus({
+                animate: true,
+                region: code
+            });
+            vmap.addMarkers(markers);
+            update_size();
+            setTimeout(update_size, 400);
+            zoomed = true;
         }
     }
     
