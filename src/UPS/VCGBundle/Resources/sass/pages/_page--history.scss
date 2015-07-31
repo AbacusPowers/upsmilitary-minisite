@@ -46,9 +46,11 @@
 
             padding-left: 1.5rem;
             padding-top: 1.5rem;
+            margin-bottom: 1.5rem;
             text-align: center;
 //            position: relative;
             .breakpoint-large &, .breakpoint-wide & {
+              height: 150px;
               &:nth-child(3n+1) {
                 clear: both;
               }
@@ -56,20 +58,30 @@
 
             .breakpoint-small & {
               width: 100%;
+              height: 300px;
               border-left: none;
 
             }
 
             .breakpoint-medium & {
               width: 50%;
+              height: 200px;
 
               &:nth-child(2n+1) {
                 clear: both;
               }
 
             }
+            a {
+              width: 100%;
+              height: 100%;
+              overflow:hidden;
+              text-align: center;
+            }
             img {
-//              width: 100%;
+              min-width: 100%;
+              max-width: none;
+              min-height: 100%;
             }
 
           }

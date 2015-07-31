@@ -1,20 +1,176 @@
 ## YAML Template.
 ---
 1:
-  Filename: 1.jpg
+  Filename: _TAB0314.jpg
   Title: Test Photo 1
   Prev: 3
   Next: 2
   Caption: Testing a long caption. With multiple sentences.
 2:
-  Filename: 2.jpg
+  Filename: 1958_Chicago-BI_Oct.jpg
   Title: Test Photo 2
   Prev: 1
   Next: 3
   Caption: Testing a short caption.
 3:
-  Filename: 3.jpg
+  Filename: 1968-BI_Military-recruitment.jpg
   Title: Test Photo 3
   Prev: 2
+  Next: 4
+  Caption: Testing a long caption. With multiple sentences.
+4:
+  Filename: 1970_CoWide_BI_July_After-Service_001.jpg
+  Title: Test Photo 3
+  Prev: 3
+  Next: 5
+  Caption: Testing a long caption. With multiple sentences.
+5:
+  Filename: 1970_CoWide_BI_July_After-Service_2_3.jpg
+  Title: Test Photo 3
+  Prev: 4
+  Next: 6
+  Caption: Testing a long caption. With multiple sentences.
+6:
+  Filename: 1970_CoWide_BI_July_After-Service_4_5.jpg
+  Title: Test Photo 1
+  Prev: 5
+  Next: 7
+  Caption: Testing a long caption. With multiple sentences.
+7:
+  Filename: 1970_CoWide_BI_July_After-Service_6_7.jpg
+  Title: Test Photo 2
+  Prev: 6
+  Next: 8
+  Caption: Testing a short caption.
+8:
+  Filename: 1970_CoWide_BI_June_SilverStar.jpg
+  Title: Test Photo 3
+  Prev: 7
+  Next: 9
+  Caption: Testing a long caption. With multiple sentences.
+9:
+  Filename: 1970_CoWide-BI_One-girl-USO_1.jpg
+  Title: Test Photo 3
+  Prev: 8
+  Next: 10
+  Caption: Testing a long caption. With multiple sentences.
+10:
+  Filename: 1970_CoWide-BI_One-girl-USO_2.jpg
+  Title: Test Photo 3
+  Prev: 9
+  Next: 11
+  Caption: Testing a long caption. With multiple sentences.
+11:
+  Filename: 1990_BI-NoNE_Army-Honor.jpg
+  Title: Test Photo 1
+  Prev: 10
+  Next: 12
+  Caption: Testing a long caption. With multiple sentences.
+12:
+  Filename: 1991_BI-NoNE_Serving-Our-Country.jpg
+  Title: Test Photo 2
+  Prev: 11
+  Next: 13
+  Caption: Testing a short caption.
+13:
+  Filename: 2002_National-Guard_pic.jpg
+  Title: Test Photo 3
+  Prev: 12
+  Next: 14
+  Caption: Testing a long caption. With multiple sentences.
+14:
+  Filename: After-Service,-What_1973_pg-1.jpg
+  Title: Test Photo 3
+  Prev: 13
+  Next: 15
+  Caption: Testing a long caption. With multiple sentences.
+15:
+  Filename: After-Service,-What_1973_pg-2&3.jpg
+  Title: Test Photo 3
+  Prev: 14
+  Next: 16
+  Caption: Testing a long caption. With multiple sentences.
+16:
+  Filename: BI_Co-wide_JulyAug-1974_Healthcare_Military.jpg
+  Title: Test Photo 1
+  Prev: 15
+  Next: 17
+  Caption: Testing a long caption. With multiple sentences.
+17:
+  Filename: BI_Co-wide_March-1973_POWs.jpg
+  Title: Test Photo 2
+  Prev: 16
+  Next: 18
+  Caption: Testing a short caption.
+18:
+  Filename: BI_NY_Oct-24-1942_xmas-gift.jpg
+  Title: Test Photo 3
+  Prev: 17
+  Next: 19
+  Caption: Testing a long caption. With multiple sentences.
+19:
+  Filename: Corp-BI_March-1991.jpg
+  Title: Test Photo 3
+  Prev: 18
+  Next: 20
+  Caption: Testing a long caption. With multiple sentences.
+20:
+  Filename: DSC_1084.jpg
+  Title: Test Photo 3
+  Prev: 19
+  Next: 21
+  Caption: Testing a long caption. With multiple sentences.
+21:
+  Filename: Image_Naval-Officer-interested-in-UPS-career_1966.jpg
+  Title: Test Photo 1
+  Prev: 20
+  Next: 22
+  Caption: Testing a long caption. With multiple sentences.
+22:
+  Filename: IMG_6798.jpg
+  Title: Test Photo 2
+  Prev: 21
+  Next: 23
+  Caption: Testing a short caption.
+23:
+  Filename: IMG_6800.jpg
+  Title: Test Photo 3
+  Prev: 22
+  Next: 24
+  Caption: Testing a long caption. With multiple sentences.
+24:
+  Filename: Portrait-of-George-in-Naval-uniform.jpg
+  Title: Test Photo 3
+  Prev: 23
+  Next: 25
+  Caption: Testing a long caption. With multiple sentences.
+25:
+  Filename: SMA,-jones,-oleary-handling-small.jpg
+  Title: Test Photo 3
+  Prev: 24
+  Next: 26
+  Caption: Testing a long caption. With multiple sentences.
+26:
+  Filename: Snapshot-of-George-in-Naval-uniform.jpg
+  Title: Test Photo 3
+  Prev: 25
+  Next: 27
+  Caption: Testing a long caption. With multiple sentences.
+27:
+  Filename: UPS-Veterans-Thunder-Over-Louisville-Event-2014--2429.jpg
+  Title: Test Photo 3
+  Prev: 26
+  Next: 28
+  Caption: Testing a long caption. With multiple sentences.
+28:
+  Filename: Vet1_edit.jpg
+  Title: Test Photo 3
+  Prev: 27
+  Next: 29
+  Caption: Testing a long caption. With multiple sentences.
+29:
+  Filename: Vet3_edit.jpg
+  Title: Test Photo 3
+  Prev: 28
   Next: 1
   Caption: Testing a long caption. With multiple sentences.
