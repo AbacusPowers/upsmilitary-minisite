@@ -8,7 +8,7 @@ and open the template in the editor.
     Author     : justin
 */
 
-.page .page--military-skills-translator {
+.page--military-skills-translator {
     .form-section {
         padding: 1em 1em 3em 1em;
         margin: 0 auto auto auto;
@@ -48,7 +48,7 @@ and open the template in the editor.
         position: relative;
     }
 
-    #side--b{
+    #side--b {
         position: relative;
 
         &:before {
@@ -76,9 +76,7 @@ and open the template in the editor.
         }
 
         #military-job {
-            // border-left: 10px solid $white05;
-            border-bottom: 1px solid rgba( $ups-grey-1, 0.3);
-            padding: 2.6em 3em 1.5em 3em;
+            padding: 2.6em 3em 2.5em 3em;
             -webkit-transition: opacity 1.5s ease-out;
             transition: opacity 1.5s ease-out;
 
@@ -118,17 +116,214 @@ and open the template in the editor.
             }
         }
 
-        h1#job-types {
-            display: none;
-            width: 100%;
-            background: $ups-yellow;
-            padding: 0.5em;
+
+        h3.bucket-wrap-label {
+            margin-left: 3rem;
+            padding-bottom: 0.25rem;
+            color: $grey--medium;
+            margin-right: 1em;
+
+            .breakpoint-small & {
+                margin-left: 1rem;
+            }
         }
-        .component--expander {
+
+        .wrap--no-match-bucket h3:first-child {
+            color: $ups-yellow;
+            padding-bottom: 0.5rem;
+        }
+
+        .wrap--match-bucket {
+            h2 {
+                color: $ups-yellow;
+            }
+
+            .component--expander {
+                background: $grey--dark;
+                color: black;  
+                
+                .expander__wrapper {
+                    border-bottom: none;
+                }
+
+                .expand-button {
+                    padding-bottom: 3.6rem;
+
+                    .breakpoint-small & {
+                        // padding-bottom: 4.5rem;                
+                    }
+
+                    p {
+                        margin-top: 0.4rem;
+                        margin-right: 4rem;
+                        margin-left: 1rem;
+                    }
+
+                    i.fa {
+                        top: auto;
+                        bottom: 1rem;
+                        @include transition (all 0.15s ease-out);
+
+                    }
+
+                    i.fa.fa-plus {
+                        color: rgba( $ups-yellow, 0.8 );
+                    }
+
+                    h4 {
+                        color: $ups-yellow;
+                        position: absolute;
+                        text-align: right;
+                        bottom: 1.2rem;
+                        right: 4rem;
+                        opacity: 1;
+                        font-size: 0.9em;
+                        margin-left: 1em;
+                        @include transition (all 0.15s ease-out);
+
+                        .breakpoint-small & {
+                            font-size: 0.8em;
+                        }
+
+                        i {
+                            padding-top: 0.2em;
+                            padding-left:0.4em;
+
+                            // padding-right: 1.1em;
+                            float: right;
+
+                            .breakpoint-small & {
+                                // display: none;
+                            }
+                        }
+                    }
+                }
+
+                .expander__wrapper.open-expander .expand-button h4 {
+                    opacity: 0;    
+                    @include transition (all 0.15s ease-out);                            
+                }
+                
+                .expander__wrapper .expand-button h4.search-note {
+                    color: $grey--medium;
+                    opacity: 0;
+
+                    .breakpoint-small & {
+                        display: none;
+                    }
+                }
+
+                .expander__wrapper.open-expander .expand-button h4.search-note {
+                    opacity: 1;
+                }
+                
+                .hidden-part {
+                    padding-left: $vertical-thread-width; 
+                }
+            }
+
+            .job-category {
+                border-bottom: 1px dotted $black;
+            }
+
+
+        }
+        
+        .job-category {
+            @include transition (all 0.15s ease-out);
+            margin: 0;
+            padding: 1em 0 1em 4rem;
+            padding-right: 7rem;   
+            position: relative;
+
+            .breakpoint-small & {
+                padding-left: 1.5rem;
+                padding-right: 5.5rem;
+            }
+
+            .breakpoint-medium & {
+                padding-left: 2.5rem;
+            }
+
+            &:first-child {
+                border-top: 1px dotted $black;
+            }
+
+            h3.job-category_title {
+                font-weight: 800;
+                color: $ups-yellow;
+            }
+
+            a.search-button {
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                padding-top: 0;
+                display: block;
+                background: $white05;
+                color: $white60;
+                height: 100%;
+                @include transition (all 0.15s ease-out);
+                width: 6em;
+                text-align: center;
+
+                .breakpoint-small & {
+                    width: 5em;
+                }
+
+                div {
+                    font-size: 0.8em;
+                    text-transform: uppercase;
+                    position: relative;
+                    top: 50%;
+                    transform: translateY(-40%);
+                }
+            }
             
+            &:hover {
+              background: $white10;
+            }
+
+            &:hover a.search-button {
+                background: $ups-yellow;
+                color: $black;
+            }
         }
-    }
     
+        .wrap--all-buckets {
+            .expander__wrapper:first-child {
+                border-top: 1px solid rgba( $ups-grey-1, 0.3);
+            }
+            
+            .expander__wrapper:before {
+                background: $grey--dark;
+            }
+
+            .hidden-part {
+                padding-left: $vertical-thread-width; 
+            }
+
+            .component--expander .expand-button {
+                p {
+                    color: $white80;
+                    margin-top: 0.4rem;
+                    margin-right: 4rem;
+                    margin-left: 1rem;
+                }
+            }
+
+            .job-category {
+                border-bottom: none;
+                border-top: 1px dotted $white20;
+            }
+        }
+
+         .breakpoint-small & .wrap--all-buckets .hidden-part {
+            padding-left: 0;
+        }
+
+    }
+
     .military-skills-translator-label {
         color: $ups-yellow;
         margin-top: 2em;
@@ -142,8 +337,6 @@ and open the template in the editor.
     }
     
     img#ajax-spinner {
-        // display: inline-block;
-        // width: 100%;
         margin-top: 2em;
         margin-right: auto;
         margin-left: auto;

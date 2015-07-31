@@ -18,8 +18,8 @@
 
 var buckets = [];
 buckets[0] = {name: 'No direct match', description: 'No direct match available'};
-buckets[1] = {name: 'Delivery Drivers', description: 'Delivery driver bucket description'};
-buckets[2] = {name: 'Freight Drivers', description: 'Freight driver bucket description'};
+buckets[1] = {name: 'Delivery Drivers', description: 'Delivery driver bucket description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe enim iure placeat incidunt praesentium corporis, excepturi quo! Amet illo aperiam unde minima dignissimos, sint eum maiores optio, magni sunt omnis!'};
+buckets[2] = {name: 'Freight Drivers', description: 'Freight driver bucket description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum laborum dolorum, laudantium quas corporis asperiores, maxime molestiae culpa voluptate ut voluptates. Distinctio placeat voluptas quos quia similique fuga fugit iste.'};
 buckets[3] = {name: 'Logistics', description: 'Logistics bucket description'};
 buckets[4] = {name: 'Operations', description: 'Operations bucket description'};
 buckets[5] = {name: 'Mechanics and Technicians', description: 'Mechanics and technicians bucket description'};
@@ -203,7 +203,7 @@ $( document ).ready(function() {
 
                         var categoryURL = 'http://jobs-ups.com/search/advanced-search/ASCategory/' + encodeURIComponent(categoryTitle) + '/ASPostedDate/-1/ASCountry/-1/ASState/-1/ASCity/-1/ASLocation/-1/ASCompanyName/-1/ASCustom1/-1/ASCustom2/-1/ASCustom3/-1/ASCustom4/-1/ASCustom5/-1/ASIsRadius/false/ASCityStateZipcode/-1/ASDistance/-1/ASLatitude/-1/ASLongitude/-1/ASDistanceType/-1';
 
-                        $('.hidden-part').attr('data-id', '0').children('.expander__child').append('<div class="job-category"><h3 class="job-category_title">' + categoryTitle + '</h3><a href="' + categoryURL + '">Search</a></div>');
+                        $('.hidden-part').attr('data-id', '0').children('.expander__child').append('<div class="job-category"><h3 class="job-category_title">' + categoryTitle + '</h3><a class="search-button" target="_blank" href="' + categoryURL + '"><div>Search</div></a></div>');
 
                         console.log('test');
                     }
@@ -211,6 +211,7 @@ $( document ).ready(function() {
 
             } else {
                 $('.wrap--no-match-bucket').removeClass('hidden');
+                $('.wrap--all-buckets .bucket-wrap-label').addClass('hidden');
                 console.log('no direct match');
             }
 
@@ -238,7 +239,7 @@ $( document ).ready(function() {
 
                 var randBucketDescription = randBuckets[i].description;
 
-                $('.wrap--all-buckets .component--expander').append('<section class="expander__wrapper"><a data-id="' + i + '" class="button expand-button"><h2 class="expander__parent">' + randBucketTitle + '</h2><i class="fa fa-plus fa-2x"></i></a><div data-id="' + i + '" class="hidden-part"><div class="expander__child"><p class="">' + randBucketDescription + '</p></div></div></section>');
+                $('.wrap--all-buckets .component--expander').append('<section class="expander__wrapper"><a data-id="' + i + '" class="button expand-button"><h2 class="expander__parent">' + randBucketTitle + '</h2><p class="">' + randBucketDescription + '</p><i class="fa fa-plus fa-2x"></i></a><div data-id="' + i + '" class="hidden-part"><div class="expander__child"></div></div></section>');
 
                 if (categories.hasOwnProperty(randBucketTitle)) {
 
@@ -252,7 +253,7 @@ $( document ).ready(function() {
 
                         var categoryURL = 'http://jobs-ups.com/search/advanced-search/ASCategory/' + encodeURIComponent(categoryTitle) + '/ASPostedDate/-1/ASCountry/-1/ASState/-1/ASCity/-1/ASLocation/-1/ASCompanyName/-1/ASCustom1/-1/ASCustom2/-1/ASCustom3/-1/ASCustom4/-1/ASCustom5/-1/ASIsRadius/false/ASCityStateZipcode/-1/ASDistance/-1/ASLatitude/-1/ASLongitude/-1/ASDistanceType/-1';
 
-                        $('.hidden-part[data-id="' + i + '"]').children('.expander__child').append('<div class="job-category"><h3 class="job-category_title">' + categoryTitle + '</h3><a href="' + categoryURL + '">Search</a></div>');
+                        $('.hidden-part[data-id="' + i + '"]').children('.expander__child').append('<div class="job-category"><h3 class="job-category_title">' + categoryTitle + '</h3><a class="search-button" target="_blank" href="' + categoryURL + '"><div>Search</div></a></div>');
 
                         console.log('test');
                     }
