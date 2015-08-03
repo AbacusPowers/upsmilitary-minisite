@@ -1,9 +1,9 @@
 $map-height-small: 24em;
-$map-height-medium: 24em;
+$map-height-medium: 28em;
 $map-height-large: 35em;
 $map-height-wide: 50em;
 
-$map-control-height: 7.2em;
+$map-control-height: 8.2em;
 
 // $state-list-scroll-height-small: $map-height-wide - $map-control-height;
 $state-list-scroll-height-medium: $map-height-medium - $map-control-height;
@@ -49,17 +49,17 @@ $state-list-scroll-height-wide:  $map-height-wide - $map-control-height;
             }
         }   
 
-        &.pseudo-block--hidden {
-            // @include transition (all 3s ease-out);
+        // &.pseudo-block--hidden {
+        //     // @include transition (all 3s ease-out);
 
 
-            &:before {
-                // @include transition (all 3s ease-out);
-               opacity: 0;
-               // display: none;
-               // @include transition(all 2s ease-in );
-            }
-        }
+        //     &:before {
+        //         // @include transition (all 3s ease-out);
+        //        // opacity: 0;
+        //        // display: none;
+        //        // @include transition(all 2s ease-in );
+        //     }
+        // }
     }
 
     .map-controls {
@@ -69,7 +69,7 @@ $state-list-scroll-height-wide:  $map-height-wide - $map-control-height;
         padding: 1em 0 3em 1em;
 
         .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & {
-            padding: 2.6em 3em 0em 3em;
+            padding: 1.6em 3em 0em 3em;
         }
 
 
@@ -100,7 +100,27 @@ $state-list-scroll-height-wide:  $map-height-wide - $map-control-height;
         }
     }
 
-   
+       #map-wrapper{
+        width: 100%;
+        height: $map-height-small;
+        display: block;
+
+        .breakpoint-medium & {
+            height: $map-height-medium;
+        }
+
+        .breakpoint-large & {
+            height: $map-height-large;
+        }
+        
+        .breakpoint-wide & {
+            height: $map-height-wide;
+        }
+     
+        path { 
+            cursor: pointer; 
+        }
+    }
     
     #map-container svg {
         width: 100%;
