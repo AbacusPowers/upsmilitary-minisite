@@ -102,6 +102,8 @@ $state-list-scroll-height-wide:  $map-height-wide - $map-control-height;
         width: 100%;
         height: $map-height-small;
         display: block;
+        
+        @include transition (all 0.25s ease-out);
 
         .breakpoint-medium & {
             height: $map-height-medium;
@@ -192,6 +194,26 @@ $state-list-scroll-height-wide:  $map-height-wide - $map-control-height;
         // @include transition (all 1s ease-out);
 
         display: block;
+        
+        > .component--expander {
+            height: auto;
+            display: block;
+
+            .breakpoint-medium & {
+                max-height: $state-list-scroll-height-medium;
+                overflow-y: scroll;
+            }
+
+            .breakpoint-large & {
+                max-height: $state-list-scroll-height-large;
+                overflow-y: scroll;
+            }
+            
+            .breakpoint-wide & {
+                max-height: $state-list-scroll-height-wide;
+                overflow-y: scroll;
+            }
+        }
 
         h2 i.fa-circle {
             vertical-align: middle;
@@ -202,6 +224,14 @@ $state-list-scroll-height-wide:  $map-height-wide - $map-control-height;
             display: inline-block;
             
             &.location-large { color: $ups-green; }
+        }
+        
+        .city-label {
+            h2[data-info=city-name] {
+                margin-right: 0.5em;
+            }
+            
+            > li { display: inline-block; }
         }
 
         .size-key {
@@ -265,26 +295,6 @@ $state-list-scroll-height-wide:  $map-height-wide - $map-control-height;
                 left: 1rem;
                 top: 14.3rem;
             }
-        }
-    }
-
-    .map-info--state > .component--expander {
-        height: auto;
-        display: block;
-
-        .breakpoint-medium & {
-            max-height: $state-list-scroll-height-medium;
-            overflow-y: scroll;
-        }
-
-        .breakpoint-large & {
-            max-height: $state-list-scroll-height-large;
-            overflow-y: scroll;
-        }
-        
-        .breakpoint-wide & {
-            max-height: $state-list-scroll-height-wide;
-            overflow-y: scroll;
         }
     }
 }
