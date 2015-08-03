@@ -30,6 +30,7 @@
     #side--a {
         position: relative;
 
+
         .intro {
             @include grid-typography;
             // background: $black70;
@@ -39,6 +40,7 @@
              
              .breakpoint-small & {
                 padding: 1em 1em 1em 0;
+                background: none;
 
                 svg {
                     margin-left: 1em;

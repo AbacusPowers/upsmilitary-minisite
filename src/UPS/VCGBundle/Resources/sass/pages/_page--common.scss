@@ -25,17 +25,20 @@
   
 
     .title-block {
-        background: #222;
+        background: $black;
         padding-left: 1em;
         padding-top: 1.5em;
+        border-bottom: 1px solid $ups-yellow;
+
 
         p { 
             color: $ups-yellow;
         }
 
         .breakpoint-small & {
-            height: 8.5em;
-            padding-top: 3.5em;
+            height: 8.8em;
+            padding-top: 2.5em;
+            border-top: 1.8rem solid $grey--darker;
         }
 
         .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & {
@@ -49,7 +52,6 @@
             padding-top: 1em;
             padding-right: 5.5em;
             padding-left: 6.3em;
-            border-bottom: 1px solid $ups-yellow;
     
             h1 {
                 font-size: 1.7em;
@@ -159,6 +161,12 @@
         z-index: 2;
         -webkit-transition: min-height 0.5s;
         transition: min-height 0.5s;
+
+        .breakpoint-small & {
+            margin-top: 1.5em;
+
+        }
+
     }
 
     #side--b {
@@ -261,7 +269,7 @@
                 position: relative;
                 height: 5em;
                 background: $ups-yellow;
-                top: -5.5em;
+                top: -5.2em;
                 left: 0;
             }
 

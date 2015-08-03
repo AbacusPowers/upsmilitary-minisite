@@ -18,6 +18,10 @@ $state-list-scroll-height-wide:  $map-height-wide - $map-control-height;
         .map-wrapper {
          overflow: hidden;
          position: relative;
+
+            .breakpoint-small & {
+                padding-top: 2em;
+            }
         }
 
         &.full-width {
@@ -143,7 +147,7 @@ $state-list-scroll-height-wide:  $map-height-wide - $map-control-height;
         }
         
         .breakpoint-small & { 
-            top: 20.5rem;
+            top: 22.4rem;
             left: 1rem;
         }
     }
@@ -212,7 +216,7 @@ $state-list-scroll-height-wide:  $map-height-wide - $map-control-height;
             background: $black20;
 
             .breakpoint-small & {
-                top: 34.8em;
+                top: 37.8em;
                 left: auto;
                 right: 0;
                 padding-bottom: 0.3em;
@@ -263,7 +267,7 @@ $state-list-scroll-height-wide:  $map-height-wide - $map-control-height;
                 font-size: 1.2em;
                 right: auto;
                 left: 1rem;
-                top: 14.3rem;
+                top: 15.5rem;
             }
         }
     }
