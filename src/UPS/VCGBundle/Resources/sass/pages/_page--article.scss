@@ -71,7 +71,6 @@
       }
 
       &:nth-child(even) {
-        // margin-right: 1%;
         border-left: 1px dotted rgba( $ups-grey-1, 0.5);
           .breakpoint-small & {
             border-left: none;
@@ -80,8 +79,6 @@
 
       a.button {
         display: block;
-        // line-height: 3em;
-        // padding-left: 2em;
         padding: 1em 0 1em 2.5em;
         position: relative;
         &:before {
@@ -96,26 +93,6 @@
         &.in-history:before {
           content: "\f046";
         }
-        //&:visited {
-        //  span {
-        //    &:before {
-        //      color: $black;
-        //    }
-        //
-        //  }
-        //}
-        //span {
-        //  display: block;
-        //  &:before {
-        //    font-family: FontAwesome;
-        //    content: "\f046";
-        //    position: absolute;
-        //    left: 0;
-        //    padding: 0 0.5em 0 1em;
-        //    color: $white;
-        //  }
-        //
-        //}
         &.black {
           background: $black;
           color: $white;
@@ -129,6 +106,9 @@
     &.group-links--registered-apprentice {
        li:nth-last-child(2) {
         border-bottom: none;
+        .breakpoint-small & {
+          border-bottom: 1px solid $ups-grey-1;
+        }
       }
       li:last-child {
         border-bottom: none;
@@ -138,6 +118,10 @@
     &.group-links--culture-benefits {
       li:nth-last-child(2) {
         border-bottom: none;
+
+        .breakpoint-small & {
+          border-bottom: 1px solid $ups-grey-1;
+        }
       }
       li:last-child {
         border-bottom: none;
