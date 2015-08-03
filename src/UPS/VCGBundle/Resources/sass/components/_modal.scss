@@ -244,7 +244,7 @@ body.article-view, body.leave-site-view, body.video-view, body.photo-view, body.
     
     &:hover, &:focus {
       background: $white20;
-      color: $grey70;
+      color: $grey90;
     }
   }
 
@@ -346,7 +346,10 @@ body.article-view, body.leave-site-view, body.video-view, body.photo-view, body.
     }
   }
   .photo-caption {
+    text-align: center;
+    padding: 2em 2em 2.5em;
     color: $white;
+    margin-bottom: 0;
   }
   .breakpoint-small & {
     a#prev-article, a#next-article{
