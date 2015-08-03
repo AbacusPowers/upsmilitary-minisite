@@ -6,6 +6,8 @@
     var CONST = {
         BASE_DATA_URL: '/js/job-map/',
  
+        FOCUS_DEFAULT: {animate: true, scale: 1, x: 0.5, y: 0.5},
+ 
         JOB_DESC: {
             'Package Handler': 'Package handlers load and unload packages into or out of UPS vehicles.',
             'Driver Helper (Oct-Dec)': 'Driver helpers deliver and pick up UPS packages during peak season.',
@@ -77,29 +79,11 @@
          */
         focus: function() {
             this.load();
-
-            var foc = {animate: true, region: this.code};
-            var markers = this.markers;
-            
-            var do_focus = function() {
-                vmap.setFocus(foc);
-                vmap.addMarkers(markers);
-            }
-            
-            if (zoomed) {
-                do_focus();
-            }
-            else {
-                var on_transition_end = function() {
-                    vmap.updateSize();
-                    do_focus();
-                    zoomed = true;
-                    containers.unbind(CONST.TRANSITIONEND, on_transition_end);
-                };
-                containers.one(CONST.TRANSITIONEND, on_transition_end);
-            }
+            focus = {animate: true, region: this.code};
             
             containers.removeClass('full-width');
+            vmap.addMarkers(this.markers);
+            vmapContainer.addClass('zoom');
             refresher.addClass('shown');
             bside.removeClass('pseudo-block--hidden');
             infoContainer.append(this.info).addClass('opacity');
@@ -142,16 +126,8 @@
          * Focusing the none-state equates to resetting.
          */
         focus: function() {
-            var foc = {animate: false, scale: 1, x: 0.5, y: 0.5};
-            
-            var on_transition_end = function() {
-                vmap.updateSize();
-                vmap.setFocus(foc);
-                containers.unbind(CONST.TRANSITIONEND, on_transition_end);
-            }
-            containers.one(CONST.TRANSITIONEND, on_transition_end);
-            
             zoomed = false;
+            focus = CONST.FOCUS_DEFAULT;
             bside.addClass('pseudo-block--hidden');
             refresher.removeClass('shown');
             infoContainer.removeClass('opacity');
@@ -165,10 +141,11 @@
      */
     var bside, containers;
     var expander_id = 0;
+    var focus = CONST.FOCUS_DEFAULT;
     var focusedState = NONE_STATE;
     var infoContainer, infoTemplate, refresher;
     var states = {'': NONE_STATE};
-    var stateSelect, vmap;
+    var stateSelect, vmap, vmapContainer;
     var zoomed = false;
     
 
@@ -183,6 +160,8 @@
         init_map();
         init_map_controls();
         init_info();
+        
+        containers.bind(CONST.TRANSITIONEND, on_transition_end);
         
         refresher.click(function() {
             focus_state(NONE_STATE);
@@ -297,6 +276,7 @@
             focusedState.blur();
             state.focus();
             focusedState = state;
+            vmap.setFocus(focus);
         }
     }
 
@@ -306,10 +286,6 @@
      */
     function init_info() {
         infoContainer = $('.map-info-container')
-
-        infoContainer.on('click', '.expand-button', on_expander_click);
-        infoContainer.on('click', '.hide-button', on_expander_click);
-        
         infoTemplate = $('.map-info--state', infoContainer).detach();
     }
     
@@ -356,6 +332,7 @@
             zoomOnScroll: false
         });
         vmap = mapContainer.vectorMap('get', 'mapObject');
+        vmapContainer = $('.jvectormap-container');
     }
 
 
@@ -424,20 +401,6 @@
     /*
      * 
      */
-    function on_expander_click() {
-        var elt = $(this);
-        elt.parent('.expander__wrapper').addClass('open-expander');
-        
-        var hidden = elt.siblings('.hidden-part');
-        $(this).parent('.expander__wrapper').toggleClass('open-expander');
-        hidden.slideToggle();
-        $(this).children('i.fa').toggleClass('fa-plus').toggleClass('fa-minus');
-    }
-
-    
-    /*
-     * 
-     */
     function on_region_selected(event, code) {
         var state = fetch_state(code);
         focus_state(state);
@@ -459,6 +422,15 @@
             var state = fetch_state(code);
             ga('send', 'event', 'career_explorer', 'dropdown_select', state.name);
         }
+    }
+    
+    
+    /*
+     * 
+     */
+    function on_transition_end() {
+        vmap.updateSize();
+        vmap.setFocus(focus);
     }
     
    
