@@ -8,7 +8,7 @@
     }
 
    .app-download-wrapper {
-        padding: 1.5em;
+        padding: 1.5em 1.5em 0 1.5em;
         margin-left: -1.5em;
         width: calc( 100% + 3em );
 
@@ -29,7 +29,6 @@
             float: right;
             padding-top: 2.5em;
             text-align: right;
-            // background: red;
         }
 
         img.badge--apple, img.badge--google, svg#badge--google {
