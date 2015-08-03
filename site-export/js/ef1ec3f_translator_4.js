@@ -18,44 +18,73 @@
 
 var buckets = [];
 buckets[0] = {name: 'No direct match', description: 'No direct match available'};
-buckets[1] = {name: 'Delivery Drivers', description: 'Delivery driver bucket description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe enim iure placeat incidunt praesentium corporis, excepturi quo! Amet illo aperiam unde minima dignissimos, sint eum maiores optio, magni sunt omnis!'};
-buckets[2] = {name: 'Freight Drivers', description: 'Freight driver bucket description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum laborum dolorum, laudantium quas corporis asperiores, maxime molestiae culpa voluptate ut voluptates. Distinctio placeat voluptas quos quia similique fuga fugit iste.'};
-buckets[3] = {name: 'Logistics', description: 'Logistics bucket description'};
-buckets[4] = {name: 'Operations', description: 'Operations bucket description'};
-buckets[5] = {name: 'Mechanics and Technicians', description: 'Mechanics and technicians bucket description'};
-buckets[6] = {name: 'Administrative Workers', description: 'Admin bucket description'};
-buckets[7] = {name: 'Professional Workers', description: 'Professional bucket description'};
-buckets[8] = {name: 'Information Systems', description: 'Information systems bucket description'};
-buckets[9] = {name: 'Air Operations', description: 'Air operations bucket description'};
+buckets[1] = {name: 'Drivers', description: 'Full- and part-time jobs moving packages between locations and delivering them to customers, including positions like Package Delivery Drivers, Driver Helpers, Tractor Trailer Drivers and Haz-Mat Endorsed Drivers'};
+buckets[2] = {name: 'Logistics', description: 'Full- and part-time jobs ensuring packages are appropriately moved through UPS facilities, including positions like Package Handlers, Dockworkers and Warehouse Associates'};
+buckets[3] = {name: 'Operations', description: 'Full- and part-time jobs ensuring UPS operations run smoothly for our customers, including positions like Part-time Supervisors and Support Specialists'};
+buckets[4] = {name: 'Mechanics and Technicians', description: 'Full- and part-time jobs ensuring equipment in UPS facilities and vehicles is well maintained, including positions like Paint and Body Mechanics, Maintenance Mechanics and Trailer Shop Mechanics'};
+buckets[5] = {name: 'Administrative Workers', description: 'Full- and part-time jobs ensuring UPS office duties are completed, including positions like Data Entry Personnel, Administrative Assistants and Dispatch Associates'};
+buckets[6] = {name: 'Professional Workers', description: 'Full- and part-time jobs requiring advanced training or education in a specialized field, including positions like Accounting Associates, Advertising Managers, Legal Personnel, Human Resources Personnel and all Professional Internships'};
+buckets[7] = {name: 'Information Systems', description: 'Full- and part-time jobs using technology to fulfill UPS\'s commitment to customers, including positions like Business Systems Analysts, Programming Analysts and Application Developers'};
+buckets[8] = {name: 'Air Operations', description: 'Full- and part-time jobs within UPS\'s own airline, including positions like Pilots, First officers, and Aircraft Maintenance Mechanics'};
+buckets[9] = {name: 'Engineers', description: 'Full- and part-time jobs improving UPS processes with technology and innovation, including positions like Aircraft Engineers, Industrial Engineering Specialists and Plant Engineers and Mechanics'};
+buckets[10] = {name: 'Sales and Customer Service', description: 'Full- and part-time jobs ensuring the satisfaction of new and existing UPS customers, including positions like Customer Service Associates, Inside Sales Representatives and Account Executives'};
+buckets[11] = {name: 'Part-Time, Hourly and Seasonal Workers', description: 'Part-time and seasonal opportunities at UPS are a great way to get started on a new career while going to school. Includes opportunities available in all UPS employment areas'};
 
 var categories = {
-    'Delivery Drivers': [
-        'Driver',
-        'Driver Helper',
-        'Package Delivery Driver',
-        'Part Time'
+    'Drivers': [
+        'Delivery Driver Jobs',
+        'Driver Helper Jobs',
+        'Driver Jobs',
+        'Driver Non-CDL Jobs',
+        'Truck Driver CDL Jobs'
     ],
-    'Freight Drivers': [
-        'CDL A (Hazmat REQ) Tractor Trailer Truckload Driver Dedicated',
-        'CDL A Tractor Trailer Truckload Driver Dedicated',
-        'Flatbed Driver',
-        'Freight (Air, Ocean and Ground)',
-        'Freight Forwarding',
-        'FT Freight PU and Delivery Driver',
-        'Line Hail Sleeper Team Driver',
-        'OTR CDL A Tractor Trailer Truckload Driver (Hazmat REQ)',
-        'OTR CDL A Tractor Trailer Truckload Driver Dedicated',
-        'OTR CDL A Tractor Trailer Truckload Driver',
-        'OTR CDL A Tractor Trailer Truckload Driver (Hazmat REQ) Dedicated',
-        'OTR Team CDL A Tractor Trailer Truckload Driver (Hazmat REQ)',
-        'OTR Team Driver CDL A Tractor Trailer Truckload Dedicated',
-        'Part time Road Driver',
-        'PR Freight PU and Delivery Driver',
-        'Team Driver CDL A Tractor Trailer Truckload Dedicated',
-        'Tractor Trailer Driver',
-        'Yard Shifter (Tractor Trailer)',
-        'Part Time'
+    'Logistics': [
+        'Warehousing Jobs',
+        'Logistics Jobs',
+        'Package Handling Jobs',
+        'Dock Worker Jobs'
     ],
+    'Operations': [
+        'Operations Jobs'
+    ],
+    'Mechanics and Technicians': [
+        'Mechanic Jobs'
+    ],
+    'Administrative Workers': [
+        'Administrative Jobs'
+    ],
+    'Professional Workers': [
+        'Communication Jobs',
+        'Finance and Accounting Jobs',
+        'Human Resources Jobs',
+        'Legal Jobs',
+        'Internship Jobs',
+        'Marketing & Communication Jobs'
+    ],
+    'Information Systems': [
+        'Information Systems Jobs',
+        'Information Technology Jobs',
+        'Information Management & Security Jobs',
+        'Applications Development Jobs',
+        'Infrastructure Jobs'
+    ],
+    'Air Operations': [
+        'Aircraft Jobs'
+    ],
+    'Engineers': [
+        'Industrial Engineering Jobs'
+    ],
+    'Sales and Customer Service': [
+        'Customer Service Jobs',
+        'Inside Sales Jobs',
+        'Sales Jobs',
+        'Business Management Jobs'
+    ],
+    'Part-Time, Hourly and Seasonal Workers': [
+        'Part Time Jobs',
+        'Part-Time Hourly and Seasonal Jobs',
+        'Seasonal Jobs'
+    ]
 };
 function aContainsB (a, b) {
     return a.indexOf(b) >= 0;
@@ -68,12 +97,12 @@ function buildHints(branchKey, myArray){
             hints.push(myArray[i].Search);
         }
     }
-    console.log(hints);
+    //console.log(hints);
     return hints;
 }
 
 function checkBranch(val){
-    console.log('changed');
+    //console.log('changed');
     if(hints.indexOf( val ) < 0) {
         $('#form-error').text('Please choose from the list of suggestions.');
         $('#form-error').removeClass('hidden');
@@ -81,7 +110,7 @@ function checkBranch(val){
     } else {
         $('#form-error').addClass('hidden');
     }
-    console.log('value: ' + val + ' matches item ' + hints.indexOf(val));
+    //console.log('value: ' + val + ' matches item ' + hints.indexOf(val));
 }
 
 function search(nameKey, myArray){
@@ -162,6 +191,7 @@ $( document ).ready(function() {
         $('.wrap--no-match-bucket').addClass('hidden');
         $('.wrap--all-buckets .component--expander').text('');
         $('.wrap--all-buckets').addClass('hidden');
+        $('.wrap--match-bucket .expander__child').text('');
 
 
         //searh value
@@ -188,31 +218,31 @@ $( document ).ready(function() {
 
                 //reveal direct match
                 $('.wrap--match-bucket').removeClass('hidden');
-                console.log('direct match with bucket  ' + bucketTitle);
+                //console.log('direct match with bucket  ' + bucketTitle);
 
 
                 if (categories.hasOwnProperty(bucketTitle)) {
 
                     var cats = categories[bucketTitle];
+                    //console.log('Bucket Categories: ' + cats);
 
                     for (j = 0; j < cats.length; j++) {
 
                         var categoryTitle = categories[bucketTitle][j];
 
-                        console.log(categoryTitle);
+                        //console.log(categoryTitle);
 
                         var categoryURL = 'http://jobs-ups.com/search/advanced-search/ASCategory/' + encodeURIComponent(categoryTitle) + '/ASPostedDate/-1/ASCountry/-1/ASState/-1/ASCity/-1/ASLocation/-1/ASCompanyName/-1/ASCustom1/-1/ASCustom2/-1/ASCustom3/-1/ASCustom4/-1/ASCustom5/-1/ASIsRadius/false/ASCityStateZipcode/-1/ASDistance/-1/ASLatitude/-1/ASLongitude/-1/ASDistanceType/-1';
 
                         $('.hidden-part').attr('data-id', '0').children('.expander__child').append('<div class="job-category"><h3 class="job-category_title">' + categoryTitle + '</h3><a class="search-button" target="_blank" href="' + categoryURL + '"><div>Search</div></a></div>');
 
-                        console.log('test');
                     }
                 }
 
             } else {
                 $('.wrap--no-match-bucket').removeClass('hidden');
                 $('.wrap--all-buckets .bucket-wrap-label').addClass('hidden');
-                console.log('no direct match');
+                //console.log('no direct match');
             }
 
             //generate other buckets
@@ -228,14 +258,14 @@ $( document ).ready(function() {
             //randomize buckets
             var randBuckets = shuffle(otherBuckets);
 
-            console.log(randBuckets);
+            //console.log(randBuckets);
 
             //loop through randomized bucket list
             for (i = 0; i < randBuckets.length; i++) {
 
                 var randBucketTitle = randBuckets[i].name;
 
-                console.log(randBucketTitle);
+                //console.log(randBucketTitle);
 
                 var randBucketDescription = randBuckets[i].description;
 
@@ -249,13 +279,13 @@ $( document ).ready(function() {
 
                         var categoryTitle = categories[randBucketTitle][j];
 
-                        console.log(categoryTitle);
+                        //console.log(categoryTitle);
 
                         var categoryURL = 'http://jobs-ups.com/search/advanced-search/ASCategory/' + encodeURIComponent(categoryTitle) + '/ASPostedDate/-1/ASCountry/-1/ASState/-1/ASCity/-1/ASLocation/-1/ASCompanyName/-1/ASCustom1/-1/ASCustom2/-1/ASCustom3/-1/ASCustom4/-1/ASCustom5/-1/ASIsRadius/false/ASCityStateZipcode/-1/ASDistance/-1/ASLatitude/-1/ASLongitude/-1/ASDistanceType/-1';
 
-                        $('.hidden-part[data-id="' + i + '"]').children('.expander__child').append('<div class="job-category"><h3 class="job-category_title">' + categoryTitle + '</h3><a class="search-button" target="_blank" href="' + categoryURL + '"><div>Search</div></a></div>');
+                        $('.wrap--all-buckets .hidden-part[data-id="' + i + '"]').children('.expander__child').append('<div class="job-category"><h3 class="job-category_title">' + categoryTitle + '</h3><a class="search-button" target="_blank" href="' + categoryURL + '"><div>Search</div></a></div>');
 
-                        console.log('test');
+                        //console.log('test');
                     }
                 }
 
