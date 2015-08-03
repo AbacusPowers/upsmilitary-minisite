@@ -252,7 +252,7 @@ body.article-view, body.leave-site-view, body.video-view, body.photo-view, body.
     left: 0;
     text-align: center;
     
-    .video &, .photo {
+    .video &, .photo &{
       .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & { 
         left: -2em;
       }
