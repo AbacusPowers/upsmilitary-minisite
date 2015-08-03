@@ -1,7 +1,3 @@
-///**
-// * Created by justin on 7/1/15.
-// */
-
 //Debounce function to use anywhere.
 function debounce(fn, delay) {
     var timer = null;
@@ -25,7 +21,7 @@ $('.carousel-control.next').click(function(){
 $('.carousel-control.prev').click(function(){
     var forSlide = $(this).attr('for');
     var slideTitle = $('#' + forSlide + ' + .carousel-item .slider-text').text();
-    ga('send','event','slider','arrow_right',slideTitle);
+    ga('send','event','slider','arrow_left',slideTitle);
 });
 $('.carousel-bullet').click(function(){
     var forSlide = $(this).attr('for');
@@ -39,6 +35,7 @@ $(document).on('click','.slider-text-wrapper a',function(){
     var slideTitle = $(this).children('.slider-text').text();
     ga('send','event','slider','click', slideTitle);
 });
+
 //VIDEOS
 //this adds the youtube api
 //actual tracking code is loaded in modal.js (if modal) and video-tracking.js (if normal pageview)
