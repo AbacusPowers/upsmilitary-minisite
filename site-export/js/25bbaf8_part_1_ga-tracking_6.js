@@ -211,21 +211,24 @@ $('#search-submit').click(function(e, input) {
 
 //EXTERNAL UPS LINKS
 $(document).on('click','a',function(){
-    var href = $(this).attr('href').toLowerCase();
-    //Put UPS urls here
-    var upsUrls = [
-        'ups.com',
-        'upsjobs.com',
-        'jobs-ups.com',
-        'upsjobs', //facebook, twitter, youtube
-        'ups/careers', //linkedin
-        '106158684691824289340' //google + account
-    ];
-    var arrLength = upsUrls.length;
-    for ( var i = 0; i < arrLength; i++) {
-        if ( href.indexOf(upsUrls[i].toLowerCase()) != -1) {
-            ga('send','event','external_link','click', href );
+    if (!$(this).hasClass('expand-button')){
+        var href = $(this).attr('href').toLowerCase();
+        //Put UPS urls here
+        var upsUrls = [
+            'ups.com',
+            'upsjobs.com',
+            'jobs-ups.com',
+            'upsjobs', //facebook, twitter, youtube
+            'ups/careers', //linkedin
+            '106158684691824289340' //google + account
+        ];
+        var arrLength = upsUrls.length;
+        for ( var i = 0; i < arrLength; i++) {
+            if ( href.indexOf(upsUrls[i].toLowerCase()) != -1) {
+                ga('send','event','external_link','click', href );
+            }
         }
     }
+
 
 });

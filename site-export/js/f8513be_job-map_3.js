@@ -1,11 +1,11 @@
 (function($) {
-    
+
     /*
      * Some constants isolated for easy configuration.
      */
     var CONST = {
         BASE_DATA_URL: '/js/job-map/',
-
+ 
         JOB_DESC: {
             'Package Handler': 'Package handlers load and unload packages into or out of UPS vehicles.',
             'Driver Helper (Oct-Dec)': 'Driver helpers deliver and pick up UPS packages during peak season.',
@@ -29,10 +29,13 @@
             small: {}
         },
  
-        RX_JOB_RM:          / (\(Oct-Dec\))/i,
+        RX_JOB_RM: / (\(Oct-Dec\))/i,
  
         SIZE_CLASSES: [ 'large', 'medium', 'small' ],
+
+        TRANSITIONEND: 'transitionend mstransitionend webkitTransitionEnd oTransitionEnd'
     };
+    
     
     /*
      * Basis for all state objects.
@@ -60,17 +63,6 @@
                 var cityLocations = data[cityName];
                 for (var i = 0, len = cityLocations.length; i < len; ++i) {
                     var location = cityLocations[i];
-                    /*{
-                     * "id":"KYALH",
-                     * "name":"Upsco Airline Hangar",
-                     * "city":"Louisville",
-                     * "state":"KY",
-                     * "zip":"40213",
-                     * "size":0,
-                     * "jobs":["Package Handler","Feeder Driver","Part-time Operations Supervisor"],
-                     * "lat":38.160764,
-                     * "lon":-85.728404
-                     * }*/
                     markers.push({
                         latLng: [location.lat, location.lon],
                         style: CONST.MARKER_STYLES[CONST.SIZE_CLASSES[location.size]]
@@ -85,25 +77,32 @@
          */
         focus: function() {
             this.load();
-            vmap.addMarkers(this.markers);
+
+            var foc = {animate: true, region: this.code};
+            var markers = this.markers;
             
-            infoContainer.append(this.info);
-            refresher.addClass('shown');
-            infoContainer.addClass('opacity');
-            bside.removeClass('pseudo-block--hidden');
-            containers.removeClass('full-width');
+            var do_focus = function() {
+                vmap.setFocus(foc);
+                vmap.addMarkers(markers);
+            }
             
-            var code = this.code;
-            setTimeout(
-                function() {
+            if (zoomed) {
+                do_focus();
+            }
+            else {
+                var on_transition_end = function() {
                     vmap.updateSize();
-                    vmap.setFocus({
-                        animate: true,
-                        region: code
-                    });
-                },
-                600
-            );
+                    do_focus();
+                    zoomed = true;
+                    containers.unbind(CONST.TRANSITIONEND, on_transition_end);
+                };
+                containers.one(CONST.TRANSITIONEND, on_transition_end);
+            }
+            
+            containers.removeClass('full-width');
+            refresher.addClass('shown');
+            bside.removeClass('pseudo-block--hidden');
+            infoContainer.append(this.info).addClass('opacity');
         },
  
         /*
@@ -143,22 +142,20 @@
          * Focusing the none-state equates to resetting.
          */
         focus: function() {
+            var foc = {animate: false, scale: 1, x: 0.5, y: 0.5};
+            
+            var on_transition_end = function() {
+                vmap.updateSize();
+                vmap.setFocus(foc);
+                containers.unbind(CONST.TRANSITIONEND, on_transition_end);
+            }
+            containers.one(CONST.TRANSITIONEND, on_transition_end);
+            
+            zoomed = false;
+            bside.addClass('pseudo-block--hidden');
             refresher.removeClass('shown');
             infoContainer.removeClass('opacity');
-            bside.addClass('pseudo-block--hidden');
             containers.addClass('full-width');
-            setTimeout(
-                function() {
-                    vmap.updateSize();
-                    vmap.setFocus({
-                        animate: true,
-                        scale: 1,
-                        x: 0.5,
-                        y: 0.5
-                    });
-                },
-                600
-            );
         }
     };
     
@@ -302,7 +299,7 @@
             focusedState = state;
         }
     }
-    
+
     
     /*
      * 
@@ -328,7 +325,11 @@
             markerStyle: {
                 initial: {
                     opacity: 1,
-                    'stroke-opacity': 0
+                    
+                    r: 8.5,
+                    
+                    'stroke-color': '#777',
+                    'stroke-opacity': 0.5
                 }
             },
             markersSelectable: false,
@@ -344,13 +345,14 @@
                 },
                 initial: {
                     fill: '#888888',
-                    stroke: '#444444'
+                    stroke: '#444444',
+                    'stroke-width': 0
                 },
                 selected: {
                     fill: '#FFB500'
                 }
             },
-            zoomMax: 5,
+            zoomMax: 3.6,
             zoomOnScroll: false
         });
         vmap = mapContainer.vectorMap('get', 'mapObject');
@@ -459,4 +461,5 @@
         }
     }
     
+   
 })(jQuery);

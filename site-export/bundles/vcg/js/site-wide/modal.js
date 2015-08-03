@@ -300,7 +300,9 @@ function showValuesModal(f){
     $('#modal').show();
     $('body').addClass('values-view');
     $('#modal-wrapper').addClass('values');
-    $('#culture-articles').hide();
+    setTimeout(function(){
+        $('#culture-articles').hide();
+    }, 500);
     //console.log('done');
 }
 function svgSize(){ //call this if jquery sizing is necessary

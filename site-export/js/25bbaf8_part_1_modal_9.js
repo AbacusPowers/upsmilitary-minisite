@@ -16,6 +16,14 @@ $('document').ready(function(){
         getModalContent(href, true, 'page');
         showVideoModal();
     });
+    //PHOTO FUNCTIONALITY
+    $('.photo-link').on('click', function(e){
+        e.preventDefault();
+        var href = $(this).attr('href');
+        // Getting Content
+        getModalContent(href, true, 'page');
+        showPhotoModal();
+    });
     //EVENTS FUNCTIONALITY
     $('.all-events-link').on('click', function(e){
         e.preventDefault();
@@ -105,6 +113,8 @@ $('document').ready(function(){
             if ( History.getState().data.origin === 'page' ) {
                 if ( $('body').hasClass('video-view') ) {
                     destroyVideoModal();
+                } else if ( $('body').hasClass('photo-view') ) {
+                    destroyPhotoModal();
                 } else if ( $('body').hasClass('values-view') ) {
                     destroyValuesModal();
                 } else if ( $('body').hasClass('events-view') ) {
@@ -265,6 +275,19 @@ function showVideoModal(){
     }, 201);
 
 }
+function showPhotoModal(){
+    $('#overlay').show();
+    $('#modal').fadeIn();
+    $('body').addClass('photo-view');
+    $('#modal-wrapper').addClass('photo');
+
+    //setTimeout(function(){ //VIDEO OPEN TRACKING
+    //    videoTitle = $('#video-title').text();
+    //    //video open tracking
+    //    ga('send','event','video','open',videoTitle);
+    //}, 201);
+
+}
 function showEventsModal(url){
     //var id = url.substring(url.lastIndexOf('#'));
     //console.log(id);
@@ -334,6 +357,15 @@ function destroyVideoModal(){
     $('body').removeClass('hold-modal');
     $('#single-modal-content').text('');
     ga('send','event','video','close',videoTitle); //VIDEO CLOSE TRACKING
+}
+function destroyPhotoModal(){
+    $('#overlay').hide();
+    $('#modal').hide();
+    $('body').removeClass('photo-view');
+    $('#modal-wrapper').removeClass('photo');
+    $('body').removeClass('hold-modal');
+    $('#single-modal-content').text('');
+    //ga('send','event','video','close',videoTitle); //VIDEO CLOSE TRACKING
 }
 function destroyValuesModal(){
     $('#overlay').hide();
