@@ -153,10 +153,6 @@
 .page {
     @include clearfix;
 
-    // .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & {
-    //     // margin-top: -5em;
-    // }
-
     #side--a {
         z-index: 2;
         -webkit-transition: min-height 0.5s;

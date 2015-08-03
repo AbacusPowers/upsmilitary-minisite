@@ -4,26 +4,74 @@
     background: transparent;
     border-left: none;
     padding: 0;
+    top: 10px;
+
+    &:before {
+      @include pseudo-block(10px);
+      width: 100%;
+      top: -10px;
+      background: $ups-yellow;
+    }
+    .breakpoint-small & {
+      border-top: 0;
+    }
+
+    img.logo {
+      position: relative;
+      top: 3em;
+      margin-left: 2em !important;
+    }
+
+    #modal-content {
+      background: $ups-brown-1;
+    }
+
+    #modal-content a.article-download {
+      color: $ups-yellow;
+      position: relative;
+      margin-left: 13.5em;
+      top: 8em;
+      // margin-top: 6em;
+    }
+  
+
+    h1 {
+      font-family: Georgia, serif;
+      padding-top: 0.8rem;
+      margin: 0 0 0.5em 0;
+      margin-left: 0;
+    }
+
   }
-  img.logo {
-    display: none;
-  }
+
   .values-row {
     width: 100%;
-    padding: 2em;
+    padding: 0 2em;
     @include clearfix;
 
 
     &#values-header {
-      background-color: #351c15;
+      background-color: $ups-brown-1;
       padding-right: 25%;
+      padding-top: 5em;
+
+      .breakpoint-small & {
+        padding-right: 0;
+        padding-top: 3em;
+      }
+
       h1, p {
         color: $ups-yellow;
+        width: calc( 100% - 3em );
       }
     }
     .values-row__graphic {
       width: 50%;
       float: left;
+
+      .breakpoint-small & {
+        width: 100%;
+      }
 
       svg {
         max-height: 200px;
@@ -32,34 +80,105 @@
     .values-row__content {
       width: 50%;
       float: left;
+      .breakpoint-small & {
+        width: 100%;
+      }
+
       h1, p {
         color: $white;
+        margin-right: 1rem;
       }
 
     }
     &#values-integrity {
       background-color: #009cbd;
     }
+
+    #integrity-svg {
+      margin-top: 1em;
+      margin-left: 1em;
+      margin-bottom: 0.6em;
+
+      .breakpoint-small & {
+        display: none;
+      }
+    }
+
     &#values-teamwork {
       background-color: #40c1ac;
+      padding-bottom: 2em;
     }
+
+    #teamwork-svg {
+      margin-right: 1em;
+      margin-bottom: 1em;
+    }
+
     &#values-service {
       background-color: #f68b20;
+        padding-top: 1em;
+      
+
+      #service-svg {
+        margin-top: -3em;
+        margin-bottom: -0.5em;
+
+        .breakpoint-medium & {
+          margin-top: -3em;
+        }
+
+        .breakpoint-small & {
+          margin-top: 1em;
+        }
+      }
     }
+
     &#values-accountability {
       background-color: #e1c8b0;
+      padding-bottom: 2em;
+
       .values-row__content {
+
+        h1 {
+          padding-top: 1em;
+        }
         h1, p {
           color: $black;
         }
 
       }
+      #accountability-svg {
+        margin-top: -1em;
+        margin-bottom: 1em;
+
+        .breakpoint-small & {
+          display: none;
+        }
+      }
     }
+
     &#values-quality {
-      background-color: #351c15;
+      background-color: $ups-brown-1;
+      padding-bottom: 1em;
+
+      #quality-svg {
+        margin-top: -3em;
+        .breakpoint-medium &, .breakpoint-small & {
+          margin-top: -1em;
+        }
+      }
     }
     &#values-diversity {
       background-color: #64a70b;
+      border-bottom: 3em solid $ups-brown-1;
+
+      #diversity-svg {
+        margin-top: -0.8em;
+        margin-bottom: -1em;
+        .breakpoint-small & {
+          margin-top: 1em;
+        }
+      }
     }
 
   }

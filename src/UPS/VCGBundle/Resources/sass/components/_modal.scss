@@ -48,7 +48,6 @@ body.article-view, body.leave-site-view, body.video-view, body.photo-view, body.
     left: 5%;
     width: 90%;
     padding: 2em 0 0 6em;
-    // max-width: 50em;
   }
 
   .breakpoint-large & {
@@ -64,7 +63,6 @@ body.article-view, body.leave-site-view, body.video-view, body.photo-view, body.
   }
 
   .logo {
-    // position: fixed;
     width: 2.5em;
 
     .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & {
@@ -84,7 +82,6 @@ body.article-view, body.leave-site-view, body.video-view, body.photo-view, body.
         position: static;
         margin-left: 2em;
         margin-top: 0.1em;
-        // margin-bottom: 0.2em;
       }
     }
   }
@@ -152,6 +149,11 @@ body.article-view, body.leave-site-view, body.video-view, body.photo-view, body.
 
     .photo & {
       padding-right: 0;
+    }
+
+    .values & {
+      padding-right: 0;
+      padding-top: 0;
     }
 
     .video & {
@@ -237,7 +239,7 @@ body.article-view, body.leave-site-view, body.video-view, body.photo-view, body.
     left: 0;
     text-align: center;
     
-    .video &, .photo &{
+    .video &, .photo &, .values & {
       .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & { 
         left: -2em;
       }
