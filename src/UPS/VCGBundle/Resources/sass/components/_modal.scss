@@ -126,13 +126,10 @@ body.article-view, body.leave-site-view, body.video-view, body.photo-view, body.
       margin-top: 3em;
     }
     a.article-download {
-      // float: right;
       position: absolute;
-      // position: fixed;
-      right: 0;
-      font-size: 0.7em;
-      width: 7rem;
-      margin-top: 1.2em;
+      right: 6rem;
+      font-size: 0.6em;
+      margin-top: 1rem;
       top: 0;
       text-transform: uppercase;
 
@@ -142,9 +139,7 @@ body.article-view, body.leave-site-view, body.video-view, body.photo-view, body.
     }
 
     i.fa-download {
-      // position: absolute;
       text-align: right;
-      // right: 0;
       font-size: 0.9rem;
       margin-right: 0.25em;
 
@@ -178,41 +173,20 @@ body.article-view, body.leave-site-view, body.video-view, body.photo-view, body.
     background: $ups-yellow;
     border-radius: 50%;
     position: absolute;
-
-    right: -1.25em;
-    top: 4em;
+    right: 0.5em;
+    top: 0.5em;
 
     .breakpoint-small & {
       position: fixed;
-      right: 0.5em;
-      top: 0.5em;
-    }
-
-    .video &, .photo & {
-      top: 3.1em;
-
-      .breakpoint-small & {
-        top: 0.5em;
-      }
     }
 
     & i {
       font-size: 1.4em;
       padding: 0.21em 0 0 0.32em;
-      // padding: 0.1094em 0 0 0.24em;
     }
 
-    &:hover {
+    &:hover, &:focus {
       color: $grey90;
-    }
-
-    .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & {
-      @include size(2.5em);
-      & i {
-        font-size: 1.4em;
-        padding: 0.4em 0 0 0.48em;
-        // padding: 0.1094em 0 0 0.24em;
-      }
     }
   }
 
@@ -224,7 +198,6 @@ body.article-view, body.leave-site-view, body.video-view, body.photo-view, body.
     width: 50%;
     bottom: 0;
     float: left;
-    // display: none;
 
     .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & {
       display: block;
@@ -233,6 +206,7 @@ body.article-view, body.leave-site-view, body.video-view, body.photo-view, body.
       @include size(2em 6em);
       top: calc( 50% - 3em );
       float: none;
+
       & i {
         font-size: 2em;
       }
@@ -342,7 +316,7 @@ body.article-view, body.leave-site-view, body.video-view, body.photo-view, body.
   }
   .photo-container {
     padding-top: 1em;
-    
+
     img {
       width: 100%;
     }
