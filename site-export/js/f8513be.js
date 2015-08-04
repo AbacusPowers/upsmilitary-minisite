@@ -303,12 +303,12 @@ jQuery.fn.vectorMap('addMap', 'us_merc_en',{"insets": [{"width": 200, "top": 370
             map: 'us_merc_en',
             markerStyle: {
                 initial: {
-                    opacity: 1,
+                    opacity: 0.8,
                     
-                    r: 8.5,
+                    r: 8,
                     
                     'stroke-color': '#777',
-                    'stroke-opacity': 0.5
+                    'stroke-opacity': 0.1
                 }
             },
             markersSelectable: false,
