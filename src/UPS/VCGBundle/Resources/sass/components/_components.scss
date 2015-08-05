@@ -39,23 +39,25 @@
     }
 
     h4 {
-        color: $black40;
+        color: $black50;
         font-weight: 400;
-        font-size: 1.3em;
+        font-size: 0.9em;
 
         &.definition {
             margin-bottom: 1em;
             span {
                 font-weight: 400;
-                font-size: 0.9rem;
+                //font-size: 0.9rem;
             }
         }
     }
 
-    h6 {
+    h6, .disclaimer--article {
         font-size: 0.7em;
         font-weight: 800;
         margin-top: 1rem;
+        line-height: 1.2em;
+        color: $black80;
     }
 
     p {
@@ -66,16 +68,16 @@
         }
     }
 
-    p.disclaimer--article{
-        font-weight: 800;
-        font-size: 0.7em;
-        margin-top: 2rem;
-    }
+    //p.disclaimer--article{
+    //    font-weight: 800;
+    //    font-size: 0.7em;
+    //    margin-top: 2rem;
+    //}
 
-    p > a {
+    p > a, ul li a {
         color: $ups-brown-1;
         font-weight: 800;
-
+        word-wrap: break-word;
         &:hover {
           color: $grey;
         }

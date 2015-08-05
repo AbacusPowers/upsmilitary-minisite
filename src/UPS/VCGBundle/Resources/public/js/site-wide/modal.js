@@ -422,5 +422,4 @@ $(document).ready(function(){
         $('#modal-wrapper').addClass('values');
         $('#culture-articles').hide();
     }
-
-})
+});

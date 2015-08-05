@@ -70,6 +70,41 @@ var categories = {
     ]
 };
 
+var searchUrls = {};
+searchUrls['Delivery Driver Jobs'] = 'https://www.jobs-ups.com/category/delivery-driver-jobs/1187/4674/1';
+searchUrls['Driver Helper Jobs'] ='https://www.jobs-ups.com/category/driver-helper-jobs/1187/12132/1';
+searchUrls['Driver Jobs'] ='https://www.jobs-ups.com/category/driver-jobs/1187/4624/1';
+searchUrls['Driver Non-CDL Jobs'] ='https://www.jobs-ups.com/category/driver-non-cdl-jobs/1187/12116/1';
+searchUrls['Truck Driver CDL Jobs'] ='https://www.jobs-ups.com/category/truck-driver-cdl-jobs/1187/12131/1';
+searchUrls['Warehousing Jobs'] ='https://www.jobs-ups.com/category/warehousing-jobs/1187/4637/1';
+searchUrls['Logistics Jobs'] ='https://www.jobs-ups.com/category/logistics-jobs/1187/4665/1';
+searchUrls['Package Handling Jobs'] ='https://www.jobs-ups.com/category/package-handling-jobs/1187/4635/1';
+searchUrls['Dock Worker Jobs'] ='https://www.jobs-ups.com/category/dock-worker-jobs/1187/4656/1';
+searchUrls['Operations Jobs'] ='https://www.jobs-ups.com/category/operations-jobs/1187/4668/1';
+searchUrls['Mechanic Jobs'] ='https://www.jobs-ups.com/category/mechanic-jobs/1187/4666/1';
+searchUrls['Administrative Jobs'] ='https://www.jobs-ups.com/category/administrative-jobs/1187/4638/1';
+searchUrls['Communication Jobs'] ='https://www.jobs-ups.com/category/communication-jobs/1187/11153/1';
+searchUrls['Finance and Accounting Jobs'] ='https://www.jobs-ups.com/category/finance-and-accounting-jobs/1187/4652/1';
+searchUrls['Human Resources Jobs'] ='https://www.jobs-ups.com/category/human-resources-jobs/1187/4626/1';
+searchUrls['Legal Jobs'] ='https://www.jobs-ups.com/category/legal-jobs/1187/4663/1';
+searchUrls['Internship Jobs'] ='https://www.jobs-ups.com/category/internship-jobs/1187/4662/1';
+searchUrls['Marketing & Communication Jobs'] ='https://www.jobs-ups.com/category/marketing-and-communication-jobs/1187/12133/1';
+searchUrls['Information Systems Jobs'] ='https://www.jobs-ups.com/category/information-systems-jobs/1187/4661/1';
+searchUrls['Information Technology Jobs'] ='https://www.jobs-ups.com/category/information-technology-jobs/1187/12138/1';
+searchUrls['Information Management & Security Jobs'] ='https://www.jobs-ups.com/category/information-management-and-security-jobs/1187/15057/1';
+searchUrls['Applications Development Jobs'] ='https://www.jobs-ups.com/category/applications-development-jobs/1187/15047/1';
+searchUrls['Infrastructure Jobs'] ='https://www.jobs-ups.com/category/infrastructure-jobs/1187/15058/1';
+searchUrls['Aircraft Jobs'] ='https://www.jobs-ups.com/category/aircraft-jobs/1187/4639/1';
+searchUrls['Industrial Engineering Jobs'] ='https://www.jobs-ups.com/category/industrial-engineering-jobs/1187/4633/1';
+searchUrls['Customer Service Jobs'] ='https://www.jobs-ups.com/category/customer-service-jobs/1187/4632/1';
+searchUrls['Inside Sales Jobs'] ='https://www.jobs-ups.com/category/inside-sales-jobs/1187/12134/1';
+searchUrls['Sales Jobs'] ='https://www.jobs-ups.com/category/sales-jobs/1187/4628/1';
+searchUrls['Business Management Jobs'] ='https://www.jobs-ups.com/category/business-management-jobs/1187/4642/1';
+searchUrls['Part Time Jobs'] ='https://www.jobs-ups.com/category/part-time-jobs/1187/12137/1';
+searchUrls['Part-Time Hourly and Seasonal Jobs'] ='https://www.jobs-ups.com/category/part-time-hourly-and-seasonal-jobs/1187/12085/1';
+searchUrls['Seasonal Jobs'] ='https://www.jobs-ups.com/category/seasonal-jobs/1187/12811/1';
+
+
 function aContainsB (a, b) {
     return a.indexOf(b) >= 0;
 }
@@ -216,7 +251,8 @@ $( document ).ready(function() {
 
                         //console.log(categoryTitle);
 
-                        var categoryURL = 'http://jobs-ups.com/search/advanced-search/ASCategory/' + encodeURIComponent(categoryTitle) + '/ASPostedDate/-1/ASCountry/-1/ASState/-1/ASCity/-1/ASLocation/-1/ASCompanyName/-1/ASCustom1/-1/ASCustom2/-1/ASCustom3/-1/ASCustom4/-1/ASCustom5/-1/ASIsRadius/false/ASCityStateZipcode/-1/ASDistance/-1/ASLatitude/-1/ASLongitude/-1/ASDistanceType/-1';
+                        var categoryURL = searchUrls[categoryTitle];
+                        //var categoryURL = 'http://jobs-ups.com/search/advanced-search/ASCategory/' + encodeURIComponent(categoryTitle) + '/ASPostedDate/-1/ASCountry/-1/ASState/-1/ASCity/-1/ASLocation/-1/ASCompanyName/-1/ASCustom1/-1/ASCustom2/-1/ASCustom3/-1/ASCustom4/-1/ASCustom5/-1/ASIsRadius/false/ASCityStateZipcode/-1/ASDistance/-1/ASLatitude/-1/ASLongitude/-1/ASDistanceType/-1';
 
                         $('.hidden-part').attr('data-id', '0').children('.expander__child').append('<div class="job-category"><h3 class="job-category_title">' + categoryTitle + '</h3><a class="search-button" target="_blank" href="' + categoryURL + '"><div>Search</div></a></div>');
 
@@ -259,7 +295,8 @@ $( document ).ready(function() {
 
                         var categoryTitle = categories[randBucketTitle][j];
 
-                        var categoryURL = 'http://jobs-ups.com/search/advanced-search/ASCategory/' + encodeURIComponent(categoryTitle) + '/ASPostedDate/-1/ASCountry/-1/ASState/-1/ASCity/-1/ASLocation/-1/ASCompanyName/-1/ASCustom1/-1/ASCustom2/-1/ASCustom3/-1/ASCustom4/-1/ASCustom5/-1/ASIsRadius/false/ASCityStateZipcode/-1/ASDistance/-1/ASLatitude/-1/ASLongitude/-1/ASDistanceType/-1';
+                        var categoryURL = searchUrls[categoryTitle];
+                        //var categoryURL = 'http://jobs-ups.com/search/advanced-search/ASCategory/' + encodeURIComponent(categoryTitle) + '/ASPostedDate/-1/ASCountry/-1/ASState/-1/ASCity/-1/ASLocation/-1/ASCompanyName/-1/ASCustom1/-1/ASCustom2/-1/ASCustom3/-1/ASCustom4/-1/ASCustom5/-1/ASIsRadius/false/ASCityStateZipcode/-1/ASDistance/-1/ASLatitude/-1/ASLongitude/-1/ASDistanceType/-1';
 
                         $('.wrap--all-buckets .hidden-part[data-id="' + i + '"]').children('.expander__child').append('<div class="job-category"><h3 class="job-category_title">' + categoryTitle + '</h3><a class="search-button" target="_blank" href="' + categoryURL + '"><div>Search</div></a></div>');
                     }
