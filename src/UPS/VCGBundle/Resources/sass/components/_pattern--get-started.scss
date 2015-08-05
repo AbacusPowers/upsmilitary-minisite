@@ -76,6 +76,9 @@
 
         p {
             color: $white;
+            .ie10.breakpoint-medium &, .ie10.breakpoint-large &, .ie10.breakpoint-wide & {
+                font-weight: 600;
+            }
         }
 
         .breakpoint-small &{

@@ -1,20 +1,3 @@
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-//var bucketDescriptions = [];
-//bucketDescriptions[0] = 'Bucket 0 description';
-//bucketDescriptions[1] = 'Bucket 1 description';
-//bucketDescriptions[2] = 'Bucket 2 description';
-//bucketDescriptions[3] = 'Bucket 3 description';
-//bucketDescriptions[4] = 'Bucket 4 description';
-//bucketDescriptions[5] = 'Bucket 5 description';
-//bucketDescriptions[6] = 'Bucket 7 description';
-//bucketDescriptions[7] = 'Bucket 8 description';
-//bucketDescriptions[8] = 'Bucket 8 description';
-//bucketDescriptions[9] = 'Bucket 9 description';
 
 var buckets = [];
 buckets[0] = {name: 'No direct match', description: 'No direct match available'};
@@ -86,6 +69,7 @@ var categories = {
         'Seasonal Jobs'
     ]
 };
+
 function aContainsB (a, b) {
     return a.indexOf(b) >= 0;
 }
@@ -258,14 +242,10 @@ $( document ).ready(function() {
             //randomize buckets
             var randBuckets = shuffle(otherBuckets);
 
-            //console.log(randBuckets);
-
             //loop through randomized bucket list
             for (i = 0; i < randBuckets.length; i++) {
 
                 var randBucketTitle = randBuckets[i].name;
-
-                //console.log(randBucketTitle);
 
                 var randBucketDescription = randBuckets[i].description;
 
@@ -279,13 +259,9 @@ $( document ).ready(function() {
 
                         var categoryTitle = categories[randBucketTitle][j];
 
-                        //console.log(categoryTitle);
-
                         var categoryURL = 'http://jobs-ups.com/search/advanced-search/ASCategory/' + encodeURIComponent(categoryTitle) + '/ASPostedDate/-1/ASCountry/-1/ASState/-1/ASCity/-1/ASLocation/-1/ASCompanyName/-1/ASCustom1/-1/ASCustom2/-1/ASCustom3/-1/ASCustom4/-1/ASCustom5/-1/ASIsRadius/false/ASCityStateZipcode/-1/ASDistance/-1/ASLatitude/-1/ASLongitude/-1/ASDistanceType/-1';
 
                         $('.wrap--all-buckets .hidden-part[data-id="' + i + '"]').children('.expander__child').append('<div class="job-category"><h3 class="job-category_title">' + categoryTitle + '</h3><a class="search-button" target="_blank" href="' + categoryURL + '"><div>Search</div></a></div>');
-
-                        //console.log('test');
                     }
                 }
 
@@ -296,11 +272,3 @@ $( document ).ready(function() {
         }
     });
 });
-//
-//$(document)
-//  .ajaxStart(function () {
-//    $('#ajax-spinner').removeClass('hidden');
-//  })
-//  .ajaxStop(function () {
-//    $('#ajax-spinner').addClass('hidden');
-//  });
