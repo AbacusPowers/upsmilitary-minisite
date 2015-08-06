@@ -34,8 +34,6 @@
         RX_JOB_RM: / (\(Oct-Dec\))/i,
  
         SIZE_CLASSES: [ 'large', 'medium', 'small' ],
-
-        TRANSITIONEND: 'transitionend mstransitionend webkitTransitionEnd oTransitionEnd'
     };
     
     
@@ -50,9 +48,8 @@
          */
         blur: function() {
             vmap.removeAllMarkers();
-            var sel = {};
-            sel[this.code] = false;
-            vmap.setSelectedRegions(sel);
+            vmap.setSelectedRegions(this.unsel);
+            vmapContainer.removeClass(this.code);
             infoContainer.empty();
         },
  
@@ -81,12 +78,17 @@
             this.load();
             focus = {animate: true, region: this.code};
             
-            containers.removeClass('full-width');
-            vmap.addMarkers(this.markers);
-            vmapContainer.addClass('zoom');
-            refresher.addClass('shown');
-            bside.removeClass('pseudo-block--hidden');
+            if (!zoomed) {
+                containers.removeClass('full-width');
+                refresher.addClass('shown');
+                infoContainer.addClass('opacity');
+                vmapContainer.addClass('zoom');
+                zoomed = true;
+            }
+            vmap.setFocus(focus);
+            vmapContainer.addClass(this.code);
             infoContainer.append(this.info).addClass('opacity');
+            vmap.addMarkers(this.markers);
         },
  
         /*
@@ -128,7 +130,8 @@
         focus: function() {
             zoomed = false;
             focus = CONST.FOCUS_DEFAULT;
-            bside.addClass('pseudo-block--hidden');
+            vmap.setFocus(focus);
+            vmapContainer.removeClass('zoom');
             refresher.removeClass('shown');
             infoContainer.removeClass('opacity');
             containers.addClass('full-width');
@@ -154,14 +157,12 @@
      */
     $(function() {
         bside = $('#side--b');
-        containers = $('.full-width')
+        containers = $('#side--a, side--b');
         refresher = $('#job-map--refresh');
         
         init_map();
         init_map_controls();
         init_info();
-        
-        containers.bind(CONST.TRANSITIONEND, on_transition_end);
         
         refresher.click(function() {
             focus_state(NONE_STATE);
@@ -275,7 +276,6 @@
             focusedState.blur();
             state.focus();
             focusedState = state;
-            vmap.setFocus(focus);
         }
     }
 
@@ -327,7 +327,7 @@
                     fill: '#FFB500'
                 }
             },
-            zoomMax: 3.6,
+            zoomMax: 2.5,
             zoomOnScroll: false
         });
         vmap = mapContainer.vectorMap('get', 'mapObject');
@@ -380,10 +380,12 @@
             {
                 abbr:   code.substr(3, 2),
                 code:   code,
-                name:   vmap.getRegionName(code)
+                name:   vmap.getRegionName(code),
+                unsel:  {}
             },
             BASE_STATE
         );
+        state.unsel[code] = false;
         states[code] = state;
         return state;
     }
@@ -413,15 +415,6 @@
             var state = fetch_state(code);
             ga('send', 'event', 'career_explorer', 'dropdown_select', state.name);
         }
-    }
-    
-    
-    /*
-     * 
-     */
-    function on_transition_end() {
-        vmap.updateSize();
-        vmap.setFocus(focus);
     }
     
    
