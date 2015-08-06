@@ -13,7 +13,7 @@ $state-list-scroll-height-wide:  $map-height-wide - $map-control-height;
 .page--map {
 
     #side--a {
-        @include transition (all 0.25s ease-in);
+        //@include transition (all 0.25s ease-in);
 
         .map-wrapper {
          overflow: hidden;
@@ -34,8 +34,11 @@ $state-list-scroll-height-wide:  $map-height-wide - $map-control-height;
     }
     
     #side--b {
+        background: $black;
+        background-color: $black;
+        
         &:before {
-            @include transition (all 1s ease-out 0.25s);
+            //@include transition (all 1s ease-out 0.25s);
             @include pseudo-block($vertical-thread-width);
             background: $white10;
             height: 100%;
@@ -47,24 +50,10 @@ $state-list-scroll-height-wide:  $map-height-wide - $map-control-height;
             .breakpoint-small & {
                 content: none;
             }
-        }   
-
-        // &.pseudo-block--hidden {
-        //     // @include transition (all 3s ease-out);
-
-
-        //     &:before {
-        //         // @include transition (all 3s ease-out);
-        //        // opacity: 0;
-        //        // display: none;
-        //        // @include transition(all 2s ease-in );
-        //     }
-        // }
+        }
     }
 
     .map-controls {
-        // @include transition (all 0.25s ease-out);
-
         height: $map-control-height;
         padding: 1em 0 3em 1em;
 
@@ -122,30 +111,6 @@ $state-list-scroll-height-wide:  $map-height-wide - $map-control-height;
         }
     }
     
-    #map-container svg {
-        width: 100%;
-        height: $map-height-small;
-        display: block;
-        
-        @include transition (all 0.25s ease-out);
-
-        .breakpoint-medium & {
-            height: $map-height-medium;
-        }
-
-        .breakpoint-large & {
-            height: $map-height-large;
-        }
-        
-        .breakpoint-wide & {
-            height: $map-height-wide;
-        }
-     
-        path { 
-            cursor: pointer; 
-        }
-    }
-
     #job-map--refresh {
         background: $ups-yellow;
         border-radius: 50%;
@@ -175,8 +140,24 @@ $state-list-scroll-height-wide:  $map-height-wide - $map-control-height;
     }
 
     #side--b {
-        // @include transition (all 4.5s ease-out);
-        display: block;
+        height: 0px;
+        
+        .breakpoint-small & { height: auto; }
+    }
+
+    .map-info-container {
+        opacity: 0;
+        //@include transition (all 1s ease-out 0.25s);
+        
+        &.opacity {
+            opacity: 1;
+            display: block;
+        }
+        
+        .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & {
+            margin-top: $map-control-height;
+        }
+
         .breakpoint-medium & {
             height: $map-height-medium;
         }
@@ -189,25 +170,6 @@ $state-list-scroll-height-wide:  $map-height-wide - $map-control-height;
             height: $map-height-wide;
         }
     }
-
-    .map-info-container {
-        // padding-top: 2.6em;
-
-        .breakpoint-small & { 
-            padding-top: 1.5em;
-        }
-    }
-
-     .map-info-container {
-        opacity: 0;
-        @include transition (all 1s ease-out 0.25s);
-
-        &.opacity {
-            opacity: 1;
-            display: block;
-        }
-
-    }
     
     .map-info-container p > a {
         color: #fff;
@@ -215,8 +177,6 @@ $state-list-scroll-height-wide:  $map-height-wide - $map-control-height;
     }
     
     .map-info--state {
-        // @include transition (all 1s ease-out);
-
         display: block;
         
         > .component--expander {
@@ -325,11 +285,45 @@ $state-list-scroll-height-wide:  $map-height-wide - $map-control-height;
 
 .jvectormap-container {
     width: 100%;
-    height: 100%;
+    height: $map-height-small;
     
     position: relative;
     
-    overflow: hidden;
+    //overflow: hidden;
+
+    .breakpoint-medium & {
+        height: $map-height-medium;
+    }
+
+    .breakpoint-large & {
+        height: $map-height-large;
+    }
+    
+    .breakpoint-wide & {
+        height: $map-height-wide;
+    }
+    
+    svg { @include transition (transform 0.5s ease); }
+    
+    .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & {
+        &.zoom {
+            svg { transform: translateX(-25%); }
+            
+            // western offsets
+            &.US-AK, &.US-NV { svg { transform: translateX(-5%); } }
+            &.US-CA, &.US-OR, &.US-WA  { svg { transform: translateX(10%); } }
+            &.US-ID { svg { transform: translateX(-12%); } }
+            
+            // eastern offsets
+            &.US-ME { svg { transform: translateX(-50%); } }
+            &.US-NJ, &.US-NY { svg { transform: translateX(-30%); } }
+            &.US-CT, &.US-MA, &.US-NH, &.US-RI, &.US-VT { svg { transform: translateX(-40%); } }
+        }
+    }
+    
+    path { 
+        cursor: pointer; 
+    }
 }
 
 .jvectormap-tip { display: none !important; }
