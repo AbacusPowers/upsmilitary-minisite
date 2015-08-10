@@ -254,7 +254,7 @@ $( document ).ready(function() {
                         var categoryURL = searchUrls[categoryTitle];
                         //var categoryURL = 'http://jobs-ups.com/search/advanced-search/ASCategory/' + encodeURIComponent(categoryTitle) + '/ASPostedDate/-1/ASCountry/-1/ASState/-1/ASCity/-1/ASLocation/-1/ASCompanyName/-1/ASCustom1/-1/ASCustom2/-1/ASCustom3/-1/ASCustom4/-1/ASCustom5/-1/ASIsRadius/false/ASCityStateZipcode/-1/ASDistance/-1/ASLatitude/-1/ASLongitude/-1/ASDistanceType/-1';
 
-                        $('.hidden-part').attr('data-id', '0').children('.expander__child').append('<div class="job-category"><h3 class="job-category_title">' + categoryTitle + '</h3><a class="search-button" target="_blank" href="' + categoryURL + '"><div>Find Available Jobs</div></a></div>');
+                        $('.hidden-part').attr('data-id', '0').children('.expander__child').append('<div class="job-category"><h3 class="job-category_title">' + categoryTitle + '</h3><a class="search-button" target="_blank" href="' + categoryURL + '"><div>Current Openings</div></a></div>');
 
                     }
                 }
@@ -298,7 +298,7 @@ $( document ).ready(function() {
                         var categoryURL = searchUrls[categoryTitle];
                         //var categoryURL = 'http://jobs-ups.com/search/advanced-search/ASCategory/' + encodeURIComponent(categoryTitle) + '/ASPostedDate/-1/ASCountry/-1/ASState/-1/ASCity/-1/ASLocation/-1/ASCompanyName/-1/ASCustom1/-1/ASCustom2/-1/ASCustom3/-1/ASCustom4/-1/ASCustom5/-1/ASIsRadius/false/ASCityStateZipcode/-1/ASDistance/-1/ASLatitude/-1/ASLongitude/-1/ASDistanceType/-1';
 
-                        $('.wrap--all-buckets .hidden-part[data-id="' + i + '"]').children('.expander__child').append('<div class="job-category"><h3 class="job-category_title">' + categoryTitle + '</h3><a class="search-button" target="_blank" href="' + categoryURL + '"><div>Find Available Jobs</div></a></div>');
+                        $('.wrap--all-buckets .hidden-part[data-id="' + i + '"]').children('.expander__child').append('<div class="job-category"><h3 class="job-category_title">' + categoryTitle + '</h3><a class="search-button" target="_blank" href="' + categoryURL + '"><div>Current Openings</div></a></div>');
                     }
                 }
 

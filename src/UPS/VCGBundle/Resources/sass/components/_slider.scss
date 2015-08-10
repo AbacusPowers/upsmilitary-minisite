@@ -12,6 +12,7 @@
     right: 0;
     @include home-header-heights;
     background: $black;
+    overflow: hidden;
 }
 
 .carousel-inner {

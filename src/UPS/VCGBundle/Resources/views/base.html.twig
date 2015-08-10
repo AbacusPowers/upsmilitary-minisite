@@ -10,7 +10,7 @@
         </title>
         
         <!--METAQUERY-->
-        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
         <meta name="breakpoint" content="small" media="(max-width: 768px)">
         <meta name="breakpoint" content="medium" media="(min-width: 769px) and (max-width: 1024px)">
         <meta name="breakpoint" content="large" media="(min-width: 1025px) and (max-width: 1399px)">
@@ -54,7 +54,7 @@
         
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
-    <body>
+    <body class="{% block body_class %}{% endblock %}">
         <div id="modal-wrapper" class="{% block modal_class %}{% endblock %}">
             <div id="overlay"></div>
             <div id="modal">

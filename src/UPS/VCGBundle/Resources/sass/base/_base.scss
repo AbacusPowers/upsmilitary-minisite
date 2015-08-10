@@ -11,6 +11,8 @@ body {
     font-weight: normal;
     // background: white;
     height: 100%;
+    width: 100%;
+    overflow-x:hidden;
     -webkit-overflow-scrolling: touch; /*gotta have this for idevice scrolling*/
     .breakpoint-small & {
       width: 100%;

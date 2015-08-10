@@ -50,7 +50,7 @@
 #grid-item--videos .video-link-wrapper {
     margin-left: -1.5em;
     margin-top: 1.2em;
-
+    @include clearfix;
     a {
         width: calc( 50% - 1px );
         display: inline-block;
