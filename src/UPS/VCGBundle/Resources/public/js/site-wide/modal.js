@@ -57,8 +57,12 @@ $(document)
         var modalHeight = $('#offsite-modal').height();
         var screenHeight = $(window).height();
         //console.log(modalHeight);
-        var topHeight = 0.5*(screenHeight-modalHeight);
-        $('#offsite-modal').css({'top': topHeight +'px'});
+        if (modalHeight < screenHeight){
+            var topHeight = 0.5*(screenHeight-modalHeight);
+            $('#offsite-modal').css({'top': topHeight +'px'});
+        } else {
+            $('#offsite-modal').css({'height':'100%'});
+        }
     })
     //ARTICLE NAVIGATION
     .on('click', '#prev-article', function (e) {
@@ -128,8 +132,12 @@ $(document)
         var modalHeight = $('#offsite-modal').height();
         var screenHeight = $(window).height();
         //console.log(modalHeight);
-        var topHeight = .5*(screenHeight-modalHeight);
-        $('#offsite-modal').css({'top': topHeight +'px'});
+        if (modalHeight < screenHeight){
+            var topHeight = 0.5*(screenHeight-modalHeight);
+            $('#offsite-modal').css({'top': topHeight +'px'});
+        } else {
+            $('#offsite-modal').css({'height':'100%'});
+        }
     })
     .on('click', '.article-view #close-modal', function (e) {
         e.preventDefault();

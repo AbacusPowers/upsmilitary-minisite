@@ -58,22 +58,32 @@
 //            position: relative;
 
             .breakpoint-large &, .breakpoint-wide & {
-              height: 150px;
+              height: 175px;
               &:nth-child(3n+1) {
                 clear: both;
               }
             }
 
             .breakpoint-small & {
+              @media screen and (max-width: 500px){
+                width: 100%;
+
+              }
               width: 50%;
-              height: 150px;
+              height: 175px;
               border-left: none;
               &:nth-child(2n) {
                 padding-left: 1em;
+                @media screen and (max-width: 500px) {
+                  padding-left: 0;
+                }
               }
               &:nth-child(2n+1) {
                 padding-left: 0;
                 padding-right: 1em;
+                @media screen and (max-width: 500px) {
+                  padding-right: 0;
+                }
               }
             }
 

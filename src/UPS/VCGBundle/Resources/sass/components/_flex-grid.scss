@@ -8,6 +8,10 @@
     -ms-flex-wrap: wrap;
     width: 100%;
 
+    .breakpoint-small & {
+        display: block;
+
+    }
     .grid-icon {
         @include site-icon;
     }
@@ -52,6 +56,10 @@
     -ms-flex-wrap: wrap;
     width: 100%;
     align-content: stretch;
+    //FLEX REMOVAL FOR MOBILE (ANDROID)
+    .breakpoint-small & {
+        display: block;
+    }
 }
 
 .grid-area--left-column { /*For when the grid area is next to a separate full height left column*/

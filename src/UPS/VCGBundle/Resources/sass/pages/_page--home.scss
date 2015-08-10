@@ -13,7 +13,8 @@
 
     // Styles for the mobile app link area below
     .app-download-wrapper {
-        padding: 1.5em 1.5em 0 1.5em;
+        //padding: 1.5em 1.5em 0 1.5em;
+        @include clearfix;
 
         h2 {
             margin-left: 0;
@@ -25,6 +26,7 @@
             display: inline-block;
             margin-top: 1.5em;
             margin-left: -1.5em;
+            float:left;
         }
             
         .badge-wrapper {
@@ -32,6 +34,7 @@
             float: right;
             padding-top: 2.5em;
             text-align: right;
+
             // background: red;
         }
 
@@ -52,15 +55,19 @@
     margin-top: 1.2em;
     @include clearfix;
     a {
+        width: 50%;
         width: calc( 50% - 1px );
         display: inline-block;
         float: left;
-        margin-right: 1px;
+        padding-right: 1px;
 
         img {
             width: 100%;
             display: block;
             height: 37.5%;
+            .breakpoint-small & {
+                height: auto;
+            }
         }
     }
 }
@@ -125,6 +132,9 @@
 }
 
 .grid-item#grid-item--search {
+    .breakpoint-small & {
+        padding-bottom: 1.5em;
+    }
     form {
         margin-top: 1.2em;
     }
