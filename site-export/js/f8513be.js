@@ -37,8 +37,6 @@ jQuery.fn.vectorMap('addMap', 'us_merc_en',{"insets": [{"width": 200, "top": 370
         RX_JOB_RM: / (\(Oct-Dec\))/i,
  
         SIZE_CLASSES: [ 'large', 'medium', 'small' ],
-
-        TRANSITIONEND: 'transitionend mstransitionend webkitTransitionEnd oTransitionEnd'
     };
     
     
@@ -53,9 +51,8 @@ jQuery.fn.vectorMap('addMap', 'us_merc_en',{"insets": [{"width": 200, "top": 370
          */
         blur: function() {
             vmap.removeAllMarkers();
-            var sel = {};
-            sel[this.code] = false;
-            vmap.setSelectedRegions(sel);
+            vmap.setSelectedRegions(this.unsel);
+            vmapContainer.removeClass(this.code);
             infoContainer.empty();
         },
  
@@ -84,12 +81,17 @@ jQuery.fn.vectorMap('addMap', 'us_merc_en',{"insets": [{"width": 200, "top": 370
             this.load();
             focus = {animate: true, region: this.code};
             
-            containers.removeClass('full-width');
-            vmap.addMarkers(this.markers);
-            vmapContainer.addClass('zoom');
-            refresher.addClass('shown');
-            bside.removeClass('pseudo-block--hidden');
+            if (!zoomed) {
+                containers.removeClass('full-width');
+                refresher.addClass('shown');
+                infoContainer.addClass('opacity');
+                vmapContainer.addClass('zoom');
+                zoomed = true;
+            }
+            vmap.setFocus(focus);
+            vmapContainer.addClass(this.code);
             infoContainer.append(this.info).addClass('opacity');
+            vmap.addMarkers(this.markers);
         },
  
         /*
@@ -131,7 +133,8 @@ jQuery.fn.vectorMap('addMap', 'us_merc_en',{"insets": [{"width": 200, "top": 370
         focus: function() {
             zoomed = false;
             focus = CONST.FOCUS_DEFAULT;
-            bside.addClass('pseudo-block--hidden');
+            vmap.setFocus(focus);
+            vmapContainer.removeClass('zoom');
             refresher.removeClass('shown');
             infoContainer.removeClass('opacity');
             containers.addClass('full-width');
@@ -157,14 +160,12 @@ jQuery.fn.vectorMap('addMap', 'us_merc_en',{"insets": [{"width": 200, "top": 370
      */
     $(function() {
         bside = $('#side--b');
-        containers = $('.full-width')
+        containers = $('#side--a, side--b');
         refresher = $('#job-map--refresh');
         
         init_map();
         init_map_controls();
         init_info();
-        
-        containers.bind(CONST.TRANSITIONEND, on_transition_end);
         
         refresher.click(function() {
             focus_state(NONE_STATE);
@@ -242,8 +243,7 @@ jQuery.fn.vectorMap('addMap', 'us_merc_en',{"insets": [{"width": 200, "top": 370
         for (var i = 0, len = jobs.length; i < len; ++i) {
             var job     = jobs[i];
             var jobDesc = CONST.JOB_DESC[job] || '';
-            var jobEnc  = encodeURI(job.replace(CONST.RX_JOB_RM, ''));
-            var href    = location_href(jobEnc, location.zip);
+            var href    = location_href(job, location);
             
             jobsContainer.append($(
                 '<div class="job-wrapper"><p><span>'
@@ -279,7 +279,6 @@ jQuery.fn.vectorMap('addMap', 'us_merc_en',{"insets": [{"width": 200, "top": 370
             focusedState.blur();
             state.focus();
             focusedState = state;
-            vmap.setFocus(focus);
         }
     }
 
@@ -331,7 +330,7 @@ jQuery.fn.vectorMap('addMap', 'us_merc_en',{"insets": [{"width": 200, "top": 370
                     fill: '#FFB500'
                 }
             },
-            zoomMax: 3.6,
+            zoomMax: 2.5,
             zoomOnScroll: false
         });
         vmap = mapContainer.vectorMap('get', 'mapObject');
@@ -366,20 +365,12 @@ jQuery.fn.vectorMap('addMap', 'us_merc_en',{"insets": [{"width": 200, "top": 370
     /*
      * 
      */
-    function location_href(enc, zip) {
-        var href;
-        if ($.browser.mobile) {
-            href = 'http://m.jobs-ups.com/search';
-        }
-        else {
-            href =
-                'http://jobs-ups.com/search/'
-                + enc
-                + '/ASCategory/-1/ASPostedDate/-1/ASCountry/-1/ASState/-1/ASCity/-1/ASLocation/-1/ASCompanyName/-1/ASCustom1/-1/ASCustom2/-1/ASCustom3/-1/ASCustom4/-1/ASCustom5/-1/ASIsRadius/true/ASCityStateZipcode/'
-                + zip
-                + '/ASDistance/50/ASLatitude/-1/ASLongitude/-1/ASDistanceType/-1'
-            ;
-        }
+    function location_href(job, location) {
+        var href =
+            'https://www.jobs-ups.com/search-jobs/'
+            + encodeURI(job.replace(CONST.RX_JOB_RM, '') + '  ' + location.city + ', ' + location.state)
+            + '/1187/1'
+        ;
         return href;
     }
 
@@ -392,10 +383,12 @@ jQuery.fn.vectorMap('addMap', 'us_merc_en',{"insets": [{"width": 200, "top": 370
             {
                 abbr:   code.substr(3, 2),
                 code:   code,
-                name:   vmap.getRegionName(code)
+                name:   vmap.getRegionName(code),
+                unsel:  {}
             },
             BASE_STATE
         );
+        state.unsel[code] = false;
         states[code] = state;
         return state;
     }
@@ -425,15 +418,6 @@ jQuery.fn.vectorMap('addMap', 'us_merc_en',{"insets": [{"width": 200, "top": 370
             var state = fetch_state(code);
             ga('send', 'event', 'career_explorer', 'dropdown_select', state.name);
         }
-    }
-    
-    
-    /*
-     * 
-     */
-    function on_transition_end() {
-        vmap.updateSize();
-        vmap.setFocus(focus);
     }
     
    

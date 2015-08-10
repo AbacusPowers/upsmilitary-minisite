@@ -211,7 +211,7 @@ $('#search-submit').click(function(e, input) {
 
 //EXTERNAL UPS LINKS
 $(document).on('click','a',function(){
-    if (!$(this).hasClass('expand-button')){
+    if ( !$(this).hasClass('expand-button') && !$(this).hasClass('cta-button--go') ){
         var href = $(this).attr('href').toLowerCase();
         //Put UPS urls here
         var upsUrls = [

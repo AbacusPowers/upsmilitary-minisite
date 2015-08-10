@@ -42,34 +42,36 @@ $( document ).ready(function() {
     //        $('#form-error').addClass('hidden');
     //    }
     //});
-    $('#search-submit').click(function(e, input) {
-        e.preventDefault();
-        input = $('#search-field').val();
-        location.href= 'http://jobs-ups.com/search/' + input + '/ASCategory/-1/ASPostedDate/-1/ASCountry/-1/ASState/-1/ASCity/-1/ASLocation/-1/ASCompanyName/-1/ASCustom1/-1/ASCustom2/-1/ASCustom3/-1/ASCustom4/-1/ASCustom5/-1/ASIsRadius/false/ASCityStateZipcode/-1/ASDistance/-1/ASLatitude/-1/ASLongitude/-1/ASDistanceType/-1';
-    });
+    //$('#search-submit').click(function(e, input) {
+    //    e.preventDefault();
+    //    var input = $('#search-field').val();
+    //    location.href= 'https://www.jobs-ups.com/search-jobs/' + encodeURIComponent(input) + '/1187/1';
+    //});
     $('.job-search--job-description').submit(function(e){
         e.preventDefault();
-        jobTitle = $(this).closest('.expander__wrapper').find('.expander__parent').text();
+        var jobTitle = $(this).closest('.expander__wrapper').find('.expander__parent').text();
 
         if (jobTitle == 'Driver Helper (October\u2013December)') {
             jobTitle = 'Driver Helper';
         }
+        //
+        //if( $(this).children('.zip-code').val() ) {
+        //    zipCode = $(this).children('.zip-code').val();
+        //    radiusOn = 'true';
+        //    radius = '50';
+        //} else {
+        //    zipCode = '-1';
+        //    radiusOn = 'false';
+        //    radius = '-1';
+        //}
 
-        if( $(this).children('.zip-code').val() ) {
-            zipCode = $(this).children('.zip-code').val();
-            radiusOn = 'true';
-            radius = '50';
-        } else {
-            zipCode = '-1';
-            radiusOn = 'false';
-            radius = '-1';
-        }
+        //if (jQuery.browser.mobile) {
+        //    forwardURL = 'http://m.jobs-ups.com/search';
+        //} else {
+        //    forwardURL = 'http://jobs-ups.com/search/' + encodeURIComponent(jobTitle) + '/ASCategory/-1/ASPostedDate/-1/ASCountry/-1/ASState/-1/ASCity/-1/ASLocation/-1/ASCompanyName/-1/ASCustom1/-1/ASCustom2/-1/ASCustom3/-1/ASCustom4/-1/ASCustom5/-1/ASIsRadius/' + radiusOn + '/ASCityStateZipcode/' + encodeURIComponent(zipCode) +'/ASDistance/'+ encodeURIComponent(radius) +'/ASLatitude/-1/ASLongitude/-1/ASDistanceType/-1';
+        //}
 
-        if (jQuery.browser.mobile) {
-            forwardURL = 'http://m.jobs-ups.com/search';
-        } else {
-            forwardURL = 'http://jobs-ups.com/search/' + encodeURIComponent(jobTitle) + '/ASCategory/-1/ASPostedDate/-1/ASCountry/-1/ASState/-1/ASCity/-1/ASLocation/-1/ASCompanyName/-1/ASCustom1/-1/ASCustom2/-1/ASCustom3/-1/ASCustom4/-1/ASCustom5/-1/ASIsRadius/' + radiusOn + '/ASCityStateZipcode/' + encodeURIComponent(zipCode) +'/ASDistance/'+ encodeURIComponent(radius) +'/ASLatitude/-1/ASLongitude/-1/ASDistanceType/-1';
-        }
+        var forwardURL = 'https://www.jobs-ups.com/search-jobs/' + encodeURIComponent(jobTitle) + '/1187/1';
         window.open(
             forwardURL,
             '_blank' // <- This is what makes it open in a new window.
@@ -83,22 +85,17 @@ $( document ).ready(function() {
         if (jobTitle == 'Driver Helper (October\u2013December)') {
             jobTitle = 'Driver Helper';
         }
-
-        if( $(this).children('.zip-code').val() ) {
-            zipCode = $(this).children('.zip-code').val();
-            radiusOn = 'true';
-            radius = '50';
-        } else {
-            zipCode = '-1';
-            radiusOn = 'false';
-            radius = '-1';
-        }
-
-        if (jQuery.browser.mobile) {
-            forwardURL = 'http://m.jobs-ups.com/search';
-        } else {
-            forwardURL = 'http://jobs-ups.com/search/' + encodeURIComponent(jobTitle) + '/ASCategory/-1/ASPostedDate/-1/ASCountry/-1/ASState/-1/ASCity/-1/ASLocation/-1/ASCompanyName/-1/ASCustom1/-1/ASCustom2/-1/ASCustom3/-1/ASCustom4/-1/ASCustom5/-1/ASIsRadius/' + radiusOn + '/ASCityStateZipcode/' + encodeURIComponent(zipCode) +'/ASDistance/'+ encodeURIComponent(radius) +'/ASLatitude/-1/ASLongitude/-1/ASDistanceType/-1';
-        }
+        //
+        //if( $(this).children('.zip-code').val() ) {
+        //    zipCode = $(this).children('.zip-code').val();
+        //    radiusOn = 'true';
+        //    radius = '50';
+        //} else {
+        //    zipCode = '-1';
+        //    radiusOn = 'false';
+        //    radius = '-1';
+        //}
+        var forwardURL = 'https://www.jobs-ups.com/search-jobs/' + encodeURIComponent(jobTitle) + '/1187/1';
 
         window.open(
             forwardURL,
