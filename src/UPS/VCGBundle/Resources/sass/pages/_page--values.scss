@@ -47,6 +47,8 @@
   .values-row {
     width: 100%;
     padding: 0 2em;
+    //height: 13em;
+    display: table;
     @include clearfix;
 
 
@@ -54,6 +56,7 @@
       background-color: $ups-brown-1;
       padding-right: 25%;
       padding-top: 5em;
+      height: auto;
 
       .breakpoint-small & {
         padding-right: 0;
@@ -67,21 +70,28 @@
     }
     .values-row__graphic {
       width: 50%;
-      float: left;
+      display: table-cell;
+      vertical-align: middle;
+      //float: left;
 
       .breakpoint-small & {
         width: 100%;
+        display: block;
       }
 
       svg {
         max-height: 200px;
       }
+
     }
     .values-row__content {
       width: 50%;
-      float: left;
+      //float: left;
+      display: table-cell;
+      vertical-align: middle;
       .breakpoint-small & {
         width: 100%;
+        display: block;
       }
 
       h1, p {
@@ -94,43 +104,43 @@
       background-color: #009cbd;
     }
 
-    #integrity-svg {
-      margin-top: 1em;
-      margin-left: 1em;
-      margin-bottom: 0.6em;
-
-      .breakpoint-small & {
-        display: none;
-      }
-    }
+    //#integrity-svg {
+    //  margin-top: 1em;
+    //  margin-left: 1em;
+    //  margin-bottom: 0.6em;
+    //
+    //  .breakpoint-small & {
+    //    display: none;
+    //  }
+    //}
 
     &#values-teamwork {
       background-color: #40c1ac;
       padding-bottom: 2em;
     }
 
-    #teamwork-svg {
-      margin-right: 1em;
-      margin-bottom: 1em;
-    }
+    //#teamwork-svg {
+    //  margin-right: 1em;
+    //  margin-bottom: 1em;
+    //}
 
     &#values-service {
       background-color: #f68b20;
         padding-top: 1em;
       
 
-      #service-svg {
-        margin-top: -3em;
-        margin-bottom: -0.5em;
-
-        .breakpoint-medium & {
-          margin-top: -3em;
-        }
-
-        .breakpoint-small & {
-          margin-top: 1em;
-        }
-      }
+      //#service-svg {
+      //  margin-top: -3em;
+      //  margin-bottom: -0.5em;
+      //
+      //  .breakpoint-medium & {
+      //    margin-top: -3em;
+      //  }
+      //
+      //  .breakpoint-small & {
+      //    margin-top: 1em;
+      //  }
+      //}
     }
 
     &#values-accountability {
@@ -147,38 +157,38 @@
         }
 
       }
-      #accountability-svg {
-        margin-top: -1em;
-        margin-bottom: 1em;
-
-        .breakpoint-small & {
-          display: none;
-        }
-      }
+      //#accountability-svg {
+      //  margin-top: -1em;
+      //  margin-bottom: 1em;
+      //
+      //  .breakpoint-small & {
+      //    display: none;
+      //  }
+      //}
     }
 
     &#values-quality {
       background-color: $ups-brown-1;
       padding-bottom: 1em;
 
-      #quality-svg {
-        margin-top: -3em;
-        .breakpoint-medium &, .breakpoint-small & {
-          margin-top: -1em;
-        }
-      }
+      //#quality-svg {
+      //  margin-top: -3em;
+      //  .breakpoint-medium &, .breakpoint-small & {
+      //    margin-top: -1em;
+      //  }
+      //}
     }
     &#values-diversity {
       background-color: #64a70b;
-      border-bottom: 3em solid $ups-brown-1;
+      //border-bottom: 3em solid $ups-brown-1;
 
-      #diversity-svg {
-        margin-top: -0.8em;
-        margin-bottom: -1em;
-        .breakpoint-small & {
-          margin-top: 1em;
-        }
-      }
+      //#diversity-svg {
+      //  margin-top: -0.8em;
+      //  margin-bottom: -1em;
+      //  .breakpoint-small & {
+      //    margin-top: 1em;
+      //  }
+      //}
     }
 
   }

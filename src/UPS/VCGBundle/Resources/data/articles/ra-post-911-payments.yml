@@ -43,11 +43,11 @@ Body: |
         <p>By law, every GI Bill participant under the post-9/11 program receives the Basic Allowance for Housing (BAH) rate at the E-5 level regardless of their rank while they were in the military. This chart shows dollar amounts for an E-5 that represent the maximum payout level for an apprenticeship program at each location at that rank. (Rates are current as of August 2014.)*</p>
 
         <table class="table--location">
-    		 <tr>
+    		 <thead class="theader">
     		    <th>Location</th>
     		    <th colspan="6">Payments</th>
-    		  </tr>
-    		  <tr>
+    		  </thead>
+    		  <tr class="theader">
     		    <td></td>
     		    <td>Months 1–6</td>
     		    <td>Months 7–12</td>
