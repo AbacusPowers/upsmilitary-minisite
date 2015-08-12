@@ -191,7 +191,8 @@ $(document)
     });
 
 function getModalContent(url, addEntry, originType) {
-    $('#modal').load(url +' #modal-content', null, function() {
+    $('#modal').load(url +' #modal > *', null, function() {
+        //debugger;
         var originUrl = document.URL;
         if(addEntry === true) {
             var newTitle = $('#single-modal-content h1').text();
@@ -203,7 +204,7 @@ function getModalContent(url, addEntry, originType) {
 
             ////add url to history cookie
             updateCookie(siteOrigin + url);
-            
+
             //ANALYTICS - SET PAGE URL AND TITLE
             ga('set', {
                 page: url,
@@ -218,49 +219,49 @@ function getModalContent(url, addEntry, originType) {
     });
 }
 
-function getLeaveSiteModalContent(url, addEntry, originType) {
-
-    // Updating Content on Page
-    $('#offsite-modal').load(url +' #modal-content', null, function(){
-        var originUrl = document.URL;
-        //GET RID OF IDs ON THESE FUNCTIONS. NEED TO CHANGE IN HTML
-        //$('#offsite-modal','.leave-site-view').on('click','#close-offsite-modal', function(e){
-        //    e.preventDefault();
-        //    destroyLeaveSiteModal();
-        //});
-        //$('#offsite-modal','.leave-site-view').on('click','#forward-to', function(e){
-        //    destroyLeaveSiteModal();
-        //});
-        //$('#offsite-modal','.leave-site-view').on('click','#forward-cancel', function(e){
-        //    e.preventDefault();
-        //    destroyLeaveSiteModal();
-        //});
-        //$('a.external').click(function(e){
-        //    e.preventDefault();
-        //    var href = $(this).attr('href');
-        //    showLeaveSiteModal();
-        //    $('#offsite-modal #forward-to').attr('href',href);
-        //    $('#destination').text(href);
-        //    console.log(href);
-        //
-        //    if ($('#modal').is(':visible')) {
-        //        $('#modal').hide();
-        //        $('body').addClass('hold-modal');
-        //    }
-        //    var modalHeight = $('#offsite-modal').height();
-        //    var screenHeight = $(window).height();
-        //    console.log(modalHeight);
-        //    var topHeight = 0.5*(screenHeight-modalHeight);
-        //    $('#offsite-modal').css({'top': topHeight +'px'});
-        //});
-        if(addEntry === true) {
-            // Add History Entry using pushState
-            History.pushState({ modal : 1, origin : originType, close : originUrl }, null, url);
-            //console.log(History.getState().data);
-        }
-    });
-
-}
+//function getLeaveSiteModalContent(url, addEntry, originType) {
+//
+//    // Updating Content on Page
+//    $('#offsite-modal').load(url +' #modal-content', null, function(){
+//        var originUrl = document.URL;
+//        //GET RID OF IDs ON THESE FUNCTIONS. NEED TO CHANGE IN HTML
+//        //$('#offsite-modal','.leave-site-view').on('click','#close-offsite-modal', function(e){
+//        //    e.preventDefault();
+//        //    destroyLeaveSiteModal();
+//        //});
+//        //$('#offsite-modal','.leave-site-view').on('click','#forward-to', function(e){
+//        //    destroyLeaveSiteModal();
+//        //});
+//        //$('#offsite-modal','.leave-site-view').on('click','#forward-cancel', function(e){
+//        //    e.preventDefault();
+//        //    destroyLeaveSiteModal();
+//        //});
+//        //$('a.external').click(function(e){
+//        //    e.preventDefault();
+//        //    var href = $(this).attr('href');
+//        //    showLeaveSiteModal();
+//        //    $('#offsite-modal #forward-to').attr('href',href);
+//        //    $('#destination').text(href);
+//        //    console.log(href);
+//        //
+//        //    if ($('#modal').is(':visible')) {
+//        //        $('#modal').hide();
+//        //        $('body').addClass('hold-modal');
+//        //    }
+//        //    var modalHeight = $('#offsite-modal').height();
+//        //    var screenHeight = $(window).height();
+//        //    console.log(modalHeight);
+//        //    var topHeight = 0.5*(screenHeight-modalHeight);
+//        //    $('#offsite-modal').css({'top': topHeight +'px'});
+//        //});
+//        if(addEntry === true) {
+//            // Add History Entry using pushState
+//            History.pushState({ modal : 1, origin : originType, close : originUrl }, null, url);
+//            //console.log(History.getState().data);
+//        }
+//    });
+//
+//}
 var targetURL = '';
 
 function showModal(){
@@ -269,6 +270,7 @@ function showModal(){
     $('body').addClass('article-view');
     $('#modal-wrapper').addClass('article');
 }
+
 function showVideoModal(){
     $('#overlay').show();
     $('#modal').fadeIn();
@@ -282,6 +284,7 @@ function showVideoModal(){
     }, 201);
 
 }
+
 function showPhotoModal(){
     $('#overlay').show();
     $('#modal').fadeIn();
@@ -295,6 +298,7 @@ function showPhotoModal(){
     //}, 201);
 
 }
+
 function showEventsModal(url){
     //var id = url.substring(url.lastIndexOf('#'));
     //console.log(id);
@@ -303,16 +307,56 @@ function showEventsModal(url){
     $('body').addClass('events-view');
     $('#modal-wrapper').addClass('events');
 }
+
 function showValuesModal(f){
     $('#overlay').show();
     $('#modal').show();
     $('body').addClass('values-view');
     $('#modal-wrapper').addClass('values');
     setTimeout(function(){
+        //hide "related article" navigation
         $('#culture-articles').hide();
+
+        //set all rows to the same height
+        var maxHeight = -1;
+        //
+        $('.values-row').each(function() {
+            maxHeight = maxHeight > $(this).height() ? maxHeight : $(this).height();
+            //console.log(this.id + 'current max height: ' + maxHeight);
+        });
+
+        $('.values-row').each(function() {
+            $(this).height(maxHeight);
+        });
     }, 500);
+
     //console.log('done');
 }
+
+$(document).ready(function(){
+    console.log($('#modal-wrapper').hasClass('values'));
+
+    setTimeout(function(){
+        if ($('#modal-wrapper').hasClass('values')) {
+            //hide "related article" navigation
+            $('#culture-articles').hide();
+
+            //set all rows to the same height
+            var maxHeight = -1;
+
+            $('.values-row').each(function() {
+                maxHeight = maxHeight > $(this).height() ? maxHeight : $(this).height();
+                //console.log(this.id + 'current max height: ' + maxHeight);
+            });
+
+            $('.values-row').each(function() {
+                $(this).height(maxHeight);
+            });
+        }
+    }, 500);
+
+});
+
 function svgSize(){ //call this if jquery sizing is necessary
 
     setTimeout(function(){
@@ -328,6 +372,7 @@ function svgSize(){ //call this if jquery sizing is necessary
         $('svg#values_svg').width(modalWidth).height(modalWidth * 1.3021288292);
     });
 }
+
 function showLeaveSiteModal(href){
     $('#overlay').show();
     $('#offsite-modal').fadeIn();
@@ -337,6 +382,7 @@ function showLeaveSiteModal(href){
 
 
 }
+
 function destroyModal(){
     $('#overlay').hide();
     $('#modal').hide();
@@ -395,7 +441,8 @@ function destroyLeaveSiteModal(){
 }
 (function(window, undefined) {
     History.Adapter.bind(window,'statechange',function(){ // Note: We are using statechange instead of popstate
-        if ($('#article-page-marker').length > 0) { //detect if this is a dummy page
+        //if ($('#article-page-marker').length > 0) { //detect if this is a dummy page
+        if ($('body').hasClass('article-page')) { //detect if this is a dummy page
             window.location = window.location.href; //reload the ACTUAL page at the current url
             //console.log('bing');
         }
