@@ -37,13 +37,29 @@
 
     h1 {
       font-family: Georgia, serif;
+      font-weight: normal;
       padding-top: 0.8rem;
       margin: 0 0 0.5em 0;
       margin-left: 0;
     }
 
   }
+  #values-header {
+    background-color: $ups-brown-1;
+    //padding-right: 25%;
+    height: auto;
+    padding: 5em 2em 0.75em;
 
+    .breakpoint-small & {
+      padding-right: 0;
+      padding-top: 3em;
+    }
+
+    h1, p {
+      color: $ups-yellow;
+      width: calc( 100% - 3em );
+    }
+  }
   .values-row {
     width: 100%;
     padding: 0 2em;
@@ -52,22 +68,7 @@
     @include clearfix;
 
 
-    &#values-header {
-      background-color: $ups-brown-1;
-      padding-right: 25%;
-      padding-top: 5em;
-      height: auto;
 
-      .breakpoint-small & {
-        padding-right: 0;
-        padding-top: 3em;
-      }
-
-      h1, p {
-        color: $ups-yellow;
-        width: calc( 100% - 3em );
-      }
-    }
     .values-row__graphic {
       width: 50%;
       display: table-cell;
@@ -81,7 +82,11 @@
 
       svg {
         max-height: 200px;
+        .breakpoint-small & {
+          max-height: 150px;
+        }
       }
+
 
     }
     .values-row__content {
@@ -102,6 +107,11 @@
     }
     &#values-integrity {
       background-color: #009cbd;
+      .breakpoint-small & {
+        .values-row__graphic {
+          padding-bottom: 1em;
+        }
+      }
     }
 
     //#integrity-svg {
@@ -116,7 +126,10 @@
 
     &#values-teamwork {
       background-color: #40c1ac;
-      padding-bottom: 2em;
+      //padding-bottom: 2em;
+      .values-row__graphic {
+        vertical-align: top;
+      }
     }
 
     //#teamwork-svg {
@@ -126,7 +139,7 @@
 
     &#values-service {
       background-color: #f68b20;
-        padding-top: 1em;
+        //padding-top: 1em;
       
 
       //#service-svg {
@@ -145,13 +158,17 @@
 
     &#values-accountability {
       background-color: #e1c8b0;
-      padding-bottom: 2em;
-
-      .values-row__content {
-
-        h1 {
+      //padding-bottom: 2em;
+      .breakpoint-small & {
+        .values-row__graphic {
           padding-top: 1em;
         }
+      }
+      .values-row__content {
+
+        //h1 {
+        //  padding-top: 1em;
+        //}
         h1, p {
           color: $black;
         }
@@ -169,7 +186,16 @@
 
     &#values-quality {
       background-color: $ups-brown-1;
-      padding-bottom: 1em;
+      .values-row__graphic {
+        padding-top: 1em;
+        vertical-align: bottom;
+      }
+      .breakpoint-small & {
+        h1.values-row__header {
+          //width: 100%;
+        }
+      }
+      //padding-bottom: 1em;
 
       //#quality-svg {
       //  margin-top: -3em;
@@ -180,6 +206,14 @@
     }
     &#values-diversity {
       background-color: #64a70b;
+      .breakpoint-small & {
+        .values-row__graphic {
+          padding-top: 1em;
+        }
+        .values-row__content {
+          padding-bottom: 1em;
+        }
+      }
       //border-bottom: 3em solid $ups-brown-1;
 
       //#diversity-svg {

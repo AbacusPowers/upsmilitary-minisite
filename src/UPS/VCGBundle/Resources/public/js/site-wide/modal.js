@@ -217,9 +217,6 @@ function getModalContent(url, addEntry, originType) {
             onYouTubeIframeAPIReady();
         }
     });
-    //$.get(url, function(data){
-    //    $(data).find("#modal-wrapper").appendTo("#modal-wrapper");
-    //});
 }
 
 //function getLeaveSiteModalContent(url, addEntry, originType) {
@@ -273,6 +270,7 @@ function showModal(){
     $('body').addClass('article-view');
     $('#modal-wrapper').addClass('article');
 }
+
 function showVideoModal(){
     $('#overlay').show();
     $('#modal').fadeIn();
@@ -286,6 +284,7 @@ function showVideoModal(){
     }, 201);
 
 }
+
 function showPhotoModal(){
     $('#overlay').show();
     $('#modal').fadeIn();
@@ -299,6 +298,7 @@ function showPhotoModal(){
     //}, 201);
 
 }
+
 function showEventsModal(url){
     //var id = url.substring(url.lastIndexOf('#'));
     //console.log(id);
@@ -307,6 +307,7 @@ function showEventsModal(url){
     $('body').addClass('events-view');
     $('#modal-wrapper').addClass('events');
 }
+
 function showValuesModal(f){
     $('#overlay').show();
     $('#modal').show();
@@ -318,7 +319,7 @@ function showValuesModal(f){
 
         //set all rows to the same height
         var maxHeight = -1;
-
+        //
         $('.values-row').each(function() {
             maxHeight = maxHeight > $(this).height() ? maxHeight : $(this).height();
             //console.log(this.id + 'current max height: ' + maxHeight);
@@ -331,6 +332,7 @@ function showValuesModal(f){
 
     //console.log('done');
 }
+
 $(document).ready(function(){
     console.log($('#modal-wrapper').hasClass('values'));
 
@@ -354,6 +356,7 @@ $(document).ready(function(){
     }, 500);
 
 });
+
 function svgSize(){ //call this if jquery sizing is necessary
 
     setTimeout(function(){
@@ -369,6 +372,7 @@ function svgSize(){ //call this if jquery sizing is necessary
         $('svg#values_svg').width(modalWidth).height(modalWidth * 1.3021288292);
     });
 }
+
 function showLeaveSiteModal(href){
     $('#overlay').show();
     $('#offsite-modal').fadeIn();
@@ -378,6 +382,7 @@ function showLeaveSiteModal(href){
 
 
 }
+
 function destroyModal(){
     $('#overlay').hide();
     $('#modal').hide();
