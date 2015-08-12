@@ -6,134 +6,138 @@
 {% block modal %}
 {# you can use "route" to echo the route name #}
         <div id="article-page-marker"></div>
-        <div id="modal-content">
-            <img src="{{ asset('bundles/vcg/images/UPS-shield-logo.png') }}" alt="" class="logo">
-            {% block modalbody %}
+        <div id="modal-content-wrapper">
+            <div id="modal-content">
+                <img src="{{ asset('bundles/vcg/images/UPS-shield-logo.png') }}" alt="" class="logo">
+                {% block modalbody %}
                     <div id="single-modal-content">
-                    {% if article.File %}
-                        <a href="/bundles/vcg/downloads/{{ article.File }}" class="article-download" target="_blank"><i class="fa fa-download"></i>&nbsp;Download article</a>
-                    {% endif %}
-                    {{ article.Body | raw }} 
-                    {% if article.Expanders %}
-                        <div class="component--expander">
+                        {% if article.File %}
+                            <a href="/bundles/vcg/downloads/{{ article.File }}" class="article-download" target="_blank"><i class="fa fa-download"></i>&nbsp;Download article</a>
+                        {% endif %}
+                        {{ article.Body | raw }}
+                        {% if article.Expanders %}
+                            <div class="component--expander">
 
-                            {% for key in article.Expanders %}
-                                <section class='expander__wrapper'>
-                                    <i class="fa fa-circle"></i>
-                                    <h2 class='expander__parent'>{{ key.title }}</h2>
-                                    <a data-id='1' class='button expand-button'>
-                                        <i class="fa fa-plus fa-2x"></i>
-                                    </a>
-                                    <a data-id='1' class='button hide-button'>
-                                        <i class="fa fa-minus fa-2x"></i>
-                                    </a>
-                                    <div data-id='1' class='hidden-part'>
-                                        <div class="expander__child">
-                                            {{ key.body|raw }}
+                                {% for key in article.Expanders %}
+                                    <section class='expander__wrapper'>
+                                        <i class="fa fa-circle"></i>
+                                        <h2 class='expander__parent'>{{ key.title }}</h2>
+                                        <a data-id='1' class='button expand-button'>
+                                            <i class="fa fa-plus fa-2x"></i>
+                                        </a>
+                                        <a data-id='1' class='button hide-button'>
+                                            <i class="fa fa-minus fa-2x"></i>
+                                        </a>
+                                        <div data-id='1' class='hidden-part'>
+                                            <div class="expander__child">
+                                                {{ key.body|raw }}
 
-                                        </div>   
-                                    </div>
-                                </section>
-                            {% endfor %}
-                        </div>
-                    {% endif %}
-                    {%  if article.Group %}
-                        {% if article.Group == 'building-your-brand' or article.Group == 'brand-home' %}
-                            <div>
-                                <h3>Related Articles</h3>
-                                <ul class="group-links group-links--building-your-brand">
-                                    <li class="group-link">
-                                        <a href="{{path('transition_guide_article',{'slug':'brand-intro'}) }}" class="article-link button history-checkbox"><span></span>Building Your Brand Intro</a>
-                                    </li>
-                                    <li class="group-link">
-                                        <a href="{{path('transition_guide_article',{'slug':'cover-letter-resume'}) }}" class="article-link button history-checkbox"><span></span>Resume &amp; Cover Letter</a>
-                                    </li>
-                                    <li class="group-link">
-                                        <a href="{{path('transition_guide_article',{'slug':'marketing-yourself'}) }}" class="article-link button history-checkbox"><span></span>Marketing Yourself Online</a>
-                                    </li>
-                                    <li class="group-link">
-                                        <a href="{{path('transition_guide_article',{'slug':'networking-essentials'}) }}" class="article-link button history-checkbox"><span></span>Networking</a>
-                                    </li>
-                                    <li class="group-link">
-                                        <a href="{{path('transition_guide_article',{'slug':'recruiters'}) }}" class="article-link button history-checkbox"><span></span>Working With Recruiters</a>
-                                    </li>
-                                    <li class="group-link">
-                                        <a href="{{path('transition_guide_article',{'slug':'career-fair'}) }}" class="article-link button history-checkbox"><span></span>Preparing for Career Fairs</a>
-                                    </li>
-                                    <li class="group-link">
-                                        <a href="{{path('transition_guide_article',{'slug':'interview'}) }}" class="article-link button history-checkbox"><span></span>Interviews</a>
-                                    </li>
-                                </ul>
+                                            </div>
+                                        </div>
+                                    </section>
+                                {% endfor %}
                             </div>
                         {% endif %}
-                        {% if article.Group == 'culture-benefits' %}
-                            <div id="culture-articles">
-                                <h3>Related Articles</h3>
-                                <ul class="group-links group-links--culture-benefits">
-                                    <li class="group-link">
-                                        <a href="{{path('culture_benefits_article',{'slug':'values'}) }}" class="article-link button history-checkbox"><span></span>Values</a>
-                                    </li>
-                                    <li class="group-link">
-                                        <a href="{{path('culture_benefits_article',{'slug':'family-programs'}) }}" class="article-link button history-checkbox"><span></span>Family</a>
-                                    </li>
-                                    <li class="group-link">
-                                        <a href="{{path('culture_benefits_article',{'slug':'benefits'}) }}" class="article-link button history-checkbox"><span></span>Benefits</a>
-                                    </li>
-                                    <li class="group-link">
-                                        <a href="{{path('culture_benefits_article',{'slug':'student-programs'}) }}" class="article-link button history-checkbox"><span></span>Students</a>
-                                    </li>
-                                    <li class="group-link">
-                                        <a href="{{path('culture_benefits_article',{'slug':'esgr'}) }}" class="article-link button history-checkbox"><span></span>ESGR</a>
-                                    </li>
-                                    <li class="group-link">
-                                        <a href="{{path('culture_benefits_article',{'slug':'faq'}) }}" class="article-link button history-checkbox"><span></span>FAQ</a>
-                                    </li>
-                                </ul>
-                            </div>
+                        {%  if article.Group %}
+                            {% if article.Group == 'building-your-brand' or article.Group == 'brand-home' %}
+                                <div>
+                                    <h3>Related Articles</h3>
+                                    <ul class="group-links group-links--building-your-brand">
+                                        <li class="group-link">
+                                            <a href="{{path('transition_guide_article',{'slug':'brand-intro'}) }}" class="article-link button history-checkbox"><span></span>Building Your Brand Intro</a>
+                                        </li>
+                                        <li class="group-link">
+                                            <a href="{{path('transition_guide_article',{'slug':'cover-letter-resume'}) }}" class="article-link button history-checkbox"><span></span>Resume &amp; Cover Letter</a>
+                                        </li>
+                                        <li class="group-link">
+                                            <a href="{{path('transition_guide_article',{'slug':'marketing-yourself'}) }}" class="article-link button history-checkbox"><span></span>Marketing Yourself Online</a>
+                                        </li>
+                                        <li class="group-link">
+                                            <a href="{{path('transition_guide_article',{'slug':'networking-essentials'}) }}" class="article-link button history-checkbox"><span></span>Networking</a>
+                                        </li>
+                                        <li class="group-link">
+                                            <a href="{{path('transition_guide_article',{'slug':'recruiters'}) }}" class="article-link button history-checkbox"><span></span>Working With Recruiters</a>
+                                        </li>
+                                        <li class="group-link">
+                                            <a href="{{path('transition_guide_article',{'slug':'career-fair'}) }}" class="article-link button history-checkbox"><span></span>Preparing for Career Fairs</a>
+                                        </li>
+                                        <li class="group-link">
+                                            <a href="{{path('transition_guide_article',{'slug':'interview'}) }}" class="article-link button history-checkbox"><span></span>Interviews</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            {% endif %}
+                            {% if article.Group == 'culture-benefits' %}
+                                <div id="culture-articles">
+                                    <h3>Related Articles</h3>
+                                    <ul class="group-links group-links--culture-benefits">
+                                        <li class="group-link">
+                                            <a href="{{path('culture_benefits_article',{'slug':'values'}) }}" class="article-link button history-checkbox"><span></span>Values</a>
+                                        </li>
+                                        <li class="group-link">
+                                            <a href="{{path('culture_benefits_article',{'slug':'family-programs'}) }}" class="article-link button history-checkbox"><span></span>Family</a>
+                                        </li>
+                                        <li class="group-link">
+                                            <a href="{{path('culture_benefits_article',{'slug':'benefits'}) }}" class="article-link button history-checkbox"><span></span>Benefits</a>
+                                        </li>
+                                        <li class="group-link">
+                                            <a href="{{path('culture_benefits_article',{'slug':'student-programs'}) }}" class="article-link button history-checkbox"><span></span>Students</a>
+                                        </li>
+                                        <li class="group-link">
+                                            <a href="{{path('culture_benefits_article',{'slug':'esgr'}) }}" class="article-link button history-checkbox"><span></span>ESGR</a>
+                                        </li>
+                                        <li class="group-link">
+                                            <a href="{{path('culture_benefits_article',{'slug':'faq'}) }}" class="article-link button history-checkbox"><span></span>FAQ</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            {% endif %}
+                            {% if article.Group == 'registered-apprentice' %}
+                                <div>
+                                    <h3>Related Articles</h3>
+                                    <ul class="group-links group-links--registered-apprentice">
+                                        <li class="group-link">
+                                            <a href="{{path('culture_benefits_article',{'slug':'ra-intro'}) }}" class="article-link button history-checkbox"><span></span>Intro</a>
+                                        </li>
+                                        <li class="group-link">
+                                            <a href="{{path('culture_benefits_article',{'slug':'ra-application'}) }}" class="article-link button history-checkbox"><span></span>Application</a>
+                                        </li>
+                                        <li class="group-link">
+                                            <a href="{{path('culture_benefits_article',{'slug':'ra-responsibilities'}) }}" class="article-link button history-checkbox"><span></span>Responsibilities</a>
+                                        </li>
+                                        <li class="group-link">
+                                            <a href="{{path('culture_benefits_article',{'slug':'ra-gi-benefits'}) }}" class="article-link button history-checkbox"><span></span>GI Bill Benefits</a>
+                                        </li>
+                                        <li class="group-link">
+                                            <a href="{{path('culture_benefits_article',{'slug':'ra-post-911-payments'}) }}" class="article-link button history-checkbox"><span></span>Post-9/11 GI Bill Payments</a>
+                                        </li>
+                                        <li class="group-link">
+                                            <a href="{{path('culture_benefits_article',{'slug':'ra-mgib-payments'}) }}" class="article-link button history-checkbox"><span></span>MGIB Payments</a>
+                                        </li>
+                                        <li class="group-link">
+                                            <a href="{{path('culture_benefits_article',{'slug':'ra-glossary'}) }}" class="article-link button history-checkbox"><span></span>Glossary</a>
+                                        </li>
+                                        <li class="group-link">
+                                            <a href="{{path('culture_benefits_article',{'slug':'ra-faq'}) }}" class="article-link button history-checkbox"><span></span>RA Program FAQ</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            {% endif %}
                         {% endif %}
-                        {% if article.Group == 'registered-apprentice' %}
-                            <div>
-                                <h3>Related Articles</h3>
-                                <ul class="group-links group-links--registered-apprentice">
-                                    <li class="group-link">
-                                        <a href="{{path('culture_benefits_article',{'slug':'ra-intro'}) }}" class="article-link button history-checkbox"><span></span>Intro</a>
-                                    </li>
-                                    <li class="group-link">
-                                        <a href="{{path('culture_benefits_article',{'slug':'ra-application'}) }}" class="article-link button history-checkbox"><span></span>Application</a>
-                                    </li>
-                                    <li class="group-link">
-                                        <a href="{{path('culture_benefits_article',{'slug':'ra-responsibilities'}) }}" class="article-link button history-checkbox"><span></span>Responsibilities</a>
-                                    </li>
-                                    <li class="group-link">
-                                        <a href="{{path('culture_benefits_article',{'slug':'ra-gi-benefits'}) }}" class="article-link button history-checkbox"><span></span>GI Bill Benefits</a>
-                                    </li>
-                                    <li class="group-link">
-                                        <a href="{{path('culture_benefits_article',{'slug':'ra-post-911-payments'}) }}" class="article-link button history-checkbox"><span></span>Post-9/11 GI Bill Payments</a>
-                                    </li>
-                                    <li class="group-link">
-                                        <a href="{{path('culture_benefits_article',{'slug':'ra-mgib-payments'}) }}" class="article-link button history-checkbox"><span></span>MGIB Payments</a>
-                                    </li>
-                                    <li class="group-link">
-                                        <a href="{{path('culture_benefits_article',{'slug':'ra-glossary'}) }}" class="article-link button history-checkbox"><span></span>Glossary</a>
-                                    </li>
-                                    <li class="group-link">
-                                        <a href="{{path('culture_benefits_article',{'slug':'ra-faq'}) }}" class="article-link button history-checkbox"><span></span>RA Program FAQ</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        {% endif %}
-                    {% endif %}
                     </div>
 
-            {% endblock %}
+                {% endblock %}
 
-            <a href="{% block parentPageLink %}{% if article.Parent %}{{ path('page', {'slug': article.Parent | raw }) }}{% else %}{{ path('homepage') }}{% endif %}{% endblock %}" id="close-modal"><i class="fa fa-times"></i></a>
 
-            {% if article.Prev %}
-                <a href="{% block prevArticleLink %}{% if article.Group == 'brand-home' %}{{ path('transition_guide_article', {'slug': article.Prev | raw })}}{% else %}{{ path(route, {'slug': article.Prev | raw })}}{% endif %}{% endblock %}" id="prev-article"><i class="fa fa-angle-left"></i></a>
-            {% endif %}
-            {% if article.Next %}
-                <a href="{% block nextArticleLink %}{% if article.Group == 'brand-home' %}{{ path('transition_guide_article', {'slug': article.Next | raw })}}{% else %}{{ path(route, {'slug': article.Next | raw })}}{% endif %}{% endblock %}" id="next-article"><i class="fa fa-angle-right"></i></a>
-            {% endif %}
+            </div>
         </div>
+        <a href="{% block parentPageLink %}{% if article.Parent %}{{ path('page', {'slug': article.Parent | raw }) }}{% else %}{{ path('homepage') }}{% endif %}{% endblock %}" id="close-modal"><i class="fa fa-times"></i></a>
+
+        {% if article.Prev %}
+            <a href="{% block prevArticleLink %}{% if article.Group == 'brand-home' %}{{ path('transition_guide_article', {'slug': article.Prev | raw })}}{% else %}{{ path(route, {'slug': article.Prev | raw })}}{% endif %}{% endblock %}" id="prev-article"><i class="fa fa-angle-left"></i></a>
+        {% endif %}
+        {% if article.Next %}
+            <a href="{% block nextArticleLink %}{% if article.Group == 'brand-home' %}{{ path('transition_guide_article', {'slug': article.Next | raw })}}{% else %}{{ path(route, {'slug': article.Next | raw })}}{% endif %}{% endblock %}" id="next-article"><i class="fa fa-angle-right"></i></a>
+        {% endif %}
+
 {% endblock %}

@@ -37,6 +37,7 @@ body.article-view, body.leave-site-view, body.video-view, body.photo-view, body.
   position: fixed;
   top: 0;
   z-index: 3000;
+  overflow: visible;
 
   .breakpoint-small & {
     width: 100%;
@@ -104,12 +105,15 @@ body.article-view, body.leave-site-view, body.video-view, body.photo-view, body.
       padding: 0;
     }
   }
-
+  #modal-content-wrapper {
+    overflow-y: auto;
+    height: 100%;
+  }
   #modal-content {
     @include styled-scrolling;
 
-    height: 100%;
-    overflow-y: auto;
+    //height: 100%;
+    //overflow-y: auto;
     padding-top: 2em;
     padding-right: 6em;
     // background: red;
@@ -188,11 +192,16 @@ body.article-view, body.leave-site-view, body.video-view, body.photo-view, body.
     position: absolute;
     right: 0.5em;
     top: 0.5em;
+    z-index: 4000;
 
     .breakpoint-small & {
       position: fixed;
       right: 1em;
       top: 1em;
+    }
+    .breakpoint-medium & {
+      right: 2em;
+      top: 2em;
     }
 
     & i {
@@ -394,13 +403,21 @@ body.article-view, body.leave-site-view, body.video-view, body.photo-view, body.
       display: inline-block;
       padding: 1em;
       color: white;
-      margin: 1em 10%;
+      margin: 1em 0em;
     }
     #forward-cancel {
-      background-color: #ff6857;
+      background-color: $ups-brown-1;
+      color: $ups-yellow;
+      &:hover {
+        background-color: darken($ups-brown-1, 5%);
+      }
     }
     #forward-to {
-      background-color: $ups-green;
+      background-color: $ups-yellow;
+      color: $ups-brown-1;
+      &:hover {
+        background-color: darken($ups-yellow, 5%);
+      }
     }
     .logo {
       // position: fixed;
@@ -416,7 +433,7 @@ body.article-view, body.leave-site-view, body.video-view, body.photo-view, body.
 
     #offsite-modal-content {
       height:100%;
-      overflow-y: auto;
+      //overflow-y: auto;
       padding-top: 2em;
       /*padding-bottom: 100%;*/
 
@@ -470,8 +487,80 @@ body.article-view, body.leave-site-view, body.video-view, body.photo-view, body.
      #destination {
        background: $grey30;
        padding: 0.5em;
+       display: inline-block;
+       word-break: break-word;
      }
    }
 
 }
 
+.article .table--location{
+  tr {
+    margin: 0 1em;
+    line-height: 2em;
+    td {
+      padding: .5em;
+    }
+  }
+  tbody {
+    tr:nth-of-type(even) {
+      background: $grey10;
+    }
+    td.roster-table-name {
+      font-weight: bold;
+    }
+  }
+  .breakpoint-small & {
+    .theader {
+      display: none;
+    }
+    tr {
+      margin: 0;
+      display: block;
+      line-height: normal;
+      padding-bottom: 1em;
+    }
+    td {
+      display: block;
+      width: 100%;
+      //        padding-left: 50%;
+      position: relative;
+      min-height: 2em;
+      padding: .5em 0 .5em 10em;
+
+      &:before {
+        position: absolute;
+        left: 1em;
+        padding: .5em 0;
+        top: 0;
+        width: 10em;
+        font-weight: bold;
+        //          line-height: 2em;
+        //          min-height: 2em;
+
+      }
+      &:nth-child(1):before {
+        content: 'Location';
+      }
+      &:nth-child(2):before {
+        content: 'Months 1–6';
+      }
+      &:nth-child(3):before {
+        content: 'Months 7–12';
+      }
+      &:nth-child(4):before {
+        content: 'Months 13–18';
+      }
+      &:nth-child(5):before {
+        content: 'Months 19–24';
+      }
+      &:nth-child(6):before {
+        content: 'Months 25–36';
+      }
+      &:nth-child(7):before {
+        content: 'Total';
+      }
+    }
+  }
+
+}
