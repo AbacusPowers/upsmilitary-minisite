@@ -4663,7 +4663,7 @@ function objectLength(obj) {
 }
 
 $( document ).ready(function() {
-    $.get("/bundles/vcg/data/new-jobs-data.csv", function (data) {
+    $.get("/bundles/vcg/data/translator.csv", function (data) {
         //        console.log(data);
         allJobs = $.csv.toObjects(data);
 
