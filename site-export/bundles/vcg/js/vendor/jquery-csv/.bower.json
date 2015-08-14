@@ -27,5 +27,6 @@
   },
   "_source": "git://github.com/mirlord/jquery-csv.git",
   "_target": "*",
-  "_originalSource": "jquery-csv"
+  "_originalSource": "jquery-csv",
+  "_direct": true
 }

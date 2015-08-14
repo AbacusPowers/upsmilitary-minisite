@@ -10,5 +10,6 @@
   },
   "_source": "git://github.com/gfranko/jquery.selectBoxIt.js.git",
   "_target": "~3.8.1",
-  "_originalSource": "jquery.selectBoxIt"
+  "_originalSource": "jquery.selectBoxIt",
+  "_direct": true
 }
