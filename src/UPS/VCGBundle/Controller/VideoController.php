@@ -27,7 +27,7 @@ class VideoController extends Controller
 
         try {
             if($routeName === 'homepage_video') {
-                $videos = $yaml->parse(file_get_contents( dirname(dirname(__FILE__)). "/Resources/data/videos/career-videos.yml"));
+                $videos = $yaml->parse(file_get_contents( dirname(dirname(__FILE__)). "/Resources/data/videos/homepage-videos.yml"));
                 $parent = '/';
             } elseif ($routeName === 'jobs_video') {
                 $videos = $yaml->parse(file_get_contents( dirname(dirname(__FILE__)). "/Resources/data/videos/career-videos.yml"));

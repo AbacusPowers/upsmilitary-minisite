@@ -1,0 +1,17 @@
+## YAML Template.
+---
+thank-you-from-ups:
+  Url: WRxutqlF4B8
+  Title: Thank You from UPS
+  Prev: military-ready
+  Next: military-ready
+#message-from-the-ceo:
+#  Url: kn0vjvwuMYY
+#  Title: Message from the CEO
+#  Prev: thank-you-from-ups
+#  Next: thank-you-from-ups
+military-ready:
+  Url: ObxooU0nAu4
+  Title: UPS: Military-Ready
+  Prev: thank-you-from-ups
+  Next: thank-you-from-ups
