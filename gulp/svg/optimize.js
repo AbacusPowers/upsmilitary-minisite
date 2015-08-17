@@ -2,7 +2,7 @@ module.exports = function( path ){
     'use strict';
     var gulp = require('gulp'),
         svgspritesheet = require('./gulp-svg-spritesheet'),
-        svgo = require('gulp-svgo'),
+        imagemin = require('gulp-imagemin'),
         inquirer = require('inquirer'),
         cheerio = require('gulp-cheerio');
 
@@ -69,7 +69,7 @@ module.exports = function( path ){
                   xmlMode: true
                 }
             }))
-            .pipe(svgo({
+            .pipe(imagemin({
                 plugins: [
                 // SVGOptimizer Plugin list
                 // https://github.com/svg/svgo/tree/master/plugins
