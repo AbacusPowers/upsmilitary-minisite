@@ -20,6 +20,7 @@ body.article-view, body.leave-site-view, body.video-view, body.photo-view, body.
 
 #modal {
   height: 100%;
+  @include clearfix;
   .article &, .video &, .photo &, .events &, .faqs &, .values & {
     display: block;
     .hold-modal & {
