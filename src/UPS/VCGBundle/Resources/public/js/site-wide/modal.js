@@ -179,8 +179,14 @@ $(document)
         ga('send','event','external_link','close', href);
     })
     .on('click','.leave-site-view #forward-to', function(e){
+        e.preventDefault();
+
         destroyLeaveSiteModal();
         var href = $(this).attr('href');
+        window.open(
+            href,
+            '_blank' // <- This is what makes it open in a new window.
+        );
         ga('send','event','external_link','continue', href);
     })
     .on('click','.leave-site-view #forward-cancel', function(e){
