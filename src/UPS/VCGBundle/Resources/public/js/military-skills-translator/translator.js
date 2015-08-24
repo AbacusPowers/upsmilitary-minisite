@@ -1,15 +1,15 @@
 
 var buckets = [];
 buckets[0] = {name: 'No direct match', description: 'No direct match available'};
-buckets[1] = {name: 'Drivers', description: 'Full- and part-time jobs moving packages between locations and delivering them to customers, including positions like Package Delivery Drivers, Driver Helpers, Tractor Trailer Drivers and Haz-Mat Endorsed Drivers'};
-buckets[2] = {name: 'Logistics', description: 'Full- and part-time jobs ensuring packages are appropriately moved through UPS facilities, including positions like Package Handlers, Dockworkers and Warehouse Associates'};
+buckets[1] = {name: 'Drivers', description: 'Full- and part-time jobs moving packages between locations and delivering them to customers, including positions like package delivery drivers, driver helpers, tractor-trailer drivers and hazmat endorsed drivers'};
+buckets[2] = {name: 'Logistics', description: 'Full- and part-time jobs ensuring packages are appropriately moved through UPS facilities, including positions like package handlers, dockworkers and warehouse associates'};
 buckets[3] = {name: 'Operations', description: 'Full- and part-time jobs ensuring UPS operations run smoothly for our customers, including positions like Part-time Supervisors and Support Specialists'};
 buckets[4] = {name: 'Mechanics and Technicians', description: 'Full- and part-time jobs ensuring equipment in UPS facilities and vehicles is well maintained, including positions like Paint and Body Mechanics, Maintenance Mechanics and Trailer Shop Mechanics'};
 buckets[5] = {name: 'Administrative Workers', description: 'Full- and part-time jobs ensuring UPS office duties are completed, including positions like Data Entry Personnel, Administrative Assistants and Dispatch Associates'};
 buckets[6] = {name: 'Professional Workers', description: 'Full- and part-time jobs requiring advanced training or education in a specialized field, including positions like Accounting Associates, Advertising Managers, Legal Personnel, Human Resources Personnel and all Professional Internships'};
-buckets[7] = {name: 'Information Systems', description: 'Full- and part-time jobs using technology to fulfill UPS\'s commitment to customers, including positions like Business Systems Analysts, Programming Analysts and Application Developers'};
+buckets[7] = {name: 'Information Systems', description: 'Full- and part-time jobs using technology to fulfill UPS\' commitment to customers, including positions like business systems analysts, programming analysts and application developers'};
 buckets[8] = {name: 'Air Operations', description: 'Full- and part-time jobs within UPS\'s own airline, including positions like Pilots, First officers, and Aircraft Maintenance Mechanics'};
-buckets[9] = {name: 'Engineers', description: 'Full- and part-time jobs improving UPS processes with technology and innovation, including positions like Aircraft Engineers, Industrial Engineering Specialists and Plant Engineers and Mechanics'};
+buckets[9] = {name: 'Engineers', description: 'Full- and part-time jobs improving UPS processes with technology and innovation, including positions like aircraft engineers, industrial engineering specialists, plant engineers and mechanics'};
 buckets[10] = {name: 'Sales and Customer Service', description: 'Full- and part-time jobs ensuring the satisfaction of new and existing UPS customers, including positions like Customer Service Associates, Inside Sales Representatives and Account Executives'};
 buckets[11] = {name: 'Part-Time, Hourly and Seasonal Workers', description: 'Part-time and seasonal opportunities at UPS are a great way to get started on a new career while going to school. Includes opportunities available in all UPS employment areas'};
 
