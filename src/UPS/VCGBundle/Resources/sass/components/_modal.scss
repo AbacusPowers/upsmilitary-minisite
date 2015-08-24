@@ -229,7 +229,8 @@ body.article-view, body.leave-site-view, body.video-view, body.photo-view, body.
       color: $white;
       position: absolute;
       @include size(2em 6em);
-      top: calc( 50% - 3em );
+      top: 50%;
+      margin-top: -3em;
       float: none;
 
       & i {
@@ -293,7 +294,8 @@ body.article-view, body.leave-site-view, body.video-view, body.photo-view, body.
   #video-title {
 
     font-size: 1.2em;
-    width: calc( 100% - 7em );
+    width: 100%;
+    padding-right: 7em;
     color: $ups-yellow;
     margin-bottom: 1.2em;
     margin-left: 3.9em;
@@ -305,7 +307,8 @@ body.article-view, body.leave-site-view, body.video-view, body.photo-view, body.
       font-size: 1.9em;
       margin-left: 3.5em;  
       margin-top: -2em;
-      width: calc( 100% - 5em );
+      width: 100%;
+      padding-right: 5em;
     }
   }
 
@@ -324,7 +327,8 @@ body.article-view, body.leave-site-view, body.video-view, body.photo-view, body.
   #photo-title {
 
     font-size: 1.2em;
-    width: calc( 100% - 7em );
+    width: 100%;
+    padding-right: 7em;
     color: $ups-yellow;
     margin-bottom: 1.2em;
     margin-left: 3.9em;
@@ -336,7 +340,8 @@ body.article-view, body.leave-site-view, body.video-view, body.photo-view, body.
       font-size: 1.9em;
       margin-left: 3.5em;
       margin-top: -2em;
-      width: calc( 100% - 5em );
+      width: 100%;
+      padding-right: 5em;
     }
   }
   .photo-container {

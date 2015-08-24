@@ -168,11 +168,13 @@ a.grid-item:hover {
 .page--transition-guide {
 
     .left-column {
-        padding: 1.5rem;
+        .top-section {
+            padding: 1.5rem 1.5rem 0;
+        }
 
         .button-group {
-            width: calc( 100% + 3rem );
-            margin-left: -1.5rem;
+            width: 100%;
+            //margin-left: -1.5rem;
         }
 
         .breakpoint-small & {

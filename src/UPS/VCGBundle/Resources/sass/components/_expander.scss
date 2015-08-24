@@ -11,7 +11,7 @@
     &:before {
       @include pseudo-block($vertical-thread-width);
       left: 0;
-      height: calc( 100% + 1px );
+      //height: calc( 100% + 1px );
       height: 100%;
       top: 0;
       background: $ups-yellow;
@@ -48,7 +48,8 @@
         position: absolute;
         height: .9em;
         right: 1rem;
-        top: calc(50% - 0.45em);
+        top: 50%;
+        margin-top: -0.45em;
     }
   }
 
@@ -305,7 +306,8 @@
     }
 
     iframe {
-        width: calc( 100% - 1em );
+        width: 100%;
+        padding-right: 1em;
         margin-top: 1px;
         
         .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & {
