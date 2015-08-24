@@ -8,6 +8,11 @@
   "devDependencies": {
     "browser-sync": "2.2.1",
     "cheerio": "0.18.0",
+    "inquirer": "0.8.0",
+    "jshint-stylish": "1.0.0",
+    "mustache": "1.0.0",
+    "through2": "0.6.3",
+    "vinyl-source-stream": "1.0.0",
     "gulp": "3.8.10",
     "gulp-autoprefixer": "2.0.0",
     "gulp-bless": "^3.0.1",
@@ -28,16 +33,10 @@
     "gulp-size": "1.1.0",
     "gulp-stylestats": "0.4.0",
     "gulp-svg-spritesheet": "0.0.3",
-    "gulp-svgo": "0.1.1",
     "gulp-task-listing": "1.0.0",
     "gulp-uglify": "1.0.1",
     "gulp-using": "0.0.1",
-    "gulp-util": "3.0.1",
-    "inquirer": "0.8.0",
-    "jshint-stylish": "1.0.0",
-    "mustache": "1.0.0",
-    "through2": "0.6.3",
-    "vinyl-source-stream": "1.0.0"
+    "gulp-util": "3.0.1"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
