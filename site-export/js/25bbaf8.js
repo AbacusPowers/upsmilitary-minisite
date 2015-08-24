@@ -608,8 +608,14 @@ $(document)
         ga('send','event','external_link','close', href);
     })
     .on('click','.leave-site-view #forward-to', function(e){
+        e.preventDefault();
+
         destroyLeaveSiteModal();
         var href = $(this).attr('href');
+        window.open(
+            href,
+            '_blank' // <- This is what makes it open in a new window.
+        );
         ga('send','event','external_link','continue', href);
     })
     .on('click','.leave-site-view #forward-cancel', function(e){
@@ -620,6 +626,7 @@ $(document)
     });
 
 function getModalContent(url, addEntry, originType) {
+    console.log('aha');
     $('#modal').load(url +' #modal > *', null, function() {
         //debugger;
         var originUrl = document.URL;
@@ -871,16 +878,20 @@ function destroyLeaveSiteModal(){
 (function(window, undefined) {
     History.Adapter.bind(window,'statechange',function(){ // Note: We are using statechange instead of popstate
         //if ($('#article-page-marker').length > 0) { //detect if this is a dummy page
-        if ($('body').hasClass('article-page')) { //detect if this is a dummy page
-            window.location = window.location.href; //reload the ACTUAL page at the current url
-            //console.log('bing');
-        }
+        var state = History.getState();
+        var url = state.url;
+        console.log(url);
+        //if ($('#modal-wrapper').hasClass('article-page')) { //detect if this is a dummy page
+        //    window.location = window.location.href; //reload the ACTUAL page at the current url
+        //    //console.log('bing');
+        //}
         if(History.getState().data.modal !== 1) {
-            destroyModal();
+            $('#close-modal').click();
             //console.log('ping');
         } else {
+            getModalContent(url, false, 'page');
             showModal();
-            //console.log('ding');
+            console.log('ding');
         }
     });
 })(window);
