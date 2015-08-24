@@ -173,6 +173,9 @@ $( document ).ready(function() {
         allJobs = $.csv.toObjects(data);
 
     });
+    //reset form for firefox
+    $('#branch-of-service option:contains("Select Branch")').prop('selected',true);
+    $('#job-code').val('');
 
     $('#branch-of-service').change(function () {
         var val = $(this).val();

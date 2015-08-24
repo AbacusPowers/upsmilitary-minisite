@@ -53,9 +53,13 @@ h3 {
 
 a {
     color: $black;
+    em &, ol & {
+        font-weight: bold;
+    }
 }
 
 a:link {
+
 }
 
 a:visited {
@@ -67,7 +71,9 @@ a:hover {
 
 a:active {
 }
-
+a:focus {
+    color: $grey60;
+}
 .hidden {
     display: none;
 }
