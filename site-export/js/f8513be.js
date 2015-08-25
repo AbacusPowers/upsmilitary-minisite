@@ -252,7 +252,7 @@ jQuery.fn.vectorMap('addMap', 'us_merc_en',{"insets": [{"width": 200, "top": 370
                 + jobDesc
                 + '</p><a class="search-button" target="_blank" href="'
                 + href
-                + '"><div>search</div></a></div>'
+                + '"><span>search</span></a></div>'
             ));
         }
         return result;

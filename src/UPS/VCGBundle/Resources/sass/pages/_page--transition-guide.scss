@@ -54,4 +54,55 @@
             }
         }
     }
+  .coming-soon {
+    background: transparent;
+    #cs-wrapper {
+      background: $grey--dark;
+    }
+  }
+  .coming-soon-app-wrapper {
+    //padding: 1.5em 1.5em 0 1.5em;
+    @include clearfix;
+    &:hover {
+      background: transparent;
+    }
+    h2 {
+      margin-left: 0;
+      margin-top: 0;
+      padding: 1.5em 1.5em 0 1.5em;
+    }
+    p {
+      padding: 0 1.5em 0;
+    }
+    svg {
+      width: 100%;
+      margin-top: 1.5em;
+    }
+    img.app-hand {
+      width: 50%;
+      display: inline-block;
+      margin-top: 1.5em;
+      margin-left: -1.5em;
+      float:left;
+    }
+
+    .badge-wrapper {
+      width: 50%;
+      float: right;
+      padding-top: 2.5em;
+      text-align: right;
+
+      // background: red;
+    }
+
+    img.badge--apple, img.badge--google, svg#badge--google {
+      width: 100%;
+      margin-bottom: 0.5rem;
+
+      .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & {
+        width: 75%;
+        margin-right: 1.5em;
+      }
+    }
+  }
 }
