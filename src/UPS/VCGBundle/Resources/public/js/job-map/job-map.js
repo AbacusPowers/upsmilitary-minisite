@@ -348,6 +348,7 @@
         codes.sort();
         for (var i = 0, len = codes.length; i < len; ++i) {
             var c = codes[i];
+            if (c == 'US-DC') continue;
             var option = $('<option></option>')
                 .attr('value', c)
                 .text(vmap.getRegionName(c))
