@@ -51,7 +51,7 @@ Body: |
                         The UPS Registered Apprenticeship program provides transitioning service members the opportunity to earn a great wage while completing a career training program. The 48-month program offers U.S. veterans and reservists a full-time position while they work to further their career at UPS through advanced training. Opportunities are available across the country, and even more Registered Apprenticeship positions will be added soon!
                     </p>
                     <p class="faq-answer">
-                        Visit the <a href="/culture-benefits.html#ra-section">Registered Apprenticeship program section</a> to learn more.
+                        <a href="/culture-benefits/article/ra-intro.html">Visit the Registered Apprenticeship program section to learn more.</a>
                     </p>
                 </div>
             </div>
@@ -171,7 +171,7 @@ Body: |
         </section>
         <section class='expander__wrapper'>
             <a data-id='8' class='button expand-button'>
-                <h2 class='expander__parent'>What job areas are best-suited for my military experience?</h2>
+                <h2 class='expander__parent'>What job areas are best suited for my military experience?</h2>
                 <i class="fa fa-plus fa-2x"></i>
             </a>
             <div data-id='8' class='hidden-part'>

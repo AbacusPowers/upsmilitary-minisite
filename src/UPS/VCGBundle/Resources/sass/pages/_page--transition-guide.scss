@@ -5,13 +5,26 @@
 
     .grid-area {
         // align-content: stretch;
+      .grid--employment-resources, .grid--height-fix {
+        width: 100%;
+      }
+      .grid--employment-resources {
+        border-bottom: 0;
+      }
+      .grid-item.grid--height-fix {
+        &:hover {
+          background: transparent;
+        }
+      }
     }
 
    .app-download-wrapper {
         padding: 1.5em 1.5em 0 1.5em;
-        margin-left: -1.5em;
-        width: calc( 100% + 3em );
-
+        //margin-left: -1.5em;
+        width: 100%;
+        p {
+          margin-right: 0;
+        }
         h2 {
             margin-left: 0;
             margin-top: 0;

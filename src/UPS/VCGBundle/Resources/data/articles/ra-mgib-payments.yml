@@ -60,6 +60,6 @@ Body: |
       </tr>
     </table>
 
-    <h4>This document contains links to an external website or websites that UPS does not administer or fund. UPS does not endorse any products or services advertised on or available through this website or websites, nor does it control the opinions or information presented there.</h4>
+    <p class="disclaimer--article">This document contains links to an external website or websites that UPS does not administer or fund. UPS does not endorse any products or services advertised on or available through this website or websites, nor does it control the opinions or information presented there.</p>
 
 Expanders:
