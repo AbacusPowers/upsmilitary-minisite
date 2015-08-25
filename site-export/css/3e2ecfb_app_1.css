@@ -7279,38 +7279,52 @@ h1.page--title {
 .page--transition-guide .left-column {
   padding-bottom: 0;
 }
-/* line 10, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/pages/_page--transition-guide.scss */
-.page--transition-guide .app-download-wrapper {
-  padding: 1.5em 1.5em 0 1.5em;
-  margin-left: -1.5em;
-  width: -webkit-calc( 100% + 3em );
-  width: calc( 100% + 3em );
+/* line 8, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/pages/_page--transition-guide.scss */
+.page--transition-guide .grid-area .grid--employment-resources, .page--transition-guide .grid-area .grid--height-fix {
+  width: 100%;
+}
+/* line 11, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/pages/_page--transition-guide.scss */
+.page--transition-guide .grid-area .grid--employment-resources {
+  border-bottom: 0;
 }
 /* line 15, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/pages/_page--transition-guide.scss */
+.page--transition-guide .grid-area .grid-item.grid--height-fix:hover {
+  background: transparent;
+}
+/* line 21, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/pages/_page--transition-guide.scss */
+.page--transition-guide .app-download-wrapper {
+  padding: 1.5em 1.5em 0 1.5em;
+  width: 100%;
+}
+/* line 25, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/pages/_page--transition-guide.scss */
+.page--transition-guide .app-download-wrapper p {
+  margin-right: 0;
+}
+/* line 28, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/pages/_page--transition-guide.scss */
 .page--transition-guide .app-download-wrapper h2 {
   margin-left: 0;
   margin-top: 0;
 }
-/* line 20, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/pages/_page--transition-guide.scss */
+/* line 33, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/pages/_page--transition-guide.scss */
 .page--transition-guide .app-download-wrapper img.app-hand {
   width: 50%;
   display: inline-block;
   margin-top: 1.5em;
   margin-left: -1.5em;
 }
-/* line 27, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/pages/_page--transition-guide.scss */
+/* line 40, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/pages/_page--transition-guide.scss */
 .page--transition-guide .app-download-wrapper .badge-wrapper {
   width: 50%;
   float: right;
   padding-top: 2.5em;
   text-align: right;
 }
-/* line 34, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/pages/_page--transition-guide.scss */
+/* line 47, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/pages/_page--transition-guide.scss */
 .page--transition-guide .app-download-wrapper img.badge--apple, .page--transition-guide .app-download-wrapper img.badge--google, .page--transition-guide .app-download-wrapper svg#badge--google {
   width: 100%;
   margin-bottom: 0.5rem;
 }
-/* line 38, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/pages/_page--transition-guide.scss */
+/* line 51, ../../../../../../../Users/justin/Sites/upssymfony/wwwroot/src/UPS/VCGBundle/Resources/sass/pages/_page--transition-guide.scss */
 .breakpoint-medium .page--transition-guide .app-download-wrapper img.badge--apple, .breakpoint-large .page--transition-guide .app-download-wrapper img.badge--apple, .breakpoint-wide .page--transition-guide .app-download-wrapper img.badge--apple, .breakpoint-medium .page--transition-guide .app-download-wrapper img.badge--google, .breakpoint-large .page--transition-guide .app-download-wrapper img.badge--google, .breakpoint-wide .page--transition-guide .app-download-wrapper img.badge--google, .breakpoint-medium .page--transition-guide .app-download-wrapper svg#badge--google, .breakpoint-large .page--transition-guide .app-download-wrapper svg#badge--google, .breakpoint-wide .page--transition-guide .app-download-wrapper svg#badge--google {
   width: 75%;
   margin-right: 1.5em;

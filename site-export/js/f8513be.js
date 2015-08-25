@@ -351,6 +351,7 @@ jQuery.fn.vectorMap('addMap', 'us_merc_en',{"insets": [{"width": 200, "top": 370
         codes.sort();
         for (var i = 0, len = codes.length; i < len; ++i) {
             var c = codes[i];
+            if (c == 'US-DC') continue;
             var option = $('<option></option>')
                 .attr('value', c)
                 .text(vmap.getRegionName(c))
