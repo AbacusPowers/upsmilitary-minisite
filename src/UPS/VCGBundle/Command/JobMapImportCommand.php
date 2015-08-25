@@ -102,7 +102,8 @@ class JobMapImportCommand extends ContainerAwareCommand
             $size = trim($data[7]);
             $result []= array(
                 'id'    => trim($data[0]),
-                'name'  => $this->ucname(trim($data[1])),
+                //'name'  => $this->ucname(trim($data[1])),
+                'name'  => trim($data[1]),
                 'city'  => $this->ucname(trim($data[3])),
                 'state' => trim($data[4]),
                 'zip'   => trim(strval($data[5])),
