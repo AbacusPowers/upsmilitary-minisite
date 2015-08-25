@@ -101,9 +101,8 @@ and open the template in the editor.
                 margin-top: 0.9rem;
             }
 
-            p {
-                margin: 1em 0;
-            }
+
+
 
             #military-job-description {
                 color: $grey--medium;
@@ -264,19 +263,30 @@ and open the template in the editor.
                 color: $white60;
                 height: 100%;
                 @include transition (all 0.15s ease-out);
-                width: 6em;
+                width: 7.5em;
                 text-align: center;
-
+                border-bottom: 1px solid $black;
+                font-size: 0.8em;
+                text-transform: uppercase;
                 .breakpoint-small & {
-                    width: 5em;
+                    width: 7em;
                 }
 
-                div {
-                    font-size: 0.8em;
-                    text-transform: uppercase;
+                &:hover, &:focus {
+                    background: $ups-yellow;
+                    color: $black;
+                }
+                span {
+                    display: block;
+                    //font-size: 0.8em;
+                    //text-transform: uppercase;
                     position: relative;
                     top: 50%;
-                    transform: translateY(-40%);
+                    height: 70%;
+                    margin-top: -21%;
+                    //margin-top: -5%;
+                    //margin-top: -0.5em;
+                    //transform: translateY(-50%);
                 }
             }
             

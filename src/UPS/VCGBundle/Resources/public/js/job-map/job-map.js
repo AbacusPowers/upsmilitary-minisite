@@ -249,7 +249,7 @@
                 + jobDesc
                 + '</p><a class="search-button" target="_blank" href="'
                 + href
-                + '"><div>search</div></a></div>'
+                + '"><span>search</span></a></div>'
             ));
         }
         return result;
