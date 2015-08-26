@@ -106,6 +106,43 @@
     .breakpoint-small & {
 
     }
+    .app-badge-slide-wrapper {
+        @include clearfix;
+        background: transparent;
+        position: absolute;
+        bottom: 15em;
+        padding-left: 6em;
+        .breakpoint-wide & {
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+            left: 0;
+            right: 0;
+        }
+        .breakpoint-small & {
+            bottom: 9.6em;
+            padding-left: 2em;
+        }
+        .slide-app-badge {
+            width: auto;
+            margin-right: 2em;
+            float: left;
+            .breakpoint-small & {
+                margin-right: 0;
+                display: block;
+                float: none;
+                margin-top: 6px;
+            }
+            img {
+                width: auto;
+                min-width: auto;
+                height: 50px;
+                .breakpoint-small & {
+                    height: 40px;
+                }
+            }
+        }
+    }
 }
 
 .carousel-item img {

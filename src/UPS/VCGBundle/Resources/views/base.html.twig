@@ -107,12 +107,26 @@
                             <li class="current-section"><a href="https://ups.managehr.com/life-at-ups.htm">Working at UPS</a></li>
                         </ul>
                     </nav>
+                    <nav class="header__nav--mobile">
+                        <p class="header__country--mobile">United States Jobs</p>
+                        <label for="show-menu" class="show-menu"><i class="fa fa-bars"></i></label>
+                        <input type="checkbox" id="show-menu" role="button">
+                        <ul>
+                            <li><a href="https://ups.managehr.com/home.htm"><i class="fa fa-home"></i>Home</a></li>
+                            <li><a href="https://ups.managehr.com/about-us.htm">About UPS</a></li>
+                            <li><a href="https://ups.managehr.com/careers.htm">Career Areas</a></li>
+                            <li class="current-section"><a href="https://ups.managehr.com/life-at-ups.htm">Working at UPS</a></li>
+                            <li><a href="https://ups.managehr.com/media.htm">Media</a></li>
+                            <li><a href="https://ups.managehr.com/hiringprocess.htm">FAQ</a></li>
+                            <li><a href="https://ups.managehr.com/contact-us.htm">Contact Us</a></li>
+                        </ul>
+                    </nav>
 
                 </div>
 
             </header>
         {% endblock %}
-        
+
     <main class="veteranGateway">
             <div class="veteranGateway__liner">
                 <div class="{% block page_class %}base{% endblock %}">
@@ -136,12 +150,12 @@
             {% endblock %}
     </main>
 
-        
+
     <footer class="footer" role="contentinfo">
         {% block footer %}
-            
+
             <div class="footer-logo">
-                
+
                 <a href="index.html"><img src="{{ asset('bundles/vcg/images/UPS-shield-logo.png') }}" alt="Logo image"><h2>UPS Veteran Career Gateway</h2></a>
                 {#<h3>Site Map</h3>#}
             </div>

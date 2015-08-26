@@ -10,7 +10,7 @@ use Symfony\Component\Console\Input\ArrayInput;
 use Symfony\Component\Console\Output\OutputInterface;
 //use Symfony\Component\Console\Formatter\OutputFormatterStyle;
 
-use Symfony\Component\DomCrawler\Crawler;
+//use Symfony\Component\DomCrawler\Crawler;
 //use Symfony\Component\HttpKernel\Client;
 //use Symfony\Component\HttpKernel\HttpKernelInterface;
 //use Symfony\Component\HttpFoundation\Response;
@@ -70,8 +70,8 @@ class SiteExportCommand extends ContainerAwareCommand
         '/transition-guide/article/hiring-resources.html',
         '/transition-guide/article/brand-intro.html',
         '/transition-guide/article/cover-letter-resume.html',
-        '/transition-ude/garticle/marketing-yourself.html',
-        '/transition-guidei/article/networking-essentials.html',
+        '/transition-guide/article/marketing-yourself.html',
+        '/transition-guide/article/networking-essentials.html',
         '/transition-guide/article/recruiters.html',
         '/transition-guide/article/career-fair.html',
         '/transition-guide/article/interview.html',
@@ -153,7 +153,6 @@ EOT
 
         $output->writeln('Dumping assets');
     }
-
     protected function writeSite($client, $dryRun, OutputInterface $output) {
 
         $fs = new Filesystem();
