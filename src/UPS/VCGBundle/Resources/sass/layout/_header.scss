@@ -117,7 +117,7 @@ header {
         ul li {
             float: right;
             padding-left: 1.8em;
-            font-size: 1em;
+            font-size: 0.75em;
             font-weight: 800;
             cursor: pointer;
             a {
@@ -209,19 +209,15 @@ header {
             right: -100%;
             background: rgba( $ups-brown-1, 0.9);
             width: 100%;
-
-
-
-
         }
     }
     nav.header__nav--mobile {
-        position: fixed;
+        position: absolute;
         top: 1rem;
         right: 0;
-        background: rgba( $ups-brown-1, 0.9);
+        background: rgba( $ups-brown-1, 0.98);
         width: 75%;
-        min-height: 3em;
+        min-height: 2.5rem;
 
         .breakpoint-medium &, .breakpoint-large &, .breakpoint-wide & {
             display: none;
@@ -263,7 +259,7 @@ header {
             position: absolute;
             right: 0.5em;
             color: $white;
-            font-size: 2rem;
+            font-size: 1.7rem;
         }
         input[type=checkbox]#show-menu {
             display: none;
@@ -275,7 +271,7 @@ header {
             color: $white;
             position: absolute;
             left: 0;
-            padding: 1.5em;
+            padding: 0.75rem;
 
         }
     }

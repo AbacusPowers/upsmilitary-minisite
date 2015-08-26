@@ -18,7 +18,7 @@ use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Filesystem\Filesystem;
 use Symfony\Component\Filesystem\Exception\IOExceptionInterface;
 
-use Symfony\Component\Process\Process;
+//use Symfony\Component\Process\Process;
 
 class SiteExportCommand extends ContainerAwareCommand
 {
@@ -34,15 +34,8 @@ class SiteExportCommand extends ContainerAwareCommand
         '/transition-guide/dd-form-214-guide.html',
         '/index.html',
         '/article/brand-intro-home.html',
-        '/video/feeder-driver.html',
-        '/video/frontline-supervisor.html',
-        '/video/hr.html',
-        '/video/cover-driver.html',
-        '/video/mechanic.html',
-        '/video/otr-driver.html',
-        '/video/package-driver.html',
-        '/video/sorter.html',
-        '/video/technician.html',
+        '/video/thank-you-from-ups.html',
+        '/video/military-ready.html',
         '/jobs/video/feeder-driver.html',
         '/jobs/video/frontline-supervisor.html',
         '/jobs/video/hr.html',
@@ -67,7 +60,7 @@ class SiteExportCommand extends ContainerAwareCommand
         '/culture-benefits/video/technician.html',
         '/transition-guide.html',
         '/transition-guide/dd-form-214-guide.html',
-        '/transition-guide/article/hiring-resources.html',
+        '/transition-guide/article/employment-resources.html',
         '/transition-guide/article/brand-intro.html',
         '/transition-guide/article/cover-letter-resume.html',
         '/transition-guide/article/marketing-yourself.html',
@@ -95,7 +88,35 @@ class SiteExportCommand extends ContainerAwareCommand
         '/culture-benefits/article/ra-post-911-payments.html',
         '/culture-benefits/article/ra-mgib-payments.html',
         '/culture-benefits/article/ra-glossary.html',
-        '/culture-benefits/article/ra-faq.html'
+        '/culture-benefits/article/ra-faq.html',
+        '/culture-benefits/history/photo/1.html',
+        '/culture-benefits/history/photo/2.html',
+        '/culture-benefits/history/photo/3.html',
+        '/culture-benefits/history/photo/4.html',
+        '/culture-benefits/history/photo/5.html',
+        '/culture-benefits/history/photo/6.html',
+        '/culture-benefits/history/photo/7.html',
+        '/culture-benefits/history/photo/8.html',
+        '/culture-benefits/history/photo/9.html',
+        '/culture-benefits/history/photo/10.html',
+        '/culture-benefits/history/photo/11.html',
+        '/culture-benefits/history/photo/12.html',
+        '/culture-benefits/history/photo/13.html',
+        '/culture-benefits/history/photo/14.html',
+        '/culture-benefits/history/photo/15.html',
+        '/culture-benefits/history/photo/16.html',
+        '/culture-benefits/history/photo/17.html',
+        '/culture-benefits/history/photo/18.html',
+        '/culture-benefits/history/photo/19.html',
+        '/culture-benefits/history/photo/20.html',
+        '/culture-benefits/history/photo/21.html',
+        '/culture-benefits/history/photo/22.html',
+        '/culture-benefits/history/photo/23.html',
+        '/culture-benefits/history/photo/24.html',
+        '/culture-benefits/history/photo/25.html',
+        '/culture-benefits/history/photo/26.html',
+        '/culture-benefits/history/photo/27.html',
+
     );
 
     /**
@@ -103,8 +124,6 @@ class SiteExportCommand extends ContainerAwareCommand
      *
      * @author  Justin Maurer <justin@360zen.com
      */
-
-
 
     protected function configure() {
         $this
@@ -120,7 +139,6 @@ EOT
         ;
     }
 
-
     protected function execute(InputInterface $input, OutputInterface $output) {
         $kernel = $this->_createKernel();
         $client = $kernel->getContainer()->get( 'test.client' );
@@ -128,7 +146,6 @@ EOT
         $this->writeSite($client, $dryRun, $output);
         $output->writeln('Site export complete');
     }
-
 
     protected function _createKernel() {
 
@@ -183,11 +200,10 @@ EOT
                     if ($statusCode != 200) {
                         throw new \Exception("Page Does Not Exist", 3489);
                     }
-//                    var_dump($statusCode);
-//                    $output->writeln($response);
+
                     $output->writeln('<fg=green>'.$slug . ' will be written to ' . $folderPath.$slug.'</fg=green>' );
                 } catch (\Exception $ex) {
-                    $output->writeln('<fg=red>Nothing found at ' . $url .'</fg=red>' );
+                    $output->writeln('<fg=red>'.$statusCode.' Nothing found at ' . $url .'</fg=red>' );
                 }
             } else {
                 try {
@@ -199,16 +215,19 @@ EOT
                 }
                 $crawler = $client->request( 'GET', $url );
                 $statusCode = $client->getResponse()->getStatusCode();
-                if($statusCode == 200) {
+//                if($statusCode == 200) {
                     $fs->dumpFile($folderPath . $slug, "<!DOCTYPE html>\n<html>\n" . $crawler->html() . "\n</html>");
                     $output->writeln($slug . ' has been written to ' . $folderPath . $slug);
 
                     $output->writeln('assets have been copied to /site-export/bundles');
-                }else{
-                    if ( $fs->exists($folderPath . $slug) ) {
-                        unlink($folderPath . $slug);
-                    }
-                }
+//                }else{
+//
+//                    $output->writeln('<fg=red>'.$statusCode.' Nothing found at ' . $url .'</fg=red>' );
+//
+//                    if ( $fs->exists($folderPath . $slug) ) {
+//                        unlink($folderPath . $slug);
+//                    }
+//                }
             }
 
         }

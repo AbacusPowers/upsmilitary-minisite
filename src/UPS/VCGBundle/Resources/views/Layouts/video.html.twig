@@ -24,7 +24,7 @@
                         </div>
                     </div>
             {% endblock %}
-            <a href="{% block parentPageLink %}{% if (parent == '/') %}{{ url('homepage') }}{% else %}{{ path('page', {'slug': parent })}}{% endif %}{% endblock %}" id="close-modal"><i class="fa fa-times"></i></a>
+            <a href="{% block parentPageLink %}{% if (parent == '/') %}{{ path('homepage') }}{% else %}{{ path('page', {'slug': parent })}}{% endif %}{% endblock %}" id="close-modal"><i class="fa fa-times"></i></a>
             <a href="{% block prevArticleLink %}{{ path(route, {'slug': video.Prev | raw })}}{% endblock %}" id="prev-article"><i class="fa fa-angle-left"></i></a>
             <a href="{% block nextArticleLink %}{{ path(route, {'slug': video.Next | raw })}}{% endblock %}" id="next-article"><i class="fa fa-angle-right"></i></a>
         </div>

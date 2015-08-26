@@ -939,10 +939,10 @@ $( document ).ready(function() {
      * CENTER IMAGES ON PAGE LOAD
      */
     WindowWidth = $(window).width();
-    ItemWidth = $('.carousel-item img').width();
+    ItemWidth = $('.carousel-item img:not(.app-badge)').width();
 
     NegMargin = -(ItemWidth - WindowWidth)/2;
-    $('.carousel-item img').css('margin-left', NegMargin);
+    $('.carousel-item img:not(.app-badge)').css('margin-left', NegMargin);
 
     /**
      * AUTO ROTATE
