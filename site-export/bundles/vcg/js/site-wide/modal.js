@@ -96,7 +96,6 @@ $(document)
         var href = $(this).attr('href');
         // Getting Content
         origin = History.getState().data.origin;
-        console.log(origin);
         if ( origin == 'page') {
             //console.log('ooops!');
             originType = 'page';
@@ -197,7 +196,6 @@ $(document)
     });
 
 function getModalContent(url, addEntry, originType) {
-    console.log('aha');
     $('#modal').load(url +' #modal > *', null, function() {
         //debugger;
         var originUrl = document.URL;
@@ -341,7 +339,6 @@ function showValuesModal(f){
 }
 
 $(document).ready(function(){
-    console.log($('#modal-wrapper').hasClass('values'));
 
     setTimeout(function(){
         if ($('#modal-wrapper').hasClass('values')) {
@@ -451,18 +448,15 @@ function destroyLeaveSiteModal(){
         //if ($('#article-page-marker').length > 0) { //detect if this is a dummy page
         var state = History.getState();
         var url = state.url;
-        console.log(url);
         //if ($('#modal-wrapper').hasClass('article-page')) { //detect if this is a dummy page
         //    window.location = window.location.href; //reload the ACTUAL page at the current url
         //    //console.log('bing');
         //}
         if(History.getState().data.modal !== 1) {
             $('#close-modal').click();
-            //console.log('ping');
         } else {
             getModalContent(url, false, 'page');
             showModal();
-            console.log('ding');
         }
     });
 })(window);

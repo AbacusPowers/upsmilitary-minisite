@@ -87,12 +87,23 @@ $( function(){
 });
 
 
-$( function(){
+$(document).ready( function(){
     //STICKY!
     //requires sticky-kit
-    $("section.dd-form214").stick_in_parent({recalc_every: 1, bottoming: true});
-    $('.expander__wrapper','html:not(.breakpoint-small)').on('classChange', function() {
-        var columnHeight = $('#side--b').height();
-        $('#side--a').css('min-height', columnHeight).trigger("sticky_kit:recalc");
+    //
+    //    $("section.dd-form214").stick_in_parent({recalc_every: 1, bottoming: true});
+    //    console.log('bbb1');
+    //
+
+    $(".pinned").pin({
+        containerSelector: "#side--a"
     });
+    $('.expander__wrapper','html:not(.breakpoint-small)').on('classChange', function() {
+        console.log('ahhh!');
+        var columnHeight = $('#side--b').height();
+        $('#side--a').css('min-height', columnHeight);
+        //$('#side--a').trigger("sticky_kit:recalc");
+    });
+
+
 });

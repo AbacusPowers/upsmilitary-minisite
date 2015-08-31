@@ -53,30 +53,21 @@ var videoScrollDetect = function () {
     var videoCurrPos = $('#video-list').closest('.scroll-container').scrollLeft();
 
     if (videoLastPos < videoCurrPos) {
-        //console.log('scroll right');
         ga('send','event','video','scroll_right', 'carousel');
     }
     if (videoLastPos > videoCurrPos)
     {
-        //console.log('scroll left');
         ga('send','event','video','scroll_left', 'carousel');
     }
     videoLastPos = videoCurrPos;
 }
 $('#video-list').closest('.scroll-container').scroll( debounce(videoScrollDetect, 500) );
-//var waypoints = $('.video-link').waypoint(function(direction) {
-//    var videoName = $(this);
-//    console.log(videoName);
-//}, {
-//    context: $('.scroll-container'),
-//    horizontal: true
-//});
+
 viewedVideos = [];
 function testViewedVideos(){
     $('.video-link').each(function(index){
         if(isScrolledIntoView($(this)) ) {
             var videoTitle = $(this).children('.video-title').text();
-            //console.log(videoTitle + ' - ' + viewedVideos.indexOf(videoTitle))
             if (viewedVideos.indexOf(videoTitle) === -1) {
                 viewedVideos.push(videoTitle);
                 var position = index + 1;

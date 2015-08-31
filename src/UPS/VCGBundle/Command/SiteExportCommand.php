@@ -116,7 +116,7 @@ class SiteExportCommand extends ContainerAwareCommand
         '/culture-benefits/history/photo/25.html',
         '/culture-benefits/history/photo/26.html',
         '/culture-benefits/history/photo/27.html',
-
+        '/404.html'
     );
 
     /**
@@ -144,7 +144,7 @@ EOT
         $client = $kernel->getContainer()->get( 'test.client' );
         $dryRun = $input->getOption('dry-run');
         $this->writeSite($client, $dryRun, $output);
-        $output->writeln('Site export complete');
+        $output->writeln('<fg=green>Site export complete</fg=green>');
     }
 
     protected function _createKernel() {

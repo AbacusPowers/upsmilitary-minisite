@@ -116,12 +116,10 @@ function buildHints(branchKey, myArray){
             hints.push(myArray[i].Search);
         }
     }
-    //console.log(hints);
     return hints;
 }
 
 function checkBranch(val){
-    //console.log('changed');
     if(hints.indexOf( val ) < 0) {
         $('#form-error').text('Please choose from the list of suggestions.');
         $('#form-error').removeClass('hidden');
@@ -129,7 +127,6 @@ function checkBranch(val){
     } else {
         $('#form-error').addClass('hidden');
     }
-    //console.log('value: ' + val + ' matches item ' + hints.indexOf(val));
 }
 
 function search(nameKey, myArray){
@@ -169,7 +166,6 @@ function objectLength(obj) {
 
 $( document ).ready(function() {
     $.get("/bundles/vcg/data/translator.csv", function (data) {
-        //        console.log(data);
         allJobs = $.csv.toObjects(data);
 
     });
@@ -240,24 +236,20 @@ $( document ).ready(function() {
 
                 //reveal direct match
                 $('.wrap--match-bucket').removeClass('hidden');
-                //console.log('direct match with bucket  ' + bucketTitle);
 
 
                 if (categories.hasOwnProperty(bucketTitle)) {
 
                     var cats = categories[bucketTitle];
-                    //console.log('Bucket Categories: ' + cats);
 
                     for (j = 0; j < cats.length; j++) {
 
                         var categoryTitle = categories[bucketTitle][j];
 
-                        //console.log(categoryTitle);
 
                         var categoryURL = searchUrls[categoryTitle];
-                        //var categoryURL = 'http://jobs-ups.com/search/advanced-search/ASCategory/' + encodeURIComponent(categoryTitle) + '/ASPostedDate/-1/ASCountry/-1/ASState/-1/ASCity/-1/ASLocation/-1/ASCompanyName/-1/ASCustom1/-1/ASCustom2/-1/ASCustom3/-1/ASCustom4/-1/ASCustom5/-1/ASIsRadius/false/ASCityStateZipcode/-1/ASDistance/-1/ASLatitude/-1/ASLongitude/-1/ASDistanceType/-1';
 
-                        $('.hidden-part').attr('data-id', '0').children('.expander__child').append('<div class="job-category"><h3 class="job-category_title">' + categoryTitle + '</h3><a class="search-button" target="_blank" href="' + categoryURL + '"><div>Current Openings</div></a></div>');
+                        $('.hidden-part').attr('data-id', '0').children('.expander__child').append('<div class="job-category"><h3 class="job-category_title">' + categoryTitle + '</h3><a class="search-button" target="_blank" href="' + categoryURL + '"><span>Current Openings</span></a></div>');
 
                     }
                 }
@@ -265,7 +257,6 @@ $( document ).ready(function() {
             } else {
                 $('.wrap--no-match-bucket').removeClass('hidden');
                 $('.wrap--all-buckets .bucket-wrap-label').addClass('hidden');
-                //console.log('no direct match');
             }
 
             //generate other buckets
@@ -301,7 +292,7 @@ $( document ).ready(function() {
                         var categoryURL = searchUrls[categoryTitle];
                         //var categoryURL = 'http://jobs-ups.com/search/advanced-search/ASCategory/' + encodeURIComponent(categoryTitle) + '/ASPostedDate/-1/ASCountry/-1/ASState/-1/ASCity/-1/ASLocation/-1/ASCompanyName/-1/ASCustom1/-1/ASCustom2/-1/ASCustom3/-1/ASCustom4/-1/ASCustom5/-1/ASIsRadius/false/ASCityStateZipcode/-1/ASDistance/-1/ASLatitude/-1/ASLongitude/-1/ASDistanceType/-1';
 
-                        $('.wrap--all-buckets .hidden-part[data-id="' + i + '"]').children('.expander__child').append('<div class="job-category"><h3 class="job-category_title">' + categoryTitle + '</h3><a class="search-button" target="_blank" href="' + categoryURL + '"><div>Current Openings</div></a></div>');
+                        $('.wrap--all-buckets .hidden-part[data-id="' + i + '"]').children('.expander__child').append('<div class="job-category"><h3 class="job-category_title">' + categoryTitle + '</h3><a class="search-button" target="_blank" href="' + categoryURL + '"><span>Current Openings</span></a></div>');
                     }
                 }
 
