@@ -104,7 +104,8 @@ class JobMapImportCommand extends ContainerAwareCommand
                 'id'    => trim($data[0]),
                 //'name'  => $this->ucname(trim($data[1])),
                 'name'  => trim($data[1]),
-                'city'  => $this->ucname(trim($data[3])),
+                //'city'  => $this->ucname(trim($data[3])),
+                'city'  => trim($data[3]),
                 'state' => trim($data[4]),
                 'zip'   => trim(strval($data[5])),
                 'size'  => ($size == 'Large' ? 0 : ($size == 'Medium' ? 1 : 2)),
@@ -119,7 +120,7 @@ class JobMapImportCommand extends ContainerAwareCommand
     }
     
     
-    private function ucname($str) {
+    /*private function ucname($str) {
         $result = ucwords(strtolower($str));
         foreach(array('(', ')', '/') as $delim) {
             if (strpos($result, $delim) !== FALSE) {
@@ -133,7 +134,7 @@ class JobMapImportCommand extends ContainerAwareCommand
             }
         }
         return $result;
-    }
+    }*/
 
 }
 ?>
