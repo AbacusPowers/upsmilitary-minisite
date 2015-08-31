@@ -48,6 +48,8 @@ end
 namespace :deploy do
   desc "Graceful apache restart"
   task :restart, :roles => :app do
+    run "cd #{current_release}; app/console assets:install"
+    run "cd #{current_release}; app/console ups:crawl:export"
     run "sudo /usr/sbin/apache2ctl graceful"
   end
 end
