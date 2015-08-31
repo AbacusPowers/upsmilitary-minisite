@@ -32,9 +32,11 @@
             margin-top: 1.5em;
             margin-left: -1.5em;
             float:left;
+            max-height: 100%;
         }
 
         .badge-wrapper {
+            max-height: 100%;
             width: 50%;
             float: right;
             padding-top: 2.5em;

@@ -260,6 +260,7 @@ header {
             right: 0.5em;
             color: $white;
             font-size: 1.7rem;
+            z-index: 1000;
         }
         input[type=checkbox]#show-menu {
             display: none;

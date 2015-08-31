@@ -92,10 +92,10 @@ $(document).ready( function(){
     //requires sticky-kit
 
         $("section.dd-form214").stick_in_parent({recalc_every: 1, bottoming: true});
-        console.log('bbb1');
+        //console.log('bbb1');
 
     $('.expander__wrapper','html:not(.breakpoint-small)').on('classChange', function() {
-        console.log('ahhh!');
+        //console.log('ahhh!');
         var columnHeight = $('#side--b').height();
         $('#side--a').css('min-height', columnHeight).trigger("sticky_kit:recalc");
     });

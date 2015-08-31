@@ -38,7 +38,15 @@
 ////////////////PARTNERS PAGE GRID LINE CONTROL/////////////////////////
 
 .page .page--404 {
-
+  .grid-item {
+    &:first-child {
+      border-bottom: 0;
+      border-left: 0;
+      //min-height: 80px;
+    }
+    border-bottom: 0;
+    padding-top: 0.7em;
+  }
   .grid-items-lines {
 
     .grid-item:nth-child(4), .grid-item:nth-child(5), .grid-item:nth-child(6) {
@@ -57,6 +65,7 @@
 /////////////////PARTNERS PAGE CONTENT STYLES/////////////////////
 .page .page--404 .grid-items-lines {
   .grid-item {
+
     .breakpoint-wide & {
       height: 19em;
     }
