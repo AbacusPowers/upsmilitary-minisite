@@ -172,12 +172,10 @@ var eventScrollDetect = function () {
     var eventCurrPos = $('.all-events-wrapper').closest('.scroll-container').scrollLeft();
 
     if (eventLastPos < eventCurrPos) {
-        //console.log('scroll right');
         ga('send','event','career_events','scroll_right', 'carousel');
     }
     if (eventLastPos > eventCurrPos)
     {
-        //console.log('scroll left');
         ga('send','event','career_events','scroll_left', 'carousel');
     }
     eventLastPos = eventCurrPos;
