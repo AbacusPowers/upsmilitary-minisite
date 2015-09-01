@@ -41,49 +41,49 @@
                         <a href="{{path('transition_guide_article',{'slug':'interview'}) }}" class="block-link black history-checkbox article-link"><span></span>Interviews</a>
                     </div>
 
-                    <a href="javascript:void(0)" class="app-download-wrapper">
+                    <div class="app-download-wrapper">
                         <h2>Download the Transition Guide App</h2>
                         <p>A Guide for family, career and personal issues when transitioning to civilian life. Begin using it as early as nine months before the end of your service.</p>
                         <img class="app-hand" src="{{ asset('bundles/vcg/images/ups-hand-phone-2.svg') }}" alt="">
                         <div class="badge-wrapper">
-                            <img class="badge--apple" src="{{ asset('bundles/vcg/images/apple-badge-no-outline.svg') }}" alt="">
-                            <img class="badge--apple" src="{{ asset('bundles/vcg/images/android-app-badge.svg') }}" alt="">
+                            <a href="#" id="itunes-app-link" target="_blank"><img class="badge--apple" src="{{ asset('bundles/vcg/images/apple-badge-no-outline.svg') }}" alt=""></a>
+                            <a href="#" id="google-play-app-link" target="_blank"><img class="badge--apple" src="{{ asset('bundles/vcg/images/android-app-badge.svg') }}" alt=""></a>
                         </div>
-                    </a>
+                    </div>
                 </div>
                 <!--END LIVE APP LEFT COLUMN-->
 
 
                 <!--BEGIN COMING SOON APP LEFT COLUMN-->
-                {#<div class="left-column coming-soon">#}
-                    {#<div id="cs-wrapper">#}
-                        {#<section class="top-section">#}
-                            {#{% include 'VCGBundle:Svgs:person.svg.twig' %}#}
+                <div class="left-column coming-soon">
+                    <div id="cs-wrapper">
+                        <section class="top-section">
+                            {% include 'VCGBundle:Svgs:person.svg.twig' %}
 
-                            {#<h1>Learn How to Build Your Brand</h1>#}
+                            <h1>Learn How to Build Your Brand</h1>
 
-                            {#<p>Companies work hard to establish their brands, and you should do the same. What's your brand?</p>#}
+                            <p>Companies work hard to establish their brands, and you should do the same. What's your brand?</p>
 
-                            {#<p>This series of short articles will help you with everything from resumes to interviewing. Think of it as your own personal branding kit.</p>#}
-                        {#</section>#}
+                            <p>This series of short articles will help you with everything from resumes to interviewing. Think of it as your own personal branding kit.</p>
+                        </section>
 
-                        {#<div class="button-group">#}
-                            {#<a href="{{path('transition_guide_article',{'slug':'brand-intro'}) }}" class="block-link black history-checkbox article-link"><span></span>Intro</a>#}
-                            {#<a href="{{path('transition_guide_article',{'slug':'cover-letter-resume'}) }}" class="block-link black history-checkbox article-link"><span></span>Resume & Cover Letter</a>#}
-                            {#<a href="{{path('transition_guide_article',{'slug':'marketing-yourself'}) }}" class="block-link black history-checkbox article-link"><span></span>Marketing Yourself Online</a>#}
-                            {#<a href="{{path('transition_guide_article',{'slug':'networking-essentials'}) }}" class="block-link black history-checkbox article-link"><span></span>Networking</a>#}
-                            {#<a href="{{path('transition_guide_article',{'slug':'recruiters'}) }}" class="block-link black history-checkbox article-link"><span></span>Working With Recruiters</a>#}
-                            {#<a href="{{path('transition_guide_article',{'slug':'career-fair'}) }}" class="block-link black history-checkbox article-link"><span></span>Preparing for Career Fairs</a>#}
-                            {#<a href="{{path('transition_guide_article',{'slug':'interview'}) }}" class="block-link black history-checkbox article-link"><span></span>Interviews</a>#}
-                        {#</div>#}
-                    {#</div>#}
+                        <div class="button-group">
+                            <a href="{{path('transition_guide_article',{'slug':'brand-intro'}) }}" class="block-link black history-checkbox article-link"><span></span>Intro</a>
+                            <a href="{{path('transition_guide_article',{'slug':'cover-letter-resume'}) }}" class="block-link black history-checkbox article-link"><span></span>Resume & Cover Letter</a>
+                            <a href="{{path('transition_guide_article',{'slug':'marketing-yourself'}) }}" class="block-link black history-checkbox article-link"><span></span>Marketing Yourself Online</a>
+                            <a href="{{path('transition_guide_article',{'slug':'networking-essentials'}) }}" class="block-link black history-checkbox article-link"><span></span>Networking</a>
+                            <a href="{{path('transition_guide_article',{'slug':'recruiters'}) }}" class="block-link black history-checkbox article-link"><span></span>Working With Recruiters</a>
+                            <a href="{{path('transition_guide_article',{'slug':'career-fair'}) }}" class="block-link black history-checkbox article-link"><span></span>Preparing for Career Fairs</a>
+                            <a href="{{path('transition_guide_article',{'slug':'interview'}) }}" class="block-link black history-checkbox article-link"><span></span>Interviews</a>
+                        </div>
+                    </div>
 
-                    {#<a href="javascript:void(0)" class="coming-soon-app-wrapper">#}
-                        {#<h2>Download the Transition Guide App</h2>#}
-                        {#<p>A guide for family, career and personal issues when transitioning to civilian life. Begin using it as early as nine months before the end of your service.</p>#}
-                        {#{% include 'VCGBundle:Svgs:coming-soon.svg.twig' %}#}
-                    {#</a>#}
-                {#</div>#}
+                    <a href="javascript:void(0)" class="coming-soon-app-wrapper">
+                        <h2>Download the Transition Guide App</h2>
+                        <p>A guide for family, career and personal issues when transitioning to civilian life. Begin using it as early as nine months before the end of your service.</p>
+                        {% include 'VCGBundle:Svgs:coming-soon.svg.twig' %}
+                    </a>
+                </div>
                 <!--END COMING SOON APP LEFT COLUMN-->
 
 

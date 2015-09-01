@@ -215,19 +215,10 @@ EOT
                 }
                 $crawler = $client->request( 'GET', $url );
                 $statusCode = $client->getResponse()->getStatusCode();
-//                if($statusCode == 200) {
                     $fs->dumpFile($folderPath . $slug, "<!DOCTYPE html>\n<html>\n" . $crawler->html() . "\n</html>");
                     $output->writeln($slug . ' has been written to ' . $folderPath . $slug);
 
                     $output->writeln('assets have been copied to /site-export/bundles');
-//                }else{
-//
-//                    $output->writeln('<fg=red>'.$statusCode.' Nothing found at ' . $url .'</fg=red>' );
-//
-//                    if ( $fs->exists($folderPath . $slug) ) {
-//                        unlink($folderPath . $slug);
-//                    }
-//                }
             }
 
         }

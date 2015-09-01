@@ -12,13 +12,15 @@
                     </div>
                     <img src="{{ asset('bundles/vcg/images/slider/flag.jpg') }}">
             </div>
+
+            <!-- BEGIN LIVE APP SLIDE -->
             <input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true" hidden="">
             <div class="carousel-item">
                     <div class="app-badge-slide-wrapper">
-                        <a href="#" class="slide-app-badge">
+                        <a href="#" id="itunes-app-link" class="slide-app-badge">
                             <img class="app-badge" src="{{ asset('bundles/vcg/images/apple-badge-no-outline.svg') }}" alt="">
                         </a>
-                        <a href="#" class="slide-app-badge">
+                        <a href="#" id="google-play-app-link" class="slide-app-badge">
                             <img class="app-badge" src="{{ asset('bundles/vcg/images/android-app-badge.svg') }}" alt="">
                         </a>
                     </div>
@@ -27,21 +29,26 @@
                     </div>
                     <img src="{{ asset('bundles/vcg/images/slider/app.jpg') }}">
             </div>
-            {#<input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true" hidden="">#}
-            {#<div class="carousel-item">#}
-                {#<div class="app-badge-slide-wrapper">#}
-                    {#<a href="#" class="slide-app-badge">#}
-                        {#<img class="app-badge" src="{{ asset('bundles/vcg/images/apple-badge-no-outline.svg') }}" alt="">#}
-                    {#</a>#}
-                    {#<a href="#" class="slide-app-badge">#}
-                        {#<img class="app-badge" src="{{ asset('bundles/vcg/images/android-app-badge.svg') }}" alt="">#}
-                    {#</a>#}
-                {#</div>#}
-                {#<div class="slider-text-wrapper">#}
-                    {#<a href="javascript:void(0)"><h1 class="slider-text">COMING SOON: Download our mobile app for a roadmap to finding the right career.</h1></a>#}
-                {#</div>#}
-                {#<img src="{{ asset('bundles/vcg/images/slider/app.jpg') }}">#}
-            {#</div>#}
+            <!-- END LIVE APP SLIDE -->
+
+            <!-- BEGIN COMING SOON APP SLIDE -->
+            <input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true" hidden="">
+            <div class="carousel-item">
+                <div class="app-badge-slide-wrapper">
+                    <a href="#" id="itunes-app-link" class="slide-app-badge">
+                        <img class="app-badge" src="{{ asset('bundles/vcg/images/apple-badge-no-outline.svg') }}" alt="">
+                    </a>
+                    <a href="#" id="google-play-app-link" class="slide-app-badge">
+                        <img class="app-badge" src="{{ asset('bundles/vcg/images/android-app-badge.svg') }}" alt="">
+                    </a>
+                </div>
+                <div class="slider-text-wrapper">
+                    <a href="javascript:void(0)"><h1 class="slider-text">COMING SOON: Download our mobile app for a roadmap to finding the right career.</h1></a>
+                </div>
+                <img src="{{ asset('bundles/vcg/images/slider/app.jpg') }}">
+            </div>
+            <!-- END COMING SOON APP SLIDE -->
+
             <input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true" hidden="">
             <div class="carousel-item">
                     <div class="slider-text-wrapper">

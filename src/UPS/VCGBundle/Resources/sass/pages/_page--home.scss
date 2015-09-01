@@ -18,6 +18,9 @@
 
     // Styles for the mobile app link area below
     .app-download-wrapper {
+        &:hover {
+            background: $grey--darker;
+        }
         padding: 1.5em 1.5em 0 1.5em;
         @include clearfix;
 
