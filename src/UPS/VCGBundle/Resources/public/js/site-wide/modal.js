@@ -3,6 +3,7 @@ $(document)
         e.preventDefault();
         var href = $(this).attr('href');
         // Getting Content
+        manualStateChange = true;
         getModalContent(href, true, 'page');
         showModal();
         $(this).addClass('in-history');
@@ -13,6 +14,7 @@ $(document)
         e.preventDefault();
         var href = $(this).attr('href');
         // Getting Content
+        manualStateChange = true;
         getModalContent(href, true, 'page');
         showVideoModal();
     })
@@ -21,6 +23,7 @@ $(document)
         e.preventDefault();
         var href = $(this).attr('href');
         // Getting Content
+        manualStateChange = true;
         getModalContent(href, true, 'page');
         showPhotoModal();
     })
@@ -29,6 +32,7 @@ $(document)
         e.preventDefault();
         var href = $(this).attr('href');
         // Getting Content
+        manualStateChange = true;
         getModalContent(href, true, 'page');
         showEventsModal(href);
     })
@@ -37,6 +41,7 @@ $(document)
         e.preventDefault();
         var href = $(this).attr('href');
         // Getting Content
+        manualStateChange = true;
         getModalContent(href, true, 'page');
         showValuesModal();
     })
@@ -67,6 +72,7 @@ $(document)
         e.preventDefault();
         var href = $(this).attr('href');
         // Getting Content
+        manualStateChange = true;
         origin = History.getState().data.origin;
         if ( origin == 'page') {
             originType = 'page';
@@ -89,6 +95,7 @@ $(document)
         e.preventDefault();
         var href = $(this).attr('href');
         // Getting Content
+        manualStateChange = true;
         origin = History.getState().data.origin;
         if ( origin == 'page') {
             originType = 'page';
@@ -224,7 +231,7 @@ function showVideoModal(){
     $('#modal-wrapper').addClass('video');
 
     setTimeout(function(){ //VIDEO OPEN TRACKING
-        videoTitle = $('#video-title').text();
+        var videoTitle = $('#video-title').text();
         //video open tracking
         ga('send','event','video','open',videoTitle);
     }, 201);
@@ -369,6 +376,7 @@ function destroyLeaveSiteModal(){
     $('#modal-wrapper').removeClass('leave-site');
 
 }
+manualStateChange = false; //false if using browser navigation (back and forward). must be set to true prior to any click-triggered event
 (function(window, undefined) {
     History.Adapter.bind(window,'statechange',function(){ // Note: We are using statechange instead of popstate
         //if ($('#article-page-marker').length > 0) { //detect if this is a dummy page
@@ -377,10 +385,11 @@ function destroyLeaveSiteModal(){
 
         if(History.getState().data.modal !== 1) {
             $('#close-modal').click();
-        } else {
+        } else if (manualStateChange === false) {
             getModalContent(url, false, 'page');
             showModal();
         }
+        manualStateChange = false;
     });
 })(window);
 

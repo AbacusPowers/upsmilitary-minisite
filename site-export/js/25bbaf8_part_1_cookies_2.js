@@ -37,31 +37,30 @@ $(document).ready(function(){
         setCookie('uvgHistory',JSON.stringify(historyArray));
     }
 
-    //SET GROUP LINK CLASSES BASED ON COOKIE
-    $('.group-link').each(function(){
-        if (!window.location.origin) { //if you're using IE, window.location.origin isn't automatically available
-            window.location.origin = window.location.protocol + "//" + window.location.hostname + (window.location.port ? ':' + window.location.port: '');
-        }
-        var linkUrl = window.location.origin + $(this).children('a.history-checkbox').attr('href'); //combine link path with origin
+    setTimeout(500, function(){
+        $('.group-link').each(function(){
 
-        if (searchStringInArray(linkUrl, historyArray) === -1) {
-            //nothing
-        } else if (currentUrl == linkUrl) {
-            $(this).children('a.history-checkbox').addClass('in-history');
-        } else {
-            $(this).children('a.history-checkbox').addClass('in-history');
-        }
-    });
-    $('.history-checkbox').each(function(){
-        var linkUrl = window.location.origin + $(this).attr('href');
+            var linkUrl = siteOrigin + $(this).children('a.history-checkbox').attr('href'); //combine link path with siteOrigin
 
-        if (searchStringInArray(linkUrl, historyArray) === -1) {
-            //nothing
-        } else if (currentUrl == linkUrl) {
-            $(this).addClass('in-history'); //ADD THE CLASS HERE
+            if (searchStringInArray(linkUrl, historyArray) === -1) {
+                //nothing
+            } else if (currentUrl == linkUrl) {
+                $(this).children('a.history-checkbox').addClass('in-history');
+            } else {
+                $(this).children('a.history-checkbox').addClass('in-history');
+            }
+        });
+        $('.history-checkbox').each(function(){
 
-        } else {
-            $(this).addClass('in-history'); //ADD THE CLASS HERE
-        }
+            var linkUrl = siteOrigin + $(this).attr('href');
+            if (searchStringInArray(linkUrl, historyArray) === -1) {
+                //nothing
+            } else if (currentUrl == linkUrl) {
+                $(this).addClass($(this).attr('href') + 'in-history'); //ADD THE CLASS HERE
+
+            } else {
+                $(this).addClass('in-history'); //ADD THE CLASS HERE
+            }
+        });
     });
 });

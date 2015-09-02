@@ -50,29 +50,31 @@ function updateCookie(url){
         historyArray = [newURL];
         setCookie('uvgHistory',JSON.stringify(historyArray));
     }
-    $('.group-link').each(function(){
+    setTimeout(500, function(){
+        $('.group-link').each(function(){
 
-        var linkUrl = siteOrigin + $(this).children('a.history-checkbox').attr('href'); //combine link path with siteOrigin
+            var linkUrl = siteOrigin + $(this).children('a.history-checkbox').attr('href'); //combine link path with siteOrigin
 
-        if (searchStringInArray(linkUrl, historyArray) === -1) {
-            //nothing
-        } else if (currentUrl == linkUrl) {
-            $(this).children('a.history-checkbox').addClass('in-history');
-        } else {
-            $(this).children('a.history-checkbox').addClass('in-history');
-        }
-    });
-    $('.history-checkbox').each(function(){
+            if (searchStringInArray(linkUrl, historyArray) === -1) {
+                //nothing
+            } else if (currentUrl == linkUrl) {
+                $(this).children('a.history-checkbox').addClass('in-history');
+            } else {
+                $(this).children('a.history-checkbox').addClass('in-history');
+            }
+        });
+        $('.history-checkbox').each(function(){
 
-        var linkUrl = siteOrigin + $(this).attr('href');
-        if (searchStringInArray(linkUrl, historyArray) === -1) {
-            //nothing
-        } else if (currentUrl == linkUrl) {
-            $(this).addClass($(this).attr('href') + 'in-history'); //ADD THE CLASS HERE
+            var linkUrl = siteOrigin + $(this).attr('href');
+            if (searchStringInArray(linkUrl, historyArray) === -1) {
+                //nothing
+            } else if (currentUrl == linkUrl) {
+                $(this).addClass($(this).attr('href') + 'in-history'); //ADD THE CLASS HERE
 
-        } else {
-            $(this).addClass('in-history'); //ADD THE CLASS HERE
-        }
+            } else {
+                $(this).addClass('in-history'); //ADD THE CLASS HERE
+            }
+        });
     });
 }
 
