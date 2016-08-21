@@ -22,3 +22,9 @@ GIT
 * Once the branch is pushed, go ahead and merge the branch to master by running `git checkout master`, then `git merge new-branch-name`
 * Next, you can commit the changes to the master branch by running `git add .` and then `git commit -m "commit merge message goes here"
 * Finally, push to master, so everyone will receive your changes by running `git push origin master`
+
+Custom Commands
+===============
+To import jobs to the jobs map, run `php app/console ups:jobmap:import -csv PATH/TO/CSV`.
+
+To export the site to its flat format (HTML, CSS and JS only), run `php app/console ups:crawl:export`.
