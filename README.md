@@ -1,5 +1,5 @@
-Military Jobs Site Install Instructionsgit 
-==========================================
+Military Jobs Site Install Instructions
+=======================================
 
 A Symfony project created on April 22, 2015, 10:40 am.
 
